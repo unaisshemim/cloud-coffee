@@ -1,0 +1,31 @@
+@version 1;
+
+/* Global text */
+section field:not([name="content"]):not([name="description"]):not([name="recipient"]):not([name="keywords"]) {
+	color: #111111;
+}
+
+/* Global text: combined text host */
+section combined-text {
+	color: #111111;
+}
+
+/* Experience text */
+section[type="experience"] field:not([name="content"]):not([name="description"]):not([name="recipient"]):not([name="keywords"]) {
+	color: #222222;
+}
+
+/* Experience text: combined text host */
+section[type="experience"] combined-text {
+	color: #222222;
+}
+
+/* One section */
+section[id="experience"] field:not([name="content"]):not([name="description"]):not([name="recipient"]):not([name="keywords"]) {
+	color: #333333;
+}
+
+/* One section: combined text host */
+section[id="experience"] combined-text {
+	color: #333333;
+}

@@ -5,10 +5,13 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { FloppyDiskIcon } from "@phosphor-icons/react";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
+import { useEffect, useMemo, useState } from "react";
 import { defaultApplicationProfile } from "@reactive-resume/schema/application-profile";
 import { Button } from "@reactive-resume/ui/components/button";
 import { toast } from "@reactive-resume/ui/components/toast";
+import { createProfileTools } from "@/features/webmcp/profile-tools";
+import { useWebMcpTools } from "@/features/webmcp/use-webmcp-tools";
 import { getReadableErrorMessage } from "@/libs/error-message";
 import { orpc } from "@/libs/orpc/client";
 import { ProfileNavigation } from "./navigation";
@@ -29,7 +32,7 @@ const lightWorkspaceStyle = {
 } as React.CSSProperties;
 
 export function ProfileWorkspace({ profile, resumes, onChange, onSave, isSaving }: ProfileWorkspaceProps) {
-	const [active, setActive] = useState<ProfileSectionId>("job-preferences");
+	const [active, setActive] = useState<ProfileSectionId>("career-knowledge");
 
 	return (
 		<div
@@ -71,10 +74,19 @@ type ApplicationProfileSettingsPageProps = {
 };
 
 export function ApplicationProfileSettingsPage({ session }: ApplicationProfileSettingsPageProps) {
+	const navigate = useNavigate();
 	const { data, isLoading } = useQuery(orpc.applicationProfile.get.queryOptions());
 	const { data: resumes = [] } = useQuery(orpc.resume.list.queryOptions());
 	const [profile, setProfile] = useState<ApplicationProfile>(() => hydratePersonal(defaultApplicationProfile, session));
 	const [revision, setRevision] = useState(0);
+	const profileTools = useMemo(
+		() =>
+			createProfileTools({
+				navigate: (options) => navigate(options),
+			}),
+		[navigate],
+	);
+	useWebMcpTools(profileTools);
 
 	useEffect(() => {
 		if (data) {

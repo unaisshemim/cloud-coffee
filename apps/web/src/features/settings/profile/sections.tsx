@@ -33,6 +33,11 @@ const sectionMeta = {
 		description: "Drives which jobs cloudcoffee finds and prioritizes for you.",
 		icon: SlidersHorizontalIcon,
 	},
+	"career-knowledge": {
+		title: "Career Knowledge",
+		description: "Approved facts ChatGPT can reuse when building a targeted resume.",
+		icon: BriefcaseIcon,
+	},
 	personal: {
 		title: "Personal info",
 		description: "The basics employers and ATS forms always ask for.",
@@ -328,6 +333,171 @@ function Skills({ profile, onChange }: Omit<ProfileSectionsProps, "active" | "re
 	);
 }
 
+function CareerKnowledge({ profile, onChange }: Omit<ProfileSectionsProps, "active" | "resumes">) {
+	return (
+		<div className="grid gap-8">
+			<ProfileTextarea
+				label="Career summary"
+				value={profile.careerSummary}
+				onChange={(careerSummary) => onChange({ ...profile, careerSummary })}
+			/>
+			<CollectionEditor
+				title="Achievements"
+				items={profile.achievements}
+				emptyTitle="No achievements yet"
+				emptyDescription="Add verified outcomes, wins, and measurable impact."
+				action="Add achievement"
+				icon={<CertificateIcon className="size-6" />}
+				create={() => ({
+					id: generateId(),
+					title: "",
+					description: "",
+					metrics: [],
+					skills: [],
+					relatedExperienceId: null,
+					relatedProjectId: null,
+				})}
+				onChange={(achievements) => onChange({ ...profile, achievements })}
+				render={(item, update) => (
+					<>
+						<div className="pr-10">
+							<ProfileField label="Title" value={item.title} onChange={(title) => update({ ...item, title })} />
+						</div>
+						<ProfileTextarea
+							label="What happened"
+							value={item.description}
+							onChange={(description) => update({ ...item, description })}
+						/>
+						<div className="grid gap-4 md:grid-cols-2">
+							<TagEditor
+								label="Verified metrics"
+								values={item.metrics}
+								onChange={(metrics) => update({ ...item, metrics })}
+								placeholder="35% faster..."
+							/>
+							<TagEditor
+								label="Skills used"
+								values={item.skills}
+								onChange={(skills) => update({ ...item, skills })}
+								placeholder="Add skill..."
+							/>
+						</div>
+					</>
+				)}
+			/>
+			<CollectionEditor
+				title="Hackathons"
+				items={profile.hackathons}
+				emptyTitle="No hackathons yet"
+				emptyDescription="Keep projects, placements, and demos ready for future applications."
+				action="Add hackathon"
+				icon={<FolderSimpleIcon className="size-6" />}
+				create={() => ({
+					id: generateId(),
+					event: "",
+					project: "",
+					date: "",
+					placement: "",
+					url: "",
+					description: "",
+					highlights: [],
+				})}
+				onChange={(hackathons) => onChange({ ...profile, hackathons })}
+				render={(item, update) => (
+					<>
+						<div className="grid gap-4 pr-10 md:grid-cols-2">
+							<ProfileField label="Event" value={item.event} onChange={(event) => update({ ...item, event })} />
+							<ProfileField label="Project" value={item.project} onChange={(project) => update({ ...item, project })} />
+							<ProfileField label="Date" type="date" value={item.date} onChange={(date) => update({ ...item, date })} />
+							<ProfileField
+								label="Placement"
+								value={item.placement}
+								onChange={(placement) => update({ ...item, placement })}
+							/>
+							<ProfileField label="URL" value={item.url} onChange={(url) => update({ ...item, url })} />
+						</div>
+						<ProfileTextarea
+							label="Description"
+							value={item.description}
+							onChange={(description) => update({ ...item, description })}
+						/>
+						<TagEditor
+							label="Highlights"
+							values={item.highlights}
+							onChange={(highlights) => update({ ...item, highlights })}
+							placeholder="Add verified highlight..."
+						/>
+					</>
+				)}
+			/>
+			<CollectionEditor
+				title="Publications"
+				items={profile.publications}
+				emptyTitle="No publications yet"
+				emptyDescription="Add articles, papers, talks, or published work."
+				action="Add publication"
+				icon={<FileTextIcon className="size-6" />}
+				create={() => ({
+					id: generateId(),
+					title: "",
+					publisher: "",
+					publicationDate: "",
+					url: "",
+					description: "",
+				})}
+				onChange={(publications) => onChange({ ...profile, publications })}
+				render={(item, update) => (
+					<>
+						<div className="grid gap-4 pr-10 md:grid-cols-2">
+							<ProfileField label="Title" value={item.title} onChange={(title) => update({ ...item, title })} />
+							<ProfileField
+								label="Publisher"
+								value={item.publisher}
+								onChange={(publisher) => update({ ...item, publisher })}
+							/>
+							<ProfileField
+								label="Published"
+								type="date"
+								value={item.publicationDate}
+								onChange={(publicationDate) => update({ ...item, publicationDate })}
+							/>
+							<ProfileField label="URL" value={item.url} onChange={(url) => update({ ...item, url })} />
+						</div>
+						<ProfileTextarea
+							label="Description"
+							value={item.description}
+							onChange={(description) => update({ ...item, description })}
+						/>
+					</>
+				)}
+			/>
+			<CollectionEditor
+				title="Custom facts"
+				items={profile.customFacts}
+				emptyTitle="No custom facts yet"
+				emptyDescription="Store useful career context that does not fit another section."
+				action="Add custom fact"
+				icon={<IdentificationCardIcon className="size-6" />}
+				create={() => ({ id: generateId(), category: "", label: "", value: "" })}
+				onChange={(customFacts) => onChange({ ...profile, customFacts })}
+				render={(item, update) => (
+					<div className="grid gap-4 pr-10 md:grid-cols-2">
+						<ProfileField
+							label="Category"
+							value={item.category}
+							onChange={(category) => update({ ...item, category })}
+						/>
+						<ProfileField label="Label" value={item.label} onChange={(label) => update({ ...item, label })} />
+						<div className="md:col-span-2">
+							<ProfileTextarea label="Value" value={item.value} onChange={(value) => update({ ...item, value })} />
+						</div>
+					</div>
+				)}
+			/>
+		</div>
+	);
+}
+
 function Experience({ profile, onChange }: Omit<ProfileSectionsProps, "active" | "resumes">) {
 	return (
 		<CollectionEditor
@@ -376,6 +546,12 @@ function Experience({ profile, onChange }: Omit<ProfileSectionsProps, "active" |
 						label="Description"
 						value={item.description}
 						onChange={(description) => update({ ...item, description })}
+					/>
+					<TagEditor
+						label="Highlights"
+						values={item.highlights}
+						onChange={(highlights) => update({ ...item, highlights })}
+						placeholder="Add verified impact..."
 					/>
 				</>
 			)}
@@ -486,6 +662,12 @@ function Projects({ profile, onChange }: Omit<ProfileSectionsProps, "active" | "
 							label="Description"
 							value={item.description}
 							onChange={(description) => update({ ...item, description })}
+						/>
+						<TagEditor
+							label="Highlights"
+							values={item.highlights}
+							onChange={(highlights) => update({ ...item, highlights })}
+							placeholder="Add verified impact..."
 						/>
 					</>
 				)}
@@ -745,6 +927,9 @@ export function ProfileSections(props: ProfileSectionsProps) {
 	switch (props.active) {
 		case "job-preferences":
 			content = <JobPreferences {...props} />;
+			break;
+		case "career-knowledge":
+			content = <CareerKnowledge {...props} />;
 			break;
 		case "personal":
 			content = <PersonalInfo {...props} />;

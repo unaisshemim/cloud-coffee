@@ -4,8 +4,10 @@ import {
 	applicationProfileSchema,
 } from "@reactive-resume/schema/application-profile";
 import { protectedProcedure } from "../../context";
+import { aiRequestRateLimit } from "../../middleware/rate-limit";
 import { profileMergeOperationSchema } from "./merge";
 import { applicationProfileService } from "./service";
+import { createTargetedResume, targetedResumeInputSchema } from "./targeted-resume";
 
 export const applicationProfileDocumentSchema = z.object({
 	profile: applicationProfileSchema,
@@ -73,4 +75,19 @@ export const applicationProfileRouter = {
 		)
 		.output(applicationProfileDocumentSchema)
 		.handler(({ context, input }) => applicationProfileService.applyMerge({ userId: context.user.id, ...input })),
+
+	createTargetedResume: protectedProcedure
+		.route({
+			method: "POST",
+			path: "/application-profile/targeted-resume",
+			tags: ["Application Profile", "AI"],
+			operationId: "createTargetedResumeFromProfile",
+			summary: "Create a targeted resume draft from the career profile",
+		})
+		.input(targetedResumeInputSchema)
+		.use(aiRequestRateLimit)
+		.output(z.object({ resumeId: z.string(), name: z.string(), builderUrl: z.string() }))
+		.handler(({ context, input }) =>
+			createTargetedResume({ userId: context.user.id, locale: context.locale, data: input }),
+		),
 };

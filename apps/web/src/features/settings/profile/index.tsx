@@ -74,15 +74,20 @@ export function ApplicationProfileSettingsPage({ session }: ApplicationProfileSe
 	const { data, isLoading } = useQuery(orpc.applicationProfile.get.queryOptions());
 	const { data: resumes = [] } = useQuery(orpc.resume.list.queryOptions());
 	const [profile, setProfile] = useState<ApplicationProfile>(() => hydratePersonal(defaultApplicationProfile, session));
+	const [revision, setRevision] = useState(0);
 
 	useEffect(() => {
-		if (data) setProfile(hydratePersonal(data, session));
+		if (data) {
+			setProfile(hydratePersonal(data.profile, session));
+			setRevision(data.revision);
+		}
 	}, [data, session]);
 
 	const { mutate: save, isPending } = useMutation(
 		orpc.applicationProfile.update.mutationOptions({
 			onSuccess: (saved) => {
-				setProfile(saved);
+				setProfile(saved.profile);
+				setRevision(saved.revision);
 				toast.add({ type: "success", description: t`Your application profile has been saved.` });
 			},
 			onError: (error) => {
@@ -110,7 +115,7 @@ export function ApplicationProfileSettingsPage({ session }: ApplicationProfileSe
 			profile={profile}
 			resumes={resumes}
 			onChange={setProfile}
-			onSave={() => save(profile)}
+			onSave={() => save({ profile, revision })}
 			isSaving={isPending}
 		/>
 	);

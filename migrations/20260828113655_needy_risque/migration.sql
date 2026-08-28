@@ -1,0 +1,1 @@
+ALTER TABLE "application_profile" ADD COLUMN "revision" integer DEFAULT 1 NOT NULL;

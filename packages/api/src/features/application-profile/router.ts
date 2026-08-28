@@ -1,6 +1,12 @@
+import { z } from "zod";
 import { applicationProfileSchema } from "@reactive-resume/schema/application-profile";
 import { protectedProcedure } from "../../context";
 import { applicationProfileService } from "./service";
+
+export const applicationProfileDocumentSchema = z.object({
+	profile: applicationProfileSchema,
+	revision: z.number().int().nonnegative(),
+});
 
 export const applicationProfileRouter = {
 	get: protectedProcedure
@@ -12,8 +18,8 @@ export const applicationProfileRouter = {
 			summary: "Get application profile",
 			description: "Returns reusable job-application information for the authenticated user.",
 		})
-		.output(applicationProfileSchema)
-		.handler(({ context }) => applicationProfileService.get({ userId: context.user.id })),
+		.output(applicationProfileDocumentSchema)
+		.handler(({ context }) => applicationProfileService.getDocument({ userId: context.user.id })),
 
 	update: protectedProcedure
 		.route({
@@ -24,7 +30,7 @@ export const applicationProfileRouter = {
 			summary: "Update application profile",
 			description: "Replaces reusable job-application information for the authenticated user.",
 		})
-		.input(applicationProfileSchema)
-		.output(applicationProfileSchema)
-		.handler(({ context, input }) => applicationProfileService.update({ userId: context.user.id, data: input })),
+		.input(applicationProfileDocumentSchema)
+		.output(applicationProfileDocumentSchema)
+		.handler(({ context, input }) => applicationProfileService.update({ userId: context.user.id, ...input })),
 };

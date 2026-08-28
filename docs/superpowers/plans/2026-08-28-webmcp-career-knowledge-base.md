@@ -26,6 +26,7 @@
 
 **Files:**
 - Delete: `packages/mcp/**`
+- Delete: `packages/dsh-plugin/**`
 - Delete: `apps/server/src/mcp/**`
 - Modify: `apps/server/src/http/app.ts`
 - Modify: `apps/server/src/http/app.test.ts`
@@ -69,7 +70,7 @@ export function handleWellKnownFallback() {
 
 - [ ] **Step 4: Remove package and advertised references**
 
-Delete `packages/mcp`. Remove `@reactive-resume/mcp` and `@modelcontextprotocol/sdk` from `apps/server/package.json`. Remove MCP lines from `robots.txt`, `llms.txt`, metadata tests, and reserved static-path tests. Refresh `pnpm-lock.yaml` with `pnpm install --lockfile-only` if dependency removal does not update it automatically.
+Delete `packages/mcp` and the remote-MCP-only `packages/dsh-plugin`. Remove `@reactive-resume/mcp` and `@modelcontextprotocol/sdk` from `apps/server/package.json`. Remove MCP lines from `robots.txt`, `llms.txt`, metadata tests, and reserved static-path tests. Refresh `pnpm-lock.yaml` with `pnpm install --lockfile-only` if dependency removal does not update it automatically.
 
 - [ ] **Step 5: Verify server and dependency cleanup**
 

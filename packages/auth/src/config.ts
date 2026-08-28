@@ -45,12 +45,7 @@ function resolveInternalBaseUrl(): string {
 const internalBaseUrl = resolveInternalBaseUrl();
 
 const oauthAudienceBase = authBaseUrl.replace(/\/$/, "");
-const OAUTH_AUDIENCES = [
-	oauthAudienceBase,
-	`${oauthAudienceBase}/`,
-	`${oauthAudienceBase}/mcp`,
-	`${oauthAudienceBase}/mcp/`,
-];
+const OAUTH_AUDIENCES = [oauthAudienceBase, `${oauthAudienceBase}/`];
 
 export function verifyOAuthToken(token: string): Promise<JWTPayload> {
 	return verifyBearerToken(token, {

@@ -81,11 +81,7 @@
 					},
 					{
 						"group": "Application Tracker",
-						"pages": [
-							"guides/tracking-job-applications",
-							"guides/importing-applications-from-csv",
-							"guides/managing-applications-with-mcp"
-						]
+						"pages": ["guides/tracking-job-applications", "guides/importing-applications-from-csv"]
 					},
 					{
 						"group": "Security",
@@ -96,7 +92,6 @@
 						"pages": [
 							"guides/using-the-api",
 							"guides/using-the-patch-api",
-							"guides/using-the-mcp-server",
 							"guides/using-ai",
 							"guides/json-resume-schema"
 						]
@@ -108,7 +103,6 @@
 							"use-cases/open-source-resume-builder",
 							"use-cases/privacy-focused-resume-builder",
 							"use-cases/self-hosted-resume-builder",
-							"use-cases/api-mcp-resume-automation",
 							"use-cases/export-and-share-resumes",
 							"use-cases/ai-resume-builder"
 						]

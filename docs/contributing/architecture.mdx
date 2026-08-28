@@ -21,21 +21,19 @@ flowchart TD
     Server["apps/server Hono adapter"]
     API["packages/api feature routers"]
     Auth["packages/auth"]
-    MCP["packages/mcp"]
     PDFServer["@reactive-resume/pdf/server"]
   end
 
   Server --> RPC
   RPC --> API
   Server --> Auth
-  Server --> MCP
   API --> PDFServer
   API --> DB["packages/db"]
   API --> Storage["File system or S3-compatible storage"]
   DB --> Postgres["PostgreSQL"]
 ```
 
-`apps/web` owns the TanStack Start experience. `apps/server` owns the production Hono process and mounts RPC, auth, OpenAPI, MCP, static uploads, schema JSON, and the built web app.
+`apps/web` owns the TanStack Start experience and browser WebMCP tools. `apps/server` owns the production Hono process and mounts RPC, auth, OpenAPI, static uploads, schema JSON, and the built web app.
 
 ---
 
@@ -44,7 +42,7 @@ flowchart TD
 | Workspace | Ownership |
 | --- | --- |
 | `apps/web` | TanStack Start routes, web features, browser PDF.js preview/viewer code, PWA setup, oRPC browser client |
-| `apps/server` | Hono route composition, production HTTP adapters, MCP transport, OpenAPI/well-known handlers, static file serving, startup checks |
+| `apps/server` | Hono route composition, production HTTP adapters, OpenAPI/well-known handlers, static file serving, startup checks |
 | `packages/api` | oRPC procedures and feature-owned business behavior under `src/features/*` |
 | `packages/auth` | Better Auth config, auth helpers, and exported auth types |
 | `packages/db` | Drizzle client and schema; root `migrations/` stores generated migrations |
@@ -53,7 +51,6 @@ flowchart TD
 | `packages/resume` | Pure resume-domain helpers, including JSON Patch behavior and network icon mapping |
 | `packages/pdf` | React PDF document, template primitives, templates, font registration, and browser/server generation adapters |
 | `packages/docx` | DOCX export generation |
-| `packages/mcp` | MCP tools, prompts, resources, server card, and tool metadata |
 | `packages/ui` | Shared Base UI/shadcn-style primitives and hooks |
 | `packages/ai` | AI provider types, prompts, resume parsing/sanitization helpers, and model-facing tool contracts |
 | `packages/import` | Resume importers |
@@ -96,7 +93,7 @@ When adding code, choose the owner by behavior:
 | React PDF template/rendering behavior | `packages/pdf` |
 | PDF.js canvas/viewer UI | `apps/web/src/features/resume` |
 | DOCX export behavior | `packages/docx` |
-| MCP tool/prompt/resource behavior | `packages/mcp` |
+| Browser WebMCP tool behavior | `apps/web/src/features/webmcp` |
 | Shared UI primitive/hook | `packages/ui` |
 | Cross-cutting helper | Prefer a domain package first; otherwise add an explicit `packages/utils` export |
 
@@ -136,8 +133,6 @@ DOCX export generation lives in `packages/docx`.
 
 ---
 
-## MCP Boundary
+## WebMCP Boundary
 
-MCP implementation lives in `packages/mcp`. It exposes canonical unprefixed tool names such as `list_resumes`, `read_resume`, and `apply_resume_patch`.
-
-The server process imports MCP from `@reactive-resume/mcp` and injects the in-process oRPC router client. It must not import MCP code from `apps/web/src`.
+Browser WebMCP implementation lives in `apps/web/src/features/webmcp`. Page routes register tools through `document.modelContext` while mounted and call protected oRPC procedures for server behavior. The server has no remote MCP transport.

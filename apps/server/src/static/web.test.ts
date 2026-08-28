@@ -250,7 +250,7 @@ describe("web app fallback classification", () => {
 		expect(fs.readFile).not.toHaveBeenCalled();
 	});
 
-	it.each(["/api/foo", "/mcp/foo", "/uploads/foo"])(
+	it.each(["/api/foo", "/uploads/foo"])(
 		"does not treat reserved two-segment path %s as a public resume",
 		async (pathname) => {
 			const response = await handleWebApp(new Request(`https://example.com${pathname}`));

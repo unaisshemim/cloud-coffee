@@ -23,7 +23,6 @@ export function handleRobots(options?: StaticSeoOptions) {
 		"Allow: /",
 		"Disallow: /api/rpc",
 		"Disallow: /api/auth",
-		"Disallow: /mcp",
 		"Disallow: /.well-known",
 		"",
 		`Sitemap: ${baseUrl}/sitemap.xml`,
@@ -69,7 +68,6 @@ export function handleLlms(options?: StaticSeoOptions) {
 		`- Documentation llms.txt: ${DOCS_URL}/llms.txt`,
 		`- API documentation: ${DOCS_URL}/api-reference`,
 		`- Resume schema: ${baseUrl}/schema.json`,
-		`- MCP documentation: ${DOCS_URL}/guides/using-the-mcp-server`,
 		`- OpenAPI specification: ${baseUrl}/api/openapi/spec.json`,
 		"",
 	].join("\n");

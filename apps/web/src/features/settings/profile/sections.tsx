@@ -346,6 +346,7 @@ function Experience({ profile, onChange }: Omit<ProfileSectionsProps, "active" |
 				endDate: "",
 				current: false,
 				description: "",
+				highlights: [],
 			})}
 			onChange={(experience) => onChange({ ...profile, experience })}
 			render={(item, update) => (
@@ -460,6 +461,7 @@ function Projects({ profile, onChange }: Omit<ProfileSectionsProps, "active" | "
 					endDate: "",
 					current: false,
 					description: "",
+					highlights: [],
 				})}
 				onChange={(projects) => onChange({ ...profile, projects })}
 				render={(item, update) => (

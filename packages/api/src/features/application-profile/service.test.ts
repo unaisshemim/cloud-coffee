@@ -105,4 +105,29 @@ describe("applicationProfileService", () => {
 		).rejects.toMatchObject({ code: "CONFLICT" });
 		expect(dbMock.insert).not.toHaveBeenCalled();
 	});
+
+	it("previews a merge without writing", async () => {
+		state.selectedRows = [{ data: defaultApplicationProfile, revision: 2 }];
+
+		const preview = await applicationProfileService.previewMerge({
+			userId: "user-1",
+			candidate: { skills: ["TypeScript"] },
+		});
+
+		expect(preview.profile.skills).toEqual(["TypeScript"]);
+		expect(preview.revision).toBe(2);
+		expect(dbMock.insert).not.toHaveBeenCalled();
+	});
+
+	it("requires explicit confirmation before applying a merge", async () => {
+		await expect(
+			applicationProfileService.applyMerge({
+				userId: "user-1",
+				revision: 0,
+				operations: [],
+				confirm: false,
+			}),
+		).rejects.toMatchObject({ code: "BAD_REQUEST" });
+		expect(dbMock.insert).not.toHaveBeenCalled();
+	});
 });

@@ -1,4 +1,5 @@
-import type { ApplicationProfile } from "@reactive-resume/schema/application-profile";
+import type { ApplicationProfile, ApplicationProfileCandidate } from "@reactive-resume/schema/application-profile";
+import type { ProfileMergeOperation, ProfileMergePreview } from "./merge";
 import { ORPCError } from "@orpc/client";
 import { eq, sql } from "drizzle-orm";
 import { db } from "@reactive-resume/db/client";
@@ -8,6 +9,7 @@ import {
 	defaultApplicationProfile,
 	parseApplicationProfile,
 } from "@reactive-resume/schema/application-profile";
+import { applyProfileMerge, previewProfileMerge } from "./merge";
 
 export type ApplicationProfileDocument = {
 	profile: ApplicationProfile;
@@ -63,5 +65,27 @@ export const applicationProfileService = {
 
 		if (!row) conflict();
 		return { profile: parseApplicationProfile(row.data), revision: row.revision };
+	},
+
+	previewMerge: async (input: {
+		userId: string;
+		candidate: ApplicationProfileCandidate;
+	}): Promise<ProfileMergePreview> => {
+		const document = await applicationProfileService.getDocument({ userId: input.userId });
+		return previewProfileMerge(document, input.candidate);
+	},
+
+	applyMerge: async (input: {
+		userId: string;
+		revision: number;
+		operations: ProfileMergeOperation[];
+		confirm: boolean;
+	}): Promise<ApplicationProfileDocument> => {
+		if (!input.confirm)
+			throw new ORPCError("BAD_REQUEST", { message: "Confirm profile changes before applying them." });
+		const document = await applicationProfileService.getDocument({ userId: input.userId });
+		if (document.revision !== input.revision) conflict();
+		const profile = applyProfileMerge(document.profile, input.operations);
+		return applicationProfileService.update({ userId: input.userId, profile, revision: input.revision });
 	},
 };

@@ -1,11 +1,19 @@
 import { z } from "zod";
-import { applicationProfileSchema } from "@reactive-resume/schema/application-profile";
+import {
+	applicationProfileCandidateSchema,
+	applicationProfileSchema,
+} from "@reactive-resume/schema/application-profile";
 import { protectedProcedure } from "../../context";
+import { profileMergeOperationSchema } from "./merge";
 import { applicationProfileService } from "./service";
 
 export const applicationProfileDocumentSchema = z.object({
 	profile: applicationProfileSchema,
 	revision: z.number().int().nonnegative(),
+});
+const profileMergePreviewSchema = applicationProfileDocumentSchema.extend({
+	operations: z.array(profileMergeOperationSchema),
+	summary: z.array(z.string()),
 });
 
 export const applicationProfileRouter = {
@@ -33,4 +41,36 @@ export const applicationProfileRouter = {
 		.input(applicationProfileDocumentSchema)
 		.output(applicationProfileDocumentSchema)
 		.handler(({ context, input }) => applicationProfileService.update({ userId: context.user.id, ...input })),
+
+	previewMerge: protectedProcedure
+		.route({
+			method: "POST",
+			path: "/application-profile/merge/preview",
+			tags: ["Application Profile"],
+			operationId: "previewApplicationProfileMerge",
+			summary: "Preview a career profile merge",
+		})
+		.input(z.object({ candidate: applicationProfileCandidateSchema }))
+		.output(profileMergePreviewSchema)
+		.handler(({ context, input }) =>
+			applicationProfileService.previewMerge({ userId: context.user.id, candidate: input.candidate }),
+		),
+
+	applyMerge: protectedProcedure
+		.route({
+			method: "POST",
+			path: "/application-profile/merge/apply",
+			tags: ["Application Profile"],
+			operationId: "applyApplicationProfileMerge",
+			summary: "Apply an approved career profile merge",
+		})
+		.input(
+			z.object({
+				revision: z.number().int().nonnegative(),
+				operations: z.array(profileMergeOperationSchema).max(50),
+				confirm: z.literal(true),
+			}),
+		)
+		.output(applicationProfileDocumentSchema)
+		.handler(({ context, input }) => applicationProfileService.applyMerge({ userId: context.user.id, ...input })),
 };

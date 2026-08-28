@@ -486,7 +486,7 @@ describe("resumeContentScripts", () => {
 
 	it("returns an empty set for Latin-only content", async () => {
 		const { resumeContentScripts } = await import("./use-register-fonts");
-		expect(resumeContentScripts(withSummary("Reactive Resume")).size).toBe(0);
+		expect(resumeContentScripts(withSummary("cloudcoffee")).size).toBe(0);
 	});
 
 	it("does not scan private metadata notes", async () => {

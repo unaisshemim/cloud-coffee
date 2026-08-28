@@ -9,7 +9,7 @@ const testimonials: string[] = [
 
 	"Truly everything about the UX is so intuitive, fluid and lets you customize your CV how you want and so rapidly. I thank you so much for putting the work to release something like this.",
 
-	"I want to appreciate you for making your projects #openSource, most especially your Reactive Resume, which is the handiest truly-free resume maker I've come across. This is a big shoutout to you. Well done!",
+	"I want to appreciate you for making your projects #openSource, most especially your cloudcoffee, which is the handiest truly-free resume maker I've come across. This is a big shoutout to you. Well done!",
 
 	"I'd like to appreciate the great work you've done with rxresu.me. The website's design, smooth functionality, and ease of use under the free plan are really impressive. It's clear that a lot of thought and effort has gone into building and maintaining such a useful platform.",
 
@@ -23,9 +23,9 @@ const testimonials: string[] = [
 
 	"Hey! Thank you so much for making this fantastic tool! It helped me get a new job as a Research Software Engineer at Arizona State University.",
 
-	"Wow, what an impressive profile! You are very talented. I'm also a fellow SWE on the job hunt and I came across a linked to Reactive Resume on Reddit and gave it a shot. This could easily be a paid product. Very clean and useful.",
+	"Wow, what an impressive profile! You are very talented. I'm also a fellow SWE on the job hunt and I came across a linked to cloudcoffee on Reddit and gave it a shot. This could easily be a paid product. Very clean and useful.",
 
-	"Thank you for creating Reactive Resume. It is an amazing product, and I love the design and how it simplifies the resume-making experience. I've been trying to create a good resume for a decade to find my first job in tech, and your tool has been incredibly helpful.",
+	"Thank you for creating cloudcoffee. It is an amazing product, and I love the design and how it simplifies the resume-making experience. I've been trying to create a good resume for a decade to find my first job in tech, and your tool has been incredibly helpful.",
 ];
 
 type TestimonialCardProps = {
@@ -116,7 +116,7 @@ export function Testimonials() {
 
 				<p className="max-w-4xl text-balance text-muted-foreground leading-relaxed">
 					<Trans>
-						A lot of people have written to me over the years to share their experiences with Reactive Resume and how it
+						A lot of people have written to me over the years to share their experiences with cloudcoffee and how it
 						has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending
 						me an email at{" "}
 						<a

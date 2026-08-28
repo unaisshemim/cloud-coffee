@@ -1,9 +1,9 @@
 ---
 title: "API and MCP Resume Automation"
-description: "Automate resume workflows in Reactive Resume with API keys, the Patch API, the MCP server, AI agent tools, and the JSON resume schema."
+description: "Automate resume workflows in cloudcoffee with OAuth, the Patch API, the MCP server, and the JSON resume schema."
 ---
 
-Reactive Resume supports automation through authenticated API access and an MCP server that lets compatible tools work with resumes and job applications. Agents can list, read, create, import, duplicate, and patch resumes, then track applications, move opportunities through stages, add notes and follow-ups, attach sent documents, and run Application Copilot actions.
+cloudcoffee supports automation through authenticated API access and an MCP server that lets compatible tools work with resumes and job applications. Agents can list, read, create, import, duplicate, and patch resumes, then track applications, move opportunities through stages, add notes and follow-ups, attach sent documents, and run Application Copilot actions.
 
 ## Automation options
 
@@ -14,7 +14,6 @@ Key docs:
 - [Using the API](/guides/using-the-api)
 - [Using the Patch API](/guides/using-the-patch-api)
 - [Using the MCP Server](/guides/using-the-mcp-server)
-- [AI Agent Tools](/guides/ai-agent-tools)
 - [JSON Resume Schema](/guides/json-resume-schema)
 
 ## Common automation workflows
@@ -37,7 +36,7 @@ The Patch API is the safest starting point for targeted resume updates because i
 
 ## Authentication and scope
 
-API requests use API keys. MCP can use OAuth2 in clients that support it, with API keys available as a fallback. If you self-host, use your own instance URL for API and MCP endpoints.
+API and MCP requests use OAuth 2 bearer tokens. OAuth-capable MCP clients discover and complete the login flow automatically. If you self-host, use your own instance URL for API and MCP endpoints.
 
 <Info>
   Automation changes affect the resumes available to the authenticated account or instance. Test workflows on a copy of a
@@ -50,4 +49,4 @@ Do not start with API or MCP automation when you only need to edit one resume ma
 
 ## Next action
 
-For scripts and integrations, create an API key with [Using the API](/guides/using-the-api), then use [Using the Patch API](/guides/using-the-patch-api) for targeted edits. For agent workflows, start with [Using the MCP Server](/guides/using-the-mcp-server).
+For scripts and integrations, authorize an OAuth client with [Using the API](/guides/using-the-api), then use [Using the Patch API](/guides/using-the-patch-api) for targeted edits. For agent workflows, start with [Using the MCP Server](/guides/using-the-mcp-server).

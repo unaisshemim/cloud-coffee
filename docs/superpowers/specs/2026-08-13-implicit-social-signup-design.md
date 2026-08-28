@@ -14,7 +14,7 @@ Custom OAuth already permits implicit signup unless the global restriction is en
 
 ## Behavior
 
-- A social identity linked to an existing Reactive Resume user signs that user in.
+- A social identity linked to an existing cloudcoffee user signs that user in.
 - An unknown social identity creates a user and signs them in when signups are enabled.
 - An unknown social identity is rejected when `FLAG_DISABLE_SIGNUPS` is enabled.
 - The behavior does not depend on whether authentication began on the login or registration page.

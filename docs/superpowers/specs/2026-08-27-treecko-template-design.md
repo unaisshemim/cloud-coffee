@@ -2,7 +2,7 @@
 
 ## Summary
 
-Add `treecko` as a first-class Reactive Resume template. Treecko is a full-width, text-first, ATS-friendly layout modeled on the supplied references: prominent primary-color identity, summary in the header, compact contact grid, primary-color section headings, and dense single-column entries without cards or a sidebar.
+Add `treecko` as a first-class cloudcoffee template. Treecko is a full-width, text-first, ATS-friendly layout modeled on the supplied references: prominent primary-color identity, summary in the header, compact contact grid, primary-color section headings, and dense single-column entries without cards or a sidebar.
 
 Treecko will be selectable from the existing template gallery and rendered by the shared PDF pipeline. It will support existing resume data, custom colors, typography, page controls, semantic stylesheets, RTL rendering, and automatic pagination.
 

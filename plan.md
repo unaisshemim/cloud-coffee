@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add WebMCP browser-page tools to Reactive Resume so browser-integrated AI agents can use the same core capabilities exposed by the existing MCP server, plus page-context tools that act on the current UI.
+**Goal:** Add WebMCP browser-page tools to cloudcoffee so browser-integrated AI agents can use the same core capabilities exposed by the existing MCP server, plus page-context tools that act on the current UI.
 
 **Architecture:** Keep the existing MCP implementation in `packages/mcp` and `apps/server/src/mcp` as the server-side integration, but treat its tool list as the WebMCP parity baseline. Add a browser-only WebMCP layer in `apps/web` that registers route-scoped tools through `document.modelContext.registerTool()` when supported, unregisters them on route unmount, and reuses existing oRPC clients, TanStack Router navigation, dashboard filters, dialogs, and builder store actions. Treat WebMCP as progressive enhancement: unsupported browsers get normal UI behavior.
 
 **Tech Stack:** TanStack Start, React 19, Vite, TypeScript, Zod, oRPC, TanStack Query, Zustand, Vitest, `webmcp-types` or local ambient WebMCP types if package adoption is blocked.
 
-**Spec:** No separate design doc exists yet. This plan is based on the user request, the current Reactive Resume repo shape, and the WebMCP draft/API docs:
+**Spec:** No separate design doc exists yet. This plan is based on the user request, the current cloudcoffee repo shape, and the WebMCP draft/API docs:
 - https://github.com/webmachinelearning/webmcp
 - https://webmachinelearning.github.io/webmcp/
 
@@ -28,7 +28,7 @@
 
 ## Current State
 
-Reactive Resume already has existing MCP support:
+cloudcoffee already has existing MCP support:
 
 - `packages/mcp/src/tools.ts` registers server MCP tools.
 - `packages/mcp/src/tool-meta.ts` owns canonical MCP metadata and schemas.

@@ -12,7 +12,7 @@ describe("buildMcpServerCard", () => {
 
 	it("identifies the server as reactive-resume", () => {
 		expect(card.serverInfo.name).toBe("reactive-resume");
-		expect(card.serverInfo.title).toBe("Reactive Resume");
+		expect(card.serverInfo.title).toBe("cloudcoffee");
 		expect(card.serverInfo.websiteUrl).toBe("https://rxresu.me");
 	});
 
@@ -79,9 +79,8 @@ describe("buildMcpServerCard", () => {
 		expect(card.resources.some((r) => r.mimeType === "application/json")).toBe(true);
 	});
 
-	it("documents an optional apiKey in the configuration schema", () => {
-		const props = card.configurationSchema.properties as Record<string, unknown>;
-		expect(props.apiKey).toBeDefined();
+	it("does not advertise API-key configuration", () => {
+		expect(card).not.toHaveProperty("configurationSchema");
 	});
 
 	it("matches the create/update application archived contract", () => {

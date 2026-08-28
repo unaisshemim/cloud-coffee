@@ -47,7 +47,7 @@ export function TemplateGalleryDialog(_: DialogProps<"resume.template.gallery">)
 				</DialogTitle>
 				<DialogDescription className="leading-relaxed">
 					<Trans>
-						Treecko is the available resume design. Select it to apply its recommended layout and typography.
+						Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography.
 					</Trans>
 				</DialogDescription>
 			</DialogHeader>

@@ -4,7 +4,8 @@ import { defaultResumeData } from "@reactive-resume/schema/resume/default";
 import { createResumeDataJsonSchema } from "@reactive-resume/schema/resume/json-schema";
 
 type GeneratedSpecView = {
-	components?: { schemas?: Record<string, unknown> };
+	components?: { schemas?: Record<string, unknown>; securitySchemes?: Record<string, unknown> };
+	security?: unknown[];
 	paths?: Record<
 		string,
 		Record<
@@ -70,15 +71,22 @@ describe("generateOpenApiSpec", () => {
 		const spec = await generateSpec();
 
 		expect(spec.info).toMatchObject({
-			title: "Reactive Resume",
+			title: "cloudcoffee",
 			version: "9.8.7",
 		});
 		expect(spec.servers).toEqual([{ url: "https://rxresu.me/api/openapi" }]);
 		expect(spec.externalDocs).toEqual({
 			url: "https://docs.rxresu.me",
-			description: "Reactive Resume Documentation",
+			description: "cloudcoffee Documentation",
 		});
 	}, 15_000);
+
+	it("does not advertise API-key authentication", async () => {
+		const spec = (await generateSpec()) as GeneratedSpecView;
+
+		expect(spec.components?.securitySchemes ?? {}).not.toHaveProperty("apiKey");
+		expect(spec.security).toBeUndefined();
+	});
 
 	it("uses the canonical input-side ResumeData schema in update requests", async () => {
 		const spec = (await generateSpec()) as GeneratedSpecView;

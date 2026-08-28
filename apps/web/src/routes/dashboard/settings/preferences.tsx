@@ -1,22 +1,7 @@
-import { t } from "@lingui/core/macro";
-import { GearSixIcon } from "@phosphor-icons/react";
-import { createFileRoute } from "@tanstack/react-router";
-import { Separator } from "@reactive-resume/ui/components/separator";
-import { PreferencesSettingsPage } from "@/features/settings/pages/preferences";
-import { DashboardHeader } from "../-components/header";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/dashboard/settings/preferences")({
-	component: RouteComponent,
+	beforeLoad: () => {
+		throw redirect({ to: "/dashboard/settings/account", replace: true });
+	},
 });
-
-function RouteComponent() {
-	return (
-		<div className="space-y-4">
-			<DashboardHeader icon={GearSixIcon} title={t`Preferences`} />
-
-			<Separator />
-
-			<PreferencesSettingsPage />
-		</div>
-	);
-}

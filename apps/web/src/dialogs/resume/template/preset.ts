@@ -3,6 +3,28 @@ import type { Template } from "@reactive-resume/schema/templates";
 
 export function applyTemplatePreset(data: ResumeData, template: Template): void {
 	data.metadata.template = template;
+
+	if (template === "classic") {
+		data.metadata.page.marginX = 32;
+		data.metadata.page.marginY = 32;
+		data.metadata.page.hideSectionIcons = true;
+		data.metadata.design.colors.primary = "rgba(24, 24, 27, 1)";
+
+		Object.assign(data.metadata.typography.body, {
+			fontFamily: "Roboto",
+			fontWeights: ["400", "600"],
+			fontSize: 9,
+			lineHeight: 1.35,
+		});
+
+		Object.assign(data.metadata.typography.heading, {
+			fontFamily: "Roboto",
+			fontWeights: ["600"],
+		});
+
+		return;
+	}
+
 	data.metadata.page.marginX = 36;
 	data.metadata.page.marginY = 36;
 	data.metadata.design.colors.primary = "rgba(0, 150, 137, 1)";

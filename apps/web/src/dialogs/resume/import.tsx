@@ -267,7 +267,7 @@ export function ImportResumeDialog(_: DialogProps<"resume.import">) {
 
 		if (file) {
 			const confirmed = await confirm(t`Leave to set up an AI provider?`, {
-				description: t`You'll be taken to the Integrations page. The file you selected won't be imported.`,
+				description: t`You'll be taken to Account settings. The file you selected won't be imported.`,
 				confirmText: t`Leave`,
 				cancelText: t`Stay`,
 			});
@@ -276,7 +276,7 @@ export function ImportResumeDialog(_: DialogProps<"resume.import">) {
 		}
 
 		closeDialog();
-		await navigate({ to: "/dashboard/settings/integrations" });
+		await navigate({ to: "/dashboard/settings/account" });
 	};
 
 	return (
@@ -288,8 +288,8 @@ export function ImportResumeDialog(_: DialogProps<"resume.import">) {
 				</DialogTitle>
 				<DialogDescription>
 					<Trans>
-						Continue where you left off by importing an existing resume you created using Reactive Resume or any another
-						resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from Reactive Resume.
+						Continue where you left off by importing an existing resume you created using cloudcoffee or any another
+						resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee.
 					</Trans>
 				</DialogDescription>
 			</DialogHeader>
@@ -351,8 +351,8 @@ export function ImportResumeDialog(_: DialogProps<"resume.import">) {
 												{
 													value: "reactive-resume-json",
 													label: t({
-														comment: "Import source option for current Reactive Resume JSON format",
-														message: "Reactive Resume (JSON)",
+														comment: "Import source option for current cloudcoffee JSON format",
+														message: "cloudcoffee (JSON)",
 													}),
 												},
 												{
@@ -420,7 +420,7 @@ export function ImportResumeDialog(_: DialogProps<"resume.import">) {
 							variant="secondary"
 							nativeButton={false}
 							render={
-								<Link to="/dashboard/settings/integrations" onClick={onSetUpProvider}>
+								<Link to="/dashboard/settings/account" onClick={onSetUpProvider}>
 									{t`Set up a provider`}
 								</Link>
 							}

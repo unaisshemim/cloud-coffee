@@ -2,11 +2,8 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import {
 	BriefcaseIcon,
-	ChatCircleDotsIcon,
 	GearIcon,
 	HouseSimpleIcon,
-	KeyIcon,
-	OpenAiLogoIcon,
 	PlusIcon,
 	ReadCvLogoIcon,
 	ShieldCheckIcon,
@@ -72,26 +69,6 @@ export function NavigationCommandGroup() {
 
 				<CommandItem
 					disabled={!session}
-					keywords={[t`Threads`, t`Agent`, t`Artificial Intelligence`]}
-					value="navigation.threads"
-					onSelect={() => onNavigate("/agent")}
-				>
-					<ChatCircleDotsIcon />
-					<Trans>Threads</Trans>
-				</CommandItem>
-
-				<CommandItem
-					disabled={!session}
-					keywords={[t`New Thread`, t`Agent`, t`Artificial Intelligence`]}
-					value="navigation.threads.new"
-					onSelect={() => onNavigate("/agent/new")}
-				>
-					<PlusIcon />
-					<Trans>New Thread</Trans>
-				</CommandItem>
-
-				<CommandItem
-					disabled={!session}
 					keywords={[t`Settings`]}
 					value="navigation.settings"
 					onSelect={() => pushPage("settings")}
@@ -112,15 +89,6 @@ export function NavigationCommandGroup() {
 				</CommandItem>
 
 				<CommandItem
-					keywords={[t`Preferences`]}
-					value="navigation.settings.preferences"
-					onSelect={() => onNavigate("/dashboard/settings/preferences")}
-				>
-					<GearIcon />
-					<Trans>Preferences</Trans>
-				</CommandItem>
-
-				<CommandItem
 					keywords={[t`Authentication`]}
 					value="navigation.settings.authentication"
 					onSelect={() => onNavigate("/dashboard/settings/authentication")}
@@ -130,25 +98,14 @@ export function NavigationCommandGroup() {
 				</CommandItem>
 
 				<CommandItem
-					keywords={[t`API Keys`]}
-					value="navigation.settings.api-keys"
-					onSelect={() => onNavigate("/dashboard/settings/api-keys")}
-				>
-					<KeyIcon />
-					<Trans>API Keys</Trans>
-				</CommandItem>
-
-				<CommandItem
-					keywords={[t`Integrations`, t`Artificial Intelligence`]}
-					value="navigation.settings.integrations"
-					onSelect={() => onNavigate("/dashboard/settings/integrations")}
-				>
-					<OpenAiLogoIcon />
-					<Trans>Integrations</Trans>
-				</CommandItem>
-
-				<CommandItem
-					keywords={[t`Account`, t`Export Data`, t`Delete Account`]}
+					keywords={[
+						t`Account`,
+						t`Preferences`,
+						t`Integrations`,
+						t`Artificial Intelligence`,
+						t`Export Data`,
+						t`Delete Account`,
+					]}
 					value="navigation.settings.account"
 					onSelect={() => onNavigate("/dashboard/settings/account")}
 				>

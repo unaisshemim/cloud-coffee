@@ -12,7 +12,7 @@ describe("SmallScreenNotice", () => {
 	it("blocks the builder with the requested desktop-only message", () => {
 		render(<SmallScreenNotice />);
 
-		expect(screen.getByText("Resume Builder | Dashboard - Wobo AI")).toBeInTheDocument();
+		expect(screen.getByText("Resume Builder | Dashboard - cloudcoffee")).toBeInTheDocument();
 		expect(screen.getByRole("heading", { name: "Screen Size Too Small" })).toBeInTheDocument();
 		expect(
 			screen.getByText(

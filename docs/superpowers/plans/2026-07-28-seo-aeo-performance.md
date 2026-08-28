@@ -69,10 +69,10 @@ it("injects canonical metadata and structured data into tracking-parameter root 
 		<!doctype html>
 		<html>
 			<head>
-				<title>Reactive Resume — A free and open-source resume builder</title>
+				<title>cloudcoffee — A free and open-source resume builder</title>
 				<meta
 					name="description"
-					content="Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+					content="cloudcoffee is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
 				>
 			</head>
 			<body><div id="app"></div></body>
@@ -127,20 +127,20 @@ Expected: two failures. The root response lacks canonical/JSON-LD markup and the
 Add the following block after `BASE_SECURITY_HEADERS` in `apps/server/src/static/web.ts`:
 
 ```ts
-const ROOT_TITLE = "Reactive Resume — A free and open-source resume builder";
+const ROOT_TITLE = "cloudcoffee — A free and open-source resume builder";
 const ROOT_DESCRIPTION =
-	"Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.";
+	"cloudcoffee is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.";
 const ROOT_POSTER_PATH = "/videos/timelapse-v1.webp";
 const ROOT_FAQ_ITEMS = [
 	{
-		question: "Is Reactive Resume really free?",
+		question: "Is cloudcoffee really free?",
 		answer:
-			"Yes! Reactive Resume is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free.",
+			"Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free.",
 	},
 	{
 		question: "How is my data protected?",
 		answer:
-			"Your data is stored securely and is never shared with third parties. You can also self-host Reactive Resume on your own servers for complete control over your data.",
+			"Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data.",
 	},
 	{
 		question: "Can I export my resume to PDF?",
@@ -148,14 +148,14 @@ const ROOT_FAQ_ITEMS = [
 			"Absolutely! You can export your resume to PDF with a single click. The exported PDF maintains all your formatting and styling perfectly.",
 	},
 	{
-		question: "Is Reactive Resume available in multiple languages?",
+		question: "Is cloudcoffee available in multiple languages?",
 		answer:
-			"Yes, Reactive Resume is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can contribute to the translations on Crowdin.",
+			"Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can contribute to the translations on Crowdin.",
 	},
 	{
-		question: "What makes Reactive Resume different from other resume builders?",
+		question: "What makes cloudcoffee different from other resume builders?",
 		answer:
-			"Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall.",
+			"cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall.",
 	},
 	{
 		question: "How do I share my resume?",
@@ -172,12 +172,12 @@ function createRootSeoMarkup(canonicalUrl: string) {
 		"@graph": [
 			{
 				"@type": "WebSite",
-				name: "Reactive Resume",
+				name: "cloudcoffee",
 				url: canonicalUrl,
 			},
 			{
 				"@type": ["SoftwareApplication", "WebApplication"],
-				name: "Reactive Resume",
+				name: "cloudcoffee",
 				url: canonicalUrl,
 				description: ROOT_DESCRIPTION,
 				applicationCategory: "BusinessApplication",
@@ -192,7 +192,7 @@ function createRootSeoMarkup(canonicalUrl: string) {
 			},
 			{
 				"@type": "Project",
-				name: "Reactive Resume",
+				name: "cloudcoffee",
 				url: canonicalUrl,
 				sameAs: ["https://github.com/amruthpillai/reactive-resume"],
 			},
@@ -214,7 +214,7 @@ function createRootSeoMarkup(canonicalUrl: string) {
 		<link rel="canonical" href="${canonicalUrl}">
 		<link rel="preload" href="${ROOT_POSTER_PATH}" as="image" fetchpriority="high">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Reactive Resume">
+		<meta property="og:site_name" content="cloudcoffee">
 		<meta property="og:title" content="${ROOT_TITLE}">
 		<meta property="og:description" content="${ROOT_DESCRIPTION}">
 		<meta property="og:url" content="${canonicalUrl}">
@@ -409,7 +409,7 @@ Replace the video element in `apps/web/src/routes/_home/-sections/hero.tsx` with
 	height={720}
 	poster="/videos/timelapse-v1.webp"
 	src="/videos/timelapse-v1.mp4"
-	aria-label={t`Timelapse demonstration of building a resume with Reactive Resume`}
+	aria-label={t`Timelapse demonstration of building a resume with cloudcoffee`}
 	className="aspect-[1146/720] w-full rounded-md border object-cover"
 />
 ```
@@ -430,7 +430,7 @@ links: [
 Change the title and module script in `apps/web/index.html` to:
 
 ```html
-<title>Reactive Resume — A free and open-source resume builder</title>
+<title>cloudcoffee — A free and open-source resume builder</title>
 ```
 
 ```html

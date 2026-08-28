@@ -1,4 +1,7 @@
+import type { Template } from "@reactive-resume/schema/templates";
 import { ArrowCounterClockwiseIcon, CaretDownIcon } from "@phosphor-icons/react";
+import { templates } from "@/dialogs/resume/template/data";
+import { applyTemplatePreset } from "@/dialogs/resume/template/preset";
 import { useCurrentResume, useUpdateResumeData } from "@/features/resume/builder/draft";
 
 const ACCENT_COLORS = [
@@ -34,6 +37,11 @@ export function WoboDesignPanel() {
 	const resume = useCurrentResume();
 	const updateResumeData = useUpdateResumeData();
 	const { page, typography, design } = resume.data.metadata;
+	const selectedTemplate = resume.data.metadata.template;
+
+	const setTemplate = (template: Template) => {
+		updateResumeData((draft) => applyTemplatePreset(draft, template));
+	};
 
 	const setPage = (field: "format" | "marginX" | "marginY", value: string | number) => {
 		updateResumeData((draft) => {
@@ -65,13 +73,29 @@ export function WoboDesignPanel() {
 
 					<div className="mb-6">
 						<p className="mb-3 font-semibold text-sm">Template</p>
-						<div className="w-44 overflow-hidden rounded-md border-[#6255e7] border-[3px] bg-white p-1">
-							<img
-								src="/templates/jpg/treecko.jpg"
-								alt="Treecko template"
-								className="aspect-page w-full object-cover"
-							/>
-							<p className="py-1 text-center font-semibold text-xs">Treecko</p>
+						<div className="grid grid-cols-2 gap-3">
+							{Object.entries(templates).map(([id, template]) => {
+								const isSelected = selectedTemplate === id;
+
+								return (
+									<button
+										key={id}
+										type="button"
+										aria-pressed={isSelected}
+										onClick={() => setTemplate(id as Template)}
+										className={`overflow-hidden rounded-md border-[3px] bg-white p-1 text-left transition-colors ${
+											isSelected ? "border-[#6255e7]" : "border-[#dedce3] hover:border-[#aaa3ee]"
+										}`}
+									>
+										<img
+											src={template.imageUrl}
+											alt={`${template.name} template`}
+											className="aspect-page w-full object-cover object-top"
+										/>
+										<span className="block py-1 text-center font-semibold text-xs">{template.name}</span>
+									</button>
+								);
+							})}
 						</div>
 					</div>
 

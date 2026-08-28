@@ -53,28 +53,17 @@ type GenerateOpenApiSpecOptions = {
 export async function generateOpenApiSpec({ appUrl, version }: GenerateOpenApiSpecOptions) {
 	return await openAPIGenerator.generate(openAPIRouter, {
 		info: {
-			title: "Reactive Resume",
+			title: "cloudcoffee",
 			version,
-			description: "Reactive Resume API",
+			description: "cloudcoffee API",
 			license: { name: "MIT", url: "https://github.com/amruthpillai/reactive-resume/blob/main/LICENSE" },
 			contact: { name: "Amruth Pillai", email: "hello@amruthpillai.com", url: "https://amruthpillai.com" },
 		},
 		servers: [{ url: `${appUrl}/api/openapi` }],
-		externalDocs: { url: "https://docs.rxresu.me", description: "Reactive Resume Documentation" },
+		externalDocs: { url: "https://docs.rxresu.me", description: "cloudcoffee Documentation" },
 		commonSchemas: {
 			ResumeData: { schema: resumeDataSchema, strategy: "input" },
 		},
-		components: {
-			securitySchemes: {
-				apiKey: {
-					type: "apiKey",
-					name: "x-api-key",
-					in: "header",
-					description: "The API key to authenticate requests.",
-				},
-			},
-		},
-		security: [{ apiKey: [] }],
 		filter: ({ contract }) => !contract["~orpc"].route.tags?.includes("Internal"),
 	});
 }

@@ -42,7 +42,7 @@ FROM node:${NODE_VERSION}-slim AS runtime
 
 LABEL maintainer="amruthpillai"
 LABEL org.opencontainers.image.licenses="MIT"
-LABEL org.opencontainers.image.title="Reactive Resume"
+LABEL org.opencontainers.image.title="cloudcoffee"
 LABEL org.opencontainers.image.description="A free and open-source resume builder."
 LABEL org.opencontainers.image.vendor="Amruth Pillai"
 LABEL org.opencontainers.image.url="https://rxresu.me"

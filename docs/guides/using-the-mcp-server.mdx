@@ -1,9 +1,9 @@
 ---
 title: "Using the MCP Server"
-description: "Connect Reactive Resume to AI tools like Claude Desktop, Cursor, and Codex through the Model Context Protocol to edit and manage resumes via chat."
+description: "Connect cloudcoffee to AI tools like Claude Desktop, Cursor, and Codex through the Model Context Protocol to edit and manage resumes via chat."
 ---
 
-The Reactive Resume MCP server lets you manage and modify your resumes and job applications through any MCP-compatible AI tool - Claude Desktop, Cursor, Codex, and more. It connects to the Reactive Resume API and exposes tools for resume editing, Application Tracker workflows, and AI-assisted job application tasks using natural language.
+The cloudcoffee MCP server lets you manage and modify your resumes and job applications through any MCP-compatible AI tool - Claude Desktop, Cursor, Codex, and more. It connects to the cloudcoffee API and exposes tools for resume editing, Application Tracker workflows, and AI-assisted job application tasks using natural language.
 
 ## What is MCP?
 
@@ -13,32 +13,18 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a standar
 
 <Steps>
   <Step title="Choose your authentication method">
-    Reactive Resume MCP supports two authentication methods:
-
-    - **OAuth2 (recommended):** best user experience for clients that support MCP OAuth.
-    - **API key (fallback):** works in all clients that can send custom headers.
-
-    Use OAuth2 whenever your MCP client supports it. Use API key only when OAuth is unavailable in that client.
-
-  </Step>
-
-  <Step title="If using API key, create one">
-    Head over to [https://rxresu.me](https://rxresu.me) (or your self-hosted instance), sign in, and navigate to **Settings → API Keys**. Click **Create a new API key**, give it a name, and copy the secret — it's only shown once.
-
-    For the full walkthrough, see [Using the API](/guides/using-the-api).
+    cloudcoffee MCP uses OAuth2 bearer authentication. Choose a client that supports MCP OAuth discovery and login.
 
   </Step>
 </Steps>
 
 ## Configuration
 
-There are two transport options, and each can use either OAuth2 or API key depending on your client capabilities.
+There are two OAuth-capable transport options.
 
 ### Method 1: Streamable HTTP (recommended)
 
 If your client supports the `url` field (e.g. **Cursor**, **Codex**, Claude custom connectors), use this.
-
-#### Option A: OAuth2 (recommended)
 
 Most OAuth-capable clients only need the MCP URL:
 
@@ -54,41 +40,22 @@ Most OAuth-capable clients only need the MCP URL:
 
 Then connect/sign in from the client UI (or with the client's OAuth login command).
 
-#### Option B: API key (fallback)
-
-If OAuth is not supported in your client, send `x-api-key`:
-
-```json
-{
-  "mcpServers": {
-    "reactive-resume": {
-      "url": "https://rxresu.me/mcp",
-      "headers": {
-        "x-api-key": "your-api-key"
-      }
-    }
-  }
-}
-```
-
 ### Method 2: mcp-remote
 
 If your client only supports `command` / `args` (for example, local-only Claude Desktop config), use [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) as a bridge. This requires [Node.js](https://nodejs.org) **20 or later**.
 
-`mcp-remote` is most commonly used with API keys:
+`mcp-remote` can bridge local-only clients into the remote OAuth flow:
 
 ```json
 {
   "mcpServers": {
     "reactive-resume": {
       "command": "npx",
-      "args": ["mcp-remote", "https://rxresu.me/mcp", "--header", "x-api-key:your-api-key"]
+      "args": ["mcp-remote", "https://rxresu.me/mcp"]
     }
   }
 }
 ```
-
-<Info>Replace `your-api-key` with the API key you created in the prerequisites step.</Info>
 
 ### Where to put the config
 
@@ -99,14 +66,9 @@ If your client only supports `command` / `args` (for example, local-only Claude 
 | Codex             | `~/.codex/config.toml` or `.codex/config.toml` ([docs](https://developers.openai.com/codex/mcp)) |
 | Other MCP clients | Refer to the client's documentation                                                              |
 
-## Authentication Details (How Reactive Resume MCP Works)
+## Authentication Details (How cloudcoffee MCP Works)
 
-Reactive Resume MCP accepts authentication in this order:
-
-1. **Bearer token (OAuth2 access token)** via `Authorization: Bearer <token>`
-2. **API key fallback** via `x-api-key: <key>`
-
-If neither is valid, the MCP endpoint responds with `401` and advertises OAuth metadata using:
+cloudcoffee MCP accepts OAuth2 access tokens via `Authorization: Bearer <token>`. If the token is absent or invalid, the MCP endpoint responds with `401` and advertises OAuth metadata using:
 
 - `WWW-Authenticate: Bearer resource_metadata="<instance>/.well-known/oauth-protected-resource"`
 
@@ -114,7 +76,7 @@ This lets OAuth-capable MCP clients discover and complete the OAuth flow automat
 
 ### OAuth2 flow used by this server
 
-Reactive Resume is configured as an OAuth authorization server for MCP clients:
+cloudcoffee is configured as an OAuth authorization server for MCP clients:
 
 - The MCP endpoint is `https://rxresu.me/mcp`.
 - OAuth discovery metadata is exposed under `/.well-known/*` endpoints.
@@ -127,28 +89,11 @@ Reactive Resume is configured as an OAuth authorization server for MCP clients:
 
 ### Cursor
 
-**OAuth2 (recommended):**
-
 ```json
 {
   "mcpServers": {
     "reactive-resume": {
       "url": "https://rxresu.me/mcp"
-    }
-  }
-}
-```
-
-**API key fallback:**
-
-```json
-{
-  "mcpServers": {
-    "reactive-resume": {
-      "url": "https://rxresu.me/mcp",
-      "headers": {
-        "x-api-key": "your-api-key"
-      }
     }
   }
 }
@@ -168,21 +113,13 @@ Then log in with OAuth:
 codex mcp login reactive-resume
 ```
 
-API key fallback (`config.toml`):
-
-```toml
-[mcp_servers."reactive-resume"]
-url = "https://rxresu.me/mcp"
-http_headers = { "x-api-key" = "your-api-key" }
-```
-
 ### Claude (web app custom connector)
 
 Add `https://rxresu.me/mcp` as a custom remote MCP connector, then connect with OAuth in Claude's connector UI.
 
 ### Claude Desktop (local config file)
 
-Use `mcp-remote` bridge with API key (example shown above in **Method 2**).
+Use the `mcp-remote` OAuth bridge shown above in **Method 2**.
 
 ## External References
 
@@ -194,14 +131,11 @@ Use `mcp-remote` bridge with API key (example shown above in **Method 2**).
 
 ## Self-Hosting
 
-If you're running a self-hosted Reactive Resume instance, replace `https://rxresu.me/mcp` with your instance URL:
+If you're running a self-hosted cloudcoffee instance, replace `https://rxresu.me/mcp` with your instance URL:
 
 ```json
 {
-  "url": "https://resume.example.com/mcp",
-  "headers": {
-    "x-api-key": "your-api-key"
-  }
+  "url": "https://resume.example.com/mcp"
 }
 ```
 
@@ -344,11 +278,11 @@ For a complete workflow and prompt library, see [Managing applications with MCP]
 
 | Issue                                                         | Solution                                                                                                                       |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| "Unauthorized" with no login prompt                           | Your client may not support MCP OAuth discovery. Use API key mode (`x-api-key`)                                                |
+| "Unauthorized" with no login prompt                           | Your client may not support MCP OAuth discovery. Use an OAuth-capable client or `mcp-remote`.                                  |
 | OAuth login opens but fails redirect/callback                 | Confirm your client's MCP OAuth callback settings and retry the connection                                                     |
-| "API error (401)"                                             | Your API key is invalid or expired. Create a new one in **Settings → API Keys**                                                |
+| "API error (401)"                                             | Your OAuth token is missing or expired. Reconnect the client and complete login again.                                         |
 | "API error (404)"                                             | The resume ID doesn't exist. Use `list_resumes` to find valid IDs                                                             |
-| "API error (403)"                                             | The resume is locked. Unlock it in the Reactive Resume dashboard                                                               |
+| "API error (403)"                                             | The resume is locked. Unlock it in the cloudcoffee dashboard                                                               |
 | Connection refused                                            | Check that the URL is correct and the instance is running                                                                      |
 | "ReferenceError: File is not defined" when using `mcp-remote` | You're running Node.js 18. `mcp-remote` requires **Node.js 20 or later** — upgrade with `nvm use 20` or `nvm alias default 20` |
 | "Application documents must be PDF files"                     | `attach_application_document` only accepts `contentType: "application/pdf"` and base64-encoded PDF bytes                       |

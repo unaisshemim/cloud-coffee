@@ -14,7 +14,7 @@ export function createPageDescriptionTool(input: PageDescriptionInput): WebMcpTo
 	return {
 		name: "rr.page.describe",
 		title: "Describe Current Page",
-		description: "Describe the current Reactive Resume page and available page-context capabilities.",
+		description: "Describe the current cloudcoffee page and available page-context capabilities.",
 		inputSchema: emptyObjectSchema,
 		annotations: { readOnlyHint: true, untrustedContentHint: false },
 		execute: async () =>

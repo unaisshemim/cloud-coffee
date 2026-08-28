@@ -31,18 +31,25 @@ i18n.loadAndActivate({ locale: "en", messages: {} });
 const { Hero } = await import("./hero");
 
 describe("Hero", () => {
-	it("shows a poster and waits for user interaction before loading the video", () => {
-		const { container } = render(
+	it("shows the editorial career collage with animated ASCII details", () => {
+		const { container, getAllByTestId, getByRole } = render(
 			<I18nProvider i18n={i18n}>
 				<Hero />
 			</I18nProvider>,
 		);
-		const video = container.querySelector("video");
 
-		expect(video).toHaveAttribute("poster", "/videos/timelapse-v1.webp");
-		expect(video).toHaveAttribute("preload", "none");
-		expect(video).toHaveAttribute("src", "/videos/timelapse-v1.mp4");
-		expect(video).toHaveAttribute("controls");
-		expect(video).not.toHaveAttribute("autoplay");
+		const artwork = getByRole("img", {
+			name: "An editorial career collage with a data crystal and a flying laptop",
+		});
+
+		expect(artwork).toHaveAttribute("src", "/images/landing/career-collage-hero-v2.webp");
+		expect(artwork).toHaveClass("w-[210%]", "object-contain", "lg:w-[86%]");
+		expect(artwork.parentElement).toHaveClass("top-12", "bottom-0", "sm:top-16");
+		expect(getByRole("heading", { level: 1 })).toHaveTextContent("Career intelligence at the speed of opportunity.");
+		const asciiDetails = getAllByTestId("career-ascii");
+		expect(asciiDetails).toHaveLength(3);
+		expect(asciiDetails.some((detail) => detail.textContent?.includes("WEBMCP.CONNECTED"))).toBe(true);
+		expect(getByRole("button", { name: /Build your career base/i })).toHaveAttribute("href", "/dashboard");
+		expect(container.querySelector("video")).not.toBeInTheDocument();
 	});
 });

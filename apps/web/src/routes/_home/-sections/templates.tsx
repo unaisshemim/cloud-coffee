@@ -96,7 +96,7 @@ export function Templates() {
 				<p className="max-w-2xl text-muted-foreground leading-relaxed">
 					<Trans>
 						Explore our diverse selection of templates, each designed to fit different styles, professions, and
-						personalities. Reactive Resume currently offers 12 templates, with more on the way.
+						personalities. cloudcoffee currently offers 12 templates, with more on the way.
 					</Trans>
 				</p>
 			</m.div>

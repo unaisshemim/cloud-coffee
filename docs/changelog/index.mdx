@@ -1,6 +1,6 @@
 ---
-title: "Reactive Resume changelog"
-description: "Release notes for Reactive Resume covering new features, resume builder updates, PDF export fixes, AI Agent changes, and self-hosting news."
+title: "cloudcoffee changelog"
+description: "Release notes for cloudcoffee covering new features, resume builder updates, PDF export fixes, AI changes, and self-hosting news."
 rss: true
 ---
 
@@ -19,10 +19,6 @@ rss: true
 - Once a report exists, you can ask your own AI provider to review the writing — weak phrasing, bullets that describe duties rather than outcomes, and where a rewrite would land better. It sends only the extracted text, never the PDF. [#3382](https://github.com/amruthpillai/reactive-resume/pull/3382)
 - Section detection understands more of the headings people actually use, so conventional sections are recognized across a wider range of resumes. [#3382](https://github.com/amruthpillai/reactive-resume/pull/3382)
 - Toasts no longer slide underneath dialogs and sheets. [#3382](https://github.com/amruthpillai/reactive-resume/pull/3382)
-
-## AI Agent
-
-- Picking a provider when starting a thread now uses the same provider picker as the rest of the app, showing the label, provider and model consistently instead of one long concatenated line. [#3382](https://github.com/amruthpillai/reactive-resume/pull/3382)
 
 ## PDF Export & Fonts
 
@@ -124,7 +120,7 @@ rss: true
 
 - **Check your resume's ATS parseability as you edit.** The builder now runs a deterministic, private check in your browser for contact details, dates, section structure, reading order, font size, line height, and margins. Findings explain what to change and can jump directly to the affected field. Thanks to [@Syed-Ali-Abbas-Zaidi](https://github.com/Syed-Ali-Abbas-Zaidi). [#3314](https://github.com/amruthpillai/reactive-resume/pull/3314)
 - **Download cover letters through MCP.** AI clients can now request a short-lived PDF download URL for either a resume or its visible cover letter. The selected document is cryptographically bound to the URL, so it cannot be switched after signing. Thanks to [@ignaciocarre](https://github.com/ignaciocarre). [#3304](https://github.com/amruthpillai/reactive-resume/pull/3304)
-- **Clearer JSON imports.** Reactive Resume, Reactive Resume v4, and JSON Resume files are detected and routed to the correct parser, while malformed files now produce concise, readable validation messages instead of raw error dumps. Thanks to [@MrTig-afk](https://github.com/MrTig-afk). [#3296](https://github.com/amruthpillai/reactive-resume/pull/3296)
+- **Clearer JSON imports.** cloudcoffee, Reactive Resume v4, and JSON Resume files are detected and routed to the correct parser, while malformed files now produce concise, readable validation messages instead of raw error dumps. Thanks to [@MrTig-afk](https://github.com/MrTig-afk). [#3296](https://github.com/amruthpillai/reactive-resume/pull/3296)
 - **Semantic CSS is now the standard Custom Styles experience.** New resumes use it by default, the legacy feature flag and banner have been removed, and explicit activation no longer fails on an obsolete legacy-renderer parity check. [3589b534f](https://github.com/amruthpillai/reactive-resume/commit/3589b534f), [#3316](https://github.com/amruthpillai/reactive-resume/pull/3316)
 
 ## Resume Builder & PDF Exports
@@ -214,7 +210,7 @@ rss: true
 ## Documentation & Localization
 
 - Rewrote the Custom Styles guide as **Applying Custom Styles**, covering conversion, selectors, builder variables, pagination, diagnosis, and portability. The JSON Resume schema guide and the resume-builder skill schema reference are now generated from the schema so they stay in sync. [d2ffbf961](https://github.com/amruthpillai/reactive-resume/commit/d2ffbf961)
-- Added 17 comparison pages covering Reactive Resume against mainstream resume builders, AI and ATS tools, design editors, and career and template services. [9d6426b2e](https://github.com/amruthpillai/reactive-resume/commit/9d6426b2e)
+- Added 17 comparison pages covering cloudcoffee against mainstream resume builders, AI and ATS tools, design editors, and career and template services. [9d6426b2e](https://github.com/amruthpillai/reactive-resume/commit/9d6426b2e)
 - Canonicalized the getting started routes and fixed the contributing guide's troubleshooting code blocks. [a4897c20d](https://github.com/amruthpillai/reactive-resume/commit/a4897c20d), [e6b4733c5](https://github.com/amruthpillai/reactive-resume/commit/e6b4733c5)
 - Pinned the v4 migration script checkout in the self-hosting migration guide, and aligned the documented pnpm version with the `packageManager` field. [ac9813909](https://github.com/amruthpillai/reactive-resume/commit/ac9813909), [15f8bce98](https://github.com/amruthpillai/reactive-resume/commit/15f8bce98)
 - Synced Crowdin translation catalogs, including strings for the application timeline. [9085a199c](https://github.com/amruthpillai/reactive-resume/commit/9085a199c), [79e4a3ddc](https://github.com/amruthpillai/reactive-resume/commit/79e4a3ddc), [d50948dde](https://github.com/amruthpillai/reactive-resume/commit/d50948dde)
@@ -233,7 +229,7 @@ rss: true
 
 - Added first-class AI SDK support for Mistral AI, Cohere, xAI, Groq, DeepSeek, Together.ai, Fireworks, Cerebras, and Perplexity across saved provider settings and AI service calls.
 - Made AI provider connection tests work with OpenAI-compatible models that do not support structured output, with a clearer error when a model returns too much text during the test.
-- Published Reactive Resume MCP registry metadata so MCP clients and directories can discover the hosted remote server. [73daf22b2](https://github.com/amruthpillai/reactive-resume/commit/73daf22b2)
+- Published cloudcoffee MCP registry metadata so MCP clients and directories can discover the hosted remote server. [73daf22b2](https://github.com/amruthpillai/reactive-resume/commit/73daf22b2)
 
 ## Resume Builder & Exports
 
@@ -264,7 +260,7 @@ rss: true
 
 - **Application Tracker REST and MCP parity.** The job application pipeline is now available outside the web app through authenticated REST endpoints and MCP tools, so agents can create records, import rows, move stages, add notes, manage follow-ups, attach sent PDFs, and inspect pipeline health. [2dad27da5](https://github.com/amruthpillai/reactive-resume/commit/2dad27da5), [bf2dc5bbd](https://github.com/amruthpillai/reactive-resume/commit/bf2dc5bbd)
 - **Agent-only application tracking.** MCP clients can now operate the Application Tracker end to end, including Application Copilot actions for job auto-fill, match scoring, tailored resume copies, cover letters, and recruiter follow-ups. [bf2dc5bbd](https://github.com/amruthpillai/reactive-resume/commit/bf2dc5bbd), [93abb1102](https://github.com/amruthpillai/reactive-resume/commit/93abb1102)
-- **New application MCP guide.** The docs now include a dedicated guide with practical prompts for using Reactive Resume MCP to manage applications from an AI client.
+- **New application MCP guide.** The docs now include a dedicated guide with practical prompts for using cloudcoffee MCP to manage applications from an AI client.
 
 ## Application Tracker API
 
@@ -277,7 +273,7 @@ rss: true
 
 - Added MCP tools for every Application Tracker workflow available in the app, including create, update, note, import, bulk action, archive, delete, document attachment, document removal, tag, statistics, and Application Copilot tools. [bf2dc5bbd](https://github.com/amruthpillai/reactive-resume/commit/bf2dc5bbd)
 - Improved MCP tool metadata so clients can distinguish safe reads, mutating actions, destructive actions, and AI-powered workflows more reliably. [93abb1102](https://github.com/amruthpillai/reactive-resume/commit/93abb1102)
-- Updated the resume-builder skill instructions so agents are told that Reactive Resume MCP can also manage job applications, not only resumes. [ac8734be3](https://github.com/amruthpillai/reactive-resume/commit/ac8734be3)
+- Updated the resume-builder skill instructions so agents are told that cloudcoffee MCP can also manage job applications, not only resumes. [ac8734be3](https://github.com/amruthpillai/reactive-resume/commit/ac8734be3)
 
 ## Documentation & Reliability
 
@@ -326,7 +322,7 @@ rss: true
 ## Self-Hosting & Maintenance
 
 - Added the Better Auth two-factor schema migration. [9f9268f3](https://github.com/amruthpillai/reactive-resume/commit/9f9268f3)
-- Added design-sync inputs and preview files for Reactive Resume UI components. [a28e3baa](https://github.com/amruthpillai/reactive-resume/commit/a28e3baa), [6e7fc680](https://github.com/amruthpillai/reactive-resume/commit/6e7fc680)
+- Added design-sync inputs and preview files for cloudcoffee UI components. [a28e3baa](https://github.com/amruthpillai/reactive-resume/commit/a28e3baa), [6e7fc680](https://github.com/amruthpillai/reactive-resume/commit/6e7fc680)
 - Synced translation catalogs for the new Application Tracking and export copy. [e99c1665](https://github.com/amruthpillai/reactive-resume/commit/e99c1665), [0d1bfd4e](https://github.com/amruthpillai/reactive-resume/commit/0d1bfd4e)
 - Addressed React Doctor findings, cleaned up Knip issues, updated dependencies, and refreshed TypeScript native preview versions. [5a1cc658](https://github.com/amruthpillai/reactive-resume/commit/5a1cc658), [5c1845b1](https://github.com/amruthpillai/reactive-resume/commit/5c1845b1), [91b4c1e6](https://github.com/amruthpillai/reactive-resume/commit/91b4c1e6)
 
@@ -337,7 +333,7 @@ rss: true
 ## Highlights
 
 - **Undo and redo across the builder.** Every change — typing, drag-and-drop, template and layout switches — can now be undone and redone with `Cmd/Ctrl+Z` and `Cmd/Ctrl+Shift+Z`, or the new toolbar buttons. Rapid typing collapses into a single step, so undo feels natural. [b044b6cc](https://github.com/amruthpillai/reactive-resume/commit/b044b6cc)
-- **Version history with one-click restore.** Reactive Resume now snapshots your resume at key moments — template switches, imports, AI edits, and periodic saves — and a new clock menu in the builder header lets you restore any earlier version. Restoring is non-destructive: it's just another change you can roll back. [b044b6cc](https://github.com/amruthpillai/reactive-resume/commit/b044b6cc)
+- **Version history with one-click restore.** cloudcoffee now snapshots your resume at key moments — template switches, imports, AI edits, and periodic saves — and a new clock menu in the builder header lets you restore any earlier version. Restoring is non-destructive: it's just another change you can roll back. [b044b6cc](https://github.com/amruthpillai/reactive-resume/commit/b044b6cc)
 - **An AI assistant built into the builder.** A new Sparkle button opens the AI assistant as a side panel next to your resume, so you can chat about the resume you're editing and apply changes inline without leaving the builder. Its edits show up live and are captured in version history. [a1562aaa](https://github.com/amruthpillai/reactive-resume/commit/a1562aaa)
 - **A real mobile and tablet builder.** On phones and small tablets the builder now uses a full-screen layout with an Edit / Preview / Design tab bar, instead of a cramped three-panel desktop layout squeezed onto a small screen. [d933624a](https://github.com/amruthpillai/reactive-resume/commit/d933624a)
 - **Preview any template with your own content.** Hovering a template — both the current-template card and every tile in the template gallery — now renders a live preview built from your actual resume data, so you can compare templates with your content before switching. [9d742f78](https://github.com/amruthpillai/reactive-resume/commit/9d742f78)
@@ -390,7 +386,7 @@ rss: true
 
 ## Import & Export
 
-- **File-first import with auto-detection.** Pick a file and Reactive Resume detects the format; AI-based imports check for a configured provider up front. [e586a78e](https://github.com/amruthpillai/reactive-resume/commit/e586a78e)
+- **File-first import with auto-detection.** Pick a file and cloudcoffee detects the format; AI-based imports check for a configured provider up front. [e586a78e](https://github.com/amruthpillai/reactive-resume/commit/e586a78e)
 
 ## Reliability & Fixes
 
@@ -475,7 +471,7 @@ rss: true
 <Update label="v5.1.7" description="27th May 2026">
 ## Highlights
 
-- **Custom Styles replaces Custom CSS.** Reactive Resume now has a structured Custom Styles panel in the builder for fine-grained resume styling without raw CSS. Because v5 renders resumes through React PDF instead of browser HTML/CSS, Custom Styles uses safe, semantic rules that work consistently in the live preview, exported PDFs, public resumes, and server-side generation. [b04eef147](https://github.com/amruthpillai/reactive-resume/commit/b04eef147), [c6a654191](https://github.com/amruthpillai/reactive-resume/commit/c6a654191), [16f4d2c07](https://github.com/amruthpillai/reactive-resume/commit/16f4d2c07)
+- **Custom Styles replaces Custom CSS.** cloudcoffee now has a structured Custom Styles panel in the builder for fine-grained resume styling without raw CSS. Because v5 renders resumes through React PDF instead of browser HTML/CSS, Custom Styles uses safe, semantic rules that work consistently in the live preview, exported PDFs, public resumes, and server-side generation. [b04eef147](https://github.com/amruthpillai/reactive-resume/commit/b04eef147), [c6a654191](https://github.com/amruthpillai/reactive-resume/commit/c6a654191), [16f4d2c07](https://github.com/amruthpillai/reactive-resume/commit/16f4d2c07)
 
 <img
   src="/images/guides/using-custom-styles/screenshot-1.webp"
@@ -558,7 +554,7 @@ rss: true
 
 ## Highlights
 
-- **Dedicated Hono server runtime.** Reactive Resume now builds a separate `apps/server` app that mounts auth, RPC, MCP, OpenAPI, uploads, schema JSON, SEO endpoints, health checks, and the built web app from one Node.js process. [ecc1fd9a8](https://github.com/amruthpillai/reactive-resume/commit/ecc1fd9a8), [9033da082](https://github.com/amruthpillai/reactive-resume/commit/9033da082)
+- **Dedicated Hono server runtime.** cloudcoffee now builds a separate `apps/server` app that mounts auth, RPC, MCP, OpenAPI, uploads, schema JSON, SEO endpoints, health checks, and the built web app from one Node.js process. [ecc1fd9a8](https://github.com/amruthpillai/reactive-resume/commit/ecc1fd9a8), [9033da082](https://github.com/amruthpillai/reactive-resume/commit/9033da082)
 - **Clearer self-hosting runtime model.** The Docker image now builds both `web` and `server`, runs `node apps/server/dist/index.mjs`, and keeps `/api/health` pointed at the production server port. [ecc1fd9a8](https://github.com/amruthpillai/reactive-resume/commit/ecc1fd9a8)
 - **Safer Agent restore behavior.** Agent edits now store a resume snapshot before applying a patch, so restoring an action can roll the draft back to the exact prior state and mark later agent patches as rolled back. [d961e6535](https://github.com/amruthpillai/reactive-resume/commit/d961e6535)
 
@@ -622,11 +618,7 @@ rss: true
 
 - **New AI Agent workspace.** Added a dedicated full-screen Agent workspace for working on isolated AI draft copies of resumes. Threads include a sidebar, chat, tool activity, file attachments, and a read-only resume preview with PDF download support. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062)
 
-<img src="/images/guides/using-ai-agent/screenshot-2.webp" alt="AI Agent workspace showing thread sidebar, chat, and resume preview" />
-
 - **Reviewable and reversible agent edits.** Agent-applied resume patches now appear as expandable tool activity, with raw JSON Patch details, operation summaries, revert support, and clear conflict handling when the resume has changed. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062)
-
-<img src="/images/guides/ai-agent-tools/screenshot-1.webp" alt="AI Agent chat showing an applied patch with raw JSON details" />
 
 - **Public resumes now render with PDF.js.** Public resume pages now use the PDF.js-based viewer path, improving parity between the public page, builder preview, and exported PDF. [#3061](https://github.com/amruthpillai/reactive-resume/pull/3061)
 
@@ -646,11 +638,11 @@ rss: true
 
 ## Self-Hosting, Docs & Maintenance
 
-- Added a development Dockerfile plus improved Compose development services and health checks for running Reactive Resume with local dependencies. [1294d3354](https://github.com/amruthpillai/reactive-resume/commit/1294d3354)
+- Added a development Dockerfile plus improved Compose development services and health checks for running cloudcoffee with local dependencies. [1294d3354](https://github.com/amruthpillai/reactive-resume/commit/1294d3354)
 - Updated self-hosting documentation for Redis, encrypted AI provider credentials, provider-native web research, private Agent attachments, S3 path-style storage, and unsafe AI base URL behavior. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062), [#3059](https://github.com/amruthpillai/reactive-resume/pull/3059)
 - Added new and refreshed guides for the AI Agent workspace, Agent tools, AI setup, builder dock, dashboard management, importing, exporting, public sharing, and private notes. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062), [affa1d664](https://github.com/amruthpillai/reactive-resume/commit/affa1d664)
 - Removed a stale Custom CSS documentation link now that custom CSS is no longer part of the v5.1 renderer flow. [#3056](https://github.com/amruthpillai/reactive-resume/pull/3056)
-- Added a Reactive Resume design system reference and updated dependencies across the workspace. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062)
+- Added a cloudcoffee design system reference and updated dependencies across the workspace. [#3062](https://github.com/amruthpillai/reactive-resume/pull/3062)
 
 **Full Changelog**: [v5.1.3...v5.1.4](https://github.com/amruthpillai/reactive-resume/compare/v5.1.3...v5.1.4)
 </Update>
@@ -760,7 +752,7 @@ rss: true
 <Note>
   **Self-hosters, please read before upgrading.**
 
-  - **No more Browserless / Chromium dependency.** From v5.1.0 onwards, you do **not** need to run a `printer`, Browserless, or headless Chrome service alongside Reactive Resume. PDF generation is now performed entirely in your browser via `@react-pdf/renderer`. The `BROWSERLESS_TOKEN`, `PRINTER_ENDPOINT`, `PRINTER_APP_URL`, and `FLAG_DEBUG_PRINTER` environment variables are no longer read and can be removed from your `.env`.
+  - **No more Browserless / Chromium dependency.** From v5.1.0 onwards, you do **not** need to run a `printer`, Browserless, or headless Chrome service alongside cloudcoffee. PDF generation is now performed entirely in your browser via `@react-pdf/renderer`. The `BROWSERLESS_TOKEN`, `PRINTER_ENDPOINT`, `PRINTER_APP_URL`, and `FLAG_DEBUG_PRINTER` environment variables are no longer read and can be removed from your `.env`.
   - **Database migrations.** This release ships several new schema migrations to bring the resume model up to date. They run automatically on container start, but you should **back up your PostgreSQL database before upgrading** in case rollback is needed.
   - **Custom CSS has been removed.** Because the resume PDF is no longer produced by a headless browser, raw CSS no longer applies to the exported document. A first-class template-customization story is on the roadmap for a future release.
 </Note>
@@ -779,7 +771,7 @@ rss: true
 
 ## Self-Hosting
 
-- **One-service deployment.** Self-hosted Compose files no longer need a `printer:` service block. The minimum stack is now just Reactive Resume + PostgreSQL (with optional S3-compatible storage and SMTP).
+- **One-service deployment.** Self-hosted Compose files no longer need a `printer:` service block. The minimum stack is now just cloudcoffee + PostgreSQL (with optional S3-compatible storage and SMTP).
 - **`/api/health` simplified.** The health endpoint now reports `database` and `storage` only, returning HTTP `503` if either dependency is unhealthy. There is no longer a `printer` field to monitor.
 - **Updated documentation.** The Self-Hosting, Quickstart, Development, Architecture, and Legal pages have all been refreshed to describe the simplified single-service deployment.
 
@@ -830,7 +822,7 @@ rss: true
 - Improved Docker-based local development support and refreshed self-hosting setup guidance. [849aad64](https://github.com/amruthpillai/reactive-resume/commit/849aad64), [c0387298](https://github.com/amruthpillai/reactive-resume/commit/c0387298)
 
 ## Fixes & Security
-- Thank you to [@shaxbozaka](https://github.com/shaxbozaka) for running a security audit on Reactive Resume and helping make the app more secure.
+- Thank you to [@shaxbozaka](https://github.com/shaxbozaka) for running a security audit on cloudcoffee and helping make the app more secure.
 - Hardened auth, OAuth, AI URL validation, printer/export endpoints, resume access controls, Browserless configuration, and public route exposure. [a42dbcd4](https://github.com/amruthpillai/reactive-resume/commit/a42dbcd4)
 - Removed the public RPC surface for the printer-only resume fetch endpoint by moving it behind a server function, further shrinking the attack surface for `getByIdForPrinter`, thanks to [@shaxbozaka](https://github.com/shaxbozaka).
 - Corrected Computer Modern Sans italic font file mappings, thanks to [@russellbrenner](https://github.com/russellbrenner). [#2881](https://github.com/amruthpillai/reactive-resume/pull/2881)
@@ -1136,7 +1128,7 @@ rss: true
 </Update>
 
 <Update label="v5.0.0" description="22th January 2026">
-This release is a major overhaul of Reactive Resume. The app has been completely redesigned and rebuilt from scratch for a more intuitive, user-friendly experience.
+This release is a major overhaul of cloudcoffee. The app has been completely redesigned and rebuilt from scratch for a more intuitive, user-friendly experience.
 
 **Highlights:**
 - 2 new resume templates: _Ditgar_ and _Lapras_

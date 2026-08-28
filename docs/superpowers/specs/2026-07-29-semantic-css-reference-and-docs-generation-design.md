@@ -5,7 +5,7 @@
 
 ## Summary
 
-Reactive Resume will provide one canonical, author-facing Semantic CSS reference at:
+cloudcoffee will provide one canonical, author-facing Semantic CSS reference at:
 
 `https://docs.rxresu.me/guides/semantic-css-reference`
 

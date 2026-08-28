@@ -19,17 +19,17 @@ it("declares the services it needs", () => {
 	expect(inject).toEqual(["systemPrompt"]);
 });
 
-it("mounts the MCP bridge with streamable-http and the api key header", async () => {
+it("mounts the MCP bridge with streamable-http and OAuth bearer authentication", async () => {
 	const ctx = fakeContext();
 
-	await apply(ctx as never, Config({ apiKey: "test-key" }));
+	await apply(ctx as never, Config({ accessToken: "test-token" }));
 
 	expect(ctx.plugin).toHaveBeenCalledTimes(1);
 	expect(ctx.plugin.mock.calls[0]?.[1]).toEqual({
 		transport: "streamable-http",
 		serverName: "resume",
 		url: "https://rxresu.me/mcp",
-		headers: { "x-api-key": "test-key" },
+		headers: { Authorization: "Bearer test-token" },
 		toolCallTimeoutMs: 60_000,
 		failOnStartupError: true,
 	});
@@ -38,16 +38,16 @@ it("mounts the MCP bridge with streamable-http and the api key header", async ()
 it("strips a trailing slash from the configured url", async () => {
 	const ctx = fakeContext();
 
-	await apply(ctx as never, Config({ apiKey: "test-key", url: "http://localhost:3000/" }));
+	await apply(ctx as never, Config({ accessToken: "test-token", url: "http://localhost:3000/" }));
 
 	expect(ctx.plugin.mock.calls[0]?.[1]).toMatchObject({ url: "http://localhost:3000/mcp" });
 });
 
 it("rejects a serverName the bridge would refuse at config-parse time, before apply runs", () => {
-	expect(() => Config({ apiKey: "test-key", serverName: "has spaces" })).toThrow(/serverName/);
+	expect(() => Config({ accessToken: "test-token", serverName: "has spaces" })).toThrow(/serverName/);
 });
 
-it("mounts nothing when no apiKey is configured, so an unconfigured install still boots", async () => {
+it("mounts nothing when no access token is configured, so an unconfigured install still boots", async () => {
 	const ctx = fakeContext();
 
 	await apply(ctx as never, Config({}));

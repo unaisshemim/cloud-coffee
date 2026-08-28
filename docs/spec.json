@@ -1,8 +1,8 @@
 {
 	"info": {
-		"title": "Reactive Resume",
+		"title": "cloudcoffee",
 		"version": "5.2.9",
-		"description": "Reactive Resume API",
+		"description": "cloudcoffee API",
 		"license": {
 			"name": "MIT",
 			"url": "https://github.com/amruthpillai/reactive-resume/blob/main/LICENSE"
@@ -20,17 +20,10 @@
 	],
 	"externalDocs": {
 		"url": "https://docs.rxresu.me",
-		"description": "Reactive Resume Documentation"
+		"description": "cloudcoffee Documentation"
 	},
+	"openapi": "3.1.1",
 	"components": {
-		"securitySchemes": {
-			"apiKey": {
-				"type": "apiKey",
-				"name": "x-api-key",
-				"in": "header",
-				"description": "The API key to authenticate requests."
-			}
-		},
 		"schemas": {
 			"ResumeData": {
 				"type": "object",
@@ -3181,6 +3174,7 @@
 								"description": "The template to use for the resume. Determines the overall design and appearance of the resume.",
 								"type": "string",
 								"enum": [
+									"classic",
 									"treecko"
 								]
 							},
@@ -3528,12 +3522,6 @@
 			}
 		}
 	},
-	"security": [
-		{
-			"apiKey": []
-		}
-	],
-	"openapi": "3.1.1",
 	"paths": {
 		"/ai/parse-pdf": {
 			"post": {
@@ -5087,12 +5075,13 @@
 				}
 			}
 		},
-		"/agent/threads": {
+		"/application-profile": {
 			"get": {
-				"operationId": "listAgentThreads",
-				"summary": "List agent threads",
+				"operationId": "getApplicationProfile",
+				"summary": "Get application profile",
+				"description": "Returns reusable job-application information for the authenticated user.",
 				"tags": [
-					"Agent"
+					"Application Profile"
 				],
 				"responses": {
 					"200": {
@@ -5100,276 +5089,576 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			},
-			"post": {
-				"operationId": "createAgentThread",
-				"summary": "Create agent thread",
-				"tags": [
-					"Agent"
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
-								"properties": {
-									"aiProviderId": {
-										"type": "string"
-									},
-									"sourceResumeId": {
-										"type": "string"
-									}
-								}
-							}
-						}
-					}
-				},
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/threads/for-resume": {
-			"post": {
-				"operationId": "getOrCreateAgentThreadForResume",
-				"summary": "Get or create an in-resume agent thread",
-				"tags": [
-					"Agent"
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
-								"properties": {
-									"resumeId": {
-										"type": "string"
-									},
-									"aiProviderId": {
-										"type": "string"
-									}
-								},
-								"required": [
-									"resumeId"
-								]
-							}
-						}
-					}
-				},
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/threads/{id}": {
-			"get": {
-				"operationId": "getAgentThread",
-				"summary": "Get agent thread",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			},
-			"patch": {
-				"operationId": "updateAgentThread",
-				"summary": "Update agent thread settings",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
-								"properties": {
-									"reviewPatches": {
-										"type": "boolean"
-									}
-								},
-								"required": [
-									"reviewPatches"
-								]
-							}
-						}
-					}
-				},
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			},
-			"delete": {
-				"operationId": "deleteAgentThread",
-				"summary": "Delete agent thread",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{
-											"not": {}
+									"type": "object",
+									"properties": {
+										"version": {
+											"const": 1
 										},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/threads/{id}/archive": {
-			"post": {
-				"operationId": "archiveAgentThread",
-				"summary": "Archive agent thread",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{
-											"not": {}
+										"jobPreferences": {
+											"type": "object",
+											"properties": {
+												"targetRoles": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"preferredLocations": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"openToRelocation": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"workplaces": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"experienceLevels": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"employmentTypes": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"industries": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"companySizes": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"minimumSalary": {
+													"type": "object",
+													"properties": {
+														"currency": {
+															"type": "string"
+														},
+														"amount": {
+															"type": "string"
+														},
+														"period": {
+															"type": "string"
+														}
+													},
+													"required": [
+														"currency",
+														"amount",
+														"period"
+													]
+												}
+											},
+											"required": [
+												"targetRoles",
+												"preferredLocations",
+												"openToRelocation",
+												"workplaces",
+												"experienceLevels",
+												"employmentTypes",
+												"industries",
+												"companySizes",
+												"minimumSalary"
+											]
 										},
-										{
-											"not": {}
+										"personal": {
+											"type": "object",
+											"properties": {
+												"firstName": {
+													"type": "string"
+												},
+												"lastName": {
+													"type": "string"
+												},
+												"email": {
+													"type": "string"
+												},
+												"phone": {
+													"type": "string"
+												},
+												"country": {
+													"type": "string"
+												},
+												"city": {
+													"type": "string"
+												},
+												"state": {
+													"type": "string"
+												},
+												"postalCode": {
+													"type": "string"
+												},
+												"address": {
+													"type": "string"
+												},
+												"links": {
+													"type": "object",
+													"properties": {
+														"linkedin": {
+															"type": "string"
+														},
+														"github": {
+															"type": "string"
+														},
+														"portfolio": {
+															"type": "string"
+														},
+														"website": {
+															"type": "string"
+														}
+													},
+													"required": [
+														"linkedin",
+														"github",
+														"portfolio",
+														"website"
+													]
+												}
+											},
+											"required": [
+												"firstName",
+												"lastName",
+												"email",
+												"phone",
+												"country",
+												"city",
+												"state",
+												"postalCode",
+												"address",
+												"links"
+											]
+										},
+										"skills": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"languages": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"experience": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"title": {
+														"type": "string"
+													},
+													"company": {
+														"type": "string"
+													},
+													"location": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"title",
+													"company",
+													"location"
+												]
+											}
+										},
+										"education": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"institution": {
+														"type": "string"
+													},
+													"degree": {
+														"type": "string"
+													},
+													"field": {
+														"type": "string"
+													},
+													"location": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"institution",
+													"degree",
+													"field",
+													"location"
+												]
+											}
+										},
+										"projects": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"name": {
+														"type": "string"
+													},
+													"url": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"name",
+													"url"
+												]
+											}
+										},
+										"volunteer": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"role": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"role",
+													"organization"
+												]
+											}
+										},
+										"certifications": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"name": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													},
+													"issueDate": {
+														"type": "string"
+													},
+													"expiryDate": {
+														"type": "string"
+													},
+													"description": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"name",
+													"organization",
+													"issueDate",
+													"expiryDate",
+													"description"
+												]
+											}
+										},
+										"awards": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"name": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													},
+													"issueDate": {
+														"type": "string"
+													},
+													"expiryDate": {
+														"type": "string"
+													},
+													"description": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"name",
+													"organization",
+													"issueDate",
+													"expiryDate",
+													"description"
+												]
+											}
+										},
+										"workAuthorization": {
+											"type": "object",
+											"properties": {
+												"countries": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"requiresSponsorship": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												}
+											},
+											"required": [
+												"countries",
+												"requiresSponsorship"
+											]
+										},
+										"screening": {
+											"type": "object",
+											"properties": {
+												"nonCompete": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"backgroundCheck": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"driversLicense": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"securityClearance": {
+													"type": "string"
+												},
+												"availableFrom": {
+													"type": "string"
+												},
+												"savedAnswers": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"id": {
+																"type": "string",
+																"minLength": 1
+															},
+															"question": {
+																"type": "string"
+															},
+															"answer": {
+																"type": "string"
+															}
+														},
+														"required": [
+															"id",
+															"question",
+															"answer"
+														]
+													}
+												}
+											},
+											"required": [
+												"nonCompete",
+												"backgroundCheck",
+												"driversLicense",
+												"securityClearance",
+												"availableFrom",
+												"savedAnswers"
+											]
+										},
+										"equalOpportunity": {
+											"type": "object",
+											"properties": {
+												"gender": {
+													"type": "string"
+												},
+												"pronouns": {
+													"type": "string"
+												},
+												"birthDate": {
+													"type": "string"
+												},
+												"disability": {
+													"type": "string"
+												},
+												"veteranStatus": {
+													"type": "string"
+												},
+												"ethnicity": {
+													"type": "string"
+												},
+												"sexualOrientation": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"gender",
+												"pronouns",
+												"birthDate",
+												"disability",
+												"veteranStatus",
+												"ethnicity",
+												"sexualOrientation"
+											]
 										}
+									},
+									"required": [
+										"version",
+										"jobPreferences",
+										"personal",
+										"skills",
+										"languages",
+										"experience",
+										"education",
+										"projects",
+										"volunteer",
+										"certifications",
+										"awards",
+										"workAuthorization",
+										"screening",
+										"equalOpportunity"
 									]
 								}
 							}
 						}
 					}
 				}
-			}
-		},
-		"/agent/messages/send": {
-			"post": {
-				"operationId": "sendAgentMessage",
-				"summary": "Send agent message",
+			},
+			"put": {
+				"operationId": "updateApplicationProfile",
+				"summary": "Update application profile",
+				"description": "Replaces reusable job-application information for the authenticated user.",
 				"tags": [
-					"Agent"
+					"Application Profile"
 				],
 				"requestBody": {
 					"required": true,
@@ -5378,22 +5667,561 @@
 							"schema": {
 								"type": "object",
 								"properties": {
-									"threadId": {
-										"type": "string"
+									"version": {
+										"const": 1
 									},
-									"message": {},
-									"attachmentIds": {
+									"jobPreferences": {
+										"type": "object",
+										"properties": {
+											"targetRoles": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"preferredLocations": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"openToRelocation": {
+												"anyOf": [
+													{
+														"type": "boolean"
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"workplaces": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"experienceLevels": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"employmentTypes": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"industries": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"companySizes": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"minimumSalary": {
+												"type": "object",
+												"properties": {
+													"currency": {
+														"type": "string"
+													},
+													"amount": {
+														"type": "string"
+													},
+													"period": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"currency",
+													"amount",
+													"period"
+												]
+											}
+										},
+										"required": [
+											"targetRoles",
+											"preferredLocations",
+											"openToRelocation",
+											"workplaces",
+											"experienceLevels",
+											"employmentTypes",
+											"industries",
+											"companySizes",
+											"minimumSalary"
+										]
+									},
+									"personal": {
+										"type": "object",
+										"properties": {
+											"firstName": {
+												"type": "string"
+											},
+											"lastName": {
+												"type": "string"
+											},
+											"email": {
+												"type": "string"
+											},
+											"phone": {
+												"type": "string"
+											},
+											"country": {
+												"type": "string"
+											},
+											"city": {
+												"type": "string"
+											},
+											"state": {
+												"type": "string"
+											},
+											"postalCode": {
+												"type": "string"
+											},
+											"address": {
+												"type": "string"
+											},
+											"links": {
+												"type": "object",
+												"properties": {
+													"linkedin": {
+														"type": "string"
+													},
+													"github": {
+														"type": "string"
+													},
+													"portfolio": {
+														"type": "string"
+													},
+													"website": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"linkedin",
+													"github",
+													"portfolio",
+													"website"
+												]
+											}
+										},
+										"required": [
+											"firstName",
+											"lastName",
+											"email",
+											"phone",
+											"country",
+											"city",
+											"state",
+											"postalCode",
+											"address",
+											"links"
+										]
+									},
+									"skills": {
 										"type": "array",
-										"maxItems": 10,
 										"items": {
-											"type": "string",
-											"minLength": 1
+											"type": "string"
 										}
+									},
+									"languages": {
+										"type": "array",
+										"items": {
+											"type": "string"
+										}
+									},
+									"experience": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"startDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"current": {
+													"type": "boolean"
+												},
+												"description": {
+													"type": "string"
+												},
+												"title": {
+													"type": "string"
+												},
+												"company": {
+													"type": "string"
+												},
+												"location": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"startDate",
+												"endDate",
+												"current",
+												"description",
+												"title",
+												"company",
+												"location"
+											]
+										}
+									},
+									"education": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"startDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"current": {
+													"type": "boolean"
+												},
+												"description": {
+													"type": "string"
+												},
+												"institution": {
+													"type": "string"
+												},
+												"degree": {
+													"type": "string"
+												},
+												"field": {
+													"type": "string"
+												},
+												"location": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"startDate",
+												"endDate",
+												"current",
+												"description",
+												"institution",
+												"degree",
+												"field",
+												"location"
+											]
+										}
+									},
+									"projects": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"startDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"current": {
+													"type": "boolean"
+												},
+												"description": {
+													"type": "string"
+												},
+												"name": {
+													"type": "string"
+												},
+												"url": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"startDate",
+												"endDate",
+												"current",
+												"description",
+												"name",
+												"url"
+											]
+										}
+									},
+									"volunteer": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"startDate": {
+													"type": "string"
+												},
+												"endDate": {
+													"type": "string"
+												},
+												"current": {
+													"type": "boolean"
+												},
+												"description": {
+													"type": "string"
+												},
+												"role": {
+													"type": "string"
+												},
+												"organization": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"startDate",
+												"endDate",
+												"current",
+												"description",
+												"role",
+												"organization"
+											]
+										}
+									},
+									"certifications": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"name": {
+													"type": "string"
+												},
+												"organization": {
+													"type": "string"
+												},
+												"issueDate": {
+													"type": "string"
+												},
+												"expiryDate": {
+													"type": "string"
+												},
+												"description": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"name",
+												"organization",
+												"issueDate",
+												"expiryDate",
+												"description"
+											]
+										}
+									},
+									"awards": {
+										"type": "array",
+										"items": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"minLength": 1
+												},
+												"name": {
+													"type": "string"
+												},
+												"organization": {
+													"type": "string"
+												},
+												"issueDate": {
+													"type": "string"
+												},
+												"expiryDate": {
+													"type": "string"
+												},
+												"description": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"id",
+												"name",
+												"organization",
+												"issueDate",
+												"expiryDate",
+												"description"
+											]
+										}
+									},
+									"workAuthorization": {
+										"type": "object",
+										"properties": {
+											"countries": {
+												"type": "array",
+												"items": {
+													"type": "string"
+												}
+											},
+											"requiresSponsorship": {
+												"anyOf": [
+													{
+														"type": "boolean"
+													},
+													{
+														"type": "null"
+													}
+												]
+											}
+										},
+										"required": [
+											"countries",
+											"requiresSponsorship"
+										]
+									},
+									"screening": {
+										"type": "object",
+										"properties": {
+											"nonCompete": {
+												"anyOf": [
+													{
+														"type": "boolean"
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"backgroundCheck": {
+												"anyOf": [
+													{
+														"type": "boolean"
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"driversLicense": {
+												"anyOf": [
+													{
+														"type": "boolean"
+													},
+													{
+														"type": "null"
+													}
+												]
+											},
+											"securityClearance": {
+												"type": "string"
+											},
+											"availableFrom": {
+												"type": "string"
+											},
+											"savedAnswers": {
+												"type": "array",
+												"items": {
+													"type": "object",
+													"properties": {
+														"id": {
+															"type": "string",
+															"minLength": 1
+														},
+														"question": {
+															"type": "string"
+														},
+														"answer": {
+															"type": "string"
+														}
+													},
+													"required": [
+														"id",
+														"question",
+														"answer"
+													]
+												}
+											}
+										},
+										"required": [
+											"nonCompete",
+											"backgroundCheck",
+											"driversLicense",
+											"securityClearance",
+											"availableFrom",
+											"savedAnswers"
+										]
+									},
+									"equalOpportunity": {
+										"type": "object",
+										"properties": {
+											"gender": {
+												"type": "string"
+											},
+											"pronouns": {
+												"type": "string"
+											},
+											"birthDate": {
+												"type": "string"
+											},
+											"disability": {
+												"type": "string"
+											},
+											"veteranStatus": {
+												"type": "string"
+											},
+											"ethnicity": {
+												"type": "string"
+											},
+											"sexualOrientation": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"gender",
+											"pronouns",
+											"birthDate",
+											"disability",
+											"veteranStatus",
+											"ethnicity",
+											"sexualOrientation"
+										]
 									}
 								},
 								"required": [
-									"threadId",
-									"message"
+									"version",
+									"jobPreferences",
+									"personal",
+									"skills",
+									"languages",
+									"experience",
+									"education",
+									"projects",
+									"volunteer",
+									"certifications",
+									"awards",
+									"workAuthorization",
+									"screening",
+									"equalOpportunity"
 								]
 							}
 						}
@@ -5405,229 +6233,563 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/messages/stop": {
-			"post": {
-				"operationId": "stopAgentMessage",
-				"summary": "Stop active agent run",
-				"tags": [
-					"Agent"
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
-								"properties": {
-									"threadId": {
-										"type": "string"
-									},
-									"partialMessage": {}
-								},
-								"required": [
-									"threadId"
-								]
-							}
-						}
-					}
-				},
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{
-											"not": {}
+									"type": "object",
+									"properties": {
+										"version": {
+											"const": 1
 										},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/messages/resume": {
-			"get": {
-				"operationId": "resumeAgentMessages",
-				"summary": "Resume agent message stream",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "threadId",
-						"in": "query",
-						"required": true,
-						"schema": {
-							"type": "string"
-						},
-						"allowEmptyValue": true,
-						"allowReserved": true
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/attachments": {
-			"post": {
-				"operationId": "createAgentAttachment",
-				"summary": "Create agent attachment",
-				"tags": [
-					"Agent"
-				],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"type": "object",
-								"properties": {
-									"threadId": {
-										"type": "string"
-									},
-									"filename": {
-										"type": "string",
-										"minLength": 1
-									},
-									"mediaType": {
-										"type": "string",
-										"minLength": 1
-									},
-									"data": {
-										"type": "string",
-										"minLength": 1
-									}
-								},
-								"required": [
-									"threadId",
-									"filename",
-									"mediaType",
-									"data"
-								]
-							}
-						}
-					}
-				},
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/attachments/{id}": {
-			"delete": {
-				"operationId": "deleteAgentAttachment",
-				"summary": "Delete agent attachment",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{
-											"not": {}
+										"jobPreferences": {
+											"type": "object",
+											"properties": {
+												"targetRoles": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"preferredLocations": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"openToRelocation": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"workplaces": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"experienceLevels": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"employmentTypes": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"industries": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"companySizes": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"minimumSalary": {
+													"type": "object",
+													"properties": {
+														"currency": {
+															"type": "string"
+														},
+														"amount": {
+															"type": "string"
+														},
+														"period": {
+															"type": "string"
+														}
+													},
+													"required": [
+														"currency",
+														"amount",
+														"period"
+													]
+												}
+											},
+											"required": [
+												"targetRoles",
+												"preferredLocations",
+												"openToRelocation",
+												"workplaces",
+												"experienceLevels",
+												"employmentTypes",
+												"industries",
+												"companySizes",
+												"minimumSalary"
+											]
 										},
-										{
-											"not": {}
+										"personal": {
+											"type": "object",
+											"properties": {
+												"firstName": {
+													"type": "string"
+												},
+												"lastName": {
+													"type": "string"
+												},
+												"email": {
+													"type": "string"
+												},
+												"phone": {
+													"type": "string"
+												},
+												"country": {
+													"type": "string"
+												},
+												"city": {
+													"type": "string"
+												},
+												"state": {
+													"type": "string"
+												},
+												"postalCode": {
+													"type": "string"
+												},
+												"address": {
+													"type": "string"
+												},
+												"links": {
+													"type": "object",
+													"properties": {
+														"linkedin": {
+															"type": "string"
+														},
+														"github": {
+															"type": "string"
+														},
+														"portfolio": {
+															"type": "string"
+														},
+														"website": {
+															"type": "string"
+														}
+													},
+													"required": [
+														"linkedin",
+														"github",
+														"portfolio",
+														"website"
+													]
+												}
+											},
+											"required": [
+												"firstName",
+												"lastName",
+												"email",
+												"phone",
+												"country",
+												"city",
+												"state",
+												"postalCode",
+												"address",
+												"links"
+											]
+										},
+										"skills": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"languages": {
+											"type": "array",
+											"items": {
+												"type": "string"
+											}
+										},
+										"experience": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"title": {
+														"type": "string"
+													},
+													"company": {
+														"type": "string"
+													},
+													"location": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"title",
+													"company",
+													"location"
+												]
+											}
+										},
+										"education": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"institution": {
+														"type": "string"
+													},
+													"degree": {
+														"type": "string"
+													},
+													"field": {
+														"type": "string"
+													},
+													"location": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"institution",
+													"degree",
+													"field",
+													"location"
+												]
+											}
+										},
+										"projects": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"name": {
+														"type": "string"
+													},
+													"url": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"name",
+													"url"
+												]
+											}
+										},
+										"volunteer": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"startDate": {
+														"type": "string"
+													},
+													"endDate": {
+														"type": "string"
+													},
+													"current": {
+														"type": "boolean"
+													},
+													"description": {
+														"type": "string"
+													},
+													"role": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"startDate",
+													"endDate",
+													"current",
+													"description",
+													"role",
+													"organization"
+												]
+											}
+										},
+										"certifications": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"name": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													},
+													"issueDate": {
+														"type": "string"
+													},
+													"expiryDate": {
+														"type": "string"
+													},
+													"description": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"name",
+													"organization",
+													"issueDate",
+													"expiryDate",
+													"description"
+												]
+											}
+										},
+										"awards": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "string",
+														"minLength": 1
+													},
+													"name": {
+														"type": "string"
+													},
+													"organization": {
+														"type": "string"
+													},
+													"issueDate": {
+														"type": "string"
+													},
+													"expiryDate": {
+														"type": "string"
+													},
+													"description": {
+														"type": "string"
+													}
+												},
+												"required": [
+													"id",
+													"name",
+													"organization",
+													"issueDate",
+													"expiryDate",
+													"description"
+												]
+											}
+										},
+										"workAuthorization": {
+											"type": "object",
+											"properties": {
+												"countries": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												},
+												"requiresSponsorship": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												}
+											},
+											"required": [
+												"countries",
+												"requiresSponsorship"
+											]
+										},
+										"screening": {
+											"type": "object",
+											"properties": {
+												"nonCompete": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"backgroundCheck": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"driversLicense": {
+													"anyOf": [
+														{
+															"type": "boolean"
+														},
+														{
+															"type": "null"
+														}
+													]
+												},
+												"securityClearance": {
+													"type": "string"
+												},
+												"availableFrom": {
+													"type": "string"
+												},
+												"savedAnswers": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"id": {
+																"type": "string",
+																"minLength": 1
+															},
+															"question": {
+																"type": "string"
+															},
+															"answer": {
+																"type": "string"
+															}
+														},
+														"required": [
+															"id",
+															"question",
+															"answer"
+														]
+													}
+												}
+											},
+											"required": [
+												"nonCompete",
+												"backgroundCheck",
+												"driversLicense",
+												"securityClearance",
+												"availableFrom",
+												"savedAnswers"
+											]
+										},
+										"equalOpportunity": {
+											"type": "object",
+											"properties": {
+												"gender": {
+													"type": "string"
+												},
+												"pronouns": {
+													"type": "string"
+												},
+												"birthDate": {
+													"type": "string"
+												},
+												"disability": {
+													"type": "string"
+												},
+												"veteranStatus": {
+													"type": "string"
+												},
+												"ethnicity": {
+													"type": "string"
+												},
+												"sexualOrientation": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"gender",
+												"pronouns",
+												"birthDate",
+												"disability",
+												"veteranStatus",
+												"ethnicity",
+												"sexualOrientation"
+											]
 										}
-									]
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/agent/actions/{id}/revert": {
-			"post": {
-				"operationId": "revertAgentAction",
-				"summary": "Restore agent action snapshot",
-				"tags": [
-					"Agent"
-				],
-				"parameters": [
-					{
-						"name": "id",
-						"in": "path",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"anyOf": [
-										{},
-										{
-											"not": {}
-										}
+									},
+									"required": [
+										"version",
+										"jobPreferences",
+										"personal",
+										"skills",
+										"languages",
+										"experience",
+										"education",
+										"projects",
+										"volunteer",
+										"certifications",
+										"awards",
+										"workAuthorization",
+										"screening",
+										"equalOpportunity"
 									]
 								}
 							}
@@ -5755,7 +6917,7 @@
 														"type": "null"
 													}
 												],
-												"description": "The linked Reactive Resume, if any."
+												"description": "The linked cloudcoffee, if any."
 											},
 											"source": {
 												"anyOf": [
@@ -6214,7 +7376,7 @@
 												"type": "null"
 											}
 										],
-										"description": "The linked Reactive Resume, if any."
+										"description": "The linked cloudcoffee, if any."
 									},
 									"tags": {
 										"type": "array",
@@ -6346,7 +7508,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -6814,7 +7976,7 @@
 												"type": "null"
 											}
 										],
-										"description": "The linked Reactive Resume, if any."
+										"description": "The linked cloudcoffee, if any."
 									},
 									"tags": {
 										"type": "array",
@@ -6907,7 +8069,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -7412,7 +8574,7 @@
 															"type": "null"
 														}
 													],
-													"description": "The linked Reactive Resume, if any."
+													"description": "The linked cloudcoffee, if any."
 												},
 												"tags": {
 													"type": "array",
@@ -7587,7 +8749,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -7961,7 +9123,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -8348,7 +9510,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -8740,7 +9902,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -9110,7 +10272,7 @@
 													"type": "null"
 												}
 											],
-											"description": "The linked Reactive Resume, if any."
+											"description": "The linked cloudcoffee, if any."
 										},
 										"source": {
 											"anyOf": [
@@ -9823,7 +10985,7 @@
 			"get": {
 				"operationId": "listAuthProviders",
 				"summary": "List authentication providers",
-				"description": "Returns a list of all authentication providers enabled on this Reactive Resume instance, along with their display names. Possible providers include password-based credentials, Google, GitHub, LinkedIn, and custom OAuth. No authentication required.",
+				"description": "Returns a list of all authentication providers enabled on this cloudcoffee instance, along with their display names. Possible providers include password-based credentials, Google, GitHub, LinkedIn, and custom OAuth. No authentication required.",
 				"tags": [
 					"Authentication"
 				],
@@ -9904,7 +11066,7 @@
 			"get": {
 				"operationId": "getFeatureFlags",
 				"summary": "Get feature flags",
-				"description": "Returns the current feature flags for this Reactive Resume instance. Feature flags control instance-wide settings such as whether new user signups or email-based authentication are disabled. No authentication required.",
+				"description": "Returns the current feature flags for this cloudcoffee instance. Feature flags control instance-wide settings such as whether new user signups or email-based authentication are disabled. No authentication required.",
 				"tags": [
 					"Feature Flags"
 				],
@@ -13502,6 +14664,7 @@
 													"properties": {
 														"template": {
 															"enum": [
+																"classic",
 																"treecko"
 															],
 															"type": "string",
@@ -17021,6 +18184,7 @@
 													"properties": {
 														"template": {
 															"enum": [
+																"classic",
 																"treecko"
 															],
 															"type": "string",
@@ -20696,6 +21860,7 @@
 													"properties": {
 														"template": {
 															"enum": [
+																"classic",
 																"treecko"
 															],
 															"type": "string",
@@ -24342,6 +25507,7 @@
 													"properties": {
 														"template": {
 															"enum": [
+																"classic",
 																"treecko"
 															],
 															"type": "string",
@@ -28276,6 +29442,7 @@
 													"properties": {
 														"template": {
 															"enum": [
+																"classic",
 																"treecko"
 															],
 															"type": "string",
@@ -28706,7 +29873,7 @@
 			"get": {
 				"operationId": "getUserCount",
 				"summary": "Get total number of users",
-				"description": "Returns the total number of registered users on this Reactive Resume instance. The count is cached for up to 6 hours for performance. No authentication required.",
+				"description": "Returns the total number of registered users on this cloudcoffee instance. The count is cached for up to 6 hours for performance. No authentication required.",
 				"tags": [
 					"Platform Statistics"
 				],
@@ -28729,7 +29896,7 @@
 			"get": {
 				"operationId": "getResumeCount",
 				"summary": "Get total number of resumes",
-				"description": "Returns the total number of resumes created on this Reactive Resume instance. The count is cached for up to 6 hours for performance. No authentication required.",
+				"description": "Returns the total number of resumes created on this cloudcoffee instance. The count is cached for up to 6 hours for performance. No authentication required.",
 				"tags": [
 					"Platform Statistics"
 				],
@@ -28752,13 +29919,13 @@
 			"get": {
 				"operationId": "getGitHubStarCount",
 				"summary": "Get GitHub star count",
-				"description": "Returns the number of GitHub stars for the Reactive Resume repository. The count is cached for up to 6 hours and falls back to a last-known value if the GitHub API is unavailable. No authentication required.",
+				"description": "Returns the number of GitHub stars for the cloudcoffee repository. The count is cached for up to 6 hours and falls back to a last-known value if the GitHub API is unavailable. No authentication required.",
 				"tags": [
 					"Platform Statistics"
 				],
 				"responses": {
 					"200": {
-						"description": "The number of GitHub stars for the Reactive Resume repository.",
+						"description": "The number of GitHub stars for the cloudcoffee repository.",
 						"content": {
 							"application/json": {
 								"schema": {

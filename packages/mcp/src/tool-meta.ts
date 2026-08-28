@@ -194,7 +194,7 @@ export const TOOL_META = {
 	[T.importResume]: {
 		title: "Import Resume",
 		description: [
-			"Create a new resume from a full ResumeData JSON object (e.g. an exported file from Reactive Resume).",
+			"Create a new resume from a full ResumeData JSON object (e.g. an exported file from cloudcoffee).",
 			"A random name and slug are assigned automatically, like the web importer.",
 			`For small edits to an existing resume, prefer \`${T.patchResume}\` instead of re-importing.`,
 			"Large payloads may exceed MCP client message limits — in that case, use the web UI or the HTTP API.",

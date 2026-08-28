@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@reactive-resume/db/client";
 import * as schema from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { applicationProfileService } from "../application-profile/service";
 import { getStorageService } from "../storage/service";
 
 export type ProviderList = Partial<Record<AuthProvider, string>>;
@@ -59,7 +60,9 @@ export const authService = {
 			.from(schema.resume)
 			.where(eq(schema.resume.userId, input.userId));
 
-		return { exportedAt: new Date().toISOString(), user: userRecord, resumes };
+		const applicationProfile = await applicationProfileService.get({ userId: input.userId });
+
+		return { exportedAt: new Date().toISOString(), user: userRecord, applicationProfile, resumes };
 	},
 
 	deleteAccount: async (input: { userId: string }): Promise<void> => {

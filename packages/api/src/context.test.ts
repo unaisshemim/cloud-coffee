@@ -3,7 +3,6 @@ import { describe, expect, it, vi } from "vitest";
 const authMock = vi.hoisted(() => ({
 	api: {
 		getSession: vi.fn(),
-		verifyApiKey: vi.fn(),
 	},
 }));
 const verifyOAuthTokenMock = vi.hoisted(() => vi.fn());
@@ -34,33 +33,31 @@ const setupDbResolves = (userResult: unknown) => {
 
 const reset = () => {
 	authMock.api.getSession.mockReset();
-	authMock.api.verifyApiKey.mockReset();
 	verifyOAuthTokenMock.mockReset();
 	dbMock.select.mockReset();
 };
 
 describe("resolveUserFromRequestHeaders", () => {
-	it("returns the user resolved from a valid x-api-key", async () => {
+	it("does not resolve users from x-api-key", async () => {
 		reset();
-		authMock.api.verifyApiKey.mockResolvedValueOnce({ valid: true, key: { referenceId: "user-1" } });
-		setupDbResolves({ id: "user-1", name: "Alice" });
+		authMock.api.getSession.mockResolvedValueOnce(null);
 
 		const headers = new Headers({ "x-api-key": "abc123" });
 		const user = await resolveUserFromRequestHeaders(headers);
 
-		expect(authMock.api.verifyApiKey).toHaveBeenCalledWith({ body: { key: "abc123" } });
-		expect(user).toMatchObject({ id: "user-1", name: "Alice" });
+		expect(user).toBeNull();
+		expect(dbMock.select).not.toHaveBeenCalled();
 	});
 
-	it("falls back to session when api key is invalid", async () => {
+	it("uses Bearer token even when x-api-key is present", async () => {
 		reset();
-		authMock.api.verifyApiKey.mockResolvedValueOnce({ valid: false });
-		authMock.api.getSession.mockResolvedValueOnce({ user: { id: "session-user" } });
+		verifyOAuthTokenMock.mockResolvedValueOnce({ sub: "user-bearer" });
+		setupDbResolves({ id: "user-bearer", name: "Bob" });
 
-		const headers = new Headers({ "x-api-key": "bad" });
+		const headers = new Headers({ authorization: "Bearer xxx.yyy.zzz", "x-api-key": "ignored" });
 		const user = await resolveUserFromRequestHeaders(headers);
 
-		expect(user).toMatchObject({ id: "session-user" });
+		expect(user).toMatchObject({ id: "user-bearer", name: "Bob" });
 	});
 
 	it("uses Bearer token when present and no api key", async () => {

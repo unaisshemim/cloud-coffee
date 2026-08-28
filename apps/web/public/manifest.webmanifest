@@ -1,6 +1,6 @@
 {
-	"name": "Reactive Resume",
-	"short_name": "Reactive Resume",
+	"name": "cloudcoffee",
+	"short_name": "cloudcoffee",
 	"description": "A free and open-source resume builder.",
 	"id": "/?source=pwa",
 	"start_url": "/?source=pwa",

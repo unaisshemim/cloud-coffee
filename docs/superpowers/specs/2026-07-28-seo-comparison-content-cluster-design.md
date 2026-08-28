@@ -3,12 +3,12 @@
 ## Goal
 
 Create a neutral, source-backed comparison cluster in the Mintlify documentation site that helps people searching for
-free resume builders decide whether Reactive Resume or another product better fits their workflow.
+free resume builders decide whether cloudcoffee or another product better fits their workflow.
 
-The cluster should earn non-branded, high-intent traffic for queries such as `Reactive Resume vs Canva` without
-overstating Reactive Resume's capabilities or turning the documentation into generic affiliate-style content. Every
-page should give the competing product credit where it is stronger, explain Reactive Resume's relevant shortcomings,
-and end with a distinct reason to try Reactive Resume.
+The cluster should earn non-branded, high-intent traffic for queries such as `cloudcoffee vs Canva` without
+overstating cloudcoffee's capabilities or turning the documentation into generic affiliate-style content. Every
+page should give the competing product credit where it is stronger, explain cloudcoffee's relevant shortcomings,
+and end with a distinct reason to try cloudcoffee.
 
 ## Audience and document type
 
@@ -24,7 +24,7 @@ They are not tutorials, product reviews, rankings, or declarations that one prod
 
 The comparison set comes from a non-personalized US Google search for `free resume builder`, captured on July 28,
 2026. Products from the first two result pages are included when the result represents an identifiable resume-building
-product. Reddit threads, videos, generic list articles, Reactive Resume itself, and an ambiguous LinkedIn showcase
+product. Reddit threads, videos, generic list articles, cloudcoffee itself, and an ambiguous LinkedIn showcase
 result are excluded.
 
 Zety is included because it appeared as a sponsored result and was explicitly requested. Overleaf is included because
@@ -52,7 +52,7 @@ The approved pages are:
 17. `comparisons/reactive-resume-vs-overleaf.mdx`
 
 No separate comparison hub is required. The visible Mintlify navigation group provides the crawlable index and avoids
-adding another page that competes for the existing `Reactive Resume alternatives` intent.
+adding another page that competes for the existing `cloudcoffee alternatives` intent.
 
 ## Navigation
 
@@ -69,9 +69,9 @@ Every comparison page follows the same information order, but not shared prose:
 2. An answer-first opening that states the main workflow difference in two or three sentences.
 3. A `Quick comparison` table using only criteria relevant to that competitor.
 4. A section explaining where the competing product is stronger.
-5. A section explaining where Reactive Resume is stronger.
+5. A section explaining where cloudcoffee is stronger.
 6. A `Which should you choose?` section with concrete user profiles for both options.
-7. A short limitations note that names Reactive Resume's relevant shortcomings.
+7. A short limitations note that names cloudcoffee's relevant shortcomings.
 8. A `Sources` section with first-party links and a `Last checked: July 28, 2026` line.
 9. A final Mintlify `Card` linking to `https://rxresu.me` with competitor-specific title and copy.
 
@@ -123,7 +123,7 @@ objective evidence. It is acceptable to say that a product offers an ATS checker
 the official source supports that narrower statement. No page may promise that a resume will pass an ATS or produce an
 interview.
 
-Reactive Resume claims should be verified against the current repository, documentation, hosted product, license, and
+cloudcoffee claims should be verified against the current repository, documentation, hosted product, license, and
 privacy policy. Existing use-case pages may be linked for details but should not be copied.
 
 ## Neutrality and shortcomings
@@ -131,7 +131,7 @@ privacy policy. Existing use-case pages may be linked for details but should not
 Use plain, factual language. Avoid `best`, `winner`, `superior`, `revolutionary`, `powerful`, `seamless`, and similar
 promotional terms unless they appear in a clearly attributed source title.
 
-Each page must name at least one situation where the competitor is the better fit and one relevant Reactive Resume
+Each page must name at least one situation where the competitor is the better fit and one relevant cloudcoffee
 limitation. Depending on the comparison, those limitations may include:
 
 - Less general-purpose visual design freedom than Canva or Adobe Express.
@@ -172,7 +172,7 @@ the closest verified decision angle rather than forcing the planned contrast.
 
 ## Conversion calls to action
 
-Every page ends with a link to the hosted Reactive Resume app, but its title and copy must reflect the comparison just
+Every page ends with a link to the hosted cloudcoffee app, but its title and copy must reflect the comparison just
 made. The planned CTA intents are:
 
 | Competitor | CTA intent |
@@ -196,7 +196,7 @@ made. The planned CTA intents are:
 | Overleaf | Choose visual editing when LaTeX is unnecessary |
 
 The implementation must adjust any CTA whose premise is not supported by current evidence. CTA text should invite an
-appropriate reader to try Reactive Resume, not pressure every reader to switch.
+appropriate reader to try cloudcoffee, not pressure every reader to switch.
 
 ## Internal linking
 
@@ -222,7 +222,7 @@ Implementation is complete when:
 - All 17 MDX files exist and appear in the `Comparisons` navigation group.
 - Every file has a unique title, description, opening, comparison angle, limitations section, source list, and CTA.
 - Every mutable competitor claim has a first-party source.
-- Every page acknowledges a meaningful competitor advantage and a relevant Reactive Resume limitation.
+- Every page acknowledges a meaningful competitor advantage and a relevant cloudcoffee limitation.
 - No page declares a universal winner, promises ATS passage, or repeats vendor outcome claims as facts.
 - `docs/docs.json` parses successfully.
 - Repository checks find no duplicate frontmatter titles or descriptions in the new files.

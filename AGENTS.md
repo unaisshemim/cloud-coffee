@@ -58,7 +58,7 @@ This repository uses a multi-context domain-doc layout. See `docs/agents/domain.
 
 ### Overview
 
-Reactive Resume is a pnpm monorepo (Turborepo) with two deployable apps: `apps/web` (TanStack Start / React 19 / Vite) and `apps/server` (Hono / Node.js). The production Docker image runs a single Node.js process on port 3000, with `apps/server` mounting the API/auth/MCP/static routes and serving the built web app.
+cloudcoffee is a pnpm monorepo (Turborepo) with two deployable apps: `apps/web` (TanStack Start / React 19 / Vite) and `apps/server` (Hono / Node.js). The production Docker image runs a single Node.js process on port 3000, with `apps/server` mounting the API/auth/MCP/static routes and serving the built web app.
 
 Internal packages are source-consumed through `package.json` export maps that point at `src` files. Do not assume package-local `dist` output exists unless a package explicitly adds it.
 
@@ -169,7 +169,7 @@ Copy `.env.example` to `.env.local`. The three required variables are:
 
 S3/SeaweedFS is optional. If `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY`, and `S3_BUCKET` are all set, the app uses S3-compatible storage. The checked-in `.env.example` sets SeaweedFS defaults, so either start the `seaweedfs` compose service too or comment out those S3 vars to use local filesystem storage under `<workspace>/data`. `LOCAL_STORAGE_PATH` must be absolute when set.
 
-`REDIS_URL` and `ENCRYPTION_SECRET` are optional for core resume flows, but both are required for saved AI providers and the authenticated `/agent` workspace. Start the `redis` compose service and set both vars in `.env.local` when working on those features. For host-run development, use `REDIS_URL=redis://localhost:6379`; the container-run app uses `REDIS_URL=redis://redis:6379`.
+`ENCRYPTION_SECRET` is optional for core resume flows, but required for saved AI providers.
 
 When running dev servers or migration commands, prefix the command with `dotenvx run -f .env.local --`. For example: `dotenvx run -f .env.local -- pnpm dev`. Tests, typechecks, linters, boundary checks, and `pnpm build` do not need this prefix by default. If one of those commands fails because a specific environment variable is required, rerun it with the `dotenvx run -f .env.local --` prefix.
 

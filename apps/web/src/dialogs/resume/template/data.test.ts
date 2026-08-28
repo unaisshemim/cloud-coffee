@@ -6,7 +6,16 @@ describe("templates metadata", () => {
 
 	it("declares the expected template ids", () => {
 		const ids = Object.keys(templates).sort();
-		expect(ids).toEqual(["treecko"]);
+		expect(ids).toEqual(["classic", "treecko"]);
+	});
+
+	it("publishes Classic first in the gallery", () => {
+		expect(Object.keys(templates)[0]).toBe("classic");
+		expect(templates.classic).toMatchObject({
+			name: "Classic",
+			imageUrl: "/templates/jpg/classic.jpg",
+			sidebarPosition: "none",
+		});
 	});
 
 	it("publishes Treecko in the gallery", () => {

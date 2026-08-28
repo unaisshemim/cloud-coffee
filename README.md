@@ -1,11 +1,11 @@
 <div align="center">
   <a href="https://rxresu.me">
-    <img src="apps/web/public/opengraph/banner.jpg" alt="Reactive Resume" />
+    <img src="apps/web/public/opengraph/banner.jpg" alt="cloudcoffee" />
   </a>
 
-  <h1>Reactive Resume</h1>
+  <h1>cloudcoffee</h1>
 
-  <p>Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.</p>
+  <p>cloudcoffee is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.</p>
 
   <p>
     <a href="https://rxresu.me"><strong>Get Started</strong></a>
@@ -14,7 +14,7 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/github/package-json/v/amruthpillai/reactive-resume?style=flat-square" alt="Reactive Resume Version">
+    <img src="https://img.shields.io/github/package-json/v/amruthpillai/reactive-resume?style=flat-square" alt="cloudcoffee Version">
     <img src="https://img.shields.io/github/stars/amruthpillai/Reactive-Resume?style=flat-square" alt="GitHub Stars">
     <img src="https://img.shields.io/github/license/amruthpillai/Reactive-Resume?style=flat-square" alt="License" />
     <img src="https://img.shields.io/docker/pulls/amruthpillai/reactive-resume?style=flat-square" alt="Docker Pulls" />
@@ -27,13 +27,13 @@
 
 ---
 
-Reactive Resume makes building resumes straightforward. Pick a template, fill in your details, and export to PDF—no account required for basic use. For those who want more control, the entire application can be self-hosted on your own infrastructure.
+cloudcoffee makes building resumes straightforward. Pick a template, fill in your details, and export to PDF—no account required for basic use. For those who want more control, the entire application can be self-hosted on your own infrastructure.
 
-Built with privacy as a core principle, Reactive Resume gives you complete ownership of your data. The codebase is fully open-source under the MIT license, with no tracking, no ads, and no hidden costs.
+Built with privacy as a core principle, cloudcoffee gives you complete ownership of your data. The codebase is fully open-source under the MIT license, with no tracking, no ads, and no hidden costs.
 
 ## Sponsors
 
-Reactive Resume stays free, open-source, and independent because companies choose to support the work behind it. Thank you to every sponsor who helps fund hosting, maintenance, and continued development for the community.
+cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Thank you to every sponsor who helps fund hosting, maintenance, and continued development for the community.
 
 <p>
   <a href="https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=reactive-resume">
@@ -41,9 +41,9 @@ Reactive Resume stays free, open-source, and independent because companies choos
   </a>
 </p>
 
-[Atlas Cloud](https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=reactive-resume) supports Reactive Resume as a project sponsor. Atlas Cloud provides a unified AI platform for developers, with access to hundreds of models for chat, image generation, video generation, media processing, and GPU cloud workloads through one API key, one endpoint, and one billing account.
+[Atlas Cloud](https://www.atlascloud.ai/?utm_source=github&utm_medium=link&utm_campaign=reactive-resume) supports cloudcoffee as a project sponsor. Atlas Cloud provides a unified AI platform for developers, with access to hundreds of models for chat, image generation, video generation, media processing, and GPU cloud workloads through one API key, one endpoint, and one billing account.
 
-If your company would like to sponsor Reactive Resume, email [hello@amruthpillai.com](mailto:hello@amruthpillai.com).
+If your company would like to sponsor cloudcoffee, email [hello@amruthpillai.com](mailto:hello@amruthpillai.com).
 
 ## Features
 
@@ -153,7 +153,7 @@ If your company would like to sponsor Reactive Resume, email [hello@amruthpillai
 
 ## Quick Start
 
-The quickest way to run Reactive Resume locally:
+The quickest way to run cloudcoffee locally:
 
 ```bash
 # Clone the repository
@@ -199,7 +199,7 @@ Comprehensive guides are available at [docs.rxresu.me](https://docs.rxresu.me):
 
 ## Self-Hosting
 
-Reactive Resume can be self-hosted using Docker. The stack includes:
+cloudcoffee can be self-hosted using Docker. The stack includes:
 
 - **PostgreSQL** — Database for storing user data and resumes
 - **SeaweedFS** (optional) — S3-compatible storage for file uploads
@@ -220,7 +220,7 @@ See the [self-hosting guide](https://docs.rxresu.me/self-hosting/docker) for com
 
 ## Support
 
-Reactive Resume is and always will be free and open-source. If it has helped you land a job or saved you time, please consider supporting continued development:
+cloudcoffee is and always will be free and open-source. If it has helped you land a job or saved you time, please consider supporting continued development:
 
 <p>
   <a href="https://github.com/sponsors/AmruthPillai">

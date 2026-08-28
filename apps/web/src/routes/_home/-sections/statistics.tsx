@@ -16,13 +16,13 @@ type Statistic = {
 const getStatistics = (userCount: number, resumeCount: number): Statistic[] => [
 	{
 		id: "users",
-		label: t`Users`,
+		label: t`Career builders`,
 		value: userCount,
 		icon: UsersIcon,
 	},
 	{
 		id: "resumes",
-		label: t`Resumes`,
+		label: t`Resumes created`,
 		value: resumeCount,
 		icon: FileTextIcon,
 	},
@@ -38,34 +38,16 @@ function StatisticCard({ statistic, index }: StatisticCardProps) {
 
 	return (
 		<m.div
-			className="group relative flex flex-col items-center justify-center gap-y-4 border-r border-b p-8 transition-colors last:border-e-0 hover:bg-secondary/30 sm:border-b-0 xl:py-12"
+			className="group relative min-h-72 overflow-hidden border-[#c9c0ae] border-b p-8 last:border-e-0 sm:border-r sm:border-b-0 sm:last:border-r-0 md:p-12"
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true, margin: "-50px" }}
 			transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
 		>
-			{/* Background decoration */}
-			<div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-				<m.div
-					className="absolute inset-s-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary/2"
-					initial={{ scale: 0.8, opacity: 0 }}
-					whileInView={{ scale: 1, opacity: 1 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.8, delay: index * 0.1 + 0.2 }}
-				>
-					<Icon size={180} weight="thin" />
-				</m.div>
+			<div className="flex items-center justify-between">
+				<p className="font-mono text-[#687176] text-xs uppercase tracking-[0.18em]">live.signal</p>
+				<Icon aria-hidden="true" className="size-7 text-[#f1530a]" weight="thin" />
 			</div>
-
-			{/* Icon */}
-			<m.div
-				aria-hidden="true"
-				className="relative rounded-full bg-primary/10 p-3 text-primary"
-				whileHover={{ scale: 1.05 }}
-				transition={{ type: "spring", stiffness: 400, damping: 20 }}
-			>
-				<Icon size={24} weight="thin" />
-			</m.div>
 
 			{/* Value */}
 			<CountUp
@@ -73,11 +55,15 @@ function StatisticCard({ statistic, index }: StatisticCardProps) {
 				separator=","
 				duration={0.8}
 				to={statistic.value}
-				className="font-bold text-5xl tracking-tight md:text-6xl"
+				className="mt-12 block font-bold text-6xl tracking-[-0.06em] md:text-8xl"
 			/>
 
 			{/* Label */}
-			<p className="relative font-medium text-base text-muted-foreground tracking-tight">{statistic.label}</p>
+			<p className="mt-2 font-bold text-[#555c5f] text-sm uppercase tracking-[0.12em]">{statistic.label}</p>
+			<div
+				aria-hidden="true"
+				className="absolute inset-x-0 bottom-0 h-1 bg-[#f1530a] opacity-0 transition-opacity group-hover:opacity-100"
+			/>
 		</m.div>
 	);
 }
@@ -90,7 +76,7 @@ export function Statistics() {
 	if (!userCountResult.data || !resumeCountResult.data) return null;
 
 	return (
-		<section id="statistics" aria-labelledby="stats-heading">
+		<section id="statistics" aria-labelledby="stats-heading" className="bg-[#efe6d6]">
 			<h2 id="stats-heading" className="sr-only">
 				{t`Application Statistics`}
 			</h2>

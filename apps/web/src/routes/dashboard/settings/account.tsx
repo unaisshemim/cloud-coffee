@@ -10,13 +10,15 @@ export const Route = createFileRoute("/dashboard/settings/account")({
 });
 
 function RouteComponent() {
+	const { session } = Route.useRouteContext();
+
 	return (
 		<div className="space-y-4">
 			<DashboardHeader icon={UserGearIcon} title={t`Account`} />
 
 			<Separator />
 
-			<AccountSettingsPage />
+			<AccountSettingsPage session={session} />
 		</div>
 	);
 }

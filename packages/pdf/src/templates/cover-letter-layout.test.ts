@@ -3,7 +3,7 @@ import { basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
-const pageFiles = ["treecko/TreeckoPage.tsx"];
+const pageFiles = ["classic/ClassicPage.tsx", "treecko/TreeckoPage.tsx"];
 
 const readTemplate = (file: string) => {
 	const path = fileURLToPath(new URL(file, import.meta.url));

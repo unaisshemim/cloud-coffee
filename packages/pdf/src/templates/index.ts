@@ -1,8 +1,10 @@
 import type { Template } from "@reactive-resume/schema/templates";
 import type { TemplatePage } from "../document";
+import { ClassicPage } from "./classic/ClassicPage";
 import { TreeckoPage } from "./treecko/TreeckoPage";
 
 export const templatePages: Record<Template, TemplatePage> = {
+	classic: ClassicPage,
 	treecko: TreeckoPage,
 };
 

@@ -68,6 +68,7 @@ interface TemplateConfig {
 }
 
 const TEMPLATE_CONFIGS: Record<Template, TemplateConfig> = {
+	classic: { sidebarSide: "none", sidebarBackground: "none", headerPosition: "full-width" },
 	treecko: { sidebarSide: "none", sidebarBackground: "none", headerPosition: "full-width" },
 };
 

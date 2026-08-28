@@ -1,15 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createRootStructuredDataScript, getCanonicalRootUrl } from "@/libs/seo";
-import { DonationBanner } from "./-sections/donate";
 import { Faq } from "./-sections/faq";
 import { Features } from "./-sections/features";
 import { Footer } from "./-sections/footer";
 import { Hero } from "./-sections/hero";
 import { Prefooter } from "./-sections/prefooter";
-import { Sponsors } from "./-sections/sponsors";
 import { Statistics } from "./-sections/statistics";
-import { Templates } from "./-sections/templates";
-import { Testimonials } from "./-sections/testimonials";
 
 export const Route = createFileRoute("/_home/")({
 	component: RouteComponent,
@@ -20,7 +16,12 @@ export const Route = createFileRoute("/_home/")({
 		return {
 			links: [
 				{ rel: "canonical", href: canonicalUrl },
-				{ rel: "preload", href: "/videos/timelapse-v1.webp", as: "image", fetchPriority: "high" },
+				{
+					rel: "preload",
+					href: "/images/landing/career-collage-hero-v2.webp",
+					as: "image",
+					fetchPriority: "high",
+				},
 			],
 			scripts: [createRootStructuredDataScript(canonicalUrl)],
 		};
@@ -28,20 +29,14 @@ export const Route = createFileRoute("/_home/")({
 });
 
 function RouteComponent() {
-	const { flags } = Route.useRouteContext();
-
 	return (
-		<main id="main-content" className="relative">
+		<main id="main-content" className="relative bg-[#f7f3e9] font-landing text-[#121516]">
 			<Hero />
 
 			<div className="container mx-auto px-4 sm:px-6 lg:px-12">
-				<div className="border-border border-x [&>section:first-child]:border-t-0 [&>section]:border-border [&>section]:border-t">
+				<div className="border-[#c9c0ae] border-x [&>section:first-child]:border-t-0 [&>section]:border-[#c9c0ae] [&>section]:border-t">
 					<Statistics />
-					<Sponsors show={flags.showSponsors} />
 					<Features />
-					<Templates />
-					<Testimonials />
-					<DonationBanner />
 					<Faq />
 					<Prefooter />
 					<Footer />

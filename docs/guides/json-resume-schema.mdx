@@ -1,17 +1,17 @@
 ---
 title: "JSON Resume Schema"
-description: "Learn about the Reactive Resume JSON Schema, available at /schema.json, and how it aims to become the gold standard for portable resume data."
+description: "Learn about the cloudcoffee JSON Schema, available at /schema.json, and how it aims to become the gold standard for portable resume data."
 ---
 
 ## The Vision
 
 I envision a world where applying for a job is as simple as transferring a JSON file from one service to a job listing portal—without any parsing errors, format inconsistencies, or human bias from subjective resume formatting.
 
-Reactive Resume aims to be the **gold standard in JSON Resume Schemas**. A universal, well-documented, and rigorously typed schema that any service can adopt to enable seamless resume portability across the entire job application ecosystem.
+cloudcoffee aims to be the **gold standard in JSON Resume Schemas**. A universal, well-documented, and rigorously typed schema that any service can adopt to enable seamless resume portability across the entire job application ecosystem.
 
 Imagine:
 
-- Exporting your resume from Reactive Resume as a JSON file
+- Exporting your resume from cloudcoffee as a JSON file
 - Uploading it directly to a job portal that instantly understands every field
 - No more PDF parsing failures or ATS (Applicant Tracking System) misreads
 - Your qualifications evaluated purely on merit, not on formatting quirks
@@ -20,11 +20,11 @@ This is the future I'm hoping to build toward.
 
 ## The Schema Endpoint
 
-The Reactive Resume JSON Schema is publicly available at:
+The cloudcoffee JSON Schema is publicly available at:
 
 <Info>[https://rxresu.me/schema.json](https://rxresu.me/schema.json)</Info>
 
-This endpoint returns a complete JSON Schema using the draft 2020-12 dialect. It describes the structure of a Reactive Resume document and includes:
+This endpoint returns a complete JSON Schema using the draft 2020-12 dialect. It describes the structure of a cloudcoffee document and includes:
 
 - **All resume sections**: basics, summary, experience, education, projects, skills, languages, interests, awards, certifications, publications, volunteer work, and references
 - **Custom sections**: user-defined sections whose `type` selects one of the documented item shapes
@@ -85,7 +85,7 @@ This keeps editor configuration outside the resume data and avoids adding unsupp
 
 The schema enables third-party integrations:
 
-- **Job portals** can accept Reactive Resume JSON files directly
+- **Job portals** can accept cloudcoffee JSON files directly
 - **HR systems** can parse candidate data without lossy PDF conversion
 - **Other resume builders** can import/export using a common format
 - **AI tools** can understand resume structure for analysis or enhancement
@@ -137,13 +137,13 @@ If you're building a job portal, HR system, or any service that handles resumes,
 - **Zero parsing errors**: structured data means no OCR or PDF parsing mistakes
 - **Complete information**: all resume data is preserved, including links and metadata
 - **Easy integration**: JSON is universally supported across all platforms
-- **Canonical contract**: one public schema endpoint tracks the current Reactive Resume data model
+- **Canonical contract**: one public schema endpoint tracks the current cloudcoffee data model
 
 Want to integrate? The schema is open and freely available. You can fetch it programmatically or reference it in your systems.
 
 ## Complete JSON Schema
 
-Below is the complete JSON Schema for Reactive Resume. You can also fetch the latest version directly from [https://rxresu.me/schema.json](https://rxresu.me/schema.json).
+Below is the complete JSON Schema for cloudcoffee. You can also fetch the latest version directly from [https://rxresu.me/schema.json](https://rxresu.me/schema.json).
 
 <Tip>Copy the schema from the live endpoint to ensure you always have the latest version.</Tip>
 

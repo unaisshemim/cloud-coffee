@@ -63,10 +63,10 @@ describe("web app fallback classification", () => {
 			<!doctype html>
 			<html>
 				<head>
-					<title>Reactive Resume — A free and open-source resume builder</title>
+					<title>cloudcoffee — A free and open-source resume builder</title>
 					<meta
 						name="description"
-						content="Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
+						content="cloudcoffee is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
 					>
 				</head>
 				<body><div id="app"></div></body>
@@ -90,7 +90,7 @@ describe("web app fallback classification", () => {
 	});
 
 	describe("the ATS checker page", () => {
-		const shell = `<html><head><title>Reactive Resume — A free and open-source resume builder</title><meta name="description" content="Marketing copy."></head><body></body></html>`;
+		const shell = `<html><head><title>cloudcoffee — A free and open-source resume builder</title><meta name="description" content="Marketing copy."></head><body></body></html>`;
 
 		it("serves an indexable shell rather than a 404", async () => {
 			vi.mocked(fs.readFile).mockResolvedValue(shell);
@@ -107,7 +107,7 @@ describe("web app fallback classification", () => {
 
 			const html = await (await handleWebApp(new Request("https://example.com/ats-checker"))).text();
 
-			expect(html).toContain("<title>ATS Checker - Reactive Resume</title>");
+			expect(html).toContain("<title>ATS Checker - cloudcoffee</title>");
 			expect(html).toContain('<link rel="canonical" href="https://rxresu.me/ats-checker">');
 			expect(html).toContain('<meta property="og:url" content="https://rxresu.me/ats-checker">');
 			expect(html).toContain('<meta property="og:image" content="https://rxresu.me/opengraph/ats-checker.png">');
@@ -131,7 +131,7 @@ describe("web app fallback classification", () => {
 	});
 
 	describe("public resume social cards", () => {
-		const shell = `<html><head><title>Reactive Resume — A free and open-source resume builder</title><meta name="description" content="Marketing copy."></head><body></body></html>`;
+		const shell = `<html><head><title>cloudcoffee — A free and open-source resume builder</title><meta name="description" content="Marketing copy."></head><body></body></html>`;
 
 		it("injects resume-specific social metadata and replaces the shell title", async () => {
 			vi.mocked(fs.readFile).mockResolvedValue(shell);
@@ -145,7 +145,7 @@ describe("web app fallback classification", () => {
 			const html = await (await handleWebApp(new Request("https://example.com/jane/resume"))).text();
 
 			expect(mocks.getPublicResumeSocialMeta).toHaveBeenCalledWith({ username: "jane", slug: "resume" });
-			expect(html).toContain("<title>Jane Doe - Reactive Resume</title>");
+			expect(html).toContain("<title>Jane Doe - cloudcoffee</title>");
 			expect(html).toContain('<meta name="description" content="Builds resilient distributed systems.">');
 			expect(html).not.toContain("Marketing copy.");
 			expect(html).toContain('<link rel="canonical" href="https://rxresu.me/jane/resume">');
@@ -220,7 +220,7 @@ describe("web app fallback classification", () => {
 		expect(response.headers.get("Content-Security-Policy-Report-Only")).toContain("frame-ancestors 'none'");
 	});
 
-	it.each(["/auth/login", "/dashboard", "/builder/resume-1", "/agent", "/templates", "/templates/treecko.pdf"])(
+	it.each(["/auth/login", "/dashboard", "/builder/resume-1", "/templates", "/templates/treecko.pdf"])(
 		"serves noindex shell for known app prefix %s",
 		async (pathname) => {
 			const response = await handleWebApp(new Request(`https://example.com${pathname}`));

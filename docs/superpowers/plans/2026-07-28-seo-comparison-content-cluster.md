@@ -3,7 +3,7 @@
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Publish 17 neutral, first-party-sourced comparison pages that target high-intent resume-builder searches and
-give appropriate readers a distinct reason to try Reactive Resume.
+give appropriate readers a distinct reason to try cloudcoffee.
 
 **Architecture:** Add one MDX page per competitor under `docs/comparisons/`, using a consistent decision-oriented
 information order but unique claims, trade-offs, sources, and calls to action. Add the completed set to one visible
@@ -82,10 +82,10 @@ and Mintlify's link checker.
 
 **Interfaces:**
 
-- Consumes: Current Reactive Resume export, template, privacy, and open-source documentation.
+- Consumes: Current cloudcoffee export, template, privacy, and open-source documentation.
 - Produces: Three self-contained MDX pages following the cluster heading, evidence, limitation, source, and CTA contract.
 
-- [ ] **Step 1: Re-verify the shared Reactive Resume facts**
+- [ ] **Step 1: Re-verify the shared cloudcoffee facts**
 
 Read these current files before drafting:
 
@@ -99,8 +99,8 @@ docs/guides/exporting-your-resume.mdx
 docs/legal/license.mdx
 ```
 
-Confirm only claims used in the three pages: Reactive Resume is MIT-licensed and self-hostable; the hosted builder's
-core resume workflow has no premium tier; current exports include PDF, DOCX, Markdown, and Reactive Resume JSON; and
+Confirm only claims used in the three pages: cloudcoffee is MIT-licensed and self-hostable; the hosted builder's
+core resume workflow has no premium tier; current exports include PDF, DOCX, Markdown, and cloudcoffee JSON; and
 its visual controls are resume-specific rather than a freeform design canvas.
 
 - [ ] **Step 2: Verify the three competitors from first-party sources**
@@ -137,25 +137,25 @@ Use this frontmatter:
 
 ```yaml
 ---
-title: "Reactive Resume vs Canva"
-description: "Compare Reactive Resume and Canva for free resume creation, visual control, exports, data portability, and self-hosting."
+title: "cloudcoffee vs Canva"
+description: "Compare cloudcoffee and Canva for free resume creation, visual control, exports, data portability, and self-hosting."
 ---
 ```
 
 The answer-first opening must say that Canva is the stronger choice for freeform visual composition and a broad design
-library, while Reactive Resume is purpose-built around structured resume fields, reusable resume data, and
+library, while cloudcoffee is purpose-built around structured resume fields, reusable resume data, and
 self-hosting. Include:
 
 ```markdown
 ## Quick comparison
 ## Where Canva is a better fit
-## Where Reactive Resume is a better fit
+## Where cloudcoffee is a better fit
 ## Which should you choose?
-## Reactive Resume limitations in this comparison
+## cloudcoffee limitations in this comparison
 ## Sources
 ```
 
-Name Reactive Resume's narrower design canvas as its limitation. End with:
+Name cloudcoffee's narrower design canvas as its limitation. End with:
 
 ```mdx
 <Card title="Try a resume-specific editor" icon="arrow-right" href="https://rxresu.me">
@@ -170,18 +170,18 @@ Use this frontmatter:
 
 ```yaml
 ---
-title: "Reactive Resume vs Adobe Express"
-description: "Compare Reactive Resume and Adobe Express for resume templates, PDF export, visual editing, structured data, and self-hosting."
+title: "cloudcoffee vs Adobe Express"
+description: "Compare cloudcoffee and Adobe Express for resume templates, PDF export, visual editing, structured data, and self-hosting."
 ---
 ```
 
-Credit Adobe Express for broader document, image, and layout editing. Explain that Reactive Resume keeps content in
+Credit Adobe Express for broader document, image, and layout editing. Explain that cloudcoffee keeps content in
 resume-specific fields and supports resume-focused versioning, formats, and deployment choices. Name its smaller visual
 asset library and lack of a general canvas as limitations. End with:
 
 ```mdx
 <Card title="Use structured resume fields" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when reusable work history and resume-specific controls matter more than general document design.
+  Try cloudcoffee when reusable work history and resume-specific controls matter more than general document design.
 </Card>
 ```
 
@@ -191,15 +191,15 @@ Use this frontmatter:
 
 ```yaml
 ---
-title: "Reactive Resume vs Overleaf"
-description: "Compare Reactive Resume's visual resume builder with Overleaf's LaTeX templates, source editing, collaboration, and PDF workflow."
+title: "cloudcoffee vs Overleaf"
+description: "Compare cloudcoffee's visual resume builder with Overleaf's LaTeX templates, source editing, collaboration, and PDF workflow."
 ---
 ```
 
 Credit Overleaf for direct LaTeX source control, its large community template gallery, and document collaboration.
-Explain that Reactive Resume is easier for readers who do not want to edit or debug LaTeX and stores resume content as
+Explain that cloudcoffee is easier for readers who do not want to edit or debug LaTeX and stores resume content as
 structured data. Name the absence of LaTeX source editing and Overleaf-style academic document collaboration as
-Reactive Resume limitations. End with:
+cloudcoffee limitations. End with:
 
 ```mdx
 <Card title="Choose visual editing when LaTeX is unnecessary" icon="arrow-right" href="https://rxresu.me">
@@ -234,9 +234,9 @@ for (const file of files) {
   const text = fs.readFileSync(file, "utf8");
   for (const required of [
     "## Quick comparison",
-    "## Where Reactive Resume is a better fit",
+    "## Where cloudcoffee is a better fit",
     "## Which should you choose?",
-    "## Reactive Resume limitations in this comparison",
+    "## cloudcoffee limitations in this comparison",
     "## Sources",
     "Last checked: July 28, 2026",
     'href="https://rxresu.me"',
@@ -257,7 +257,7 @@ git add \
   docs/comparisons/reactive-resume-vs-canva.mdx \
   docs/comparisons/reactive-resume-vs-adobe-express.mdx \
   docs/comparisons/reactive-resume-vs-overleaf.mdx
-git commit -m "docs: compare Reactive Resume with design editors"
+git commit -m "docs: compare cloudcoffee with design editors"
 ```
 
 ---
@@ -274,7 +274,7 @@ git commit -m "docs: compare Reactive Resume with design editors"
 
 **Interfaces:**
 
-- Consumes: Task 1's page contract and current Reactive Resume export/open-source documentation.
+- Consumes: Task 1's page contract and current cloudcoffee export/open-source documentation.
 - Produces: Five pages that distinguish free creation from free designed-document export.
 
 - [ ] **Step 1: Verify the competitors from first-party sources**
@@ -317,19 +317,19 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Resume.com"
+title: "cloudcoffee vs Resume.com"
 description: "Compare two free resume builders by PDF export, accounts, templates, open-source access, portability, and self-hosting."
 ---
 ```
 
-Do not manufacture a pricing advantage for Reactive Resume: both products support free PDF export. Credit Resume.com
-for its simple hosted workflow and lack of a paid membership tier. Distinguish Reactive Resume through source access,
+Do not manufacture a pricing advantage for cloudcoffee: both products support free PDF export. Credit Resume.com
+for its simple hosted workflow and lack of a paid membership tier. Distinguish cloudcoffee through source access,
 self-hosting, more export formats, API/MCP automation, and optional bring-your-own AI. Name account/setup complexity
-and the more technical options as Reactive Resume limitations. End with:
+and the more technical options as cloudcoffee limitations. End with:
 
 ```mdx
 <Card title="Keep more options for your resume data" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when self-hosting, structured exports, or automation matter alongside free PDF creation.
+  Try cloudcoffee when self-hosting, structured exports, or automation matter alongside free PDF creation.
 </Card>
 ```
 
@@ -339,8 +339,8 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs MyPerfectResume"
-description: "Compare Reactive Resume and MyPerfectResume by free downloads, writing guidance, templates, AI, open source, and self-hosting."
+title: "cloudcoffee vs MyPerfectResume"
+description: "Compare cloudcoffee and MyPerfectResume by free downloads, writing guidance, templates, AI, open source, and self-hosting."
 ---
 ```
 
@@ -350,7 +350,7 @@ Resume's lack of an equivalent built-in content library and specialized checker 
 
 ```mdx
 <Card title="Export a designed resume without a premium tier" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when you already have the content and want free PDF, DOCX, Markdown, and JSON exports.
+  Use cloudcoffee when you already have the content and want free PDF, DOCX, Markdown, and JSON exports.
 </Card>
 ```
 
@@ -360,18 +360,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Resume-Now"
-description: "Compare Reactive Resume and Resume-Now by free export formats, guided writing, AI tools, templates, and self-hosting."
+title: "cloudcoffee vs Resume-Now"
+description: "Compare cloudcoffee and Resume-Now by free export formats, guided writing, AI tools, templates, and self-hosting."
 ---
 ```
 
 Credit Resume-Now for guided content suggestions and resume-analysis tools. State that its current free download is TXT
-and designed PDF/Word formats require paid access. Name Reactive Resume's smaller built-in writing-guidance surface as
+and designed PDF/Word formats require paid access. Name cloudcoffee's smaller built-in writing-guidance surface as
 its limitation. End with:
 
 ```mdx
 <Card title="Use a resume workflow without a subscription" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when direct editing and designed exports matter more than a large guided-content library.
+  Try cloudcoffee when direct editing and designed exports matter more than a large guided-content library.
 </Card>
 ```
 
@@ -381,18 +381,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Resume.io"
-description: "Compare Reactive Resume and Resume.io by free PDF access, templates, writing tools, exports, open source, and self-hosting."
+title: "cloudcoffee vs Resume.io"
+description: "Compare cloudcoffee and Resume.io by free PDF access, templates, writing tools, exports, open source, and self-hosting."
 ---
 ```
 
 Credit Resume.io for its guided writing tools, sample content, and commercial template experience. State the narrow
 current free-PDF allowance without claiming all PDF export is paid. Note that Resume.io says plan availability can vary
-by location. Name Reactive Resume's smaller guided-content library as its limitation. End with:
+by location. Name cloudcoffee's smaller guided-content library as its limitation. End with:
 
 ```mdx
 <Card title="Create and export without template-tier limits" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when you want the included templates, multiple export formats, and no premium resume tier.
+  Use cloudcoffee when you want the included templates, multiple export formats, and no premium resume tier.
 </Card>
 ```
 
@@ -402,18 +402,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Zety"
-description: "Compare Reactive Resume and Zety by free downloads, guided writing, resume checks, templates, open source, and self-hosting."
+title: "cloudcoffee vs Zety"
+description: "Compare cloudcoffee and Zety by free downloads, guided writing, resume checks, templates, open source, and self-hosting."
 ---
 ```
 
 Credit Zety for its guided builder, writing suggestions, cover-letter workflow, and resume check. State that Zety's
-free package currently exports TXT, while PDF and Word are paid formats. Name Reactive Resume's lack of equivalent
+free package currently exports TXT, while PDF and Word are paid formats. Name cloudcoffee's lack of equivalent
 prewritten guidance and job matching as limitations. End with:
 
 ```mdx
 <Card title="Download a designed resume without upgrading" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when free PDF and DOCX exports matter more than guided writing and job-matching tools.
+  Try cloudcoffee when free PDF and DOCX exports matter more than guided writing and job-matching tools.
 </Card>
 ```
 
@@ -458,10 +458,10 @@ git commit -m "docs: compare mainstream resume builders"
 
 **Interfaces:**
 
-- Consumes: Current Reactive Resume AI, automation, export, privacy, and self-hosting documentation.
-- Produces: Five pages that distinguish integrated specialist tools from Reactive Resume's optional provider model.
+- Consumes: Current cloudcoffee AI, automation, export, privacy, and self-hosting documentation.
+- Produces: Five pages that distinguish integrated specialist tools from cloudcoffee's optional provider model.
 
-- [ ] **Step 1: Re-verify Reactive Resume's AI and automation boundaries**
+- [ ] **Step 1: Re-verify cloudcoffee's AI and automation boundaries**
 
 Read:
 
@@ -476,8 +476,8 @@ docs/guides/using-the-mcp-server.mdx
 ```
 
 Use only supported claims: AI is optional and bring-your-own-provider; users configure their provider credentials;
-Reactive Resume offers API and MCP workflows; and provider use can incur separate provider costs. Do not claim that
-Reactive Resume has a dedicated ATS score, native keyword-match score, or human review service.
+cloudcoffee offers API and MCP workflows; and provider use can incur separate provider costs. Do not claim that
+cloudcoffee has a dedicated ATS score, native keyword-match score, or human review service.
 
 - [ ] **Step 2: Verify the competitors from first-party sources**
 
@@ -525,18 +525,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Kickresume"
-description: "Compare Reactive Resume and Kickresume by free downloads, AI writing, content examples, templates, provider choice, and self-hosting."
+title: "cloudcoffee vs Kickresume"
+description: "Compare cloudcoffee and Kickresume by free downloads, AI writing, content examples, templates, provider choice, and self-hosting."
 ---
 ```
 
 Credit Kickresume for integrated AI writing, content examples, imports, and a larger guided career-document workflow.
 State that its free plan supports unlimited documents/downloads when free customization options are used. Name
-Reactive Resume's provider setup and smaller content library as limitations. End with:
+cloudcoffee's provider setup and smaller content library as limitations. End with:
 
 ```mdx
 <Card title="Choose your own AI provider" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when you want AI to remain optional and configurable rather than bundled into the builder.
+  Try cloudcoffee when you want AI to remain optional and configurable rather than bundled into the builder.
 </Card>
 ```
 
@@ -546,18 +546,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs ResumeGemini"
-description: "Compare Reactive Resume and ResumeGemini by free PDF export, AI optimization, content examples, open source, and self-hosting."
+title: "cloudcoffee vs ResumeGemini"
+description: "Compare cloudcoffee and ResumeGemini by free PDF export, AI optimization, content examples, open source, and self-hosting."
 ---
 ```
 
 Credit ResumeGemini for prewritten examples and integrated job-targeted AI optimization. Its site currently documents
-at least one free template with free PDF download; do not generalize that to every template. Name Reactive Resume's
+at least one free template with free PDF download; do not generalize that to every template. Name cloudcoffee's
 lack of a built-in content-example library and keyword-optimization product as limitations. End with:
 
 ```mdx
 <Card title="Try an open-source, self-hostable workflow" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when source access and deployment control matter more than integrated content examples.
+  Use cloudcoffee when source access and deployment control matter more than integrated content examples.
 </Card>
 ```
 
@@ -567,18 +567,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Jobscan"
-description: "Compare Reactive Resume and Jobscan by free PDF creation, ATS analysis, job matching, exports, open source, and automation."
+title: "cloudcoffee vs Jobscan"
+description: "Compare cloudcoffee and Jobscan by free PDF creation, ATS analysis, job matching, exports, open source, and automation."
 ---
 ```
 
 Credit Jobscan for its free resume builder, nine current templates, LinkedIn import, resume scanner, and specialized
-job-description analysis. Avoid repeating its ATS success claims. Name Reactive Resume's lack of a native ATS score or
+job-description analysis. Avoid repeating its ATS success claims. Name cloudcoffee's lack of a native ATS score or
 job-keyword scanner as limitations. End with:
 
 ```mdx
 <Card title="Own the resume before adding specialized analysis" icon="arrow-right" href="https://rxresu.me">
-  Build, export, and automate structured resume data in Reactive Resume when an ATS score is not your primary need.
+  Build, export, and automate structured resume data in cloudcoffee when an ATS score is not your primary need.
 </Card>
 ```
 
@@ -588,19 +588,19 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Resumod"
-description: "Compare Reactive Resume and Resumod by AI writing, resume scoring, job targeting, exports, open source, and self-hosting."
+title: "cloudcoffee vs Resumod"
+description: "Compare cloudcoffee and Resumod by AI writing, resume scoring, job targeting, exports, open source, and self-hosting."
 ---
 ```
 
 Credit Resumod for role-specific content, resume scoring, job-targeted AI, and documented PDF/Word output. Do not state
 that every template or AI feature is free because the official page describes both free and paid templates without a
-clear complete plan matrix. Name Reactive Resume's lack of an integrated ATS-style score and content library as
+clear complete plan matrix. Name cloudcoffee's lack of an integrated ATS-style score and content library as
 limitations. End with:
 
 ```mdx
 <Card title="Keep deployment and provider choices open" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when self-hosting and optional bring-your-own AI matter more than bundled scoring tools.
+  Try cloudcoffee when self-hosting and optional bring-your-own AI matter more than bundled scoring tools.
 </Card>
 ```
 
@@ -610,19 +610,19 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Rezi"
-description: "Compare Reactive Resume and Rezi by free limits, ATS scoring, keyword targeting, AI writing, provider choice, and self-hosting."
+title: "cloudcoffee vs Rezi"
+description: "Compare cloudcoffee and Rezi by free limits, ATS scoring, keyword targeting, AI writing, provider choice, and self-hosting."
 ---
 ```
 
 Credit Rezi for its specialized score, keyword targeting, integrated AI writing, interview tool, and expert-review
 option. State its current free limits as one resume and three PDF downloads without quoting the paid price. Name
-Reactive Resume's lack of those specialist scoring/review tools and the setup required for its AI as limitations. End
+cloudcoffee's lack of those specialist scoring/review tools and the setup required for its AI as limitations. End
 with:
 
 ```mdx
 <Card title="Keep AI optional and bring your own provider" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when provider choice, open source, self-hosting, and API or MCP automation matter more than an
+  Use cloudcoffee when provider choice, open source, self-hosting, and API or MCP automation matter more than an
   integrated ATS score.
 </Card>
 ```
@@ -667,7 +667,7 @@ git commit -m "docs: compare AI and ATS resume builders"
 
 **Interfaces:**
 
-- Consumes: Current Reactive Resume dashboard, application-tracking, export, and privacy documentation.
+- Consumes: Current cloudcoffee dashboard, application-tracking, export, and privacy documentation.
 - Produces: Four pages focused on broader career services, document limits, guided content, and no-account ephemeral use.
 
 - [ ] **Step 1: Verify the competitors from first-party sources**
@@ -706,18 +706,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs CareerCircle"
-description: "Compare Reactive Resume and CareerCircle by free PDF and Word exports, career resources, accounts, open source, and self-hosting."
+title: "cloudcoffee vs CareerCircle"
+description: "Compare cloudcoffee and CareerCircle by free PDF and Word exports, career resources, accounts, open source, and self-hosting."
 ---
 ```
 
 Credit CareerCircle for free PDF/Word output, staffing-expert guidance, jobs, courses, and professional-development
-resources in the same service. State its sign-up requirement. Name Reactive Resume's lack of CareerCircle's broader
+resources in the same service. State its sign-up requirement. Name cloudcoffee's lack of CareerCircle's broader
 course/job community as its limitation. End with:
 
 ```mdx
 <Card title="Use a standalone resume system" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when resume ownership, multiple export formats, and self-hosting matter more than bundled career
+  Try cloudcoffee when resume ownership, multiple export formats, and self-hosting matter more than bundled career
   services.
 </Card>
 ```
@@ -728,18 +728,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Novorésumé"
-description: "Compare Reactive Resume and Novorésumé by free document limits, templates, guided writing, AI, exports, and self-hosting."
+title: "cloudcoffee vs Novorésumé"
+description: "Compare cloudcoffee and Novorésumé by free document limits, templates, guided writing, AI, exports, and self-hosting."
 ---
 ```
 
 Credit Novorésumé for guided design, writing advice, a content library, and its integrated assistant. State its current
 Basic limits precisely: one document and one page, with larger document counts and longer documents in Premium. Name
-Reactive Resume's smaller guidance/content surface as its limitation. End with:
+cloudcoffee's smaller guidance/content surface as its limitation. End with:
 
 ```mdx
 <Card title="Manage more resume versions without a document limit" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when you want multiple resumes and designed exports without moving to a premium plan.
+  Use cloudcoffee when you want multiple resumes and designed exports without moving to a premium plan.
 </Card>
 ```
 
@@ -749,18 +749,18 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs LiveCareer"
-description: "Compare Reactive Resume and LiveCareer by free downloads, guided content, resume checks, templates, open source, and self-hosting."
+title: "cloudcoffee vs LiveCareer"
+description: "Compare cloudcoffee and LiveCareer by free downloads, guided content, resume checks, templates, open source, and self-hosting."
 ---
 ```
 
 Credit LiveCareer for ready-made content, spell-checking, writing tips, and resume checking. State that its free builder
-currently exports TXT, while unlimited PDF and Word downloads require premium access. Name Reactive Resume's smaller
+currently exports TXT, while unlimited PDF and Word downloads require premium access. Name cloudcoffee's smaller
 guided-content and checker surface as limitations. End with:
 
 ```mdx
 <Card title="Use the core builder and designed exports for free" icon="arrow-right" href="https://rxresu.me">
-  Try Reactive Resume when PDF or DOCX output matters more than ready-made writing suggestions.
+  Try cloudcoffee when PDF or DOCX output matters more than ready-made writing suggestions.
 </Card>
 ```
 
@@ -770,19 +770,19 @@ Use:
 
 ```yaml
 ---
-title: "Reactive Resume vs Freesumes"
-description: "Compare Reactive Resume and Freesumes by no-account use, PDF export, templates, saved resume management, privacy, and self-hosting."
+title: "cloudcoffee vs Freesumes"
+description: "Compare cloudcoffee and Freesumes by no-account use, PDF export, templates, saved resume management, privacy, and self-hosting."
 ---
 ```
 
 Credit Freesumes for a no-account, no-card builder, six current builder templates, free PDF output, Word/Google Docs
 templates, and browser-session privacy. Explain the documented trade-off: builder data is wiped when the tab is
-refreshed or closed. Name Reactive Resume's account requirement and server-backed persistence as limitations for users
+refreshed or closed. Name cloudcoffee's account requirement and server-backed persistence as limitations for users
 who want a one-off local session. End with:
 
 ```mdx
 <Card title="Move from a one-off file to saved resume management" icon="arrow-right" href="https://rxresu.me">
-  Use Reactive Resume when you want persistent resume versions, multiple export formats, sharing, and automation.
+  Use cloudcoffee when you want persistent resume versions, multiple export formats, sharing, and automation.
 </Card>
 ```
 
@@ -912,9 +912,9 @@ for (const pagePath of paths) {
 
   for (const required of [
     "## Quick comparison",
-    "## Where Reactive Resume is a better fit",
+    "## Where cloudcoffee is a better fit",
     "## Which should you choose?",
-    "## Reactive Resume limitations in this comparison",
+    "## cloudcoffee limitations in this comparison",
     "## Sources",
     "Last checked: July 28, 2026",
     'href="https://rxresu.me"',
@@ -923,7 +923,7 @@ for (const pagePath of paths) {
   }
 
   const competitorFit = text.match(/^## Where (.+) is a better fit$/m)?.[1];
-  if (!competitorFit || competitorFit === "Reactive Resume") {
+  if (!competitorFit || competitorFit === "cloudcoffee") {
     throw new Error(`${file}: missing competitor advantage section`);
   }
 
@@ -983,7 +983,7 @@ git status --short
 Expected: only `docs/docs.json` and any deliberate final corrections to the 17 approved MDX pages are uncommitted; no
 generated files or unrelated changes.
 
-Read all 17 answer-first openings, competitor-advantage sections, Reactive Resume limitation sections, source lists,
+Read all 17 answer-first openings, competitor-advantage sections, cloudcoffee limitation sections, source lists,
 and CTAs consecutively. Remove repeated sentences and unsupported cross-page claims.
 
 - [ ] **Step 6: Commit navigation and final corrections**

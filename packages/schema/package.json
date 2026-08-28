@@ -4,6 +4,7 @@
 	"type": "module",
 	"private": true,
 	"exports": {
+		"./application-profile": "./src/application-profile.ts",
 		"./applications/*": "./src/applications/*.ts",
 		"./icons": "./src/icons.ts",
 		"./resume/stylesheet": "./src/resume/stylesheet.ts",

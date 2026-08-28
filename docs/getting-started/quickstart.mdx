@@ -1,11 +1,11 @@
 ---
 title: "Quickstart"
-description: "Get started with Reactive Resume in minutes by signing in to the hosted version or deploying your own self-hosted instance with Docker Compose."
+description: "Get started with cloudcoffee in minutes by signing in to the hosted version or deploying your own self-hosted instance with Docker Compose."
 ---
 
 ## Options
 
-Reactive Resume offers flexibility in how you want to use it. Choose the option that best fits your needs:
+cloudcoffee offers flexibility in how you want to use it. Choose the option that best fits your needs:
 
 <CardGroup cols={2}>
   <Card title="Use the Cloud Version" icon="cloud" href="#use-the-cloud-version">
@@ -20,7 +20,7 @@ Reactive Resume offers flexibility in how you want to use it. Choose the option 
 
 ## Using the Cloud Version
 
-The easiest way to use Reactive Resume is through our cloud version at [rxresu.me](https://rxresu.me). **This service is completely free and will always remain free.**
+The easiest way to use cloudcoffee is through our cloud version at [rxresu.me](https://rxresu.me). **This service is completely free and will always remain free.**
 
 <Steps>
 	<Step title="Create an Account">
@@ -29,16 +29,16 @@ The easiest way to use Reactive Resume is through our cloud version at [rxresu.m
 	</Step>
 
     <Step title="Create Your First Resume">
-    	Click the **Create Resume** button on your dashboard. Give your resume a name and select a template to get started.
+		Click the **Create Resume** button on your dashboard. Give your resume a name and select a template to get started.
     </Step>
 
     <Step title="Fill in Your Details">
-    	Use our intuitive builder to add your: - Personal information - Work experience - Education - Skills - Projects -
-    	And more...
+		Use our intuitive builder to add your: - Personal information - Work experience - Education - Skills - Projects -
+		And more...
     </Step>
 
     <Step title="Export & Share">
-    	When you're ready, export your resume as a PDF or share it via a unique public link.
+		When you're ready, export your resume as a PDF or share it via a unique public link.
     </Step>
 
 </Steps>
@@ -49,7 +49,7 @@ The easiest way to use Reactive Resume is through our cloud version at [rxresu.m
 
 ## Self-Host with Docker
 
-For users who prefer complete control over their data, you can deploy Reactive Resume on your own infrastructure using Docker.
+For users who prefer complete control over their data, you can deploy cloudcoffee on your own infrastructure using Docker.
 
 <Info>
   **From v5.1.0 onwards** — PDF generation now runs entirely client-side via `@react-pdf/renderer`. Self-hosted deployments no longer require Browserless, Chromium, or any external print service as a dependency. The `PRINTER_*` and `BROWSERLESS_*` environment variables are no longer read and can be removed from your `.env`.
@@ -78,7 +78,7 @@ Before you begin, ensure you have the following installed:
 	</Step>
 
     <Step title="Configure Environment Variables">
-    	Create a `.env` file in the root directory with the following variables:
+		Create a `.env` file in the root directory with the following variables:
 
 ```bash .env
 # Application
@@ -97,35 +97,33 @@ S3_ENDPOINT=http://seaweedfs:8333
 S3_BUCKET=reactive-resume
 S3_FORCE_PATH_STYLE=true
 
-# AI features (optional; ENCRYPTION_SECRET for saved providers, plus REDIS_URL for the agent)
-REDIS_URL=redis://redis:6379
+# AI features (optional; required for saved providers)
 ENCRYPTION_SECRET=your-secure-encryption-secret-here
 ```
 
-    	<Warning>
+		<Warning>
 		For production deployments, always use strong, unique values for `AUTH_SECRET`, `ENCRYPTION_SECRET`, and
 		database credentials.
-    	</Warning>
+		</Warning>
     </Step>
 
     <Step title="Start the Services">
-    	```bash
-    	docker compose up -d
-    	```
+		```bash
+		docker compose up -d
+		```
 
-    	This starts:
-    	- **PostgreSQL** — Database for storing user data and resumes
-	- **Redis** — Required for the AI Agent workspace
-    	- **SeaweedFS** — S3-compatible storage for file uploads
-    	- **Reactive Resume** — The main application
+		This starts:
+		- **PostgreSQL** — Database for storing user data and resumes
+		- **SeaweedFS** — S3-compatible storage for file uploads
+		- **cloudcoffee** — The main application
     </Step>
 
     <Step title="Access Your Instance">
-    	Once all services are running, access your Reactive Resume instance at:
+		Once all services are running, access your cloudcoffee instance at:
 
-    	```text
-    	http://localhost:3000
-    	```
+		```text
+		http://localhost:3000
+		```
     </Step>
 
 </Steps>
@@ -137,14 +135,11 @@ Here's what each service in the stack does:
 | Service           | Port | Description                                          |
 | ----------------- | ---- | ---------------------------------------------------- |
 | `postgres`        | 5432 | PostgreSQL database for storing all application data |
-| `redis`           | 6379 | Redis instance required by the AI Agent workspace    |
 | `seaweedfs`       | 8333 | S3-compatible object storage for file uploads        |
-| `reactive_resume` | 3000 | The main Reactive Resume application                 |
+| `reactive_resume` | 3000 | The main cloudcoffee application                 |
 
 <Note>
-  Saved AI provider management requires `ENCRYPTION_SECRET`, and the AI Agent workspace requires both `REDIS_URL` and
-  `ENCRYPTION_SECRET`. Other Reactive Resume features can run without them. Agent attachments and other private objects
-  require S3-compatible storage; local storage rejects private objects.
+  Saved AI provider management requires `ENCRYPTION_SECRET`. Other cloudcoffee features can run without it.
 </Note>
 
 ### Health Checks
@@ -202,7 +197,6 @@ Here's a complete list of environment variables you can configure:
 | `S3_ENDPOINT`                         | S3-compatible Endpoint URL                                  | —                      |
 | `S3_BUCKET`                           | S3 Bucket Name                                              | —                      |
 | `S3_FORCE_PATH_STYLE`                 | Use path-style URLs for S3 (set `true` for MinIO/SeaweedFS) | `false`                |
-| `REDIS_URL`                           | Redis connection string for the AI Agent workspace          | —                      |
 | `ENCRYPTION_SECRET`                   | Encryption secret for saved AI provider credentials         | —                      |
 | `FLAG_DISABLE_SIGNUPS`                | Disables new user signups                                   | `false`                |
 | `FLAG_DISABLE_EMAIL_AUTH`             | Disables email/password login (SSO only)                    | `false`                |
@@ -213,7 +207,7 @@ Here's a complete list of environment variables you can configure:
 
 > **Note:** Some variables are only required for using related features (OAuth, SMTP, S3, etc.) and can be left unset if unused.
 
-> **AI features:** Saved AI provider management requires `ENCRYPTION_SECRET`, and the AI Agent workspace requires both `REDIS_URL` and `ENCRYPTION_SECRET`. Live web research depends on the selected AI provider/model supporting native web search. Keep `FLAG_ALLOW_UNSAFE_AI_BASE_URL` disabled unless this is a trusted self-hosted deployment; public HTTPS provider URLs are the safe default.
+> **AI features:** Saved AI provider management requires `ENCRYPTION_SECRET`. Keep `FLAG_ALLOW_UNSAFE_AI_BASE_URL` disabled unless this is a trusted self-hosted deployment; public HTTPS provider URLs are the safe default.
 
 > **OAuth redirect safety:** Keep `FLAG_ALLOW_UNSAFE_OAUTH_REDIRECT_URI` disabled unless this is a trusted self-hosted deployment. Enabling it allows dynamic OAuth clients to register any parseable redirect URI, including custom schemes, private hosts, and non-loopback `http://` URLs, which can enable phishing or token exfiltration on public or multi-tenant instances.
 
@@ -225,7 +219,7 @@ Here's a complete list of environment variables you can configure:
 
 <CardGroup cols={2}>
   <Card title="Development Setup" icon="code" href="/contributing/development">
-    Set up a development environment to contribute or customize Reactive Resume.
+    Set up a development environment to contribute or customize cloudcoffee.
   </Card>
   <Card title="Project Architecture" icon="folder-open" href="/contributing/architecture">
     Learn about the project structure and architecture.

@@ -1,5 +1,5 @@
 /**
- * DeepSeek Harness plugin for Reactive Resume.
+ * DeepSeek Harness plugin for cloudcoffee.
  * @module dsh-plugin-reactive-resume
  */
 
@@ -31,17 +31,17 @@ export const name = "reactive-resume";
 export const inject = ["systemPrompt"];
 
 /**
- * Connect a Reactive Resume account to the session.
+ * Connect a cloudcoffee account to the session.
  * @param ctx - plugin context carrying prompt assembly.
  * @param config - resolved plugin configuration. `Config` already rejects an
  *   invalid `serverName` at parse time, before `apply` ever runs.
  */
 export async function apply(ctx: Context, config: Config): Promise<void> {
 	// The bundle patch mounts this row on install, before anyone has minted a
-	// key. Mount nothing rather than failing the profile's boot: `dsh plugin
+	// token. Mount nothing rather than failing the profile's boot: `dsh plugin
 	// add` should never leave the harness unbootable.
-	if (config.apiKey === "") {
-		ctx.logger.warn("no apiKey configured — set one at %s/dashboard/settings/api-keys to enable the tools", config.url);
+	if (config.accessToken === "") {
+		ctx.logger.warn("no OAuth access token configured for %s; MCP tools are disabled", config.url);
 		return;
 	}
 
@@ -51,7 +51,7 @@ export async function apply(ctx: Context, config: Config): Promise<void> {
 		transport: "streamable-http",
 		serverName: config.serverName,
 		url: `${origin}/mcp`,
-		headers: { "x-api-key": config.apiKey },
+		headers: { Authorization: `Bearer ${config.accessToken}` },
 		toolCallTimeoutMs: config.toolCallTimeoutMs,
 		failOnStartupError: true,
 	});

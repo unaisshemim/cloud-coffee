@@ -2092,7 +2092,7 @@
 					"default": "treecko",
 					"description": "The template to use for the resume. Determines the overall design and appearance of the resume.",
 					"type": "string",
-					"enum": ["treecko"]
+					"enum": ["classic", "treecko"]
 				},
 				"layout": {
 					"type": "object",

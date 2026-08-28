@@ -27,10 +27,10 @@ export function createMcpServer(request: Request) {
 		{
 			name: "reactive-resume",
 			version: appVersion,
-			title: "Reactive Resume",
+			title: "cloudcoffee",
 			websiteUrl: "https://rxresu.me",
 			description:
-				"Reactive Resume is a free and open-source resume builder. Use this MCP server to interact with your resume using an LLM of your choice.",
+				"cloudcoffee is a free and open-source resume builder. Use this MCP server to interact with your resume using an LLM of your choice.",
 			icons: [
 				{
 					src: "https://rxresu.me/icon/light.svg",
@@ -46,8 +46,8 @@ export function createMcpServer(request: Request) {
 		},
 		{
 			instructions: [
-				"You are connected to Reactive Resume over MCP.",
-				"Authenticate with OAuth (recommended) or an API key (`x-api-key`).",
+				"You are connected to cloudcoffee over MCP.",
+				"Authenticate with OAuth.",
 				`Discover resume IDs with \`${MCP_TOOL_NAME.listResumes}\` (not \`resources/list\`).`,
 				`List distinct tags with \`${MCP_TOOL_NAME.listResumeTags}\`.`,
 				`Read schema at \`resume://_meta/schema\`; read resume JSON via \`resume://{id}\` or \`${MCP_TOOL_NAME.getResume}\`.`,

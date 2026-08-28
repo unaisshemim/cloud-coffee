@@ -14,7 +14,7 @@ function fakeContext() {
 it("registers one prompt section in the tool-guidance order band", async () => {
 	const ctx = fakeContext();
 
-	await apply(ctx as never, Config({ apiKey: "test-key" }));
+	await apply(ctx as never, Config({ accessToken: "test-token" }));
 
 	expect(ctx.systemPrompt.section).toHaveBeenCalledTimes(1);
 	const section = ctx.systemPrompt.section.mock.calls[0]?.[0] as PromptSection;
@@ -28,8 +28,8 @@ it("derives the section name from serverName so a second instance can coexist", 
 	const first = fakeContext();
 	const second = fakeContext();
 
-	await apply(first as never, Config({ apiKey: "test-key" }));
-	await apply(second as never, Config({ apiKey: "test-key", serverName: "self-hosted" }));
+	await apply(first as never, Config({ accessToken: "test-token" }));
+	await apply(second as never, Config({ accessToken: "test-token", serverName: "self-hosted" }));
 
 	const firstSection = first.systemPrompt.section.mock.calls[0]?.[0] as PromptSection;
 	const secondSection = second.systemPrompt.section.mock.calls[0]?.[0] as PromptSection;
@@ -39,7 +39,7 @@ it("derives the section name from serverName so a second instance can coexist", 
 it("names the tools it references with the configured namespace", async () => {
 	const ctx = fakeContext();
 
-	await apply(ctx as never, Config({ apiKey: "test-key", serverName: "rr" }));
+	await apply(ctx as never, Config({ accessToken: "test-token", serverName: "rr" }));
 
 	const section = ctx.systemPrompt.section.mock.calls[0]?.[0] as PromptSection;
 	expect(section.text).toContain("mcp__rr__read_resume");

@@ -1,6 +1,5 @@
 import type { GenericOAuthConfig, GenericOAuthUserInfo } from "better-auth/plugins";
 import type { JWTPayload } from "jose";
-import { apiKey } from "@better-auth/api-key";
 import { drizzleAdapter } from "@better-auth/drizzle-adapter";
 import { dash } from "@better-auth/infra";
 import { oauthProvider } from "@better-auth/oauth-provider";
@@ -139,7 +138,7 @@ const getAuthConfig = () => {
 	}
 
 	return betterAuth({
-		appName: "Reactive Resume",
+		appName: "cloudcoffee",
 		baseURL: authBaseUrl,
 		secret: env.AUTH_SECRET,
 
@@ -291,14 +290,7 @@ const getAuthConfig = () => {
 			admin(),
 			passkey(),
 			genericOAuth({ config: authConfigs }),
-			twoFactor({ issuer: "Reactive Resume" }),
-			apiKey({
-				enableSessionForAPIKeys: true,
-				rateLimit: {
-					...rateLimitConfig.betterAuth.apiKey,
-					enabled: isRateLimitEnabled,
-				},
-			}),
+			twoFactor({ issuer: "cloudcoffee" }),
 			oauthProvider({
 				loginPage: "/api/auth/oauth",
 				consentPage: "/api/auth/oauth",

@@ -45,7 +45,13 @@ describe("TemplateGalleryDialog", () => {
 	it("renders the documented title and intro copy", () => {
 		renderGallery();
 		expect(screen.getByText("Template Gallery")).toBeInTheDocument();
-		expect(screen.getByText(/Treecko is the available resume design/)).toBeInTheDocument();
+		expect(screen.getByText(/Choose between Classic and Treecko/)).toBeInTheDocument();
+	});
+
+	it("renders Classic and Treecko tiles", () => {
+		renderGallery();
+		expect(screen.getByAltText("Classic")).toBeInTheDocument();
+		expect(screen.getByAltText("Treecko")).toBeInTheDocument();
 	});
 
 	it("renders one tile per template", () => {

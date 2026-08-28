@@ -22,37 +22,20 @@ const renderFooter = () =>
 	);
 
 describe("Footer", () => {
-	it("renders Resources and Community link group headings", () => {
+	it("renders career product navigation", () => {
 		renderFooter();
-		expect(screen.getByText("Resources")).toBeInTheDocument();
-		expect(screen.getByText("Community")).toBeInTheDocument();
+		expect(screen.getAllByText("Career base").length).toBeGreaterThan(0);
+		expect(screen.getByText("Product")).toBeInTheDocument();
 	});
 
-	it("renders the documented resource links", () => {
-		const { container } = renderFooter();
-		const text = container.textContent ?? "";
-		for (const label of ["Documentation", "Sponsorships", "Source Code", "Changelog"]) {
-			expect(text, label).toContain(label);
-		}
-	});
-
-	it("renders the documented community links", () => {
-		const { container } = renderFooter();
-		const text = container.textContent ?? "";
-		for (const label of ["Report an issue", "Translations", "Subreddit", "Discord"]) {
-			expect(text, label).toContain(label);
-		}
-	});
-
-	it("renders social media icon links to GitHub, LinkedIn, and X", () => {
+	it("removes GitHub and support links", () => {
 		const { container } = renderFooter();
 		const hrefs = Array.from(container.querySelectorAll<HTMLAnchorElement>("a")).map((a) => a.href);
-		expect(hrefs.some((h) => h.includes("github.com/amruthpillai/reactive-resume"))).toBe(true);
-		expect(hrefs.some((h) => h.includes("linkedin.com/in/amruthpillai"))).toBe(true);
-		expect(hrefs.some((h) => h.includes("x.com/KingOKings"))).toBe(true);
+		expect(hrefs.some((href) => href.includes("github.com"))).toBe(false);
+		expect(container).not.toHaveTextContent(/sponsor|support cloudcoffee|source code/i);
 	});
 
-	it("includes Reactive Resume version copy via Copyright", () => {
+	it("includes cloudcoffee version copy via Copyright", () => {
 		renderFooter();
 		// The version is wrapped in <bdi> for RTL isolation, so it is its own text node.
 		expect(screen.getByText("9.9.9")).toBeInTheDocument();

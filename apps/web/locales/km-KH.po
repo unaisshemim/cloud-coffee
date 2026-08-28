@@ -28,7 +28,6 @@ msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This ca
 msgstr "\"{0} · {1}\" និងប្រវត្តិពេលវេលាទាំងមូលរបស់វានឹងត្រូវបានលុបជាអចិន្ត្រៃយ៍។ មិនអាចត្រឡប់វិញបានទេ។"
 
 #: src/routes/_home/-sections/footer.tsx
-#: src/routes/_home/-sections/hero.tsx
 msgid "(opens in new tab)"
 msgstr "(បើក​ក្នុងផ្ទាំង​ថ្មី)"
 
@@ -125,18 +124,14 @@ msgstr "ការត្រួតពិនិត្យ {passedRules} នៃ {tota
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · ធាតុ {itemNumber}"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "<0>Finally,</0><1>A free and open-source resume builder</1>"
-msgstr "<0>ចុងក្រោយនេះ</0><1>កម្មវិធីបង្កើតប្រវត្តិរូបឥតគិតថ្លៃ និងបើកប្រភព</1>"
-
 #: src/routes/_home/-sections/faq.tsx
 msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
 msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
 msgstr "<0>សំណួរ</0><1>ដែលសួរ</1><2>ញឹកញាប់</2>"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
-msgstr "<0>សូម​អរគុណ​ចំពោះ​ការ​ប្រើ Reactive Resume! កម្មវិធី​នេះ​ជា​ការងារចិត្តស្រឡាញ់មួយ ដែល​បានបង្កើត​ជា​ភាគច្រើន​ក្នុង​ពេល​ទំនេរ​របស់ខ្ញុំ ដោយមានការគាំទ្រដ៏អស្ចារ្យពីអ្នករួមចំណែកបើកប្រភពทั่วពិភពលោក។</0><1>បើ Reactive Resume បានជួយឱ្យអ្នក ហើយអ្នកចង់ជួយរក្សាឱ្យវាឥតគិតថ្លៃ និងបើកចំហសម្រាប់មនុស្សគ្រប់គ្នា សូមពិចារណាចូលរួមបរិច្ចាគ។ ការបរិច្ចាគតិចតួចទាំងអស់សុទ្ធតែមានតំលៃ!</1>"
+msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
+msgstr "<0>សូម​អរគុណ​ចំពោះ​ការ​ប្រើ cloudcoffee! កម្មវិធី​នេះ​ជា​ការងារចិត្តស្រឡាញ់មួយ ដែល​បានបង្កើត​ជា​ភាគច្រើន​ក្នុង​ពេល​ទំនេរ​របស់ខ្ញុំ ដោយមានការគាំទ្រដ៏អស្ចារ្យពីអ្នករួមចំណែកបើកប្រភពทั่วពិភពលោក។</0><1>បើ cloudcoffee បានជួយឱ្យអ្នក ហើយអ្នកចង់ជួយរក្សាឱ្យវាឥតគិតថ្លៃ និងបើកចំហសម្រាប់មនុស្សគ្រប់គ្នា សូមពិចារណាចូលរួមបរិច្ចាគ។ ការបរិច្ចាគតិចតួចទាំងអស់សុទ្ធតែមានតំលៃ!</1>"
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -145,6 +140,10 @@ msgstr "១ ខែ"
 #: src/dialogs/api-key/create.tsx
 msgid "1 year"
 msgstr "១ ឆ្នាំ"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "12 projects added to your career base"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "12+ Templates"
@@ -208,8 +207,8 @@ msgid "A link to your resume has been copied to clipboard."
 msgstr "តំណ​ទៅកាន់ប្រវត្តិរូប​របស់​អ្នក​ត្រូវ​បាន​ចម្លង​ទៅ​ក្ដារ​តម្រៀប។"
 
 #: src/routes/_home/-sections/testimonials.tsx
-msgid "A lot of people have written to me over the years to share their experiences with Reactive Resume and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
-msgstr "មនុស្ស​ជា​ច្រើន​បាន​សរសេរ​មក​ខ្ញុំ​ក្រោម​រយៈពេល​ឆ្នាំ​ច្រើន ដើម្បី​ចែករំលែក​បទពិសោធន៍​របស់​ពួកគេ​ជាមួយ Reactive Resume និងវិធី​ដែល​វា​បាន​ជួយ​ពួកគេ ហើយ​ខ្ញុំ​មិន​ធ្លាប់​ឈប់​រីករាយ​ក្នុងការ​អាន​ពួក​វា​ឡើយ។ បើ​អ្នក​មាន​រឿង​មួយ​ត្រូវ​ចែករំលែក សូម​ឲ្យ​ខ្ញុំ​ដ biết ដោយ​ផ្ញើ​អ៊ីមែល​មកខ្ញុំ​តាម <0>{email}</0>។"
+msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
+msgstr "មនុស្ស​ជា​ច្រើន​បាន​សរសេរ​មក​ខ្ញុំ​ក្រោម​រយៈពេល​ឆ្នាំ​ច្រើន ដើម្បី​ចែករំលែក​បទពិសោធន៍​របស់​ពួកគេ​ជាមួយ cloudcoffee និងវិធី​ដែល​វា​បាន​ជួយ​ពួកគេ ហើយ​ខ្ញុំ​មិន​ធ្លាប់​ឈប់​រីករាយ​ក្នុងការ​អាន​ពួក​វា​ឡើយ។ បើ​អ្នក​មាន​រឿង​មួយ​ត្រូវ​ចែករំលែក សូម​ឲ្យ​ខ្ញុំ​ដ biết ដោយ​ផ្ញើ​អ៊ីមែល​មកខ្ញុំ​តាម <0>{email}</0>។"
 
 #: src/features/settings/pages/profile.tsx
 msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
@@ -226,6 +225,10 @@ msgstr "ទំព័រមួយត្រូវបានបង្វិល។"
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "គម្រោង​ចិត្តស្រឡាញ់​មួយ​របស់ <0>Amruth Pillai</0>។"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
+msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -377,8 +380,8 @@ msgid "Add an entry, or use projects and volunteer work to show equivalent histo
 msgstr "បន្ថែមធាតុ ឬប្រើប្រាស់គម្រោង និងការងារស្ម័គ្រចិត្ត ដើម្បីបង្ហាញប្រវត្តិសមមូល។"
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "Add and test a provider before starting an agent thread."
-msgstr "បន្ថែម និងសាកល្បងអ្នកផ្តល់សេវា មុនពេលចាប់ផ្តើមខ្សែស្រឡាយភ្នាក់ងារ។"
+msgid "Add and test a provider before using AI features."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/command-palette/pages/navigation.tsx
@@ -451,10 +454,6 @@ msgstr "បន្ថែមពីរឬបីបន្ទាត់នៅខាង
 msgid "Add your full name under Basics."
 msgstr "បន្ថែមឈ្មោះពេញរបស់អ្នកនៅក្រោម មូលដ្ឋាន។"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Adjust the resume for a remote-first role that values async communication and ownership."
-msgstr "កែសម្រួលប្រវត្តិរូបសង្ខេបសម្រាប់តួនាទីដែលផ្តោតលើការងារពីចម្ងាយជាមុន ដែលឱ្យតម្លៃដល់ការទំនាក់ទំនងអសមកាលកម្ម និងភាពជាម្ចាស់។"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Advanced"
 msgstr "កម្រិតខ្ពស់"
@@ -471,42 +470,17 @@ msgstr "Afrikaans"
 msgid "Against the job description"
 msgstr "ធៀបនឹងការពិពណ៌នាការងារ"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "Agent"
-msgstr "ភ្នាក់ងារ"
-
-#: src/features/settings/integrations/components/ai-section.tsx
-msgid "Agent ready"
-msgstr "ភ្នាក់ងាររួចរាល់ហើយ"
-
-#: src/routes/dashboard/-components/sidebar.tsx
-msgid "Agents"
-msgstr "ភ្នាក់ងារ"
-
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable right now. Please try again in a moment."
-msgstr "ការដំឡើងភ្នាក់ងារ AI មិនអាចប្រើបាននៅពេលនេះទេ។ សូមព្យាយាមម្តងទៀតនៅពេលបន្តិចទៀត។"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "ការដំឡើងភ្នាក់ងារ AI មិនអាចប្រើបានទេ រហូតដល់ REDIS_URL និង ENCRYPTION_SECRET ត្រូវបានកំណត់រចនាសម្ព័ន្ធ។"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "AI assistant"
-msgstr "ជំនួយការ AI"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "AI provider"
 msgstr "អ្នកផ្តល់សេវា AI"
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI provider management is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "ការគ្រប់គ្រងអ្នកផ្តល់សេវា AI មិនអាចប្រើបានទេ រហូតដល់ REDIS_URL និង ENCRYPTION_SECRET ត្រូវបានកំណត់រចនាសម្ព័ន្ធ។"
+msgid "AI provider management is unavailable until ENCRYPTION_SECRET is configured."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI provider management is unavailable. Please try again."
@@ -521,8 +495,8 @@ msgid "AI providers are unavailable until ENCRYPTION_SECRET is configured."
 msgstr "អ្នកផ្តល់សេវា AI មិនអាចប្រើបានទេ រហូតដល់ ENCRYPTION_SECRET ត្រូវបានកំណត់រចនាសម្ព័ន្ធ។"
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI providers require REDIS_URL and ENCRYPTION_SECRET to be configured."
-msgstr "អ្នកផ្តល់សេវា AI តម្រូវឱ្យ REDIS_URL និង ENCRYPTION_SECRET ត្រូវបានកំណត់រចនាសម្ព័ន្ធ។"
+msgid "AI providers require ENCRYPTION_SECRET to be configured."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Albanian"
@@ -564,10 +538,6 @@ msgstr "មានកំហុសមិនស្គាល់មួយបាន​
 #: src/routes/_home/-sections/features.tsx
 msgid "And many more..."
 msgstr "ហើយ​មាន​ច្រើន​ទៀត..."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Answer in your own words"
-msgstr "ឆ្លើយតាមពាក្យរបស់អ្នកផ្ទាល់"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -663,14 +633,6 @@ msgstr "បានដាក់ពាក្យ"
 msgid "Applied on"
 msgstr "បានដាក់ពាក្យនៅ"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approve"
-msgstr "អនុម័ត"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approved — waiting for the agent…"
-msgstr "បានអនុម័ត — កំពុងរង់ចាំភ្នាក់ងារ…"
-
 #: src/libs/locale.ts
 msgid "Arabic"
 msgstr "Arabic"
@@ -678,8 +640,6 @@ msgstr "Arabic"
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 msgid "Archive"
 msgstr "បណ្ណសារ"
 
@@ -733,17 +693,13 @@ msgstr "ជំនាញ​រៀន"
 msgid "Artificial Intelligence"
 msgstr "បញ្ញាសិប្បនិម្មិត"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Ask anything about this resume"
-msgstr "សួរអ្វីមួយអំពីប្រវត្តិរូបសង្ខេបនេះ"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "សមាមាត្រទ្រង់ទ្រាយ"
 
 #: src/routes/_home/-sections/sponsors.tsx
-msgid "Atlas Cloud supports Reactive Resume as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
-msgstr "Atlas Cloud គាំទ្រ Reactive Resume ក្នុងនាមជាអ្នកឧបត្ថម្ភគម្រោង។ ប្រសិនបើក្រុមហ៊ុនរបស់អ្នកចង់ឧបត្ថម្ភគម្រោងនេះ សូមផ្ញើអ៊ីមែលទៅកាន់ <0>{sponsorshipEmail}</0> ។"
+msgid "Atlas Cloud supports cloudcoffee as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
+msgstr "Atlas Cloud គាំទ្រ cloudcoffee ក្នុងនាមជាអ្នកឧបត្ថម្ភគម្រោង។ ប្រសិនបើក្រុមហ៊ុនរបស់អ្នកចង់ឧបត្ថម្ភគម្រោងនេះ សូមផ្ញើអ៊ីមែលទៅកាន់ <0>{sponsorshipEmail}</0> ។"
 
 #: src/libs/resume/section.tsx
 msgid "ATS Check"
@@ -763,18 +719,6 @@ msgstr "ភ្ជាប់លិខិតអម (PDF)"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Attach a resume file (PDF)"
 msgstr "ភ្ជាប់ឯកសារប្រវត្តិរូបសង្ខេប (PDF)"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attach files"
-msgstr "ភ្ជាប់ឯកសារ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment"
-msgstr "ឯកសារភ្ជាប់"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment uploaded."
-msgstr "បានផ្ទុកឡើងឯកសារភ្ជាប់។"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -819,10 +763,6 @@ msgstr "ត្រឡប់ទៅការកំណត់ការផ្ទៀង
 msgid "Back to Login"
 msgstr "ត្រឡប់​ទៅ​ការចូល"
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Back to resumes"
-msgstr "ត្រឡប់ទៅប្រវត្តិរូបសង្ខេបវិញ"
-
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
 msgid "Back to sign in"
@@ -856,10 +796,6 @@ msgstr "Bengali"
 msgid "Best for applications, sharing, and printing."
 msgstr "ល្អបំផុតសម្រាប់ពាក្យសុំ ការចែករំលែក និងការបោះពុម្ព។"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Blank draft"
-msgstr "សេចក្តីព្រាងទទេ"
-
 #: src/features/ats-checker/messages.ts
 msgid "Blocker"
 msgstr "ឧបសគ្គធំ"
@@ -889,6 +825,10 @@ msgstr "ទទឹង​គែម"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "បំបែកប្រវត្តិរូបសង្ខេបជាផ្នែកធម្មតា ដើម្បីឱ្យវាអាចត្រូវបានបែងចែក។"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Build your base"
+msgstr ""
+
 #: src/features/resume/public/public-resume.tsx
 msgid "Build your own resume"
 msgstr "បង្កើតប្រវត្តិរូបសង្ខេបផ្ទាល់ខ្លួនរបស់អ្នក"
@@ -916,6 +856,9 @@ msgstr "បញ្ជី​មាន​គ្រាប់ចំណុច"
 
 #. Tagline shown in app footer/about area
 #: src/components/ui/copyright.tsx
+msgid "By the communit of th, for the community."
+msgstr ""
+
 #: src/routes/_home/-sections/features.tsx
 #: src/routes/_home/-sections/prefooter.tsx
 msgid "By the community, for the community."
@@ -951,9 +894,9 @@ msgstr "តើ​ខ្ញុំ​អាច​នាំចេញ​ប្រវ
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Cannot restore; the resume has changed since this edit was applied."
-msgstr "មិនអាចស្ដារឡើងវិញបានទេ ប្រវត្តិរូបសង្ខេបបានផ្លាស់ប្តូរចាប់តាំងពីការកែសម្រួលនេះត្រូវបានអនុវត្ត។"
+#: src/routes/_home/-sections/hero.tsx
+msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Catalan"
@@ -962,6 +905,10 @@ msgstr "Catalan"
 #: src/components/input/rich-input.tsx
 msgid "Center Align"
 msgstr "តម្រង់​កណ្ដាល"
+
+#: src/dialogs/resume/template/data.ts
+msgid "Centered identity, monochrome section rules, and compact single-column content for a traditional ATS-friendly resume."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cerebras"
@@ -992,11 +939,6 @@ msgstr "ប្តូរ​ចិត្ត​ហើយ​ឬ​អត់? ប្�
 #: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "កំណត់ហេតុ​បម្លែង"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Chat"
-msgstr "ជជែក"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
@@ -1030,6 +972,10 @@ msgstr "កំពុងពិនិត្យមើលសេចក្តីព្
 msgid "Checking…"
 msgstr "កំពុងត្រួតពិនិត្យ…"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Checkout redesign · 18% more conversions"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
 msgstr "Chinese (Simplified)"
@@ -1037,10 +983,6 @@ msgstr "Chinese (Simplified)"
 #: src/libs/locale.ts
 msgid "Chinese (Traditional)"
 msgstr "Chinese (Traditional)"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a model and resume draft."
-msgstr "ជ្រើសរើសគំរូ និងប្រវត្តិរូបសង្ខេប។"
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Choose a PDF"
@@ -1052,13 +994,9 @@ msgstr "ជ្រើសរើសឯកសារ PDF"
 msgid "Choose a preset or custom shade."
 msgstr "ជ្រើសរើសពណ៌ស្រេច ឬស្រមោលផ្ទាល់ខ្លួន។"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a resume"
-msgstr "ជ្រើសរើសប្រវត្តិរូបសង្ខេប"
-
-#: src/routes/agent/index.tsx
-msgid "Choose an existing conversation from the sidebar, or start a new draft-focused thread."
-msgstr "ជ្រើសរើសការសន្ទនាដែលមានស្រាប់ពីរបារចំហៀង ឬចាប់ផ្តើមខ្សែស្រឡាយថ្មីដែលផ្តោតលើសេចក្តីព្រាង។"
+#: src/dialogs/resume/template/gallery.tsx
+msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
 msgid "Choose PDF, DOCX, Markdown, or JSON. Export your resume and cover letter separately when available."
@@ -1087,9 +1025,39 @@ msgstr "សម្អាតការជ្រើសរើស"
 msgid "Click here to select a file to import"
 msgstr "ចុច​ទីនេះ​ដើម្បី​ជ្រើស​ឯកសារ​មួយ​ដើម្បី​នាំចូល"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Close AI assistant"
-msgstr "បិទជំនួយការ AI"
+#: src/routes/_home/-sections/header.tsx
+msgid "cloudcoffee - Go to homepage"
+msgstr "cloudcoffee - ទៅ​កាន់​ទំព័រ​ដើម"
+
+#. Import source option for current cloudcoffee JSON format
+#: src/dialogs/resume/import.tsx
+msgid "cloudcoffee (JSON)"
+msgstr "cloudcoffee (JSON)"
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
+msgstr "cloudcoffee បន្ត​លូតលាស់​ដោយសារ​សហគមន៍រស់រវើក​របស់​វា។ គម្រោង​នេះ​ជំពាក់ ការរីកចម្រើន​របស់​វា ចំពោះ​មនុស្ស​ជា​ច្រើន​ដែល​បាន​ឧទ្ទិស​ពេលវេលា និង​ជំនាញ​របស់​ពួកគេ ដើម្បី​ធ្វើ​ឱ្យ​វា​ប្រសើរ​ឡើង។ យើង​សូម​អបអរសាទរ​កម្មវិធី​សើរ ដែល​បាន​ពង្រឹង​មុខងារ​របស់​វា​លើ GitHub អ្នក​ភាសា ដែល​ការបកប្រែ​របស់​ពួកគេ​លើ Crowdin បាន​ធ្វើ​ឱ្យ​វា​អាច​ប្រើ​បាន​ទូលំទូលាយ និង​មនុស្ស​ដែល​បាន​បរិច្ចាគ ដើម្បី​គាំទ្រ​ការ​អភិវឌ្ឍន៍​បន្តរបស់​វា។"
+
+#: src/routes/_home/-sections/donate.tsx
+msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
+msgstr "cloudcoffee ជា​គម្រោង​ឥតគិតថ្លៃ និង​បើក​ប្រភព ដែលបាន​បង្កើត​ដោយ​ចិត្តស្រឡាញ់ ហើយ​ត្រូវ​បាន​ថែទាំ​ដោយ​ខ្ញុំ និង​សហគមន៍​អ្នករួមចំណែក។ ការ​បរិច្ចាគ​របស់​អ្នក​ជួយ​រក្សា​អោយ​មាន​ថាមពល និង​កូដ​បន្ត​ហូរ។"
+
+#: src/components/ui/donation-toast.tsx
+msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
+msgstr "cloudcoffee គឺឥតគិតថ្លៃ និងជាប្រភពបើកចំហ។ ប្រសិនបើវាបានជួយអ្នក សូមពិចារណាបរិច្ចាគ។"
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
+msgstr "cloudcoffee គឺ​បើក​ប្រភព ផ្តោតលើ​ភាព​ឯកជន និង​ឥតគិតថ្លៃ​ទាំងស្រុង។ ខុស​ពី​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេងៗ វា​មិន​បង្ហាញ​ពាណិជ្ជកម្ម មិន​តាមដាន​ទិន្នន័យ​របស់​អ្នក ហើយ​មិន​កំណត់​មុខងារ​ពីក្រោយ paywall ឡើយ។"
+
+#: src/routes/_home/-sections/sponsors.tsx
+msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
+msgstr "cloudcoffee នៅតែឥតគិតថ្លៃ ជាប្រភពបើកចំហ និងឯករាជ្យ ពីព្រោះក្រុមហ៊ុននានាជ្រើសរើសគាំទ្រការងារនៅពីក្រោយវា។ ការឧបត្ថម្ភរបស់ពួកគេជួយផ្តល់មូលនិធិដល់ការបង្ហោះ ការថែទាំ និងការអភិវឌ្ឍជាបន្តបន្ទាប់សម្រាប់សហគមន៍។"
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
+msgstr "ប្រវត្តិរូបសង្ខេបដែលមានប្រតិកម្ម v<0>{__APP_VERSION__}</0>"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cohere"
@@ -1131,10 +1099,6 @@ msgstr "ក្រុមហ៊ុន / តួនាទី"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Company A–Z"
 msgstr "ក្រុមហ៊ុន A–Z"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Compare this resume against this role URL and update keywords while keeping the voice concise and credible."
-msgstr "ប្រៀបធៀបប្រវត្តិរូបសង្ខេបនេះទៅនឹង URL តួនាទីនេះ ហើយធ្វើបច្ចុប្បន្នភាពពាក្យគន្លឹះ ខណៈពេលដែលរក្សាសំឡេងឲ្យខ្លី និងគួរឱ្យទុកចិត្ត។"
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Completely free, forever, no hidden costs."
@@ -1209,20 +1173,12 @@ msgid "Continue where you left off"
 msgstr "បន្ត​ពី​កន្លែង​ដែល​អ្នក​បាន​ឈប់"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing an existing resume you created using Reactive Resume or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from Reactive Resume."
-msgstr "បន្ត​ពី​កន្លែង​ដែល​អ្នក​បាន​ឈប់ ដោយ​នាំចូល​ប្រវត្តិរូប​មាន​ស្រាប់​មួយ ដែល​អ្នក​បាន​បង្កើត​ដោយ​ប្រើ Reactive Resume ឬ​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេង​ទៀត។ ទ្រង់ទ្រាយ​ដែល​គាំទ្រ​រួមមាន PDF, Microsoft Word និង​ឯកសារ JSON ពី Reactive Resume។"
+msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
+msgstr "បន្ត​ពី​កន្លែង​ដែល​អ្នក​បាន​ឈប់ ដោយ​នាំចូល​ប្រវត្តិរូប​មាន​ស្រាប់​មួយ ដែល​អ្នក​បាន​បង្កើត​ដោយ​ប្រើ cloudcoffee ឬ​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេង​ទៀត។ ទ្រង់ទ្រាយ​ដែល​គាំទ្រ​រួមមាន PDF, Microsoft Word និង​ឯកសារ JSON ពី cloudcoffee។"
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
 msgstr "ការរួមចំណែក​នានា​ជួយ​ផ្តល់​ថវិកា​សម្រាប់​ការ​ជួសជុល​កំហុស បច្ចុប្បន្នភាព​សុវត្ថិភាព និង​ការ​ធ្វើឱ្យ​ប្រសើរឡើង​ជាបន្តបន្ទាប់ ដើម្បី​ឱ្យ​កម្មវិធីដំណើរការ​បាន​រលូន។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation copied."
-msgstr "បានចម្លងការសន្ទនា។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation JSON copied."
-msgstr "បានចម្លង JSON នៃការសន្ទនា។"
 
 #: src/features/resume/stylesheet/legacy-banner.tsx
 msgid "Converted stylesheet draft"
@@ -1235,7 +1191,6 @@ msgstr "បានចម្លងទៅក្ដារតម្បៀតខ្ទ
 #. Action button to copy two-factor backup codes to clipboard
 #: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
-#: src/routes/agent/-components/agent-chat.tsx
 msgid "Copy"
 msgstr "ចម្លង"
 
@@ -1246,10 +1201,6 @@ msgstr "ចម្លង និង​រក្សាទុក​កូដ​ប�
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Copy Backup Codes"
 msgstr "ចម្លង​កូដ​បម្រុងទុក"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Copy JSON"
-msgstr "ចម្លង JSON"
 
 #. Accessible label for the button that copies the two-factor secret key
 #: src/dialogs/auth/enable-two-factor.tsx
@@ -1289,10 +1240,6 @@ msgstr "កែឆ្នាំឱ្យត្រឹមត្រូវ ឬសរ�
 #: src/dialogs/resume/import.tsx
 msgid "Could not reach the AI provider. Please try again."
 msgstr "មិនអាចភ្ជាប់ទៅអ្នកផ្តល់សេវា AI បានទេ។ សូមព្យាយាមម្ដងទៀត។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Could not restore this patch."
-msgstr "មិនអាចស្ដារបំណះនេះឡើងវិញបានទេ។"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Could not verify provider connection."
@@ -1476,10 +1423,6 @@ msgstr "បង្កើត​ប្រវត្តិរូប​គំរូ"
 msgid "Create as many resumes as you want, without limits."
 msgstr "បង្កើត​ប្រវត្តិរូប​បាន​ច្រើន ដូច​ដែល​អ្នក​ចង់​បាន ដោយ​គ្មាន​ដែនកំណត់។"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Create from scratch"
-msgstr "បង្កើត​ឡើង​ពី​ដំបូង"
-
 #. Call-to-action link from login page to account registration page
 #: src/features/auth/pages/login.tsx
 msgid "Create one now"
@@ -1585,10 +1528,6 @@ msgstr "កាលបរិច្ឆេទ"
 msgid "Decrease indent"
 msgstr "បន្ថយ​ការ​ចូល​បន្ទាត់"
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Decrease zoom"
-msgstr "បន្ថយការពង្រីក"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Deep check"
 msgstr "ការត្រួតពិនិត្យស៊ីជម្រៅ"
@@ -1612,8 +1551,6 @@ msgstr "សញ្ញាប័ត្រ"
 #: src/features/applications/components/table-view.tsx
 #: src/features/settings/authentication/components/passkeys.tsx
 #: src/features/settings/pages/api-keys.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1642,11 +1579,6 @@ msgstr "លុបរូបភាព"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Delete provider"
 msgstr "លុបអ្នកផ្តល់សេវា"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Delete this agent thread?"
-msgstr "លុប​ខ្សែស្រឡាយ​ភ្នាក់ងារ​នេះ?"
 
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -1678,14 +1610,6 @@ msgstr "កំពុង​លុប​កូនសោ API របស់​អ្�
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
 msgstr "កំពុង​លុប​ប្រវត្តិរូប​របស់​អ្នក..."
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Denied — waiting for the agent…"
-msgstr "បានបដិសេធ — កំពុងរង់ចាំភ្នាក់ងារ…"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Deny"
-msgstr "បដិសេធ"
 
 #: src/features/ats-checker/messages.ts
 msgid "Describe each role with short bullets. Solid paragraphs are harder to skim and to segment."
@@ -1761,12 +1685,8 @@ msgid "Donate"
 msgstr "បរិច្ចាគ"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "បរិច្ចាគ​ឲ្យ Reactive Resume"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Done"
-msgstr "រួចរាល់"
+msgid "Donate to cloudcoffee"
+msgstr "បរិច្ចាគ​ឲ្យ cloudcoffee"
 
 #. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
@@ -1787,7 +1707,6 @@ msgid "Download options"
 msgstr "ជម្រើសទាញយក"
 
 #: src/features/resume/public/public-resume.tsx
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "Download PDF"
 msgstr "ទាញយក PDF"
 
@@ -1829,10 +1748,6 @@ msgstr "លុបសព្វនាមចោល ហើយចាប់ផ្ត�
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Duplicate"
 msgstr "ស្ទួន"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Duplicate as AI Draft"
-msgstr "ចម្លងជាសេចក្តីព្រាង AI"
 
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
@@ -1883,10 +1798,6 @@ msgstr "កែសម្រួលមាតិកាក្នុងរបៀបព
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Edit date"
 msgstr "កែសម្រួលកាលបរិច្ឆេទ"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Edit declined"
-msgstr "ការកែសម្រួលត្រូវបានបដិសេធ"
 
 #. Resume card context menu action to edit resume metadata
 #. Resume card dropdown action to edit resume metadata
@@ -2052,12 +1963,12 @@ msgid "Expires on {0}"
 msgstr "ផុតកំណត់​នៅ​ថ្ងៃទី {0}"
 
 #: src/routes/_home/-sections/templates.tsx
-msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. Reactive Resume currently offers 12 templates, with more on the way."
-msgstr "ស្វែង​រក​គំរូ​ជ្រើសរើស​ចម្រុះ​របស់​យើង ដែល​ត្រូវ​បាន​រចនា​ឡើង​សម្រាប់​រចនាបថ មុខរបរ និង​លក្ខណៈ​ផ្ទាល់ខ្លួន​ផ្សេងៗ។ បច្ចុប្បន្ន Reactive Resume មាន​គំរូ ១២ និង​នឹង​មាន​បន្ថែម​ទៀត​នៅ​ពេល​ខាងមុខ។"
+msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
+msgstr "ស្វែង​រក​គំរូ​ជ្រើសរើស​ចម្រុះ​របស់​យើង ដែល​ត្រូវ​បាន​រចនា​ឡើង​សម្រាប់​រចនាបថ មុខរបរ និង​លក្ខណៈ​ផ្ទាល់ខ្លួន​ផ្សេងៗ។ បច្ចុប្បន្ន cloudcoffee មាន​គំរូ ១២ និង​នឹង​មាន​បន្ថែម​ទៀត​នៅ​ពេល​ខាងមុខ។"
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "ស្វែងរក​ឯកសារ​អំពី API ដើម្បី​ស្វែងយល់​ពី​របៀប​ផ្សាភ្ជាប់ Reactive Resume ជាមួយ​កម្មវិធី​របស់​អ្នក។ អ្នក​អាច​រកឃើញ​ចំណុច​ចូល​ច្រើន ប្រភេទ​សំណើរ​ឧទាហរណ៍ និង​វិធីសាស្ត្រ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​ផ្សេងៗ។"
+msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
+msgstr "ស្វែងរក​ឯកសារ​អំពី API ដើម្បី​ស្វែងយល់​ពី​របៀប​ផ្សាភ្ជាប់ cloudcoffee ជាមួយ​កម្មវិធី​របស់​អ្នក។ អ្នក​អាច​រកឃើញ​ចំណុច​ចូល​ច្រើន ប្រភេទ​សំណើរ​ឧទាហរណ៍ និង​វិធីសាស្ត្រ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​ផ្សេងៗ។"
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -2095,15 +2006,6 @@ msgstr "នាំចេញប្រវត្តិរូបសង្ខេបរ
 msgid "Exported pipeline-flow.png"
 msgstr "បាននាំចេញ pipeline-flow.png"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Failed"
-msgstr "បរាជ័យ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to archive thread."
-msgstr "បរាជ័យក្នុងការទុកខ្សែស្រឡាយក្នុងបណ្ណសារ។"
-
 #. Fallback toast when creating an API key fails
 #: src/dialogs/api-key/create.tsx
 msgid "Failed to create API key. Please try again."
@@ -2127,11 +2029,6 @@ msgstr "មិនអាចលុបអ្នកផ្តល់សេវាបា
 #: src/features/settings/pages/api-keys.tsx
 msgid "Failed to delete the API key. Please try again."
 msgstr "បរាជ័យក្នុងការលុបសោ API។ សូមព្យាយាមម្ដងទៀត។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to delete thread."
-msgstr "បរាជ័យក្នុងការលុបខ្សែស្រឡាយ។"
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
@@ -2212,14 +2109,6 @@ msgstr "ការចូលបានបរាជ័យ។ សូមព្យា�
 msgid "Failed to sign out. Please try again."
 msgstr "បរាជ័យក្នុងការចេញ។ សូមព្យាយាមម្ដងទៀត។"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Failed to start agent thread."
-msgstr "បរាជ័យក្នុងការចាប់ផ្តើមខ្សែស្រឡាយភ្នាក់ងារ។"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Failed to start the AI assistant."
-msgstr "បរាជ័យក្នុងការចាប់ផ្តើមជំនួយការ AI។"
-
 #. Fallback toast when unlinking a social authentication provider fails
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Failed to unlink provider. Please try again."
@@ -2228,10 +2117,6 @@ msgstr "បរាជ័យក្នុងការផ្តាច់អ្នក
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "មិនអាចធ្វើបច្ចុប្បន្នភាពអ្នកផ្តល់សេវាបានទេ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to update thread settings."
-msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពការកំណត់ខ្សែស្រឡាយ។"
 
 #. Fallback toast when changing account password fails
 #: src/dialogs/auth/change-password.tsx
@@ -2242,10 +2127,6 @@ msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប
 #: src/features/settings/pages/profile.tsx
 msgid "Failed to update your profile. Please try again."
 msgstr "បរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពប្រវត្តិរូបរបស់អ្នក។ សូមព្យាយាមម្ដងទៀត។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to upload attachment."
-msgstr "បរាជ័យក្នុងការបង្ហោះឯកសារភ្ជាប់។"
 
 #. Fallback toast when uploading profile picture for resume fails
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
@@ -2296,10 +2177,6 @@ msgstr "ត្រង​តាម"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Filter by tags"
 msgstr "ត្រងតាមស្លាក"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Find weak bullets and rewrite them with stronger outcomes, numbers, scope, and sharper verbs."
-msgstr "ស្វែងរកចំណុចខ្សោយ ហើយសរសេរវាឡើងវិញជាមួយនឹងលទ្ធផល លេខ វិសាលភាព និងកិរិយាសព្ទមុតជាង។"
 
 #: src/libs/locale.ts
 msgid "Finnish"
@@ -2433,10 +2310,6 @@ msgstr "បង្កើត​ឈ្មោះចៃដន្យ"
 msgid "German"
 msgstr "ភាសាអាល្លឺម៉ង់"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Get Started"
-msgstr "ចាប់ផ្តើម"
-
 #. Authentication provider display name in account settings
 #. Brand name label for GitHub social sign-in button
 #: src/features/auth/components/social-auth.tsx
@@ -2444,6 +2317,10 @@ msgstr "ចាប់ផ្តើម"
 #: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "GitHub"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "GitHub connected"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Give every role a period, such as \"Jan 2020 - Present\", so your timeline can be reconstructed."
@@ -2558,10 +2435,6 @@ msgstr "ជួយ​ខ្ញុំ​នាំអ្នក​ចូលរួម
 msgid "Help translate the app to your language"
 msgstr "ជួយ​បកប្រែ​កម្មវិធី​ទៅ​ជា​ភាសា​របស់​អ្នក"
 
-#: src/dialogs/resume/template/gallery.tsx
-msgid "Here's a range of resume templates for different professions and personalities. Whether you prefer modern or classic, bold or simple, there is a design to match you. Look through the options below and choose a template that fits your style."
-msgstr "នេះ​ជា​ជួរ​គំរូ​ប្រវត្តិរូប​សម្រាប់​មុខរបរ និង​លក្ខណៈ​ផ្ទាល់ខ្លួន​ផ្សេងៗ។ មិន​ថា​អ្នក​ពេញចិត្ត​រចនាបថ​ទំនើប ឬ​បែប​បុរាណ ដិត ឬ​សាមញ្ញ ក៏​មាន​រចនាបថ​មួយ​សម​ស្រប​នឹង​អ្នក។ សូម​មើល​ជម្រើស​ខាង​ក្រោម ហើយ​ជ្រើស​គំរូ​ដែល​សម​ពីរៀង​នឹង​រចនាបថ​របស់​អ្នក។"
-
 #: src/dialogs/api-key/create.tsx
 msgid "Here's your new API key"
 msgstr "នេះ​ជា​កូនសោ API ថ្មី​របស់​អ្នក"
@@ -2657,10 +2530,6 @@ msgstr "Hungarian"
 msgid "Icon"
 msgstr "រូបតំណាង"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Identify gaps for an applicant tracking system and apply only high-confidence keyword improvements."
-msgstr "កំណត់ចន្លោះប្រហោងសម្រាប់ប្រព័ន្ធតាមដានអ្នកដាក់ពាក្យ ហើយអនុវត្តតែការកែលម្អពាក្យគន្លឹះដែលមានទំនុកចិត្តខ្ពស់។"
-
 #: src/features/ats-checker/messages.ts
 msgid "If it came from a scan, that is expected. Otherwise remove it; recruiters read it as keyword stuffing."
 msgstr "ប្រសិនបើវាមកពីការស្កេន នោះជារឿងធម្មតា។ បើពុំនោះទេ សូមលុបវាចោល; អ្នកជ្រើសរើសបុគ្គលិកចាត់ទុកវាថាជាការញាត់ពាក្យគន្លឹះ។"
@@ -2736,10 +2605,6 @@ msgstr "បង្កើនចន្លោះបន្ទាត់ ដើម្�
 msgid "Increase them so content stays inside the reliably read area."
 msgstr "បង្កើនពួកវា ដើម្បីឱ្យមាតិកាស្ថិតនៅក្នុងតំបន់អានដែលអាចទុកចិត្តបាន។"
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Increase zoom"
-msgstr "បង្កើនការពង្រីក"
-
 #: src/libs/locale.ts
 msgid "Indonesian"
 msgstr "Indonesian"
@@ -2783,12 +2648,12 @@ msgid "Invalid AI provider configuration."
 msgstr "ការកំណត់រចនាសម្ព័ន្ធអ្នកផ្តល់សេវា AI មិនត្រឹមត្រូវ។"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume available in multiple languages?"
-msgstr "តើ Reactive Resume អាច​ប្រើ​បាន​ជា​ភាសា​ច្រើន​ទេ?"
+msgid "Is cloudcoffee available in multiple languages?"
+msgstr "តើ cloudcoffee អាច​ប្រើ​បាន​ជា​ភាសា​ច្រើន​ទេ?"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume really free?"
-msgstr "តើ Reactive Resume ពិត​ជា​ឥត​គិតថ្លៃ​មែន​ទេ?"
+msgid "Is cloudcoffee really free?"
+msgstr "តើ cloudcoffee ពិត​ជា​ឥត​គិតថ្លៃ​មែន​ទេ?"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2982,10 +2847,6 @@ msgstr "រៀបចំអត្ថបទតាមផ្ដេក។ អត្�
 msgid "Layout"
 msgstr "ប្លង់"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Learn More"
-msgstr "ស្វែងយល់បន្ថែម"
-
 #: src/dialogs/resume/import.tsx
 #: src/hooks/use-form-blocker.tsx
 msgid "Leave"
@@ -3055,16 +2916,16 @@ msgid "Line Height"
 msgstr "កម្ពស់​បន្ទាត់"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "ភ្ជាប់ Reactive Resume (បានណែនាំ)"
+msgid "Link a cloudcoffee (recommended)"
+msgstr "ភ្ជាប់ cloudcoffee (បានណែនាំ)"
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "ភ្ជាប់ប្រវត្តិរូបសង្ខេប ហើយបិទភ្ជាប់ការពិពណ៌នាការងារ (កែសម្រួល) ដើម្បីវាយតម្លៃភាពសមស្របរបស់អ្នក និងកែសម្រួលច្បាប់ចម្លងមួយ។"
 
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "Reactive Resume ដែលបានភ្ជាប់"
+msgid "Linked cloudcoffee"
+msgstr "cloudcoffee ដែលបានភ្ជាប់"
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
@@ -3079,8 +2940,8 @@ msgid "LinkedIn, Referral…"
 msgstr "LinkedIn, ការណែនាំ…"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Linking a Reactive Resume enables AI match scoring and tailoring."
-msgstr "ការភ្ជាប់ Reactive Resume បើកឱ្យប្រើពិន្ទុផ្គូផ្គងដោយ AI និងការកែសម្រួល។"
+msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
+msgstr "ការភ្ជាប់ cloudcoffee បើកឱ្យប្រើពិន្ទុផ្គូផ្គងដោយ AI និងការកែសម្រួល។"
 
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Linking your {providerName} account..."
@@ -3112,14 +2973,8 @@ msgid "Loading providers…"
 msgstr "កំពុងផ្ទុកអ្នកផ្តល់សេវា…"
 
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 msgid "Loading resumes…"
 msgstr "កំពុងផ្ទុកប្រវត្តិរូបសង្ខេប…"
-
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Loading threads…"
-msgstr "កំពុងផ្ទុកខ្សែស្រឡាយ…"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Loading…"
@@ -3174,10 +3029,6 @@ msgstr "មេ"
 msgid "Main navigation"
 msgstr "ការរុករក​មេ"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Make the experience section more results-oriented and remove vague responsibilities."
-msgstr "ធ្វើឱ្យផ្នែកបទពិសោធន៍ផ្តោតលើលទ្ធផលកាន់តែច្រើន និងលុបបំបាត់ការទទួលខុសត្រូវមិនច្បាស់លាស់។"
-
 #: src/features/ats-checker/messages.ts
 msgid "Make the visible text and the destination match."
 msgstr "ធ្វើឱ្យអត្ថបទដែលមើលឃើញ និងគោលដៅត្រូវគ្នា។"
@@ -3218,6 +3069,10 @@ msgstr "សម្គាល់ថាត្រូវបានបដិសេធ"
 msgid "Match scoring failed."
 msgstr "ការដាក់ពិន្ទុភាពសមស្របបរាជ័យ។"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Matched to Senior Product Engineer"
+msgstr ""
+
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
 msgstr "ផលប៉ះពាល់មធ្យម"
@@ -3227,10 +3082,6 @@ msgstr "ផលប៉ះពាល់មធ្យម"
 #: src/dialogs/resume/import.tsx
 msgid "Microsoft Word"
 msgstr "Microsoft Word"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Missing working resume"
-msgstr "បាត់ប្រវត្តិរូបសង្ខេបការងារ"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Mistral AI"
@@ -3364,23 +3215,9 @@ msgstr "ផ្នែក​ថ្មី"
 msgid "New tag…"
 msgstr "ស្លាកថ្មី…"
 
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "New thread"
-msgstr "ខ្សែស្រឡាយថ្មី"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "New Thread"
-msgstr "ខ្សែស្រឡាយថ្មី"
-
 #: src/routes/_home/-sections/features.tsx
 msgid "No Advertising, No Tracking"
 msgstr "គ្មាន​ការ​ផ្សពាណិជ្ជកម្ម គ្មាន​ការ​តាមដាន"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "No AI provider connected"
-msgstr "គ្មានអ្នកផ្តល់សេវា AI ត្រូវបានភ្ជាប់ទេ"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3484,10 +3321,6 @@ msgstr "គ្មានអ្នកផ្តល់សេវាដែលបាន
 msgid "No text could be read from this file."
 msgstr "មិនអាចអានអត្ថបទណាមួយពីឯកសារនេះបានទេ។"
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "No threads yet."
-msgstr "មិនទាន់មានខ្សែស្រឡាយនៅឡើយទេ។"
-
 #: src/features/ats-checker/messages.ts
 msgid "No work-experience section was found."
 msgstr "រកមិនឃើញផ្នែកបទពិសោធន៍ការងារទេ។"
@@ -3586,14 +3419,6 @@ msgstr "មានតែទំព័រដំបូងប៉ុណ្ណោះដ
 msgid "Open"
 msgstr "បើក"
 
-#: src/routes/builder/$resumeId/-components/dock.tsx
-msgid "Open AI agent"
-msgstr "ភ្នាក់ងារ AI បើក"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Open AI assistant"
-msgstr "បើកជំនួយការ AI"
-
 #. Button label to open the user's default email app
 #: src/features/auth/pages/forgot-password.tsx
 msgid "Open Email Client"
@@ -3602,10 +3427,6 @@ msgstr "បើក​កម្មវិធី​អ៊ីមែល"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "របៀបផ្តោតអារម្មណ៍បើកចំហ"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Open in builder"
-msgstr "បើកនៅក្នុងកម្មវិធីបង្កើត"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Open Integrations Settings"
@@ -3640,14 +3461,6 @@ msgstr "OpenRouter"
 #: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "បើក​ក្នុង​ផ្ទាំង​ថ្មី"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent"
-msgstr "ចំណាំស្រេចចិត្តសម្រាប់ភ្នាក់ងារ"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent…"
-msgstr "ចំណាំស្រេចចិត្តសម្រាប់ភ្នាក់ងារ…"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -3775,30 +3588,6 @@ msgstr "បិទភ្ជាប់ការផ្សាយ ដើម្បី�
 msgid "Pasting fills the fields automatically."
 msgstr "ការបិទភ្ជាប់នឹងបំពេញវាលដោយស្វ័យប្រវត្តិ។"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch applied"
-msgstr "បានអនុវត្តបំណះ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch conflicted"
-msgstr "បំណះមានជម្លោះ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch failed"
-msgstr "បំណះបរាជ័យ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch pending"
-msgstr "ការជួសជុលកំពុងរង់ចាំ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back"
-msgstr "បំណះបានរំកិលថយក្រោយ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back."
-msgstr "ប៉ាចបានរំកិលថយក្រោយ។"
-
 #. File format label in import source selector
 #. File format label in import source selector
 #: src/dialogs/resume/import.tsx
@@ -3882,10 +3671,6 @@ msgstr "សូមផ្ទុកឡើងឯកសារ PDF។"
 msgid "Please wait while your PDF is being generated..."
 msgstr "សូម​រង់ចាំ ខណៈពេល​កំពុង​បង្កើត PDF របស់​អ្នក..."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Please wait while your PDF is being generated…"
-msgstr "សូមរង់ចាំខណៈពេលដែល PDF របស់អ្នកកំពុងត្រូវបានបង្កើត…"
-
 #: src/libs/locale.ts
 msgid "Polish"
 msgstr "Polish"
@@ -3922,10 +3707,6 @@ msgstr "ចូលចិត្តជួរឈរតែមួយ ឬរក្ស�
 #: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "ចំណង់ចំណូលចិត្ត"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Prepare a conservative patch that improves clarity without changing my career narrative."
-msgstr "រៀបចំបំណះអភិរក្សមួយដែលធ្វើអោយប្រសើរឡើងនូវភាពច្បាស់លាស់ដោយមិនផ្លាស់ប្តូរនិទានកថាអាជីពរបស់ខ្ញុំ។"
 
 #: src/features/resume/export/use-resume-export.ts
 msgid "Preparing your resume for printing..."
@@ -3984,6 +3765,10 @@ msgstr "ប្រវត្តិ​សង្ខេប​បណ្ដាញ​ស
 msgid "Progress Bar"
 msgstr "របារ​វឌ្ឍនភាព"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Project captured"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4010,6 +3795,10 @@ msgstr "បានផ្ទៀងផ្ទាត់ការតភ្ជាប់
 msgid "Provider model"
 msgstr "ម៉ូដែលអ្នកផ្តល់សេវា"
 
+#: src/features/settings/integrations/components/ai-section.tsx
+msgid "Provider ready"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4023,10 +3812,6 @@ msgstr "អ្នកបោះពុម្ពផ្សាយ"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "ដាក់អាសយដ្ឋានអ៊ីមែលធម្មតានៅជិតផ្នែកខាងលើនៃទំព័រទីមួយ។ វាជាអ្វីដែលប្រព័ន្ធភាគច្រើនប្រើដើម្បីរៀបចំឯកសាររបស់អ្នក។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Raw JSON"
-msgstr "JSON ដើម"
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -4056,60 +3841,14 @@ msgstr "នាំចេញម្តងទៀតជាមួយពុម្ពអ
 msgid "Re-score"
 msgstr "ដាក់ពិន្ទុម្តងទៀត"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - ទៅ​កាន់​ទំព័រ​ដើម"
-
-#. Import source option for current Reactive Resume JSON format
-#: src/dialogs/resume/import.tsx
-msgid "Reactive Resume (JSON)"
-msgstr "Reactive Resume (JSON)"
-
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "Reactive Resume continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "Reactive Resume បន្ត​លូតលាស់​ដោយសារ​សហគមន៍រស់រវើក​របស់​វា។ គម្រោង​នេះ​ជំពាក់ ការរីកចម្រើន​របស់​វា ចំពោះ​មនុស្ស​ជា​ច្រើន​ដែល​បាន​ឧទ្ទិស​ពេលវេលា និង​ជំនាញ​របស់​ពួកគេ ដើម្បី​ធ្វើ​ឱ្យ​វា​ប្រសើរ​ឡើង។ យើង​សូម​អបអរសាទរ​កម្មវិធី​សើរ ដែល​បាន​ពង្រឹង​មុខងារ​របស់​វា​លើ GitHub អ្នក​ភាសា ដែល​ការបកប្រែ​របស់​ពួកគេ​លើ Crowdin បាន​ធ្វើ​ឱ្យ​វា​អាច​ប្រើ​បាន​ទូលំទូលាយ និង​មនុស្ស​ដែល​បាន​បរិច្ចាគ ដើម្បី​គាំទ្រ​ការ​អភិវឌ្ឍន៍​បន្តរបស់​វា។"
-
-#: src/routes/_home/-sections/donate.tsx
-msgid "Reactive Resume is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
-msgstr "Reactive Resume ជា​គម្រោង​ឥតគិតថ្លៃ និង​បើក​ប្រភព ដែលបាន​បង្កើត​ដោយ​ចិត្តស្រឡាញ់ ហើយ​ត្រូវ​បាន​ថែទាំ​ដោយ​ខ្ញុំ និង​សហគមន៍​អ្នករួមចំណែក។ ការ​បរិច្ចាគ​របស់​អ្នក​ជួយ​រក្សា​អោយ​មាន​ថាមពល និង​កូដ​បន្ត​ហូរ។"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Reactive Resume ជា​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ឥតគិតថ្លៃ និង​បើក​ប្រភព ដែល​ធ្វើ​ឱ្យ​ដំណើរការ​បង្កើត បច្ចុប្បន្នភាព និង​ចែករំលែក​ប្រវត្តិរូប​របស់​អ្នក ក្លាយ​ជា​រឿង​ងាយ​ស្រួល។"
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "Reactive Resume គឺឥតគិតថ្លៃ និងជាប្រភពបើកចំហ។ ប្រសិនបើវាបានជួយអ្នក សូមពិចារណាបរិច្ចាគ។"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "Reactive Resume គឺ​បើក​ប្រភព ផ្តោតលើ​ភាព​ឯកជន និង​ឥតគិតថ្លៃ​ទាំងស្រុង។ ខុស​ពី​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេងៗ វា​មិន​បង្ហាញ​ពាណិជ្ជកម្ម មិន​តាមដាន​ទិន្នន័យ​របស់​អ្នក ហើយ​មិន​កំណត់​មុខងារ​ពីក្រោយ paywall ឡើយ។"
-
-#: src/routes/_home/-sections/sponsors.tsx
-msgid "Reactive Resume stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
-msgstr "Reactive Resume នៅតែឥតគិតថ្លៃ ជាប្រភពបើកចំហ និងឯករាជ្យ ពីព្រោះក្រុមហ៊ុននានាជ្រើសរើសគាំទ្រការងារនៅពីក្រោយវា។ ការឧបត្ថម្ភរបស់ពួកគេជួយផ្តល់មូលនិធិដល់ការបង្ហោះ ការថែទាំ និងការអភិវឌ្ឍជាបន្តបន្ទាប់សម្រាប់សហគមន៍។"
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "ប្រវត្តិរូបសង្ខេបដែលមានប្រតិកម្ម v<0>{__APP_VERSION__}</0>"
-
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume v4 (JSON)"
 msgstr "Reactive Resume v4 (JSON)"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read an attachment"
-msgstr "បានអានឯកសារភ្ជាប់"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Read the Applying Custom Styles guide."
 msgstr "សូមអានការណែនាំអំពីការអនុវត្តរចនាប័ទ្មផ្ទាល់ខ្លួន។"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read the resume"
-msgstr "បានអានប្រវត្តិរូបសង្ខេប"
 
 #: src/features/ats-checker/messages.ts
 msgid "Readability"
@@ -4287,32 +4026,18 @@ msgstr "កំពុង​កំណត់​ពាក្យសម្ងាត់
 msgid "Resources"
 msgstr "ធនធាន"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore"
-msgstr "ស្ដារឡើងវិញ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore the resume to before this patch?"
-msgstr "ស្ដារប្រវត្តិរូបសង្ខេបទៅស្ថានភាពមុនបំណះនេះ?"
-
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
 msgstr "ស្ដារ​កំណែ​នេះ​ឡើង​វិញ?"
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/resume/export/download-dialog.tsx
-#: src/routes/agent/-components/resume-pane.tsx
-#: src/routes/agent/$threadId.tsx
 msgid "Resume"
 msgstr "ប្រវត្តិរូបសង្ខេប"
 
 #: src/features/resume/preview/resume-accessible-text.tsx
 msgid "Resume content"
 msgstr "ខ្លឹមសារនៃប្រវត្តិរូបសង្ខេប"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Resume edit"
-msgstr "ការកែសម្រួលប្រវត្តិរូបសង្ខេប"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Resume file"
@@ -4326,9 +4051,9 @@ msgstr "បានភ្ជាប់ប្រវត្តិរូប"
 msgid "Resume options"
 msgstr "ជម្រើស​ប្រវត្តិរូបសង្ខេប"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Resume patch"
-msgstr "បន្ត​បំណះ"
+#: src/routes/_home/-sections/hero.tsx
+msgid "Resume tailored"
+msgstr ""
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
@@ -4338,37 +4063,13 @@ msgstr "បន្ត​បំណះ"
 msgid "Resumes"
 msgstr "ប្រវត្តិរូប"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Retry"
-msgstr "សាកល្បងម្តងទៀត"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review edits"
-msgstr "ពិនិត្យការកែសម្រួល"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review the resume against a job description and ask me questions before changing uncertain sections."
-msgstr "សូមពិនិត្យមើលប្រវត្តិរូបសង្ខេបជាមួយនឹងការពិពណ៌នាការងារ ហើយសួរខ្ញុំនូវសំណួរមុនពេលផ្លាស់ប្តូរផ្នែកដែលមិនច្បាស់លាស់។"
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Review the writing with AI"
 msgstr "ពិនិត្យអត្ថបទជាមួយ AI"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Review this edit"
-msgstr "ពិនិត្យការកែសម្រួលនេះ"
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Reviewing…"
 msgstr "កំពុងពិនិត្យ…"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rework the summary so it targets a senior engineering manager role without sounding generic."
-msgstr "សូមធ្វើការសង្ខេបឡើងវិញ ដើម្បីឱ្យវាផ្តោតលើតួនាទីជាអ្នកគ្រប់គ្រងវិស្វកម្មជាន់ខ្ពស់ ដោយមិនស្តាប់ទៅដូចជាទូទៅ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rewrite this resume for a startup founder-to-product-lead transition with clear business impact."
-msgstr "សរសេរប្រវត្តិរូបសង្ខេបនេះឡើងវិញសម្រាប់ការផ្លាស់ប្តូរពីស្ថាបនិកទៅជាអ្នកដឹកនាំផលិតផលថ្មីថ្មោង ជាមួយនឹងផលប៉ះពាល់អាជីវកម្មច្បាស់លាស់។"
 
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
@@ -4409,10 +4110,6 @@ msgstr "ដំណើរការការពិនិត្យ AI"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Run deep check"
 msgstr "ដំណើរការការត្រួតពិនិត្យស៊ីជម្រៅ"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Running…"
-msgstr "កំពុងដំណើរការ…"
 
 #: src/libs/locale.ts
 msgid "Russian"
@@ -4555,6 +4252,10 @@ msgstr "ប្រភេទ​ផ្នែក"
 msgid "Sections"
 msgstr "ផ្នែក"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "See how it works"
+msgstr ""
+
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "See how this resume matches the posting"
 msgstr "មើលថាប្រវត្តិរូបនេះត្រូវនឹងការប្រកាសយ៉ាងដូចម្តេច"
@@ -4568,21 +4269,9 @@ msgstr "មើលថាតើប្រព័ន្ធតាមដានអ្ន
 msgid "Select {0}"
 msgstr "ជ្រើស {0}"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select a resume"
-msgstr "ជ្រើសរើសប្រវត្តិរូបសង្ខេប"
-
-#: src/routes/agent/index.tsx
-msgid "Select a thread"
-msgstr "ជ្រើសរើសខ្សែស្រឡាយ"
-
 #: src/features/applications/components/table-view.tsx
 msgid "Select all"
 msgstr "ជ្រើសទាំងអស់"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select an agent model"
-msgstr "ជ្រើសរើសម៉ូដែលភ្នាក់ងារ"
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 msgid "Select an AI provider"
@@ -4603,14 +4292,6 @@ msgstr "ដំឡើង​ផ្ទាល់​ខ្លួន​ដោយ​ប
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "សន្លឹករចនាប័ទ្ម CSS ន័យវិទ្យា"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send answer"
-msgstr "ផ្ញើចម្លើយ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send message"
-msgstr "ផ្ញើសារ"
 
 #. Primary action button label on forgot-password form
 #: src/features/auth/pages/forgot-password.tsx
@@ -4654,24 +4335,7 @@ msgstr "កំណត់ភាសាឯកសារនៅពេលនាំចេ
 msgid "Set up a provider"
 msgstr "រៀបចំអ្នកផ្តល់សេវា"
 
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider"
-msgstr "ដំឡើងអ្នកផ្តល់សេវា AI"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider before starting a thread."
-msgstr "រៀបចំអ្នកផ្តល់សេវា AI មុនពេលចាប់ផ្តើមខ្សែស្រឡាយ។"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider to chat about this resume and apply edits automatically."
-msgstr "រៀបចំអ្នកផ្តល់សេវា AI ដើម្បីជជែកអំពីប្រវត្តិរូបសង្ខេបនេះ និងអនុវត្តការកែសម្រួលដោយស្វ័យប្រវត្តិ។"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider to get started."
-msgstr "រៀបចំអ្នកផ្តល់សេវា AI ដើម្បីចាប់ផ្តើម។"
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Settings"
 msgstr "ការកំណត់"
@@ -4810,28 +4474,8 @@ msgid "Signing up..."
 msgstr "កំពុង​ចុះឈ្មោះ..."
 
 #: src/dialogs/resume/template/data.ts
-msgid "Single-column with a magenta left border accent; compact and efficient for entry-level or internship applications."
-msgstr "ជួរឈរ​តែមួយ ជាមួយ​បន្ទាត់​ពណ៌​ម៉ាជែន្តាភាគីឆ្វេង រចនាប័ទ្ម​តូចស្រួច និង​មាន​ប្រសិទ្ធភាព​សម្រាប់​ការ​ដាក់ពាក្យ​កម្រិត​ចូល ឬ​អាហារូបករណ៍​ងារ​ហាត់ការ។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a minimal top header and lots of whitespace; clean and modern for designers or content creators."
-msgstr "ជួរឈរ​តែមួយ មាន​ក្បាលទំព័រ​ខាងលើ​កម្រិត​អប្បបរមា និង​ចន្លោះទទេ​ច្រើន មាន​រចនាបថ​ស្អាត និងទំនើប​សម្រាប់អ្នករចនា ឬ​អ្នកបង្កើត​មាតិកា។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a sidebar and clean grid layout; versatile for any professional or technical role."
-msgstr "ជួរឈរ​តែមួយ មាន​របារ​បាត និង​ប្លង់​ក្រឡាចត្រង្គ​ស្អាត អាច​ប្រើ​បាន​ល្អ​សម្រាប់​តួនាទី​វិជ្ជាជីវៈ ឬ​បច្ចេកទេស​ណា​ក៏​បាន។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with an inline three-column entry header (position · organization · period); compact and ATS-friendly, well-suited for Asian resume conventions (CN/JP/KR)."
-msgstr "ប្លង់ជួរឈរតែមួយដែលមានបឋមកថាធាតុជាបីជួរឈរនៅក្នុងបន្ទាត់តែមួយ (មុខតំណែង · ស្ថាប័ន · រយៈពេល)៖ បង្រួម ងាយស្រួលសម្រាប់ ATS និងសមស្របសម្រាប់ទម្រង់ប្រវត្តិរូបបែបអាស៊ី (CN/JP/KR)។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with uppercase section headings and a primary-color top rule on every page; polished for executive, consulting, or startup resumes."
-msgstr "ជួរឈរតែមួយដែលមានចំណងជើងផ្នែកអក្សរធំ និងបន្ទាត់កំពូលពណ៌ចម្បងនៅលើទំព័រនីមួយៗ។ ត្រូវបានរៀបចំយ៉ាងល្អសម្រាប់ប្រវត្តិរូបសង្ខេបសម្រាប់នាយកប្រតិបត្តិ ប្រឹក្សាយោបល់ ឬចាប់ផ្តើមអាជីវកម្ម។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column; polished and serious for senior or enterprise-level positions."
-msgstr "ជួរឈរ​តែមួយ រូបរាង​រលោង និង​ផ្លូវការ​សម្រាប់​តំណែង​ជាន់​ខ្ពស់ ឬ​កម្រិត​សហគ្រាស។"
+msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Size"
@@ -4902,10 +4546,6 @@ msgstr "អត្ថបទខ្លះធ្លាក់នៅក្រៅទំ
 msgid "Some text is rotated."
 msgstr "អត្ថបទខ្លះត្រូវបានបង្វិល។"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Something else…"
-msgstr "អ្វីផ្សេងទៀត…"
-
 #: src/components/layout/error-screen.tsx
 msgid "Something went wrong"
 msgstr "មានអ្វីមួយខុសប្រក្រតី"
@@ -4943,15 +4583,6 @@ msgstr "ប្រភព"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "កូដ​ប្រភព"
-
-#. placeholder {0}: operation.from
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Source: {0}"
-msgstr "ប្រភព៖ {0}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Sources"
-msgstr "ប្រភព"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Spacing (Horizontal)"
@@ -5001,14 +4632,6 @@ msgstr "ផ្ដល់​ផ្កាយ​ឲ្យ​យើង​លើ GitHu
 msgid "Star us on GitHub, currently {0} stars (opens in new tab)"
 msgstr "ផ្ដល់​ផ្កាយ​ឲ្យ​យើង​លើ GitHub បច្ចុប្បន្ន​មាន {0} ផ្កាយ (បើក​ក្នុង​ផ្ទាំង​ថ្មី)"
 
-#: src/routes/agent/$threadId.tsx
-msgid "Start a new thread"
-msgstr "ចាប់ផ្តើមខ្សែស្រឡាយថ្មី"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start a thread"
-msgstr "ចាប់ផ្តើមខ្សែស្រឡាយ"
-
 #: src/dialogs/resume/index.tsx
 msgid "Start building your resume by giving it a name."
 msgstr "ចាប់ផ្តើម​បង្កើត​ប្រវត្តិរូប​របស់​អ្នក ដោយ​បញ្ចូល​ឈ្មោះ​ឲ្យ​វា​សិន។"
@@ -5022,10 +4645,6 @@ msgstr "ចាប់ផ្តើម​បង្កើត​ប្រវត្ត
 msgid "Start each one with a concrete verb: built, led, reduced, migrated."
 msgstr "ចាប់ផ្តើមនីមួយៗជាមួយកិរិយាសព្ទច្បាស់លាស់៖ សាងសង់ ដឹកនាំ កាត់បន្ថយ ផ្លាស់ប្តូរ។"
 
-#: src/routes/agent/index.tsx
-msgid "Start new thread"
-msgstr "ចាប់ផ្តើមខ្សែស្រឡាយថ្មី"
-
 #. Layout editor toggle that forces a section to begin on a new page
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Start on new page"
@@ -5034,10 +4653,6 @@ msgstr "ចាប់ផ្តើមនៅលើទំព័រថ្មី"
 #: src/features/ats-checker/messages.ts
 msgid "Start the resume with your name on its own line."
 msgstr "ចាប់ផ្តើមប្រវត្តិរូបសង្ខេបជាមួយឈ្មោះរបស់អ្នកនៅលើបន្ទាត់ដាច់ដោយឡែក។"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start Thread"
-msgstr "ចាប់ផ្តើមខ្សែស្រឡាយ"
 
 #: src/libs/resume/section.tsx
 msgid "Statistics"
@@ -5051,10 +4666,6 @@ msgstr "ស្ថិត"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Still waiting for {provider}… {elapsedSeconds}s"
 msgstr "នៅតែរង់ចាំ {provider}… {elapsedSeconds}វិនាទី"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Stop generation"
-msgstr "បញ្ឈប់ការបង្កើត"
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Strengths"
@@ -5094,8 +4705,8 @@ msgid "Summary"
 msgstr "សង្ខេប"
 
 #: src/routes/_home/-sections/donate.tsx
-msgid "Support Reactive Resume"
-msgstr "គាំទ្រ Reactive Resume"
+msgid "Support cloudcoffee"
+msgstr "គាំទ្រ cloudcoffee"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Support the app by doing what you can!"
@@ -5148,10 +4759,6 @@ msgstr "ស្លាកផ្តល់ឱ្យកម្មវិធីនូវ
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "កែសម្រួលប្រវត្តិរូបរបស់ខ្ញុំ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tailor this resume to a product manager job description and emphasize roadmap ownership, stakeholder communication, and measurable launch outcomes."
-msgstr "កែសម្រួលប្រវត្តិរូបសង្ខេបនេះទៅតាមការពិពណ៌នាការងាររបស់អ្នកគ្រប់គ្រងផលិតផល ហើយសង្កត់ធ្ងន់លើភាពជាម្ចាស់នៃផែនទីបង្ហាញផ្លូវ ការទំនាក់ទំនងជាមួយអ្នកពាក់ព័ន្ធ និងលទ្ធផលបើកដំណើរការដែលអាចវាស់វែងបាន។"
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -5242,10 +4849,6 @@ msgstr "គណនីអ្នកផ្តល់សេវានោះប្រើ
 #: src/features/auth/pages/error.tsx
 msgid "That sign-in provider is no longer available on this server."
 msgstr "អ្នកផ្តល់សេវាចូលនោះលែងមាននៅលើម៉ាស៊ីនមេនេះទៀតហើយ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "The agent needs your input."
-msgstr "ភ្នាក់ងារត្រូវការមតិយោបល់ពីអ្នក។"
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted successfully."
@@ -5342,10 +4945,6 @@ msgstr "ផ្នែកខាងលើនៃទំព័រទីមួយមិ
 msgid "The URL you entered is not valid."
 msgstr "URL ដែល​អ្នក​បាន​បញ្ចូល មិន​ត្រឹមត្រូវ​ទេ។"
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "The working resume was deleted. This thread is read-only."
-msgstr "ប្រវត្តិរូបសង្ខេបការងារត្រូវបានលុបចោល។ ខ្សែស្រឡាយនេះអាចអានបានតែប៉ុណ្ណោះ។"
-
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
 #: src/features/settings/pages/preferences.tsx
@@ -5374,7 +4973,6 @@ msgid "There was a problem while generating the DOCX, please try again."
 msgstr "មានបញ្ហាមួយកើតឡើងខណៈពេលបង្កើត DOCX សូមព្យាយាមម្ដងទៀត។"
 
 #: src/features/resume/export/use-resume-export.ts
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "There was a problem while generating the PDF, please try again."
 msgstr "មានបញ្ហាពេលកំពុងបង្កើត PDF សូមព្យាយាមម្តងទៀត។"
 
@@ -5394,10 +4992,6 @@ msgstr "ការត្រួតពិនិត្យទាំងនេះដំ
 msgid "These dates will not be read correctly."
 msgstr "កាលបរិច្ឆេទទាំងនេះនឹងមិនត្រូវបានអានត្រឹមត្រូវទេ។"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thinking"
-msgstr "កំពុងគិត"
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "This action cannot be undone."
@@ -5406,22 +5000,6 @@ msgstr "សកម្មភាព​នេះ​មិន​អាច​មិន
 #: src/features/settings/pages/account.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "សកម្មភាព​នេះ​មិន​អាច​មិនធ្វើវិញ​បានទេ។ ទិន្នន័យ​ទាំងអស់​របស់​អ្នក​នឹង​ត្រូវ​បាន​លុប​ជា​អចិន្ត្រៃយ៍។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This action cannot be undone. Conversation messages and uploaded attachments will be removed. The working resume remains in your dashboard and can be deleted separately."
-msgstr "សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។ សារសន្ទនា និងឯកសារភ្ជាប់ដែលបានផ្ទុកឡើងនឹងត្រូវបានលុបចេញ។ ប្រវត្តិរូបសង្ខេបការងារនៅតែមាននៅក្នុងផ្ទាំងគ្រប់គ្រងរបស់អ្នក ហើយអាចត្រូវបានលុបដោយឡែកពីគ្នា។"
-
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "This action cannot be undone. Messages and thread attachments will be removed."
-msgstr "សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។ សារ និងឯកសារភ្ជាប់ខ្សែស្រឡាយនឹងត្រូវបានដកចេញ។"
-
-#: src/routes/agent/$threadId.tsx
-msgid "This agent thread could not be opened."
-msgstr "មិនអាចបើកខ្សែស្រឡាយភ្នាក់ងារនេះបានទេ។"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "This assistant could not be opened."
-msgstr "មិនអាចបើកជំនួយការនេះបានទេ។"
 
 #: src/features/ats-checker/messages.ts
 msgid "This check does not apply to this file."
@@ -5434,10 +5012,6 @@ msgstr "ការត្រួតពិនិត្យនេះដំណើរក
 #: src/libs/resume/ats.ts
 msgid "This date will not be read correctly."
 msgstr "កាលបរិច្ឆេទនេះនឹងមិនត្រូវបានអានត្រឹមត្រូវទេ។"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "This edit request can no longer be answered."
-msgstr "សំណើកែសម្រួលនេះមិនអាចឆ្លើយតបបានទៀតទេ។"
 
 #: src/libs/resume/ats.ts
 msgid "This email address will not be recognized."
@@ -5607,21 +5181,9 @@ msgstr "ការព្យាយាមចូលនេះបានផុតកំ
 msgid "This step is optional, but recommended."
 msgstr "ជំហាន​នេះ​ជា​ជម្រើស ប៉ុន្តែ​បាន​ផ្ដល់​អនុសាសន៍។"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is archived. New messages cannot be sent."
-msgstr "ខ្សែស្រឡាយនេះត្រូវបានរក្សាទុកក្នុងប័ណ្ណសារ។ សារថ្មីមិនអាចផ្ញើបានទេ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only"
-msgstr "ខ្សែស្រឡាយនេះសម្រាប់តែអានប៉ុណ្ណោះ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only because the working resume or AI provider is unavailable."
-msgstr "ខ្សែស្រឡាយនេះ​អាចអានបានតែ​ប៉ុណ្ណោះ ពីព្រោះប្រវត្តិរូបសង្ខេបការងារ ឬអ្នកផ្តល់សេវា AI មិនអាចប្រើបាន។"
-
 #: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the Reactive Resume API to allow machines to interact with your resume data."
-msgstr "វា​នឹង​បង្កើត​កូនសោ API ថ្មី​មួយ ដើម្បី​ចូល​ដំណើរការ Reactive Resume API ហើយ​អនុញ្ញាត​ឱ្យ​យន្តចលនា​អន្តរកម្ម​ជាមួយ​ទិន្នន័យ​ប្រវត្តិរូប​របស់​អ្នក។"
+msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
+msgstr "វា​នឹង​បង្កើត​កូនសោ API ថ្មី​មួយ ដើម្បី​ចូល​ដំណើរការ cloudcoffee API ហើយ​អនុញ្ញាត​ឱ្យ​យន្តចលនា​អន្តរកម្ម​ជាមួយ​ទិន្នន័យ​ប្រវត្តិរូប​របស់​អ្នក។"
 
 #: src/features/settings/authentication/components/passkeys.tsx
 msgid "This will help you identify it later, if you plan to have multiple passkeys."
@@ -5630,38 +5192,6 @@ msgstr "វានឹងជួយអ្នកកំណត់អត្តសញ្
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "វានឹងលុបធាតុទាំងអស់ចេញពីផ្នែកនេះ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This will roll back this patch and any patches applied after it."
-msgstr "វានឹងត្រឡប់បំណះនេះ និងបំណះទាំងអស់ដែលបានអនុវត្តបន្ទាប់ពីវាមកវិញ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Thread actions"
-msgstr "សកម្មភាព​ខ្សែស្រឡាយ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread archived."
-msgstr "បាន​ទុក​ក្នុង​បណ្ណសារ​ខ្សែស្រឡាយ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread deleted."
-msgstr "បានលុបខ្សែស្រឡាយ។"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Threads"
-msgstr "ខ្សែស្រឡាយ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tighten the skills section so it supports the target role instead of reading like a keyword dump."
-msgstr "រឹតបន្តឹងផ្នែកជំនាញ ដើម្បីឱ្យវាគាំទ្រតួនាទីគោលដៅ ជំនួសឱ្យការអានដូចជាការចាក់ពាក្យគន្លឹះ។"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Timelapse demonstration of building a resume with Reactive Resume"
-msgstr "វីដេអូ​បង្ហាញ​ល្បឿន​លឿន​អំពី​ការ​បង្កើត​ប្រវត្តិរូប​ជាមួយ Reactive Resume"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Timeline"
@@ -5708,30 +5238,10 @@ msgstr "បិទបើករបារចំហៀងខាងឆ្វេង"
 msgid "Toggle page stacking"
 msgstr "បិទ/បើកការដាក់ទំព័រជាស្រទាប់ៗ"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle resume preview"
-msgstr "បិទ/បើកការមើលជាមុននៃប្រវត្តិរូបសង្ខេប"
-
 #. Screen-reader label for opening or closing the right sidebar in resume builder
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Toggle right sidebar"
 msgstr "បិទបើករបារចំហៀងខាងស្តាំ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle threads"
-msgstr "បិទ/បើកខ្សែស្រឡាយ"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {threadTokenTotal}"
-msgstr "ថូខឹន៖ {threadTokenTotal}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total}"
-msgstr "ថូខឹន៖ {total}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total} ({cached} cached)"
-msgstr "ថូខឹន៖ {total} ({cached} ក្នុងឃ្លាំងសម្ងាត់)"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Track a job you're applying to and link the resume you sent."
@@ -5765,42 +5275,6 @@ msgstr "បិទតួអក្សរភ្ជាប់ស្រេចចិត
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "បើក​ការ​ចែករំលែក​សាធារណៈ ដើម្បី​តាមដាន​ថា​ប្រវត្តិរូប​របស់​អ្នក​ត្រូវ​បាន​មើល ឬ​ទាញយក​ច្រើន​ណាស់។ មាន​តែ​អ្នក​ប៉ុណ្ណោះ​ដែល​អាច​មើល​ស្ថិតិ​របស់​ប្រវត្តិរូប​របស់​អ្នក​បាន។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a bold colored sidebar and skill bars; great for creative or tech roles where visual flair is welcome."
-msgstr "ពីរ​ជួរឈរ មាន​របារ​បាត​ពណ៌​ដិត និង​របារ​ជំនាញ បើសម​សម្រាប់​តួនាទី​ច្នៃ​ប្រឌិត ឬ​បច្ចេកវិទ្យា ដែល​ត្រូវ​ការ​រូបរាង​ទាក់ទាញ​ភ្នែក។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a dark teal sidebar and skills grid; modern feel for developers, data scientists, or technical PMs."
-msgstr "ពីរ​ជួរឈរ មាន​របារ​បាត​ពណ៌ខៀវក្រហមងងឹត និង​ក្រឡា​ជំនាញ​ផ្ដុំជាក្រឡាចត្រង្គ មាន​អារម្មណ៍​ទំនើប​សម្រាប់​អ្នកអភិវឌ្ឍន៍ អ្នកវិភាគ​ទិន្នន័យ ឬ PM បច្ចេកទេស។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a left margin color; simple and approachable for creative, editorial, or junior roles."
-msgstr "ពីរ​ជួរឈរ មាន​គែម​ខាងឆ្វេង​ពណ៌ ត្រូវ​បាន​រចនា​ឲ្យ​ងាយស្រួល និង​សាមញ្ញ​សម្រាប់​តួនាទី​ច្នៃប្រឌិត ការកែសម្រួល ឬ​កម្រិត​ក្មេងជាង។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a muted color sidebar; earthy and calm, suits sustainability, healthcare, or nonprofit sectors."
-msgstr "ពីរ​ជួរឈរ មាន​របារ​បាត​ពណ៌​ស្រាល តែមិន​ច្បាស់ រចនាប័ទ្ម​ធម្មជាតិ និងស្ងប់ស្ងាត់ សម​ស្រប​សម្រាប់​វិស័យ​អភិរក្សបរិស្ថាន សុខាភិបាល ឬ​អង្គការ​មិនរក​ប្រាក់ចំណេញ។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a soft header accent and circular profile photo; ideal for marketing, HR, or client-facing roles."
-msgstr "ពីរ​ជួរឈរ មាន​ក្បាលទំព័រ​ពណ៌​ស្រាល និង​រូបភាព​ប្រវត្តិ​ខ្លួនជារង្វង់ សមស្រប​សម្រាប់​តួនាទី​ទីផ្សារ មនុស្សបម្រើ (HR) ឬ​តួនាទី​ជួបអតិថិជន។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with accent colors and clean typography; balanced choice for business analysts or operations roles."
-msgstr "ពីរ​ជួរឈរ មាន​ពណ៌រំលេច និង​រចនាប័ទ្ម​អក្សរ​ស្អាត ជម្រើស​តុល្យភាព​សម្រាប់​អ្នកវិភាគ​អាជីវកម្ម ឬ​តួនាទី​ប្រតិបត្តិការ។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, clean and professional with subtle section dividers; suits corporate, finance, or consulting positions."
-msgstr "ពីរ​ជួរឈរ ស្អាត និង​វិជ្ជាជីវៈ មាន​បន្ទាត់​បំបែក​ផ្នែក​ស្រាលៗ សម​ស្រប​សម្រាប់​តួនាទី​ក្រុមហ៊ុន ហិរញ្ញវត្ថុ ឬ​ពិគ្រោះយោបល់។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal and text-dense with no decorative elements; perfect for traditional industries or ATS-heavy applications."
-msgstr "ពីរ​ជួរឈរ រចនាប័ទ្ម​អប្បបរមា និង​មាន​អត្ថបទ​ក្រឡុក ច្រើន គ្មាន​ធាតុ​តុបតែង ល្អ​បំផុត​សម្រាប់​វិស័យ​ប្រពៃណី ឬ​ការ​ដាក់ពាក្យ​ដែល​អាស្រ័យ​លើ ATS ខ្លាំង។"
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal with light gray sidebar and subtle icons; professional and understated for legal, finance, or executive roles."
-msgstr "ពីរ​ជួរឈរ អប្បបរមា មាន​របារ​បាត​ពណ៌ប្រផេះ​ស្រាល និង​រូបតំណាង​ស្រាលៗ មាន​រូបរាង​វិជ្ជាជីវៈ និង​សុភាពរាបសា​សម្រាប់​តួនាទី​ច្បាប់ ហិរញ្ញវត្ថុ ឬ​តំណែង​អនុប្រធាន។"
 
 #: src/features/auth/pages/verify-2fa.tsx
 #: src/features/settings/authentication/components/two-factor.tsx
@@ -5958,10 +5432,6 @@ msgstr "បច្ចុប្បន្នភាព​បទពិសោធន៍
 msgid "Update Password"
 msgstr "បច្ចុប្បន្នភាព​ពាក្យសម្ងាត់"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Update project bullets to show leadership, constraints, tradeoffs, and measurable outcomes."
-msgstr "ធ្វើបច្ចុប្បន្នភាពចំណុចគម្រោង ដើម្បីបង្ហាញពីភាពជាអ្នកដឹកនាំ ការរឹតបន្តឹង ការសម្របសម្រួល និងលទ្ធផលដែលអាចវាស់វែងបាន។"
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "បច្ចុប្បន្នភាព​ប្រវត្តិរូប"
@@ -5997,10 +5467,6 @@ msgstr "ផ្ទុកឡើង .csv"
 #: src/routes/_home/ats-checker.tsx
 msgid "Upload a resume and see what an applicant tracking system actually reads from it. Everything runs in this browser. Your file is never uploaded, and nothing is stored."
 msgstr "ផ្ទុកឡើងប្រវត្តិរូបសង្ខេបមួយ ហើយមើលថាតើប្រព័ន្ធតាមដានអ្នកដាក់ពាក្យពិតជាអានអ្វីខ្លះពីវា។ អ្វីៗទាំងអស់ដំណើរការនៅក្នុងកម្មវិធីរុករកនេះ។ ឯកសាររបស់អ្នកមិនដែលត្រូវបានផ្ទុកឡើងទេ ហើយគ្មានអ្វីត្រូវបានផ្ទុករក្សាទេ។"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Upload attachments"
-msgstr "ផ្ទុកឡើងឯកសារភ្ជាប់"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Upload picture"
@@ -6184,10 +5650,6 @@ msgstr "ស្ម័គ្រចិត្ត"
 msgid "vs previous 30 days"
 msgstr "ធៀបនឹង 30 ថ្ងៃមុន"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Waiting for the agent…"
-msgstr "កំពុងរង់ចាំភ្នាក់ងារ…"
-
 #: src/features/ats-checker/ai-review/locked-card.tsx
 msgid "Want a second opinion on the writing?"
 msgstr "ចង់បានមតិទីពីរអំពីការសរសេរឬទេ?"
@@ -6213,10 +5675,6 @@ msgstr "យើងមិនអាចភ្ជាប់គណនីអ្នកផ
 msgid "We couldn't read your profile from the provider."
 msgstr "យើងមិនអាចអានប្រវត្តិរូបរបស់អ្នកពីអ្នកផ្តល់សេវាបានទេ។"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Web search"
-msgstr "ការស្វែងរកតាមអ៊ីនធឺណិត"
-
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
 #: src/dialogs/resume/sections/education.tsx
@@ -6238,17 +5696,13 @@ msgstr "អ្វីដែលកម្មវិធីវិភាគអាន"
 msgid "What a person sees"
 msgstr "អ្វីដែលមនុស្សម្នាក់មើលឃើញ"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "What do you want to do?"
-msgstr "តើអ្នកចង់ធ្វើអ្វី?"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "តើ​អ្នក​ចង់​ប្ដូរ​ឈ្មោះ​ផ្នែក​នេះ​ទៅ​ជា​អ្វី?"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "What makes Reactive Resume different from other resume builders?"
-msgstr "អ្វី​ដែល​ធ្វើ​ឲ្យ Reactive Resume ខុស​ពី​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេងទៀត?"
+msgid "What makes cloudcoffee different from other resume builders?"
+msgstr "អ្វី​ដែល​ធ្វើ​ឲ្យ cloudcoffee ខុស​ពី​កម្មវិធី​បង្កើត​ប្រវត្តិរូប​ផ្សេងទៀត?"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -6257,10 +5711,6 @@ msgstr "អ្វីដែលការត្រួតពិនិត្យនេ
 #: src/routes/_home/ats-checker.tsx
 msgid "What this does not do"
 msgstr "អ្វីដែលវាមិនធ្វើ"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "What's new in the latest version?"
-msgstr "អ្វី​ថ្មី​នៅ​ក្នុង​កំណែ​ចុងក្រោយ?"
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
@@ -6319,10 +5769,6 @@ msgstr "ពាក្យរត់បញ្ចូលគ្នានៅពេលអ
 msgid "Work OpenAI"
 msgstr "ធ្វើការ OpenAI"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Working…"
-msgstr "កំពុងដំណើរការ…"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Worth a shot"
 msgstr "គួរតែសាកល្បង"
@@ -6360,12 +5806,12 @@ msgid "xAI Grok"
 msgstr "xAI Grok"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, Reactive Resume is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "បាទ Reactive Resume អាច​ប្រើ​បាន​ជា​ភាសា​ច្រើន។ អ្នក​អាច​ជ្រើស​ភាសា​ដែល​អ្នក​ពេញចិត្ត​នៅលើ​ទំព័រ​ការកំណត់ ឬ​ដោយ​ប្រើ​កម្មវិធី​ប្ដូរ​ភាសា​នៅ​កូណឺ​ឆ្វេងលើ។ បើ​អ្នក​មិន​ឃើញ​ភាសា​របស់​អ្នក ឬ​ចង់​ធ្វើ​ឱ្យ​ការ​បកប្រែ​ដែល​មាន​ស្រាប់​ប្រសើរ​ឡើង អ្នក​អាច <0>ចូលរួម​បកប្រែនៅលើ Crowdin<1> (បើក​ក្នុង​ផ្ទាំង​ថ្មី)</1></0>។"
+msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
+msgstr "បាទ cloudcoffee អាច​ប្រើ​បាន​ជា​ភាសា​ច្រើន។ អ្នក​អាច​ជ្រើស​ភាសា​ដែល​អ្នក​ពេញចិត្ត​នៅលើ​ទំព័រ​ការកំណត់ ឬ​ដោយ​ប្រើ​កម្មវិធី​ប្ដូរ​ភាសា​នៅ​កូណឺ​ឆ្វេងលើ។ បើ​អ្នក​មិន​ឃើញ​ភាសា​របស់​អ្នក ឬ​ចង់​ធ្វើ​ឱ្យ​ការ​បកប្រែ​ដែល​មាន​ស្រាប់​ប្រសើរ​ឡើង អ្នក​អាច <0>ចូលរួម​បកប្រែនៅលើ Crowdin<1> (បើក​ក្នុង​ផ្ទាំង​ថ្មី)</1></0>។"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! Reactive Resume is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "បាទ! Reactive Resume គឺ​ឥតគិតថ្លៃ​ទាំងស្រុង គ្មាន​ចំនាយ​លាក់កំបាំង កម្រិត​ពិសេស ឬ​កម្រៃ​ជាវ​ប្រចាំខែ​ទេ។ វា​បើក​ប្រភព ហើយ​នឹង​នៅ​តែ​ឥតគិតថ្លៃ​ជា​រៀងរហូត។"
+msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
+msgstr "បាទ! cloudcoffee គឺ​ឥតគិតថ្លៃ​ទាំងស្រុង គ្មាន​ចំនាយ​លាក់កំបាំង កម្រិត​ពិសេស ឬ​កម្រៃ​ជាវ​ប្រចាំខែ​ទេ។ វា​បើក​ប្រភព ហើយ​នឹង​នៅ​តែ​ឥតគិតថ្លៃ​ជា​រៀងរហូត។"
 
 #: src/routes/_home/-sections/features.tsx
 msgid "You also have the option to deploy on your own servers using the Docker image."
@@ -6417,6 +5863,14 @@ msgstr "អត្ថបទរាងកាយរបស់អ្នកតូចណ
 msgid "Your bullets are drawn with unusual characters."
 msgstr "ចំណុចគ្រាប់របស់អ្នកត្រូវបានគូរដោយតួអក្សរចម្លែក។"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career has a memory."
+msgstr ""
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career knowledge base"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
 msgid "Your changes are saved automatically."
 msgstr "ការ​ផ្លាស់ប្ដូរ​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ដោយ​ស្វ័យប្រវត្តិ។"
@@ -6434,8 +5888,8 @@ msgid "Your data is secure, and never shared or sold to anyone."
 msgstr "ទិន្នន័យ​របស់​អ្នក​មាន​សុវត្ថិភាព ហើយ​មិន​ដែល​ត្រូវ​បាន​ចែករំលែក ឬ​លក់​ឲ្យ​នរណា​ម្នាក់​ទេ។"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host Reactive Resume on your own servers for complete control over your data."
-msgstr "ទិន្នន័យ​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ដោយ​សុវត្ថិភាព ហើយ​មិនដែល​ត្រូវ​បាន​ចែករំលែក​ជាមួយ​ភាគី​ទីបី​ទេ។ អ្នក​ក៏​អាច​ដំឡើង Reactive Resume លើ​ម៉ាស៊ីន​បម្រើ​ផ្ទាល់ខ្លួន​របស់​អ្នក ដើម្បី​មាន​សិទ្ធિ​ត្រួតត្រា​លើ​ទិន្នន័យ​របស់​អ្នក​ដល់​ខ្ពស់​បំផុត​ផង​ដែរ។"
+msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
+msgstr "ទិន្នន័យ​របស់​អ្នក​ត្រូវ​បាន​រក្សាទុក​ដោយ​សុវត្ថិភាព ហើយ​មិនដែល​ត្រូវ​បាន​ចែករំលែក​ជាមួយ​ភាគី​ទីបី​ទេ។ អ្នក​ក៏​អាច​ដំឡើង cloudcoffee លើ​ម៉ាស៊ីន​បម្រើ​ផ្ទាល់ខ្លួន​របស់​អ្នក ដើម្បី​មាន​សិទ្ធિ​ត្រួតត្រា​លើ​ទិន្នន័យ​របស់​អ្នក​ដល់​ខ្ពស់​បំផុត​ផង​ដែរ។"
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -6563,7 +6017,6 @@ msgstr "ពង្រីក"
 msgid "Zoom in"
 msgstr "ពង្រីក"
 
-#: src/routes/agent/-components/resume-pane.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Zoom level"
 msgstr "កម្រិតពង្រីក"
@@ -6575,4 +6028,3 @@ msgstr "បង្រួម"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "Zulu"
-

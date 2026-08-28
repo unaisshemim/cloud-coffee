@@ -5,6 +5,11 @@ import { describe, expect, it } from "vitest";
 const registry = readFileSync(fileURLToPath(new URL("./index.ts", import.meta.url)), "utf8");
 
 describe("templatePages", () => {
+	it("registers Classic as a renderable template page", () => {
+		expect(registry).toContain('import { ClassicPage } from "./classic/ClassicPage";');
+		expect(registry).toContain("classic: ClassicPage");
+	});
+
 	it("registers Treecko as a renderable template page", () => {
 		expect(registry).toContain('import { TreeckoPage } from "./treecko/TreeckoPage";');
 		expect(registry).toContain("treecko: TreeckoPage");

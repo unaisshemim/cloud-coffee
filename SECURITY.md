@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Reactive Resume provides security updates for version `5.0.x` and newer.
+cloudcoffee provides security updates for version `5.0.x` and newer.
 Earlier major versions are no longer supported.
 
 | Version | Supported          |
@@ -20,7 +20,7 @@ Preferred reporting channels:
 
 - Use GitHub's private vulnerability reporting for this repository.
 - If that is unavailable, email `hello@amruthpillai.com` with the subject
-  `Security Vulnerability: Reactive Resume`.
+  `Security Vulnerability: cloudcoffee`.
 
 Please include as much detail as possible, including:
 

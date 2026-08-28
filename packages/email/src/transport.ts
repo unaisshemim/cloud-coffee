@@ -37,7 +37,7 @@ const getTransport = () => {
 
 export const sendEmail = async (options: SendEmailOptions) => {
 	const transport = getTransport();
-	const from = options.from ?? env.SMTP_FROM ?? "Reactive Resume <noreply@localhost>";
+	const from = options.from ?? env.SMTP_FROM ?? "cloudcoffee <noreply@localhost>";
 	const payload: SendMailOptions = {
 		to: options.to,
 		from,

@@ -2,19 +2,13 @@ import { describe, expect, it, vi } from "vitest";
 
 const envMock = vi.hoisted(() => ({
 	ENCRYPTION_SECRET: "test-secret-with-enough-entropy",
-	REDIS_URL: "redis://localhost:6379",
 }));
 
 vi.mock("@reactive-resume/env/server", () => ({ env: envMock }));
 
-const {
-	assertAgentEnvironment,
-	decryptCredential,
-	encryptCredential,
-	fingerprintCredential,
-	isAgentEnvironmentConfigured,
-	redactEncryptedCredential,
-} = await import("./credentials");
+const { decryptCredential, encryptCredential, fingerprintCredential, redactEncryptedCredential } = await import(
+	"./credentials"
+);
 
 describe("AI credential encryption", () => {
 	it("encrypts and decrypts provider API keys without storing plaintext", () => {
@@ -51,21 +45,5 @@ describe("AI credential encryption", () => {
 		});
 		expect(JSON.stringify(redacted)).not.toContain(encrypted.encryptedApiKey);
 		expect(JSON.stringify(redacted)).not.toContain(encrypted.apiKeySalt);
-	});
-});
-
-describe("AI agent environment", () => {
-	it("is available only when Redis and encryption secret are configured", () => {
-		expect(isAgentEnvironmentConfigured()).toBe(true);
-		expect(() => assertAgentEnvironment()).not.toThrow();
-
-		envMock.REDIS_URL = "";
-		expect(isAgentEnvironmentConfigured()).toBe(false);
-		expect(() => assertAgentEnvironment()).toThrow("AGENT_ENVIRONMENT_UNAVAILABLE");
-
-		envMock.REDIS_URL = "redis://localhost:6379";
-		envMock.ENCRYPTION_SECRET = "";
-		expect(isAgentEnvironmentConfigured()).toBe(false);
-		expect(() => assertAgentEnvironment()).toThrow("AGENT_ENVIRONMENT_UNAVAILABLE");
 	});
 });

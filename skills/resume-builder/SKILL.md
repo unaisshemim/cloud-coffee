@@ -1,11 +1,11 @@
 ---
 name: resume-builder
-description: Generate professional resumes that conform to the Reactive Resume schema. Use when the user wants to create, build, or generate a resume through conversational AI, or asks about resume structure, sections, or content. This skill guides the agent to ask clarifying questions, avoid hallucination, and produce valid JSON output for https://rxresu.me.
+description: Generate professional resumes that conform to the cloudcoffee schema. Use when the user wants to create, build, or generate a resume through conversational AI, or asks about resume structure, sections, or content. This skill guides the agent to ask clarifying questions, avoid hallucination, and produce valid JSON output for https://rxresu.me.
 ---
 
-# Resume Builder for Reactive Resume
+# Resume Builder for cloudcoffee
 
-Build professional resumes through conversational AI for [Reactive Resume](https://rxresu.me), a free and open-source resume builder.
+Build professional resumes through conversational AI for [cloudcoffee](https://rxresu.me), a free and open-source resume builder.
 
 ## Core Principles
 
@@ -18,7 +18,7 @@ Build professional resumes through conversational AI for [Reactive Resume](https
 
 ### MCP Application Tracking
 
-Reactive Resume MCP can manage job applications as well as resumes. When the user wants to track applications through an agent, use the application tools instead of asking them to open the web UI.
+cloudcoffee MCP can manage job applications as well as resumes. When the user wants to track applications through an agent, use the application tools instead of asking them to open the web UI.
 
 - Use `list_applications` before changing existing records.
 - Use `create_application` for one new opportunity or `import_applications` for spreadsheet/CSV rows.
@@ -63,7 +63,7 @@ Ask about preferences:
 
 ### Step 4: Generate Valid JSON
 
-Output must conform to the Reactive Resume schema. See [references/schema.md](references/schema.md) for the complete schema structure.
+Output must conform to the cloudcoffee schema. See [references/schema.md](references/schema.md) for the complete schema structure.
 
 Key requirements:
 
@@ -114,7 +114,7 @@ For students/recent graduates:
 
 ## Output Format
 
-When generating the resume, output a complete JSON object that conforms to the Reactive Resume schema. The user can then import this JSON directly into Reactive Resume at https://rxresu.me.
+When generating the resume, output a complete JSON object that conforms to the cloudcoffee schema. The user can then import this JSON directly into cloudcoffee at https://rxresu.me.
 
 Example minimal structure:
 

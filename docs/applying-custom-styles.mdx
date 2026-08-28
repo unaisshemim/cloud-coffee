@@ -1,6 +1,6 @@
 ---
 title: "Applying Custom Styles"
-description: "Use Reactive Resume Semantic CSS to make safe, targeted, and portable changes to your resume PDF."
+description: "Use cloudcoffee Semantic CSS to make safe, targeted, and portable changes to your resume PDF."
 ---
 
 Custom Styles let you make focused changes that are not available in the regular **Design**, **Typography**, **Layout**,
@@ -14,7 +14,7 @@ resume PDFs.
 
 ## Convert existing Custom Styles
 
-If a resume still uses the previous Custom Styles form, Reactive Resume creates a converted stylesheet draft. Your
+If a resume still uses the previous Custom Styles form, cloudcoffee creates a converted stylesheet draft. Your
 current rules remain active while you review it.
 
 <Steps>
@@ -25,7 +25,7 @@ current rules remain active while you review it.
     Check the preview and warnings below the editor. The draft starts with `@version 1;`.
   </Step>
   <Step title="Activate Semantic CSS">
-    Select **Activate Semantic CSS** only after the preview matches the legacy result. Reactive Resume never applies both
+    Select **Activate Semantic CSS** only after the preview matches the legacy result. cloudcoffee never applies both
     systems at once, and keeps the original legacy rules available for rollback.
   </Step>
 </Steps>
@@ -43,7 +43,7 @@ section[type="experience"] > section-heading {
 }
 ```
 
-The first line tells Reactive Resume which language version the stylesheet uses. Keep `@version 1;` at the start of
+The first line tells cloudcoffee which language version the stylesheet uses. Keep `@version 1;` at the start of
 every stylesheet.
 
 <Steps>
@@ -51,7 +51,7 @@ every stylesheet.
     Add the stylesheet to the editor. Start with one visual change so it is easy to review in the preview.
   </Step>
   <Step title="Wait for Valid">
-    Reactive Resume checks the source in the browser. When the status changes to **Valid**, compare the preview and
+    cloudcoffee checks the source in the browser. When the status changes to **Valid**, compare the preview and
     export if you are ready to share the resume.
   </Step>
   <Step title="Build on the working rule">

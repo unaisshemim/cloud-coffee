@@ -1,12 +1,7 @@
-import type { Icon } from "@phosphor-icons/react";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
-import { GithubLogoIcon, LinkedinLogoIcon, XLogoIcon } from "@phosphor-icons/react";
 import { m } from "motion/react";
-import { useState } from "react";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
-import { Button } from "@reactive-resume/ui/components/button";
-import { Copyright } from "@/components/ui/copyright";
 
 type FooterLinkItem = {
 	url: string;
@@ -18,90 +13,50 @@ type FooterLinkGroupProps = {
 	links: FooterLinkItem[];
 };
 
-type SocialLink = {
-	url: string;
-	label: string;
-	icon: Icon;
-};
-
-const getResourceLinks = (): FooterLinkItem[] => [
-	{ url: "https://docs.rxresu.me", label: t`Documentation` },
-	{ url: "https://opencollective.com/reactive-resume/donate", label: t`Sponsorships` },
-	{ url: "https://github.com/amruthpillai/reactive-resume", label: t`Source Code` },
-	{ url: "https://docs.rxresu.me/changelog", label: t`Changelog` },
+const getCareerLinks = (): FooterLinkItem[] => [
+	{ url: "#hero", label: t`Career base` },
+	{ url: "#features", label: t`How it works` },
+	{ url: "#frequently-asked-questions", label: t`Questions` },
 ];
 
-const getCommunityLinks = (): FooterLinkItem[] => [
-	{ url: "https://github.com/amruthpillai/reactive-resume/issues", label: t`Report an issue` },
-	{ url: "https://crowdin.com/project/reactive-resume", label: t`Translations` },
-	{ url: "https://reddit.com/r/reactiveresume", label: t`Subreddit` },
-	{ url: "https://discord.gg/aSyA5ZSxpb", label: t`Discord` },
-];
-
-const socialLinks: SocialLink[] = [
-	{ url: "https://github.com/amruthpillai/reactive-resume", label: t`GitHub`, icon: GithubLogoIcon },
-	{ url: "https://linkedin.com/in/amruthpillai", label: t`LinkedIn`, icon: LinkedinLogoIcon },
-	{ url: "https://x.com/KingOKings", label: t`X (Twitter)`, icon: XLogoIcon },
+const getProductLinks = (): FooterLinkItem[] => [
+	{ url: "/dashboard", label: t`Dashboard` },
+	{ url: "/ats-checker", label: t`ATS checker` },
+	{ url: "/auth/login", label: t`Sign in` },
 ];
 
 export function Footer() {
 	return (
 		<m.footer
 			id="footer"
-			className="p-4 pb-8 will-change-[opacity] md:p-8 md:pb-12"
+			className="bg-[#121516] p-6 text-[#f7f3e9] md:p-10"
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.45 }}
 		>
-			<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-				{/* Brand Column */}
-				<div className="space-y-4 sm:col-span-2 lg:col-span-1">
-					<BrandIcon variant="logo" className="size-10" />
-
-					<div className="space-y-2">
-						<h2 className="font-semibold text-lg tracking-tight">Reactive Resume</h2>
-						<p className="max-w-xs text-muted-foreground text-sm leading-relaxed">
-							<Trans>
-								A free and open-source resume builder that simplifies the process of creating, updating, and sharing
-								your resume.
-							</Trans>
+			<div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+				<div className="max-w-sm space-y-5">
+					<BrandIcon variant="logo" className="size-10 brightness-0 invert" />
+					<div>
+						<h2 className="font-bold text-2xl tracking-[-0.04em]">cloudcoffee</h2>
+						<p className="mt-3 text-[#d7d0c2] text-sm leading-relaxed">
+							<Trans>Your career knowledge base—ready whenever opportunity appears.</Trans>
 						</p>
 					</div>
-
-					{/* Social Links */}
-					<div className="flex items-center gap-2 pt-2">
-						{socialLinks.map((social) => (
-							<Button
-								key={social.label}
-								size="icon-sm"
-								variant="ghost"
-								nativeButton={false}
-								render={
-									<a
-										href={social.url}
-										target="_blank"
-										rel="noopener noreferrer"
-										aria-label={`${social.label} (${t`opens in new tab`})`}
-									>
-										<social.icon aria-hidden="true" size={18} />
-									</a>
-								}
-							/>
-						))}
-					</div>
 				</div>
 
-				{/* Resources Column */}
-				<FooterLinkGroup title={t`Resources`} links={getResourceLinks()} />
+				<FooterLinkGroup title={t`Career base`} links={getCareerLinks()} />
+				<FooterLinkGroup title={t`Product`} links={getProductLinks()} />
+			</div>
 
-				{/* Community Column */}
-				<FooterLinkGroup title={t`Community`} links={getCommunityLinks()} />
-
-				{/* Copyright Column */}
-				<div className="space-y-4 sm:col-span-2 lg:col-span-1">
-					<Copyright />
-				</div>
+			<div className="mt-12 flex flex-col gap-3 border-[#4b4d49] border-t pt-5 text-[#aaa99f] text-xs sm:flex-row sm:items-center sm:justify-between">
+				<p className="font-mono uppercase tracking-[0.16em]">memory.sync: ready</p>
+				<p>
+					<Trans>
+						cloudcoffee v<bdi>{__APP_VERSION__}</bdi>
+					</Trans>
+				</p>
 			</div>
 		</m.footer>
 	);
@@ -109,45 +64,17 @@ export function Footer() {
 
 function FooterLinkGroup({ title, links }: FooterLinkGroupProps) {
 	return (
-		<div className="space-y-4">
-			<h2 className="font-medium text-muted-foreground text-sm tracking-tight">{title}</h2>
-
-			<ul className="space-y-3">
+		<div>
+			<h2 className="font-bold text-[#f1530a] text-xs uppercase tracking-[0.18em]">{title}</h2>
+			<ul className="mt-5 space-y-3">
 				{links.map((link) => (
-					<FooterLink key={link.url} url={link.url} label={link.label} />
+					<li key={link.url}>
+						<a className="text-[#d7d0c2] text-sm transition-colors hover:text-white" href={link.url}>
+							{link.label}
+						</a>
+					</li>
 				))}
 			</ul>
 		</div>
-	);
-}
-
-function FooterLink({ url, label }: FooterLinkItem) {
-	const [isHovered, setIsHovered] = useState(false);
-
-	return (
-		<li className="relative">
-			<a
-				href={url}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="relative inline-block text-sm transition-colors hover:text-foreground"
-				onMouseEnter={() => setIsHovered(true)}
-				onMouseLeave={() => setIsHovered(false)}
-			>
-				{label}
-
-				<span className="sr-only">
-					<Trans>(opens in new tab)</Trans>
-				</span>
-
-				<m.div
-					aria-hidden="true"
-					initial={{ width: 0, opacity: 0 }}
-					animate={isHovered ? { width: "100%", opacity: 1 } : { width: 0, opacity: 0 }}
-					transition={{ duration: 0.2, ease: "easeOut" }}
-					className="pointer-events-none absolute inset-s-0 -bottom-0.5 h-px rounded-md bg-primary will-change-[width,opacity]"
-				/>
-			</a>
-		</li>
 	);
 }

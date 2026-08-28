@@ -204,7 +204,7 @@ export function ApplicationDetailSheet({ application, onOpenChange, onEdit }: Pr
 									RXR
 								</span>
 								<span className="min-w-0 flex-1 truncate text-sm">
-									<Trans>Linked Reactive Resume</Trans>
+									<Trans>Linked cloudcoffee</Trans>
 								</span>
 								<ArrowSquareOutIcon className="text-muted-foreground" />
 							</Link>

@@ -1,64 +1,37 @@
 ---
 title: "Using the API"
-description: "Create Reactive Resume API keys, authenticate REST requests with bearer tokens, and integrate resume data into your own scripts, apps, or automations."
+description: "Authenticate cloudcoffee API requests with OAuth bearer tokens and integrate resume data into scripts, apps, or automations."
 ---
 
+cloudcoffee exposes an OpenAPI-compatible HTTP API under `/api/openapi`. Machine clients authenticate with OAuth 2 access tokens.
+
 <Steps>
-  <Step title="Sign in to the dashboard">
-    Head over to [https://rxresu.me](https://rxresu.me) and sign in with your account credentials.
-  </Step>
-
-<Step title="Navigate to API Keys settings">
-  Once you're in the dashboard, look for the sidebar navigation on the left. Under the <Badge>Settings</Badge> section,
-  click on the <Badge>API Keys</Badge> link.
-</Step>
-
   <Step title="Open the API reference">
-    On the API Keys page, click <Badge>API Documentation</Badge> to view the API reference.
-
-    <Tip>
-      You can also open it directly here: [API Reference](https://docs.rxresu.me/api-reference).
-    </Tip>
-
+    Review the [API Reference](https://docs.rxresu.me/api-reference) for available endpoints and request schemas.
   </Step>
 
-  <Step title="Create a new API key">
-    Click <Badge>Create a new API key</Badge>. Fill in:
-
-    - **Name**: A label to help you identify what you use this key for
-    - **Expires in**: How long the key should remain valid
-
-  </Step>
-
-  <Step title="Copy the API key (important)">
-    After creating the key, you'll be shown the secret key once. Copy it and store it securely.
-
-    <Warning>
-      For security reasons, your API key is only displayed once. If you lose it, you must create a new one.
-    </Warning>
-
-  </Step>
-
-  <Step title="Authenticate requests with x-api-key">
-    To authenticate API requests, include your key in the <Badge>x-api-key</Badge> header.
+  <Step title="Authorize an OAuth client">
+    Use an OAuth-capable client to complete authorization against your cloudcoffee instance. The authorization server publishes standard discovery metadata and issues bearer access tokens for authenticated users.
 
     <Info>
-      If you're self-hosting, replace <code>https://rxresu.me</code> with your instance URL. The API is served under <code>/api/openapi</code>.
+      MCP clients normally perform this flow automatically. Custom integrations must implement OAuth authorization-code flow with PKCE and securely refresh tokens when required.
     </Info>
+  </Step>
+
+  <Step title="Send the bearer token">
+    Include the access token in the standard <Badge>Authorization</Badge> header.
 
     ```bash
     curl "https://rxresu.me/api/openapi/resumes" \
-      -H "x-api-key: YOUR_API_KEY"
+      -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
     ```
 
-  </Step>
-
-  <Step title="Delete an API key (optional)">
-    In the API Keys list, click the trash icon next to a key and confirm deletion.
-
-    <Warning>
-      Deleted API keys stop working immediately, and the action cannot be undone.
-    </Warning>
-
+    <Info>
+      If you're self-hosting, replace <code>https://rxresu.me</code> with your instance URL.
+    </Info>
   </Step>
 </Steps>
+
+<Warning>
+  Treat access and refresh tokens as secrets. Never commit them to source control or expose them in browser-delivered code.
+</Warning>

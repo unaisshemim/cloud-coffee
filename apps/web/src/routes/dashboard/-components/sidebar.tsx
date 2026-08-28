@@ -3,11 +3,7 @@ import { msg } from "@lingui/core/macro";
 import { useLingui } from "@lingui/react";
 import { Trans } from "@lingui/react/macro";
 import {
-	BrainIcon,
 	BriefcaseIcon,
-	ChatCircleDotsIcon,
-	GearSixIcon,
-	KeyIcon,
 	MagnifyingGlassIcon,
 	ReadCvLogoIcon,
 	SealCheckIcon,
@@ -55,11 +51,6 @@ const appSidebarItems = [
 		href: "/dashboard/applications",
 	},
 	{
-		icon: <ChatCircleDotsIcon />,
-		label: msg`Agents`,
-		href: "/agent",
-	},
-	{
 		icon: <SealCheckIcon />,
 		label: msg`ATS Checker`,
 		href: "/ats-checker",
@@ -73,24 +64,9 @@ const settingsSidebarItems = [
 		href: "/dashboard/settings/profile",
 	},
 	{
-		icon: <GearSixIcon />,
-		label: msg`Preferences`,
-		href: "/dashboard/settings/preferences",
-	},
-	{
 		icon: <ShieldCheckIcon />,
 		label: msg`Authentication`,
 		href: "/dashboard/settings/authentication",
-	},
-	{
-		icon: <KeyIcon />,
-		label: msg`API Keys`,
-		href: "/dashboard/settings/api-keys",
-	},
-	{
-		icon: <BrainIcon />,
-		label: msg`Integrations`,
-		href: "/dashboard/settings/integrations",
 	},
 	{
 		icon: <UserGearIcon />,
@@ -159,7 +135,7 @@ export function DashboardSidebar() {
 							render={
 								<Link to="/">
 									<BrandIcon variant="icon" className="size-6" />
-									<h1 className="sr-only">Reactive Resume</h1>
+									<h1 className="sr-only">cloudcoffee</h1>
 								</Link>
 							}
 						/>

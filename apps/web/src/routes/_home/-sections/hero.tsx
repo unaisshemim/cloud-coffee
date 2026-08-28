@@ -1,158 +1,146 @@
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
-import { ArrowRightIcon, BookIcon, SparkleIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon } from "@phosphor-icons/react";
 import { Link } from "@tanstack/react-router";
 import { m } from "motion/react";
-import { Badge } from "@reactive-resume/ui/components/badge";
 import { Button } from "@reactive-resume/ui/components/button";
-import { CometCard } from "@/components/animation/comet-card";
-import { Spotlight } from "@/components/animation/spotlight";
+
+type AsciiDrift = {
+	id: string;
+	text: string;
+	className: string;
+	duration: number;
+	delay: number;
+};
+
+const asciiDrifts: AsciiDrift[] = [
+	{
+		id: "project",
+		text: "[ PROJECT_042 ]\nimpact: +18%\nstatus: captured",
+		className: "start-[4%] top-[20%]",
+		duration: 7,
+		delay: 0,
+	},
+	{
+		id: "connections",
+		text: "< WEBMCP.CONNECTED >\n12 sources\nsync: true",
+		className: "end-[5%] top-[53%] text-end",
+		duration: 8.5,
+		delay: 1.2,
+	},
+	{
+		id: "resume",
+		text: "resume.fit(92%)\nrole: product\nready: yes",
+		className: "end-[21%] bottom-[8%] text-end",
+		duration: 7.8,
+		delay: 2.1,
+	},
+];
 
 export function Hero() {
 	return (
-		<section
-			id="hero"
-			className="relative flex min-h-svh w-full flex-col items-center justify-center overflow-hidden border-b py-24"
-		>
-			<Spotlight />
-
-			<m.div
-				className="w-full will-change-[transform,opacity]"
-				initial={{ opacity: 0, y: 100 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 1.1, ease: "easeOut" }}
-			>
-				<CometCard
-					glareOpacity={0}
-					className="relative mx-auto -mb-12 3xl:max-w-7xl max-w-4xl px-8 md:-mb-24 md:px-12 lg:px-0"
-				>
-					<video
-						loop
-						muted
-						controls
-						playsInline
-						preload="none"
-						width={1146}
-						height={720}
-						poster="/videos/timelapse-v1.webp"
-						src="/videos/timelapse-v1.mp4"
-						aria-label={t`Timelapse demonstration of building a resume with Reactive Resume`}
-						className="aspect-[1146/720] w-full rounded-md border object-cover"
-					/>
-
-					<div
-						aria-hidden="true"
-						className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-40% via-transparent to-background"
-					/>
-				</CometCard>
-			</m.div>
-
-			<div className="relative z-10 flex max-w-2xl flex-col items-center gap-y-6 px-4 xs:px-0 text-center">
-				{/* Badge */}
-				<m.a
-					className="will-change-[transform,opacity]"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.45, delay: 0.55 }}
-					whileHover={{ y: -2, scale: 1.01 }}
-					whileTap={{ scale: 0.985 }}
-					target="_blank"
-					rel="noopener noreferrer"
-					href="https://docs.rxresu.me/getting-started"
-				>
-					<Badge variant="secondary" className="h-auto gap-1.5 px-3 py-0.5">
-						<SparkleIcon aria-hidden="true" className="size-3.5" weight="fill" />
-						<Trans>What's new in the latest version?</Trans>
-					</Badge>
-				</m.a>
-
-				{/* Headline */}
-				<m.div
-					className="will-change-[transform,opacity]"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.45, delay: 0.7 }}
-				>
-					<Trans>
-						<p className="font-medium text-muted-foreground tracking-tight md:text-lg">Finally,</p>
-						<h1 className="mt-1 font-semibold text-4xl tracking-tight md:text-5xl lg:text-6xl">
-							A free and open-source resume builder
-						</h1>
-					</Trans>
-				</m.div>
-
-				{/* Description */}
-				<m.p
-					className="max-w-xl text-base text-muted-foreground leading-relaxed will-change-[transform,opacity] md:text-lg"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.45, delay: 0.82 }}
-				>
-					<Trans>
-						Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating,
-						and sharing your resume.
-					</Trans>
-				</m.p>
-
-				{/* CTA Buttons */}
-				<m.div
-					className="flex flex-col items-center gap-3 will-change-[transform,opacity] sm:flex-row sm:gap-4"
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.45, delay: 0.95 }}
-				>
-					<Button
-						size="lg"
-						nativeButton={false}
-						className="group relative overflow-hidden px-4"
-						render={
-							<Link to="/dashboard">
-								<span className="relative z-10 flex items-center gap-2">
-									<Trans>Get Started</Trans>
-									<ArrowRightIcon
-										aria-hidden="true"
-										className="size-4 transition-transform group-hover:translate-x-0.5"
-									/>
-								</span>
-							</Link>
-						}
-					/>
-
-					<Button
-						size="lg"
-						variant="ghost"
-						className="gap-2 px-4"
-						nativeButton={false}
-						render={
-							<a href="https://docs.rxresu.me" target="_blank" rel="noopener noreferrer">
-								<BookIcon aria-hidden="true" className="size-4" />
-								<Trans>Learn More</Trans>
-								<span className="sr-only">
-									<Trans>(opens in new tab)</Trans>
-								</span>
-							</a>
-						}
-					/>
-				</m.div>
+		<section id="hero" className="relative min-h-svh w-full overflow-hidden border-b bg-[#f7f3e9]">
+			<div className="absolute inset-x-0 top-12 bottom-0 flex items-center justify-center overflow-hidden sm:top-16">
+				<m.img
+					alt={t`An editorial career collage with a data crystal and a flying laptop`}
+					width={1672}
+					height={941}
+					fetchPriority="high"
+					decoding="async"
+					src="/images/landing/career-collage-hero-v2.webp"
+					className="h-auto w-[210%] max-w-none object-contain sm:w-[94%] lg:w-[86%]"
+					initial={{ scale: 0.99 }}
+					animate={{ scale: [0.99, 1.01, 0.99], x: [0, -3, 0], y: [0, 2, 0] }}
+					transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+				/>
 			</div>
 
-			{/* Scroll indicator - decorative */}
-			<m.div
+			<div
 				aria-hidden="true"
-				role="presentation"
-				className="absolute inset-s-1/2 bottom-8 -translate-x-1/2"
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ delay: 1.25, duration: 0.7 }}
-			>
-				<m.div
-					className="flex h-8 w-5 items-start justify-center rounded-full border border-muted-foreground/30 p-1.5 will-change-transform"
-					animate={{ y: [0, 5, 0] }}
-					transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+				className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(248,245,237,0.2)_0%,rgba(248,245,237,0.08)_42%,transparent_70%),linear-gradient(0deg,var(--background)_0%,transparent_19%)]"
+			/>
+
+			{asciiDrifts.map((drift) => (
+				<m.pre
+					key={drift.id}
+					aria-hidden="true"
+					data-testid="career-ascii"
+					className={`pointer-events-none absolute z-10 hidden whitespace-pre-wrap font-mono text-[#53656f]/45 text-[10px] uppercase leading-relaxed tracking-[0.12em] mix-blend-multiply sm:block ${drift.className}`}
+					initial={{ opacity: 0, y: 8 }}
+					animate={{ opacity: [0.22, 0.62, 0.22], y: [8, -7, 8] }}
+					transition={{
+						duration: drift.duration,
+						delay: drift.delay,
+						repeat: Number.POSITIVE_INFINITY,
+						ease: "easeInOut",
+					}}
 				>
-					<m.div className="h-1.5 w-1 rounded-full bg-muted-foreground/50" />
-				</m.div>
-			</m.div>
+					{drift.text}
+				</m.pre>
+			))}
+
+			<div className="container relative z-20 mx-auto flex min-h-svh items-center justify-center px-6 pt-24 pb-28 lg:px-12">
+				<div className="flex max-w-5xl flex-col items-center text-center font-landing text-[#121516]">
+					<m.p
+						className="font-bold text-[#5f6c71] text-[11px] uppercase tracking-[0.2em] sm:text-xs"
+						initial={{ opacity: 0, y: 16 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.55, delay: 0.12 }}
+					>
+						<Trans>Your career knowledge base</Trans>
+					</m.p>
+
+					<m.h1
+						className="mt-5 max-w-4xl text-balance font-bold text-5xl leading-[0.94] tracking-[-0.06em] sm:text-6xl lg:text-[5.5rem]"
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.7, delay: 0.24 }}
+					>
+						<Trans>Career intelligence at the</Trans>{" "}
+						<span className="font-normal font-serif text-[#f1530a] italic tracking-[-0.045em]">
+							<Trans>speed of opportunity.</Trans>
+						</span>
+					</m.h1>
+
+					<m.p
+						className="mt-7 max-w-2xl text-[#4e5557] text-base leading-relaxed sm:text-lg"
+						initial={{ opacity: 0, y: 18 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.65, delay: 0.38 }}
+					>
+						<Trans>
+							One knowledge base for every project, launch, and win. Connect your tools, ask anything, and tailor the
+							right resume for any role.
+						</Trans>
+					</m.p>
+
+					<m.div
+						className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
+						initial={{ opacity: 0, y: 18 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.65, delay: 0.5 }}
+					>
+						<Button
+							size="lg"
+							nativeButton={false}
+							className="group h-12 rounded-md bg-[#ff5a0a] px-5 font-bold text-white shadow-[0_5px_0_#bf3f00] transition-transform hover:-translate-y-0.5 hover:bg-[#f1530a] active:translate-y-0 active:shadow-[0_2px_0_#bf3f00]"
+							render={
+								<Link to="/dashboard">
+									<Trans>Build your career base</Trans>
+									<ArrowRightIcon className="size-4 transition-transform group-hover:translate-x-1" weight="bold" />
+								</Link>
+							}
+						/>
+
+						<a
+							href="#features"
+							className="border-[#313638]/45 border-b pb-1 font-bold text-[#313638] text-sm transition-colors hover:border-[#f1530a] hover:text-[#f1530a]"
+						>
+							<Trans>See how it works</Trans>
+						</a>
+					</m.div>
+				</div>
+			</div>
 		</section>
 	);
 }

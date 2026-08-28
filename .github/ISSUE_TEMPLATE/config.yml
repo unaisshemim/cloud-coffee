@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: Questions and support
     url: https://github.com/amruthpillai/reactive-resume/discussions/categories/q-a
-    about: Get help with setup, configuration, and using Reactive Resume.
+    about: Get help with setup, configuration, and using cloudcoffee.
   - name: Security vulnerability
     url: https://github.com/amruthpillai/reactive-resume/security/advisories/new
     about: Report security vulnerabilities privately.

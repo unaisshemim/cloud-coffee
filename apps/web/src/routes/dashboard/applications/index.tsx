@@ -31,7 +31,6 @@ import { ImportApplicationsSheet } from "@/features/applications/components/impo
 import { ApplicationInsights } from "@/features/applications/components/insights-view";
 import { ApplicationTable } from "@/features/applications/components/table-view";
 import { applicationsListQueryOptions } from "@/features/applications/queries";
-import { createAgentTools } from "@/features/webmcp/agent-tools";
 import { createApplicationTools } from "@/features/webmcp/application-tools";
 import { createPageDescriptionTool } from "@/features/webmcp/page-tools";
 import { createWebMcpParityTools } from "@/features/webmcp/parity-tools";
@@ -125,12 +124,10 @@ function RouteComponent() {
 					"rr.applications.list_visible",
 					"rr.applications.open",
 					"rr.applications.start_create",
-					"rr.agent.start_thread",
 					"existing-mcp-parity",
 				],
 			}),
 			...createApplicationTools({ applications: filtered, navigate, openCreate: () => setAddOpen(true) }),
-			...createAgentTools({ navigate }),
 			...createWebMcpParityTools(),
 		],
 		[archived, filtered, navigate, search, sort, tags, view],

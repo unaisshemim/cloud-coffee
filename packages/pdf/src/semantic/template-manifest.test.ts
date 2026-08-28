@@ -10,7 +10,12 @@ import {
 
 describe("Treecko semantic manifest", () => {
 	it("is the only registered template contract", () => {
-		expect(templateSchema.options).toEqual(["treecko"]);
+		expect(templateSchema.options).toEqual(["classic", "treecko"]);
+		expect(getTemplateSemanticManifest("classic")).toMatchObject({
+			template: "classic",
+			header: { region: "header", placement: "main" },
+			specialSummary: { region: "header", placement: "main", source: "always" },
+		});
 		expect(getTemplateSemanticManifest("treecko")).toEqual({
 			template: "treecko",
 			regions: [

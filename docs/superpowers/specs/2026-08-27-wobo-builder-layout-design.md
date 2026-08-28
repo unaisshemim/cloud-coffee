@@ -22,7 +22,7 @@ The work is visual and interaction-focused. The Analysis view intentionally uses
 Do not mount the editor. Show a centered blocking message:
 
 ```
-Resume Builder | Dashboard - Wobo AI
+Resume Builder | Dashboard - cloudcoffee
 
 Screen Size Too Small
 

@@ -7,7 +7,7 @@ architecture still requires review before implementation planning.
 
 ## Context
 
-Reactive Resume renders its templates with React PDF rather than browser HTML. React PDF accepts style objects on a
+cloudcoffee renders its templates with React PDF rather than browser HTML. React PDF accepts style objects on a
 known component tree and supports a broad CSS-like property set, but it does not provide a browser DOM or a general
 selector engine.
 
@@ -521,7 +521,7 @@ Visual parity is guaranteed at activation for the current resume data, template,
 template or base-setting changes follow Semantic CSS behavior; they are not guaranteed to reproduce how the retired
 legacy resolver would have reacted.
 
-Legacy rules remain as read-only rollback data during the flagged compatibility phase. Old Reactive Resume JSON imports
+Legacy rules remain as read-only rollback data during the flagged compatibility phase. Old cloudcoffee JSON imports
 continue to parse them. New exports include the complete versioned stylesheet value. Copying from the editor copies only
 the editable `source`.
 

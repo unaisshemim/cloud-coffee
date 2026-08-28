@@ -60,7 +60,7 @@ The static file middleware will add `Cache-Control: public, max-age=31536000, im
 `handleWebApp` will transform the root shell before returning it. The injected head markup will contain:
 
 - A canonical link whose URL is the request origin normalized to `/`.
-- `Reactive Resume — A free and open-source resume builder` as the title.
+- `cloudcoffee — A free and open-source resume builder` as the title.
 - The existing complete product description.
 - Open Graph and Twitter title, description, URL, and banner image metadata.
 - The poster preload.

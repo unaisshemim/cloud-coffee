@@ -2,10 +2,6 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { m } from "motion/react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@reactive-resume/ui/components/accordion";
-import { buttonVariants } from "@reactive-resume/ui/components/button";
-import { cn } from "@reactive-resume/utils/style";
-
-const crowdinUrl = "https://crowdin.com/project/reactive-resume";
 
 type FAQItemData = {
 	question: string;
@@ -14,49 +10,28 @@ type FAQItemData = {
 
 const getFaqItems = (): FAQItemData[] => [
 	{
-		question: t`Is Reactive Resume really free?`,
-		answer: t`Yes! Reactive Resume is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free.`,
+		question: t`What can I add to my career base?`,
+		answer: t`Projects, launches, hackathons, awards, feedback, metrics, lessons, links, and any other evidence that helps explain what you have accomplished.`,
 	},
 	{
-		question: t`How is my data protected?`,
-		answer: t`Your data is stored securely and is never shared with third parties. You can also self-host Reactive Resume on your own servers for complete control over your data.`,
+		question: t`How do connected tools help?`,
+		answer: t`Connections bring useful work context into one searchable place, so you spend less time reconstructing your history from scattered products and documents.`,
 	},
 	{
-		question: t`Can I export my resume to PDF?`,
-		answer: t`Absolutely! You can export your resume to PDF with a single click. The exported PDF maintains all your formatting and styling perfectly.`,
+		question: t`What can I ask my career knowledge base?`,
+		answer: t`Ask for your strongest leadership example, projects using a certain skill, measurable outcomes, interview stories, or evidence that matches a role.`,
 	},
 	{
-		question: t`Is Reactive Resume available in multiple languages?`,
-		answer: (
-			<Trans>
-				Yes, Reactive Resume is available in multiple languages. You can choose your preferred language in the settings
-				page, or using the language switcher in the top right corner. If you don't see your language, or you would like
-				to improve the existing translations, you can{" "}
-				<a
-					href={crowdinUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={buttonVariants({ variant: "link", className: "h-auto px-0!" })}
-				>
-					contribute to the translations on Crowdin
-					<span className="sr-only">
-						<Trans comment="Screen reader hint indicating the FAQ translation contribution link opens in a new browser tab">
-							{" "}
-							(opens in new tab)
-						</Trans>
-					</span>
-				</a>
-				.
-			</Trans>
-		),
+		question: t`How does resume tailoring work?`,
+		answer: t`Share a job description and cloudcoffee selects the most relevant evidence from your career base, then helps shape it into a focused resume you can refine.`,
 	},
 	{
-		question: t`What makes Reactive Resume different from other resume builders?`,
-		answer: t`Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall.`,
+		question: t`Can I keep more than one resume?`,
+		answer: t`Yes. Your career base stays constant while each resume can emphasize a different role, industry, seniority level, or opportunity.`,
 	},
 	{
-		question: t`How do I share my resume?`,
-		answer: t`You can share your resume via a unique public URL, protect it with a password, or download it as a PDF to share directly. The choice is yours!`,
+		question: t`Can I export and share the result?`,
+		answer: t`Yes. Refine the final resume, export it as a polished PDF, or share it through a public link when you are ready.`,
 	},
 ];
 
@@ -66,31 +41,26 @@ export function Faq() {
 	return (
 		<section
 			id="frequently-asked-questions"
-			className="flex flex-col gap-x-16 gap-y-6 p-4 md:p-8 lg:flex-row lg:gap-x-18 xl:py-16"
+			className="grid gap-12 bg-[#f7f3e9] px-6 py-16 md:px-10 md:py-24 lg:grid-cols-[0.75fr_1.25fr]"
 		>
-			<m.h2
-				className={cn(
-					"flex-1 font-semibold text-2xl tracking-tight will-change-[transform,opacity] md:text-4xl xl:text-5xl",
-					"flex shrink-0 flex-wrap items-center gap-x-1.5 lg:flex-col lg:items-start",
-				)}
+			<m.div
 				initial={{ opacity: 0, x: -20 }}
 				whileInView={{ opacity: 1, x: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.45 }}
 			>
-				<Trans context="Home page FAQ section heading with each word visually separated into individual spans">
-					<span>Frequently</span>
-					<span>Asked</span>
-					<span>Questions</span>
-				</Trans>
-			</m.h2>
+				<p className="font-bold font-mono text-[#5f6c71] text-xs uppercase tracking-[0.2em]">02 / Ask clearly</p>
+				<h2 className="mt-5 max-w-md font-bold text-4xl leading-[0.98] tracking-[-0.055em] md:text-6xl">
+					<Trans>Career questions, answered.</Trans>
+				</h2>
+			</m.div>
 
 			<m.div
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.45, delay: 0.08 }}
-				className="max-w-2xl flex-2 will-change-[transform,opacity] lg:ml-auto 2xl:max-w-3xl"
+				className="w-full will-change-[transform,opacity]"
 			>
 				<Accordion multiple>
 					{faqItems.map((item, index) => (
@@ -110,15 +80,17 @@ type FAQItemComponentProps = {
 function FAQItemComponent({ item, index }: FAQItemComponentProps) {
 	return (
 		<m.div
-			className="will-change-[transform,opacity] last:border-b"
+			className="will-change-[transform,opacity]"
 			initial={{ opacity: 0, y: 10 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.24, delay: Math.min(0.16, index * 0.03) }}
 		>
-			<AccordionItem value={item.question} className="group border-t">
-				<AccordionTrigger className="py-5">{item.question}</AccordionTrigger>
-				<AccordionContent className="pb-5 text-muted-foreground leading-relaxed">{item.answer}</AccordionContent>
+			<AccordionItem value={item.question} className="group border-[#c9c0ae] border-t last:border-b">
+				<AccordionTrigger className="rounded-none py-6 font-bold text-base hover:text-[#f1530a] hover:no-underline">
+					{item.question}
+				</AccordionTrigger>
+				<AccordionContent className="max-w-2xl pb-6 text-[#555c5f] leading-relaxed">{item.answer}</AccordionContent>
 			</AccordionItem>
 		</m.div>
 	);

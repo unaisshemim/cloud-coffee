@@ -19,7 +19,7 @@
 
 ## File Structure
 
-- `packages/auth/src/config.test.ts`: Characterizes Reactive Resume's built-in social-provider signup policy.
+- `packages/auth/src/config.test.ts`: Characterizes cloudcoffee's built-in social-provider signup policy.
 - `packages/auth/src/config.ts`: Owns Better Auth provider configuration and the global signup restriction.
 - `apps/web/src/features/auth/components/social-auth.tsx`: Starts social sign-in without page-specific signup intent.
 - `apps/web/src/features/auth/pages/register.tsx`: Uses the shared social-auth component without signup-only props.

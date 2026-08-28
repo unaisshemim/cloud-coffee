@@ -38,7 +38,6 @@ import { useConfirm } from "@/hooks/use-confirm";
 import { getResumeErrorMessage } from "@/libs/error-message";
 import { orpc } from "@/libs/orpc/client";
 import { useBuilderSidebar } from "../-store/sidebar";
-import { BuilderAiAssistant } from "./ai-assistant";
 import { BuilderVersionHistory } from "./version-history";
 
 export function BuilderHeader() {
@@ -84,7 +83,6 @@ export function BuilderHeader() {
 				<h2 className="min-w-0 truncate font-medium">{name}</h2>
 				{isLocked && <LockSimpleIcon className="ms-2 text-muted-foreground" />}
 				<SaveStatusIndicator />
-				<BuilderAiAssistant resumeId={resumeId} />
 				<BuilderVersionHistory resumeId={resumeId} />
 				<BuilderHeaderDropdown />
 			</div>

@@ -40,7 +40,7 @@ type RouterContext = {
 	flags: FeatureFlags;
 };
 
-const appName = "Reactive Resume";
+const appName = "cloudcoffee";
 const tagline = "A free and open-source resume builder";
 const title = `${appName} — ${tagline}`;
 // Keep under ~120 characters so Google's mobile SERP snippet is not truncated at 3 lines.
@@ -69,10 +69,10 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 				{ name: "viewport", content: "width=device-width, initial-scale=1" },
 				// Meta Tags
 				{ name: "theme-color", content: "#09090B" },
-				{ name: "application-name", content: "Reactive Resume" },
+				{ name: "application-name", content: "cloudcoffee" },
 				{ name: "mobile-web-app-capable", content: "yes" },
 				{ name: "apple-mobile-web-app-capable", content: "yes" },
-				{ name: "apple-mobile-web-app-title", content: "Reactive Resume" },
+				{ name: "apple-mobile-web-app-title", content: "cloudcoffee" },
 				{ name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
 				// Twitter Tags — X only reads these as `name`, not `property`
 				{ name: "twitter:image", content: `${appUrl}/opengraph/banner.jpg` },

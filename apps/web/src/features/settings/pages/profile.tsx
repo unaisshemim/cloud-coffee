@@ -31,7 +31,7 @@ type Props = {
 	session: AuthSession;
 };
 
-export function ProfileSettingsPage({ session }: Props) {
+export function AccountIdentityForm({ session }: Props) {
 	const router = useRouter();
 	const context = useRouteContext({ strict: false });
 	const smtpEnabled = context.flags?.smtpEnabled ?? false;
@@ -71,7 +71,7 @@ export function ProfileSettingsPage({ session }: Props) {
 			if (value.email !== session.user.email) {
 				const { error } = await authClient.changeEmail({
 					newEmail: value.email,
-					callbackURL: "/dashboard/settings/profile",
+					callbackURL: "/dashboard/settings/account",
 				});
 
 				if (error) {
@@ -109,7 +109,7 @@ export function ProfileSettingsPage({ session }: Props) {
 
 		const { error } = await authClient.sendVerificationEmail({
 			email: session.user.email,
-			callbackURL: "/dashboard/settings/profile",
+			callbackURL: "/dashboard/settings/account",
 		});
 
 		if (error) {

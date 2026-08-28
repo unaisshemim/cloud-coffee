@@ -36,19 +36,4 @@ describe("handleUpload", () => {
 		expect(response.headers.get("Cross-Origin-Resource-Policy")).toBe("same-site");
 		expect(response.headers.get("Access-Control-Allow-Origin")).toBeNull();
 	});
-
-	it("does not serve private agent attachment keys through the public uploads route", async () => {
-		readMock.mockResolvedValueOnce({
-			data: new TextEncoder().encode("secret"),
-			size: 6,
-			contentType: "text/plain",
-		});
-
-		const response = await handleUpload(
-			new Request("https://example.com/api/uploads/user-1/agent/thread-1/attachment.txt"),
-		);
-
-		expect(response.status).toBe(404);
-		expect(readMock).not.toHaveBeenCalled();
-	});
 });

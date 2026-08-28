@@ -5,13 +5,13 @@
 #
 #   - id: reactive-resume
 #     config:
-#       apiKey: !!js process.env.RXRESUME_API_KEY
+#       accessToken: !!js process.env.RXRESUME_ACCESS_TOKEN
 #       url: http://localhost:3000
 #
-# With no apiKey the row loads and mounts nothing, so installing this plugin
+# With no access token the row loads and mounts nothing, so installing this plugin
 # before configuring it leaves the profile bootable.
 - insert:
     - id: reactive-resume
       name: dsh-plugin-reactive-resume
       config:
-        apiKey: !!js process.env.RXRESUME_API_KEY ?? ''
+        accessToken: !!js process.env.RXRESUME_ACCESS_TOKEN ?? ''

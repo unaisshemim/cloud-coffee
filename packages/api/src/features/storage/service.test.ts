@@ -116,7 +116,7 @@ describe("LocalStorageService", () => {
 	it("rejects private writes instead of silently storing them on the local filesystem", async () => {
 		await expect(
 			getStorageService().write({
-				key: "uploads/user/agent/thread/file.txt",
+				key: "uploads/user/private/file.txt",
 				data: new TextEncoder().encode("private"),
 				contentType: "text/plain",
 				private: true,

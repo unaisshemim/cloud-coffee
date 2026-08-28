@@ -11,7 +11,6 @@ import {
 	DialogTitle,
 } from "@reactive-resume/ui/components/dialog";
 import { NavigationCommandGroup } from "./pages/navigation";
-import { PreferencesCommandGroup } from "./pages/preferences";
 import { ResumesCommandGroup } from "./pages/resumes";
 import { useCommandPaletteStore } from "./store";
 
@@ -151,7 +150,6 @@ export function CommandPalette() {
 						</CommandEmpty>
 
 						<ResumesCommandGroup />
-						<PreferencesCommandGroup />
 						<NavigationCommandGroup />
 					</CommandList>
 				</Command>

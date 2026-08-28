@@ -102,7 +102,7 @@ describe("registerTools", () => {
 			expiresInSeconds: 600,
 		});
 
-		const requestHeaders = new Headers({ "x-api-key": "key" });
+		const requestHeaders = new Headers({ authorization: "Bearer token" });
 		const { server, registered } = makeFakeServer();
 		registerTools(server as never, clientMock as never, requestHeaders);
 

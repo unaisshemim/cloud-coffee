@@ -28,7 +28,6 @@ msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This ca
 msgstr "\"{0} · {1}\" మరియు దాని పూర్తి టైమ్‌లైన్ శాశ్వతంగా తొలగించబడతాయి. దీన్ని తిరిగి చేయలేరు."
 
 #: src/routes/_home/-sections/footer.tsx
-#: src/routes/_home/-sections/hero.tsx
 msgid "(opens in new tab)"
 msgstr "(కొత్త ట్యాబ్‌లో తెరవబడుతుంది)"
 
@@ -125,18 +124,14 @@ msgstr "{passedRules} {totalRules} చెక్కులు ఆమోదిం�
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · అంశం {itemNumber} "
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "<0>Finally,</0><1>A free and open-source resume builder</1>"
-msgstr "<0>చివరిగా,</0><1>ఉచిత మరియు ఓపెన్-సోర్స్ రిజ్యూమ్ బిల్డర్</1>"
-
 #: src/routes/_home/-sections/faq.tsx
 msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
 msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
 msgstr "<0>ప్రశ్నలు</0><1>వేడి</1><2>అడిగినవి</2>"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
-msgstr "<0>Reactive Resume వాడినందుకు ధన్యవాదాలు! ఈ యాప్ నాకు ఖాళీ సమయంలో, ప్రపంచవ్యాప్తంగా ఉన్న ఓపెన్-సోర్స్ సహాయదారుల అద్భుతమైన మద్దతుతో, ప్రేమతో సృజించబడింది.</0><1>Reactive Resume మీకు సహాయపడిందనుకుంటే, దీనిని అందరికీ ఉచితంగా మరియు ఓపెన్‌గా ఉంచేందుకు మీరు సహాయం చేయాలనుకుంటే, దయచేసి విరాళం ఇవ్వాలని పరిశీలించండి. ప్రతి చిన్న సహాయం అభినందించబడుతుంది!</1>"
+msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
+msgstr "<0>cloudcoffee వాడినందుకు ధన్యవాదాలు! ఈ యాప్ నాకు ఖాళీ సమయంలో, ప్రపంచవ్యాప్తంగా ఉన్న ఓపెన్-సోర్స్ సహాయదారుల అద్భుతమైన మద్దతుతో, ప్రేమతో సృజించబడింది.</0><1>cloudcoffee మీకు సహాయపడిందనుకుంటే, దీనిని అందరికీ ఉచితంగా మరియు ఓపెన్‌గా ఉంచేందుకు మీరు సహాయం చేయాలనుకుంటే, దయచేసి విరాళం ఇవ్వాలని పరిశీలించండి. ప్రతి చిన్న సహాయం అభినందించబడుతుంది!</1>"
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -145,6 +140,10 @@ msgstr "1 నెల"
 #: src/dialogs/api-key/create.tsx
 msgid "1 year"
 msgstr "1 సంవత్సరం"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "12 projects added to your career base"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "12+ Templates"
@@ -208,8 +207,8 @@ msgid "A link to your resume has been copied to clipboard."
 msgstr "మీ రిజ్యూమ్‌కి లింక్ క్లిప్‌బోర్డుకు కాపీ చేయబడింది."
 
 #: src/routes/_home/-sections/testimonials.tsx
-msgid "A lot of people have written to me over the years to share their experiences with Reactive Resume and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
-msgstr "సంవత్సరాలుగా చాలా మందిని Reactive Resume గురించి వారి అనుభవాలను పంచడానికి నాకు రాశారు, ఇది వాళ్లకు ఎంతగా ఉపయోగపడిందో చెబుతూ మెయిల్ చేశారు. వాటినన్నిటినీ చదవడంలో నాకు ఎప్పుడూ అలసట రావద్దు. మీ దగ్గర కూడా పంచుకోవాలనుకునే ఒక కథను ఉంటే, దయచేసి <0>{email}</0>కి ఈమెయిల్ చేసి నాకు చెప్పండి."
+msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
+msgstr "సంవత్సరాలుగా చాలా మందిని cloudcoffee గురించి వారి అనుభవాలను పంచడానికి నాకు రాశారు, ఇది వాళ్లకు ఎంతగా ఉపయోగపడిందో చెబుతూ మెయిల్ చేశారు. వాటినన్నిటినీ చదవడంలో నాకు ఎప్పుడూ అలసట రావద్దు. మీ దగ్గర కూడా పంచుకోవాలనుకునే ఒక కథను ఉంటే, దయచేసి <0>{email}</0>కి ఈమెయిల్ చేసి నాకు చెప్పండి."
 
 #: src/features/settings/pages/profile.tsx
 msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
@@ -226,6 +225,10 @@ msgstr "ఒక పేజీ తిప్పబడింది."
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "<0>అమృత్ పిల్లై</0> రూపొందించిన ఒక అభిరుచి ప్రాజెక్ట్."
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
+msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -377,8 +380,8 @@ msgid "Add an entry, or use projects and volunteer work to show equivalent histo
 msgstr "ఒక ఎంట్రీని జోడించండి లేదా సమానమైన చరిత్రను చూపించడానికి ప్రాజెక్ట్‌లు మరియు స్వచ్ఛంద పనిని ఉపయోగించండి."
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "Add and test a provider before starting an agent thread."
-msgstr "ఏజెంట్ థ్రెడ్‌ను ప్రారంభించే ముందు ప్రొవైడర్‌ను జోడించి పరీక్షించండి."
+msgid "Add and test a provider before using AI features."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/command-palette/pages/navigation.tsx
@@ -451,10 +454,6 @@ msgstr "మీరు ఏమి చేస్తారో వివరిస్త
 msgid "Add your full name under Basics."
 msgstr "బేసిక్స్ కింద మీ పూర్తి పేరుని జోడించండి."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Adjust the resume for a remote-first role that values async communication and ownership."
-msgstr "అసింక్ కమ్యూనికేషన్ మరియు యాజమాన్యానికి విలువనిచ్చే రిమోట్-ఫస్ట్ ఉద్యోగానికి అనుగుణంగా రెజ్యూమెను సర్దుబాటు చేసుకోండి."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Advanced"
 msgstr "అధునాతన"
@@ -471,42 +470,17 @@ msgstr "ఆఫ్రికాన్స్"
 msgid "Against the job description"
 msgstr "ఉద్యోగ వివరణతో పోల్చితే"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "Agent"
-msgstr "ఏజెంట్"
-
-#: src/features/settings/integrations/components/ai-section.tsx
-msgid "Agent ready"
-msgstr "ఏజెంట్ సిద్ధంగా ఉన్నాడు"
-
-#: src/routes/dashboard/-components/sidebar.tsx
-msgid "Agents"
-msgstr "ఏజెంట్లు"
-
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "AI"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable right now. Please try again in a moment."
-msgstr "AI ఏజెంట్ సెటప్ ప్రస్తుతం అందుబాటులో లేదు. దయచేసి కాసేపటి తర్వాత మళ్ళీ ప్రయత్నించండి."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "REDIS_URL మరియు ENCRYPTION_SECRET కాన్ఫిగర్ చేసే వరకు AI ఏజెంట్ సెటప్ అందుబాటులో ఉండదు."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "AI assistant"
-msgstr "AI సహాయకుడు"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "AI provider"
 msgstr "AI ప్రొవైడర్"
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI provider management is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "REDIS_URL మరియు ENCRYPTION_SECRET కాన్ఫిగర్ చేసే వరకు AI ప్రొవైడర్ నిర్వహణ అందుబాటులో ఉండదు."
+msgid "AI provider management is unavailable until ENCRYPTION_SECRET is configured."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI provider management is unavailable. Please try again."
@@ -521,8 +495,8 @@ msgid "AI providers are unavailable until ENCRYPTION_SECRET is configured."
 msgstr "ENCRYPTION_SECRET కాన్ఫిగర్ చేయబడే వరకు AI ప్రొవైడర్‌లు అందుబాటులో ఉండవు."
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI providers require REDIS_URL and ENCRYPTION_SECRET to be configured."
-msgstr "AI ప్రొవైడర్లకు REDIS_URL మరియు ENCRYPTION_SECRET కాన్ఫిగర్ చేయబడి ఉండాలి."
+msgid "AI providers require ENCRYPTION_SECRET to be configured."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Albanian"
@@ -564,10 +538,6 @@ msgstr "మీ రిజ్యూమ్‌ను దిగుమతి చేస
 #: src/routes/_home/-sections/features.tsx
 msgid "And many more..."
 msgstr "మరియు మరెన్నో..."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Answer in your own words"
-msgstr "మీ సొంత మాటల్లో సమాధానం ఇవ్వండి"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -663,14 +633,6 @@ msgstr "దరఖాస్తు చేశారు"
 msgid "Applied on"
 msgstr "దరఖాస్తు చేసిన తేదీ"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approve"
-msgstr "ఆమోదించు"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approved — waiting for the agent…"
-msgstr "ఆమోదించబడింది — ఏజెంట్ కోసం వేచి ఉంది…"
-
 #: src/libs/locale.ts
 msgid "Arabic"
 msgstr "అరబిక్"
@@ -678,8 +640,6 @@ msgstr "అరబిక్"
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 msgid "Archive"
 msgstr "ఆర్కైవ్"
 
@@ -733,16 +693,12 @@ msgstr "అధ్యయన విభాగం"
 msgid "Artificial Intelligence"
 msgstr "ఆర్టిఫిషియల్ ఇంటెలిజెన్స్"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Ask anything about this resume"
-msgstr "ఈ రెజ్యూమె గురించి ఏమైనా అడగండి"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "కారక నిష్పత్తి"
 
 #: src/routes/_home/-sections/sponsors.tsx
-msgid "Atlas Cloud supports Reactive Resume as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
+msgid "Atlas Cloud supports cloudcoffee as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
 msgstr "అట్లాస్ క్లౌడ్, రియాక్టివ్ రెజ్యూమ్‌ను ప్రాజెక్ట్ స్పాన్సర్‌గా సపోర్ట్ చేస్తుంది. మీ కంపెనీ ఈ ప్రాజెక్ట్‌ను స్పాన్సర్ చేయాలనుకుంటే, <0>{sponsorshipEmail}కు ఇమెయిల్ చేయండి.</0> ."
 
 #: src/libs/resume/section.tsx
@@ -763,18 +719,6 @@ msgstr "కవర్ లెటర్‌ను జతచేయండి (PDF)"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Attach a resume file (PDF)"
 msgstr "రెజ్యూమే ఫైల్‌ను జతచేయండి (PDF)"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attach files"
-msgstr "ఫైళ్లను జతచేయండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment"
-msgstr "జతచేయడం"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment uploaded."
-msgstr "అటాచ్‌మెంట్ అప్‌లోడ్ చేయబడింది."
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -819,10 +763,6 @@ msgstr "ప్రామాణీకరణ సెట్టింగ్‌లక�
 msgid "Back to Login"
 msgstr "లాగిన్‌కు తిరిగి వెళ్లండి"
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Back to resumes"
-msgstr "రెస్యూమ్‌లకు తిరిగి వెళ్లండి"
-
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
 msgid "Back to sign in"
@@ -856,10 +796,6 @@ msgstr "బెంగాలీ"
 msgid "Best for applications, sharing, and printing."
 msgstr "దరఖాస్తులు, పంచుకోవడం మరియు ముద్రణకు ఉత్తమం."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Blank draft"
-msgstr "ఖాళీ డ్రాఫ్ట్"
-
 #: src/features/ats-checker/messages.ts
 msgid "Blocker"
 msgstr "బ్లాకర్"
@@ -889,6 +825,10 @@ msgstr "సరిహద్దు వెడల్పు"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "విభజించగలిగేలా రెజ్యూమ్‌ను మామూలు విభాగాలుగా విడగొట్టండి."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Build your base"
+msgstr ""
+
 #: src/features/resume/public/public-resume.tsx
 msgid "Build your own resume"
 msgstr "మీ స్వంత రెజ్యూమెను రూపొందించుకోండి"
@@ -916,6 +856,9 @@ msgstr "బుల్లెట్ జాబితా"
 
 #. Tagline shown in app footer/about area
 #: src/components/ui/copyright.tsx
+msgid "By the communit of th, for the community."
+msgstr ""
+
 #: src/routes/_home/-sections/features.tsx
 #: src/routes/_home/-sections/prefooter.tsx
 msgid "By the community, for the community."
@@ -951,9 +894,9 @@ msgstr "నేను నా రిజ్యూమ్‌ని PDFగా ఎగ�
 msgid "Cancel"
 msgstr "రద్దు చేయండి"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Cannot restore; the resume has changed since this edit was applied."
-msgstr "పునరుద్ధరించడం సాధ్యం కాదు; ఈ సవరణను వర్తింపజేసినప్పటి నుండి పునఃప్రారంభం మారిపోయింది."
+#: src/routes/_home/-sections/hero.tsx
+msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Catalan"
@@ -962,6 +905,10 @@ msgstr "కాటలాన్"
 #: src/components/input/rich-input.tsx
 msgid "Center Align"
 msgstr "మద్యAlign"
+
+#: src/dialogs/resume/template/data.ts
+msgid "Centered identity, monochrome section rules, and compact single-column content for a traditional ATS-friendly resume."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cerebras"
@@ -992,11 +939,6 @@ msgstr "మీ అభిప్రాయం మారిందా? మీ రి�
 #: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "చేంజ్‌లాగ్"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Chat"
-msgstr "చాట్"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
@@ -1030,6 +972,10 @@ msgstr "డ్రాఫ్ట్‌ను తనిఖీ చేయడం"
 msgid "Checking…"
 msgstr "చెక్ చేస్తోంది…"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Checkout redesign · 18% more conversions"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
 msgstr "చైనీస్ (సరళీకృత)"
@@ -1037,10 +983,6 @@ msgstr "చైనీస్ (సరళీకృత)"
 #: src/libs/locale.ts
 msgid "Chinese (Traditional)"
 msgstr "చైనీస్ (సాంప్రదాయ)"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a model and resume draft."
-msgstr "ఒక నమూనా మరియు రెజ్యూమె ముసాయిదాను ఎంచుకోండి."
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Choose a PDF"
@@ -1052,13 +994,9 @@ msgstr "PDFని ఎంచుకోండి"
 msgid "Choose a preset or custom shade."
 msgstr "ప్రీసెట్‌ను లేదా కస్టమ్ షేడ్‌ను ఎంచుకోండి."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a resume"
-msgstr "రెజ్యూమెను ఎంచుకోండి"
-
-#: src/routes/agent/index.tsx
-msgid "Choose an existing conversation from the sidebar, or start a new draft-focused thread."
-msgstr "సైడ్‌బార్ నుండి ఇప్పటికే ఉన్న సంభాషణను ఎంచుకోండి లేదా డ్రాఫ్ట్‌పై దృష్టి సారించే కొత్త థ్రెడ్‌ను ప్రారంభించండి."
+#: src/dialogs/resume/template/gallery.tsx
+msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
 msgid "Choose PDF, DOCX, Markdown, or JSON. Export your resume and cover letter separately when available."
@@ -1087,9 +1025,39 @@ msgstr "స్పష్టమైన ఎంపిక"
 msgid "Click here to select a file to import"
 msgstr "ఇంపోర్ట్ చేయడానికి ఫైల్ ను ఎంచుకోవడానికి ఇక్కడ క్లిక్ చేయండి"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Close AI assistant"
-msgstr "AI సహాయకుడిని మూసివేయండి"
+#: src/routes/_home/-sections/header.tsx
+msgid "cloudcoffee - Go to homepage"
+msgstr "cloudcoffee - హోమ్‌పేజీకి వెళ్ళండి"
+
+#. Import source option for current cloudcoffee JSON format
+#: src/dialogs/resume/import.tsx
+msgid "cloudcoffee (JSON)"
+msgstr "ప్రతిస్పందించే రెస్యూమ్ (JSON)"
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
+msgstr "cloudcoffee తన ఉత్సాహభరిత కమ్యూనిటీకి ధన్యవాదాలు విశేషంగా పెరుగుతోంది. ఈ ప్రాజెక్ట్‌కు పురోగతి చేకూరిందంటే, దీన్ని మెరుగుపరిచేందుకు తన సమయం మరియు నైపుణ్యాలను అంకితం చేసిన అనేకవ్యక్తులందరికి రుణపడి ఉంది. GitHub లో దాని ఫీచర్లను మెరుగుపరిచిన డెవలపర్లు, Crowdin లో చేసిన అనువాదాలు ద్వారా ఇది పెద్ద వర్గ ప్రేక్షకులకు అందుబాటులోకి తీసుకువచ్చిన భాషా నిపుణులు, ఇంకా దీని అభివృద్ధిని కొనసాగించేందుకు దానం చేసిన వారి సహకారం — వీరందరినీ మెచ్చుకుంటున్నాం."
+
+#: src/routes/_home/-sections/donate.tsx
+msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
+msgstr "cloudcoffee ఉచితమైన ఓపెన్-సోర్స్ ప్రాజెక్ట్, ప్రేమతో నిర్మించబడినది మరియు నేను మరియు సహకారి కమ్యూనిటీ మరమ్మతులు & నిర్వహణ చేస్తున్నారు. మీ విరాళాలు దీన్ని కొనసాగించడంలో మద్దతు ఇస్తాయి."
+
+#: src/components/ui/donation-toast.tsx
+msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
+msgstr "రియాక్టివ్ రెజ్యూమ్ ఉచితం మరియు ఓపెన్ సోర్స్. ఇది మీకు సహాయపడినట్లయితే, దయచేసి విరాళం ఇవ్వడాన్ని పరిగణించండి."
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
+msgstr "cloudcoffee ఓపెన్‌సోర్స్‌, గోప్యతపై దృష్టి సారించినది మరియు పూర్తిగా ఉచితం. ఇతర జీవన చరిత్ర తయారీదార్ల వలె ప్రకటనలను చూపించదు, మీ డేటాను ట్రాక్ చేయదు, లేదా ఫీచర్లను వాలుతో పరిమితం చేయదు."
+
+#: src/routes/_home/-sections/sponsors.tsx
+msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
+msgstr "కంపెనీలు దీని వెనుక ఉన్న కృషికి మద్దతు ఇవ్వడానికి ఎంచుకోవడం వల్ల రియాక్టివ్ రెజ్యూమ్ ఉచితంగా, ఓపెన్-సోర్స్‌గా మరియు స్వతంత్రంగా కొనసాగుతోంది. వారి స్పాన్సర్‌షిప్ కమ్యూనిటీ కోసం హోస్టింగ్, నిర్వహణ మరియు నిరంతర అభివృద్ధికి నిధులు సమకూర్చడంలో సహాయపడుతుంది."
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
+msgstr "రియాక్టివ్ రెజ్యూమ్ v<0>{__APP_VERSION__}</0>"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cohere"
@@ -1131,10 +1099,6 @@ msgstr "కంపెనీ / పాత్ర"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Company A–Z"
 msgstr "కంపెనీ A–Z"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Compare this resume against this role URL and update keywords while keeping the voice concise and credible."
-msgstr "ఈ రెజ్యూమెను ఈ రోల్ URLతో సరిపోల్చి, మీ శైలి సంక్షిప్తంగా మరియు విశ్వసనీయంగా ఉండేలా చూసుకుంటూ కీలకపదాలను అప్‌డేట్ చేయండి."
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Completely free, forever, no hidden costs."
@@ -1209,20 +1173,12 @@ msgid "Continue where you left off"
 msgstr "మీరు నిలిపిన చోట continued చేయండి"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing an existing resume you created using Reactive Resume or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from Reactive Resume."
-msgstr "మీరు Reactive Resume లేదా ఇతర రిజ్యూమ్ బిల్డర్ ఉపయోగించి సృష్టించిన ఇప్పటికే ఉన్న రిజ్యూమ్‌ను ఇంపోర్ట్ చేయడం ద్వారా మీరు నిలిపిన చోట continued చేయండి. మద్దతిచేసే ఫార్మాట్లలో PDF, Microsoft Word, ఇంకా Reactive Resume నుండి JSON ఫైళ్లు ఉన్నాయి."
+msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
+msgstr "మీరు cloudcoffee లేదా ఇతర రిజ్యూమ్ బిల్డర్ ఉపయోగించి సృష్టించిన ఇప్పటికే ఉన్న రిజ్యూమ్‌ను ఇంపోర్ట్ చేయడం ద్వారా మీరు నిలిపిన చోట continued చేయండి. మద్దతిచేసే ఫార్మాట్లలో PDF, Microsoft Word, ఇంకా cloudcoffee నుండి JSON ఫైళ్లు ఉన్నాయి."
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
 msgstr "కాంట్రిబ్యూషన్లు బగ్ ఫిక్స్‌లు, సెక్యూరిటీ అప్‌డేట్స్, మరియు మెరుగుదలల కోసం నిధులు సమకూరుస్తాయి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation copied."
-msgstr "సంభాషణ నకలు చేయబడింది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation JSON copied."
-msgstr "సంభాషణ JSON కాపీ చేయబడింది."
 
 #: src/features/resume/stylesheet/legacy-banner.tsx
 msgid "Converted stylesheet draft"
@@ -1235,7 +1191,6 @@ msgstr "క్లిప్‌బోర్డ్‌కు కాపీ చేయ�
 #. Action button to copy two-factor backup codes to clipboard
 #: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
-#: src/routes/agent/-components/agent-chat.tsx
 msgid "Copy"
 msgstr "కాపీ"
 
@@ -1246,10 +1201,6 @@ msgstr "మీరు మీ పరికరాన్ని కోల్పోత
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Copy Backup Codes"
 msgstr "బ్యాకప్ కోడ్‌లను కాపీ చేయండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Copy JSON"
-msgstr "JSONని కాపీ చేయండి"
 
 #. Accessible label for the button that copies the two-factor secret key
 #: src/dialogs/auth/enable-two-factor.tsx
@@ -1289,10 +1240,6 @@ msgstr "సంవత్సరాన్ని సరిచేయండి, లే
 #: src/dialogs/resume/import.tsx
 msgid "Could not reach the AI provider. Please try again."
 msgstr "AI ప్రొవైడర్‌ను చేరుకోవడం సాధ్యపడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Could not restore this patch."
-msgstr "ఈ ప్యాచ్‌ను పునరుద్ధరించలేకపోయాము."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Could not verify provider connection."
@@ -1476,10 +1423,6 @@ msgstr "నమూనా రిజ్యూమ్ సృష్టించండ�
 msgid "Create as many resumes as you want, without limits."
 msgstr "మీరు ఎంతైనా ఎక్కువ రిజ్యూమ్‌లు సృష్టించండి, ఎలాంటి పరిమితులు లేవు."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Create from scratch"
-msgstr "మొదటి నుండి సృష్టించండి"
-
 #. Call-to-action link from login page to account registration page
 #: src/features/auth/pages/login.tsx
 msgid "Create one now"
@@ -1585,10 +1528,6 @@ msgstr "తేదీలు"
 msgid "Decrease indent"
 msgstr "ఇండెంట్‌ను తగ్గించండి"
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Decrease zoom"
-msgstr "జూమ్‌ను తగ్గించండి"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Deep check"
 msgstr "డీప్ చెక్"
@@ -1612,8 +1551,6 @@ msgstr "డిగ్రీ"
 #: src/features/applications/components/table-view.tsx
 #: src/features/settings/authentication/components/passkeys.tsx
 #: src/features/settings/pages/api-keys.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1642,11 +1579,6 @@ msgstr "చిత్రాన్ని తొలగించండి"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Delete provider"
 msgstr "ప్రొవైడర్‌ను తొలగించండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Delete this agent thread?"
-msgstr "ఈ ఏజెంట్ థ్రెడ్‌ను తొలగించాలా?"
 
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -1678,14 +1610,6 @@ msgstr "మీ API కీ తొలగించబడుతోంది..."
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
 msgstr "మీ రిజ్యూమ్‌ను తొలగిస్తున్నారు..."
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Denied — waiting for the agent…"
-msgstr "తిరస్కరించబడింది — ఏజెంట్ కోసం వేచి ఉంది…"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Deny"
-msgstr "తిరస్కరించు"
 
 #: src/features/ats-checker/messages.ts
 msgid "Describe each role with short bullets. Solid paragraphs are harder to skim and to segment."
@@ -1761,12 +1685,8 @@ msgid "Donate"
 msgstr "విరాళం ఇవ్వండి"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "Reactive Resume కు దానం చేయండి"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Done"
-msgstr "పూర్తయింది"
+msgid "Donate to cloudcoffee"
+msgstr "cloudcoffee కు దానం చేయండి"
 
 #. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
@@ -1787,7 +1707,6 @@ msgid "Download options"
 msgstr "డౌన్‌లోడ్ ఎంపికలు"
 
 #: src/features/resume/public/public-resume.tsx
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "Download PDF"
 msgstr "PDF ను డౌన్‌లోడ్ చేయండి"
 
@@ -1829,10 +1748,6 @@ msgstr "సర్వనామాలను తొలగించి క్రి�
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Duplicate"
 msgstr "నకిలీ"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Duplicate as AI Draft"
-msgstr "AI డ్రాఫ్ట్‌గా నకలు"
 
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
@@ -1883,10 +1798,6 @@ msgstr "ఫుల్‌స్క్రీన్ మోడ్‌లో కంట�
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Edit date"
 msgstr "తేదీని సవరించండి"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Edit declined"
-msgstr "సవరణ తిరస్కరించబడింది"
 
 #. Resume card context menu action to edit resume metadata
 #. Resume card dropdown action to edit resume metadata
@@ -2052,12 +1963,12 @@ msgid "Expires on {0}"
 msgstr "{0}న గడువు ముగుస్తుంది"
 
 #: src/routes/_home/-sections/templates.tsx
-msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. Reactive Resume currently offers 12 templates, with more on the way."
-msgstr "మా విభిన్న టెంప్లేట్‌ల ఎంపికను అన్వేషించండి, ప్రతీదీ వేర్వేరు శైలులు, వృత్తులు, వ్యక్తిత్వాలను కన్నడేలా రూపొందించబడింది. Reactive Resume ప్రస్తుతం 12 టెంప్లేట్స్‌ను అందిస్తుంది, ఇంకా మరిన్ని త్వరలో అందుబాటులోకి రానున్నాయి."
+msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
+msgstr "మా విభిన్న టెంప్లేట్‌ల ఎంపికను అన్వేషించండి, ప్రతీదీ వేర్వేరు శైలులు, వృత్తులు, వ్యక్తిత్వాలను కన్నడేలా రూపొందించబడింది. cloudcoffee ప్రస్తుతం 12 టెంప్లేట్స్‌ను అందిస్తుంది, ఇంకా మరిన్ని త్వరలో అందుబాటులోకి రానున్నాయి."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "మీ అప్లికేషన్లతో Reactive Resumeను సమ్మిళితం చేయడాన్ని నేర్చుకునేందుకు API డాక్యుమెంటేషన్‌ను అన్వేషించండి. డీటైల్డ్ ఎండ్‌పాయింట్లు, రిక్వెస్ట్ ఉదాహరణలు, మరియు ధృవీకరణ పద్ధతులను కనుగొనండి."
+msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
+msgstr "మీ అప్లికేషన్లతో cloudcoffeeను సమ్మిళితం చేయడాన్ని నేర్చుకునేందుకు API డాక్యుమెంటేషన్‌ను అన్వేషించండి. డీటైల్డ్ ఎండ్‌పాయింట్లు, రిక్వెస్ట్ ఉదాహరణలు, మరియు ధృవీకరణ పద్ధతులను కనుగొనండి."
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -2095,15 +2006,6 @@ msgstr "ఎటువంటి నిరీక్షణ లేదా ఆలస్
 msgid "Exported pipeline-flow.png"
 msgstr "pipeline-flow.png ఎగుమతి చేయబడింది"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Failed"
-msgstr "విఫలమైంది"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to archive thread."
-msgstr "థ్రెడ్‌ను ఆర్కైవ్ చేయడంలో విఫలమైంది."
-
 #. Fallback toast when creating an API key fails
 #: src/dialogs/api-key/create.tsx
 msgid "Failed to create API key. Please try again."
@@ -2127,11 +2029,6 @@ msgstr "ప్రొవైడర్‌ను తొలగించడంలో �
 #: src/features/settings/pages/api-keys.tsx
 msgid "Failed to delete the API key. Please try again."
 msgstr "API కీని తొలగించడంలో విఫలమయ్యాము. దయచేసి మళ్ళీ ప్రయత్నించండి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to delete thread."
-msgstr "థ్రెడ్‌ను తొలగించడంలో విఫలమయ్యాను."
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
@@ -2212,14 +2109,6 @@ msgstr "సైన్ ఇన్ విఫలమైంది. దయచేసి �
 msgid "Failed to sign out. Please try again."
 msgstr "సైన్ అవుట్ చేయడంలో విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Failed to start agent thread."
-msgstr "ఏజెంట్ థ్రెడ్‌ను ప్రారంభించడంలో విఫలమైంది."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Failed to start the AI assistant."
-msgstr "AI సహాయకుడిని ప్రారంభించడంలో విఫలమయ్యాము."
-
 #. Fallback toast when unlinking a social authentication provider fails
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Failed to unlink provider. Please try again."
@@ -2228,10 +2117,6 @@ msgstr "ప్రొవైడర్‌ను అన్‌లింక్ చే�
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "ప్రొవైడర్‌ను అప్‌డేట్ చేయడంలో విఫలమైంది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to update thread settings."
-msgstr "థ్రెడ్ సెట్టింగ్‌లను నవీకరించడంలో విఫలమైంది."
 
 #. Fallback toast when changing account password fails
 #: src/dialogs/auth/change-password.tsx
@@ -2242,10 +2127,6 @@ msgstr "మీ పాస్‌వర్డ్‌ను అప్‌డేట్ 
 #: src/features/settings/pages/profile.tsx
 msgid "Failed to update your profile. Please try again."
 msgstr "మీ ప్రొఫైల్‌ను అప్‌డేట్ చేయడంలో విఫలమయ్యాము. దయచేసి మళ్ళీ ప్రయత్నించండి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to upload attachment."
-msgstr "అటాచ్‌మెంట్‌ను అప్‌లోడ్ చేయడంలో విఫలమయ్యాము."
 
 #. Fallback toast when uploading profile picture for resume fails
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
@@ -2296,10 +2177,6 @@ msgstr "ద్వారా ఫిల్టర్ చేయండి"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Filter by tags"
 msgstr "ట్యాగ్‌ల ఆధారంగా ఫిల్టర్ చేయండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Find weak bullets and rewrite them with stronger outcomes, numbers, scope, and sharper verbs."
-msgstr "బలహీనమైన అంశాలను గుర్తించి, వాటిని మరింత బలమైన ఫలితాలు, సంఖ్యలు, పరిధి మరియు పదునైన క్రియలతో తిరిగి రాయండి."
 
 #: src/libs/locale.ts
 msgid "Finnish"
@@ -2433,10 +2310,6 @@ msgstr "యాదృచ్ఛిక పేరు రూపొందించం�
 msgid "German"
 msgstr "జర్మన్"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Get Started"
-msgstr "స్టార్ట్ చేయండి"
-
 #. Authentication provider display name in account settings
 #. Brand name label for GitHub social sign-in button
 #: src/features/auth/components/social-auth.tsx
@@ -2444,6 +2317,10 @@ msgstr "స్టార్ట్ చేయండి"
 #: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "గిట్‌హబ్"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "GitHub connected"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Give every role a period, such as \"Jan 2020 - Present\", so your timeline can be reconstructed."
@@ -2558,10 +2435,6 @@ msgstr "ఇంకా అనుభవజ్ఞులైన సహయోగుల�
 msgid "Help translate the app to your language"
 msgstr "మీ భాషలో యాప్‌ను అనువదించడంలో సహాయం చేయండి"
 
-#: src/dialogs/resume/template/gallery.tsx
-msgid "Here's a range of resume templates for different professions and personalities. Whether you prefer modern or classic, bold or simple, there is a design to match you. Look through the options below and choose a template that fits your style."
-msgstr "వివిధ వృత్తులు మరియు వ్యక్తిత్వాల కోసం ఇక్కడ ఎన్నో రిజ్యూమ్ టెంప్లేట్లు అందుబాటులో ఉన్నాయి. మీరు ఆధునిక లేదా సంప్రదాయ, ధైర్యంగా లేదా సరళంగా ఇష్టపడినా, మీకు సరైన డిజైన్ ఇక్కడ ఉంది. క్రింద ఉన్న ఎంపికలను పరిశీలించండి మరియు మీ శైలికి సరిపోయే టెంప్లేట్‌ను ఎంపిక చేసుకోండి."
-
 #: src/dialogs/api-key/create.tsx
 msgid "Here's your new API key"
 msgstr "ఇక్కడ మీ కొత్త API కీ ఉంది"
@@ -2657,10 +2530,6 @@ msgstr "హంగేరియన్"
 msgid "Icon"
 msgstr "ఐకాన్"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Identify gaps for an applicant tracking system and apply only high-confidence keyword improvements."
-msgstr "అప్లికెంట్ ట్రాకింగ్ సిస్టమ్‌లోని లోపాలను గుర్తించి, అధిక విశ్వసనీయత గల కీవర్డ్ మెరుగుదలలను మాత్రమే వర్తింపజేయండి."
-
 #: src/features/ats-checker/messages.ts
 msgid "If it came from a scan, that is expected. Otherwise remove it; recruiters read it as keyword stuffing."
 msgstr "అది స్కాన్ నుండి వచ్చినట్లయితే, అది ఊహించదగినదే. లేకపోతే దాన్ని తొలగించండి; రిక్రూటర్లు దీన్ని కీవర్డ్ స్టఫింగ్‌గా చదువుతారు."
@@ -2736,10 +2605,6 @@ msgstr "రెండు లైన్లు ఒకటిగా విలీనం
 msgid "Increase them so content stays inside the reliably read area."
 msgstr "వాటిని పెంచండి, తద్వారా కంటెంట్ విశ్వసనీయంగా చదివే ప్రాంతంలోనే ఉంటుంది."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Increase zoom"
-msgstr "జూమ్‌ను పెంచండి"
-
 #: src/libs/locale.ts
 msgid "Indonesian"
 msgstr "ఇండోనేషియన్"
@@ -2783,12 +2648,12 @@ msgid "Invalid AI provider configuration."
 msgstr "చెల్లని AI ప్రొవైడర్ కాన్ఫిగరేషన్."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume available in multiple languages?"
-msgstr "Reactive Resume బహుళ భాషల్లో అందుబాటులో ఉందా?"
+msgid "Is cloudcoffee available in multiple languages?"
+msgstr "cloudcoffee బహుళ భాషల్లో అందుబాటులో ఉందా?"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume really free?"
-msgstr "Reactive Resume నిజంగా ఉచితమా?"
+msgid "Is cloudcoffee really free?"
+msgstr "cloudcoffee నిజంగా ఉచితమా?"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2982,10 +2847,6 @@ msgstr "టెక్స్ట్‌ను హారిజాంటల్‌గ�
 msgid "Layout"
 msgstr "విన్యాసం"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Learn More"
-msgstr "మరింత తెలుసుకోండి"
-
 #: src/dialogs/resume/import.tsx
 #: src/hooks/use-form-blocker.tsx
 msgid "Leave"
@@ -3055,16 +2916,16 @@ msgid "Line Height"
 msgstr "లైన్ హైట్"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "Reactive Resumeను లింక్ చేయండి (సిఫార్సు చేయబడింది)"
+msgid "Link a cloudcoffee (recommended)"
+msgstr "cloudcoffeeను లింక్ చేయండి (సిఫార్సు చేయబడింది)"
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "మీ సరిపోలికను స్కోర్ చేయడానికి మరియు అనుకూలీకరించిన కాపీని రూపొందించడానికి ఒక రెజ్యూమెను లింక్ చేసి ఉద్యోగ వివరణను అతికించండి (సవరించు)."
 
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "లింక్ చేసిన Reactive Resume"
+msgid "Linked cloudcoffee"
+msgstr "లింక్ చేసిన cloudcoffee"
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
@@ -3079,8 +2940,8 @@ msgid "LinkedIn, Referral…"
 msgstr "LinkedIn, రెఫరల్…"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Linking a Reactive Resume enables AI match scoring and tailoring."
-msgstr "Reactive Resumeను లింక్ చేయడం AI మ్యాచ్ స్కోరింగ్ మరియు టైలరింగ్‌ను ప్రారంభిస్తుంది."
+msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
+msgstr "cloudcoffeeను లింక్ చేయడం AI మ్యాచ్ స్కోరింగ్ మరియు టైలరింగ్‌ను ప్రారంభిస్తుంది."
 
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Linking your {providerName} account..."
@@ -3112,14 +2973,8 @@ msgid "Loading providers…"
 msgstr "ప్రొవైడర్లను లోడ్ చేస్తోంది…"
 
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 msgid "Loading resumes…"
 msgstr "పునఃప్రారంభాలను లోడ్ చేస్తోంది…"
-
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Loading threads…"
-msgstr "థ్రెడ్‌లు లోడ్ అవుతున్నాయి…"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Loading…"
@@ -3174,10 +3029,6 @@ msgstr "ప్రధానం"
 msgid "Main navigation"
 msgstr "ముఖ్య నావిగేషన్"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Make the experience section more results-oriented and remove vague responsibilities."
-msgstr "అనుభవ విభాగాన్ని మరింత ఫలిత-ఆధారితంగా మార్చి, అస్పష్టమైన బాధ్యతలను తొలగించండి."
-
 #: src/features/ats-checker/messages.ts
 msgid "Make the visible text and the destination match."
 msgstr "కనిపించే టెక్స్ట్ మరియు గమ్యస్థానం సరిపోలేలా చేయండి."
@@ -3218,6 +3069,10 @@ msgstr "తిరస్కరించబడిందిగా గుర్త�
 msgid "Match scoring failed."
 msgstr "సరిపోలిక స్కోరింగ్ విఫలమైంది."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Matched to Senior Product Engineer"
+msgstr ""
+
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
 msgstr "మధ్యస్థ ప్రభావం"
@@ -3227,10 +3082,6 @@ msgstr "మధ్యస్థ ప్రభావం"
 #: src/dialogs/resume/import.tsx
 msgid "Microsoft Word"
 msgstr "మైక్రోసాఫ్ట్ వర్డ్"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Missing working resume"
-msgstr "తప్పిపోయిన వర్కింగ్ రెజ్యూమె"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Mistral AI"
@@ -3364,23 +3215,9 @@ msgstr "కొత్త విభాగం"
 msgid "New tag…"
 msgstr "కొత్త ట్యాగ్…"
 
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "New thread"
-msgstr "కొత్త థ్రెడ్"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "New Thread"
-msgstr "కొత్త థ్రెడ్"
-
 #: src/routes/_home/-sections/features.tsx
 msgid "No Advertising, No Tracking"
 msgstr "ప్రకటనలు లేవు, ట్రాకింగ్ లేదు"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "No AI provider connected"
-msgstr "ఏ AI ప్రొవైడర్ కనెక్ట్ కాలేదు"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3484,10 +3321,6 @@ msgstr "పరీక్షించిన ప్రొవైడర్ లేద�
 msgid "No text could be read from this file."
 msgstr "ఈ ఫైల్ నుండి టెక్స్ట్ చదవలేకపోయాం."
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "No threads yet."
-msgstr "ఇంకా థ్రెడ్‌లు లేవు."
-
 #: src/features/ats-checker/messages.ts
 msgid "No work-experience section was found."
 msgstr "వర్క్-ఎక్స్‌పీరియన్స్ విభాగం కనుగొనబడలేదు."
@@ -3586,14 +3419,6 @@ msgstr "మొదటి పేజీలు మాత్రమే చెక్ �
 msgid "Open"
 msgstr "ఓపెన్"
 
-#: src/routes/builder/$resumeId/-components/dock.tsx
-msgid "Open AI agent"
-msgstr "ఓపెన్ AI ఏజెంట్"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Open AI assistant"
-msgstr "ఓపెన్ AI అసిస్టెంట్"
-
 #. Button label to open the user's default email app
 #: src/features/auth/pages/forgot-password.tsx
 msgid "Open Email Client"
@@ -3602,10 +3427,6 @@ msgstr "ఈమెయిల్ క్లైంట్ తెరవండి"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "ఫోకస్ మోడ్‌ను తెరవండి"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Open in builder"
-msgstr "బిల్డర్‌లో తెరవండి"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Open Integrations Settings"
@@ -3640,14 +3461,6 @@ msgstr "ఓపెన్‌రౌటర్"
 #: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "కొత్త ట్యాబ్‌లో తెరవబడుతుంది"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent"
-msgstr "ఏజెంట్ కోసం ఐచ్ఛిక గమనిక"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent…"
-msgstr "ఏజెంట్ కోసం ఐచ్ఛిక గమనిక…"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -3775,30 +3588,6 @@ msgstr "మీ రెజ్యూమ్‌లో దేని పదాలు �
 msgid "Pasting fills the fields automatically."
 msgstr "అతికిస్తే ఫీల్డ్‌లు ఆటోమేటిక్‌గా నిండుతాయి."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch applied"
-msgstr "ప్యాచ్ వర్తింపజేయబడింది"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch conflicted"
-msgstr "ప్యాచ్ వైరుధ్యం"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch failed"
-msgstr "ప్యాచ్ విఫలమైంది"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch pending"
-msgstr "ప్యాచ్ పెండింగ్‌లో ఉంది"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back"
-msgstr "ప్యాచ్ వెనక్కి తీసుకోబడింది"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back."
-msgstr "ప్యాచ్ వెనక్కి తీసుకోబడింది."
-
 #. File format label in import source selector
 #. File format label in import source selector
 #: src/dialogs/resume/import.tsx
@@ -3882,10 +3671,6 @@ msgstr "దయచేసి PDF ఫైల్‌ను అప్‌లోడ్ �
 msgid "Please wait while your PDF is being generated..."
 msgstr "మీ PDF రూపొందించబడుతోంది, దయచేసి వేచి ఉండండి..."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Please wait while your PDF is being generated…"
-msgstr "మీ PDF రూపొందించబడుతున్నంత వరకు దయచేసి వేచి ఉండండి…"
-
 #: src/libs/locale.ts
 msgid "Polish"
 msgstr "పోలిష్"
@@ -3922,10 +3707,6 @@ msgstr "సింగిల్ కాలమ్‌కు ప్రాధాన్�
 #: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "ప్రాధాన్యతలు"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Prepare a conservative patch that improves clarity without changing my career narrative."
-msgstr "నా కెరీర్ కథనాన్ని మార్చకుండా స్పష్టతను మెరుగుపరిచే ఒక సంప్రదాయబద్ధమైన ప్యాచ్‌ను సిద్ధం చేయండి."
 
 #: src/features/resume/export/use-resume-export.ts
 msgid "Preparing your resume for printing..."
@@ -3984,6 +3765,10 @@ msgstr "ప్రొఫైల్స్"
 msgid "Progress Bar"
 msgstr "ప్రోగ్రెస్ బార్"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Project captured"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4010,6 +3795,10 @@ msgstr "ప్రొవైడర్ కనెక్షన్ ధృవీకర�
 msgid "Provider model"
 msgstr "ప్రొవైడర్ మోడల్"
 
+#: src/features/settings/integrations/components/ai-section.tsx
+msgid "Provider ready"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4023,10 +3812,6 @@ msgstr "పబ్లిషర్"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "మొదటి పేజీ పైభాగానికి దగ్గరగా ఒక సాదా ఇమెయిల్ చిరునామాను ఉంచండి. చాలా సిస్టమ్‌లు మిమ్మల్ని దీని కిందే ఫైల్ చేస్తాయి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Raw JSON"
-msgstr "ముడి JSON"
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -4056,60 +3841,14 @@ msgstr "ఫాంట్‌లు ఎంబెడ్ చేసి తిరిగ
 msgid "Re-score"
 msgstr "మళ్లీ స్కోర్ చేయండి"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - హోమ్‌పేజీకి వెళ్ళండి"
-
-#. Import source option for current Reactive Resume JSON format
-#: src/dialogs/resume/import.tsx
-msgid "Reactive Resume (JSON)"
-msgstr "ప్రతిస్పందించే రెస్యూమ్ (JSON)"
-
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "Reactive Resume continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "Reactive Resume తన ఉత్సాహభరిత కమ్యూనిటీకి ధన్యవాదాలు విశేషంగా పెరుగుతోంది. ఈ ప్రాజెక్ట్‌కు పురోగతి చేకూరిందంటే, దీన్ని మెరుగుపరిచేందుకు తన సమయం మరియు నైపుణ్యాలను అంకితం చేసిన అనేకవ్యక్తులందరికి రుణపడి ఉంది. GitHub లో దాని ఫీచర్లను మెరుగుపరిచిన డెవలపర్లు, Crowdin లో చేసిన అనువాదాలు ద్వారా ఇది పెద్ద వర్గ ప్రేక్షకులకు అందుబాటులోకి తీసుకువచ్చిన భాషా నిపుణులు, ఇంకా దీని అభివృద్ధిని కొనసాగించేందుకు దానం చేసిన వారి సహకారం — వీరందరినీ మెచ్చుకుంటున్నాం."
-
-#: src/routes/_home/-sections/donate.tsx
-msgid "Reactive Resume is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
-msgstr "Reactive Resume ఉచితమైన ఓపెన్-సోర్స్ ప్రాజెక్ట్, ప్రేమతో నిర్మించబడినది మరియు నేను మరియు సహకారి కమ్యూనిటీ మరమ్మతులు & నిర్వహణ చేస్తున్నారు. మీ విరాళాలు దీన్ని కొనసాగించడంలో మద్దతు ఇస్తాయి."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Reactive Resume అనేది ఉచితమైన, ఓపెన్-సోర్స్ రిజ్యూమ్ బిల్డర్, ఇది మీ రిజ్యూమ్‌ను సృష్టించడం, నవీకరించడం మరియు పంచుకోవడం ప్రక్రియను సులభతరం చేస్తుంది."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "రియాక్టివ్ రెజ్యూమ్ ఉచితం మరియు ఓపెన్ సోర్స్. ఇది మీకు సహాయపడినట్లయితే, దయచేసి విరాళం ఇవ్వడాన్ని పరిగణించండి."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "Reactive Resume ఓపెన్‌సోర్స్‌, గోప్యతపై దృష్టి సారించినది మరియు పూర్తిగా ఉచితం. ఇతర జీవన చరిత్ర తయారీదార్ల వలె ప్రకటనలను చూపించదు, మీ డేటాను ట్రాక్ చేయదు, లేదా ఫీచర్లను వాలుతో పరిమితం చేయదు."
-
-#: src/routes/_home/-sections/sponsors.tsx
-msgid "Reactive Resume stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
-msgstr "కంపెనీలు దీని వెనుక ఉన్న కృషికి మద్దతు ఇవ్వడానికి ఎంచుకోవడం వల్ల రియాక్టివ్ రెజ్యూమ్ ఉచితంగా, ఓపెన్-సోర్స్‌గా మరియు స్వతంత్రంగా కొనసాగుతోంది. వారి స్పాన్సర్‌షిప్ కమ్యూనిటీ కోసం హోస్టింగ్, నిర్వహణ మరియు నిరంతర అభివృద్ధికి నిధులు సమకూర్చడంలో సహాయపడుతుంది."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "రియాక్టివ్ రెజ్యూమ్ v<0>{__APP_VERSION__}</0>"
-
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume v4 (JSON)"
 msgstr "రియాక్టివ్ రెజ్యూమ్ v4 (JSON)"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read an attachment"
-msgstr "అటాచ్‌మెంట్‌ను చదివింది"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Read the Applying Custom Styles guide."
 msgstr "కస్టమ్ స్టైల్స్ వర్తింపజేయడం గైడ్‌ను చదవండి."
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read the resume"
-msgstr "రెజ్యూమెను చదివింది"
 
 #: src/features/ats-checker/messages.ts
 msgid "Readability"
@@ -4287,32 +4026,18 @@ msgstr "మీ పాస్‌వర్డ్‌ను రీసెట్ చే
 msgid "Resources"
 msgstr "వనరులు"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore"
-msgstr "పునరుద్ధరించండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore the resume to before this patch?"
-msgstr "ఈ ప్యాచ్‌కు ముందు స్థితికి రెజ్యూమెను పునరుద్ధరించాలా?"
-
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
 msgstr "ఈ వెర్షన్‌ను పునరుద్ధరించాలా?"
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/resume/export/download-dialog.tsx
-#: src/routes/agent/-components/resume-pane.tsx
-#: src/routes/agent/$threadId.tsx
 msgid "Resume"
 msgstr "పునఃప్రారంభం"
 
 #: src/features/resume/preview/resume-accessible-text.tsx
 msgid "Resume content"
 msgstr "పునఃప్రారంభ కంటెంట్"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Resume edit"
-msgstr "రెజ్యూమె సవరణ"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Resume file"
@@ -4326,9 +4051,9 @@ msgstr "రెజ్యూమ్ లింక్ చేయబడింది"
 msgid "Resume options"
 msgstr "పునఃప్రారంభ ఎంపికలు"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Resume patch"
-msgstr "రెస్యూమ్ ప్యాచ్"
+#: src/routes/_home/-sections/hero.tsx
+msgid "Resume tailored"
+msgstr ""
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
@@ -4338,37 +4063,13 @@ msgstr "రెస్యూమ్ ప్యాచ్"
 msgid "Resumes"
 msgstr "రిజ్యూమ్స్"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Retry"
-msgstr "మళ్ళీ ప్రయత్నించండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review edits"
-msgstr "సవరణలను సమీక్షించండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review the resume against a job description and ask me questions before changing uncertain sections."
-msgstr "ఉద్యోగ వివరణతో రెజ్యూమెను సరిపోల్చి చూసుకోండి మరియు సందేహాస్పదమైన విభాగాలలో మార్పులు చేసే ముందు నన్ను ప్రశ్నలు అడగండి."
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Review the writing with AI"
 msgstr "AIతో రచనను సమీక్షించండి"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Review this edit"
-msgstr "ఈ సవరణను సమీక్షించండి"
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Reviewing…"
 msgstr "సమీక్షిస్తోంది…"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rework the summary so it targets a senior engineering manager role without sounding generic."
-msgstr "సారాంశాన్ని సాధారణంగా అనిపించకుండా, సీనియర్ ఇంజనీరింగ్ మేనేజర్ పాత్రను లక్ష్యంగా చేసుకునే విధంగా తిరిగి రూపొందించండి."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rewrite this resume for a startup founder-to-product-lead transition with clear business impact."
-msgstr "స్పష్టమైన వ్యాపార ప్రభావంతో, స్టార్టప్ వ్యవస్థాపకుడి నుండి ప్రొడక్ట్ లీడ్‌గా మారే పరివర్తన కోసం ఈ రెజ్యూమెను తిరిగి రాయండి."
 
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
@@ -4409,10 +4110,6 @@ msgstr "AI సమీక్షను నడపండి"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Run deep check"
 msgstr "డీప్ చెక్‌ను నడపండి"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Running…"
-msgstr "అమలవుతోంది…"
 
 #: src/libs/locale.ts
 msgid "Russian"
@@ -4555,6 +4252,10 @@ msgstr "విభాగపు రకం"
 msgid "Sections"
 msgstr "విభాగాలు"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "See how it works"
+msgstr ""
+
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "See how this resume matches the posting"
 msgstr "ఈ రెజ్యూమ్ పోస్టింగ్‌కు ఎలా సరిపోతుందో చూడండి"
@@ -4568,21 +4269,9 @@ msgstr "మీ రెజ్యూమ్ నుండి అప్లికెం
 msgid "Select {0}"
 msgstr "{0} ఎంచుకోండి"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select a resume"
-msgstr "రెజ్యూమెను ఎంచుకోండి"
-
-#: src/routes/agent/index.tsx
-msgid "Select a thread"
-msgstr "ఒక థ్రెడ్‌ను ఎంచుకోండి"
-
 #: src/features/applications/components/table-view.tsx
 msgid "Select all"
 msgstr "అన్నీ ఎంచుకోండి"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select an agent model"
-msgstr "ఏజెంట్ మోడల్‌ను ఎంచుకోండి"
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 msgid "Select an AI provider"
@@ -4603,14 +4292,6 @@ msgstr "డాకర్‌తో స్వయంగా హోస్ట్ చే
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "సెమాంటిక్ CSS స్టైల్‌షీట్"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send answer"
-msgstr "సమాధానం పంపండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send message"
-msgstr "సందేశం పంపండి"
 
 #. Primary action button label on forgot-password form
 #: src/features/auth/pages/forgot-password.tsx
@@ -4654,24 +4335,7 @@ msgstr "ఎగుమతి చేసేటప్పుడు డాక్యు�
 msgid "Set up a provider"
 msgstr "ప్రొవైడర్‌ను ఏర్పాటు చేయండి"
 
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider"
-msgstr "AI ప్రొవైడర్‌ను ఏర్పాటు చేయండి"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider before starting a thread."
-msgstr "థ్రెడ్ ప్రారంభించే ముందు AI ప్రొవైడర్‌ను సెటప్ చేయండి."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider to chat about this resume and apply edits automatically."
-msgstr "ఈ రెజ్యూమే గురించి చర్చించడానికి మరియు సవరణలను స్వయంచాలకంగా వర్తింపజేయడానికి ఒక AI ప్రొవైడర్‌ను ఏర్పాటు చేయండి."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider to get started."
-msgstr "ప్రారంభించడానికి ఒక AI ప్రొవైడర్‌ను ఏర్పాటు చేసుకోండి."
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Settings"
 msgstr "సెట్టింగులు"
@@ -4810,28 +4474,8 @@ msgid "Signing up..."
 msgstr "సైన్ అప్ చేస్తున్నారు..."
 
 #: src/dialogs/resume/template/data.ts
-msgid "Single-column with a magenta left border accent; compact and efficient for entry-level or internship applications."
-msgstr "ఒకే-కాలమ్, ఎడమ వైపు గులాబీ రంగు సరిహద్దుతో; ఎంట్రీ-లెవల్ లేదా ఇంటర్న్‌షిప్ అప్లికేషన్‌లకు కాంపాక్ట్ మరియు సమర్థవంతమైనది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a minimal top header and lots of whitespace; clean and modern for designers or content creators."
-msgstr "ఒకే-కాలమ్, న్యూనతతో కూడిన టాప్ హెడ్డర్ మరియు ఎక్కువ ఖాళీతో; డిజైనర్లు లేదా కంటెంట్ క్రియేటర్లకు శుభ్రంగా ఆధునికంగా ఉంటుంది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a sidebar and clean grid layout; versatile for any professional or technical role."
-msgstr "ఒకే-కాలమ్, సైడ్‌బార్ మరియు క్లీన్ గ్రిడ్ లేఅవుట్‌తో; ఏ ప్రొఫెషనల్ లేదా టెక్నికల్ పాత్రకైనా అనువైనది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with an inline three-column entry header (position · organization · period); compact and ATS-friendly, well-suited for Asian resume conventions (CN/JP/KR)."
-msgstr "ఇన్‌లైన్ మూడు-కాలమ్ ఎంట్రీ హెడర్‌తో (స్థానం · సంస్థ · కాలం) ఒకే-కాలమ్; సంక్షిప్తంగా మరియు ATS-స్నేహపూర్వకంగా, ఆసియా రెస్యూమ్ సంప్రదాయాలకు (CN/JP/KR) బాగా సరిపోతుంది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with uppercase section headings and a primary-color top rule on every page; polished for executive, consulting, or startup resumes."
-msgstr "ప్రతి పేజీలో పెద్ద అక్షరాల విభాగ శీర్షికలు మరియు ప్రాథమిక రంగు టాప్ రూల్‌తో కూడిన సింగిల్-కాలమ్; ఎగ్జిక్యూటివ్, కన్సల్టింగ్ లేదా స్టార్టప్ రెజ్యూమెల కోసం చక్కగా తీర్చిదిద్దబడింది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column; polished and serious for senior or enterprise-level positions."
-msgstr "ఒకే-కాలమ్; శుభ్రమైన మరియు ప్రాధాన్యత ఉన్న సీనియర్ లేదా ఎంటర్‌ప్రైజ్-లెవల్ స్థానాలకు సరిపోయే విధంగా."
+msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Size"
@@ -4902,10 +4546,6 @@ msgstr "కొంత టెక్స్ట్ పేజీ వెలుపల �
 msgid "Some text is rotated."
 msgstr "కొంత టెక్స్ట్ తిప్పబడింది."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Something else…"
-msgstr "ఇంకేదైనా…"
-
 #: src/components/layout/error-screen.tsx
 msgid "Something went wrong"
 msgstr "ఏదో తప్పు జరిగింది"
@@ -4943,15 +4583,6 @@ msgstr "మూలం"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "సోర్స్ కోడ్"
-
-#. placeholder {0}: operation.from
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Source: {0}"
-msgstr "మూలం: {0}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Sources"
-msgstr "మూలాలు"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Spacing (Horizontal)"
@@ -5001,14 +4632,6 @@ msgstr "GitHub లో మాకు స్టార్ ఇవ్వండి (క
 msgid "Star us on GitHub, currently {0} stars (opens in new tab)"
 msgstr "GitHub లో మాకు స్టార్ ఇవ్వండి, ప్రస్తుతం {0} స్టార్ లు ఉన్నాయి (కొత్త ట్యాబ్‌లో తెరవబడుతుంది)"
 
-#: src/routes/agent/$threadId.tsx
-msgid "Start a new thread"
-msgstr "కొత్త థ్రెడ్‌ను ప్రారంభించండి"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start a thread"
-msgstr "ఒక థ్రెడ్‌ను ప్రారంభించండి"
-
 #: src/dialogs/resume/index.tsx
 msgid "Start building your resume by giving it a name."
 msgstr "మీ రెజ్యూమేను పేరు పెట్టడం ద్వారా నిర్మించడం ప్రారంభించండి."
@@ -5022,10 +4645,6 @@ msgstr "స్క్రాచ్ నుండి మీ రెజ్యూమే
 msgid "Start each one with a concrete verb: built, led, reduced, migrated."
 msgstr "ప్రతిదాన్ని నిర్దిష్ట క్రియతో ప్రారంభించండి: built, led, reduced, migrated."
 
-#: src/routes/agent/index.tsx
-msgid "Start new thread"
-msgstr "కొత్త థ్రెడ్‌ను ప్రారంభించండి"
-
 #. Layout editor toggle that forces a section to begin on a new page
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Start on new page"
@@ -5034,10 +4653,6 @@ msgstr "కొత్త పేజీలో ప్రారంభించండ�
 #: src/features/ats-checker/messages.ts
 msgid "Start the resume with your name on its own line."
 msgstr "రెజ్యూమ్‌ను మీ పేరుతో, దానికంటూ ప్రత్యేక లైన్‌లో ప్రారంభించండి."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start Thread"
-msgstr "థ్రెడ్‌ను ప్రారంభించండి"
 
 #: src/libs/resume/section.tsx
 msgid "Statistics"
@@ -5051,10 +4666,6 @@ msgstr "ఉండు"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Still waiting for {provider}… {elapsedSeconds}s"
 msgstr "ఇంకా {provider}… {elapsedSeconds}ల కోసం ఎదురుచూస్తున్నాను"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Stop generation"
-msgstr "తరాన్ని ఆపండి"
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Strengths"
@@ -5094,8 +4705,8 @@ msgid "Summary"
 msgstr "సమ్మరీ"
 
 #: src/routes/_home/-sections/donate.tsx
-msgid "Support Reactive Resume"
-msgstr "Reactive Resume కి సపోర్ట్ ఇవ్వండి"
+msgid "Support cloudcoffee"
+msgstr "cloudcoffee కి సపోర్ట్ ఇవ్వండి"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Support the app by doing what you can!"
@@ -5148,10 +4759,6 @@ msgstr "ట్యాగ్‌లు సాఫ్ట్‌వేర్‌కు �
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "నా రెజ్యూమ్‌ను అనుకూలీకరించండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tailor this resume to a product manager job description and emphasize roadmap ownership, stakeholder communication, and measurable launch outcomes."
-msgstr "ఈ రెజ్యూమెను ప్రొడక్ట్ మేనేజర్ ఉద్యోగ వివరణకు అనుగుణంగా రూపొందించండి మరియు రోడ్‌మ్యాప్ యాజమాన్యం, వాటాదారులతో సంభాషణ, ఇంకా కొలవగల ప్రారంభ ఫలితాలపై నొక్కి చెప్పండి."
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -5242,10 +4849,6 @@ msgstr "ఆ ప్రొవైడర్ ఖాతా మీ ఖాతా కం�
 #: src/features/auth/pages/error.tsx
 msgid "That sign-in provider is no longer available on this server."
 msgstr "ఆ సైన్-ఇన్ ప్రొవైడర్ ఈ సర్వర్‌లో ఇక అందుబాటులో లేరు."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "The agent needs your input."
-msgstr "ఏజెంట్‌కు మీ సమాచారం అవసరం."
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted successfully."
@@ -5342,10 +4945,6 @@ msgstr "మొదటి పేజీ పైభాగం పేరులా క�
 msgid "The URL you entered is not valid."
 msgstr "మీరు నమోదు చేసిన URL చెల్లుబాటు కాదు."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "The working resume was deleted. This thread is read-only."
-msgstr "వర్కింగ్ రెజ్యూమె తొలగించబడింది. ఈ థ్రెడ్ చదవడానికి మాత్రమే."
-
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
 #: src/features/settings/pages/preferences.tsx
@@ -5374,7 +4973,6 @@ msgid "There was a problem while generating the DOCX, please try again."
 msgstr "DOCXను రూపొందించేటప్పుడు ఒక సమస్య తలెత్తింది, దయచేసి మళ్ళీ ప్రయత్నించండి."
 
 #: src/features/resume/export/use-resume-export.ts
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "There was a problem while generating the PDF, please try again."
 msgstr "PDFను రూపొందించేటప్పుడు సమస్య ఏర్పడింది, దయచేసి మళ్ళీ ప్రయత్నించండి."
 
@@ -5394,10 +4992,6 @@ msgstr "ఈ తనిఖీలు మీరు టైప్ చేస్తు�
 msgid "These dates will not be read correctly."
 msgstr "ఈ తేదీలు సరిగ్గా చదవబడవు."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thinking"
-msgstr "ఆలోచిస్తున్నాను"
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "This action cannot be undone."
@@ -5406,22 +5000,6 @@ msgstr "ఈ చర్యను రద్దు చేయడం సాధ్య�
 #: src/features/settings/pages/account.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "ఈ చర్యను రద్దు చేయడం సాధ్యం కాదు. మీ డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This action cannot be undone. Conversation messages and uploaded attachments will be removed. The working resume remains in your dashboard and can be deleted separately."
-msgstr "ఈ చర్యను రద్దు చేయలేరు. సంభాషణ సందేశాలు మరియు అప్‌లోడ్ చేసిన అటాచ్‌మెంట్‌లు తొలగించబడతాయి. వర్కింగ్ రెస్యూమ్ మీ డాష్‌బోర్డ్‌లో అలాగే ఉంటుంది మరియు దానిని విడిగా తొలగించవచ్చు."
-
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "This action cannot be undone. Messages and thread attachments will be removed."
-msgstr "ఈ చర్యను రద్దు చేయడం సాధ్యపడదు. సందేశాలు మరియు థ్రెడ్ జోడింపులు తొలగించబడతాయి."
-
-#: src/routes/agent/$threadId.tsx
-msgid "This agent thread could not be opened."
-msgstr "ఈ ఏజెంట్ థ్రెడ్‌ను తెరవలేకపోయాము."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "This assistant could not be opened."
-msgstr "ఈ సహాయకుడిని తెరవలేకపోయింది."
 
 #: src/features/ats-checker/messages.ts
 msgid "This check does not apply to this file."
@@ -5434,10 +5012,6 @@ msgstr "ఈ చెక్ ఇంగ్లీష్‌లో రాసిన ర�
 #: src/libs/resume/ats.ts
 msgid "This date will not be read correctly."
 msgstr "ఈ తేదీ సరిగ్గా చదవబడదు."
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "This edit request can no longer be answered."
-msgstr "ఈ సవరణ అభ్యర్థనకు ఇకపై సమాధానం ఇవ్వడం సాధ్యం కాదు."
 
 #: src/libs/resume/ats.ts
 msgid "This email address will not be recognized."
@@ -5607,21 +5181,9 @@ msgstr "ఈ సైన్-ఇన్ ప్రయత్నం గడువు మ�
 msgid "This step is optional, but recommended."
 msgstr "ఈ దశ ఐచ్ఛికం, కాని సిఫారసు చేయబడింది."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is archived. New messages cannot be sent."
-msgstr "ఈ థ్రెడ్ ఆర్కైవ్ చేయబడింది. కొత్త సందేశాలు పంపడం సాధ్యపడదు."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only"
-msgstr "ఈ థ్రెడ్ కేవలం చదవడానికి మాత్రమే."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only because the working resume or AI provider is unavailable."
-msgstr "వర్కింగ్ రెస్యూమ్ లేదా AI ప్రొవైడర్ అందుబాటులో లేనందున ఈ థ్రెడ్ కేవలం చదవడానికి మాత్రమే అందుబాటులో ఉంది."
-
 #: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the Reactive Resume API to allow machines to interact with your resume data."
-msgstr "ఈ చర్య ద్వారా Reactive Resume API ని యాక్సెస్ చేసేందుకు కొత్త API కీ రూపొందించబడుతుంది, దీని ద్వారా యంత్రాలు మీ రెజ్యూమ్ డేటాతో ఇంటరాక్ట్ చేయగలవు."
+msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
+msgstr "ఈ చర్య ద్వారా cloudcoffee API ని యాక్సెస్ చేసేందుకు కొత్త API కీ రూపొందించబడుతుంది, దీని ద్వారా యంత్రాలు మీ రెజ్యూమ్ డేటాతో ఇంటరాక్ట్ చేయగలవు."
 
 #: src/features/settings/authentication/components/passkeys.tsx
 msgid "This will help you identify it later, if you plan to have multiple passkeys."
@@ -5630,38 +5192,6 @@ msgstr "మీరు బహుళ పాస్‌కీలను కలిగి
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "ఇది ఈ విభాగంలోని అన్ని అంశాలను తొలగిస్తుంది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This will roll back this patch and any patches applied after it."
-msgstr "ఇది ఈ ప్యాచ్‌ను, దాని తర్వాత వర్తింపజేసిన అన్ని ప్యాచ్‌లను వెనక్కి తీసుకుంటుంది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Thread actions"
-msgstr "థ్రెడ్ చర్యలు"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread archived."
-msgstr "థ్రెడ్ ఆర్కైవ్ చేయబడింది."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread deleted."
-msgstr "థ్రెడ్ తొలగించబడింది."
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Threads"
-msgstr "థ్రెడ్లు"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tighten the skills section so it supports the target role instead of reading like a keyword dump."
-msgstr "నైపుణ్యాల విభాగాన్ని కేవలం కీలకపదాల కుప్పలా కాకుండా, లక్షిత పాత్రకు మద్దతు ఇచ్చే విధంగా కుదించండి."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Timelapse demonstration of building a resume with Reactive Resume"
-msgstr "Reactive Resume తో జీవన చరిత్రను తయారుచేసే టైమ్‌లాప్ డెమో"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Timeline"
@@ -5708,30 +5238,10 @@ msgstr "ఎడమ వైపు పక్క పట్టీని టోగు�
 msgid "Toggle page stacking"
 msgstr "పేజీ స్టాకింగ్‌ను టోగుల్ చేయండి"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle resume preview"
-msgstr "పునఃప్రారంభ ప్రివ్యూను టోగుల్ చేయండి"
-
 #. Screen-reader label for opening or closing the right sidebar in resume builder
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Toggle right sidebar"
 msgstr "కుడి వైపు పక్క పట్టీని టోగుల్ చేయండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle threads"
-msgstr "థ్రెడ్‌లను టోగుల్ చేయండి"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {threadTokenTotal}"
-msgstr "టోకెన్లు: {threadTokenTotal}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total}"
-msgstr "టోకెన్లు: {total}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total} ({cached} cached)"
-msgstr "టోకెన్లు: {total} ({cached} కాష్ చేయబడినవి)"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Track a job you're applying to and link the resume you sent."
@@ -5765,42 +5275,6 @@ msgstr "ఎగుమతి చేసేటప్పుడు డిస్క్�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "మీ రెజ్యూమ్ ఎంతసార్లు చూసారు లేదా డౌన్‌లోడ్ చేసారో తెలుసుకోవడానికి పబ్లిక్ షేరింగ్ ఆన్ చేయండి. మీరు మాత్రమే మీ రెజ్యూమ్ యొక్క గణాంకాలను చూడగలరు."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a bold colored sidebar and skill bars; great for creative or tech roles where visual flair is welcome."
-msgstr "రెండు-కాలమ్, బోల్డ్ రంగు సైడ్‌బార్ మరియు స్కిల్ బార్లతో; విజువల్ ఫ్లైర్‌కి అవకాశం ఉన్న క్రియేటివ్ లేదా టెక్ పాత్రలకు గొప్పది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a dark teal sidebar and skills grid; modern feel for developers, data scientists, or technical PMs."
-msgstr "రెండు-కాలమ్, డార్క్ టీల్ సైడ్‌బార్ మరియు స్కిల్స్ గ్రిడ్‌తో; డెవలాపర్లు, డేటా సైంటిస్ట్లు లేదా టెక్నికల్ PMలకు ఆధునిక ఫీల్."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a left margin color; simple and approachable for creative, editorial, or junior roles."
-msgstr "రెండు-కాలమ్, ఎడమ విభాగం రంగుతో; క్రియేటివ్, ఎడిటోరియల్, లేదా జూనియర్ పాత్రలకు సరళమైన మరియు ద 접근ించదగినది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a muted color sidebar; earthy and calm, suits sustainability, healthcare, or nonprofit sectors."
-msgstr "రెండు-కాలమ్, మ్యూటెడ్ కలర్ సైడ్‌బార్‌తో; earthy మరియు నిశ్చలంగా, sustainability, ఆరోగ్య సంరక్షణ, లేదా లాభాపేక్షలేని రంగాలకు సరిపోతుంది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a soft header accent and circular profile photo; ideal for marketing, HR, or client-facing roles."
-msgstr "రెండు-కాలమ్, మృదువైన హెడ్డర్ అక్సెంట్ మరియు వృత్తాకార ప్రొఫైల్ ఫోటోతో; మార్కెటింగ్, HR, లేదా క్లైంట్-ఫేసింగ్ పాత్రలకు అనువైనది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with accent colors and clean typography; balanced choice for business analysts or operations roles."
-msgstr "రెండు-కాలమ్, అక్సెంట్ రంగులు మరియు క్లిన్ టైపోగ్రఫీతో; బిజినెస్ అనలిస్టులు లేదా ఆపరేషన్స్ పాత్రలకు బ్యాలెన్స్ అయ్యే ఎంపిక."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, clean and professional with subtle section dividers; suits corporate, finance, or consulting positions."
-msgstr "రెండు-కాలమ్, క్లీన్ మరియు ప్రొఫెషనల్, ఆహ్లాదకరమైన విభాగ విభజనలతో; కార్పోరేట్, ఫైనాన్స్, లేదా కన్సల్టింగ్ స్థానాలకు కావాల్సినది."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal and text-dense with no decorative elements; perfect for traditional industries or ATS-heavy applications."
-msgstr "రెండు-కాలమ్, మినిమల్, ఎక్కువ వచనంతో, అలంకారపు అంశాలు లేవు; సాంప్రదాయ రంగాలు లేదా ATS-పై ఆధారత ఎక్కువ అప్లికేషన్‌లకు ఆదర్శంగా."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal with light gray sidebar and subtle icons; professional and understated for legal, finance, or executive roles."
-msgstr "రెండు-కాలమ్, మినిమల్, లైట్ గ్రే సైడ్‌బార్ మరియు సూటిగా ఉండే చిహ్నాలతో; లీగల్, ఫైనాన్స్, లేదా ఎగ్జిక్యూటివ్ పాత్రలకు ప్రొఫెషనల్ మరియు అండర్‌స్టేట్ చేయబడినది."
 
 #: src/features/auth/pages/verify-2fa.tsx
 #: src/features/settings/authentication/components/two-factor.tsx
@@ -5958,10 +5432,6 @@ msgstr "ఉన్న వాలంటీర్ అనుభవాన్ని అ
 msgid "Update Password"
 msgstr "పాస్‌వర్డ్‌ను నవీకరించండి"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Update project bullets to show leadership, constraints, tradeoffs, and measurable outcomes."
-msgstr "నాయకత్వం, పరిమితులు, సర్దుబాట్లు మరియు కొలవగల ఫలితాలను చూపించడానికి ప్రాజెక్ట్ ముఖ్యాంశాలను నవీకరించండి."
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "రిజ్యూమ్‌ను నవీకరించండి"
@@ -5997,10 +5467,6 @@ msgstr ".csv అప్‌లోడ్ చేయండి"
 #: src/routes/_home/ats-checker.tsx
 msgid "Upload a resume and see what an applicant tracking system actually reads from it. Everything runs in this browser. Your file is never uploaded, and nothing is stored."
 msgstr "ఒక రెజ్యూమ్‌ను అప్‌లోడ్ చేసి, అప్లికెంట్ ట్రాకింగ్ సిస్టమ్ దాని నుండి నిజంగా ఏమి చదువుతుందో చూడండి. ప్రతిదీ ఈ బ్రౌజర్‌లోనే నడుస్తుంది. మీ ఫైల్ ఎప్పుడూ అప్‌లోడ్ చేయబడదు, ఏదీ నిల్వ చేయబడదు."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Upload attachments"
-msgstr "జోడింపులను అప్‌లోడ్ చేయండి"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Upload picture"
@@ -6184,10 +5650,6 @@ msgstr "వాలంటియర్"
 msgid "vs previous 30 days"
 msgstr "గత 30 రోజులతో పోలిస్తే"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Waiting for the agent…"
-msgstr "ఏజెంట్ కోసం వేచి ఉంది…"
-
 #: src/features/ats-checker/ai-review/locked-card.tsx
 msgid "Want a second opinion on the writing?"
 msgstr "రచనపై రెండో అభిప్రాయం కావాలా?"
@@ -6213,10 +5675,6 @@ msgstr "ఆ ప్రొవైడర్ ఖాతాను మేము లి�
 msgid "We couldn't read your profile from the provider."
 msgstr "ప్రొవైడర్ నుండి మీ ప్రొఫైల్‌ను మేము చదవలేకపోయాము."
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Web search"
-msgstr "వెబ్ శోధన"
-
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
 #: src/dialogs/resume/sections/education.tsx
@@ -6238,17 +5696,13 @@ msgstr "పార్సర్ ఏమి చదువుతుంది"
 msgid "What a person sees"
 msgstr "ఒక వ్యక్తి ఏమి చూస్తాడు"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "What do you want to do?"
-msgstr "మీరు ఏమి చేయాలనుకుంటున్నారు?"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "ఈ విభాగాన్ని మీరు కొత్తగా ఏ పేరుతో మార్చదలుచుకున్నారు?"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "What makes Reactive Resume different from other resume builders?"
-msgstr "ఇతర రిజ్యూమ్ బిల్డర్లతో పోల్చితే Reactive Resumeను ప్రత్యేకంగా నిలిపే విషయం ఏమిటి?"
+msgid "What makes cloudcoffee different from other resume builders?"
+msgstr "ఇతర రిజ్యూమ్ బిల్డర్లతో పోల్చితే cloudcoffeeను ప్రత్యేకంగా నిలిపే విషయం ఏమిటి?"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -6257,10 +5711,6 @@ msgstr "ఇది ఏమి చెక్ చేస్తుంది"
 #: src/routes/_home/ats-checker.tsx
 msgid "What this does not do"
 msgstr "ఇది ఏమి చేయదు"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "What's new in the latest version?"
-msgstr "తాజా వెర్షన్‌లో ఏమి కొత్తగా ఉంది?"
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
@@ -6319,10 +5769,6 @@ msgstr "టెక్స్ట్ ఎక్స్‌ట్రాక్ట్ అ�
 msgid "Work OpenAI"
 msgstr "ఓపెన్ఏఐతో పని"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Working…"
-msgstr "పని చేస్తోంది…"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Worth a shot"
 msgstr "ప్రయత్నించదగ్గది"
@@ -6360,12 +5806,12 @@ msgid "xAI Grok"
 msgstr "xAI గ్రోక్"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, Reactive Resume is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "అవును, Reactive Resume అనేక భాషల్లో అందుబాటులో ఉంది. మీరు సెట్టింగ్స్ పేజీలో లేదా పై కోణంలో భాష మార్పిడి ద్వారా మీకు ఇష్టమైన భాషను ఎంచుకోవచ్చు. మీ భాష కనిపించకపోతే, లేకపోతే మీరు ప్రస్తుత అనువాదాలను మెరుగుపరచాలనుకుంటే, మీరు <0>Crowdinలో అనువాదాలకు ప్రయత్నించవచ్చు<1> (కొత్త ట్యాబ్‌లో తెరవబడుతుంది)</1></0>."
+msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
+msgstr "అవును, cloudcoffee అనేక భాషల్లో అందుబాటులో ఉంది. మీరు సెట్టింగ్స్ పేజీలో లేదా పై కోణంలో భాష మార్పిడి ద్వారా మీకు ఇష్టమైన భాషను ఎంచుకోవచ్చు. మీ భాష కనిపించకపోతే, లేకపోతే మీరు ప్రస్తుత అనువాదాలను మెరుగుపరచాలనుకుంటే, మీరు <0>Crowdinలో అనువాదాలకు ప్రయత్నించవచ్చు<1> (కొత్త ట్యాబ్‌లో తెరవబడుతుంది)</1></0>."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! Reactive Resume is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "అవును! Reactive Resume ఉపయోగించడం పూర్తిగా ఉచితమే, ఎలాంటి దాచిన ఖర్చులు, ప్రీమియం స్థాయిలు, లేదా సబ్‌స్క్రిప్షన్‌ ఛార్జీలు లేవు. ఇది ఓపెన్‌సోర్స్ మరియు ఎప్పుడూ ఉచితంగానే ఉంటుంది."
+msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
+msgstr "అవును! cloudcoffee ఉపయోగించడం పూర్తిగా ఉచితమే, ఎలాంటి దాచిన ఖర్చులు, ప్రీమియం స్థాయిలు, లేదా సబ్‌స్క్రిప్షన్‌ ఛార్జీలు లేవు. ఇది ఓపెన్‌సోర్స్ మరియు ఎప్పుడూ ఉచితంగానే ఉంటుంది."
 
 #: src/routes/_home/-sections/features.tsx
 msgid "You also have the option to deploy on your own servers using the Docker image."
@@ -6417,6 +5863,14 @@ msgstr "మీ బాడీ టెక్స్ట్ చాలా చిన్�
 msgid "Your bullets are drawn with unusual characters."
 msgstr "మీ బుల్లెట్లు అసాధారణ అక్షరాలతో గీయబడ్డాయి."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career has a memory."
+msgstr ""
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career knowledge base"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
 msgid "Your changes are saved automatically."
 msgstr "మీ మార్పులు ఆటోమేటిక్‌గా సేవ్ చేయబడతాయి."
@@ -6434,8 +5888,8 @@ msgid "Your data is secure, and never shared or sold to anyone."
 msgstr "మీ డేటా భద్రంగా ఉంటుంది, ఎవరితోనూ పంచుకోబడదు లేదా అమ్మబడదు."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host Reactive Resume on your own servers for complete control over your data."
-msgstr "మీ డేటా భద్రంగా నిల్వ చేయబడుతుంది, మూడవ పక్షాలతో ఎప్పుడూ పంచుకోబడదు. మీ డేటాపై పూర్తి నియంత్రణ కోసం మీరు Reactive Resumeను మీ సొంత సర్వర్లపై హోస్ట్ చేసుకోవచ్చు."
+msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
+msgstr "మీ డేటా భద్రంగా నిల్వ చేయబడుతుంది, మూడవ పక్షాలతో ఎప్పుడూ పంచుకోబడదు. మీ డేటాపై పూర్తి నియంత్రణ కోసం మీరు cloudcoffeeను మీ సొంత సర్వర్లపై హోస్ట్ చేసుకోవచ్చు."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -6563,7 +6017,6 @@ msgstr "జూమ్"
 msgid "Zoom in"
 msgstr "జూమ్ ఇన్ చేయండి"
 
-#: src/routes/agent/-components/resume-pane.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Zoom level"
 msgstr "జూమ్ స్థాయి"
@@ -6575,4 +6028,3 @@ msgstr "జూమ్ అవుట్ చేయండి"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "జులు"
-

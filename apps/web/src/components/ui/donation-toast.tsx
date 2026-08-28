@@ -29,7 +29,7 @@ export function DonationToast() {
 			// Never auto-dismisses: closing it is what records the 30-day cookie.
 			timeout: 0,
 			title: t`Please support the project`,
-			description: t`Reactive Resume is free and open source. If it has helped you, please consider donating.`,
+			description: t`cloudcoffee is free and open source. If it has helped you, please consider donating.`,
 			actionProps: {
 				children: t`Donate`,
 				onClick: () => {

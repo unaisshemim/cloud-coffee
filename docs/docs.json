@@ -1,7 +1,7 @@
 {
 	"$schema": "https://mintlify.com/docs.json",
 	"theme": "mint",
-	"name": "Reactive Resume",
+	"name": "cloudcoffee",
 	"favicon": "/favicon.svg",
 	"description": "A privacy-minded resume builder that is customizable, portable, open-source, and free to use.",
 	"redirects": [
@@ -73,8 +73,6 @@
 							"guides/undoing-changes-and-version-history",
 							"applying-custom-styles",
 							"guides/using-the-ats-checker",
-							"guides/using-ai-in-the-builder",
-							"guides/using-ai-agent",
 							"guides/using-private-notes",
 							"guides/exporting-your-resume",
 							"guides/exporting-resume-to-markdown",
@@ -100,7 +98,6 @@
 							"guides/using-the-patch-api",
 							"guides/using-the-mcp-server",
 							"guides/using-ai",
-							"guides/ai-agent-tools",
 							"guides/json-resume-schema"
 						]
 					},
@@ -171,7 +168,7 @@
 			"anchors": [
 				{
 					"icon": "link",
-					"anchor": "Reactive Resume",
+					"anchor": "cloudcoffee",
 					"href": "https://rxresu.me"
 				},
 				{

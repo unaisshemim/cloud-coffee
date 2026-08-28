@@ -1,10 +1,9 @@
 import type { BuilderLayout } from "./-store/sidebar";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { useEffect, useMemo } from "react";
 import { useMediaQuery } from "usehooks-ts";
 import { useBuilderResumeUpdateSubscription, useResumeCleanup, useResumeStore } from "@/features/resume/builder/draft";
-import { createAgentTools } from "@/features/webmcp/agent-tools";
 import { createBuilderTools } from "@/features/webmcp/builder-tools";
 import { createPageDescriptionTool } from "@/features/webmcp/page-tools";
 import { createWebMcpParityTools } from "@/features/webmcp/parity-tools";
@@ -31,7 +30,7 @@ export const Route = createFileRoute("/builder/$resumeId")({
 	},
 	head: ({ loaderData }) => ({
 		meta: loaderData
-			? [{ title: `${loaderData.name} - Reactive Resume` }, createNoindexFollowMeta()]
+			? [{ title: `${loaderData.name} - cloudcoffee` }, createNoindexFollowMeta()]
 			: [createNoindexFollowMeta()],
 	}),
 });
@@ -40,7 +39,6 @@ function RouteComponent() {
 	const { layout: initialLayout } = Route.useLoaderData();
 
 	const { resumeId } = Route.useParams();
-	const navigate = useNavigate();
 	const { data: resume } = useSuspenseQuery(orpc.resume.getById.queryOptions({ input: { id: resumeId } }));
 	const initializeResumeStore = useResumeStore((state) => state.initialize);
 	const mergeResumeMetadata = useResumeStore((state) => state.mergeResumeMetadata);
@@ -58,15 +56,13 @@ function RouteComponent() {
 					"rr.builder.apply_patch",
 					"rr.builder.undo",
 					"rr.builder.redo",
-					"rr.agent.start_thread",
 					"existing-mcp-parity",
 				],
 			}),
 			...createBuilderTools(),
-			...createAgentTools({ navigate, resumeId }),
 			...createWebMcpParityTools(),
 		],
-		[navigate, resumeId],
+		[resumeId],
 	);
 
 	useResumeCleanup();

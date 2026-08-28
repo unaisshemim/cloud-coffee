@@ -1,8 +1,8 @@
 import { TRUSTED_IP_HEADERS } from "@reactive-resume/utils/rate-limit";
 
 // ponytail: in-memory per-process dedup window. Single-instance is the default deploy; for
-// multi-instance, swap the Map for a Redis SETNX+EXPIRE keyed the same way (REDIS_URL already
-// exists in env). Upgrade only if you scale out — each instance dedups independently otherwise.
+// multi-instance, swap the Map for a shared SETNX+EXPIRE store keyed the same way. Upgrade only
+// if you scale out — each instance dedups independently otherwise.
 const WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const MAX_ENTRIES = 50_000; // bound the Map; prune expired entries before growing past this.
 

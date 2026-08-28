@@ -14,11 +14,11 @@ export function InformationSectionBuilder() {
 				<div className="space-y-2 text-xs leading-normal">
 					<Trans>
 						<p>
-							Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with
+							Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with
 							wonderful support from open-source contributors around the world.
 						</p>
 						<p>
-							If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone,
+							If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone,
 							please consider making a donation. Every little bit is appreciated!
 						</p>
 					</Trans>
@@ -33,7 +33,7 @@ export function InformationSectionBuilder() {
 						<a href="http://opencollective.com/reactive-resume" target="_blank" rel="noopener noreferrer">
 							<HandHeartIcon />
 							<span className="truncate">
-								<Trans>Donate to Reactive Resume</Trans>
+								<Trans>Donate to cloudcoffee</Trans>
 							</span>
 						</a>
 					}

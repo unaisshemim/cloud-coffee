@@ -3,6 +3,7 @@ import type { CustomSectionType } from "@reactive-resume/schema/resume/data";
 import type { Template } from "@reactive-resume/schema/templates";
 import type { PrimitiveBinding, SemanticBindingRegistry } from "./binding-inventory";
 import { templateSchema } from "@reactive-resume/schema/templates";
+import { classicSemanticManifest } from "../templates/classic/semantic";
 import { treeckoSemanticManifest } from "../templates/treecko/semantic";
 import { SHARED_BINDING_REGISTRY, STANDARD_FIELD_REGISTRY } from "./binding-inventory";
 
@@ -287,6 +288,7 @@ function validateTemplateSemanticManifestShape(manifest: TemplateSemanticManifes
 }
 
 const TEMPLATE_SEMANTIC_MANIFESTS = {
+	classic: classicSemanticManifest,
 	treecko: treeckoSemanticManifest,
 } as const satisfies Readonly<Record<Template, TemplateSemanticManifest>>;
 

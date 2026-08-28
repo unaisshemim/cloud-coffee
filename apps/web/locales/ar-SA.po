@@ -28,7 +28,6 @@ msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This ca
 msgstr "سيتم حذف \"{0} · {1}\" وسجله الزمني الكامل نهائيًا. لا يمكن التراجع عن ذلك."
 
 #: src/routes/_home/-sections/footer.tsx
-#: src/routes/_home/-sections/hero.tsx
 msgid "(opens in new tab)"
 msgstr "(يفتح في علامة تبويب جديدة)"
 
@@ -125,18 +124,14 @@ msgstr "تم اجتياز {passedRules} من إجمالي {totalRules} من عم
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · العنصر {itemNumber}"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "<0>Finally,</0><1>A free and open-source resume builder</1>"
-msgstr "<0>أخيرًا،</0><1>أداة إنشاء سيرة ذاتية مجانية ومفتوحة المصدر</1>"
-
 #: src/routes/_home/-sections/faq.tsx
 msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
 msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
 msgstr "<0>أسئلة</0><1>يتم</1><2>طرحها كثيرًا</2>"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If Reactive Resume has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
-msgstr "<0>شكرًا لاستخدامك Reactive Resume! هذا التطبيق هو عمل بدافع الشغف، تم إنشاؤه في الغالب خلال أوقات فراغي، بدعم رائع من مساهمين مفتوحِي المصدر من جميع أنحاء العالم.</0><1>إذا كان Reactive Resume مفيدًا لك، وترغب في المساعدة في إبقائه مجانيًا ومتاحًا للجميع، فيُرجى التفكير في تقديم تبرع. كل مساهمة، مهما كانت صغيرة، محل تقدير!</1>"
+msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
+msgstr "<0>شكرًا لاستخدامك cloudcoffee! هذا التطبيق هو عمل بدافع الشغف، تم إنشاؤه في الغالب خلال أوقات فراغي، بدعم رائع من مساهمين مفتوحِي المصدر من جميع أنحاء العالم.</0><1>إذا كان cloudcoffee مفيدًا لك، وترغب في المساعدة في إبقائه مجانيًا ومتاحًا للجميع، فيُرجى التفكير في تقديم تبرع. كل مساهمة، مهما كانت صغيرة، محل تقدير!</1>"
 
 #: src/dialogs/api-key/create.tsx
 msgid "1 month"
@@ -145,6 +140,10 @@ msgstr "شهر واحد"
 #: src/dialogs/api-key/create.tsx
 msgid "1 year"
 msgstr "سنة واحدة"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "12 projects added to your career base"
+msgstr ""
 
 #: src/routes/_home/-sections/features.tsx
 msgid "12+ Templates"
@@ -208,8 +207,8 @@ msgid "A link to your resume has been copied to clipboard."
 msgstr "تم نسخ رابط إلى سيرتك الذاتية إلى الحافظة."
 
 #: src/routes/_home/-sections/testimonials.tsx
-msgid "A lot of people have written to me over the years to share their experiences with Reactive Resume and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
-msgstr "كتب إليّ الكثير من الأشخاص على مر السنين لمشاركة تجاربهم مع Reactive Resume وكيف ساعدتهم، ولا أشعر بالملل أبدًا من قراءتها. إذا كان لديك قصة تود مشاركتها، فأخبرني عن طريق إرسال بريد إلكتروني إلى <0>{email}</0>."
+msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
+msgstr "كتب إليّ الكثير من الأشخاص على مر السنين لمشاركة تجاربهم مع cloudcoffee وكيف ساعدتهم، ولا أشعر بالملل أبدًا من قراءتها. إذا كان لديك قصة تود مشاركتها، فأخبرني عن طريق إرسال بريد إلكتروني إلى <0>{email}</0>."
 
 #: src/features/settings/pages/profile.tsx
 msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
@@ -226,6 +225,10 @@ msgstr "صفحة مُدوَّرة."
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "مشروع شغوف من تنفيذ <0>أمروث بيلاي</0>."
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
+msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -377,8 +380,8 @@ msgid "Add an entry, or use projects and volunteer work to show equivalent histo
 msgstr "أضف إدخالاً، أو استخدم المشاريع والعمل التطوعي لإظهار التاريخ المعادل."
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "Add and test a provider before starting an agent thread."
-msgstr "أضف موفر الخدمة واختبره قبل بدء سلسلة عمليات الوكيل."
+msgid "Add and test a provider before using AI features."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/command-palette/pages/navigation.tsx
@@ -451,10 +454,6 @@ msgstr "أضف سطرين أو ثلاثة في الأعلى تصف فيها ما
 msgid "Add your full name under Basics."
 msgstr "أضف اسمك الكامل ضمن الأساسيات."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Adjust the resume for a remote-first role that values async communication and ownership."
-msgstr "قم بتعديل سيرتك الذاتية لتناسب وظيفة تتطلب العمل عن بعد وتقدر التواصل غير المتزامن وتحمل المسؤولية."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Advanced"
 msgstr "متقدم"
@@ -471,42 +470,17 @@ msgstr "الأفريقانس"
 msgid "Against the job description"
 msgstr "مقارنةً بالوصف الوظيفي"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "Agent"
-msgstr "عامل"
-
-#: src/features/settings/integrations/components/ai-section.tsx
-msgid "Agent ready"
-msgstr "الوكيل جاهز"
-
-#: src/routes/dashboard/-components/sidebar.tsx
-msgid "Agents"
-msgstr "الوكلاء"
-
 #: src/dialogs/resume/import.tsx
 msgid "AI"
 msgstr "الذكاء الاصطناعي"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable right now. Please try again in a moment."
-msgstr "إعداد وكيل الذكاء الاصطناعي غير متاح حاليًا. يرجى المحاولة مرة أخرى بعد قليل."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "AI agent setup is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "لا يتوفر إعداد وكيل الذكاء الاصطناعي حتى يتم تكوين REDIS_URL و ENCRYPTION_SECRET."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "AI assistant"
-msgstr "مساعد الذكاء الاصطناعي"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "AI provider"
 msgstr "مزوّد الذكاء الاصطناعي"
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI provider management is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured."
-msgstr "إدارة موفر الذكاء الاصطناعي غير متاحة حتى يتم تكوين REDIS_URL و ENCRYPTION_SECRET."
+msgid "AI provider management is unavailable until ENCRYPTION_SECRET is configured."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI provider management is unavailable. Please try again."
@@ -521,8 +495,8 @@ msgid "AI providers are unavailable until ENCRYPTION_SECRET is configured."
 msgstr "مزوّدو الذكاء الاصطناعي غير متاحين إلى أن يتم تكوين ENCRYPTION_SECRET."
 
 #: src/features/settings/integrations/components/ai-section.tsx
-msgid "AI providers require REDIS_URL and ENCRYPTION_SECRET to be configured."
-msgstr "يتطلب موفرو خدمات الذكاء الاصطناعي تهيئة REDIS_URL و ENCRYPTION_SECRET."
+msgid "AI providers require ENCRYPTION_SECRET to be configured."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Albanian"
@@ -564,10 +538,6 @@ msgstr "حدث خطأ غير معروف أثناء استيراد سيرتك ا�
 #: src/routes/_home/-sections/features.tsx
 msgid "And many more..."
 msgstr "والمزيد..."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Answer in your own words"
-msgstr "أجب بكلماتك الخاصة"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -663,14 +633,6 @@ msgstr "تم التقديم"
 msgid "Applied on"
 msgstr "تم التقديم في"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approve"
-msgstr "موافقة"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Approved — waiting for the agent…"
-msgstr "تمت الموافقة — في انتظار الوكيل…"
-
 #: src/libs/locale.ts
 msgid "Arabic"
 msgstr "العربية"
@@ -678,8 +640,6 @@ msgstr "العربية"
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 msgid "Archive"
 msgstr "أرشيف"
 
@@ -733,16 +693,12 @@ msgstr "مجال الدراسة"
 msgid "Artificial Intelligence"
 msgstr "الذكاء الاصطناعي"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Ask anything about this resume"
-msgstr "اسأل عن أي شيء بخصوص هذه السيرة الذاتية"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "نسبة الأبعاد"
 
 #: src/routes/_home/-sections/sponsors.tsx
-msgid "Atlas Cloud supports Reactive Resume as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
+msgid "Atlas Cloud supports cloudcoffee as a project sponsor. If your company would like to sponsor the project, email <0>{sponsorshipEmail}</0>."
 msgstr "تدعم أطلس كلاود مشروع \"السيرة الذاتية التفاعلية\" كراعٍ للمشروع. إذا كانت شركتكم ترغب في رعاية المشروع، يُرجى إرسال بريد إلكتروني إلى <0>{sponsorshipEmail}</0> ."
 
 #: src/libs/resume/section.tsx
@@ -763,18 +719,6 @@ msgstr "أرفق رسالة تعريفية (ملف PDF)"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Attach a resume file (PDF)"
 msgstr "إرفاق ملف سيرة ذاتية (PDF)"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attach files"
-msgstr "إرفاق الملفات"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment"
-msgstr "مرفق"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Attachment uploaded."
-msgstr "تم تحميل المرفق."
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -819,10 +763,6 @@ msgstr "العودة إلى إعدادات المصادقة"
 msgid "Back to Login"
 msgstr "العودة إلى تسجيل الدخول"
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Back to resumes"
-msgstr "العودة إلى السير الذاتية"
-
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
 msgid "Back to sign in"
@@ -856,10 +796,6 @@ msgstr "البنغالية"
 msgid "Best for applications, sharing, and printing."
 msgstr "الأفضل للتطبيقات والمشاركة والطباعة."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Blank draft"
-msgstr "مسودة فارغة"
-
 #: src/features/ats-checker/messages.ts
 msgid "Blocker"
 msgstr "عائق حاسم"
@@ -889,6 +825,10 @@ msgstr "عرض الإطار"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "قسّم السيرة الذاتية إلى الأقسام المعتادة لتسهيل تجزئتها."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Build your base"
+msgstr ""
+
 #: src/features/resume/public/public-resume.tsx
 msgid "Build your own resume"
 msgstr "أنشئ سيرتك الذاتية بنفسك"
@@ -916,6 +856,9 @@ msgstr "قائمة نقطية"
 
 #. Tagline shown in app footer/about area
 #: src/components/ui/copyright.tsx
+msgid "By the communit of th, for the community."
+msgstr ""
+
 #: src/routes/_home/-sections/features.tsx
 #: src/routes/_home/-sections/prefooter.tsx
 msgid "By the community, for the community."
@@ -951,9 +894,9 @@ msgstr "هل يمكنني تصدير سيرتي الذاتية إلى PDF؟"
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Cannot restore; the resume has changed since this edit was applied."
-msgstr "لا يمكن الاستعادة؛ فقد تغيرت السيرة الذاتية منذ تطبيق هذا التعديل."
+#: src/routes/_home/-sections/hero.tsx
+msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Catalan"
@@ -962,6 +905,10 @@ msgstr "الكتالانية"
 #: src/components/input/rich-input.tsx
 msgid "Center Align"
 msgstr "محاذاة في الوسط"
+
+#: src/dialogs/resume/template/data.ts
+msgid "Centered identity, monochrome section rules, and compact single-column content for a traditional ATS-friendly resume."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cerebras"
@@ -992,11 +939,6 @@ msgstr "غيّرت رأيك؟ أعد تسمية سيرتك الذاتية إلى
 #: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "سجل التغييرات"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Chat"
-msgstr "محادثة"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
@@ -1030,6 +972,10 @@ msgstr "مراجعة المسودة"
 msgid "Checking…"
 msgstr "جارٍ الفحص…"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Checkout redesign · 18% more conversions"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
 msgstr "الصينية (المبسطة)"
@@ -1037,10 +983,6 @@ msgstr "الصينية (المبسطة)"
 #: src/libs/locale.ts
 msgid "Chinese (Traditional)"
 msgstr "الصينية (التقليدية)"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a model and resume draft."
-msgstr "اختر نموذجًا واكتب مسودة سيرة ذاتية."
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Choose a PDF"
@@ -1052,13 +994,9 @@ msgstr "اختر ملف PDF"
 msgid "Choose a preset or custom shade."
 msgstr "اختر لوناً محدداً مسبقاً أو مخصصاً."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Choose a resume"
-msgstr "اختر سيرة ذاتية"
-
-#: src/routes/agent/index.tsx
-msgid "Choose an existing conversation from the sidebar, or start a new draft-focused thread."
-msgstr "اختر محادثة موجودة من الشريط الجانبي، أو ابدأ سلسلة محادثات جديدة تركز على المسودة."
+#: src/dialogs/resume/template/gallery.tsx
+msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
 msgid "Choose PDF, DOCX, Markdown, or JSON. Export your resume and cover letter separately when available."
@@ -1087,9 +1025,39 @@ msgstr "كليرست"
 msgid "Click here to select a file to import"
 msgstr "انقر هنا لتحديد ملف لاستيراده"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Close AI assistant"
-msgstr "مساعد الذكاء الاصطناعي للإغلاق"
+#: src/routes/_home/-sections/header.tsx
+msgid "cloudcoffee - Go to homepage"
+msgstr "cloudcoffee - الانتقال إلى الصفحة الرئيسية"
+
+#. Import source option for current cloudcoffee JSON format
+#: src/dialogs/resume/import.tsx
+msgid "cloudcoffee (JSON)"
+msgstr "استئناف تفاعلي (JSON)"
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
+msgstr "يواصل cloudcoffee النمو بفضل مجتمعه النابض بالحياة. يدين هذا المشروع بتقدمه للعديد من الأفراد الذين كرّسوا وقتهم ومهاراتهم لتحسينه. نحتفي بالمبرمجين الذين عززوا ميزاته على GitHub، واللغويين الذين جعلت ترجماتهم على Crowdin التطبيق متاحًا لشريحة أوسع، والأشخاص الذين قدّموا تبرعات لدعم تطويره المستمر."
+
+#: src/routes/_home/-sections/donate.tsx
+msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
+msgstr "cloudcoffee هو مشروع مجاني ومفتوح المصدر، صُنع بحب ويُدار من قبلي ومن قبل مجتمع من المساهمين. تساعد تبرعاتك في إبقاء الأضواء مضاءة واستمرار تدفق الشيفرة."
+
+#: src/components/ui/donation-toast.tsx
+msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
+msgstr "برنامج cloudcoffee مجاني ومفتوح المصدر. إذا أفادك، يُرجى التفكير في التبرع."
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
+msgstr "cloudcoffee مفتوح المصدر ويركز على الخصوصية ومجاني تمامًا. وعلى عكس أدوات إنشاء السير الذاتية الأخرى، لا يعرض إعلانات، ولا يتتبع بياناتك، ولا يقيّد ميزاتك خلف جدار دفع."
+
+#: src/routes/_home/-sections/sponsors.tsx
+msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
+msgstr "يظل برنامج cloudcoffee مجانيًا ومفتوح المصدر ومستقلًا بفضل دعم الشركات التي تختار المساهمة في تطويره. ويساهم هذا الدعم في تمويل الاستضافة والصيانة والتطوير المستمر لصالح المجتمع."
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
+msgstr "السيرة الذاتية التفاعلية v<0>{__APP_VERSION__}</0>"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Cohere"
@@ -1131,10 +1099,6 @@ msgstr "الشركة / الدور"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Company A–Z"
 msgstr "الشركة A–Z"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Compare this resume against this role URL and update keywords while keeping the voice concise and credible."
-msgstr "قارن هذه السيرة الذاتية مع رابط الوظيفة هذا وقم بتحديث الكلمات الرئيسية مع الحفاظ على أسلوب موجز وموثوق."
 
 #: src/routes/_home/-sections/features.tsx
 msgid "Completely free, forever, no hidden costs."
@@ -1209,20 +1173,12 @@ msgid "Continue where you left off"
 msgstr "تابع من حيث توقفت"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing an existing resume you created using Reactive Resume or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from Reactive Resume."
-msgstr "تابع من حيث توقفت عن طريق استيراد سيرة ذاتية موجودة أنشأتها باستخدام Reactive Resume أو أي أداة إنشاء سيرة ذاتية أخرى. تتضمن التنسيقات المدعومة PDF وMicrosoft Word وملفات JSON من Reactive Resume."
+msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
+msgstr "تابع من حيث توقفت عن طريق استيراد سيرة ذاتية موجودة أنشأتها باستخدام cloudcoffee أو أي أداة إنشاء سيرة ذاتية أخرى. تتضمن التنسيقات المدعومة PDF وMicrosoft Word وملفات JSON من cloudcoffee."
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
 msgstr "تموّل المساهمات إصلاحات الأخطاء وتحديثات الأمان والتحسينات المستمرة للحفاظ على عمل التطبيق بسلاسة."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation copied."
-msgstr "تم نسخ المحادثة."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Conversation JSON copied."
-msgstr "تم نسخ بيانات المحادثة بصيغة JSON."
 
 #: src/features/resume/stylesheet/legacy-banner.tsx
 msgid "Converted stylesheet draft"
@@ -1235,7 +1191,6 @@ msgstr "تم نسخها إلى الحافظة."
 #. Action button to copy two-factor backup codes to clipboard
 #: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
-#: src/routes/agent/-components/agent-chat.tsx
 msgid "Copy"
 msgstr "نسخ"
 
@@ -1246,10 +1201,6 @@ msgstr "انسخ رموز النسخ الاحتياطي هذه واحتفظ به
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Copy Backup Codes"
 msgstr "نسخ رموز النسخ الاحتياطي"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Copy JSON"
-msgstr "نسخ JSON"
 
 #. Accessible label for the button that copies the two-factor secret key
 #: src/dialogs/auth/enable-two-factor.tsx
@@ -1289,10 +1240,6 @@ msgstr "صحّح السنة، أو اكتب \"Present\" (حاليًا) للعم�
 #: src/dialogs/resume/import.tsx
 msgid "Could not reach the AI provider. Please try again."
 msgstr "تعذر الوصول إلى موفر الذكاء الاصطناعي. يرجى المحاولة مرة أخرى."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Could not restore this patch."
-msgstr "تعذر استعادة هذا التحديث."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Could not verify provider connection."
@@ -1476,10 +1423,6 @@ msgstr "إنشاء نموذج سيرة ذاتية"
 msgid "Create as many resumes as you want, without limits."
 msgstr "أنشئ العدد الذي تريده من السير الذاتية، بدون حدود."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Create from scratch"
-msgstr "أنشئ من الصفر"
-
 #. Call-to-action link from login page to account registration page
 #: src/features/auth/pages/login.tsx
 msgid "Create one now"
@@ -1585,10 +1528,6 @@ msgstr "التواريخ"
 msgid "Decrease indent"
 msgstr "تقليل المسافة البادئة"
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Decrease zoom"
-msgstr "تقليل التكبير"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Deep check"
 msgstr "فحص عميق"
@@ -1612,8 +1551,6 @@ msgstr "الدرجة"
 #: src/features/applications/components/table-view.tsx
 #: src/features/settings/authentication/components/passkeys.tsx
 #: src/features/settings/pages/api-keys.tsx
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1642,11 +1579,6 @@ msgstr "حذف الصورة"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Delete provider"
 msgstr "حذف الموفر"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Delete this agent thread?"
-msgstr "هل تريد حذف هذا الموضوع الخاص بالوكيل؟"
 
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -1678,14 +1610,6 @@ msgstr "جاري حذف مفتاح واجهة برمجة التطبيقات (API
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
 msgstr "جاري حذف سيرتك الذاتية..."
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Denied — waiting for the agent…"
-msgstr "تم الرفض — في انتظار الوكيل…"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Deny"
-msgstr "رفض"
 
 #: src/features/ats-checker/messages.ts
 msgid "Describe each role with short bullets. Solid paragraphs are harder to skim and to segment."
@@ -1761,12 +1685,8 @@ msgid "Donate"
 msgstr "يتبرع"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "تبرع لـReactive Resume"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Done"
-msgstr "تم"
+msgid "Donate to cloudcoffee"
+msgstr "تبرع لـcloudcoffee"
 
 #. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
@@ -1787,7 +1707,6 @@ msgid "Download options"
 msgstr "خيارات التنزيل"
 
 #: src/features/resume/public/public-resume.tsx
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "Download PDF"
 msgstr "تنزيل PDF"
 
@@ -1829,10 +1748,6 @@ msgstr "احذف الضمائر وابدأ بالفعل. هذا هو المتع�
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Duplicate"
 msgstr "استنساخ"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Duplicate as AI Draft"
-msgstr "نسخ كمسودة ذكاء اصطناعي"
 
 #: src/dialogs/resume/index.tsx
 msgid "Duplicate Resume"
@@ -1883,10 +1798,6 @@ msgstr "تحرير المحتوى في وضع ملء الشاشة"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Edit date"
 msgstr "تعديل التاريخ"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Edit declined"
-msgstr "تم رفض التعديل"
 
 #. Resume card context menu action to edit resume metadata
 #. Resume card dropdown action to edit resume metadata
@@ -2052,12 +1963,12 @@ msgid "Expires on {0}"
 msgstr "تنتهي في {0}"
 
 #: src/routes/_home/-sections/templates.tsx
-msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. Reactive Resume currently offers 12 templates, with more on the way."
-msgstr "استكشف مجموعتنا المتنوعة من القوالب، وقد صُمِّم كل واحد منها ليناسب الأساليب والمهن والشخصيات المختلفة. يقدّم Reactive Resume حاليًا 12 قالبًا، مع المزيد في الطريق."
+msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
+msgstr "استكشف مجموعتنا المتنوعة من القوالب، وقد صُمِّم كل واحد منها ليناسب الأساليب والمهن والشخصيات المختلفة. يقدّم cloudcoffee حاليًا 12 قالبًا، مع المزيد في الطريق."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate Reactive Resume with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "استكشف إرشادات واجهة برمجة التطبيقات لتتعلم كيفية دمج Reactive Resume مع تطبيقاتك. ستجد نقاط نهاية تفصيلية وأمثلة للطلبات وطرق المصادقة."
+msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
+msgstr "استكشف إرشادات واجهة برمجة التطبيقات لتتعلم كيفية دمج cloudcoffee مع تطبيقاتك. ستجد نقاط نهاية تفصيلية وأمثلة للطلبات وطرق المصادقة."
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -2095,15 +2006,6 @@ msgstr "قم بتصدير سيرتك الذاتية إلى ملف PDF على ا�
 msgid "Exported pipeline-flow.png"
 msgstr "تم تصدير ملف pipeline-flow.png"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Failed"
-msgstr "فشل"
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to archive thread."
-msgstr "فشل أرشفة الموضوع."
-
 #. Fallback toast when creating an API key fails
 #: src/dialogs/api-key/create.tsx
 msgid "Failed to create API key. Please try again."
@@ -2127,11 +2029,6 @@ msgstr "فشل حذف الموفر."
 #: src/features/settings/pages/api-keys.tsx
 msgid "Failed to delete the API key. Please try again."
 msgstr "فشل حذف مفتاح واجهة برمجة التطبيقات (API). يرجى المحاولة مرة أخرى."
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Failed to delete thread."
-msgstr "فشل حذف الموضوع."
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
@@ -2212,14 +2109,6 @@ msgstr "فشل تسجيل الدخول. يُرجى المحاولة مرة أخ�
 msgid "Failed to sign out. Please try again."
 msgstr "فشل تسجيل الخروج. يرجى المحاولة مرة أخرى."
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Failed to start agent thread."
-msgstr "فشل بدء تشغيل سلسلة الوكيل."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Failed to start the AI assistant."
-msgstr "فشل تشغيل مساعد الذكاء الاصطناعي."
-
 #. Fallback toast when unlinking a social authentication provider fails
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Failed to unlink provider. Please try again."
@@ -2228,10 +2117,6 @@ msgstr "فشل إلغاء ربط الموفر. يرجى المحاولة مرة 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "فشل تحديث الموفر."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to update thread settings."
-msgstr "فشل تحديث إعدادات الموضوع."
 
 #. Fallback toast when changing account password fails
 #: src/dialogs/auth/change-password.tsx
@@ -2242,10 +2127,6 @@ msgstr "فشل تحديث كلمة المرور الخاصة بك. يرجى ال
 #: src/features/settings/pages/profile.tsx
 msgid "Failed to update your profile. Please try again."
 msgstr "فشل تحديث ملفك الشخصي. يرجى المحاولة مرة أخرى."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Failed to upload attachment."
-msgstr "فشل تحميل المرفق."
 
 #. Fallback toast when uploading profile picture for resume fails
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
@@ -2296,10 +2177,6 @@ msgstr "تصفية حسب"
 #: src/routes/dashboard/applications/index.tsx
 msgid "Filter by tags"
 msgstr "تصفية حسب الوسوم"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Find weak bullets and rewrite them with stronger outcomes, numbers, scope, and sharper verbs."
-msgstr "ابحث عن النقاط الضعيفة وأعد صياغتها بنتائج وأرقام ونطاق وأفعال أكثر دقة."
 
 #: src/libs/locale.ts
 msgid "Finnish"
@@ -2433,10 +2310,6 @@ msgstr "إنشاء اسم عشوائي"
 msgid "German"
 msgstr "الألمانية"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Get Started"
-msgstr "ابدأ الآن"
-
 #. Authentication provider display name in account settings
 #. Brand name label for GitHub social sign-in button
 #: src/features/auth/components/social-auth.tsx
@@ -2444,6 +2317,10 @@ msgstr "ابدأ الآن"
 #: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "جيثب"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "GitHub connected"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Give every role a period, such as \"Jan 2020 - Present\", so your timeline can be reconstructed."
@@ -2558,10 +2435,6 @@ msgstr "ساعدني في ضم مساهمين أكثر خبرة إلى الفر�
 msgid "Help translate the app to your language"
 msgstr "ساعد في ترجمة التطبيق إلى لغتك"
 
-#: src/dialogs/resume/template/gallery.tsx
-msgid "Here's a range of resume templates for different professions and personalities. Whether you prefer modern or classic, bold or simple, there is a design to match you. Look through the options below and choose a template that fits your style."
-msgstr "إليك مجموعة من قوالب السيرة الذاتية لمهن وشخصيات مختلفة. سواء كنت تفضل الطابع العصري أو الكلاسيكي، القوي أو البسيط، فهناك تصميم يناسبك. ألقِ نظرة على الخيارات أدناه واختر القالب الذي يلائم أسلوبك."
-
 #: src/dialogs/api-key/create.tsx
 msgid "Here's your new API key"
 msgstr "إليك مفتاح واجهة برمجة التطبيقات الجديد الخاص بك"
@@ -2657,10 +2530,6 @@ msgstr "الهنغارية"
 msgid "Icon"
 msgstr "الأيقونة"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Identify gaps for an applicant tracking system and apply only high-confidence keyword improvements."
-msgstr "حدد الثغرات في نظام تتبع المتقدمين للوظائف وقم بتطبيق تحسينات الكلمات الرئيسية ذات الثقة العالية فقط."
-
 #: src/features/ats-checker/messages.ts
 msgid "If it came from a scan, that is expected. Otherwise remove it; recruiters read it as keyword stuffing."
 msgstr "إذا جاء من مسح ضوئي، فهذا متوقّع. وإلا فاحذفه؛ فمسؤولو التوظيف يعتبرونه حشوًا للكلمات المفتاحية."
@@ -2736,10 +2605,6 @@ msgstr "زد تباعد الأسطر حتى لا يندمج سطران في سط
 msgid "Increase them so content stays inside the reliably read area."
 msgstr "قم بزيادتها بحيث يبقى المحتوى داخل منطقة القراءة بشكل موثوق."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Increase zoom"
-msgstr "تكبير الصورة"
-
 #: src/libs/locale.ts
 msgid "Indonesian"
 msgstr "الإندونيسية"
@@ -2783,12 +2648,12 @@ msgid "Invalid AI provider configuration."
 msgstr "إعدادات موفر الذكاء الاصطناعي غير صالحة."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume available in multiple languages?"
-msgstr "هل يتوفر Reactive Resume بعدة لغات؟"
+msgid "Is cloudcoffee available in multiple languages?"
+msgstr "هل يتوفر cloudcoffee بعدة لغات؟"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Is Reactive Resume really free?"
-msgstr "هل Reactive Resume مجاني فعلاً؟"
+msgid "Is cloudcoffee really free?"
+msgstr "هل cloudcoffee مجاني فعلاً؟"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2982,10 +2847,6 @@ msgstr "رتّب النص أفقيًا. غالبًا ما يتم إسقاط ال
 msgid "Layout"
 msgstr "التخطيط"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Learn More"
-msgstr "اعرف المزيد"
-
 #: src/dialogs/resume/import.tsx
 #: src/hooks/use-form-blocker.tsx
 msgid "Leave"
@@ -3055,15 +2916,15 @@ msgid "Line Height"
 msgstr "ارتفاع السطر"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "ربط Reactive Resume (موصى به)"
+msgid "Link a cloudcoffee (recommended)"
+msgstr "ربط cloudcoffee (موصى به)"
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "اربط سيرة ذاتية والصق وصف الوظيفة (تحرير) لتقييم مدى ملاءمتك وتخصيص نسخة."
 
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
+msgid "Linked cloudcoffee"
 msgstr "السيرة الذاتية التفاعلية المرتبطة"
 
 #. Authentication provider display name in account settings
@@ -3079,8 +2940,8 @@ msgid "LinkedIn, Referral…"
 msgstr "LinkedIn، إحالة…"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Linking a Reactive Resume enables AI match scoring and tailoring."
-msgstr "يتيح ربط Reactive Resume تسجيل مطابقة بالذكاء الاصطناعي وتخصيص السيرة."
+msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
+msgstr "يتيح ربط cloudcoffee تسجيل مطابقة بالذكاء الاصطناعي وتخصيص السيرة."
 
 #: src/features/settings/authentication/components/hooks.tsx
 msgid "Linking your {providerName} account..."
@@ -3112,14 +2973,8 @@ msgid "Loading providers…"
 msgstr "جارٍ تحميل مزودي الخدمة…"
 
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 msgid "Loading resumes…"
 msgstr "استئناف التحميل…"
-
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Loading threads…"
-msgstr "جارٍ تحميل الخيوط…"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Loading…"
@@ -3174,10 +3029,6 @@ msgstr "رئيسي"
 msgid "Main navigation"
 msgstr "التنقل الرئيسي"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Make the experience section more results-oriented and remove vague responsibilities."
-msgstr "اجعل قسم الخبرة أكثر تركيزاً على النتائج، وتخلص من المسؤوليات الغامضة."
-
 #: src/features/ats-checker/messages.ts
 msgid "Make the visible text and the destination match."
 msgstr "اجعل النص الظاهر والوجهة متطابقين."
@@ -3218,6 +3069,10 @@ msgstr "رفض مارك"
 msgid "Match scoring failed."
 msgstr "فشل تسجيل النقاط في المباراة."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Matched to Senior Product Engineer"
+msgstr ""
+
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
 msgstr "تأثير متوسط"
@@ -3227,10 +3082,6 @@ msgstr "تأثير متوسط"
 #: src/dialogs/resume/import.tsx
 msgid "Microsoft Word"
 msgstr "مايكروسوفت وورد"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Missing working resume"
-msgstr "سيرة ذاتية مفقودة"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Mistral AI"
@@ -3364,23 +3215,9 @@ msgstr "قسم جديد"
 msgid "New tag…"
 msgstr "علامة جديدة…"
 
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "New thread"
-msgstr "موضوع جديد"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-msgid "New Thread"
-msgstr "موضوع جديد"
-
 #: src/routes/_home/-sections/features.tsx
 msgid "No Advertising, No Tracking"
 msgstr "بدون إعلانات، بدون تتبّع"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "No AI provider connected"
-msgstr "لا يوجد مزوّد ذكاء اصطناعي متصل"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3484,10 +3321,6 @@ msgstr "لم يتم اختبار أي مزود خدمة"
 msgid "No text could be read from this file."
 msgstr "تعذّرت قراءة أي نص من هذا الملف."
 
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "No threads yet."
-msgstr "لا توجد مواضيع حتى الآن."
-
 #: src/features/ats-checker/messages.ts
 msgid "No work-experience section was found."
 msgstr "لم يُعثر على قسم للخبرة العملية."
@@ -3586,14 +3419,6 @@ msgstr "تم فحص الصفحات الأولى فقط."
 msgid "Open"
 msgstr "افتح"
 
-#: src/routes/builder/$resumeId/-components/dock.tsx
-msgid "Open AI agent"
-msgstr "وكيل الذكاء الاصطناعي المفتوح"
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Open AI assistant"
-msgstr "مساعد الذكاء الاصطناعي المفتوح"
-
 #. Button label to open the user's default email app
 #: src/features/auth/pages/forgot-password.tsx
 msgid "Open Email Client"
@@ -3602,10 +3427,6 @@ msgstr "فتح عميل البريد الإلكتروني"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "وضع التركيز المفتوح"
-
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Open in builder"
-msgstr "افتح في أداة الإنشاء"
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Open Integrations Settings"
@@ -3640,14 +3461,6 @@ msgstr "الموجه المفتوح (OpenRouter)"
 #: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "يفتح في علامة تبويب جديدة"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent"
-msgstr "ملاحظة اختيارية للوكيل"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Optional note for the agent…"
-msgstr "ملاحظة اختيارية للوكيل…"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Optionally, set a password so that only people with the password can view your resume through the link."
@@ -3775,30 +3588,6 @@ msgstr "الصق الإعلان لترى أي مصطلحاته تظهر بالف
 msgid "Pasting fills the fields automatically."
 msgstr "اللصق يملأ الحقول تلقائياً."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch applied"
-msgstr "تم تطبيق الرقعة"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch conflicted"
-msgstr "تعارض التحديث"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch failed"
-msgstr "فشل التحديث"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch pending"
-msgstr "التحديث قيد الانتظار"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back"
-msgstr "تم التراجع عن التحديث"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Patch rolled back."
-msgstr "تم التراجع عن التحديث."
-
 #. File format label in import source selector
 #. File format label in import source selector
 #: src/dialogs/resume/import.tsx
@@ -3882,10 +3671,6 @@ msgstr "يرجى تحميل ملف PDF."
 msgid "Please wait while your PDF is being generated..."
 msgstr "يُرجى الانتظار أثناء إنشاء ملف PDF الخاص بك..."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "Please wait while your PDF is being generated…"
-msgstr "يرجى الانتظار ريثما يتم إنشاء ملف PDF الخاص بك…"
-
 #: src/libs/locale.ts
 msgid "Polish"
 msgstr "البولندية"
@@ -3922,10 +3707,6 @@ msgstr "يُفضَّل عمود واحد، أو إبقاء العمود الجا
 #: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "التفضيلات"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Prepare a conservative patch that improves clarity without changing my career narrative."
-msgstr "قم بإعداد تعديل بسيط يحافظ على وضوح الرؤية دون تغيير مساري المهني."
 
 #: src/features/resume/export/use-resume-export.ts
 msgid "Preparing your resume for printing..."
@@ -3984,6 +3765,10 @@ msgstr "الملفات الشخصية"
 msgid "Progress Bar"
 msgstr "شريط التقدّم"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Project captured"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4010,6 +3795,10 @@ msgstr "تم التحقق من اتصال مزود الخدمة."
 msgid "Provider model"
 msgstr "نموذج المزوّد"
 
+#: src/features/settings/integrations/components/ai-section.tsx
+msgid "Provider ready"
+msgstr ""
+
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
@@ -4023,10 +3812,6 @@ msgstr "الناشر"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "ضع عنوان بريد إلكتروني بسيط بالقرب من أعلى الصفحة الأولى. فهو ما تصنّفك بموجبه معظم الأنظمة."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Raw JSON"
-msgstr "JSON خام"
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -4056,60 +3841,14 @@ msgstr "أعد التصدير مع تضمين الخطوط، ثم افتح ال�
 msgid "Re-score"
 msgstr "إعادة التقييم"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - الانتقال إلى الصفحة الرئيسية"
-
-#. Import source option for current Reactive Resume JSON format
-#: src/dialogs/resume/import.tsx
-msgid "Reactive Resume (JSON)"
-msgstr "استئناف تفاعلي (JSON)"
-
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "Reactive Resume continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "يواصل Reactive Resume النمو بفضل مجتمعه النابض بالحياة. يدين هذا المشروع بتقدمه للعديد من الأفراد الذين كرّسوا وقتهم ومهاراتهم لتحسينه. نحتفي بالمبرمجين الذين عززوا ميزاته على GitHub، واللغويين الذين جعلت ترجماتهم على Crowdin التطبيق متاحًا لشريحة أوسع، والأشخاص الذين قدّموا تبرعات لدعم تطويره المستمر."
-
-#: src/routes/_home/-sections/donate.tsx
-msgid "Reactive Resume is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
-msgstr "Reactive Resume هو مشروع مجاني ومفتوح المصدر، صُنع بحب ويُدار من قبلي ومن قبل مجتمع من المساهمين. تساعد تبرعاتك في إبقاء الأضواء مضاءة واستمرار تدفق الشيفرة."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Reactive Resume is a free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Reactive Resume هي أداة إنشاء سيرة ذاتية مجانية ومفتوحة المصدر تعمل على تبسيط عملية إنشاء سيرتك الذاتية وتحديثها ومشاركتها."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "برنامج Reactive Resume مجاني ومفتوح المصدر. إذا أفادك، يُرجى التفكير في التبرع."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Reactive Resume is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "Reactive Resume مفتوح المصدر ويركز على الخصوصية ومجاني تمامًا. وعلى عكس أدوات إنشاء السير الذاتية الأخرى، لا يعرض إعلانات، ولا يتتبع بياناتك، ولا يقيّد ميزاتك خلف جدار دفع."
-
-#: src/routes/_home/-sections/sponsors.tsx
-msgid "Reactive Resume stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
-msgstr "يظل برنامج Reactive Resume مجانيًا ومفتوح المصدر ومستقلًا بفضل دعم الشركات التي تختار المساهمة في تطويره. ويساهم هذا الدعم في تمويل الاستضافة والصيانة والتطوير المستمر لصالح المجتمع."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "السيرة الذاتية التفاعلية v<0>{__APP_VERSION__}</0>"
-
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume v4 (JSON)"
 msgstr "استئناف تفاعلي الإصدار 4 (JSON)"
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read an attachment"
-msgstr "قرأ مرفقًا"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Read the Applying Custom Styles guide."
 msgstr "اقرأ دليل تطبيق الأنماط المخصصة."
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Read the resume"
-msgstr "قرأ السيرة الذاتية"
 
 #: src/features/ats-checker/messages.ts
 msgid "Readability"
@@ -4287,32 +4026,18 @@ msgstr "جاري إعادة تعيين كلمة المرور..."
 msgid "Resources"
 msgstr "الموارد"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore"
-msgstr "يعيد"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Restore the resume to before this patch?"
-msgstr "استعادة السيرة الذاتية إلى ما قبل هذه الرقعة؟"
-
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
 msgstr "هل تريد استعادة هذه النسخة؟"
 
 #: src/features/applications/components/application-form-sheet.tsx
 #: src/features/resume/export/download-dialog.tsx
-#: src/routes/agent/-components/resume-pane.tsx
-#: src/routes/agent/$threadId.tsx
 msgid "Resume"
 msgstr "سيرة ذاتية"
 
 #: src/features/resume/preview/resume-accessible-text.tsx
 msgid "Resume content"
 msgstr "محتوى السيرة الذاتية"
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Resume edit"
-msgstr "تعديل السيرة الذاتية"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Resume file"
@@ -4326,9 +4051,9 @@ msgstr "السيرة الذاتية مرفقة"
 msgid "Resume options"
 msgstr "خيارات السيرة الذاتية"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Resume patch"
-msgstr "استئناف التصحيح"
+#: src/routes/_home/-sections/hero.tsx
+msgid "Resume tailored"
+msgstr ""
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
@@ -4338,37 +4063,13 @@ msgstr "استئناف التصحيح"
 msgid "Resumes"
 msgstr "السير الذاتية"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Retry"
-msgstr "إعادة المحاولة"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review edits"
-msgstr "مراجعة التعديلات"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Review the resume against a job description and ask me questions before changing uncertain sections."
-msgstr "راجع السيرة الذاتية مع وصف الوظيفة واطرح عليّ أسئلة قبل تغيير الأقسام غير الواضحة."
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Review the writing with AI"
 msgstr "راجع الكتابة بالذكاء الاصطناعي"
 
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Review this edit"
-msgstr "مراجعة هذا التعديل"
-
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Reviewing…"
 msgstr "جارٍ المراجعة…"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rework the summary so it targets a senior engineering manager role without sounding generic."
-msgstr "أعد صياغة الملخص بحيث يستهدف منصب مدير هندسي رفيع المستوى دون أن يبدو عاماً."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Rewrite this resume for a startup founder-to-product-lead transition with clear business impact."
-msgstr "أعد كتابة هذه السيرة الذاتية لتتناسب مع انتقال مؤسس شركة ناشئة إلى قائد منتج مع تأثير واضح على الأعمال."
 
 #: src/components/input/rich-input.tsx
 msgid "Right Align"
@@ -4409,10 +4110,6 @@ msgstr "تشغيل مراجعة الذكاء الاصطناعي"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Run deep check"
 msgstr "تشغيل الفحص العميق"
-
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Running…"
-msgstr "قيد التشغيل…"
 
 #: src/libs/locale.ts
 msgid "Russian"
@@ -4555,6 +4252,10 @@ msgstr "نوع القسم"
 msgid "Sections"
 msgstr "الأقسام"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "See how it works"
+msgstr ""
+
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "See how this resume matches the posting"
 msgstr "انظر كيف تتطابق هذه السيرة الذاتية مع متطلبات الوظيفة المعلن عنها"
@@ -4568,21 +4269,9 @@ msgstr "اطّلع على ما يستطيع نظام تتبع المتقدمين
 msgid "Select {0}"
 msgstr "اختر {0}"
 
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select a resume"
-msgstr "اختر سيرة ذاتية"
-
-#: src/routes/agent/index.tsx
-msgid "Select a thread"
-msgstr "اختر موضوعًا"
-
 #: src/features/applications/components/table-view.tsx
 msgid "Select all"
 msgstr "حدد الكل"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Select an agent model"
-msgstr "اختر نموذج الوكيل"
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 msgid "Select an AI provider"
@@ -4603,14 +4292,6 @@ msgstr "الاستضافة الذاتية مع Docker"
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "ورقة أنماط CSS الدلالية"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send answer"
-msgstr "إرسال الإجابة"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Send message"
-msgstr "إرسال الرسائل"
 
 #. Primary action button label on forgot-password form
 #: src/features/auth/pages/forgot-password.tsx
@@ -4654,24 +4335,7 @@ msgstr "حدّد لغة المستند عند التصدير."
 msgid "Set up a provider"
 msgstr "قم بإعداد مزود خدمة"
 
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider"
-msgstr "إنشاء مزود للذكاء الاصطناعي"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider before starting a thread."
-msgstr "قم بإعداد موفر الذكاء الاصطناعي قبل بدء سلسلة المحادثات."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "Set up an AI provider to chat about this resume and apply edits automatically."
-msgstr "قم بإعداد مزود خدمة ذكاء اصطناعي للتحدث عن هذه السيرة الذاتية وتطبيق التعديلات تلقائيًا."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Set up an AI provider to get started."
-msgstr "قم بإعداد مزود خدمة الذكاء الاصطناعي للبدء."
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/agent/-components/new-thread-setup.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Settings"
 msgstr "إعدادات"
@@ -4810,28 +4474,8 @@ msgid "Signing up..."
 msgstr "جاري التسجيل..."
 
 #: src/dialogs/resume/template/data.ts
-msgid "Single-column with a magenta left border accent; compact and efficient for entry-level or internship applications."
-msgstr "عمود واحد مع حافة يسارية بلون أرجواني؛ مدمج وفعّال لطلبات الوظائف المبتدئة أو فترات التدريب."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a minimal top header and lots of whitespace; clean and modern for designers or content creators."
-msgstr "عمود واحد مع ترويسة علوية بسيطة ومساحات بيضاء واسعة؛ نظيف وعصري للمصممين أو منشئي المحتوى."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with a sidebar and clean grid layout; versatile for any professional or technical role."
-msgstr "عمود واحد مع شريط جانبي وتخطيط شبكي نظيف؛ متعدد الاستخدامات لأي دور مهني أو تقني."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with an inline three-column entry header (position · organization · period); compact and ATS-friendly, well-suited for Asian resume conventions (CN/JP/KR)."
-msgstr "عمود واحد مع رأس إدخال مضمن من ثلاثة أعمدة (الموضع - المؤسسة - الفترة)؛ مدمج وملائم لـ ATS، ومناسب تمامًا للسيرة الذاتية الآسيوية (CN/JP/KR)."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column with uppercase section headings and a primary-color top rule on every page; polished for executive, consulting, or startup resumes."
-msgstr "تصميم ذو عمود واحد مع عناوين أقسام بأحرف كبيرة وخطوط علوية بلون أساسي في كل صفحة؛ مصمم خصيصًا للسير الذاتية التنفيذية أو الاستشارية أو للشركات الناشئة."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Single-column; polished and serious for senior or enterprise-level positions."
-msgstr "عمود واحد؛ مصقول ورسمي للوظائف العليا أو مناصب الشركات الكبرى."
+msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Size"
@@ -4902,10 +4546,6 @@ msgstr "يقع بعض النص خارج الصفحة."
 msgid "Some text is rotated."
 msgstr "بعض النص مُدوَّر."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Something else…"
-msgstr "شيء آخر…"
-
 #: src/components/layout/error-screen.tsx
 msgid "Something went wrong"
 msgstr "حدث خطأ ما"
@@ -4943,15 +4583,6 @@ msgstr "مصدر"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "شفرة المصدر"
-
-#. placeholder {0}: operation.from
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "Source: {0}"
-msgstr "المصدر: {0}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Sources"
-msgstr "المصادر"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Spacing (Horizontal)"
@@ -5001,14 +4632,6 @@ msgstr "امنحنا نجمة على GitHub (يفتح في علامة تبويب
 msgid "Star us on GitHub, currently {0} stars (opens in new tab)"
 msgstr "امنحنا نجمة على GitHub، لدينا حاليًا {0} نجمة (يفتح في علامة تبويب جديدة)"
 
-#: src/routes/agent/$threadId.tsx
-msgid "Start a new thread"
-msgstr "ابدأ موضوعًا جديدًا"
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start a thread"
-msgstr "ابدأ موضوعًا"
-
 #: src/dialogs/resume/index.tsx
 msgid "Start building your resume by giving it a name."
 msgstr "ابدأ في إنشاء سيرتك الذاتية من خلال إعطائها اسمًا."
@@ -5022,10 +4645,6 @@ msgstr "ابدأ في إنشاء سيرتك الذاتية من الصفر"
 msgid "Start each one with a concrete verb: built, led, reduced, migrated."
 msgstr "ابدأ كل نقطة بفعل ملموس، مثل: built وled وreduced وmigrated."
 
-#: src/routes/agent/index.tsx
-msgid "Start new thread"
-msgstr "ابدأ موضوعًا جديدًا"
-
 #. Layout editor toggle that forces a section to begin on a new page
 #: src/routes/builder/$resumeId/-sidebar/right/sections/layout/pages.tsx
 msgid "Start on new page"
@@ -5034,10 +4653,6 @@ msgstr "ابدأ في صفحة جديدة"
 #: src/features/ats-checker/messages.ts
 msgid "Start the resume with your name on its own line."
 msgstr "ابدأ السيرة الذاتية باسمك في سطر مستقل."
-
-#: src/routes/agent/-components/new-thread-setup.tsx
-msgid "Start Thread"
-msgstr "موضوع البداية"
 
 #: src/libs/resume/section.tsx
 msgid "Statistics"
@@ -5051,10 +4666,6 @@ msgstr "البقاء"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Still waiting for {provider}… {elapsedSeconds}s"
 msgstr "ما زلت أنتظر {provider}… {elapsedSeconds}s"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Stop generation"
-msgstr "أوقفوا التوليد"
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Strengths"
@@ -5094,8 +4705,8 @@ msgid "Summary"
 msgstr "الملخّص"
 
 #: src/routes/_home/-sections/donate.tsx
-msgid "Support Reactive Resume"
-msgstr "ادعم Reactive Resume"
+msgid "Support cloudcoffee"
+msgstr "ادعم cloudcoffee"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Support the app by doing what you can!"
@@ -5148,10 +4759,6 @@ msgstr "تمنح الوسوم (Tags) البرامج ترتيب قراءة صري
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "قم بتخصيص سيرتي الذاتية"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tailor this resume to a product manager job description and emphasize roadmap ownership, stakeholder communication, and measurable launch outcomes."
-msgstr "قم بتخصيص هذه السيرة الذاتية لتتناسب مع الوصف الوظيفي لمدير المنتج، مع التركيز على ملكية خارطة الطريق، والتواصل مع أصحاب المصلحة، ونتائج الإطلاق القابلة للقياس."
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -5242,10 +4849,6 @@ msgstr "يستخدم حساب المزوّد هذا عنوان بريد إلكت
 #: src/features/auth/pages/error.tsx
 msgid "That sign-in provider is no longer available on this server."
 msgstr "لم يعد مزوّد تسجيل الدخول هذا متاحًا على هذا الخادم."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "The agent needs your input."
-msgstr "يحتاج الوكيل إلى رأيك."
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted successfully."
@@ -5342,10 +4945,6 @@ msgstr "لا يبدو أعلى الصفحة الأولى كاسم."
 msgid "The URL you entered is not valid."
 msgstr "عنوان URL الذي أدخلته غير صالح."
 
-#: src/routes/agent/-components/resume-pane.tsx
-msgid "The working resume was deleted. This thread is read-only."
-msgstr "تم حذف السيرة الذاتية. هذه المحادثة للقراءة فقط."
-
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
 #: src/features/settings/pages/preferences.tsx
@@ -5374,7 +4973,6 @@ msgid "There was a problem while generating the DOCX, please try again."
 msgstr "حدثت مشكلة أثناء إنشاء DOCX، يرجى المحاولة مرة أخرى."
 
 #: src/features/resume/export/use-resume-export.ts
-#: src/routes/agent/-components/resume-pane.tsx
 msgid "There was a problem while generating the PDF, please try again."
 msgstr "حدثت مشكلة أثناء إنشاء ملف PDF، يرجى المحاولة مرة أخرى."
 
@@ -5394,10 +4992,6 @@ msgstr "يتم تشغيل عمليات التحقق هذه أثناء الكتا
 msgid "These dates will not be read correctly."
 msgstr "لن تتم قراءة هذه التواريخ بشكل صحيح."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thinking"
-msgstr "التفكير"
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "This action cannot be undone."
@@ -5406,22 +5000,6 @@ msgstr "لا يمكن التراجع عن هذا الإجراء."
 #: src/features/settings/pages/account.tsx
 msgid "This action cannot be undone. All your data will be permanently deleted."
 msgstr "لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع بياناتك نهائيًا."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This action cannot be undone. Conversation messages and uploaded attachments will be removed. The working resume remains in your dashboard and can be deleted separately."
-msgstr "لا يمكن التراجع عن هذا الإجراء. سيتم حذف رسائل المحادثة والمرفقات التي تم تحميلها. أما السيرة الذاتية الخاصة بالعمل فستبقى في لوحة التحكم الخاصة بك ويمكن حذفها بشكل منفصل."
-
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "This action cannot be undone. Messages and thread attachments will be removed."
-msgstr "لا يمكن التراجع عن هذا الإجراء. سيتم حذف الرسائل ومرفقات الموضوع."
-
-#: src/routes/agent/$threadId.tsx
-msgid "This agent thread could not be opened."
-msgstr "تعذر فتح هذا الموضوع الخاص بالوكيل."
-
-#: src/routes/builder/$resumeId/-components/ai-assistant.tsx
-msgid "This assistant could not be opened."
-msgstr "تعذر فتح هذا المساعد."
 
 #: src/features/ats-checker/messages.ts
 msgid "This check does not apply to this file."
@@ -5434,10 +5012,6 @@ msgstr "يعمل هذا الفحص فقط على السير الذاتية ال�
 #: src/libs/resume/ats.ts
 msgid "This date will not be read correctly."
 msgstr "لن يتم قراءة هذا التاريخ بشكل صحيح."
-
-#: src/routes/agent/-components/patch-approval-card.tsx
-msgid "This edit request can no longer be answered."
-msgstr "لم يعد من الممكن الرد على طلب التعديل هذا."
 
 #: src/libs/resume/ats.ts
 msgid "This email address will not be recognized."
@@ -5607,21 +5181,9 @@ msgstr "انتهت صلاحية محاولة تسجيل الدخول هذه أو
 msgid "This step is optional, but recommended."
 msgstr "هذه الخطوة اختيارية، لكنها موصى بها."
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is archived. New messages cannot be sent."
-msgstr "هذه المحادثة مؤرشفة. لا يمكن إرسال رسائل جديدة."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only"
-msgstr "هذه السلسلة للقراءة فقط"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This thread is read-only because the working resume or AI provider is unavailable."
-msgstr "هذه السلسلة للقراءة فقط لأن السيرة الذاتية العاملة أو مزود الذكاء الاصطناعي غير متوفر."
-
 #: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the Reactive Resume API to allow machines to interact with your resume data."
-msgstr "سيؤدي هذا إلى إنشاء مفتاح واجهة برمجة تطبيقات (API) جديد للوصول إلى واجهة Reactive Resume، للسماح للبرامج بالتفاعل مع بيانات سيرتك الذاتية."
+msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
+msgstr "سيؤدي هذا إلى إنشاء مفتاح واجهة برمجة تطبيقات (API) جديد للوصول إلى واجهة cloudcoffee، للسماح للبرامج بالتفاعل مع بيانات سيرتك الذاتية."
 
 #: src/features/settings/authentication/components/passkeys.tsx
 msgid "This will help you identify it later, if you plan to have multiple passkeys."
@@ -5630,38 +5192,6 @@ msgstr "سيساعدك هذا في تحديدها لاحقاً، إذا كنت �
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "سيؤدي ذلك إلى إزالة جميع العناصر من هذا القسم."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "This will roll back this patch and any patches applied after it."
-msgstr "سيؤدي هذا إلى التراجع عن هذه الرقعة وأي رقع طُبّقت بعدها."
-
-#: src/routes/agent/-components/agent-chat.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-msgid "Thread actions"
-msgstr "إجراءات الخيوط"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread archived."
-msgstr "تمت أرشفة الموضوع."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Thread deleted."
-msgstr "تم حذف الموضوع."
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/resumes.tsx
-#: src/routes/agent/-components/thread-sidebar.tsx
-#: src/routes/agent/$threadId.tsx
-msgid "Threads"
-msgstr "الخيوط"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tighten the skills section so it supports the target role instead of reading like a keyword dump."
-msgstr "قم بتضييق قسم المهارات بحيث يدعم الدور المستهدف بدلاً من أن يكون أشبه بقائمة من الكلمات المفتاحية."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Timelapse demonstration of building a resume with Reactive Resume"
-msgstr "عرض سريع لبناء سيرة ذاتية باستخدام Reactive Resume"
 
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Timeline"
@@ -5708,30 +5238,10 @@ msgstr "تبديل الشريط الجانبي الأيسر"
 msgid "Toggle page stacking"
 msgstr "تبديل تكديس الصفحات"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle resume preview"
-msgstr "تبديل معاينة السيرة الذاتية"
-
 #. Screen-reader label for opening or closing the right sidebar in resume builder
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Toggle right sidebar"
 msgstr "تبديل الشريط الجانبي الأيمن"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Toggle threads"
-msgstr "تبديل الخيوط"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {threadTokenTotal}"
-msgstr "الرموز: {threadTokenTotal}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total}"
-msgstr "الرموز: {total}"
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Tokens: {total} ({cached} cached)"
-msgstr "الرموز: {total} ({cached} مخزّنة مؤقتًا)"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Track a job you're applying to and link the resume you sent."
@@ -5765,42 +5275,6 @@ msgstr "أوقف الحروف المدمجة الاختيارية عند الت�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "قم بتفعيل المشاركة العامة لتتبّع عدد مرات مشاهدة أو تنزيل سيرتك الذاتية. أنت وحدك من يمكنه رؤية إحصاءات سيرتك الذاتية."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a bold colored sidebar and skill bars; great for creative or tech roles where visual flair is welcome."
-msgstr "عمودان مع شريط جانبي بلون جريء وأشرطة مهارات؛ رائع للأدوار الإبداعية أو التقنية حيث يُرحَّب بالطابع البصري اللافت."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a dark teal sidebar and skills grid; modern feel for developers, data scientists, or technical PMs."
-msgstr "عمودان مع شريط جانبي بلون أزرق مخضر داكن وشبكة مهارات؛ طابع عصري للمطورين أو علماء البيانات أو مديري المنتجات التقنيين."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a left margin color; simple and approachable for creative, editorial, or junior roles."
-msgstr "عمودان مع لون في الهامش الأيسر؛ بسيط وودود للأدوار الإبداعية أو التحريرية أو المبتدئة."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a muted color sidebar; earthy and calm, suits sustainability, healthcare, or nonprofit sectors."
-msgstr "عمودان مع شريط جانبي بلون هادئ؛ بطابع ترابي وهادئ، يناسب مجالات الاستدامة أو الرعاية الصحية أو القطاعات غير الربحية."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with a soft header accent and circular profile photo; ideal for marketing, HR, or client-facing roles."
-msgstr "عمودان مع تمييز ناعم في الترويسة وصورة شخصية دائرية؛ مثالي للتسويق أو الموارد البشرية أو الأدوار التي تتعامل مع العملاء."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column with accent colors and clean typography; balanced choice for business analysts or operations roles."
-msgstr "عمودان مع ألوان تمييز وطباعة نظيفة؛ خيار متوازن لمحللي الأعمال أو أدوار العمليات."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, clean and professional with subtle section dividers; suits corporate, finance, or consulting positions."
-msgstr "عمودان، نظيفان واحترافيان مع فواصل أقسام خفيفة؛ يناسبان مناصب الشركات أو التمويل أو الاستشارات."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal and text-dense with no decorative elements; perfect for traditional industries or ATS-heavy applications."
-msgstr "عمودان، بسيطان وكثيفا النص بدون عناصر زخرفية؛ مثاليان للصناعات التقليدية أو الطلبات التي تعتمد بكثافة على أنظمة تتبّع المتقدمين (ATS)."
-
-#: src/dialogs/resume/template/data.ts
-msgid "Two-column, minimal with light gray sidebar and subtle icons; professional and understated for legal, finance, or executive roles."
-msgstr "عمودان، بسيطان مع شريط جانبي رمادي فاتح وأيقونات خفيفة؛ احترافيان وهادئان للأدوار القانونية أو المالية أو التنفيذية."
 
 #: src/features/auth/pages/verify-2fa.tsx
 #: src/features/settings/authentication/components/two-factor.tsx
@@ -5958,10 +5432,6 @@ msgstr "تحديث خبرة تطوعية موجودة"
 msgid "Update Password"
 msgstr "تحديث كلمة المرور"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Update project bullets to show leadership, constraints, tradeoffs, and measurable outcomes."
-msgstr "قم بتحديث النقاط الرئيسية للمشروع لإظهار القيادة والقيود والمفاضلات والنتائج القابلة للقياس."
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "تحديث السيرة الذاتية"
@@ -5997,10 +5467,6 @@ msgstr "قم بتحميل ملف CSV"
 #: src/routes/_home/ats-checker.tsx
 msgid "Upload a resume and see what an applicant tracking system actually reads from it. Everything runs in this browser. Your file is never uploaded, and nothing is stored."
 msgstr "ارفع سيرة ذاتية واطّلع على ما يقرأه نظام تتبع المتقدمين (ATS) فعليًا منها. يعمل كل شيء في هذا المتصفح. لا يُرفع ملفك أبدًا، ولا يُخزَّن شيء."
-
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Upload attachments"
-msgstr "تحميل المرفقات"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Upload picture"
@@ -6184,10 +5650,6 @@ msgstr "التطوع"
 msgid "vs previous 30 days"
 msgstr "مقارنة بالأيام الثلاثين السابقة"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Waiting for the agent…"
-msgstr "في انتظار العامل…"
-
 #: src/features/ats-checker/ai-review/locked-card.tsx
 msgid "Want a second opinion on the writing?"
 msgstr "أتريد رأيًا ثانيًا في الكتابة؟"
@@ -6213,10 +5675,6 @@ msgstr "تعذّر علينا ربط حساب المزوّد هذا. يُرجى 
 msgid "We couldn't read your profile from the provider."
 msgstr "تعذّر علينا قراءة ملفك الشخصي من المزوّد."
 
-#: src/routes/agent/-components/tool-part-card.tsx
-msgid "Web search"
-msgstr "بحث الويب"
-
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
 #: src/dialogs/resume/sections/education.tsx
@@ -6238,17 +5696,13 @@ msgstr "ما يقرأه المحلِّل"
 msgid "What a person sees"
 msgstr "ما يراه الشخص"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "What do you want to do?"
-msgstr "ماذا تريد أن تفعل؟"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "بماذا تريد أن تعيد تسمية هذا القسم؟"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "What makes Reactive Resume different from other resume builders?"
-msgstr "ما الذي يميز Reactive Resume عن أدوات إنشاء السير الذاتية الأخرى؟"
+msgid "What makes cloudcoffee different from other resume builders?"
+msgstr "ما الذي يميز cloudcoffee عن أدوات إنشاء السير الذاتية الأخرى؟"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -6257,10 +5711,6 @@ msgstr "ما الذي يفحصه هذا"
 #: src/routes/_home/ats-checker.tsx
 msgid "What this does not do"
 msgstr "ما لا يفعله هذا"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "What's new in the latest version?"
-msgstr "ما الجديد في الإصدار الأخير؟"
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
@@ -6319,10 +5769,6 @@ msgstr "تندمج الكلمات معًا عند استخراج النص."
 msgid "Work OpenAI"
 msgstr "العمل مع OpenAI"
 
-#: src/routes/agent/-components/agent-chat.tsx
-msgid "Working…"
-msgstr "جارٍ العمل…"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Worth a shot"
 msgstr "يستحق المحاولة"
@@ -6360,12 +5806,12 @@ msgid "xAI Grok"
 msgstr "xAI Grok"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, Reactive Resume is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "نعم، يتوفر Reactive Resume بعدة لغات. يمكنك اختيار لغتك المفضلة في صفحة الإعدادات، أو باستخدام مبدّل اللغة في الزاوية العلوية اليمنى. إذا لم ترَ لغتك، أو كنت ترغب في تحسين الترجمات الموجودة، يمكنك <0>المساهمة في الترجمات على Crowdin<1> (يفتح في علامة تبويب جديدة)</1></0>."
+msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
+msgstr "نعم، يتوفر cloudcoffee بعدة لغات. يمكنك اختيار لغتك المفضلة في صفحة الإعدادات، أو باستخدام مبدّل اللغة في الزاوية العلوية اليمنى. إذا لم ترَ لغتك، أو كنت ترغب في تحسين الترجمات الموجودة، يمكنك <0>المساهمة في الترجمات على Crowdin<1> (يفتح في علامة تبويب جديدة)</1></0>."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! Reactive Resume is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "نعم! Reactive Resume مجاني تمامًا للاستخدام، بدون تكاليف خفية أو مستويات مدفوعة أو رسوم اشتراك. إنه مفتوح المصدر وسيظل مجانيًا دائمًا."
+msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
+msgstr "نعم! cloudcoffee مجاني تمامًا للاستخدام، بدون تكاليف خفية أو مستويات مدفوعة أو رسوم اشتراك. إنه مفتوح المصدر وسيظل مجانيًا دائمًا."
 
 #: src/routes/_home/-sections/features.tsx
 msgid "You also have the option to deploy on your own servers using the Docker image."
@@ -6417,6 +5863,14 @@ msgstr "النص الأساسي الخاص بك صغير جدًا."
 msgid "Your bullets are drawn with unusual characters."
 msgstr "نقاطك مرسومة بأحرف غير معتادة."
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career has a memory."
+msgstr ""
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "Your career knowledge base"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
 msgid "Your changes are saved automatically."
 msgstr "يتم حفظ تغييراتك تلقائيًا."
@@ -6434,8 +5888,8 @@ msgid "Your data is secure, and never shared or sold to anyone."
 msgstr "بياناتك آمنة، ولا يتم مشاركتها أو بيعها لأي جهة."
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host Reactive Resume on your own servers for complete control over your data."
-msgstr "تُخزَّن بياناتك بأمان ولا تتم مشاركتها أبدًا مع أطراف ثالثة. يمكنك أيضًا استضافة Reactive Resume ذاتيًا على خوادمك الخاصة للتحكم الكامل في بياناتك."
+msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
+msgstr "تُخزَّن بياناتك بأمان ولا تتم مشاركتها أبدًا مع أطراف ثالثة. يمكنك أيضًا استضافة cloudcoffee ذاتيًا على خوادمك الخاصة للتحكم الكامل في بياناتك."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -6563,7 +6017,6 @@ msgstr "تكبير"
 msgid "Zoom in"
 msgstr "تكبير"
 
-#: src/routes/agent/-components/resume-pane.tsx
 #: src/routes/builder/$resumeId/-components/dock.tsx
 msgid "Zoom level"
 msgstr "مستوى التكبير"
@@ -6575,4 +6028,3 @@ msgstr "تصغير"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "الزولو"
-

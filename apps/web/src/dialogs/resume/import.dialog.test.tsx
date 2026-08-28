@@ -141,7 +141,7 @@ describe("ImportResumeDialog — Set up a provider", () => {
 		fireEvent.click(await screen.findByText("Leave"));
 
 		await waitFor(() => {
-			expect(navigate).toHaveBeenCalledWith({ to: "/dashboard/settings/integrations" });
+			expect(navigate).toHaveBeenCalledWith({ to: "/dashboard/settings/account" });
 		});
 
 		expect(useDialogStore.getState().open).toBe(false);

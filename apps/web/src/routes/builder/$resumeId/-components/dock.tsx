@@ -7,13 +7,11 @@ import {
 	AlignTopIcon,
 	ArrowUUpLeftIcon,
 	ArrowUUpRightIcon,
-	ChatCircleDotsIcon,
 	LinkSimpleIcon,
 	MagnifyingGlassMinusIcon,
 	MagnifyingGlassPlusIcon,
 } from "@phosphor-icons/react";
 import { useHotkey } from "@tanstack/react-hotkeys";
-import { useNavigate } from "@tanstack/react-router";
 import { m } from "motion/react";
 import { useControls, useTransformComponent } from "react-zoom-pan-pinch";
 import { useCopyToClipboard } from "usehooks-ts";
@@ -43,8 +41,6 @@ export function BuilderDock({ pageLayout, onTogglePageLayout }: BuilderDockProps
 	const { data: session } = authClient.useSession();
 	// Narrow slices: selecting the whole resume re-renders the dock on every keystroke.
 	const resumeSlug = useCurrentBuilderResumeSelector((resume) => resume.slug);
-	const resumeId = useCurrentBuilderResumeSelector((resume) => resume.id);
-	const navigate = useNavigate();
 
 	const [_, copyToClipboard] = useCopyToClipboard();
 	const { zoomIn, zoomOut, resetTransform } = useControls();
@@ -93,14 +89,6 @@ export function BuilderDock({ pageLayout, onTogglePageLayout }: BuilderDockProps
 					icon={pageLayout === "horizontal" ? AlignTopIcon : AlignCenterHorizontalIcon}
 					title={t`Toggle page stacking`}
 					onClick={onTogglePageLayout}
-				/>
-				<DockIcon
-					icon={ChatCircleDotsIcon}
-					title={t`Open AI agent`}
-					onClick={() => {
-						if (!resumeId) return;
-						void navigate({ to: "/agent/new", search: { resumeId } });
-					}}
 				/>
 				<div className="mx-1 h-8 w-px bg-border" />
 				<DockIcon

@@ -13,7 +13,6 @@ const mocks = vi.hoisted(() => ({
 	pathname: "/",
 	resumeQueryOptions: vi.fn((options?: unknown) => ({ entity: "resumes", ...(options ?? {}) })),
 	applicationsListQueryOptions: vi.fn(() => ({ entity: "applications" })),
-	threadsQueryOptions: vi.fn((options?: unknown) => ({ entity: "threads", ...(options ?? {}) })),
 	navigate: vi.fn(),
 	openDialog: vi.fn(),
 }));
@@ -50,13 +49,6 @@ vi.mock("@/libs/orpc/client", () => ({
 		resume: {
 			list: {
 				queryOptions: mocks.resumeQueryOptions,
-			},
-		},
-		agent: {
-			threads: {
-				list: {
-					queryOptions: mocks.threadsQueryOptions,
-				},
 			},
 		},
 	},
@@ -105,14 +97,11 @@ describe("ResumesCommandGroup", () => {
 	it.each([
 		["resumes", "", "Create a new resume"],
 		["applications", "{ArrowDown}", "New Application"],
-		["threads", "{ArrowDown}{ArrowDown}", "New Thread"],
 	])("opens the %s list page from the root palette with Enter", async (page, keys, createLabel) => {
 		mockUseQueryData((entity) => {
 			if (entity === "resumes") return [{ id: "resume-1", name: "Evil Apricot Pike", slug: "apricot" }];
 			if (entity === "applications")
 				return [{ id: "application-1", company: "Umbrella", role: "Staff Engineer", archived: false }];
-			if (entity === "threads")
-				return [{ id: "thread-1", title: "Cover letter rewrite", resumeName: "Product Resume" }];
 			return [];
 		});
 
@@ -129,14 +118,11 @@ describe("ResumesCommandGroup", () => {
 	it.each([
 		["resumes", "", "Create a new resume", "Evil Apricot Pike"],
 		["applications", "{ArrowDown}", "New Application", "Umbrella"],
-		["threads", "{ArrowDown}{ArrowDown}", "New Thread", "Cover letter rewrite"],
 	])("keeps arrow-key navigation active on the %s list page", async (_page, keys, createLabel, itemLabel) => {
 		mockUseQueryData((entity) => {
 			if (entity === "resumes") return [{ id: "resume-1", name: "Evil Apricot Pike", slug: "apricot" }];
 			if (entity === "applications")
 				return [{ id: "application-1", company: "Umbrella", role: "Staff Engineer", archived: false }];
-			if (entity === "threads")
-				return [{ id: "thread-1", title: "Cover letter rewrite", resumeName: "Product Resume" }];
 			return [];
 		});
 
@@ -245,39 +231,10 @@ describe("ResumesCommandGroup", () => {
 			search: { applicationId: "application-1" },
 		});
 	});
-
-	it("loads threads on agent pages", () => {
-		useCommandPaletteStore.setState({ pages: ["threads"] });
-		mockUseQueryData((entity) =>
-			entity === "threads" ? [{ id: "thread-1", title: "Cover letter rewrite", resumeName: "Product Resume" }] : [],
-		);
-
-		renderGroup();
-
-		expect(screen.getByText("Cover letter rewrite")).toBeInTheDocument();
-		expect(screen.getByText("Product Resume")).toBeInTheDocument();
-	});
-
-	it("filters thread results from the command palette search", () => {
-		useCommandPaletteStore.setState({ pages: ["threads"], search: "cover" });
-		mockUseQueryData((entity) =>
-			entity === "threads"
-				? [
-						{ id: "thread-1", title: "Cover letter rewrite", resumeName: "Product Resume" },
-						{ id: "thread-2", title: "Resume cleanup", resumeName: "Staff Resume" },
-					]
-				: [],
-		);
-
-		renderGroup();
-
-		expect(screen.getByText("Cover letter rewrite")).toBeInTheDocument();
-		expect(screen.queryByText("Resume cleanup")).not.toBeInTheDocument();
-	});
 });
 
 describe("NavigationCommandGroup", () => {
-	it("shows application and thread navigation items", () => {
+	it("shows application navigation items without Agent routes", () => {
 		render(
 			<I18nProvider i18n={i18n}>
 				<Command>
@@ -290,11 +247,11 @@ describe("NavigationCommandGroup", () => {
 
 		expect(screen.getByText("Applications")).toBeInTheDocument();
 		expect(screen.getByText("New Application")).toBeInTheDocument();
-		expect(screen.getByText("Threads")).toBeInTheDocument();
-		expect(screen.getByText("New Thread")).toBeInTheDocument();
+		expect(screen.queryByText("Threads")).not.toBeInTheDocument();
+		expect(screen.queryByText("New Thread")).not.toBeInTheDocument();
 	});
 
-	it("navigates to new application and new thread destinations", () => {
+	it("navigates to the new application destination", () => {
 		render(
 			<I18nProvider i18n={i18n}>
 				<Command>
@@ -307,8 +264,5 @@ describe("NavigationCommandGroup", () => {
 
 		fireEvent.click(screen.getByText("New Application"));
 		expect(mocks.navigate).toHaveBeenCalledWith({ to: "/dashboard/applications", search: { create: true } });
-
-		fireEvent.click(screen.getByText("New Thread"));
-		expect(mocks.navigate).toHaveBeenCalledWith({ to: "/agent/new" });
 	});
 });

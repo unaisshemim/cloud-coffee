@@ -3,177 +3,117 @@ import type { LinkProps } from "@tanstack/react-router";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import {
-	CloudArrowUpIcon,
-	CodeSimpleIcon,
-	CurrencyDollarIcon,
-	DatabaseIcon,
-	DotsThreeIcon,
-	FilePdfIcon,
-	FilesIcon,
-	GithubLogoIcon,
-	GlobeIcon,
-	KeyIcon,
-	LayoutIcon,
-	LockSimpleIcon,
-	PaletteIcon,
-	ProhibitIcon,
-	SealCheckIcon,
+	ArchiveBoxIcon,
+	ChatCircleDotsIcon,
+	FileTextIcon,
+	MagnifyingGlassIcon,
+	PlugsConnectedIcon,
 	ShieldCheckIcon,
-	TranslateIcon,
+	SparkleIcon,
+	TargetIcon,
 } from "@phosphor-icons/react";
 import { Link } from "@tanstack/react-router";
 import { m } from "motion/react";
-import { cn } from "@reactive-resume/utils/style";
+import { ProductShowcase } from "./product-showcase";
 
 type Feature = {
 	id: string;
 	icon: Icon;
 	title: string;
 	description: string;
-	/** When set, the whole card becomes a link to this route. */
+	code: string;
 	to?: LinkProps["to"];
 };
 
-type FeatureCardProps = Feature;
+type FeatureCardProps = Feature & {
+	index: number;
+};
 
 const getFeatures = (): Feature[] => [
 	{
-		id: "free",
-		icon: CurrencyDollarIcon,
-		title: t`Free`,
-		description: t`Completely free, forever, no hidden costs.`,
+		id: "capture",
+		icon: ArchiveBoxIcon,
+		title: t`Capture every win`,
+		description: t`Save projects, launches, hackathons, metrics, feedback, and hard-earned lessons while they are still fresh.`,
+		code: "MEMORY.ADD",
 	},
 	{
-		id: "open-source",
-		icon: GithubLogoIcon,
-		title: t`Open Source`,
-		description: t`By the community, for the community.`,
+		id: "connect",
+		icon: PlugsConnectedIcon,
+		title: t`Connect your tools`,
+		description: t`Bring career evidence together from the products and services where your work already lives.`,
+		code: "WEBMCP.CONNECT",
 	},
 	{
-		id: "no-ads",
-		icon: ProhibitIcon,
-		title: t`No Advertising, No Tracking`,
-		description: t`For a secure and distraction-free experience.`,
+		id: "ask",
+		icon: ChatCircleDotsIcon,
+		title: t`Ask your career`,
+		description: t`Find the strongest example, result, or story without digging through old documents and scattered notes.`,
+		code: "MEMORY.QUERY",
 	},
 	{
-		id: "instant-generation",
-		icon: FilePdfIcon,
-		title: t`Instant Generation`,
-		description: t`Export your resume to PDF instantly, without any waiting or delays.`,
+		id: "tailor",
+		icon: TargetIcon,
+		title: t`Tailor to any role`,
+		description: t`Give cloudcoffee a job description and build a focused resume around the evidence that matters most.`,
+		code: "RESUME.FIT",
 	},
 	{
-		id: "data-security",
-		icon: DatabaseIcon,
-		title: t`Data Security`,
-		description: t`Your data is secure, and never shared or sold to anyone.`,
+		id: "evidence",
+		icon: MagnifyingGlassIcon,
+		title: t`Keep proof attached`,
+		description: t`Connect claims to outcomes, artifacts, and context so every resume bullet stays specific and credible.`,
+		code: "PROOF.LINK",
 	},
 	{
-		id: "self-host",
-		icon: CloudArrowUpIcon,
-		title: t`Self-Host with Docker`,
-		description: t`You also have the option to deploy on your own servers using the Docker image.`,
+		id: "draft",
+		icon: SparkleIcon,
+		title: t`Turn memory into language`,
+		description: t`Shape raw career history into concise bullets, project summaries, and interview-ready stories.`,
+		code: "STORY.SHAPE",
 	},
 	{
-		id: "languages",
-		icon: TranslateIcon,
-		title: t`Multilingual`,
-		description: t`Available in multiple languages. If you would like to contribute, check out Crowdin.`,
+		id: "export",
+		icon: FileTextIcon,
+		title: t`Ship a polished resume`,
+		description: t`Refine, format, and export a professional resume without rebuilding your history from scratch.`,
+		code: "RESUME.SHIP",
 	},
 	{
-		id: "auth",
-		icon: KeyIcon,
-		title: t`One-Click Sign-In`,
-		description: t`Sign in with GitHub, Google or a custom OAuth provider.`,
-	},
-	{
-		id: "2fa",
+		id: "ats",
 		icon: ShieldCheckIcon,
-		title: t`Passkeys & 2FA`,
-		description: t`Enhance the security of your account with additional layers of protection.`,
-	},
-	{
-		id: "unlimited-resumes",
-		icon: FilesIcon,
-		title: t`Unlimited Resumes`,
-		description: t`Create as many resumes as you want, without limits.`,
-	},
-	{
-		id: "design",
-		icon: PaletteIcon,
-		title: t`Flexibility`,
-		description: t`Personalize your resume with any colors, fonts or designs, and make it your own.`,
-	},
-	{
-		id: "templates",
-		icon: LayoutIcon,
-		title: t`12+ Templates`,
-		description: t`Beautiful templates to choose from, with more on the way.`,
-	},
-	{
-		id: "public",
-		icon: GlobeIcon,
-		title: t`Shareable Links`,
-		description: t`Share your resume with a public URL, and let others view it.`,
-	},
-	{
-		id: "password-protection",
-		icon: LockSimpleIcon,
-		title: t`Password Protection`,
-		description: t`Protect your resume with a password, and let only people with the password view it.`,
-	},
-	{
-		id: "api-access",
-		icon: CodeSimpleIcon,
-		title: t`API Access`,
-		description: t`Access your resumes and data programmatically using the API.`,
-	},
-	{
-		id: "ats-checker",
-		icon: SealCheckIcon,
-		title: t`ATS Checker`,
-		description: t`See what an applicant tracking system can read from your resume. Runs in your browser.`,
+		title: t`Check ATS readability`,
+		description: t`See what an applicant tracking system can read before your resume reaches a recruiter.`,
+		code: "ATS.CHECK",
 		to: "/ats-checker",
-	},
-	{
-		id: "more",
-		icon: DotsThreeIcon,
-		title: t`And many more...`,
-		description: t`New features are constantly being added and improved, so be sure to check back often.`,
 	},
 ];
 
-function FeatureCard({ icon: Icon, title, description, to }: FeatureCardProps) {
+function FeatureCard({ icon: Icon, title, description, code, to, index }: FeatureCardProps) {
 	const card = (
-		<m.div
-			className={cn(
-				"group relative flex min-h-48 flex-col gap-4 overflow-hidden border-b bg-background p-6 transition-[background-color] duration-300 will-change-[transform,opacity]",
-				"not-nth-[2n]:border-r xl:not-nth-[4n]:border-r",
-				"hover:bg-secondary/30",
-			)}
-			initial={{ opacity: 0, y: 16 }}
+		<m.article
+			className="group relative min-h-64 overflow-hidden border-[#c9c0ae] border-b bg-[#f7f3e9] p-6 transition-colors hover:bg-[#efe6d6] sm:p-8 odd:md:border-r"
+			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true, amount: 0.1 }}
-			transition={{ duration: 0.35, ease: "easeOut" }}
+			viewport={{ once: true, amount: 0.15 }}
+			transition={{ duration: 0.45, delay: (index % 2) * 0.08 }}
 		>
-			{/* Hover gradient overlay */}
+			<div className="flex items-start justify-between gap-4">
+				<span className="font-mono text-[#7d807b] text-xs tracking-[0.12em]">{String(index + 1).padStart(2, "0")}</span>
+				<Icon aria-hidden="true" className="size-7 text-[#f1530a]" weight="thin" />
+			</div>
+
+			<div className="mt-12 max-w-md">
+				<p className="font-bold font-mono text-[#687176] text-[10px] uppercase tracking-[0.18em]">{code}</p>
+				<h3 className="mt-3 font-bold text-2xl tracking-[-0.035em]">{title}</h3>
+				<p className="mt-3 text-[#555c5f] text-sm leading-relaxed">{description}</p>
+			</div>
+
 			<div
 				aria-hidden="true"
-				className="pointer-events-none absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-[#f1530a] transition-transform duration-500 group-hover:scale-x-100"
 			/>
-
-			{/* Icon */}
-			<div aria-hidden="true" className="relative">
-				<div className="inline-flex rounded-md bg-primary/5 p-2.5 text-foreground transition-colors group-hover:bg-primary/10 group-hover:text-primary">
-					<Icon size={24} weight="thin" />
-				</div>
-			</div>
-
-			{/* Content */}
-			<div className="relative flex flex-col gap-y-1.5">
-				<h3 className="font-semibold text-base tracking-tight transition-colors group-hover:text-primary">{title}</h3>
-				<p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
-			</div>
-		</m.div>
+		</m.article>
 	);
 
 	if (!to) return card;
@@ -189,31 +129,33 @@ export function Features() {
 	const features = getFeatures();
 
 	return (
-		<section id="features">
-			{/* Header */}
+		<section id="features" className="bg-[#f7f3e9]">
+			<ProductShowcase />
+
 			<m.div
-				className="space-y-4 p-4 will-change-[transform,opacity] md:p-8 xl:py-16"
+				className="grid gap-8 px-6 py-16 md:grid-cols-[0.8fr_1.2fr] md:px-10 md:py-24"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
-				transition={{ duration: 0.45 }}
+				transition={{ duration: 0.5 }}
 			>
-				<h2 className="font-semibold text-2xl tracking-tight md:text-4xl xl:text-5xl">
-					<Trans>Features</Trans>
-				</h2>
-
-				<p className="max-w-2xl text-muted-foreground leading-relaxed">
-					<Trans>
-						Everything you need to create, customize, and share professional resumes. Built with privacy in mind,
-						powered by open source, and completely free forever.
-					</Trans>
-				</p>
+				<p className="font-bold font-mono text-[#5f6c71] text-xs uppercase tracking-[0.2em]">02 / Career memory</p>
+				<div>
+					<h2 className="max-w-3xl font-bold text-4xl leading-[0.98] tracking-[-0.055em] md:text-6xl">
+						<Trans>Remember every career win.</Trans>
+					</h2>
+					<p className="mt-6 max-w-2xl text-[#555c5f] leading-relaxed md:text-lg">
+						<Trans>
+							Build one living knowledge base from your projects, outcomes, and tools—then turn it into the right story
+							when opportunity arrives.
+						</Trans>
+					</p>
+				</div>
 			</m.div>
 
-			{/* Features Grid */}
-			<div className="grid grid-cols-1 xs:grid-cols-2 border-t xl:grid-cols-4">
-				{features.map((feature) => (
-					<FeatureCard key={feature.id} {...feature} />
+			<div className="grid border-[#c9c0ae] border-t md:grid-cols-2">
+				{features.map((feature, index) => (
+					<FeatureCard key={feature.id} {...feature} index={index} />
 				))}
 			</div>
 		</section>

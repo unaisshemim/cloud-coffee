@@ -149,8 +149,8 @@ function NoProviderState() {
 					variant="outline"
 					nativeButton={false}
 					render={
-						<Link to="/dashboard/settings/integrations">
-							<Trans>Open Integrations Settings</Trans>
+						<Link to="/dashboard/settings/account">
+							<Trans>Open Account Settings</Trans>
 							<ArrowRightIcon />
 						</Link>
 					}

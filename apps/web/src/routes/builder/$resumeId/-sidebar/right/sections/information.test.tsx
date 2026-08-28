@@ -30,12 +30,12 @@ describe("InformationSectionBuilder", () => {
 	it("renders the donation prompt and CTA", () => {
 		renderInfo();
 		expect(screen.getByText("Support the app by doing what you can!")).toBeInTheDocument();
-		expect(screen.getByText("Donate to Reactive Resume")).toBeInTheDocument();
+		expect(screen.getByText("Donate to cloudcoffee")).toBeInTheDocument();
 	});
 
 	it("links to the OpenCollective donation page", () => {
 		renderInfo();
-		const donateLink = screen.getByText("Donate to Reactive Resume").closest("a");
+		const donateLink = screen.getByText("Donate to cloudcoffee").closest("a");
 		expect(donateLink?.getAttribute("href")).toBe("http://opencollective.com/reactive-resume");
 	});
 

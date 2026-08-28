@@ -1,33 +1,22 @@
 // @vitest-environment happy-dom
 
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 
-type LinkProps = React.PropsWithChildren<{
-	to: string;
-}>;
-
-type LocaleComboboxProps = {
-	render: React.ReactElement;
-};
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
+	React.PropsWithChildren<{
+		hash?: string;
+		to: string;
+	}>;
 
 vi.mock("@tanstack/react-router", () => ({
-	Link: ({ children, to, ...rest }: LinkProps) => (
-		<a href={typeof to === "string" ? to : "#"} {...rest}>
+	Link: ({ children, hash, to, ...rest }: LinkProps) => (
+		<a href={`${to}${hash ? `#${hash}` : ""}`} {...rest}>
 			{children}
 		</a>
 	),
-}));
-vi.mock("@/components/input/github-stars-button", () => ({
-	GithubStarsButton: () => <div data-testid="github-stars-button" />,
-}));
-vi.mock("@/features/locale/combobox", () => ({
-	LocaleCombobox: ({ render: renderProp }: LocaleComboboxProps) => renderProp,
-}));
-vi.mock("@/features/theme/toggle-button", () => ({
-	ThemeToggleButton: () => <button type="button" data-testid="theme-toggle" />,
 }));
 
 i18n.loadAndActivate({ locale: "en", messages: {} });
@@ -42,28 +31,38 @@ const renderHeader = () =>
 	);
 
 describe("Header", () => {
-	it("renders a homepage link with the brand icon", () => {
-		const { container } = renderHeader();
-		const home = Array.from(container.querySelectorAll("a")).find((a) => a.getAttribute("href") === "/");
-		expect(home).toBeDefined();
-		expect(home?.getAttribute("aria-label")).toBe("Reactive Resume - Go to homepage");
+	it("renders cloudcoffee navigation without display or GitHub controls", () => {
+		renderHeader();
+
+		expect(screen.getByRole("navigation", { name: "Main navigation" })).toBeInTheDocument();
+		expect(screen.getByRole("link", { name: "cloudcoffee - Go to homepage" })).toHaveAttribute("href", "/");
+		expect(screen.getAllByText("How it works").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("Career uses").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("ATS checker").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("Resources").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("Sign in").length).toBeGreaterThan(0);
+		expect(screen.getAllByText("Build career base").length).toBeGreaterThan(0);
+		expect(screen.queryByLabelText("Change language")).not.toBeInTheDocument();
+		expect(screen.queryByTestId("theme-toggle")).not.toBeInTheDocument();
+		expect(screen.queryByText(/github/i)).not.toBeInTheDocument();
 	});
 
-	it("renders a dashboard link with the documented aria-label", () => {
-		const { container } = renderHeader();
-		const dashboard = Array.from(container.querySelectorAll("a")).find((a) => a.getAttribute("href") === "/dashboard");
-		expect(dashboard).toBeDefined();
+	it("opens and closes mobile navigation", () => {
+		renderHeader();
+
+		fireEvent.click(screen.getByRole("button", { name: "Open menu" }));
+		expect(screen.getByRole("button", { name: "Close menu" })).toHaveAttribute("aria-expanded", "true");
+		expect(screen.getByText("FAQ")).toBeInTheDocument();
+
+		fireEvent.keyDown(window, { key: "Escape" });
+		expect(screen.getByRole("button", { name: "Open menu" })).toHaveAttribute("aria-expanded", "false");
 	});
 
-	it("includes ThemeToggleButton and GithubStarsButton in the navigation", () => {
-		const { getByTestId } = renderHeader();
-		expect(getByTestId("theme-toggle")).toBeInTheDocument();
-		expect(getByTestId("github-stars-button")).toBeInTheDocument();
-	});
+	it("contracts into floating glass shell after scrolling", () => {
+		Object.defineProperty(window, "scrollY", { configurable: true, value: 64 });
+		renderHeader();
+		fireEvent.scroll(window);
 
-	it("labels the navigation landmark", () => {
-		const { container } = renderHeader();
-		const nav = container.querySelector("nav") as HTMLElement;
-		expect(nav.getAttribute("aria-label")).toBe("Main navigation");
+		expect(screen.getByTestId("landing-nav-shell")).toHaveAttribute("data-scrolled", "true");
 	});
 });

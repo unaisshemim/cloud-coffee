@@ -1,11 +1,11 @@
 ---
 title: "Migrating from v4 to v5"
-description: "Step-by-step guide to migrate a self-hosted Reactive Resume instance from v4 to v5, covering database schema changes, manual and automated options."
+description: "Step-by-step guide to migrate a self-hosted cloudcoffee instance from v4 to v5, covering database schema changes, manual and automated options."
 ---
 
 ## Overview
 
-This guide walks you through migrating your Reactive Resume installation from **v4 to v5**. The migration process involves setting up a new v5 instance alongside your existing v4 instance, then transferring your users and resumes to the new system.
+This guide walks you through migrating your cloudcoffee installation from **v4 to v5**. The migration process involves setting up a new v5 instance alongside your existing v4 instance, then transferring your users and resumes to the new system.
 
 <Info>
   This page is for **v4 → v5 data migration** only. For normal v5 upgrades, use the [Self-Hosting with
@@ -24,7 +24,7 @@ Before starting the migration, ensure you have:
 <CardGroup cols={2}>
   <Card title="Running v4 Instance">Your existing Reactive Resume v4 instance should be running and accessible.</Card>
   <Card title="New v5 Instance">
-    A fresh Reactive Resume v5 instance set up and running. Follow the [Self-Hosting with Docker](/self-hosting/docker)
+    A fresh cloudcoffee v5 instance set up and running. Follow the [Self-Hosting with Docker](/self-hosting/docker)
     guide if you haven't done this yet.
   </Card>
   <Card title="Database Access">
@@ -89,8 +89,8 @@ To run the migration scripts, you need the following installed on your host mach
     **dotenvx** (or any tool to load `.env` files). Install globally with: ```bash npm install -g @dotenvx/dotenvx ```
     Alternatively, you can use `dotenv`, `direnv`, or export the variables manually.
   </Card>
-  <Card title="Reactive Resume Source Code">
-    Clone the Reactive Resume repository and check out the last tag that includes the migration scripts:
+  <Card title="cloudcoffee Source Code">
+    Clone the cloudcoffee repository and check out the last tag that includes the migration scripts:
     ```bash
     git clone https://github.com/amruthpillai/reactive-resume.git
     cd reactive-resume

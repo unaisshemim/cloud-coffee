@@ -15,7 +15,6 @@ services:
       APP_URL: http://localhost:3000
       DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
       S3_ENDPOINT: http://seaweedfs:8333
-      REDIS_URL: redis://redis:6379
       CHOKIDAR_USEPOLLING: "true"
     ports:
       - "127.0.0.1:3000:3000"
@@ -31,8 +30,6 @@ services:
           target: /app
     depends_on:
       postgres:
-        condition: service_healthy
-      redis:
         condition: service_healthy
       seaweedfs:
         condition: service_healthy
@@ -65,21 +62,6 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
       start_period: 10s
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  redis:
-    image: redis:latest
-    restart: unless-stopped
-    command: redis-server --appendonly yes
-    volumes:
-      - redis_data:/data
-    ports:
-      - "127.0.0.1:6380:6379"
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      start_period: 5s
       interval: 30s
       timeout: 10s
       retries: 3
@@ -119,5 +101,4 @@ services:
 
 volumes:
   postgres_data:
-  redis_data:
   seaweedfs_data:

@@ -1,10 +1,14 @@
 // @vitest-environment happy-dom
 
 import { render, screen } from "@testing-library/react";
-import { beforeAll, describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it, vi } from "vitest";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { Prefooter } from "./prefooter";
+
+vi.mock("@tanstack/react-router", () => ({
+	Link: ({ children, to }: React.PropsWithChildren<{ to: string }>) => <a href={to}>{children}</a>,
+}));
 
 beforeAll(() => {
 	i18n.loadAndActivate({ locale: "en", messages: {} });
@@ -18,14 +22,15 @@ const renderPrefooter = () =>
 	);
 
 describe("Prefooter", () => {
-	it("renders the community tagline as a heading", () => {
+	it("invites people to build their career base", () => {
 		renderPrefooter();
-		expect(screen.getByText("By the community, for the community.")).toBeInTheDocument();
+		expect(screen.getByRole("heading", { name: "Your career already has the proof." })).toBeInTheDocument();
+		expect(screen.getByRole("link", { name: /Build your career base/i })).toHaveAttribute("href", "/dashboard");
 	});
 
-	it("renders the community-thanks paragraph", () => {
+	it("explains the career-memory workflow", () => {
 		renderPrefooter();
-		expect(screen.getByText(/vibrant community/)).toBeInTheDocument();
+		expect(screen.getByText(/Connect the work you've already done/)).toBeInTheDocument();
 	});
 
 	it("renders the decorative TextMaskEffect (svg)", () => {

@@ -2,10 +2,10 @@ import { expect, it } from "vitest";
 import { Config } from "./config";
 
 it("applies defaults for every optional field", () => {
-	const parsed = Config({ apiKey: "test-key" });
+	const parsed = Config({ accessToken: "test-token" });
 
 	expect(parsed).toEqual({
-		apiKey: "test-key",
+		accessToken: "test-token",
 		url: "https://rxresu.me",
 		serverName: "resume",
 		toolCallTimeoutMs: 60_000,
@@ -14,7 +14,7 @@ it("applies defaults for every optional field", () => {
 
 it("keeps explicit values", () => {
 	const parsed = Config({
-		apiKey: "test-key",
+		accessToken: "test-token",
 		url: "http://localhost:3000",
 		serverName: "rr",
 		toolCallTimeoutMs: 5_000,
@@ -25,6 +25,6 @@ it("keeps explicit values", () => {
 	expect(parsed.toolCallTimeoutMs).toBe(5_000);
 });
 
-it("defaults apiKey to empty rather than throwing, so an unconfigured row still loads", () => {
-	expect(Config({}).apiKey).toBe("");
+it("defaults accessToken to empty rather than throwing, so an unconfigured row still loads", () => {
+	expect(Config({}).accessToken).toBe("");
 });

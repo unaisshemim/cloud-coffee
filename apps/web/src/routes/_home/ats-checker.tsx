@@ -10,7 +10,7 @@ import { LockedAiCard } from "@/features/ats-checker/ai-review/locked-card";
 import { ParsePreview } from "@/features/ats-checker/parse-preview";
 import { Footer } from "./-sections/footer";
 
-const PAGE_TITLE = "ATS Checker - Reactive Resume";
+const PAGE_TITLE = "ATS Checker - cloudcoffee";
 const PAGE_DESCRIPTION =
 	"Check whether software can read your resume PDF. Runs entirely in your browser, so your file is never uploaded.";
 

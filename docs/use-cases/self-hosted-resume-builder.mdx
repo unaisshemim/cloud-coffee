@@ -1,9 +1,9 @@
 ---
 title: "Self-Hosted Resume Builder"
-description: "Run Reactive Resume as a self-hosted resume builder with Docker Compose, PostgreSQL, optional object storage, Single Sign-On, and v4 to v5 migration."
+description: "Run cloudcoffee as a self-hosted resume builder with Docker Compose, PostgreSQL, optional object storage, Single Sign-On, and v4 to v5 migration."
 ---
 
-Reactive Resume can be run as a self-hosted resume builder when you want to operate the app on your own infrastructure instead of using the hosted instance.
+cloudcoffee can be run as a self-hosted resume builder when you want to operate the app on your own infrastructure instead of using the hosted instance.
 
 ## When self-hosting is a good fit
 
@@ -20,7 +20,7 @@ Start here:
 
 A typical self-hosted deployment uses:
 
-- Reactive Resume application container.
+- cloudcoffee application container.
 - PostgreSQL database.
 - SMTP configuration for account emails, or console-logged emails in simple development setups.
 - Optional S3-compatible storage for uploads.
@@ -30,7 +30,7 @@ The Docker guide includes the environment variable reference and a Compose examp
 
 ## Feature considerations
 
-Some features require extra configuration. For example, saved AI providers need server-side encryption configuration, and the AI Agent workspace uses Redis. Self-hosted deployments can also expose API and MCP endpoints from their own domain.
+Some features require extra configuration. For example, saved AI providers need server-side encryption configuration. Self-hosted deployments can also expose API and MCP endpoints from their own domain.
 
 For automation setup on self-hosted instances, see [Using the API](/guides/using-the-api) and [Using the MCP Server](/guides/using-the-mcp-server).
 

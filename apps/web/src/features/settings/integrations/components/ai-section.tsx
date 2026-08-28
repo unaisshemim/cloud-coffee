@@ -476,7 +476,7 @@ function CreateProviderForm() {
 				ok: false,
 				message: getOrpcErrorMessage(error, {
 					byCode: {
-						PRECONDITION_FAILED: t`AI providers require REDIS_URL and ENCRYPTION_SECRET to be configured.`,
+						PRECONDITION_FAILED: t`AI providers require ENCRYPTION_SECRET to be configured.`,
 						BAD_REQUEST: t`Invalid AI provider configuration.`,
 					},
 					fallback: t`Failed to save AI provider.`,
@@ -643,7 +643,7 @@ export function AISettingsSection() {
 						<XCircleIcon className="text-rose-600" />
 					)}
 					<span className={cn(hasUsableProvider ? "text-emerald-700" : "text-muted-foreground")}>
-						{hasUsableProvider ? <Trans>Agent ready</Trans> : <Trans>No tested provider</Trans>}
+						{hasUsableProvider ? <Trans>Provider ready</Trans> : <Trans>No tested provider</Trans>}
 					</span>
 				</p>
 			</div>
@@ -658,7 +658,7 @@ export function AISettingsSection() {
 					)}
 				>
 					{isConfigError ? (
-						<Trans>AI provider management is unavailable until REDIS_URL and ENCRYPTION_SECRET are configured.</Trans>
+						<Trans>AI provider management is unavailable until ENCRYPTION_SECRET is configured.</Trans>
 					) : (
 						<Trans>AI provider management is unavailable. Please try again.</Trans>
 					)}
@@ -677,7 +677,7 @@ export function AISettingsSection() {
 
 				{providers?.length === 0 ? (
 					<div className="rounded-md border border-dashed p-6 text-center text-muted-foreground text-sm">
-						<Trans>Add and test a provider before starting an agent thread.</Trans>
+						<Trans>Add and test a provider before using AI features.</Trans>
 					</div>
 				) : null}
 

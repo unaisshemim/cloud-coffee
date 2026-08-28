@@ -31,7 +31,7 @@ i18n.loadAndActivate({ locale: "en", messages: {} });
 const { Hero } = await import("./hero");
 
 describe("Hero", () => {
-	it("shows the editorial career collage with animated ASCII details", () => {
+	it("uses the supplied editorial collage as a full-bleed hero backdrop", () => {
 		const { container, getAllByTestId, getByRole } = render(
 			<I18nProvider i18n={i18n}>
 				<Hero />
@@ -42,12 +42,12 @@ describe("Hero", () => {
 			name: "An editorial career collage with a data crystal and a flying laptop",
 		});
 
-		expect(artwork).toHaveAttribute("src", "/images/landing/career-collage-hero-v3.webp");
-		expect(artwork).toHaveClass("w-[210%]", "object-contain", "lg:w-[86%]");
-		expect(artwork.parentElement).toHaveClass("top-12", "bottom-0", "sm:top-16");
+		expect(artwork).toHaveAttribute("src", "/images/landing/career-hero-collage.webp");
+		expect(artwork).toHaveClass("size-full", "object-cover");
+		expect(artwork.parentElement).toHaveClass("inset-0");
 		expect(getByRole("heading", { level: 1 })).toHaveTextContent("Career intelligence at the speed of opportunity.");
 		const asciiDetails = getAllByTestId("career-ascii");
-		expect(asciiDetails).toHaveLength(3);
+		expect(asciiDetails).toHaveLength(2);
 		expect(asciiDetails.some((detail) => detail.textContent?.includes("WEBMCP.CONNECTED"))).toBe(true);
 		expect(getByRole("button", { name: /Build your career base/i })).toHaveAttribute("href", "/dashboard");
 		expect(container.querySelector("video")).not.toBeInTheDocument();

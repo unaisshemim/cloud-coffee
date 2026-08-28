@@ -14,19 +14,23 @@ export function Prefooter() {
 				height={941}
 				loading="lazy"
 				decoding="async"
-				src="/images/landing/career-cta-art.webp"
-				className="absolute inset-0 size-full object-cover opacity-65 mix-blend-multiply"
+				src="/images/landing/career-crystal-cta.webp"
+				className="absolute inset-0 size-full object-cover object-[38%_center] opacity-70 mix-blend-multiply md:object-center"
 				initial={{ scale: 1.025, opacity: 0.35 }}
 				whileInView={{ scale: 1, opacity: 0.65 }}
 				viewport={{ once: true, amount: 0.2 }}
 				transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+			/>
+			<div
+				aria-hidden="true"
+				className="absolute inset-0 bg-linear-to-r from-[#e9dfcc]/15 via-[#e9dfcc]/74 to-[#e9dfcc]/94"
 			/>
 			<div aria-hidden="true" className="absolute inset-0 opacity-35">
 				<div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_49.8%,#b8aa91_50%,transparent_50.2%),linear-gradient(transparent_49.8%,#b8aa91_50%,transparent_50.2%)] bg-[size:72px_72px]" />
 			</div>
 
 			<m.div
-				className="relative mx-auto max-w-4xl text-center"
+				className="relative mx-auto max-w-4xl text-center md:ms-auto md:me-0 md:max-w-2xl md:text-start"
 				initial={{ opacity: 0, y: 24 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
@@ -38,7 +42,7 @@ export function Prefooter() {
 				<h2 className="mt-5 font-bold text-4xl leading-[0.96] tracking-[-0.055em] md:text-6xl">
 					<Trans>Your career already has the proof.</Trans>
 				</h2>
-				<p className="mx-auto mt-6 max-w-2xl text-[#4e5557] leading-relaxed md:text-lg">
+				<p className="mx-auto mt-6 max-w-2xl text-[#4e5557] leading-relaxed md:mx-0 md:text-lg">
 					<Trans>
 						Connect the work you've already done, keep every result searchable, and shape the right story for the next
 						role.

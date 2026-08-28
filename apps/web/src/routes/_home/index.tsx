@@ -5,7 +5,6 @@ import { Features } from "./-sections/features";
 import { Footer } from "./-sections/footer";
 import { Hero } from "./-sections/hero";
 import { Prefooter } from "./-sections/prefooter";
-import { Statistics } from "./-sections/statistics";
 
 export const Route = createFileRoute("/_home/")({
 	component: RouteComponent,
@@ -18,7 +17,7 @@ export const Route = createFileRoute("/_home/")({
 				{ rel: "canonical", href: canonicalUrl },
 				{
 					rel: "preload",
-					href: "/images/landing/career-collage-hero-v3.webp",
+					href: "/images/landing/career-hero-collage.webp",
 					as: "image",
 					fetchPriority: "high",
 				},
@@ -30,18 +29,14 @@ export const Route = createFileRoute("/_home/")({
 
 function RouteComponent() {
 	return (
-		<main id="main-content" className="relative bg-[#f7f3e9] font-landing text-[#121516]">
+		<main id="main-content" className="relative bg-[#fbfaf6] font-landing text-[#171918]">
 			<Hero />
-
-			<div className="container mx-auto px-4 sm:px-6 lg:px-12">
-				<div className="border-[#c9c0ae] border-x [&>section:first-child]:border-t-0 [&>section]:border-[#c9c0ae] [&>section]:border-t">
-					<Statistics />
-					<Features />
-					<Faq />
-					<Prefooter />
-					<Footer />
-				</div>
+			<Features />
+			<div className="mx-auto max-w-6xl px-5 sm:px-8">
+				<Faq />
+				<Prefooter />
 			</div>
+			<Footer />
 		</main>
 	);
 }

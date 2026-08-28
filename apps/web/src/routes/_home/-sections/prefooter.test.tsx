@@ -33,6 +33,11 @@ describe("Prefooter", () => {
 		expect(screen.getByText(/Connect the work you've already done/)).toBeInTheDocument();
 	});
 
+	it("uses the focused career-crystal artwork", () => {
+		const { container } = renderPrefooter();
+		expect(container.querySelector('img[src="/images/landing/career-crystal-cta.webp"]')).not.toBeNull();
+	});
+
 	it("renders the decorative TextMaskEffect (svg)", () => {
 		const { container } = renderPrefooter();
 		expect(container.querySelector("svg")).not.toBeNull();

@@ -33,6 +33,11 @@ describe("Features", () => {
 		expect(screen.getByRole("heading", { name: "WebMCP connections" })).toBeInTheDocument();
 		expect(screen.getByRole("heading", { name: "Resume matching" })).toBeInTheDocument();
 		expect(screen.getAllByTestId("product-ui-card")).toHaveLength(3);
+		expect(screen.getAllByTestId("journey-step")).toHaveLength(3);
+		expect(screen.getByTestId("journey-path")).toBeInTheDocument();
+		expect(screen.getByRole("img", { name: /achievement timeline/i })).toHaveAttribute("loading", "lazy");
+		expect(screen.getByRole("img", { name: /through WebMCP/i })).toHaveAttribute("loading", "lazy");
+		expect(screen.getByRole("img", { name: /resume evidence/i })).toHaveAttribute("loading", "lazy");
 		expect(screen.queryByText("Open Source")).not.toBeInTheDocument();
 		expect(screen.queryByText("12+ Templates")).not.toBeInTheDocument();
 	});

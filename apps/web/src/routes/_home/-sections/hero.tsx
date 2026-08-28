@@ -15,23 +15,16 @@ type AsciiDrift = {
 
 const asciiDrifts: AsciiDrift[] = [
 	{
-		id: "project",
-		text: "[ PROJECT_042 ]\nimpact: +18%\nstatus: captured",
-		className: "start-[4%] top-[20%]",
-		duration: 7,
-		delay: 0,
-	},
-	{
 		id: "connections",
 		text: "< WEBMCP.CONNECTED >\n12 sources\nsync: true",
-		className: "end-[5%] top-[53%] text-end",
+		className: "end-[6%] top-[58%] text-end",
 		duration: 8.5,
 		delay: 1.2,
 	},
 	{
 		id: "resume",
 		text: "resume.fit(92%)\nrole: product\nready: yes",
-		className: "end-[21%] bottom-[8%] text-end",
+		className: "start-[7%] top-[25%]",
 		duration: 7.8,
 		delay: 2.1,
 	},
@@ -39,25 +32,25 @@ const asciiDrifts: AsciiDrift[] = [
 
 export function Hero() {
 	return (
-		<section id="hero" className="relative min-h-svh w-full overflow-hidden border-b bg-[#f7f3e9]">
-			<div className="absolute inset-x-0 top-12 bottom-0 flex items-center justify-center overflow-hidden sm:top-16">
+		<section id="hero" className="relative min-h-[46rem] w-full overflow-hidden bg-[#f8f4e9] sm:min-h-[50rem]">
+			<div className="absolute inset-0 overflow-hidden">
 				<m.img
 					alt={t`An editorial career collage with a data crystal and a flying laptop`}
 					width={1672}
 					height={941}
 					fetchPriority="high"
 					decoding="async"
-					src="/images/landing/career-collage-hero-v3.webp"
-					className="h-auto w-[210%] max-w-none object-contain sm:w-[94%] lg:w-[86%]"
-					initial={{ scale: 0.99 }}
-					animate={{ scale: [0.99, 1.01, 0.99], x: [0, -3, 0], y: [0, 2, 0] }}
-					transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+					src="/images/landing/career-hero-collage.webp"
+					className="size-full object-cover object-[88%_center] sm:object-center"
+					initial={{ scale: 1.015 }}
+					animate={{ scale: [1.015, 1.035, 1.015] }}
+					transition={{ duration: 22, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
 				/>
 			</div>
 
 			<div
 				aria-hidden="true"
-				className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(248,245,237,0.2)_0%,rgba(248,245,237,0.08)_42%,transparent_70%),linear-gradient(0deg,var(--background)_0%,transparent_19%)]"
+				className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(250,247,239,0.72)_0%,rgba(250,247,239,0.24)_44%,transparent_68%),linear-gradient(180deg,rgba(247,243,233,0.45)_0%,transparent_22%,transparent_78%,rgba(247,243,233,0.68)_100%)]"
 			/>
 
 			{asciiDrifts.map((drift) => (
@@ -65,7 +58,7 @@ export function Hero() {
 					key={drift.id}
 					aria-hidden="true"
 					data-testid="career-ascii"
-					className={`pointer-events-none absolute z-10 hidden whitespace-pre-wrap font-mono text-[#53656f]/45 text-[10px] uppercase leading-relaxed tracking-[0.12em] mix-blend-multiply sm:block ${drift.className}`}
+					className={`pointer-events-none absolute z-10 hidden whitespace-pre-wrap font-mono text-[#53656f]/36 text-[9px] uppercase leading-relaxed tracking-[0.14em] mix-blend-multiply lg:block ${drift.className}`}
 					initial={{ opacity: 0, y: 8 }}
 					animate={{ opacity: [0.22, 0.62, 0.22], y: [8, -7, 8] }}
 					transition={{
@@ -79,10 +72,10 @@ export function Hero() {
 				</m.pre>
 			))}
 
-			<div className="container relative z-20 mx-auto flex min-h-svh items-center justify-center px-6 pt-24 pb-28 lg:px-12">
-				<div className="flex max-w-5xl flex-col items-center text-center font-landing text-[#121516]">
+			<div className="container relative z-20 mx-auto flex min-h-[46rem] items-center justify-center px-6 pt-28 pb-20 sm:min-h-[50rem] lg:px-12">
+				<div className="flex max-w-4xl flex-col items-center text-center font-landing text-[#151716]">
 					<m.p
-						className="font-bold text-[#5f6c71] text-[11px] uppercase tracking-[0.2em] sm:text-xs"
+						className="font-medium text-[#647074] text-[10px] uppercase tracking-[0.24em] sm:text-[11px]"
 						initial={{ opacity: 0, y: 16 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.55, delay: 0.12 }}
@@ -91,19 +84,19 @@ export function Hero() {
 					</m.p>
 
 					<m.h1
-						className="mt-5 max-w-4xl text-balance font-bold text-5xl leading-[0.94] tracking-[-0.06em] sm:text-6xl lg:text-[5.5rem]"
+						className="mt-5 max-w-4xl text-balance font-medium text-[2.8rem] leading-[0.96] tracking-[-0.055em] sm:text-6xl lg:text-[5rem]"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7, delay: 0.24 }}
 					>
 						<Trans>Career intelligence at the</Trans>{" "}
-						<span className="font-normal font-serif text-[#f1530a] italic tracking-[-0.045em]">
+						<span className="font-normal font-serif text-[#ee5a24] italic tracking-[-0.04em]">
 							<Trans>speed of opportunity.</Trans>
 						</span>
 					</m.h1>
 
 					<m.p
-						className="mt-7 max-w-2xl text-[#4e5557] text-base leading-relaxed sm:text-lg"
+						className="mt-6 max-w-xl text-[#535b5d] text-[15px] leading-7 sm:text-base"
 						initial={{ opacity: 0, y: 18 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.65, delay: 0.38 }}
@@ -123,7 +116,7 @@ export function Hero() {
 						<Button
 							size="lg"
 							nativeButton={false}
-							className="group h-12 rounded-md bg-[#ff5a0a] px-5 font-bold text-white shadow-[0_5px_0_#bf3f00] transition-transform hover:-translate-y-0.5 hover:bg-[#f1530a] active:translate-y-0 active:shadow-[0_2px_0_#bf3f00]"
+							className="group h-11 rounded-full bg-[#ef5a2f] px-6 font-medium text-white shadow-[0_10px_28px_rgba(239,90,47,0.28)] transition-all hover:-translate-y-0.5 hover:bg-[#df4c25]"
 							render={
 								<Link to="/dashboard">
 									<Trans>Build your career base</Trans>

@@ -92,26 +92,30 @@ const getFeatures = (): Feature[] => [
 function FeatureCard({ icon: Icon, title, description, code, to, index }: FeatureCardProps) {
 	const card = (
 		<m.article
-			className="group relative min-h-64 overflow-hidden border-[#c9c0ae] border-b bg-[#f7f3e9] p-6 transition-colors hover:bg-[#efe6d6] sm:p-8 odd:md:border-r"
+			className="group relative min-h-44 overflow-hidden rounded-2xl border border-[#e3ded3] bg-white p-5 shadow-[0_12px_34px_rgba(54,47,38,0.05)] transition-all hover:-translate-y-1 hover:border-[#ef5a2f]/30 hover:shadow-[0_18px_45px_rgba(54,47,38,0.09)]"
 			initial={{ opacity: 0, y: 20 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true, amount: 0.15 }}
 			transition={{ duration: 0.45, delay: (index % 2) * 0.08 }}
 		>
 			<div className="flex items-start justify-between gap-4">
-				<span className="font-mono text-[#7d807b] text-xs tracking-[0.12em]">{String(index + 1).padStart(2, "0")}</span>
-				<Icon aria-hidden="true" className="size-7 text-[#f1530a]" weight="thin" />
+				<span className="grid size-9 place-items-center rounded-xl bg-[#fff0e8]">
+					<Icon aria-hidden="true" className="size-4.5 text-[#ef5a2f]" weight="regular" />
+				</span>
+				<span className="font-mono text-[#aaa7a0] text-[9px] tracking-[0.12em]">
+					{String(index + 1).padStart(2, "0")}
+				</span>
 			</div>
 
-			<div className="mt-12 max-w-md">
-				<p className="font-bold font-mono text-[#687176] text-[10px] uppercase tracking-[0.18em]">{code}</p>
-				<h3 className="mt-3 font-bold text-2xl tracking-[-0.035em]">{title}</h3>
-				<p className="mt-3 text-[#555c5f] text-sm leading-relaxed">{description}</p>
+			<div className="mt-7 max-w-md">
+				<p className="font-mono text-[#df542c] text-[8px] uppercase tracking-[0.16em]">{code}</p>
+				<h3 className="mt-2 font-medium text-lg tracking-[-0.035em]">{title}</h3>
+				<p className="mt-2 line-clamp-2 text-[#737570] text-xs leading-5">{description}</p>
 			</div>
 
 			<div
 				aria-hidden="true"
-				className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-[#f1530a] transition-transform duration-500 group-hover:scale-x-100"
+				className="absolute inset-x-5 bottom-0 h-0.5 origin-left scale-x-0 bg-[#ef5a2f] transition-transform duration-500 group-hover:scale-x-100"
 			/>
 		</m.article>
 	);
@@ -129,22 +133,22 @@ export function Features() {
 	const features = getFeatures();
 
 	return (
-		<section id="features" className="bg-[#f7f3e9]">
+		<section id="features" className="bg-[#fbfaf6]">
 			<ProductShowcase />
 
 			<m.div
-				className="grid gap-8 px-6 py-16 md:grid-cols-[0.8fr_1.2fr] md:px-10 md:py-24"
+				className="mx-auto max-w-2xl px-6 pt-12 pb-10 text-center md:pt-20"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
 			>
-				<p className="font-bold font-mono text-[#5f6c71] text-xs uppercase tracking-[0.2em]">02 / Career memory</p>
+				<p className="font-mono text-[#e65328] text-[10px] uppercase tracking-[0.2em]">Everything stays useful</p>
 				<div>
-					<h2 className="max-w-3xl font-bold text-4xl leading-[0.98] tracking-[-0.055em] md:text-6xl">
+					<h2 className="mt-5 text-balance font-medium text-4xl leading-[0.98] tracking-[-0.055em] md:text-5xl">
 						<Trans>Remember every career win.</Trans>
 					</h2>
-					<p className="mt-6 max-w-2xl text-[#555c5f] leading-relaxed md:text-lg">
+					<p className="mt-5 text-[#6b6e6b] text-sm leading-7">
 						<Trans>
 							Build one living knowledge base from your projects, outcomes, and tools—then turn it into the right story
 							when opportunity arrives.
@@ -153,7 +157,7 @@ export function Features() {
 				</div>
 			</m.div>
 
-			<div className="grid border-[#c9c0ae] border-t md:grid-cols-2">
+			<div className="mx-auto grid max-w-6xl gap-3 px-5 pb-24 sm:grid-cols-2 sm:px-8 md:pb-32 lg:grid-cols-4">
 				{features.map((feature, index) => (
 					<FeatureCard key={feature.id} {...feature} index={index} />
 				))}

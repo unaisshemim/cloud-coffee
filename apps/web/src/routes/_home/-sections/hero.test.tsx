@@ -42,7 +42,7 @@ describe("Hero", () => {
 			name: "An editorial career collage with a data crystal and a flying laptop",
 		});
 
-		expect(artwork).toHaveAttribute("src", "/images/landing/career-collage-hero-v2.webp");
+		expect(artwork).toHaveAttribute("src", "/images/landing/career-collage-hero-v3.webp");
 		expect(artwork).toHaveClass("w-[210%]", "object-contain", "lg:w-[86%]");
 		expect(artwork.parentElement).toHaveClass("top-12", "bottom-0", "sm:top-16");
 		expect(getByRole("heading", { level: 1 })).toHaveTextContent("Career intelligence at the speed of opportunity.");

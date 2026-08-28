@@ -47,7 +47,7 @@ export function Hero() {
 					height={941}
 					fetchPriority="high"
 					decoding="async"
-					src="/images/landing/career-collage-hero-v2.webp"
+					src="/images/landing/career-collage-hero-v3.webp"
 					className="h-auto w-[210%] max-w-none object-contain sm:w-[94%] lg:w-[86%]"
 					initial={{ scale: 0.99 }}
 					animate={{ scale: [0.99, 1.01, 0.99], x: [0, -3, 0], y: [0, 2, 0] }}

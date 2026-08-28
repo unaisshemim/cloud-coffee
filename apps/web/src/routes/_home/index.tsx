@@ -18,7 +18,7 @@ export const Route = createFileRoute("/_home/")({
 				{ rel: "canonical", href: canonicalUrl },
 				{
 					rel: "preload",
-					href: "/images/landing/career-collage-hero-v2.webp",
+					href: "/images/landing/career-collage-hero-v3.webp",
 					as: "image",
 					fetchPriority: "high",
 				},

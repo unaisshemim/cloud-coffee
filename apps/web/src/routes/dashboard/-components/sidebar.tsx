@@ -7,7 +7,6 @@ import {
 	MagnifyingGlassIcon,
 	ReadCvLogoIcon,
 	SealCheckIcon,
-	ShieldCheckIcon,
 	UserCircleIcon,
 	UserGearIcon,
 } from "@phosphor-icons/react";
@@ -62,11 +61,6 @@ const settingsSidebarItems = [
 		icon: <UserCircleIcon />,
 		label: msg`Profile`,
 		href: "/dashboard/settings/profile",
-	},
-	{
-		icon: <ShieldCheckIcon />,
-		label: msg`Authentication`,
-		href: "/dashboard/settings/authentication",
 	},
 	{
 		icon: <UserGearIcon />,

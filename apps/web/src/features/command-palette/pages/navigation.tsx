@@ -6,7 +6,6 @@ import {
 	HouseSimpleIcon,
 	PlusIcon,
 	ReadCvLogoIcon,
-	ShieldCheckIcon,
 	UserCircleIcon,
 	UserGearIcon,
 } from "@phosphor-icons/react";
@@ -86,15 +85,6 @@ export function NavigationCommandGroup() {
 				>
 					<UserCircleIcon />
 					<Trans>Profile</Trans>
-				</CommandItem>
-
-				<CommandItem
-					keywords={[t`Authentication`]}
-					value="navigation.settings.authentication"
-					onSelect={() => onNavigate("/dashboard/settings/authentication")}
-				>
-					<ShieldCheckIcon />
-					<Trans>Authentication</Trans>
 				</CommandItem>
 
 				<CommandItem

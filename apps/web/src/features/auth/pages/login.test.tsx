@@ -22,7 +22,7 @@ vi.mock("@tanstack/react-router", () => ({
 }));
 
 vi.mock("@/libs/auth/client", () => ({
-	authClient: { signIn: { social: vi.fn(), email: vi.fn(), username: vi.fn(), passkey: vi.fn() } },
+	authClient: { signIn: { social: vi.fn() } },
 }));
 
 vi.mock("@/libs/orpc/client", () => ({

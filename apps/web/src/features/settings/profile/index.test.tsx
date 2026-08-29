@@ -24,7 +24,13 @@ describe("ProfileWorkspace", () => {
 			</I18nProvider>,
 		);
 
+		expect(screen.getByRole("heading", { name: "Career Knowledge" })).toBeInTheDocument();
+		expect(screen.getByText("Achievements")).toBeInTheDocument();
+		expect(screen.getByText("Hackathons")).toBeInTheDocument();
+		expect(screen.getByText("Publications")).toBeInTheDocument();
+		expect(screen.getByText("Custom facts")).toBeInTheDocument();
 		expect(screen.getByRole("button", { name: /Job Preferences/i })).toBeInTheDocument();
+		expect(screen.getByRole("button", { name: /Career Knowledge/i })).toBeInTheDocument();
 		expect(screen.getByRole("button", { name: /Personal info/i })).toBeInTheDocument();
 		expect(screen.getByRole("button", { name: /Skills & Languages/i })).toBeInTheDocument();
 		expect(screen.getByRole("button", { name: /Projects & Volunteer/i })).toBeInTheDocument();

@@ -45,11 +45,13 @@ vi.mock("@reactive-resume/db/schema", () => ({
 	applicationProfile: {
 		userId: "application_profile.user_id",
 		data: "application_profile.data",
+		revision: "application_profile.revision",
 		updatedAt: "application_profile.updated_at",
 	},
 }));
 vi.mock("drizzle-orm", () => ({
 	eq: (left: unknown, right: unknown) => ({ type: "eq", left, right }),
+	sql: (strings: TemplateStringsArray, ...values: unknown[]) => ({ type: "sql", strings: [...strings], values }),
 }));
 
 const { applicationProfileService } = await import("./service");
@@ -64,8 +66,11 @@ describe("applicationProfileService", () => {
 		state.conflictConfig = undefined;
 	});
 
-	it("returns defaults when the user has no saved profile", async () => {
-		await expect(applicationProfileService.get({ userId: "user-1" })).resolves.toEqual(defaultApplicationProfile);
+	it("returns default document at revision zero when the user has no saved profile", async () => {
+		await expect(applicationProfileService.getDocument({ userId: "user-1" })).resolves.toEqual({
+			profile: defaultApplicationProfile,
+			revision: 0,
+		});
 		expect(state.whereArg).toEqual({
 			type: "eq",
 			left: "application_profile.user_id",
@@ -73,15 +78,56 @@ describe("applicationProfileService", () => {
 		});
 	});
 
-	it("upserts profile data under the authenticated user", async () => {
-		const data = {
+	it("upserts profile data at the expected revision", async () => {
+		const profile = {
 			...defaultApplicationProfile,
 			skills: ["TypeScript"],
 		};
-		state.returningRows = [{ data }];
+		state.selectedRows = [{ data: defaultApplicationProfile, revision: 2 }];
+		state.returningRows = [{ data: profile, revision: 3 }];
 
-		await expect(applicationProfileService.update({ userId: "user-1", data })).resolves.toEqual(data);
-		expect(state.insertValues).toEqual({ userId: "user-1", data });
-		expect(state.conflictConfig).toMatchObject({ target: "application_profile.user_id" });
+		await expect(applicationProfileService.update({ userId: "user-1", profile, revision: 2 })).resolves.toEqual({
+			profile,
+			revision: 3,
+		});
+		expect(state.insertValues).toMatchObject({ userId: "user-1", data: profile, revision: 1 });
+		expect(state.conflictConfig).toMatchObject({
+			target: "application_profile.user_id",
+			setWhere: { type: "eq", left: "application_profile.revision", right: 2 },
+		});
+	});
+
+	it("rejects a stale revision without writing", async () => {
+		state.selectedRows = [{ data: defaultApplicationProfile, revision: 4 }];
+
+		await expect(
+			applicationProfileService.update({ userId: "user-1", profile: defaultApplicationProfile, revision: 3 }),
+		).rejects.toMatchObject({ code: "CONFLICT" });
+		expect(dbMock.insert).not.toHaveBeenCalled();
+	});
+
+	it("previews a merge without writing", async () => {
+		state.selectedRows = [{ data: defaultApplicationProfile, revision: 2 }];
+
+		const preview = await applicationProfileService.previewMerge({
+			userId: "user-1",
+			candidate: { skills: ["TypeScript"] },
+		});
+
+		expect(preview.profile.skills).toEqual(["TypeScript"]);
+		expect(preview.revision).toBe(2);
+		expect(dbMock.insert).not.toHaveBeenCalled();
+	});
+
+	it("requires explicit confirmation before applying a merge", async () => {
+		await expect(
+			applicationProfileService.applyMerge({
+				userId: "user-1",
+				revision: 0,
+				operations: [],
+				confirm: false,
+			}),
+		).rejects.toMatchObject({ code: "BAD_REQUEST" });
+		expect(dbMock.insert).not.toHaveBeenCalled();
 	});
 });

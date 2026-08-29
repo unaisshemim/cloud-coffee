@@ -2,6 +2,7 @@ import type { ApplicationProfile } from "@reactive-resume/schema/application-pro
 
 export type ProfileSectionId =
 	| "job-preferences"
+	| "career-knowledge"
 	| "personal"
 	| "documents"
 	| "skills"

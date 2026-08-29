@@ -7,10 +7,8 @@ const mocks = vi.hoisted(() => ({
 	handleOpenApi: vi.fn(),
 	handleHealth: vi.fn(),
 	handleUpload: vi.fn(),
-	handleMcp: vi.fn(),
 	handleResumePdfDownload: vi.fn(),
 	handlePublicResumePdf: vi.fn(),
-	handleMcpServerCard: vi.fn(),
 	handleOAuthAuthorizationServer: vi.fn(),
 	handleOAuthProtectedResource: vi.fn(),
 	handleOpenIdConfiguration: vi.fn(),
@@ -40,7 +38,6 @@ vi.mock("../openapi/handler", () => ({
 }));
 
 vi.mock("../openapi/metadata", () => ({
-	handleMcpServerCard: mocks.handleMcpServerCard,
 	handleOAuthAuthorizationServer: mocks.handleOAuthAuthorizationServer,
 	handleOAuthProtectedResource: mocks.handleOAuthProtectedResource,
 	handleOpenIdConfiguration: mocks.handleOpenIdConfiguration,
@@ -60,10 +57,6 @@ vi.mock("../static/seo", () => ({
 vi.mock("../static/web", () => ({
 	serveWebDistStatic: mocks.serveWebDistStatic,
 	handleWebApp: mocks.handleWebApp,
-}));
-
-vi.mock("../mcp/handler", () => ({
-	handleMcp: mocks.handleMcp,
 }));
 
 vi.mock("./resume-pdf", () => ({
@@ -87,10 +80,8 @@ beforeEach(() => {
 	mocks.handleOpenApi.mockResolvedValue(new Response("openapi"));
 	mocks.handleHealth.mockReturnValue(new Response("health"));
 	mocks.handleUpload.mockResolvedValue(new Response("upload"));
-	mocks.handleMcp.mockResolvedValue(new Response("mcp"));
 	mocks.handleResumePdfDownload.mockResolvedValue(new Response("pdf"));
 	mocks.handlePublicResumePdf.mockResolvedValue(new Response("public-pdf"));
-	mocks.handleMcpServerCard.mockReturnValue(new Response("server-card"));
 	mocks.handleOAuthAuthorizationServer.mockReturnValue(new Response("oauth-authorization-server"));
 	mocks.handleOAuthProtectedResource.mockReturnValue(new Response("oauth-protected-resource"));
 	mocks.handleOpenIdConfiguration.mockReturnValue(new Response("openid-configuration"));
@@ -103,6 +94,20 @@ beforeEach(() => {
 });
 
 describe("createApp", () => {
+	it.each([
+		{ path: "/mcp", method: "POST" },
+		{ path: "/mcp/tools", method: "POST" },
+		{ path: "/.well-known/mcp/server-card.json", method: "GET" },
+	])("does not expose $path", async ({ path, method }) => {
+		const { createApp } = await import("./app");
+		const app = createApp();
+		mocks.handleWellKnownFallback.mockReturnValue(new Response("Not Found", { status: 404 }));
+
+		const response = await app.request(path, { method });
+
+		expect(response.status).toBe(404);
+	});
+
 	it("routes /api/auth/oauth to the OAuth bridge before the Better Auth wildcard", async () => {
 		const { createApp } = await import("./app");
 		const app = createApp();

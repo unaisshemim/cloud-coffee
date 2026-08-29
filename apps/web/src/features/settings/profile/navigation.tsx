@@ -24,6 +24,13 @@ type NavigationItem = {
 
 const aboutItems: NavigationItem[] = [
 	{
+		id: "career-knowledge",
+		label: "Career Knowledge",
+		icon: BriefcaseIcon,
+		description: (p) =>
+			`${p.achievements.length + p.hackathons.length + p.publications.length + p.customFacts.length} facts`,
+	},
+	{
 		id: "personal",
 		label: "Personal info",
 		icon: UserIcon,

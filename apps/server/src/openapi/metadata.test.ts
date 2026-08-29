@@ -20,14 +20,6 @@ vi.mock("@reactive-resume/env/server", () => ({
 	env: mocks.env,
 }));
 
-vi.mock("@reactive-resume/mcp/server-card", () => ({
-	buildMcpServerCard: vi.fn(() => ({})),
-}));
-
-vi.mock("../app-version", () => ({
-	appVersion: "test",
-}));
-
 describe("handleOAuthProtectedResource", () => {
 	it("advertises the mounted auth issuer as the authorization server", async () => {
 		const { handleOAuthProtectedResource } = await import("./metadata");

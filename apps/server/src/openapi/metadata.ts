@@ -1,23 +1,12 @@
 import { oauthProviderAuthServerMetadata, oauthProviderOpenIdConfigMetadata } from "@better-auth/oauth-provider";
 import { auth } from "@reactive-resume/auth/config";
 import { env } from "@reactive-resume/env/server";
-import { buildMcpServerCard } from "@reactive-resume/mcp/server-card";
-import { appVersion } from "../app-version";
 
 export const handleOAuthAuthorizationServer = oauthProviderAuthServerMetadata(auth);
 export const handleOpenIdConfiguration = oauthProviderOpenIdConfigMetadata(auth);
 
 export function handleWellKnownFallback() {
-	return new Response("OK", { status: 200 });
-}
-
-export function handleMcpServerCard() {
-	return Response.json(buildMcpServerCard(appVersion), {
-		headers: {
-			"Content-Type": "application/json",
-			"Cache-Control": "public, max-age=60, stale-while-revalidate=120",
-		},
-	});
+	return new Response("Not Found", { status: 404 });
 }
 
 export function handleOAuthProtectedResource() {

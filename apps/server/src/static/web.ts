@@ -29,7 +29,6 @@ const noindexShellPrefixes = ["/auth", "/dashboard", "/builder", "/templates"];
 const indexableAppPaths = new Set(["/ats-checker"]);
 const reservedPublicResumeSegments = new Set([
 	"api",
-	"mcp",
 	".well-known",
 	"uploads",
 	"auth",

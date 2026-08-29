@@ -19,7 +19,6 @@ describe("SEO static endpoints", () => {
 		expect(text).toContain("Allow: /");
 		expect(text).toContain("Disallow: /api/rpc");
 		expect(text).toContain("Disallow: /api/auth");
-		expect(text).toContain("Disallow: /mcp");
 		expect(text).toContain("Disallow: /.well-known");
 		expect(text).toContain("Sitemap: https://app.example.com/sitemap.xml");
 		expect(text).toContain("Sitemap: https://docs.rxresu.me/sitemap.xml");
@@ -55,7 +54,6 @@ describe("SEO static endpoints", () => {
 		expect(text).toContain("- Documentation llms.txt: https://docs.rxresu.me/llms.txt");
 		expect(text).toContain("- API documentation: https://docs.rxresu.me/api-reference");
 		expect(text).toContain("- Resume schema: https://app.example.com/schema.json");
-		expect(text).toContain("- MCP documentation: https://docs.rxresu.me/guides/using-the-mcp-server");
 		expect(text).toContain("- OpenAPI specification: https://app.example.com/api/openapi/spec.json");
 	});
 

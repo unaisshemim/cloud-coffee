@@ -14,7 +14,7 @@ const rootPackageJson = JSON.parse(readFileSync(rootPackageJsonPath, "utf-8")) a
 const appVersion = JSON.stringify(rootPackageJson.version ?? "0.0.0");
 const workspaceRoot = fileURLToPath(new URL("../..", import.meta.url));
 
-const serverPaths = ["/api", "/mcp", "/uploads", "/.well-known", "/schema.json"] as const;
+const serverPaths = ["/api", "/uploads", "/.well-known", "/schema.json"] as const;
 
 const serverProxy = serverPaths.reduce(
 	(acc, path) => {

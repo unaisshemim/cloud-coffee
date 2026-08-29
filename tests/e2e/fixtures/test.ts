@@ -20,9 +20,9 @@ export const test = base.extend<Fixtures>({
 			await deleteE2EUser(account);
 		}
 	},
-	authPage: async ({ browser, request, account }, use, testInfo) => {
+	authPage: async ({ browser, account }, use, testInfo) => {
 		const baseURL = String(testInfo.project.use.baseURL ?? "http://localhost:3000");
-		const context = await createAuthenticatedContext(browser, request, account, baseURL);
+		const context = await createAuthenticatedContext(browser, account, baseURL);
 
 		try {
 			await use(await context.newPage());

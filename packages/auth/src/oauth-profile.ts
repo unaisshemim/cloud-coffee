@@ -1,7 +1,7 @@
 import type { SQL } from "drizzle-orm";
 import type { AnyPgColumn } from "drizzle-orm/pg-core";
 import { BetterAuthError } from "better-auth";
-import { and, eq, or, sql } from "drizzle-orm";
+import { eq, or, sql } from "drizzle-orm";
 import { db } from "@reactive-resume/db/client";
 import * as schema from "@reactive-resume/db/schema";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
@@ -14,7 +14,6 @@ interface ExistingOAuthUser {
 	displayUsername: string;
 	name: string;
 	image: string | null;
-	accountId?: string;
 }
 
 function lower<T extends AnyPgColumn>(column: T): SQL<T> {
@@ -39,46 +38,6 @@ async function findExistingUserByEmail(email: string): Promise<ExistingOAuthUser
 		.limit(1);
 
 	return existingUser;
-}
-
-async function findLegacyGithubUser(
-	profile: OAuthProfile,
-	context: OAuthMapperContext,
-): Promise<ExistingOAuthUser | undefined> {
-	const login = profile.login;
-	if (!login) return;
-
-	const normalizedLogin = toUsername(login);
-
-	const [legacyAccount] = await db
-		.select({
-			id: schema.user.id,
-			accountId: schema.account.accountId,
-			email: schema.user.email,
-			emailVerified: schema.user.emailVerified,
-			username: schema.user.username,
-			displayUsername: schema.user.displayUsername,
-			name: schema.user.name,
-			image: schema.user.image,
-		})
-		.from(schema.account)
-		.innerJoin(schema.user, eq(schema.account.userId, schema.user.id))
-		.where(
-			and(
-				eq(schema.account.providerId, "github"),
-				eq(lower(schema.user.email), context.email),
-				or(
-					eq(lower(schema.user.username), normalizedLogin),
-					eq(schema.user.displayUsername, login),
-					eq(lower(schema.user.displayUsername), normalizedLogin),
-				),
-			),
-		)
-		.limit(1);
-
-	if (legacyAccount?.email.trim().toLowerCase() !== context.email) return;
-
-	return legacyAccount;
 }
 
 async function normalizeExistingUserEmail(userId: string, currentEmail: string, normalizedEmail: string) {
@@ -138,13 +97,8 @@ async function findAvailableUsernameSuffix(baseUsername: string, index = 1): Pro
 
 interface OAuthProfile {
 	email?: string | null | undefined;
-	id?: string | number | null | undefined;
 	name?: string | null | undefined;
 	picture?: string | null | undefined;
-	image?: string | null | undefined;
-	avatar_url?: string | null | undefined;
-	login?: string | null | undefined;
-	preferred_username?: string | null | undefined;
 }
 
 interface OAuthMapperContext {
@@ -154,16 +108,12 @@ interface OAuthMapperContext {
 
 interface OAuthMapperOptions<TProfile extends OAuthProfile> {
 	providerName: string;
-	findExistingUser?: (profile: TProfile, context: OAuthMapperContext) => Promise<ExistingOAuthUser | undefined>;
-	getPreferredUsername?: (profile: TProfile, context: OAuthMapperContext) => string | undefined | null;
 	getName?: (profile: TProfile, context: OAuthMapperContext) => string | undefined | null;
 	getImage?: (profile: TProfile) => string | undefined | null;
 }
 
 export function createProfileMapper<TProfile extends OAuthProfile>({
 	providerName,
-	findExistingUser,
-	getPreferredUsername,
 	getName,
 	getImage,
 }: OAuthMapperOptions<TProfile>) {
@@ -178,7 +128,7 @@ export function createProfileMapper<TProfile extends OAuthProfile>({
 		const email = profile.email.trim().toLowerCase();
 		const emailLocalPart = getEmailLocalPart(email);
 		const context = { email, emailLocalPart };
-		const existingUser = (await findExistingUser?.(profile, context)) ?? (await findExistingUserByEmail(email));
+		const existingUser = await findExistingUserByEmail(email);
 		const image = getImage?.(profile) ?? undefined;
 
 		if (existingUser) {
@@ -199,8 +149,7 @@ export function createProfileMapper<TProfile extends OAuthProfile>({
 			};
 		}
 
-		const preferredUsername = getPreferredUsername?.(profile, context);
-		const username = await allocateUniqueUsername(email, preferredUsername);
+		const username = await allocateUniqueUsername(email);
 		const mappedName = getName?.(profile, context)?.trim();
 
 		return {
@@ -212,14 +161,4 @@ export function createProfileMapper<TProfile extends OAuthProfile>({
 			emailVerified: true,
 		};
 	};
-}
-
-export function createGithubProfileMapper() {
-	return createProfileMapper({
-		providerName: "GitHub",
-		findExistingUser: findLegacyGithubUser,
-		getPreferredUsername: (profile, context) => profile.login ?? context.emailLocalPart,
-		getName: (profile, context) => profile.name ?? profile.login ?? context.emailLocalPart,
-		getImage: (profile) => profile.avatar_url,
-	});
 }

@@ -10,7 +10,6 @@ export type E2EAccount = {
 	name: string;
 	username: string;
 	email: string;
-	password: string;
 };
 
 function createRunSlug(testInfo: TestInfo) {
@@ -28,7 +27,6 @@ export function createAccount(testInfo: TestInfo): E2EAccount {
 		name: "E2E Test User",
 		username,
 		email: `${username}@example.test`,
-		password: "Password123!",
 	};
 }
 

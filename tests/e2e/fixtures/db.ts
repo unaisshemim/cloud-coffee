@@ -1,4 +1,5 @@
 import type { E2EAccount } from "./data";
+import { randomBytes, randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { Pool } from "pg";
@@ -22,6 +23,33 @@ export async function deleteE2EUser(account: E2EAccount) {
 
 	try {
 		await pool.query('delete from "user" where email = $1 or username = $2', [account.email, account.username]);
+	} finally {
+		await pool.end();
+	}
+}
+
+export async function seedAuthenticatedUser(account: E2EAccount) {
+	const pool = new Pool({ connectionString: getDatabaseUrl() });
+	const userId = randomUUID();
+	const sessionToken = randomBytes(32).toString("base64url");
+
+	try {
+		await pool.query("begin");
+		await pool.query(
+			`insert into "user" (id, name, email, email_verified, username, display_username)
+			 values ($1, $2, $3, true, $4, $4)`,
+			[userId, account.name, account.email, account.username],
+		);
+		await pool.query(
+			`insert into "session" (id, token, user_id, expires_at)
+			 values ($1, $2, $3, now() + interval '1 day')`,
+			[randomUUID(), sessionToken, userId],
+		);
+		await pool.query("commit");
+		return sessionToken;
+	} catch (error) {
+		await pool.query("rollback");
+		throw error;
 	} finally {
 		await pool.end();
 	}

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-ARG PNPM_VERSION=11.21.0
+ARG PNPM_VERSION=11.24.0
 ARG NODE_VERSION=24
 
 FROM ghcr.io/pnpm/pnpm:${PNPM_VERSION} AS dev

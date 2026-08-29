@@ -12,7 +12,7 @@ export const authRouter = {
 				operationId: "listAuthProviders",
 				summary: "List authentication providers",
 				description:
-					"Returns a list of all authentication providers enabled on this cloudcoffee instance, along with their display names. Possible providers include password-based credentials, Google, GitHub, LinkedIn, and custom OAuth. No authentication required.",
+					"Returns Google when Google authentication is configured on this cloudcoffee instance. No authentication required.",
 				successDescription: "A map of enabled authentication provider identifiers to their display names.",
 			})
 			.handler((): ProviderList => authService.providers.list()),

@@ -27,10 +27,6 @@ msgstr ""
 msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This can't be undone."
 msgstr "\"{0} · {1}\" و کل تاریخچه آن برای همیشه حذف می‌شوند. این کار قابل بازگشت نیست."
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "(opens in new tab)"
-msgstr "(در زبانهٔ جدید باز می‌شود)"
-
 #. placeholder {0}: section.items.length
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "{0, plural, one {# item} other {# items}}"
@@ -124,46 +120,13 @@ msgstr "{passedRules} از {totalRules} بررسی با موفقیت انجام 
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · مورد {itemNumber}"
 
-#: src/routes/_home/-sections/faq.tsx
-msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
-msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
-msgstr "<0>سوالات</0><1>متداول</1><2>پرسیده‌شده</2>"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>از اینکه از cloudcoffee استفاده می‌کنید متشکرم! این اپ حاصل عشق است که عمدتاً در اوقات فراغتم با پشتیبانی فوق‌العاده مشارکت‌کنندگان متن‌باز در سراسر جهان ساخته شده است.</0><1>اگر cloudcoffee برای شما مفید بوده و می‌خواهید به رایگان و باز ماندن آن برای همه کمک کنید، لطفاً به اهدای کمک مالی فکر کنید. هر مقدار کوچکی هم قدردانی می‌شود!</1>"
 
-#: src/dialogs/api-key/create.tsx
-msgid "1 month"
-msgstr "۱ ماه"
-
-#: src/dialogs/api-key/create.tsx
-msgid "1 year"
-msgstr "۱ سال"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "12 projects added to your career base"
-msgstr ""
-
-#: src/routes/_home/-sections/features.tsx
-msgid "12+ Templates"
-msgstr "بیش از ۱۲ قالب"
-
-#: src/dialogs/api-key/create.tsx
-msgid "3 months"
-msgstr "۳ ماه"
-
-#: src/dialogs/api-key/create.tsx
-msgid "6 months"
-msgstr "۶ ماه"
-
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A clean single-column export keeps every fact. Columns and images are where they get lost."
 msgstr "خروجی تک‌ستونهٔ تمیز همهٔ اطلاعات را حفظ می‌کند. ستون‌ها و تصاویر جایی هستند که اطلاعات از دست می‌روند."
-
-#: src/features/settings/pages/profile.tsx
-msgid "A confirmation link has been sent to your current email address. Please check your inbox to confirm the change."
-msgstr "یک لینک تأیید به آدرس ایمیل فعلی شما ارسال شده است. لطفاً برای تأیید تغییر، صندوق ورودی خود را بررسی کنید."
 
 #: src/features/ats-checker/messages.ts
 msgid "A date is in the future."
@@ -180,10 +143,6 @@ msgstr "یک بازهٔ تاریخ به شکلی نوشته شده که بیشت
 #: src/features/ats-checker/messages.ts
 msgid "A font is referenced but not embedded."
 msgstr "یک فونت ارجاع داده شده اما جاسازی نشده است."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "یک رزومه‌ساز رایگان و متن‌باز که فرایند ایجاد، به‌روزرسانی و اشتراک‌گذاری رزومه شما را ساده می‌کند."
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "A friendly nudge for the recruiter"
@@ -210,10 +169,6 @@ msgstr "لینکی به رزومه شما در کلیپ‌بورد کپی شد."
 msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
 msgstr "در طول سال‌ها افراد زیادی برایم نوشته‌اند تا تجربه‌های خود با cloudcoffee و اینکه چطور به آن‌ها کمک کرده را به اشتراک بگذارند و من هرگز از خواندنشان خسته نمی‌شوم. اگر داستانی برای گفتن دارید، با ارسال ایمیل به <0>{email}</0> به من اطلاع دهید."
 
-#: src/features/settings/pages/profile.tsx
-msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
-msgstr "یک لینک تأیید جدید به آدرس ایمیل شما ارسال شده است. لطفاً برای تأیید حساب خود، صندوق ورودی‌تان را بررسی کنید."
-
 #: src/features/ats-checker/messages.ts
 msgid "A numeric date reads differently in different countries."
 msgstr "یک تاریخ عددی در کشورهای مختلف متفاوت خوانده می‌شود."
@@ -225,10 +180,6 @@ msgstr "یک صفحه چرخانده شده است."
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "یک پروژه عاشقانه توسط <0>Amruth Pillai</0>."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
-msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -245,14 +196,6 @@ msgstr "یک آدرس اینترنتی بدون https:// نوشته شده اس�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "A4"
 msgstr "A4"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Absolutely! You can export your resume to PDF with a single click. The exported PDF maintains all your formatting and styling perfectly."
-msgstr "قطعاً! می‌توانید رزومه خود را تنها با یک کلیک به PDF خروجی بگیرید. فایل PDF خروجی تمام قالب‌بندی و سبک‌دهی شما را به‌طور کامل حفظ می‌کند."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Access your resumes and data programmatically using the API."
-msgstr "به رزومه‌ها و داده‌های خود از طریق API و به‌صورت برنامه‌نویسی دسترسی داشته باشید."
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -486,6 +429,10 @@ msgstr ""
 msgid "AI provider management is unavailable. Please try again."
 msgstr "مدیریت ارائه دهنده هوش مصنوعی در دسترس نیست. لطفاً دوباره امتحان کنید."
 
+#: src/features/settings/pages/account.tsx
+msgid "AI providers"
+msgstr ""
+
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI Providers"
 msgstr "ارائه دهندگان هوش مصنوعی"
@@ -514,13 +461,13 @@ msgstr "تقریباً هیچ‌کدام از موارد فهرست‌وار ش�
 msgid "Already covered"
 msgstr "قبلاً پوشش داده شده"
 
-#: src/features/auth/pages/register.tsx
-msgid "Already have an account? <0/>"
-msgstr "قبلاً حساب دارید؟ <0/>"
-
 #: src/libs/locale.ts
 msgid "Amharic"
 msgstr "امهری"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "An editorial career collage with a data crystal and a flying laptop"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "An embedded font could not be read."
@@ -534,10 +481,6 @@ msgstr "یک خطای غیرمنتظره مانع از بارگیری این ص�
 #: src/dialogs/resume/import.tsx
 msgid "An unknown error occurred while importing your resume."
 msgstr "هنگام وارد کردن رزومه شما یک خطای ناشناخته رخ داد."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "And many more..."
-msgstr "و بسیاری موارد دیگر..."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -559,31 +502,21 @@ msgstr "هر کسی که URL عمومی این رزومه را داشته باش
 msgid "Anyone with the link can view and download the resume."
 msgstr "هر کسی که لینک را داشته باشد می‌تواند رزومه را مشاهده و دانلود کند."
 
-#: src/routes/_home/-sections/features.tsx
-msgid "API Access"
-msgstr "دسترسی از طریق API"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API Key"
 msgstr "کلید API"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/api-keys.tsx
-msgid "API Keys"
-msgstr "کلیدهای API"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API keys are encrypted on the server and never shown again after saving."
 msgstr "کلیدهای API روی سرور رمزگذاری می‌شوند و پس از ذخیره، دیگر هرگز نمایش داده نمی‌شوند."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "API Reference"
-msgstr "راهنمای API"
-
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "App"
 msgstr "اپ"
+
+#: src/features/settings/pages/account.tsx
+msgid "Appearance & language"
+msgstr ""
 
 #: src/features/applications/components/application-actions-menu.tsx
 msgid "Application actions"
@@ -601,10 +534,6 @@ msgstr "دستیار درخواست‌ها"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Application deleted."
 msgstr "درخواست حذف شد."
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Application Statistics"
-msgstr "آمار اپلیکیشن"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Application updated."
@@ -651,10 +580,6 @@ msgstr "بایگانی‌شده"
 msgid "Are you sure you want to close this dialog?"
 msgstr "آیا مطمئن هستید که می‌خواهید این گفتگو را ببندید؟"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Are you sure you want to delete this API key?"
-msgstr "آیا از حذف این کلید API مطمئن هستید؟"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Are you sure you want to delete this custom section?"
 msgstr "آیا مطمئن هستید که می‌خواهید این بخش سفارشی را حذف کنید؟"
@@ -693,6 +618,14 @@ msgstr "حوزهٔ تحصیل"
 msgid "Artificial Intelligence"
 msgstr "هوش مصنوعی"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Ask for your strongest leadership example, projects using a certain skill, measurable outcomes, interview stories, or evidence that matches a role."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ask your career"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "نسبت تصویر"
@@ -705,7 +638,10 @@ msgstr "Atlas Cloud از cloudcoffee به عنوان حامی پروژه پشت�
 msgid "ATS Check"
 msgstr "بررسی ATS"
 
-#: src/routes/_home/-sections/features.tsx
+#: src/routes/_home/-sections/footer.tsx
+msgid "ATS checker"
+msgstr ""
+
 #: src/routes/_home/ats-checker.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "ATS Checker"
@@ -720,19 +656,9 @@ msgstr "پیوست کردن نامهٔ پوششی (PDF)"
 msgid "Attach a resume file (PDF)"
 msgstr "پیوست کردن فایل رزومه (PDF)"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/authentication/index.tsx
-msgid "Authentication"
-msgstr "احراز هویت"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Auto-fill failed."
 msgstr "تکمیل خودکار ناموفق بود."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Available in multiple languages. If you would like to contribute, check out Crowdin."
-msgstr "در چندین زبان در دسترس است. اگر مایل به مشارکت هستید، به Crowdin سر بزنید."
 
 #: src/features/ats-checker/messages.ts
 msgid "Avoid heavy letter-spacing effects, then re-export."
@@ -753,15 +679,10 @@ msgstr "جوایز"
 msgid "Azerbaijani"
 msgstr "آذربایجانی"
 
-#. Action returning a signed-in user to the page where they manage linked providers
+#. Action returning a signed-in user to account settings
 #: src/features/auth/pages/error.tsx
-msgid "Back to authentication settings"
-msgstr "بازگشت به تنظیمات احراز هویت"
-
-#. Secondary navigation button on 2FA verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Back to Login"
-msgstr "بازگشت به ورود"
+msgid "Back to account settings"
+msgstr ""
 
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
@@ -772,10 +693,6 @@ msgstr "بازگشت به ورود"
 msgid "Background Color"
 msgstr "رنگ پس‌زمینه"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Backup codes copied to clipboard."
-msgstr "کدهای پشتیبان در کلیپ‌بورد کپی شدند."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Base URL"
 msgstr "آدرس اینترنتی پایه"
@@ -783,10 +700,6 @@ msgstr "آدرس اینترنتی پایه"
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "مبانی"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Beautiful templates to choose from, with more on the way."
-msgstr "قالب‌های زیبایی برای انتخاب، با موارد بیشتری که در راه هستند."
 
 #: src/libs/locale.ts
 msgid "Bengali"
@@ -825,8 +738,17 @@ msgstr "عرض حاشیه"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "رزومه را به بخش‌های معمول تقسیم کنید تا قابل بخش‌بندی باشد."
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Bring career evidence together from the products and services where your work already lives."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Build one living knowledge base from your projects, outcomes, and tools—then turn it into the right story when opportunity arrives."
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Build your base"
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Build your career base"
 msgstr ""
 
 #: src/features/resume/public/public-resume.tsx
@@ -859,23 +781,19 @@ msgstr "فهرست نشانه‌دار"
 msgid "By the communit of th, for the community."
 msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "By the community, for the community."
-msgstr "توسط جامعه، برای جامعه."
+#: src/routes/_home/-sections/faq.tsx
+msgid "Can I export and share the result?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Can I export my resume to PDF?"
-msgstr "آیا می‌توانم رزومه‌ام را به PDF خروجی بگیرم؟"
+msgid "Can I keep more than one resume?"
+msgstr ""
 
-#. API key deletion confirmation dialog cancel action in settings
 #. Account deletion confirmation dialog cancel action in account settings
 #. Confirmation dialog button label to abort deleting a custom section in resume builder
 #. Confirmation dialog button label to abort deleting a section item in resume builder
 #. Confirmation dialog button label to abort resetting a resume section
 #. Profile settings form action to discard unsaved edits
-#. Secondary action button to close two-factor setup dialog
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/dialogs/resume/sections/custom.tsx
 #: src/dialogs/resume/sections/section-item-dialog.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -883,7 +801,6 @@ msgstr "آیا می‌توانم رزومه‌ام را به PDF خروجی بگ
 #: src/features/applications/components/import-applications-sheet.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
 #: src/features/settings/pages/account.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
@@ -894,8 +811,20 @@ msgstr "آیا می‌توانم رزومه‌ام را به PDF خروجی بگ
 msgid "Cancel"
 msgstr "انصراف"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Capture every win"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Career base"
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgid "Career intelligence at the"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Career questions, answered."
 msgstr ""
 
 #: src/libs/locale.ts
@@ -920,41 +849,21 @@ msgstr "مغزها"
 msgid "Certifications"
 msgstr "گواهینامه‌ها"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Change language"
-msgstr "تغییر زبان"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change language to…"
-msgstr "زبان را به… تغییر دهید"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change theme to…"
-msgstr "تغییر تم به…"
-
 #: src/dialogs/resume/index.tsx
 msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "نظرتان عوض شده؟ نام رزومه خود را به چیزی توصیفی‌تر تغییر دهید."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Changelog"
-msgstr "آخرین تغییرات"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
 msgstr "دوباره بررسی کن"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Check ATS readability"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Check the exported file contains everything you expect, and that all of it is selectable text."
 msgstr "بررسی کنید فایل خروجی همهٔ چیزی را که انتظار دارید داشته باشد و همهٔ آن متن قابل انتخاب باشد."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Check your email for a link to reset your password."
-msgstr "ایمیل خود را برای لینکی جهت تنظیم مجدد گذرواژه بررسی کنید."
-
-#: src/features/auth/pages/register.tsx
-msgid "Check your email for a link to verify your account."
-msgstr "ایمیل خود را برای لینکی جهت تأیید حسابتان بررسی کنید."
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Checked in your browser. The file is never uploaded."
@@ -971,10 +880,6 @@ msgstr "بررسی پیش‌نویس"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Checking…"
 msgstr "در حال بررسی…"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Checkout redesign · 18% more conversions"
-msgstr ""
 
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
@@ -996,6 +901,10 @@ msgstr "یک پیش‌تنظیم یا سایهٔ سفارشی را انتخاب 
 
 #: src/dialogs/resume/template/gallery.tsx
 msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
+
+#: src/features/settings/pages/account.tsx
+msgid "Choose how cloudcoffee looks and which language it uses."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1034,10 +943,6 @@ msgstr "cloudcoffee - رفتن به صفحهٔ اصلی"
 msgid "cloudcoffee (JSON)"
 msgstr "رزومهٔ واکنشی (JSON)"
 
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "cloudcoffee به رشد خود ادامه می‌دهد و این به لطف جامعهٔ پویا و پرانرژی آن است. این پروژه پیشرفت خود را مدیون افراد بی‌شماری است که زمان و مهارت‌های خود را برای بهتر شدن آن اختصاص داده‌اند. ما از برنامه‌نویسانی که ویژگی‌های آن را در GitHub بهبود داده‌اند، زبان‌شناس‌هایی که با ترجمه‌های خود در Crowdin آن را برای مخاطبان وسیع‌تری در دسترس کرده‌اند و افرادی که برای ادامهٔ توسعهٔ آن کمک مالی کرده‌اند، قدردانی می‌کنیم."
-
 #: src/routes/_home/-sections/donate.tsx
 msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
 msgstr "cloudcoffee یک پروژهٔ رایگان و متن‌باز است که با عشق ساخته شده و توسط من و جامعه‌ای از مشارکت‌کنندگان نگه‌داری می‌شود. کمک‌های مالی شما به روشن ماندن چراغ‌ها و جاری ماندن کد کمک می‌کند."
@@ -1046,16 +951,13 @@ msgstr "cloudcoffee یک پروژهٔ رایگان و متن‌باز است ک�
 msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
 msgstr "رزومه واکنشی رایگان و متن‌باز است. اگر به شما کمک کرده است، لطفاً کمک مالی را در نظر بگیرید."
 
-#: src/routes/_home/-sections/faq.tsx
-msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "cloudcoffee متن‌باز، حریم‌خصوصی‌محور و کاملاً رایگان است. برخلاف سایر رزومه‌سازها، هیچ تبلیغی نشان نمی‌دهد، داده‌های شما را رهگیری نمی‌کند و قابلیت‌هایتان را پشت دیوار پرداخت محدود نمی‌کند."
-
 #: src/routes/_home/-sections/sponsors.tsx
 msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
 msgstr "رزومه واکنشی رایگان، متن‌باز و مستقل باقی می‌ماند زیرا شرکت‌ها تصمیم می‌گیرند از کار پشت آن حمایت کنند. حمایت مالی آنها به تأمین مالی میزبانی، نگهداری و توسعه مداوم جامعه کمک می‌کند."
 
 #. App version label in footer; includes semantic version variable
 #: src/components/ui/copyright.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
 msgstr "رزومه واکنشی نسخه<0>{__APP_VERSION__}</0>"
 
@@ -1083,10 +985,6 @@ msgstr "پالت فرمان"
 msgid "Command Palette - {currentPage}"
 msgstr "پالت فرمان {currentPage}"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Community"
-msgstr "انجمن"
-
 #: src/dialogs/resume/sections/experience.tsx
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Company"
@@ -1100,31 +998,36 @@ msgstr "شرکت / نقش"
 msgid "Company A–Z"
 msgstr "شرکت A–Z"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Completely free, forever, no hidden costs."
-msgstr "کاملاً رایگان، برای همیشه، بدون هزینهٔ پنهان."
-
 #: src/features/ats-checker/messages.ts
 msgid "Compress or remove large images to keep uploads quick."
 msgstr "برای سریع نگه داشتن آپلود، تصاویر بزرگ را فشرده یا حذف کنید."
 
+#: src/features/settings/pages/account.tsx
+msgid "Configure provider credentials used by resume imports and AI review."
+msgstr ""
+
 #. Account deletion confirmation dialog confirm action in account settings
-#. Create API key dialog acknowledgment action after copying
-#: src/dialogs/api-key/create.tsx
 #: src/features/settings/pages/account.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Confirm"
 msgstr "تأیید"
 
-#. Authentication settings action to link a social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Connect"
-msgstr "اتصال"
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect claims to outcomes, artifacts, and context so every resume bullet stays specific and credible."
+msgstr ""
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Connect the work you've already done, keep every result searchable, and shape the right story for the next role."
+msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Connect your own AI provider to get a review of the writing. The checks above need no provider and no account."
 msgstr "ارائه‌دهندهٔ هوش مصنوعی خودتان را متصل کنید تا بررسی نوشتار انجام شود. بررسی‌های بالا به هیچ ارائه‌دهنده یا حسابی نیاز ندارند."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect your tools"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connected"
@@ -1141,6 +1044,10 @@ msgstr "اتصال ناموفق بود."
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connection verified — provider is ready to use."
 msgstr "اتصال تأیید شد - ارائه دهنده آماده استفاده است."
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Connections bring useful work context into one searchable place, so you spend less time reconstructing your history from scattered products and documents."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Contact details"
@@ -1159,14 +1066,6 @@ msgstr "محتوا"
 msgid "Content is laid out in a grid."
 msgstr "محتوا به‌صورت شبکه‌ای چیده شده است."
 
-#. Button label to continue to dashboard after successful registration
-#. Final action button after saving backup codes
-#. Primary action button to proceed to next step in two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Continue"
-msgstr "ادامه"
-
 #: src/routes/dashboard/resumes/-components/cards/import-card.tsx
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Continue where you left off"
@@ -1175,6 +1074,15 @@ msgstr "ادامه از جایی که رها کرده بودید"
 #: src/dialogs/resume/import.tsx
 msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
 msgstr "با وارد کردن یک رزومهٔ موجود که با cloudcoffee یا هر رزومه‌ساز دیگری ایجاد کرده‌اید، از جایی که رها کرده بودید ادامه دهید. قالب‌های پشتیبانی‌شده شامل PDF، Microsoft Word و همچنین فایل‌های JSON از cloudcoffee هستند."
+
+#. Google OAuth sign-in button label
+#: src/features/auth/components/social-auth.tsx
+msgid "Continue with Google"
+msgstr ""
+
+#: src/features/auth/pages/login.tsx
+msgid "Continue with Google to access your account."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
@@ -1188,24 +1096,9 @@ msgstr "پیش‌نویس شیوه‌نامه تبدیل‌شده"
 msgid "Copied to clipboard."
 msgstr "در کلیپ‌بورد کپی شد."
 
-#. Action button to copy two-factor backup codes to clipboard
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Copy"
 msgstr "کپی"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy and store these backup codes in case you lose your device."
-msgstr "برای زمانی که دستگاه خود را از دست می‌دهید، این کدهای پشتیبان را کپی کرده و نگه‌داری کنید."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy Backup Codes"
-msgstr "کپی کردن کدهای پشتیبان"
-
-#. Accessible label for the button that copies the two-factor secret key
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy secret"
-msgstr "کپی کردن راز"
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Copy stylesheet"
@@ -1218,10 +1111,6 @@ msgstr "کل شرح شغل را از آگهی کپی کنید و در پایین
 #: src/features/ats-checker/messages.ts
 msgid "Copy the text out of the exported file and read it through; fix anything that arrives in the wrong place."
 msgstr "متن را از فایل خروجی کپی کنید و آن را کامل بخوانید؛ هر چیزی که در جای نادرست قرار گرفته را اصلاح کنید."
-
-#: src/dialogs/api-key/create.tsx
-msgid "Copy this secret key and use it in your applications to access your data."
-msgstr "این کلید مخفی را کپی کنید و برای دسترسی به داده‌های خود در اپلیکیشن‌هایتان از آن استفاده کنید."
 
 #: src/routes/builder/$resumeId/-components/dock.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -1313,8 +1202,6 @@ msgstr "نامه پوششی"
 msgid "Cover letter draft"
 msgstr "پیش‌نویس نامهٔ پوششی"
 
-#. Create API key dialog submit action
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1338,15 +1225,6 @@ msgstr "ایجاد"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Create a copy tuned to this job"
 msgstr "ایجاد نسخه‌ای متناسب با این شغل"
-
-#: src/features/auth/pages/register.tsx
-msgid "Create a new account"
-msgstr "ایجاد یک حساب جدید"
-
-#: src/dialogs/api-key/create.tsx
-#: src/features/settings/pages/api-keys.tsx
-msgid "Create a new API key"
-msgstr "ایجاد یک کلید API جدید"
 
 #: src/dialogs/resume/sections/award.tsx
 msgid "Create a new award"
@@ -1419,15 +1297,6 @@ msgstr "ایجاد سابقه داوطلبانه جدید"
 msgid "Create a Sample Resume"
 msgstr "ایجاد یک رزومه نمونه"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Create as many resumes as you want, without limits."
-msgstr "هر تعداد رزومه که می‌خواهید بدون محدودیت ایجاد کنید."
-
-#. Call-to-action link from login page to account registration page
-#: src/features/auth/pages/login.tsx
-msgid "Create one now"
-msgstr "همین حالا یکی بسازید"
-
 #. Accessible label for create-resume split button group
 #: src/dialogs/resume/index.tsx
 msgid "Create resume with options"
@@ -1442,10 +1311,6 @@ msgstr "ایجاد شده"
 msgid "Created \"{0}\" and linked it to this application."
 msgstr "\"{0}\" ایجاد و به این درخواست پیوند داده شد."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Creating your API key..."
-msgstr "در حال ایجاد کلید API شما..."
-
 #: src/dialogs/resume/index.tsx
 msgid "Creating your resume..."
 msgstr "در حال ایجاد رزومه شما..."
@@ -1458,10 +1323,6 @@ msgstr "برش تصویر"
 msgid "CSV data"
 msgstr "داده‌های CSV"
 
-#: src/dialogs/auth/change-password.tsx
-msgid "Current Password"
-msgstr "گذرواژهٔ فعلی"
-
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Current stage"
 msgstr "مرحله فعلی"
@@ -1469,11 +1330,6 @@ msgstr "مرحله فعلی"
 #: src/components/input/color-picker.tsx
 msgid "Custom"
 msgstr "سفارشی"
-
-#. Authentication provider display name in account settings
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Custom OAuth"
-msgstr "OAuth سفارشی"
 
 #: src/libs/resume/section.tsx
 msgid "Custom Sections"
@@ -1501,13 +1357,14 @@ msgstr "تاریک"
 msgid "Dark theme"
 msgstr "تم تیره"
 
+#: src/routes/_home/-sections/footer.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Dashboard"
 msgstr "داشبورد"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Data Security"
-msgstr "امنیت داده"
+#: src/features/settings/pages/account.tsx
+msgid "Data & account"
+msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1540,17 +1397,13 @@ msgstr "جستجوی عمیق"
 msgid "Degree"
 msgstr "مدرک"
 
-#. API key deletion confirmation dialog confirm action in settings
 #. Destructive confirmation button label when deleting a custom section in resume builder
 #. Destructive confirmation button label when deleting a section item in resume builder
-#. Passkey row action to remove the selected passkey
 #. Resume card context menu destructive action to remove a resume
 #. Resume card dropdown destructive action to remove a resume
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1602,10 +1455,6 @@ msgstr "{0} درخواست حذف شد."
 msgid "Deleting your account..."
 msgstr "در حال حذف حساب کاربری شما..."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Deleting your API key..."
-msgstr "در حال حذف کلید API شما..."
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
@@ -1640,34 +1489,10 @@ msgstr "طراحی"
 msgid "Details from the provider:"
 msgstr "جزئیات از ارائه‌دهنده:"
 
-#. Destructive action button to turn off two-factor authentication
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Disable 2FA"
-msgstr "غیرفعالسازی ورود دو مرحله‌ای"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disable Two-Factor Authentication"
-msgstr "غیرفعال کردن احراز هویت دو مرحله‌ای"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disabling two-factor authentication..."
-msgstr "در حال غیرفعال کردن احراز هویت دو مرحله‌ای..."
-
-#. Authentication settings action to unlink a connected social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Disconnect"
-msgstr "قطع اتصال"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Discord"
-msgstr "دیسکورد"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Dismiss"
 msgstr "رد کردن"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Documentation"
 msgstr "مستندات"
@@ -1675,10 +1500,6 @@ msgstr "مستندات"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Documents sent"
 msgstr "اسناد ارسال‌شده"
-
-#: src/features/auth/pages/login.tsx
-msgid "Don't have an account? <0/>"
-msgstr "حساب ندارید؟ <0/>"
 
 #: src/components/ui/donation-toast.tsx
 msgid "Donate"
@@ -1688,9 +1509,7 @@ msgstr "اهدا کنید"
 msgid "Donate to cloudcoffee"
 msgstr "به cloudcoffee دونیت کنید"
 
-#. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/resume/export/download-dialog.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1841,35 +1660,21 @@ msgstr "تحصیلات"
 msgid "Email"
 msgstr "ایمیل"
 
-#. Label for email input on forgot-password form
-#. Label for email input on registration form
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Email Address"
 msgstr "آدرس ایمیل"
 
 #: src/features/settings/pages/profile.tsx
-msgid "Email delivery isn't configured on this instance, so verification is disabled."
-msgstr "ارسال ایمیل در این مورد پیکربندی نشده است، بنابراین تأیید غیرفعال است."
+msgid "Email address is managed by Google."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Embed all fonts when exporting, so characters map the way you intended."
 msgstr "هنگام خروجی گرفتن همهٔ فونت‌ها را جاسازی کنید تا نویسه‌ها همان‌طور که می‌خواهید نمایش داده شوند."
 
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Enable 2FA"
-msgstr "فعالسازی ورود دو مرحله‌ای"
-
 #: src/routes/builder/$resumeId/-sidebar/left/index.tsx
 msgid "Enable editing"
 msgstr "فعال کردن ویرایش"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enable Two-Factor Authentication"
-msgstr "فعالسازی احراز هویت دو مرحله‌ای"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Enabled"
@@ -1879,10 +1684,6 @@ msgstr "فعال"
 msgid "Enabling password protection..."
 msgstr "در حال فعال‌کردن حفاظت با گذرواژه..."
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enabling two-factor authentication…"
-msgstr "فعال کردن احراز هویت دو مرحله‌ای…"
-
 #: src/libs/locale.ts
 msgid "English"
 msgstr "انگلیسی"
@@ -1891,37 +1692,9 @@ msgstr "انگلیسی"
 msgid "English (United Kingdom)"
 msgstr "انگلیسی (بریتانیا)"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Enhance the security of your account with additional layers of protection."
-msgstr "امنیت حساب خود را با لایه‌های اضافی حفاظت افزایش دهید."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Enter a name for your passkey."
-msgstr "یک نام برای کلید عبور خود وارد کنید."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter one of your saved backup codes to access your account"
-msgstr "یکی از کدهای پشتیبان ذخیره‌شدهٔ خود را برای دسترسی به حسابتان وارد کنید"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Enter the URL to link to"
 msgstr "URLی را که می‌خواهید به آن لینک دهید وارد کنید"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter the verification code from your authenticator app"
-msgstr "کد تأیید را از اپلیکیشن احراز هویت خود وارد کنید"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Enter your current password and a new password to update your account."
-msgstr "برای به‌روزرسانی حساب خود، گذرواژه فعلی و یک گذرواژهٔ جدید وارد کنید."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enter your password to confirm setting up two-factor authentication. When enabled, you'll need to enter a code from your authenticator app every time you log in."
-msgstr "برای تأیید راه‌اندازی احراز هویت دو مرحله‌ای، گذرواژهٔ خود را وارد کنید. وقتی فعال شد، هر بار که وارد می‌شوید باید یک کد از اپلیکیشن احراز هویت خود وارد کنید."
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Enter your password to disable two-factor authentication. Your account will be less secure without 2FA enabled."
-msgstr "برای غیرفعال کردن احراز هویت دو مرحله‌ای گذرواژهٔ خود را وارد کنید. بدون فعال بودن 2FA حساب شما امنیت کمتری خواهد داشت."
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Error"
@@ -1934,10 +1707,6 @@ msgstr "همهٔ بررسی‌ها موفق بودند. هیچ‌چیز در ا�
 #: src/routes/_home/-sections/donate.tsx
 msgid "Every contribution, big or small, makes a huge difference to the project.<0/>Thank you for your support!"
 msgstr "هر مشارکت، چه بزرگ چه کوچک، تفاوت بزرگی در این پروژه ایجاد می‌کند.<0/>از حمایت شما سپاسگزاریم!"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
-msgstr "همه‌چیزی که برای ایجاد، شخصی‌سازی و اشتراک‌گذاری رزومه‌های حرفه‌ای نیاز دارید. با تمرکز بر حریم خصوصی ساخته شده، با متن‌باز قدرت گرفته و برای همیشه کاملاً رایگان است."
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Exit focus mode"
@@ -1953,22 +1722,9 @@ msgstr "خروج از حالت تمام‌صفحه"
 msgid "Experience"
 msgstr "تجربه"
 
-#: src/dialogs/api-key/create.tsx
-msgid "Expires in"
-msgstr "منقضی می‌شود در"
-
-#. placeholder {0}: key.expiresAt.toLocaleDateString()
-#: src/features/settings/pages/api-keys.tsx
-msgid "Expires on {0}"
-msgstr "در {0} منقضی می‌شود"
-
 #: src/routes/_home/-sections/templates.tsx
 msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
 msgstr "مجموعه‌ای متنوع از قالب‌ها را مرور کنید که هر کدام برای سبک‌ها، مشاغل و شخصیت‌های متفاوت طراحی شده‌اند. cloudcoffee در حال حاضر ۱۲ قالب ارائه می‌کند و موارد بیشتری در راه است."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "مستندات API را بررسی کنید تا بیاموزید چگونه cloudcoffee را با اپلیکیشن‌های خود ادغام کنید. در آنجا نقاط پایانی، نمونه درخواست‌ها و روش‌های احراز هویت به‌تفصیل آمده است."
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -1994,91 +1750,31 @@ msgstr "خروجی PNG"
 msgid "Export the resume as a text PDF rather than as an image or a scan."
 msgstr "رزومه را به‌صورت PDF متنی خروجی بگیرید، نه به‌صورت تصویر یا اسکن."
 
+#: src/features/settings/pages/account.tsx
+msgid "Export your data or permanently remove your account."
+msgstr ""
+
 #: src/features/resume/export/download-dialog.tsx
 msgid "Export your resume or cover letter in the format you need."
 msgstr "رزومه یا نامهٔ پوششی خود را در قالب موردنیاز خروجی بگیرید."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Export your resume to PDF instantly, without any waiting or delays."
-msgstr "رزومه خود را فوراً و بدون هیچ گونه انتظار یا تأخیری به PDF صادر کنید."
 
 #: src/features/applications/components/insights-view.tsx
 msgid "Exported pipeline-flow.png"
 msgstr "pipeline-flow.png خروجی گرفته شد"
 
-#. Fallback toast when creating an API key fails
-#: src/dialogs/api-key/create.tsx
-msgid "Failed to create API key. Please try again."
-msgstr "ایجاد کلید API ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when account registration fails without a server error message
-#: src/features/auth/pages/register.tsx
-msgid "Failed to create your account. Please try again."
-msgstr "ایجاد حساب کاربری شما ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when deleting a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to delete passkey. Please try again."
-msgstr "حذف passkey ناموفق بود. لطفاً دوباره تلاش کنید."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to delete provider."
 msgstr "حذف ارائه دهنده ناموفق بود."
-
-#. Fallback toast when deleting an API key fails
-#: src/features/settings/pages/api-keys.tsx
-msgid "Failed to delete the API key. Please try again."
-msgstr "حذف کلید API ناموفق بود. لطفاً دوباره تلاش کنید."
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to delete your account. Please try again."
 msgstr "حذف حساب کاربری شما ناموفق بود. لطفاً دوباره تلاش کنید."
 
-#. Fallback toast when disabling two-factor authentication fails
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Failed to disable two-factor authentication. Please try again."
-msgstr "غیرفعال‌سازی احراز هویت دو عاملی ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when enabling two-factor authentication fails
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to enable two-factor authentication. Please try again."
-msgstr "فعال‌سازی احراز هویت دو مرحله‌ای ناموفق بود. لطفاً دوباره تلاش کنید."
-
 #. Fallback toast when data export fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to export your data. Please try again."
 msgstr "صادر کردن داده‌های شما ناموفق بود. لطفاً دوباره امتحان کنید."
-
-#. Fallback toast when linking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to link provider. Please try again."
-msgstr "اتصال به ارائه‌دهنده ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when passkey registration fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to register passkey. Please try again."
-msgstr "ثبت گذرواژه ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when renaming a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to rename passkey. Please try again."
-msgstr "نام‌گذاری مجدد passkey ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when requesting email change confirmation fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to request email change. Please try again."
-msgstr "درخواست تغییر ایمیل ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when resending account verification email fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to resend verification email. Please try again."
-msgstr "ارسال مجدد ایمیل تأیید ناموفق بود. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when resetting password fails and no backend message is available
-#: src/features/auth/pages/reset-password.tsx
-msgid "Failed to reset your password. Please try again."
-msgstr "بازنشانی رمز عبور شما ناموفق بود. لطفاً دوباره تلاش کنید."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Failed to review this resume."
@@ -2088,19 +1784,12 @@ msgstr "بررسی این رزومه ناموفق بود."
 msgid "Failed to save AI provider."
 msgstr "ذخیره ارائه دهنده هوش مصنوعی ناموفق بود."
 
-#. Fallback toast when requesting password reset email fails without backend message
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Failed to send password reset email. Please try again."
-msgstr "ارسال ایمیل بازیابی رمز عبور ناموفق بود. لطفاً دوباره تلاش کنید."
+#: src/features/settings/profile/index.tsx
+msgid "Failed to save your application profile. Please try again."
+msgstr ""
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to setup two-factor authentication."
-msgstr "راه‌اندازی احراز هویت دو مرحله‌ای ناموفق بود."
-
-#. Fallback toast when sign-in fails and no server error message is available
-#. Fallback toast when sign-in fails without an error message
+#. Fallback toast when Google sign-in fails without an error message
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Failed to sign in. Please try again."
 msgstr "ورود ناموفق بود. لطفاً دوباره تلاش کنید."
 
@@ -2109,19 +1798,9 @@ msgstr "ورود ناموفق بود. لطفاً دوباره تلاش کنید.
 msgid "Failed to sign out. Please try again."
 msgstr "خروج ناموفق بود. لطفاً دوباره تلاش کنید."
 
-#. Fallback toast when unlinking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to unlink provider. Please try again."
-msgstr "لینک ارائه‌دهنده را نمی‌توان قطع کرد. لطفاً دوباره تلاش کنید."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "به‌روزرسانی ارائه‌دهنده ناموفق بود."
-
-#. Fallback toast when changing account password fails
-#: src/dialogs/auth/change-password.tsx
-msgid "Failed to update your password. Please try again."
-msgstr "به‌روزرسانی رمز عبور شما ناموفق بود. لطفاً دوباره تلاش کنید."
 
 #. Fallback toast when updating profile details fails
 #: src/features/settings/pages/profile.tsx
@@ -2138,25 +1817,9 @@ msgstr "بارگذاری تصویر ناموفق بود. لطفاً دوباره
 msgid "Failed to verify the password. Please try again."
 msgstr "تأیید رمز عبور ناموفق بود. لطفاً دوباره تلاش کنید."
 
-#. Fallback toast when verifying a backup two-factor authentication code fails
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your backup code. Please try again."
-msgstr "کد پشتیبان شما تأیید نشد. لطفاً دوباره تلاش کنید."
-
-#. Fallback toast when verifying a two-factor authentication code fails
-#. Fallback toast when verifying two-factor setup code fails
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your code. Please try again."
-msgstr "تأیید کد شما ناموفق بود. لطفاً دوباره تلاش کنید."
-
 #: src/features/resume/stylesheet/status.tsx
 msgid "Fatal error"
 msgstr "خطای مهلک"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Features"
-msgstr "امکانات"
 
 #: src/dialogs/resume/import.tsx
 msgid "File"
@@ -2178,6 +1841,10 @@ msgstr "فیلتر بر اساس"
 msgid "Filter by tags"
 msgstr "فیلتر بر اساس برچسب‌ها"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Find the strongest example, result, or story without digging through old documents and scattered notes."
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Finnish"
 msgstr "فنلاندی"
@@ -2193,10 +1860,6 @@ msgstr "مناسب برای مشاهده"
 #: src/features/ats-checker/messages.ts
 msgid "Flatten the form so the text is part of the page."
 msgstr "فرم را مسطح کنید تا متن بخشی از صفحه شود."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Flexibility"
-msgstr "انعطاف‌پذیری"
 
 #: src/dialogs/resume/sections/language.tsx
 msgid "Fluency"
@@ -2234,26 +1897,9 @@ msgstr "ضخامت فونت"
 msgid "Font Weights"
 msgstr "وزن‌های فونت"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "For a secure and distraction-free experience."
-msgstr "برای تجربه‌ای امن و بدون حواس‌پرتی."
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/notes.tsx
 msgid "For example, information regarding which companies you sent this resume to or the links to the job descriptions can be noted down here."
 msgstr "برای مثال، اطلاعات مربوط به شرکت‌هایی که این رزومه را به آن‌ها ارسال کرده‌اید یا لینک‌هایی به توضیحات شغلی می‌توانند در اینجا یادداشت شوند."
-
-#: src/dialogs/api-key/create.tsx
-msgid "For security reasons, this key will only be displayed once."
-msgstr "به دلایل امنیتی، این کلید تنها یک‌بار نمایش داده می‌شود."
-
-#. Link label to password reset page from login form
-#: src/features/auth/pages/login.tsx
-msgid "Forgot Password?"
-msgstr "گذرواژه را فراموش کرده‌اید؟"
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Forgot your password?"
-msgstr "گذرواژهٔ خود را فراموش کرده‌اید؟"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgctxt "Page Format (A4, Letter, Free-form)"
@@ -2263,10 +1909,6 @@ msgstr "فرمت"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Format stylesheet"
 msgstr "قالب‌بندی برگه سبک"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Free"
-msgstr "رایگان"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Free-form"
@@ -2310,16 +1952,8 @@ msgstr "تولید یک نام تصادفی"
 msgid "German"
 msgstr "آلمانی"
 
-#. Authentication provider display name in account settings
-#. Brand name label for GitHub social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "GitHub"
-msgstr "گیت‌هاب"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "GitHub connected"
+#: src/routes/_home/-sections/features.tsx
+msgid "Give cloudcoffee a job description and build a focused resume around the evidence that matters most."
 msgstr ""
 
 #: src/features/ats-checker/messages.ts
@@ -2330,18 +1964,12 @@ msgstr "برای هر نقش یک بازه بنویسید، مانند \"Jan 202
 msgid "Give every role and qualification a date range."
 msgstr "برای هر نقش و مدرک تحصیلی یک بازهٔ تاریخ بنویسید."
 
-#. Secondary navigation button on backup-code verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Go Back"
-msgstr "بازگشت"
-
 #: src/components/layout/not-found-screen.tsx
 msgid "Go home"
 msgstr "برو به خانه"
 
 #: src/components/layout/error-screen.tsx
 #: src/components/layout/not-found-screen.tsx
-#: src/routes/_home/-sections/header.tsx
 msgid "Go to dashboard"
 msgstr "رفتن به داشبورد"
 
@@ -2354,16 +1982,13 @@ msgstr "به داشبورد رزومه‌ها بروید"
 msgid "Go to…"
 msgstr "به… بروید"
 
-#. Authentication provider display name in account settings
-#. Brand name label for Google social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Google"
-msgstr "گوگل"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Google Gemini"
 msgstr "گوگل جمینای"
+
+#: src/features/auth/components/social-auth.tsx
+msgid "Google sign-in is unavailable. Configure Google OAuth credentials and try again."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "gpt-4.1"
@@ -2431,14 +2056,6 @@ msgstr "عبری"
 msgid "Help me bring more experienced contributors on board, reducing the burden on a single maintainer and accelerating development."
 msgstr "کمک کنید مشارکت‌کنندگان باتجربه‌تری را به پروژه اضافه کنم، تا بار روی یک نگه‌دارندهٔ واحد کمتر و توسعه سریع‌تر شود."
 
-#: src/features/settings/pages/preferences.tsx
-msgid "Help translate the app to your language"
-msgstr "به ترجمهٔ اپ به زبان خود کمک کنید"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Here's your new API key"
-msgstr "این هم کلید API جدید شما"
-
 #: src/components/level/combobox.tsx
 #: src/dialogs/resume/sections/language.tsx
 #: src/dialogs/resume/sections/skill.tsx
@@ -2459,20 +2076,7 @@ msgstr "پنهان کردن آیکون‌ها"
 msgid "Hide Link Underline"
 msgstr "پنهان کردن زیرخط لینک"
 
-#. Accessible label for button that hides password in registration form
-#. Accessible label for button that hides password in reset-password form
 #. Accessible label for button that hides password on protected resume screen
-#. Accessible label for button that hides the password in login form
-#. Accessible label for toggle button that hides the visible current password
-#. Accessible label for toggle button that hides the visible new password
-#. Accessible label for toggle button that hides the visible password in two-factor disable dialog
-#. Accessible label for toggle button that hides the visible password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Hide password"
 msgstr "پنهان کردن رمز عبور"
@@ -2506,16 +2110,16 @@ msgid "Home"
 msgstr "خانه"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How do I share my resume?"
-msgstr "چگونه رزومه‌ام را به اشتراک بگذارم؟"
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "How do I use the API?"
-msgstr "چگونه از API استفاده کنم؟"
+msgid "How do connected tools help?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How is my data protected?"
-msgstr "داده‌های من چگونه محافظت می‌شوند؟"
+msgid "How does resume tailoring work?"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "How it works"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "https://gateway.example.com/v1"
@@ -2627,13 +2231,7 @@ msgstr "بینش‌ها"
 msgid "Inspecting page {0} of {1}…"
 msgstr "در حال بازرسی صفحهٔ {0} از {1}…"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Instant Generation"
-msgstr "تولید فوری"
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/integrations/route.tsx
 msgid "Integrations"
 msgstr "یکپارچه‌سازی‌ها"
 
@@ -2646,14 +2244,6 @@ msgstr "علاقه‌مندی‌ها"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Invalid AI provider configuration."
 msgstr "پیکربندی ارائه دهنده هوش مصنوعی نامعتبر است."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee available in multiple languages?"
-msgstr "بله، cloudcoffee در چندین زبان در دسترس است؟"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee really free?"
-msgstr "آیا cloudcoffee واقعاً رایگان است؟"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2701,29 +2291,14 @@ msgid "Jobs"
 msgstr "مشاغل"
 
 #. Example full name placeholder on profile settings form
-#. Example full name placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "John Doe"
 msgstr "جان دو"
 
 #. Example username placeholder on profile settings form
-#. Example username placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "john.doe"
 msgstr "جان.دو"
-
-#. Example email placeholder for login identifier field
-#. Example email placeholder on forgot-password form
-#. Example email placeholder on profile settings form
-#. Example email placeholder on registration form
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/settings/pages/profile.tsx
-msgid "john.doe@example.com"
-msgstr "john.doe@example.com"
 
 #. Import source option for standard JSON Resume format
 #: src/dialogs/resume/import.tsx
@@ -2745,6 +2320,10 @@ msgstr "فقط یک آدرس نگه دارید تا نیازی به حدس زد�
 #: src/features/ats-checker/messages.ts
 msgid "Keep it under 2.5 MB, usually by removing or shrinking images."
 msgstr "آن را زیر ۲.۵ مگابایت نگه دارید، معمولاً با حذف یا کوچک کردن تصاویر."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Keep proof attached"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Keep resume content as real text rather than as pictures of text."
@@ -2799,7 +2378,7 @@ msgstr "افقی"
 #. Menu item that opens language selection submenu
 #: src/dialogs/resume/sections/language.tsx
 #: src/features/command-palette/pages/preferences/language.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Language"
@@ -2927,14 +2506,6 @@ msgstr "یک رزومه را پیوند دهید و شرح شغل را جای‌
 msgid "Linked cloudcoffee"
 msgstr "cloudcoffee پیوند داده شد"
 
-#. Authentication provider display name in account settings
-#. Brand name label for LinkedIn social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "LinkedIn"
-msgstr "لینکدین"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
 msgstr "LinkedIn، معرفی…"
@@ -2942,10 +2513,6 @@ msgstr "LinkedIn، معرفی…"
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
 msgstr "پیوند دادن یک cloudcoffee امتیازدهی تطبیق با هوش مصنوعی و سفارشی‌سازی را فعال می‌کند."
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Linking your {providerName} account..."
-msgstr "در حال پیوند دادن حساب {providerName} شما..."
 
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
@@ -2966,6 +2533,10 @@ msgstr "در حال بارگذاری ارائه دهندگان هوش مصنوع
 #: src/features/command-palette/pages/resumes.tsx
 msgid "Loading applications…"
 msgstr "بارگیری برنامه‌ها…"
+
+#: src/features/settings/profile/index.tsx
+msgid "Loading profile..."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
@@ -3011,11 +2582,6 @@ msgstr "بخش‌های طولانی با حروف بزرگ نوشته شده‌
 msgid "Long-term Sustainability"
 msgstr "پایداری بلندمدت"
 
-#. Link to backup-code verification flow when authenticator app is unavailable
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Lost access to your authenticator?"
-msgstr "به اپلیکیشن احراز هویت خود دسترسی را از دست داده‌اید؟"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Low impact"
 msgstr "تأثیر کم"
@@ -3045,6 +2611,10 @@ msgstr "مالایی"
 msgid "Malayalam"
 msgstr "مالایالام"
 
+#: src/features/settings/pages/account.tsx
+msgid "Manage the identity and email used by your cloudcoffee account."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Many bullets start with the same phrase."
 msgstr "بسیاری از موارد فهرست‌وار با عبارت یکسانی شروع می‌شوند."
@@ -3068,10 +2638,6 @@ msgstr "علامت‌گذاری به‌عنوان ردشده"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Match scoring failed."
 msgstr "امتیازدهی تناسب ناموفق بود."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Matched to Senior Product Engineer"
-msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
@@ -3142,17 +2708,11 @@ msgstr "ایمیل و شماره تلفن خود را به بالای صفحهٔ
 msgid "Moved to"
 msgstr "منتقل شد به"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Multilingual"
-msgstr "چندزبانه"
-
 #. Placeholder text for custom link URL field in resume builder
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Must start with https://"
 msgstr "باید با https:// شروع شود."
 
-#. Label for full name input on registration form
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/interest.tsx
 #: src/dialogs/resume/sections/project.tsx
@@ -3160,7 +2720,6 @@ msgstr "باید با https:// شروع شود."
 #: src/dialogs/resume/sections/skill.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/ats-checker/parse-preview.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 #: src/routes/dashboard/resumes/index.tsx
@@ -3175,10 +2734,6 @@ msgstr "نپالی"
 msgid "Network"
 msgstr "شبکه"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Never expires"
-msgstr "هرگز منقضی نمی‌شود"
-
 #: src/features/auth/pages/error.tsx
 msgid "New account sign-ups are currently disabled on this server."
 msgstr "ثبت‌نام حساب‌های جدید در حال حاضر روی این سرور غیرفعال است."
@@ -3187,10 +2742,6 @@ msgstr "ثبت‌نام حساب‌های جدید در حال حاضر روی �
 #: src/features/command-palette/pages/resumes.tsx
 msgid "New Application"
 msgstr "برنامه جدید"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "New features are constantly being added and improved, so be sure to check back often."
-msgstr "ویژگی‌های جدیدی همواره اضافه و بهبود داده می‌شوند، پس حتماً هر از گاهی سر بزنید."
 
 #: src/components/input/rich-input.tsx
 msgid "New Line"
@@ -3201,12 +2752,6 @@ msgstr "خط جدید"
 msgid "New Page"
 msgstr "صفحهٔ جدید"
 
-#. Label for new password input on reset-password form
-#: src/dialogs/auth/change-password.tsx
-#: src/features/auth/pages/reset-password.tsx
-msgid "New Password"
-msgstr "گذرواژهٔ جدید"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "New Section"
 msgstr "بخش جدید"
@@ -3214,10 +2759,6 @@ msgstr "بخش جدید"
 #: src/features/applications/components/table-view.tsx
 msgid "New tag…"
 msgstr "برچسب جدید…"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "No Advertising, No Tracking"
-msgstr "بدون تبلیغات، بدون رهگیری"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3259,10 +2800,6 @@ msgstr "هیچ خطی شبیه ترکیب عنوان شغلی با نام کار
 #: src/routes/_home/ats-checker.tsx
 msgid "No one-page rule, and no treating a font or a career gap as a fault."
 msgstr "هیچ قاعده یک‌صفحه‌ای وجود ندارد و فونت یا وقفه شغلی ایراد شمرده نمی‌شود."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "No passkeys registered yet."
-msgstr "هنوز هیچ کلید عبوری ثبت نشده است."
 
 #: src/features/ats-checker/messages.ts
 msgid "No phone number was found."
@@ -3382,9 +2919,9 @@ msgstr "اودیایی"
 msgid "Ollama Cloud"
 msgstr "ابر اولاما"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "One-Click Sign-In"
-msgstr "ورود با یک کلیک"
+#: src/routes/_home/-sections/hero.tsx
+msgid "One knowledge base for every project, launch, and win. Connect your tools, ask anything, and tailor the right resume for any role."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Ongoing Maintenance"
@@ -3419,22 +2956,13 @@ msgstr "فقط صفحات اول بررسی شدند."
 msgid "Open"
 msgstr "باز کردن"
 
-#. Button label to open the user's default email app
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Open Email Client"
-msgstr "باز کردن کلاینت ایمیل"
+#: src/features/ats-checker/ai-review/ai-review-card.tsx
+msgid "Open Account Settings"
+msgstr ""
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "حالت فوکوس را باز کنید"
-
-#: src/features/ats-checker/ai-review/ai-review-card.tsx
-msgid "Open Integrations Settings"
-msgstr "تنظیمات یکپارچه‌سازی را باز کنید"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Open Source"
-msgstr "متن‌باز"
 
 #: src/features/ats-checker/messages.ts
 msgid "Open the exported file and confirm you can select and copy every part of it."
@@ -3458,7 +2986,6 @@ msgstr "روتر آزاد"
 
 #: src/features/resume/stylesheet/editor.tsx
 #: src/routes/_home/-sections/donate.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "در زبانهٔ جدید باز می‌شود"
 
@@ -3473,11 +3000,6 @@ msgstr "به‌صورت اختیاری، اینکه کدام عبارات از �
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Options for {title}"
 msgstr "گزینه‌های {title}"
-
-#: src/features/auth/components/social-auth.tsx
-msgctxt "Choose to authenticate with a social provider (Google, GitHub, etc.) instead of email and password"
-msgid "or continue with"
-msgstr "یا ادامه با"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Or upload a resume PDF"
@@ -3515,50 +3037,14 @@ msgstr "پاراگراف"
 msgid "Paragraph and heading style"
 msgstr "سبک پاراگراف و عنوان"
 
-#. Authentication provider display name in account settings
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Passkey"
-msgstr "کلید عبور"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey deleted successfully."
-msgstr "کلید عبور با موفقیت حذف شد."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey registered successfully."
-msgstr "کلمه عبور با موفقیت ثبت شد."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkeys"
-msgstr "کلیدهای عبور"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Passkeys & 2FA"
-msgstr "کلیدهای عبور و 2FA"
-
-#. Authentication provider display name in account settings
-#. Label for password input on login form
 #. Label for password input on protected resume access form
-#. Label for password input on registration form
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/resume-password.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/features/settings/authentication/components/password.tsx
 msgid "Password"
 msgstr "رمز عبور"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password cannot be empty."
 msgstr "گذرواژه نمی‌تواند خالی باشد."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Password Protection"
-msgstr "حفاظت با گذرواژه"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password protection has been disabled."
@@ -3609,9 +3095,9 @@ msgstr "سرگشتگی"
 msgid "Persian"
 msgstr "فارسی"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Personalize your resume with any colors, fonts or designs, and make it your own."
-msgstr "رزومه خود را با هر رنگ، فونت یا طراحی شخصی‌سازی کنید و آن را کاملاً منحصربه‌فرد خودتان بسازید."
+#: src/features/settings/pages/account.tsx
+msgid "Personal details"
+msgstr ""
 
 #: src/dialogs/resume/sections/reference.tsx
 #: src/features/ats-checker/parse-preview.tsx
@@ -3646,10 +3132,6 @@ msgstr "آن را از پنل چیدمان در یک صفحه قرار دهید�
 #: src/features/resume/export/download-dialog.tsx
 msgid "Plain text, ideal for AI tools and quick edits."
 msgstr "متن ساده، مناسب برای ابزارهای AI و ویرایش‌های سریع."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Please enter a new password for your account"
-msgstr "لطفاً یک گذرواژهٔ جدید برای حساب خود وارد کنید"
 
 #: src/features/auth/pages/resume-password.tsx
 msgid "Please enter the password shared with you by the owner of the resume to continue."
@@ -3702,9 +3184,6 @@ msgid "Prefer a single column, or keep the side column to short, self-contained 
 msgstr "تک‌ستون را ترجیح دهید، یا ستون کناری را به فهرست‌های کوتاه و مستقل محدود کنید."
 
 #: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/preferences/index.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "ترجیحات"
 
@@ -3745,13 +3224,16 @@ msgstr "رنگ اصلی"
 msgid "Print or export the form to a flat PDF before sending it."
 msgstr "پیش از ارسال، فرم را چاپ یا به یک PDF مسطح خروجی بگیرید."
 
+#: src/routes/_home/-sections/footer.tsx
+msgid "Product"
+msgstr ""
+
 #: src/dialogs/resume/sections/skill.tsx
 msgid "Proficiency"
 msgstr "مهارت"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/profile.tsx
 msgid "Profile"
 msgstr "پروفایل"
 
@@ -3765,23 +3247,19 @@ msgstr "پروفایل‌ها"
 msgid "Progress Bar"
 msgstr "نوار پیشرفت"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Project captured"
-msgstr ""
-
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
 msgid "Projects"
 msgstr "پروژه‌ها"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Projects, launches, hackathons, awards, feedback, metrics, lessons, links, and any other evidence that helps explain what you have accomplished."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Protect your resume from unauthorized access with a password"
 msgstr "از رزومه خود در برابر دسترسی غیرمجاز با گذرواژه محافظت کنید"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Protect your resume with a password, and let only people with the password view it."
-msgstr "از رزومه خود با یک گذرواژه محافظت کنید و فقط به افرادی که گذرواژه را دارند اجازهٔ مشاهده بدهید."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Provider"
@@ -3812,6 +3290,10 @@ msgstr "منتشرکننده"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "یک آدرس ایمیل ساده نزدیک بالای صفحهٔ اول قرار دهید. این چیزی است که بیشتر سیستم‌ها بر اساس آن شما را دسته‌بندی می‌کنند."
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Questions"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -3906,13 +3388,13 @@ msgstr "معرف‌ها"
 msgid "Referred by…, things to emphasize, etc."
 msgstr "معرفی‌شده توسط…، نکات قابل تأکید و غیره."
 
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Register New Device"
-msgstr "ثبت دستگاه جدید"
+#: src/routes/_home/-sections/features.tsx
+msgid "Refine, format, and export a professional resume without rebuilding your history from scratch."
+msgstr ""
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Remember your password? <0/>"
-msgstr "رمز عبور را به خاطر دارید؟ <0/>"
+#: src/routes/_home/-sections/features.tsx
+msgid "Remember every career win."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Remote, Hybrid, a city…"
@@ -3988,18 +3470,6 @@ msgstr "جدول‌ها را با پاراگراف‌ها و فهرست‌های
 msgid "Report a Bug"
 msgstr "گزارش باگ"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Report an issue"
-msgstr "گزارش مشکل"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resend verification email"
-msgstr "ارسال دوباره ایمیل تأیید"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resending verification email..."
-msgstr "در حال ارسال دوباره ایمیل تأیید..."
-
 #: src/features/ats-checker/messages.ts
 msgid "Reserve capitals for short headings. They slow reading and can defeat case-sensitive search."
 msgstr "حروف بزرگ را فقط برای عنوان‌های کوتاه نگه دارید. آن‌ها خواندن را کند می‌کنند و می‌توانند جستجوی حساس به بزرگی و کوچکی حروف را بی‌اثر کنند."
@@ -4008,23 +3478,6 @@ msgstr "حروف بزرگ را فقط برای عنوان‌های کوتاه ن
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Reset"
 msgstr "ریست"
-
-#. Primary action button label on reset-password form
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset Password"
-msgstr "تنظیم مجدد گذرواژه"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset your password"
-msgstr "تنظیم مجدد گذرواژهٔ شما"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Resetting your password..."
-msgstr "در حال تنظیم مجدد گذرواژه شما..."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Resources"
-msgstr "منابع"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
@@ -4051,13 +3504,8 @@ msgstr "رزومه پیوند داده شد"
 msgid "Resume options"
 msgstr "گزینه‌های رزومه"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Resume tailored"
-msgstr ""
-
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/_home/-sections/statistics.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/resumes/index.tsx
 msgid "Resumes"
@@ -4124,9 +3572,7 @@ msgstr "حقوق"
 msgid "Salary range"
 msgstr "بازهٔ حقوق"
 
-#. Passkey rename prompt confirm action in authentication settings
 #: src/features/applications/components/application-detail-sheet.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
 msgid "Save"
 msgstr "ذخیره"
 
@@ -4163,12 +3609,17 @@ msgstr "ذخیرهٔ تغییرات"
 #: src/dialogs/resume/sections/summary-item.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
 #: src/features/settings/pages/profile.tsx
+#: src/features/settings/profile/index.tsx
 msgid "Save Changes"
 msgstr "ذخیرهٔ تغییرات"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Save model"
 msgstr "ذخیره مدل"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Save projects, launches, hackathons, metrics, feedback, and hard-earned lessons while they are still fresh."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Save the file with every page upright."
@@ -4181,10 +3632,6 @@ msgstr "ذخیره شده"
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
 msgstr "در حال ذخیره…"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
-msgstr "کد QR زیر را با اپلیکیشن احراز هویت دلخواه خود اسکن کنید. همچنین می‌توانید کلید مخفی زیر را کپی کرده و در اپ خود بچسبانید."
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "School"
@@ -4234,10 +3681,6 @@ msgstr "جستجو..."
 msgid "Search…"
 msgstr "جستجو…"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Secret copied to clipboard."
-msgstr "کلید مخفی در کلیپ‌بورد کپی شد."
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Section options"
@@ -4261,8 +3704,8 @@ msgid "See how this resume matches the posting"
 msgstr "ببینید این رزومه چقدر با آگهی مطابقت دارد"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "See what an applicant tracking system can read from your resume. Runs in your browser."
-msgstr "ببینید یک سیستم ردیابی متقاضی چه چیزی از رزومهٔ شما می‌تواند بخواند. در مرورگر شما اجرا می‌شود."
+msgid "See what an applicant tracking system can read before your resume reaches a recruiter."
+msgstr ""
 
 #. placeholder {0}: app.company
 #: src/features/applications/components/table-view.tsx
@@ -4285,26 +3728,13 @@ msgstr "انتخاب..."
 msgid "selected"
 msgstr "انتخاب‌شده"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Self-Host with Docker"
-msgstr "میزبانی خودکار با Docker"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "شیوه‌نامه CSS معنایی"
 
-#. Primary action button label on forgot-password form
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Send Password Reset Email"
-msgstr "ارسال ایمیل تنظیم مجدد گذرواژه"
-
 #: src/features/ats-checker/messages.ts
 msgid "Send the resume itself rather than a portfolio wrapper."
 msgstr "خود رزومه را ارسال کنید، نه یک بستهٔ پورتفولیو."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sending password reset email..."
-msgstr "در حال ارسال ایمیل تنظیم مجدد گذرواژه..."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Sends the text already extracted from your PDF to the AI provider you choose below. The PDF file itself is never uploaded."
@@ -4322,7 +3752,6 @@ msgstr "جداکننده"
 msgid "Serbian"
 msgstr "صربی"
 
-#: src/features/settings/authentication/components/password.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Set Password"
 msgstr "تنظیم گذرواژه"
@@ -4340,25 +3769,25 @@ msgstr "یک ارائه دهنده راه اندازی کنید"
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Setup Authenticator App"
-msgstr "راه‌اندازی اپلیکیشن احراز هویت"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Shadow Width"
 msgstr "عرض سایه"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "Share your resume with a public URL, and let others view it."
-msgstr "رزومهٔ خود را با URL عمومی به اشتراک بگذارید و اجازه دهید دیگران آن را ببینند."
+msgid "Shape raw career history into concise bullets, project summaries, and interview-ready stories."
+msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Shareable Links"
-msgstr "لینک‌های قابل‌اشتراک"
+#: src/routes/_home/-sections/faq.tsx
+msgid "Share a job description and cloudcoffee selects the most relevant evidence from your career base, then helps shape it into a focused resume you can refine."
+msgstr ""
 
 #: src/libs/resume/section.tsx
 msgid "Sharing"
 msgstr "اشتراک‌گذاری"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ship a polished resume"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -4383,20 +3812,7 @@ msgstr "نمایش {0} مورد دیگر"
 msgid "Show link in title"
 msgstr "نمایش لینک در عنوان"
 
-#. Accessible label for button that reveals password in registration form
-#. Accessible label for button that reveals password in reset-password form
 #. Accessible label for button that reveals password on protected resume screen
-#. Accessible label for button that reveals the password in login form
-#. Accessible label for toggle button that reveals the masked current password
-#. Accessible label for toggle button that reveals the masked new password
-#. Accessible label for toggle button that reveals the masked password in two-factor disable dialog
-#. Accessible label for toggle button that reveals the masked password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Show password"
 msgstr "نمایش رمز عبور"
@@ -4424,9 +3840,8 @@ msgstr "نوار کناری"
 msgid "Sidebar Width"
 msgstr "عرض نوار کناری"
 
-#. Primary action button label on login form
 #: src/features/ats-checker/ai-review/locked-card.tsx
-#: src/features/auth/pages/login.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "Sign in"
 msgstr "ورود"
 
@@ -4434,26 +3849,10 @@ msgstr "ورود"
 msgid "Sign in and connect your own AI provider to get rewrite suggestions for weak bullets. The checks above are free and need no account."
 msgstr "وارد شوید و ارائه‌دهندهٔ هوش مصنوعی خودتان را متصل کنید تا پیشنهادهای بازنویسی برای موارد فهرست‌وار ضعیف دریافت کنید. بررسی‌های بالا رایگان هستند و به حساب کاربری نیاز ندارند."
 
-#. Call-to-action link from forgot-password page to login page
-#. Call-to-action link from registration page to login page
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Sign in now"
-msgstr "اکنون وارد شوید"
-
 #. Title on the login page
 #: src/features/auth/pages/login.tsx
 msgid "Sign in to your account"
 msgstr "ورود به حساب کاربری"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Sign in with GitHub, Google or a custom OAuth provider."
-msgstr "با GitHub، Google یا یک ارائه‌دهندهٔ OAuth سفارشی وارد شوید."
-
-#. Primary action button label on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Sign up"
-msgstr "عضویت"
 
 #. Title on the page shown after a failed or cancelled OAuth sign-in
 #: src/features/auth/pages/error.tsx
@@ -4461,17 +3860,12 @@ msgid "Sign-in didn't complete"
 msgstr "ورود کامل نشد"
 
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Signing in..."
 msgstr "در حال ورود..."
 
 #: src/features/user/dropdown-menu.tsx
 msgid "Signing out..."
 msgstr "در حال خروج..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Signing up..."
-msgstr "در حال عضویت..."
 
 #: src/dialogs/resume/template/data.ts
 msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
@@ -4579,7 +3973,6 @@ msgstr "مرتب‌سازی بر اساس…"
 msgid "Source"
 msgstr "منبع"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "کد منبع"
@@ -4596,6 +3989,10 @@ msgstr "فاصله (عمودی)"
 msgid "Spanish"
 msgstr "اسپانیایی"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "speed of opportunity."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "نام ماه را کامل بنویسید، مانند \"Mar 2022\"."
@@ -4603,10 +4000,6 @@ msgstr "نام ماه را کامل بنویسید، مانند \"Mar 2022\"."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "حامیان مالی"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Sponsorships"
-msgstr "حمایت های مالی"
 
 #. Preset button for setting picture aspect ratio to square
 #: src/components/level/combobox.tsx
@@ -4687,10 +4080,6 @@ msgstr "ویرایشگر استایل‌شیت"
 msgid "Stylesheet has fatal errors"
 msgstr "شیوه‌نامه خطاهای مهلک دارد"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Subreddit"
-msgstr "ردیت"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Suggestions"
 msgstr "پیشنهادها"
@@ -4759,6 +4148,10 @@ msgstr "برچسب‌ها به نرم‌افزار یک ترتیب خواندن 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "تنظیم رزومهٔ من"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Tailor to any role"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -4850,14 +4243,6 @@ msgstr "آن حساب ارائه‌دهنده از نشانی ایمیلی مت�
 msgid "That sign-in provider is no longer available on this server."
 msgstr "آن ارائه‌دهنده ورود دیگر روی این سرور در دسترس نیست."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key has been deleted successfully."
-msgstr "کلید API با موفقیت حذف شد."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key will no longer be able to access your data after deletion. This action cannot be undone."
-msgstr "پس از حذف، این کلید API دیگر قادر به دسترسی به داده‌های شما نخواهد بود. این عمل قابل بازگشت نیست."
-
 #: src/features/auth/pages/error.tsx
 msgid "The application that sent you here made an invalid authorization request."
 msgstr "برنامه‌ای که شما را به اینجا فرستاد، درخواست مجوز نامعتبری ارسال کرد."
@@ -4947,14 +4332,10 @@ msgstr "URL وارد شده معتبر نیست."
 
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 msgid "Theme"
 msgstr "تم"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Then, enter the 6 digit code that the app provides to continue."
-msgstr "سپس، کد ۶ رقمی که اپ در اختیار شما می‌گذارد را برای ادامه وارد کنید."
 
 #: src/features/ats-checker/messages.ts
 msgid "There is a gap between two dated roles."
@@ -5177,18 +4558,6 @@ msgstr "این بخش در نوار کناری قرار دارد."
 msgid "This sign-in attempt expired or was already used. Please start again."
 msgstr "این تلاش برای ورود منقضی شده یا قبلاً استفاده شده است. لطفاً دوباره شروع کنید."
 
-#: src/features/auth/pages/register.tsx
-msgid "This step is optional, but recommended."
-msgstr "این مرحله اختیاری است، اما توصیه می‌شود."
-
-#: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
-msgstr "این کار یک کلید API جدید برای دسترسی به API cloudcoffee تولید می‌کند تا ماشین‌ها بتوانند با داده‌های رزومهٔ شما تعامل داشته باشند."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "This will help you identify it later, if you plan to have multiple passkeys."
-msgstr "این به شما کمک می‌کند تا بعداً آن را شناسایی کنید، اگر قصد دارید چندین کلید عبور داشته باشید."
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "این همه موارد را از این بخش حذف خواهد کرد."
@@ -5200,10 +4569,6 @@ msgstr "خط زمانی"
 #: src/features/ats-checker/messages.ts
 msgid "Tip"
 msgstr "نکته"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Tip: Give your API key a name, corresponding to the purpose of the key, to help you identify it later."
-msgstr "نکته: به کلید API خود نامی مطابق با هدف آن بدهید تا بعداً راحت‌تر آن را شناسایی کنید."
 
 #: src/dialogs/resume/index.tsx
 msgid "Tip: You can name the resume referring to the position you are applying for."
@@ -5255,7 +4620,6 @@ msgstr "اولین درخواست خود را پیگیری کنید"
 msgid "Track your resume's views and downloads"
 msgstr "بازدیدها و دانلودهای رزومهٔ خود را پیگیری کنید"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "ترجمه‌ها"
@@ -5268,6 +4632,10 @@ msgstr "دوباره امتحان کنید"
 msgid "Turkish"
 msgstr "ترکی"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Turn memory into language"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Turn off discretionary ligatures when exporting."
 msgstr "هنگام خروجی گرفتن، لیگاچرهای اختیاری را غیرفعال کنید."
@@ -5275,24 +4643,6 @@ msgstr "هنگام خروجی گرفتن، لیگاچرهای اختیاری ر�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "اشتراک‌گذاری عمومی را روشن کنید تا ببینید رزومه شما چند بار دیده یا دانلود شده است. فقط شما می‌توانید آمار رزومهٔ خود را ببینید."
-
-#: src/features/auth/pages/verify-2fa.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Two-Factor Authentication"
-msgstr "احراز هویت دو مرحله‌ای"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Two-factor authentication has been disabled successfully."
-msgstr "احراز هویت دو مرحله‌ای با موفقیت غیرفعال شد."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-factor authentication has been setup successfully."
-msgstr "احراز هویت دو مرحله‌ای با موفقیت راه‌اندازی شد."
-
-#. Accessible title for QR code image shown during two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-Factor Authentication QR Code"
-msgstr "کد QR احراز هویت دو عاملی"
 
 #: src/dialogs/resume/import.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -5335,14 +4685,6 @@ msgstr "لغو"
 msgid "Undo stylesheet edit"
 msgstr "ویرایش برگه سبک را لغو کنید"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Unlimited Resumes"
-msgstr "رزومه‌های نامحدود"
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Unlinking your {providerName} account..."
-msgstr "در حال قطع پیوند حساب {providerName} شما..."
-
 #. Primary action button label to unlock a password-protected resume
 #. Resume card context menu action to remove edit lock
 #. Resume card dropdown action to remove edit lock
@@ -5352,14 +4694,6 @@ msgstr "در حال قطع پیوند حساب {providerName} شما..."
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Unlock"
 msgstr "باز کردن قفل"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Unnamed passkey"
-msgstr "کلید عبور نام‌گذاری‌نشده"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Unverified"
-msgstr "تأیید نشده"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -5426,12 +4760,6 @@ msgstr "به‌روزرسانی مورد خلاصه موجود"
 msgid "Update an existing volunteer experience"
 msgstr "به‌روزرسانی یک سابقه داوطلبانهٔ موجود"
 
-#. Primary action button to submit changed password
-#: src/dialogs/auth/change-password.tsx
-#: src/features/settings/authentication/components/password.tsx
-msgid "Update Password"
-msgstr "به‌روزرسانی گذرواژه"
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "به‌روزرسانی رزومه"
@@ -5447,14 +4775,6 @@ msgstr "جزئیات این درخواست را به‌روزرسانی کنید
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Update this timeline note."
 msgstr "این یادداشت خط زمانی را به‌روزرسانی کنید."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Update your password"
-msgstr "گذرواژهٔ خود را به‌روزرسانی کنید"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Updating your password..."
-msgstr "در حال به‌روزرسانی گذرواژه شما..."
 
 #: src/dialogs/resume/index.tsx
 msgid "Updating your resume..."
@@ -5547,16 +4867,10 @@ msgstr "استفاده از نمونه"
 msgid "Use your editor's normal bullet list, so stray glyphs do not land mid-sentence."
 msgstr "از فهرست نشانه‌دار معمولی ویرایشگر خود استفاده کنید تا گلیف‌های نابجا وسط جمله قرار نگیرند."
 
-#. Label for username input on registration form
 #: src/dialogs/resume/sections/profile.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Username"
 msgstr "نام کاربری"
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Users"
-msgstr "کاربران"
 
 #: src/libs/locale.ts
 msgid "Uzbek"
@@ -5586,39 +4900,9 @@ msgstr "شروع‌ها را متنوع کنید تا بخش، کلیشه‌ای
 msgid "Vercel AI Gateway"
 msgstr "دروازه ورچل ای‌آی"
 
-#: src/features/settings/pages/profile.tsx
-msgid "Verified"
-msgstr "تأیید شده"
-
-#. Primary action button to submit 2FA code
-#. Primary action button to submit backup code
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify"
-msgstr "تأیید"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify with a Backup Code"
-msgstr "تأیید با کد پشتیبان"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying backup code..."
-msgstr "در حال تأیید کد پشتیبان..."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying code..."
-msgstr "در حال تأیید کد..."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Verifying code…"
-msgstr "کد تایید…"
-
 #: src/features/auth/pages/resume-password.tsx
 msgid "Verifying password..."
 msgstr "در حال تأیید گذرواژه..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Verifying your email is required when resetting your password."
-msgstr "برای تنظیم مجدد گذرواژه، تأیید ایمیل الزامی است."
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Version history"
@@ -5696,13 +4980,17 @@ msgstr "آنچه یک تجزیه‌گر می‌خواند"
 msgid "What a person sees"
 msgstr "آنچه یک انسان می‌بیند"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I add to my career base?"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I ask my career knowledge base?"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "می‌خواهید نام این بخش را به چه چیزی تغییر دهید؟"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "What makes cloudcoffee different from other resume builders?"
-msgstr "چه چیزی cloudcoffee را از سایر رزومه‌سازها متمایز می‌کند؟"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -5797,33 +5085,17 @@ msgstr "نشانی کامل را، از جمله https://، بنویسید."
 msgid "Writing"
 msgstr "نوشتار"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "X (Twitter)"
-msgstr "ایکس (توییتر)"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "xAI Grok"
 msgstr "xAI گروک"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "بله، cloudcoffee در چندین زبان در دسترس است. می‌توانید زبان دلخواه خود را در صفحهٔ تنظیمات یا با استفاده از تعویض‌کنندهٔ زبان در گوشهٔ بالا سمت راست انتخاب کنید. اگر زبان خود را نمی‌بینید یا می‌خواهید ترجمه‌های موجود را بهبود دهید، می‌توانید <0>در ترجمه‌ها روی Crowdin مشارکت کنید<1> (در زبانهٔ جدید باز می‌شود)</1></0>."
+msgid "Yes. Refine the final resume, export it as a polished PDF, or share it through a public link when you are ready."
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "بله! cloudcoffee کاملاً رایگان است، بدون هزینهٔ پنهان، پلن پریمیوم یا حق اشتراک. این پروژه متن‌باز است و برای همیشه رایگان می‌ماند."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "You also have the option to deploy on your own servers using the Docker image."
-msgstr "همچنین می‌توانید با استفاده از تصویر Docker آن را روی سرورهای خودتان مستقر کنید."
-
-#: src/features/auth/pages/login.tsx
-msgid "You can also use your username to login."
-msgstr "برای ورود می‌توانید از نام کاربری خود نیز استفاده کنید."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "You can share your resume via a unique public URL, protect it with a password, or download it as a PDF to share directly. The choice is yours!"
-msgstr "می‌توانید رزومه خود را از طریق یک URL عمومی منحصربه‌فرد به اشتراک بگذارید، آن را با گذرواژه محافظت کنید، یا برای اشتراک‌گذاری مستقیم آن را به صورت PDF دانلود کنید. انتخاب با شماست!"
+msgid "Yes. Your career base stays constant while each resume can emphasize a different role, industry, seniority level, or opportunity."
+msgstr ""
 
 #: src/features/auth/pages/error.tsx
 msgid "You cancelled the sign-in before it finished."
@@ -5834,13 +5106,8 @@ msgid "You have unsaved changes that will be lost."
 msgstr "تغییرات ذخیره‌نشده‌ای دارید که از دست خواهند رفت."
 
 #: src/dialogs/resume/import.tsx
-msgid "You'll be taken to the Integrations page. The file you selected won't be imported."
-msgstr "به صفحهٔ یکپارچه‌سازی‌ها منتقل می‌شوید. فایل انتخاب‌شدهٔ شما وارد نخواهد شد."
-
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "You've got mail!"
-msgstr "یک ایمیل دریافت کردید!"
+msgid "You'll be taken to Account settings. The file you selected won't be imported."
+msgstr ""
 
 #: src/features/settings/pages/account.tsx
 msgid "Your account has been deleted successfully."
@@ -5850,9 +5117,9 @@ msgstr "حساب کاربری شما با موفقیت حذف شد."
 msgid "Your AI provider could not be reached. Check its settings and try again."
 msgstr "ارائه‌دهندهٔ هوش مصنوعی شما در دسترس نبود. تنظیمات آن را بررسی کنید و دوباره تلاش کنید."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Your API key has been copied to the clipboard."
-msgstr "کلید API شما در کلیپ‌بورد کپی شد."
+#: src/features/settings/profile/index.tsx
+msgid "Your application profile has been saved."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 #: src/libs/resume/ats.ts
@@ -5863,12 +5130,16 @@ msgstr "متن بدنهٔ شما بسیار کوچک است."
 msgid "Your bullets are drawn with unusual characters."
 msgstr "موارد فهرست‌وار شما با نویسه‌های غیرمعمول رسم شده‌اند."
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Your career has a memory."
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Your career already has the proof."
 msgstr ""
 
 #: src/routes/_home/-sections/hero.tsx
 msgid "Your career knowledge base"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Your career knowledge base—ready whenever opportunity appears."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
@@ -5882,14 +5153,6 @@ msgstr "اطلاعات تماس شما در صفحهٔ اول نیست."
 #: src/features/settings/pages/account.tsx
 msgid "Your data has been exported successfully."
 msgstr "داده‌های شما با موفقیت صادر شد."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Your data is secure, and never shared or sold to anyone."
-msgstr "داده‌های شما ایمن بوده و هرگز با کسی به اشتراک گذاشته یا فروخته نمی‌شوند."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
-msgstr "داده‌های شما به‌طور ایمن ذخیره شده و هرگز با اشخاص ثالث به اشتراک گذاشته نمی‌شوند. همچنین می‌توانید cloudcoffee را روی سرورهای خود میزبانی کنید تا کنترل کامل بر داده‌های خود داشته باشید."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -5931,14 +5194,6 @@ msgstr "حاشیه‌های شما بسیار باریک هستند."
 #: src/libs/resume/ats.ts
 msgid "Your page margins are very narrow."
 msgstr "حاشیه‌های صفحهٔ شما بسیار باریک‌اند."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Your password has been reset successfully. You can now sign in with your new password."
-msgstr "گذرواژهٔ شما با موفقیت تنظیم مجدد شد. اکنون می‌توانید با گذرواژهٔ جدید خود وارد شوید."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Your password has been updated successfully."
-msgstr "گذرواژهٔ شما با موفقیت به‌روز شد."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your phone number is written in an unusual shape."

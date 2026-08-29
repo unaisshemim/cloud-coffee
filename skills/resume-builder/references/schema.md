@@ -580,7 +580,7 @@ Choose one coherent shape for each union value. Required fields are local to tha
 | `customSections[].items[].recipient` | `string` | yes (type cover-letter, schema coverLetterItemSchema at customSections[]) | — | The recipient's address block as HTML (name, title, company, address, email). |
 | `customSections[].items[].content` | `string` | yes (type cover-letter, schema coverLetterItemSchema at customSections[]) | — | The cover letter body as HTML (salutation, paragraphs, closing, signature). |
 | `metadata` | `object` | yes | — | Metadata for the resume, such as template, layout, typography, etc. This section describes the overall design and appearance of the resume. |
-| `metadata.template` | `string` | no | enum: ["treecko"]; default: "treecko" | The template to use for the resume. Determines the overall design and appearance of the resume. |
+| `metadata.template` | `string` | no | enum: ["classic","treecko"]; default: "treecko" | The template to use for the resume. Determines the overall design and appearance of the resume. |
 | `metadata.layout` | `object` | yes | — | The layout of the resume. Determines the structure and arrangement of the sections on the resume. |
 | `metadata.layout.sidebarWidth` | `number` | no | minimum: 10; maximum: 50; default: 35 | The width of the sidebar column, defined as a percentage of the page width. |
 | `metadata.layout.pages` | `array` | yes | — | The pages to display in the layout. |

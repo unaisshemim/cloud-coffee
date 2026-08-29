@@ -27,10 +27,6 @@ msgstr ""
 msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This can't be undone."
 msgstr "\"{0} · {1}\" ja sen koko aikajana poistetaan pysyvästi. Tätä ei voi kumota."
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "(opens in new tab)"
-msgstr "(avautuu uuteen välilehteen)"
-
 #. placeholder {0}: section.items.length
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "{0, plural, one {# item} other {# items}}"
@@ -124,46 +120,13 @@ msgstr "{passedRules} / {totalRules} tarkistuksesta läpäisty"
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · Esine {itemNumber}"
 
-#: src/routes/_home/-sections/faq.tsx
-msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
-msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
-msgstr "<0>Usein</0><1>kysytyt</1><2>kysymykset</2>"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>Kiitos, että käytät cloudcoffeea! Tämä sovellus on rakkaudella tehty projekti, jota olen luonut pääasiassa vapaa-ajallani, upean tuen avulla avoimen lähdekoodin tekijöiltä ympäri maailmaa.</0><1>Jos cloudcoffee on ollut sinulle hyödyllinen ja haluat auttaa pitämään sen kaikille maksuttomana ja avoimena, harkitse lahjoituksen tekemistä. Jokainen pieni panos on arvokas!</1>"
 
-#: src/dialogs/api-key/create.tsx
-msgid "1 month"
-msgstr "1 kuukausi"
-
-#: src/dialogs/api-key/create.tsx
-msgid "1 year"
-msgstr "1 vuosi"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "12 projects added to your career base"
-msgstr ""
-
-#: src/routes/_home/-sections/features.tsx
-msgid "12+ Templates"
-msgstr "12+ mallipohjaa"
-
-#: src/dialogs/api-key/create.tsx
-msgid "3 months"
-msgstr "3 kuukautta"
-
-#: src/dialogs/api-key/create.tsx
-msgid "6 months"
-msgstr "6 kuukautta"
-
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A clean single-column export keeps every fact. Columns and images are where they get lost."
 msgstr "Siisti yksisarakkeinen vienti säilyttää jokaisen tiedon. Sarakkeet ja kuvat ovat se, mihin tiedot katoavat."
-
-#: src/features/settings/pages/profile.tsx
-msgid "A confirmation link has been sent to your current email address. Please check your inbox to confirm the change."
-msgstr "Vahvistuslinkki on lähetetty nykyiseen sähköpostiosoitteeseesi. Tarkista postilaatikkosi vahvistaaksesi muutoksen."
 
 #: src/features/ats-checker/messages.ts
 msgid "A date is in the future."
@@ -180,10 +143,6 @@ msgstr "Päivämääräväli on kirjoitettu muodossa, jota useimmat ohjelmistot 
 #: src/features/ats-checker/messages.ts
 msgid "A font is referenced but not embedded."
 msgstr "Fonttiin viitataan, mutta sitä ei ole upotettu."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Ilmainen ja avoimen lähdekoodin ansioluettelon laatija, joka helpottaa ansioluettelon laatimista, päivittämistä ja jakamista."
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "A friendly nudge for the recruiter"
@@ -210,10 +169,6 @@ msgstr "Linkki ansioluetteloosi on kopioitu leikepöydälle."
 msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
 msgstr "Monet ihmiset ovat vuosien varrella kirjoittaneet minulle jakaakseen kokemuksiaan cloudcoffeesta ja siitä, miten se on auttanut heitä, enkä koskaan kyllästy lukemaan niitä. Jos sinulla on tarina jaettavaksi, kerro siitä lähettämällä minulle sähköpostia osoitteeseen <0>{email}</0>."
 
-#: src/features/settings/pages/profile.tsx
-msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
-msgstr "Uusi vahvistuslinkki on lähetetty sähköpostiosoitteeseesi. Tarkista postilaatikkosi vahvistaaksesi tilisi."
-
 #: src/features/ats-checker/messages.ts
 msgid "A numeric date reads differently in different countries."
 msgstr "Numeerinen päivämäärä tulkitaan eri tavoin eri maissa."
@@ -225,10 +180,6 @@ msgstr "Sivu on käännetty."
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "Rakkaudella tehty projekti, jonka on luonut <0>Amruth Pillai</0>."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
-msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -245,14 +196,6 @@ msgstr "Verkko-osoite on kirjoitettu ilman https://-etuliitettä."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "A4"
 msgstr "A4"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Absolutely! You can export your resume to PDF with a single click. The exported PDF maintains all your formatting and styling perfectly."
-msgstr "Ehdottomasti! Voit viedä ansioluettelosi PDF-muotoon yhdellä klikkauksella. Viety PDF säilyttää kaiken muotoilun ja tyylin täydellisesti."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Access your resumes and data programmatically using the API."
-msgstr "Käytä ansioluetteloitasi ja tietojasi ohjelmallisesti rajapinnan (API:n) kautta."
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -486,6 +429,10 @@ msgstr ""
 msgid "AI provider management is unavailable. Please try again."
 msgstr "Tekoälypalveluntarjoajien hallinta ei ole käytettävissä. Yritä uudelleen."
 
+#: src/features/settings/pages/account.tsx
+msgid "AI providers"
+msgstr ""
+
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI Providers"
 msgstr "Tekoälypalveluntarjoajat"
@@ -514,13 +461,13 @@ msgstr "Lähes yhdessäkään luettelokohdassasi ei ole numeroa."
 msgid "Already covered"
 msgstr "Jo katettu"
 
-#: src/features/auth/pages/register.tsx
-msgid "Already have an account? <0/>"
-msgstr "Onko sinulla jo tili? <0/>"
-
 #: src/libs/locale.ts
 msgid "Amharic"
 msgstr "amhara"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "An editorial career collage with a data crystal and a flying laptop"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "An embedded font could not be read."
@@ -534,10 +481,6 @@ msgstr "Odottamaton virhe esti sivun latautumisen. Voit yrittää uudelleen tai 
 #: src/dialogs/resume/import.tsx
 msgid "An unknown error occurred while importing your resume."
 msgstr "Ansioluettelosi tuonnissa tapahtui tuntematon virhe."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "And many more..."
-msgstr "Ja paljon muuta..."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -559,31 +502,21 @@ msgstr "Kaikki, joilla on ansioluettelon julkinen osoite, voivat tarkastella ja 
 msgid "Anyone with the link can view and download the resume."
 msgstr "Kaikki, joilla on linkki, voivat tarkastella ja ladata ansioluettelon."
 
-#: src/routes/_home/-sections/features.tsx
-msgid "API Access"
-msgstr "API-käyttö"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API Key"
 msgstr "API-avain"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/api-keys.tsx
-msgid "API Keys"
-msgstr "API-avaimet"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API keys are encrypted on the server and never shown again after saving."
 msgstr "API-avaimet salataan palvelimella, eikä niitä koskaan näytetä uudelleen tallennuksen jälkeen."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "API Reference"
-msgstr "API-viite"
-
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "App"
 msgstr "Sovellus"
+
+#: src/features/settings/pages/account.tsx
+msgid "Appearance & language"
+msgstr ""
 
 #: src/features/applications/components/application-actions-menu.tsx
 msgid "Application actions"
@@ -601,10 +534,6 @@ msgstr "Hakemusavustaja"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Application deleted."
 msgstr "Hakemus poistettu."
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Application Statistics"
-msgstr "Sovelluksen tilastot"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Application updated."
@@ -651,10 +580,6 @@ msgstr "Arkistoitu"
 msgid "Are you sure you want to close this dialog?"
 msgstr "Haluatko varmasti sulkea tämän ikkunan?"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Are you sure you want to delete this API key?"
-msgstr "Haluatko varmasti poistaa tämän API-avaimen?"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Are you sure you want to delete this custom section?"
 msgstr "Haluatko varmasti poistaa tämän mukautetun osion?"
@@ -693,6 +618,14 @@ msgstr "Opintoala"
 msgid "Artificial Intelligence"
 msgstr "Tekoäly"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Ask for your strongest leadership example, projects using a certain skill, measurable outcomes, interview stories, or evidence that matches a role."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ask your career"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "Kuvasuhde"
@@ -705,7 +638,10 @@ msgstr "Atlas Cloud tukee cloudcoffeea projektin sponsorina. Jos yrityksesi halu
 msgid "ATS Check"
 msgstr "ATS-tarkastus"
 
-#: src/routes/_home/-sections/features.tsx
+#: src/routes/_home/-sections/footer.tsx
+msgid "ATS checker"
+msgstr ""
+
 #: src/routes/_home/ats-checker.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "ATS Checker"
@@ -720,19 +656,9 @@ msgstr "Liitä saatekirje (PDF)"
 msgid "Attach a resume file (PDF)"
 msgstr "Liitä ansioluettelotiedosto (PDF)"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/authentication/index.tsx
-msgid "Authentication"
-msgstr "Todennus"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Auto-fill failed."
 msgstr "Automaattinen täyttö epäonnistui."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Available in multiple languages. If you would like to contribute, check out Crowdin."
-msgstr "Saatavana useilla kielillä. Jos haluat osallistua, tutustu Crowdiniin."
 
 #: src/features/ats-checker/messages.ts
 msgid "Avoid heavy letter-spacing effects, then re-export."
@@ -753,15 +679,10 @@ msgstr "Palkinnot"
 msgid "Azerbaijani"
 msgstr "azeri"
 
-#. Action returning a signed-in user to the page where they manage linked providers
+#. Action returning a signed-in user to account settings
 #: src/features/auth/pages/error.tsx
-msgid "Back to authentication settings"
-msgstr "Takaisin todennusasetuksiin"
-
-#. Secondary navigation button on 2FA verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Back to Login"
-msgstr "Takaisin kirjautumiseen"
+msgid "Back to account settings"
+msgstr ""
 
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
@@ -772,10 +693,6 @@ msgstr "Takaisin kirjautumiseen"
 msgid "Background Color"
 msgstr "Taustaväri"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Backup codes copied to clipboard."
-msgstr "Varmuuskoodit kopioitu leikepöydälle."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Base URL"
 msgstr "Perus-URL"
@@ -783,10 +700,6 @@ msgstr "Perus-URL"
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "Perustiedot"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Beautiful templates to choose from, with more on the way."
-msgstr "Kauniita mallipohjia, joista valita – ja lisää tulossa."
 
 #: src/libs/locale.ts
 msgid "Bengali"
@@ -825,8 +738,17 @@ msgstr "Reunan leveys"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "Jaa ansioluettelo tavanomaisiin osioihin, jotta se voidaan segmentoida."
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Bring career evidence together from the products and services where your work already lives."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Build one living knowledge base from your projects, outcomes, and tools—then turn it into the right story when opportunity arrives."
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Build your base"
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Build your career base"
 msgstr ""
 
 #: src/features/resume/public/public-resume.tsx
@@ -859,23 +781,19 @@ msgstr "Luettelomerkkilista"
 msgid "By the communit of th, for the community."
 msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "By the community, for the community."
-msgstr "Yhteisöltä yhteisölle."
+#: src/routes/_home/-sections/faq.tsx
+msgid "Can I export and share the result?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Can I export my resume to PDF?"
-msgstr "Voinko viedä ansioluetteloni PDF-muotoon?"
+msgid "Can I keep more than one resume?"
+msgstr ""
 
-#. API key deletion confirmation dialog cancel action in settings
 #. Account deletion confirmation dialog cancel action in account settings
 #. Confirmation dialog button label to abort deleting a custom section in resume builder
 #. Confirmation dialog button label to abort deleting a section item in resume builder
 #. Confirmation dialog button label to abort resetting a resume section
 #. Profile settings form action to discard unsaved edits
-#. Secondary action button to close two-factor setup dialog
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/dialogs/resume/sections/custom.tsx
 #: src/dialogs/resume/sections/section-item-dialog.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -883,7 +801,6 @@ msgstr "Voinko viedä ansioluetteloni PDF-muotoon?"
 #: src/features/applications/components/import-applications-sheet.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
 #: src/features/settings/pages/account.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
@@ -894,8 +811,20 @@ msgstr "Voinko viedä ansioluetteloni PDF-muotoon?"
 msgid "Cancel"
 msgstr "Peruuta"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Capture every win"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Career base"
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgid "Career intelligence at the"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Career questions, answered."
 msgstr ""
 
 #: src/libs/locale.ts
@@ -920,41 +849,21 @@ msgstr "Aivot"
 msgid "Certifications"
 msgstr "Sertifikaatit"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Change language"
-msgstr "Vaihda kieli"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change language to…"
-msgstr "Vaihda kieli muotoon…"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change theme to…"
-msgstr "Vaihda teema muotoon…"
-
 #: src/dialogs/resume/index.tsx
 msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "Muutitko mieltäsi? Nimeä ansioluettelosi uudelleen kuvaavammaksi."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Changelog"
-msgstr "Muutosloki"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
 msgstr "Tarkista uudelleen"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Check ATS readability"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Check the exported file contains everything you expect, and that all of it is selectable text."
 msgstr "Tarkista, että viety tiedosto sisältää kaiken odottamasi ja että kaikki siinä on valittavissa olevaa tekstiä."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Check your email for a link to reset your password."
-msgstr "Tarkista sähköpostisi linkin löytämiseksi salasanan palauttamiseksi."
-
-#: src/features/auth/pages/register.tsx
-msgid "Check your email for a link to verify your account."
-msgstr "Tarkista sähköpostisi linkin löytämiseksi tilisi vahvistamiseksi."
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Checked in your browser. The file is never uploaded."
@@ -971,10 +880,6 @@ msgstr "Luonnoksen tarkistaminen"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Checking…"
 msgstr "Tarkistetaan…"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Checkout redesign · 18% more conversions"
-msgstr ""
 
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
@@ -996,6 +901,10 @@ msgstr "Valitse esiasetettu tai mukautettu sävy."
 
 #: src/dialogs/resume/template/gallery.tsx
 msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
+
+#: src/features/settings/pages/account.tsx
+msgid "Choose how cloudcoffee looks and which language it uses."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1034,10 +943,6 @@ msgstr "cloudcoffee – Siirry etusivulle"
 msgid "cloudcoffee (JSON)"
 msgstr "Reaktiivinen ansioluettelo (JSON)"
 
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "cloudcoffee kasvaa jatkuvasti elinvoimaisen yhteisönsä ansiosta. Projekti on edistynyt lukemattomien ihmisten ansiosta, jotka ovat käyttäneet aikaansa ja osaamistaan sen parantamiseen. Kiitämme koodareita, jotka ovat kehittäneet ominaisuuksia GitHubissa, kielentuntijoita, joiden käännökset Crowdinessa ovat tehneet sovelluksesta saavutettavamman, sekä lahjoittajia, jotka tukevat jatkuvaa kehitystä."
-
 #: src/routes/_home/-sections/donate.tsx
 msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
 msgstr "cloudcoffee on ilmainen ja avoimen lähdekoodin projekti, joka on tehty rakkaudella ja jota ylläpidän yhdessä yhteisön kanssa. Lahjoituksesi auttavat pitämään valot päällä ja koodin liikkeessä."
@@ -1046,16 +951,13 @@ msgstr "cloudcoffee on ilmainen ja avoimen lähdekoodin projekti, joka on tehty 
 msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
 msgstr "cloudcoffee on ilmainen ja avoimen lähdekoodin työkalu. Jos siitä on ollut sinulle apua, harkitse lahjoittamista."
 
-#: src/routes/_home/-sections/faq.tsx
-msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "cloudcoffee on avoimen lähdekoodin, yksityisyyteen keskittyvä ja täysin ilmainen. Toisin kuin monet muut ansioluettelon laatijat, se ei näytä mainoksia, seuraa tietojasi tai piilota ominaisuuksia maksumuurin taakse."
-
 #: src/routes/_home/-sections/sponsors.tsx
 msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
 msgstr "Reactive CV pysyy ilmaisena, avoimen lähdekoodin ja itsenäisenä, koska yritykset haluavat tukea sen taustalla olevaa työtä. Heidän sponsorointinsa auttaa rahoittamaan yhteisön ylläpitoa, hostingia ja jatkuvaa kehitystä."
 
 #. App version label in footer; includes semantic version variable
 #: src/components/ui/copyright.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
 msgstr "Reaktiivinen ansioluettelo v<0>{__APP_VERSION__}</0>"
 
@@ -1083,10 +985,6 @@ msgstr "Komentopaletti"
 msgid "Command Palette - {currentPage}"
 msgstr "Komentopaletti - {currentPage}"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Community"
-msgstr "Yhteisö"
-
 #: src/dialogs/resume/sections/experience.tsx
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Company"
@@ -1100,31 +998,36 @@ msgstr "Yritys / rooli"
 msgid "Company A–Z"
 msgstr "Yritys A–Z"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Completely free, forever, no hidden costs."
-msgstr "Täysin ilmainen, ikuisesti, ei piilokuluja."
-
 #: src/features/ats-checker/messages.ts
 msgid "Compress or remove large images to keep uploads quick."
 msgstr "Pakkaa tai poista suuria kuvia, jotta lataukset pysyvät nopeina."
 
+#: src/features/settings/pages/account.tsx
+msgid "Configure provider credentials used by resume imports and AI review."
+msgstr ""
+
 #. Account deletion confirmation dialog confirm action in account settings
-#. Create API key dialog acknowledgment action after copying
-#: src/dialogs/api-key/create.tsx
 #: src/features/settings/pages/account.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Confirm"
 msgstr "Vahvista"
 
-#. Authentication settings action to link a social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Connect"
-msgstr "Yhdistä"
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect claims to outcomes, artifacts, and context so every resume bullet stays specific and credible."
+msgstr ""
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Connect the work you've already done, keep every result searchable, and shape the right story for the next role."
+msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Connect your own AI provider to get a review of the writing. The checks above need no provider and no account."
 msgstr "Yhdistä oma tekoälypalveluntarjoajasi saadaksesi arvion kirjoituksesta. Yllä olevat tarkistukset eivät vaadi palveluntarjoajaa tai tiliä."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect your tools"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connected"
@@ -1141,6 +1044,10 @@ msgstr "Yhteys epäonnistui."
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connection verified — provider is ready to use."
 msgstr "Yhteys vahvistettu — palveluntarjoaja on käyttövalmis."
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Connections bring useful work context into one searchable place, so you spend less time reconstructing your history from scattered products and documents."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Contact details"
@@ -1159,14 +1066,6 @@ msgstr "Sisältö"
 msgid "Content is laid out in a grid."
 msgstr "Sisältö on aseteltu ruudukkoon."
 
-#. Button label to continue to dashboard after successful registration
-#. Final action button after saving backup codes
-#. Primary action button to proceed to next step in two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Continue"
-msgstr "Jatka"
-
 #: src/routes/dashboard/resumes/-components/cards/import-card.tsx
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Continue where you left off"
@@ -1175,6 +1074,15 @@ msgstr "Jatka siitä, mihin jäit"
 #: src/dialogs/resume/import.tsx
 msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
 msgstr "Jatka siitä, mihin jäit, tuomalla aiemmin laatimasi ansioluettelo, jonka loit cloudcoffeella tai jollakin muulla ansioluettelon laatijalla. Tuetut muodot ovat PDF, Microsoft Word sekä cloudcoffeen JSON-tiedostot."
+
+#. Google OAuth sign-in button label
+#: src/features/auth/components/social-auth.tsx
+msgid "Continue with Google"
+msgstr ""
+
+#: src/features/auth/pages/login.tsx
+msgid "Continue with Google to access your account."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
@@ -1188,24 +1096,9 @@ msgstr "Muunnettu tyylitiedoston luonnos"
 msgid "Copied to clipboard."
 msgstr "Kopioitu leikepöydälle."
 
-#. Action button to copy two-factor backup codes to clipboard
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Copy"
 msgstr "Kopioi"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy and store these backup codes in case you lose your device."
-msgstr "Kopioi ja säilytä nämä varmuuskoodit siltä varalta, että kadotat laitteesi."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy Backup Codes"
-msgstr "Kopioi varmuuskoodit"
-
-#. Accessible label for the button that copies the two-factor secret key
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy secret"
-msgstr "Kopioi salaisuus"
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Copy stylesheet"
@@ -1218,10 +1111,6 @@ msgstr "Kopioi koko työnkuvaus ilmoituksesta ja liitä se alle. Täytämme kent
 #: src/features/ats-checker/messages.ts
 msgid "Copy the text out of the exported file and read it through; fix anything that arrives in the wrong place."
 msgstr "Kopioi teksti viedystä tiedostosta ja lue se läpi; korjaa kaikki, mikä päätyy väärään paikkaan."
-
-#: src/dialogs/api-key/create.tsx
-msgid "Copy this secret key and use it in your applications to access your data."
-msgstr "Kopioi tämä salainen avain ja käytä sitä sovelluksissasi tietojesi käsittelyyn."
 
 #: src/routes/builder/$resumeId/-components/dock.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -1313,8 +1202,6 @@ msgstr "Saatekirje"
 msgid "Cover letter draft"
 msgstr "Saatekirjeluonnos"
 
-#. Create API key dialog submit action
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1338,15 +1225,6 @@ msgstr "Luo"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Create a copy tuned to this job"
 msgstr "Luo tähän työpaikkaan mukautettu kopio"
-
-#: src/features/auth/pages/register.tsx
-msgid "Create a new account"
-msgstr "Luo uusi tili"
-
-#: src/dialogs/api-key/create.tsx
-#: src/features/settings/pages/api-keys.tsx
-msgid "Create a new API key"
-msgstr "Luo uusi API-avain"
 
 #: src/dialogs/resume/sections/award.tsx
 msgid "Create a new award"
@@ -1419,15 +1297,6 @@ msgstr "Luo uusi vapaaehtoistyökokemus"
 msgid "Create a Sample Resume"
 msgstr "Luo esimerkkian sioluettelo"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Create as many resumes as you want, without limits."
-msgstr "Luo niin monta ansioluetteloa kuin haluat – ilman rajoituksia."
-
-#. Call-to-action link from login page to account registration page
-#: src/features/auth/pages/login.tsx
-msgid "Create one now"
-msgstr "Luo sellainen nyt"
-
 #. Accessible label for create-resume split button group
 #: src/dialogs/resume/index.tsx
 msgid "Create resume with options"
@@ -1442,10 +1311,6 @@ msgstr "Luotu"
 msgid "Created \"{0}\" and linked it to this application."
 msgstr "\"{0}\" luotiin ja linkitettiin tähän hakemukseen."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Creating your API key..."
-msgstr "Luodaan API-avaintasi..."
-
 #: src/dialogs/resume/index.tsx
 msgid "Creating your resume..."
 msgstr "Luodaan ansioluetteloasi..."
@@ -1458,10 +1323,6 @@ msgstr "Rajaa kuvaa"
 msgid "CSV data"
 msgstr "CSV-tiedot"
 
-#: src/dialogs/auth/change-password.tsx
-msgid "Current Password"
-msgstr "Nykyinen salasana"
-
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Current stage"
 msgstr "Nykyinen vaihe"
@@ -1469,11 +1330,6 @@ msgstr "Nykyinen vaihe"
 #: src/components/input/color-picker.tsx
 msgid "Custom"
 msgstr "Custom"
-
-#. Authentication provider display name in account settings
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Custom OAuth"
-msgstr "Mukautettu OAuth"
 
 #: src/libs/resume/section.tsx
 msgid "Custom Sections"
@@ -1501,13 +1357,14 @@ msgstr "Tumma"
 msgid "Dark theme"
 msgstr "Tumma teema"
 
+#: src/routes/_home/-sections/footer.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Dashboard"
 msgstr "Kojelauta"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Data Security"
-msgstr "Tietoturva"
+#: src/features/settings/pages/account.tsx
+msgid "Data & account"
+msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1540,17 +1397,13 @@ msgstr "DeepSeek"
 msgid "Degree"
 msgstr "Tutkinto"
 
-#. API key deletion confirmation dialog confirm action in settings
 #. Destructive confirmation button label when deleting a custom section in resume builder
 #. Destructive confirmation button label when deleting a section item in resume builder
-#. Passkey row action to remove the selected passkey
 #. Resume card context menu destructive action to remove a resume
 #. Resume card dropdown destructive action to remove a resume
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1602,10 +1455,6 @@ msgstr "Poistettiin {0} hakemus(ta)."
 msgid "Deleting your account..."
 msgstr "Poistetaan tiliäsi..."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Deleting your API key..."
-msgstr "Poistetaan API-avaintasi..."
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
@@ -1640,34 +1489,10 @@ msgstr "Ulkoasu"
 msgid "Details from the provider:"
 msgstr "Tiedot palveluntarjoajalta:"
 
-#. Destructive action button to turn off two-factor authentication
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Disable 2FA"
-msgstr "Poista 2FA käytöstä"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disable Two-Factor Authentication"
-msgstr "Poista kaksivaiheinen todennus käytöstä"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disabling two-factor authentication..."
-msgstr "Poistetaan kaksivaiheista todennusta käytöstä..."
-
-#. Authentication settings action to unlink a connected social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Disconnect"
-msgstr "Katkaise yhteys"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Discord"
-msgstr "Discord"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Dismiss"
 msgstr "Hylkää"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Documentation"
 msgstr "Dokumentaatio"
@@ -1675,10 +1500,6 @@ msgstr "Dokumentaatio"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Documents sent"
 msgstr "Lähetetyt asiakirjat"
-
-#: src/features/auth/pages/login.tsx
-msgid "Don't have an account? <0/>"
-msgstr "Eikö sinulla ole tiliä? <0/>"
 
 #: src/components/ui/donation-toast.tsx
 msgid "Donate"
@@ -1688,9 +1509,7 @@ msgstr "Lahjoittaa"
 msgid "Donate to cloudcoffee"
 msgstr "Lahjoita cloudcoffeelle"
 
-#. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/resume/export/download-dialog.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1841,35 +1660,21 @@ msgstr "Koulutus"
 msgid "Email"
 msgstr "Sähköposti"
 
-#. Label for email input on forgot-password form
-#. Label for email input on registration form
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Email Address"
 msgstr "Sähköpostiosoite"
 
 #: src/features/settings/pages/profile.tsx
-msgid "Email delivery isn't configured on this instance, so verification is disabled."
-msgstr "Sähköpostin toimitusta ei ole määritetty tässä tapauksessa, joten vahvistus on poistettu käytöstä."
+msgid "Email address is managed by Google."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Embed all fonts when exporting, so characters map the way you intended."
 msgstr "Upota kaikki fontit vietäessä, jotta merkit vastaavat tarkoitustasi."
 
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Enable 2FA"
-msgstr "Ota 2FA käyttöön"
-
 #: src/routes/builder/$resumeId/-sidebar/left/index.tsx
 msgid "Enable editing"
 msgstr "Ota muokkaus käyttöön"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enable Two-Factor Authentication"
-msgstr "Ota kaksivaiheinen todennus käyttöön"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Enabled"
@@ -1879,10 +1684,6 @@ msgstr "Käytössä"
 msgid "Enabling password protection..."
 msgstr "Otetaan salasanasuojaus käyttöön..."
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enabling two-factor authentication…"
-msgstr "Kaksivaiheisen todennuksen käyttöönotto…"
-
 #: src/libs/locale.ts
 msgid "English"
 msgstr "englanti"
@@ -1891,37 +1692,9 @@ msgstr "englanti"
 msgid "English (United Kingdom)"
 msgstr "Englanti (Yhdistynyt kuningaskunta)"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Enhance the security of your account with additional layers of protection."
-msgstr "Paranna tilisi turvallisuutta lisäsuojaustasoilla."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Enter a name for your passkey."
-msgstr "Anna nimi salasanalle."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter one of your saved backup codes to access your account"
-msgstr "Syötä yksi tallennetuista varmuuskoodeistasi päästäksesi tiliisi"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Enter the URL to link to"
 msgstr "Syötä linkitettävä URL-osoite"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter the verification code from your authenticator app"
-msgstr "Syötä todennussovelluksesi antama vahvistuskoodi"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Enter your current password and a new password to update your account."
-msgstr "Syötä nykyinen salasanasi ja uusi salasana päivittääksesi tilisi."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enter your password to confirm setting up two-factor authentication. When enabled, you'll need to enter a code from your authenticator app every time you log in."
-msgstr "Syötä salasanasi vahvistaaksesi kaksivaiheisen todennuksen käyttöönoton. Kun se on käytössä, sinun on syötettävä todennussovelluksen koodi aina kirjautuessasi."
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Enter your password to disable two-factor authentication. Your account will be less secure without 2FA enabled."
-msgstr "Syötä salasanasi poistaaksesi kaksivaiheisen todennuksen käytöstä. Tilisi on vähemmän suojattu ilman 2FA:ta."
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Error"
@@ -1934,10 +1707,6 @@ msgstr "Jokainen tarkistus meni läpi. Mikään tässä ei saa estää jäsentä
 #: src/routes/_home/-sections/donate.tsx
 msgid "Every contribution, big or small, makes a huge difference to the project.<0/>Thank you for your support!"
 msgstr "Jokainen panos, suuri tai pieni, vaikuttaa valtavasti projektiin.<0/>Kiitos tuestasi!"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
-msgstr "Kaikki, mitä tarvitset ammattimaisen ansioluettelon luomiseen, mukauttamiseen ja jakamiseen. Rakennettu yksityisyys edellä, avoimen lähdekoodin voimin ja täysin ilmainen ikuisesti."
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Exit focus mode"
@@ -1953,22 +1722,9 @@ msgstr "Poistu koko näytöstä"
 msgid "Experience"
 msgstr "Työkokemus"
 
-#: src/dialogs/api-key/create.tsx
-msgid "Expires in"
-msgstr "Vanhenee"
-
-#. placeholder {0}: key.expiresAt.toLocaleDateString()
-#: src/features/settings/pages/api-keys.tsx
-msgid "Expires on {0}"
-msgstr "Vanhenee {0}"
-
 #: src/routes/_home/-sections/templates.tsx
 msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
 msgstr "Tutustu laajaan valikoimaan mallipohjia, jotka sopivat erilaisiin tyyleihin, ammatteihin ja persoonallisuuksiin. cloudcoffeessa on tällä hetkellä 12 mallipohjaa, ja lisää on tulossa."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "Tutustu API-dokumentaatioon nähdäksesi, miten yhdistät cloudcoffeen sovelluksiisi. Löydät sieltä yksityiskohtaiset päätepisteet, pyyntöesimerkit ja todennusmenetelmät."
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -1994,91 +1750,31 @@ msgstr "Vie PNG"
 msgid "Export the resume as a text PDF rather than as an image or a scan."
 msgstr "Vie ansioluettelo tekstimuotoisena PDF:nä kuvan tai skannauksen sijaan."
 
+#: src/features/settings/pages/account.tsx
+msgid "Export your data or permanently remove your account."
+msgstr ""
+
 #: src/features/resume/export/download-dialog.tsx
 msgid "Export your resume or cover letter in the format you need."
 msgstr "Vie ansioluettelo tai saatekirje tarvitsemassasi muodossa."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Export your resume to PDF instantly, without any waiting or delays."
-msgstr "Vie ansioluettelosi PDF-muotoon välittömästi, ilman odottelua tai viivytyksiä."
 
 #: src/features/applications/components/insights-view.tsx
 msgid "Exported pipeline-flow.png"
 msgstr "pipeline-flow.png viety"
 
-#. Fallback toast when creating an API key fails
-#: src/dialogs/api-key/create.tsx
-msgid "Failed to create API key. Please try again."
-msgstr "API-avaimen luominen epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when account registration fails without a server error message
-#: src/features/auth/pages/register.tsx
-msgid "Failed to create your account. Please try again."
-msgstr "Tilin luominen epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when deleting a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to delete passkey. Please try again."
-msgstr "Avaimen poistaminen epäonnistui. Yritä uudelleen."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to delete provider."
 msgstr "Palveluntarjoajan poistaminen epäonnistui."
-
-#. Fallback toast when deleting an API key fails
-#: src/features/settings/pages/api-keys.tsx
-msgid "Failed to delete the API key. Please try again."
-msgstr "API-avaimen poistaminen epäonnistui. Yritä uudelleen."
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to delete your account. Please try again."
 msgstr "Tilisi poistaminen epäonnistui. Yritä uudelleen."
 
-#. Fallback toast when disabling two-factor authentication fails
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Failed to disable two-factor authentication. Please try again."
-msgstr "Kahden tekijän todennuksen poistaminen käytöstä epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when enabling two-factor authentication fails
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to enable two-factor authentication. Please try again."
-msgstr "Kahden tekijän todennuksen käyttöönotto epäonnistui. Yritä uudelleen."
-
 #. Fallback toast when data export fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to export your data. Please try again."
 msgstr "Tietojesi vienti epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when linking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to link provider. Please try again."
-msgstr "Palveluntarjoajan linkittäminen epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when passkey registration fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to register passkey. Please try again."
-msgstr "Avaimen rekisteröinti epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when renaming a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to rename passkey. Please try again."
-msgstr "Avaimen uudelleen nimeäminen epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when requesting email change confirmation fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to request email change. Please try again."
-msgstr "Sähköpostimuutospyyntö epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when resending account verification email fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to resend verification email. Please try again."
-msgstr "Vahvistussähköpostia ei onnistuttu lähettämään uudelleen. Yritä uudelleen."
-
-#. Fallback toast when resetting password fails and no backend message is available
-#: src/features/auth/pages/reset-password.tsx
-msgid "Failed to reset your password. Please try again."
-msgstr "Salasanan palauttaminen epäonnistui. Yritä uudelleen."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Failed to review this resume."
@@ -2088,19 +1784,12 @@ msgstr "Tämän ansioluettelon arviointi epäonnistui."
 msgid "Failed to save AI provider."
 msgstr "Tekoälypalveluntarjoajan tallentaminen epäonnistui."
 
-#. Fallback toast when requesting password reset email fails without backend message
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Failed to send password reset email. Please try again."
-msgstr "Salasanan palautussähköpostia ei onnistuttu lähettämään. Yritä uudelleen."
+#: src/features/settings/profile/index.tsx
+msgid "Failed to save your application profile. Please try again."
+msgstr ""
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to setup two-factor authentication."
-msgstr "Kaksivaiheisen todennuksen käyttöönotto epäonnistui."
-
-#. Fallback toast when sign-in fails and no server error message is available
-#. Fallback toast when sign-in fails without an error message
+#. Fallback toast when Google sign-in fails without an error message
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Failed to sign in. Please try again."
 msgstr "Kirjautuminen epäonnistui. Yritä uudelleen."
 
@@ -2109,19 +1798,9 @@ msgstr "Kirjautuminen epäonnistui. Yritä uudelleen."
 msgid "Failed to sign out. Please try again."
 msgstr "Kirjautuminen ulos ei onnistunut. Yritä uudelleen."
 
-#. Fallback toast when unlinking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to unlink provider. Please try again."
-msgstr "Palveluntarjoajan linkityksen poistaminen epäonnistui. Yritä uudelleen."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "Palveluntarjoajan päivittäminen epäonnistui."
-
-#. Fallback toast when changing account password fails
-#: src/dialogs/auth/change-password.tsx
-msgid "Failed to update your password. Please try again."
-msgstr "Salasanan päivittäminen epäonnistui. Yritä uudelleen."
 
 #. Fallback toast when updating profile details fails
 #: src/features/settings/pages/profile.tsx
@@ -2138,25 +1817,9 @@ msgstr "Kuvan lataaminen epäonnistui. Yritä uudelleen."
 msgid "Failed to verify the password. Please try again."
 msgstr "Salasanan vahvistaminen epäonnistui. Yritä uudelleen."
 
-#. Fallback toast when verifying a backup two-factor authentication code fails
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your backup code. Please try again."
-msgstr "Varmuuskopiointikoodin vahvistaminen epäonnistui. Yritä uudelleen."
-
-#. Fallback toast when verifying a two-factor authentication code fails
-#. Fallback toast when verifying two-factor setup code fails
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your code. Please try again."
-msgstr "Koodiasi ei onnistuttu tarkistamaan. Yritä uudelleen."
-
 #: src/features/resume/stylesheet/status.tsx
 msgid "Fatal error"
 msgstr "Vakava virhe"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Features"
-msgstr "Ominaisuudet"
 
 #: src/dialogs/resume/import.tsx
 msgid "File"
@@ -2178,6 +1841,10 @@ msgstr "Suodata"
 msgid "Filter by tags"
 msgstr "Suodata tunnisteiden mukaan"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Find the strongest example, result, or story without digging through old documents and scattered notes."
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Finnish"
 msgstr "suomi"
@@ -2193,10 +1860,6 @@ msgstr "Sovita näkymään"
 #: src/features/ats-checker/messages.ts
 msgid "Flatten the form so the text is part of the page."
 msgstr "Litistä lomake, jotta teksti on osa sivua."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Flexibility"
-msgstr "Joustavuus"
 
 #: src/dialogs/resume/sections/language.tsx
 msgid "Fluency"
@@ -2234,26 +1897,9 @@ msgstr "Fontin vahvuus"
 msgid "Font Weights"
 msgstr "Fonttivahvuudet"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "For a secure and distraction-free experience."
-msgstr "Turvallista ja häiriötöntä käyttöä varten."
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/notes.tsx
 msgid "For example, information regarding which companies you sent this resume to or the links to the job descriptions can be noted down here."
 msgstr "Voit esimerkiksi merkitä tähän, mihin yrityksiin lähetit tämän ansioluettelon tai linkit työpaikkailmoituksiin."
-
-#: src/dialogs/api-key/create.tsx
-msgid "For security reasons, this key will only be displayed once."
-msgstr "Turvallisuussyistä tämä avain näytetään vain kerran."
-
-#. Link label to password reset page from login form
-#: src/features/auth/pages/login.tsx
-msgid "Forgot Password?"
-msgstr "Unohditko salasanasi?"
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Forgot your password?"
-msgstr "Unohditko salasanasi?"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgctxt "Page Format (A4, Letter, Free-form)"
@@ -2263,10 +1909,6 @@ msgstr "Muoto"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Format stylesheet"
 msgstr "Muotoile tyylitiedosto"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Free"
-msgstr "Ilmainen"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Free-form"
@@ -2310,16 +1952,8 @@ msgstr "Luo satunnainen nimi"
 msgid "German"
 msgstr "saksa"
 
-#. Authentication provider display name in account settings
-#. Brand name label for GitHub social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "GitHub"
-msgstr "GitHub"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "GitHub connected"
+#: src/routes/_home/-sections/features.tsx
+msgid "Give cloudcoffee a job description and build a focused resume around the evidence that matters most."
 msgstr ""
 
 #: src/features/ats-checker/messages.ts
@@ -2330,18 +1964,12 @@ msgstr "Anna jokaiselle roolille ajanjakso, kuten \"Jan 2020 - Present\", jotta 
 msgid "Give every role and qualification a date range."
 msgstr "Anna jokaiselle roolille ja pätevyydelle päivämääräväli."
 
-#. Secondary navigation button on backup-code verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Go Back"
-msgstr "Palaa takaisin"
-
 #: src/components/layout/not-found-screen.tsx
 msgid "Go home"
 msgstr "Mene kotiin"
 
 #: src/components/layout/error-screen.tsx
 #: src/components/layout/not-found-screen.tsx
-#: src/routes/_home/-sections/header.tsx
 msgid "Go to dashboard"
 msgstr "Siirry hallintapaneeliin"
 
@@ -2354,16 +1982,13 @@ msgstr "Siirry ansioluetteloiden kojelautaan"
 msgid "Go to…"
 msgstr "Siirry kohtaan…"
 
-#. Authentication provider display name in account settings
-#. Brand name label for Google social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Google"
-msgstr "Google"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Google Gemini"
 msgstr "Google Gemini"
+
+#: src/features/auth/components/social-auth.tsx
+msgid "Google sign-in is unavailable. Configure Google OAuth credentials and try again."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "gpt-4.1"
@@ -2431,14 +2056,6 @@ msgstr "heprea"
 msgid "Help me bring more experienced contributors on board, reducing the burden on a single maintainer and accelerating development."
 msgstr "Auta minua tuomaan mukaan kokeneempia tekijöitä, vähentämään yhden ylläpitäjän taakkaa ja nopeuttamaan kehitystä."
 
-#: src/features/settings/pages/preferences.tsx
-msgid "Help translate the app to your language"
-msgstr "Auta kääntämään sovellus omalle kielellesi"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Here's your new API key"
-msgstr "Tässä on uusi API-avaimesi"
-
 #: src/components/level/combobox.tsx
 #: src/dialogs/resume/sections/language.tsx
 #: src/dialogs/resume/sections/skill.tsx
@@ -2459,20 +2076,7 @@ msgstr "Piilota kuvakkeet"
 msgid "Hide Link Underline"
 msgstr "Piilota linkin alleviivaus"
 
-#. Accessible label for button that hides password in registration form
-#. Accessible label for button that hides password in reset-password form
 #. Accessible label for button that hides password on protected resume screen
-#. Accessible label for button that hides the password in login form
-#. Accessible label for toggle button that hides the visible current password
-#. Accessible label for toggle button that hides the visible new password
-#. Accessible label for toggle button that hides the visible password in two-factor disable dialog
-#. Accessible label for toggle button that hides the visible password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Hide password"
 msgstr "Piilota salasana"
@@ -2506,16 +2110,16 @@ msgid "Home"
 msgstr "Etusivu"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How do I share my resume?"
-msgstr "Miten jaan ansioluetteloni?"
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "How do I use the API?"
-msgstr "Miten käytän rajapintaa (API:a)?"
+msgid "How do connected tools help?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How is my data protected?"
-msgstr "Miten tietojani suojataan?"
+msgid "How does resume tailoring work?"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "How it works"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "https://gateway.example.com/v1"
@@ -2627,13 +2231,7 @@ msgstr "Näkymät"
 msgid "Inspecting page {0} of {1}…"
 msgstr "Tarkastetaan sivua {0}/{1}…"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Instant Generation"
-msgstr "Välitön sukupolvi"
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/integrations/route.tsx
 msgid "Integrations"
 msgstr "Integraatiot"
 
@@ -2646,14 +2244,6 @@ msgstr "Kiinnostuksen kohteet"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Invalid AI provider configuration."
 msgstr "Virheellinen tekoälypalveluntarjoajan määritys."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee available in multiple languages?"
-msgstr "Onko cloudcoffee saatavilla useilla kielillä?"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee really free?"
-msgstr "Onko cloudcoffee oikeasti ilmainen?"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2701,29 +2291,14 @@ msgid "Jobs"
 msgstr "Työpaikat"
 
 #. Example full name placeholder on profile settings form
-#. Example full name placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "John Doe"
 msgstr "John Doe"
 
 #. Example username placeholder on profile settings form
-#. Example username placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "john.doe"
 msgstr "John.Doe"
-
-#. Example email placeholder for login identifier field
-#. Example email placeholder on forgot-password form
-#. Example email placeholder on profile settings form
-#. Example email placeholder on registration form
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/settings/pages/profile.tsx
-msgid "john.doe@example.com"
-msgstr "john.doe@example.com"
 
 #. Import source option for standard JSON Resume format
 #: src/dialogs/resume/import.tsx
@@ -2745,6 +2320,10 @@ msgstr "Pidä vain yksi osoite, jotta mitään ei tarvitse arvata."
 #: src/features/ats-checker/messages.ts
 msgid "Keep it under 2.5 MB, usually by removing or shrinking images."
 msgstr "Pidä se alle 2,5 megatavun, yleensä poistamalla tai pienentämällä kuvia."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Keep proof attached"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Keep resume content as real text rather than as pictures of text."
@@ -2799,7 +2378,7 @@ msgstr "Vaaka"
 #. Menu item that opens language selection submenu
 #: src/dialogs/resume/sections/language.tsx
 #: src/features/command-palette/pages/preferences/language.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Language"
@@ -2927,14 +2506,6 @@ msgstr "Yhdistä ansioluettelo ja liitä työnkuvaus (Muokkaa), niin voit pistey
 msgid "Linked cloudcoffee"
 msgstr "Linkitetty cloudcoffee"
 
-#. Authentication provider display name in account settings
-#. Brand name label for LinkedIn social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
 msgstr "LinkedIn, suosittelu…"
@@ -2942,10 +2513,6 @@ msgstr "LinkedIn, suosittelu…"
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
 msgstr "cloudcoffeen linkittäminen ottaa käyttöön tekoälyn vastaavuuspisteytyksen ja räätälöinnin."
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Linking your {providerName} account..."
-msgstr "Yhdistetään tiliäsi palvelussa {providerName}..."
 
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
@@ -2966,6 +2533,10 @@ msgstr "Ladataan tekoälypalveluntarjoajia. Yritä uudelleen hetken kuluttua."
 #: src/features/command-palette/pages/resumes.tsx
 msgid "Loading applications…"
 msgstr "Sovellusten lataaminen…"
+
+#: src/features/settings/profile/index.tsx
+msgid "Loading profile..."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
@@ -3011,11 +2582,6 @@ msgstr "Pitkiä jaksoja on kirjoitettu suuraakkosin."
 msgid "Long-term Sustainability"
 msgstr "Pitkäaikainen kestävyys"
 
-#. Link to backup-code verification flow when authenticator app is unavailable
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Lost access to your authenticator?"
-msgstr "Etkö pääse käsiksi todennussovellukseesi?"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Low impact"
 msgstr "Vähäinen vaikutus"
@@ -3045,6 +2611,10 @@ msgstr "malaiji"
 msgid "Malayalam"
 msgstr "malajalam"
 
+#: src/features/settings/pages/account.tsx
+msgid "Manage the identity and email used by your cloudcoffee account."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Many bullets start with the same phrase."
 msgstr "Monet luettelokohdat alkavat samalla ilmauksella."
@@ -3068,10 +2638,6 @@ msgstr "Merkitse hylätyksi"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Match scoring failed."
 msgstr "Sopivuuden pisteytys epäonnistui."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Matched to Senior Product Engineer"
-msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
@@ -3142,17 +2708,11 @@ msgstr "Siirrä sähköpostiosoitteesi ja puhelinnumerosi ensimmäisen sivun alk
 msgid "Moved to"
 msgstr "Siirretty kohteeseen"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Multilingual"
-msgstr "Monikielinen"
-
 #. Placeholder text for custom link URL field in resume builder
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Must start with https://"
 msgstr "Aloitettava osoitteesta https://"
 
-#. Label for full name input on registration form
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/interest.tsx
 #: src/dialogs/resume/sections/project.tsx
@@ -3160,7 +2720,6 @@ msgstr "Aloitettava osoitteesta https://"
 #: src/dialogs/resume/sections/skill.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/ats-checker/parse-preview.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 #: src/routes/dashboard/resumes/index.tsx
@@ -3175,10 +2734,6 @@ msgstr "nepali"
 msgid "Network"
 msgstr "Verkosto"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Never expires"
-msgstr "Ei koskaan vanhene"
-
 #: src/features/auth/pages/error.tsx
 msgid "New account sign-ups are currently disabled on this server."
 msgstr "Uusien tilien luonti on tällä palvelimella tällä hetkellä poistettu käytöstä."
@@ -3187,10 +2742,6 @@ msgstr "Uusien tilien luonti on tällä palvelimella tällä hetkellä poistettu
 #: src/features/command-palette/pages/resumes.tsx
 msgid "New Application"
 msgstr "Uusi hakemus"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "New features are constantly being added and improved, so be sure to check back often."
-msgstr "Uusia ominaisuuksia lisätään ja parannetaan jatkuvasti, joten käy katsomassa säännöllisesti uudelleen."
 
 #: src/components/input/rich-input.tsx
 msgid "New Line"
@@ -3201,12 +2752,6 @@ msgstr "Uusi rivi"
 msgid "New Page"
 msgstr "Uusi sivu"
 
-#. Label for new password input on reset-password form
-#: src/dialogs/auth/change-password.tsx
-#: src/features/auth/pages/reset-password.tsx
-msgid "New Password"
-msgstr "Uusi salasana"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "New Section"
 msgstr "Uusi osio"
@@ -3214,10 +2759,6 @@ msgstr "Uusi osio"
 #: src/features/applications/components/table-view.tsx
 msgid "New tag…"
 msgstr "Uusi tunniste…"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "No Advertising, No Tracking"
-msgstr "Ei mainoksia, ei seurantaa"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3259,10 +2800,6 @@ msgstr "Yksikään rivi ei näytä tehtävänimikkeeltä yhdistettynä työnanta
 #: src/routes/_home/ats-checker.tsx
 msgid "No one-page rule, and no treating a font or a career gap as a fault."
 msgstr "Ei yhden sivun sääntöä eikä fontin tai urakatkoksen pitämistä virheenä."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "No passkeys registered yet."
-msgstr "Ei vielä rekisteröityjä kulkulupia."
 
 #: src/features/ats-checker/messages.ts
 msgid "No phone number was found."
@@ -3382,9 +2919,9 @@ msgstr "odia"
 msgid "Ollama Cloud"
 msgstr "Ollama Cloud"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "One-Click Sign-In"
-msgstr "Yhden klikkauksen kirjautuminen"
+#: src/routes/_home/-sections/hero.tsx
+msgid "One knowledge base for every project, launch, and win. Connect your tools, ask anything, and tailor the right resume for any role."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Ongoing Maintenance"
@@ -3419,22 +2956,13 @@ msgstr "Vain ensimmäiset sivut tarkistettiin."
 msgid "Open"
 msgstr "Avaa"
 
-#. Button label to open the user's default email app
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Open Email Client"
-msgstr "Avaa sähköpostiohjelma"
+#: src/features/ats-checker/ai-review/ai-review-card.tsx
+msgid "Open Account Settings"
+msgstr ""
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "Avoin tarkennustila"
-
-#: src/features/ats-checker/ai-review/ai-review-card.tsx
-msgid "Open Integrations Settings"
-msgstr "Avaa Integraatioiden asetukset"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Open Source"
-msgstr "Avoin lähdekoodi"
 
 #: src/features/ats-checker/messages.ts
 msgid "Open the exported file and confirm you can select and copy every part of it."
@@ -3458,7 +2986,6 @@ msgstr "OpenRouter"
 
 #: src/features/resume/stylesheet/editor.tsx
 #: src/routes/_home/-sections/donate.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "avautuu uuteen välilehteen"
 
@@ -3473,11 +3000,6 @@ msgstr "Valinnaisesti myös, mitkä työpaikkailmoituksen termit jo esiintyvät.
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Options for {title}"
 msgstr "Vaihtoehdot kohteelle {title}"
-
-#: src/features/auth/components/social-auth.tsx
-msgctxt "Choose to authenticate with a social provider (Google, GitHub, etc.) instead of email and password"
-msgid "or continue with"
-msgstr "tai jatka käyttäen"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Or upload a resume PDF"
@@ -3515,50 +3037,14 @@ msgstr "Kappale"
 msgid "Paragraph and heading style"
 msgstr "Kappale- ja otsikkotyyli"
 
-#. Authentication provider display name in account settings
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Passkey"
-msgstr "Passkey"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey deleted successfully."
-msgstr "Avain poistettu onnistuneesti."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey registered successfully."
-msgstr "Avain rekisteröity onnistuneesti."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Passkeys & 2FA"
-msgstr "Avaimet & 2FA"
-
-#. Authentication provider display name in account settings
-#. Label for password input on login form
 #. Label for password input on protected resume access form
-#. Label for password input on registration form
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/resume-password.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/features/settings/authentication/components/password.tsx
 msgid "Password"
 msgstr "Salasana"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password cannot be empty."
 msgstr "Salasana ei voi olla tyhjä."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Password Protection"
-msgstr "Salasanasuojaus"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password protection has been disabled."
@@ -3609,9 +3095,9 @@ msgstr "Hämmennys"
 msgid "Persian"
 msgstr "persia"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Personalize your resume with any colors, fonts or designs, and make it your own."
-msgstr "Personoi ansioluettelosi millä tahansa väreillä, fonteilla tai ulkoasuilla ja tee siitä omannäköisesi."
+#: src/features/settings/pages/account.tsx
+msgid "Personal details"
+msgstr ""
 
 #: src/dialogs/resume/sections/reference.tsx
 #: src/features/ats-checker/parse-preview.tsx
@@ -3646,10 +3132,6 @@ msgstr "Aseta se sivulle Asettelu-paneelista tai piilota se, jos aiot pysäköid
 #: src/features/resume/export/download-dialog.tsx
 msgid "Plain text, ideal for AI tools and quick edits."
 msgstr "Pelkkä teksti, ihanteellinen AI-työkaluille ja nopeisiin muokkauksiin."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Please enter a new password for your account"
-msgstr "Syötä uusi salasana tilillesi"
 
 #: src/features/auth/pages/resume-password.tsx
 msgid "Please enter the password shared with you by the owner of the resume to continue."
@@ -3702,9 +3184,6 @@ msgid "Prefer a single column, or keep the side column to short, self-contained 
 msgstr "Suosi yhtä saraketta, tai pidä sivusarake lyhyissä, itsenäisissä listoissa."
 
 #: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/preferences/index.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "Asetukset"
 
@@ -3745,13 +3224,16 @@ msgstr "Pääväri"
 msgid "Print or export the form to a flat PDF before sending it."
 msgstr "Tulosta tai vie lomake tasoitettuna PDF:nä ennen sen lähettämistä."
 
+#: src/routes/_home/-sections/footer.tsx
+msgid "Product"
+msgstr ""
+
 #: src/dialogs/resume/sections/skill.tsx
 msgid "Proficiency"
 msgstr "Osaamistaso"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/profile.tsx
 msgid "Profile"
 msgstr "Profiili"
 
@@ -3765,23 +3247,19 @@ msgstr "Profiilit"
 msgid "Progress Bar"
 msgstr "Edistymispalkki"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Project captured"
-msgstr ""
-
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
 msgid "Projects"
 msgstr "Projektit"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Projects, launches, hackathons, awards, feedback, metrics, lessons, links, and any other evidence that helps explain what you have accomplished."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Protect your resume from unauthorized access with a password"
 msgstr "Suojaa ansioluettelosi luvattomalta käytöltä salasanalla"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Protect your resume with a password, and let only people with the password view it."
-msgstr "Suojaa ansioluettelosi salasanalla ja anna vain salasanan tietävien nähdä se."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Provider"
@@ -3812,6 +3290,10 @@ msgstr "Julkaisija"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "Sijoita tavallinen sähköpostiosoite lähelle ensimmäisen sivun alkua. Sen mukaan useimmat järjestelmät luokittelevat sinut."
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Questions"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -3906,13 +3388,13 @@ msgstr "Suosittelijat"
 msgid "Referred by…, things to emphasize, etc."
 msgstr "Suosittelija…, korostettavat asiat jne."
 
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Register New Device"
-msgstr "Rekisteröi uusi laite"
+#: src/routes/_home/-sections/features.tsx
+msgid "Refine, format, and export a professional resume without rebuilding your history from scratch."
+msgstr ""
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Remember your password? <0/>"
-msgstr "Muistatko salasanasi? <0/>"
+#: src/routes/_home/-sections/features.tsx
+msgid "Remember every career win."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Remote, Hybrid, a city…"
@@ -3988,18 +3470,6 @@ msgstr "Korvaa taulukot tavallisilla kappaleilla ja listoilla. Solut poimitaan t
 msgid "Report a Bug"
 msgstr "Ilmoita virheestä"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Report an issue"
-msgstr "Ilmoita ongelmasta"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resend verification email"
-msgstr "Lähetä vahvistussähköposti uudelleen"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resending verification email..."
-msgstr "Lähetetään vahvistussähköpostia uudelleen..."
-
 #: src/features/ats-checker/messages.ts
 msgid "Reserve capitals for short headings. They slow reading and can defeat case-sensitive search."
 msgstr "Käytä suuraakkosia vain lyhyissä otsikoissa. Ne hidastavat lukemista ja voivat haitata kirjainkoon huomioivaa hakua."
@@ -4008,23 +3478,6 @@ msgstr "Käytä suuraakkosia vain lyhyissä otsikoissa. Ne hidastavat lukemista 
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Reset"
 msgstr "Palauta"
-
-#. Primary action button label on reset-password form
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset Password"
-msgstr "Palauta salasana"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset your password"
-msgstr "Palauta salasanasi"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Resetting your password..."
-msgstr "Palautetaan salasanaasi..."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Resources"
-msgstr "Resurssit"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
@@ -4051,13 +3504,8 @@ msgstr "Ansioluettelo linkitetty"
 msgid "Resume options"
 msgstr "Ansioluettelovaihtoehdot"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Resume tailored"
-msgstr ""
-
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/_home/-sections/statistics.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/resumes/index.tsx
 msgid "Resumes"
@@ -4124,9 +3572,7 @@ msgstr "Palkka"
 msgid "Salary range"
 msgstr "Palkkahaarukka"
 
-#. Passkey rename prompt confirm action in authentication settings
 #: src/features/applications/components/application-detail-sheet.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
 msgid "Save"
 msgstr "Tallenna"
 
@@ -4163,12 +3609,17 @@ msgstr "Tallenna muutokset"
 #: src/dialogs/resume/sections/summary-item.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
 #: src/features/settings/pages/profile.tsx
+#: src/features/settings/profile/index.tsx
 msgid "Save Changes"
 msgstr "Tallenna muutokset"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Save model"
 msgstr "Tallenna malli"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Save projects, launches, hackathons, metrics, feedback, and hard-earned lessons while they are still fresh."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Save the file with every page upright."
@@ -4181,10 +3632,6 @@ msgstr "Tallennettu"
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
 msgstr "Tallennetaan…"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
-msgstr "Skannaa alla oleva QR-koodi haluamallasi todennussovelluksella. Voit myös kopioida alla olevan salaisuuden ja liittää sen sovellukseesi."
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "School"
@@ -4234,10 +3681,6 @@ msgstr "Etsi..."
 msgid "Search…"
 msgstr "Hae…"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Secret copied to clipboard."
-msgstr "Salaisuus kopioitu leikepöydälle."
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Section options"
@@ -4261,8 +3704,8 @@ msgid "See how this resume matches the posting"
 msgstr "Katso, miten tämä ansioluettelo vastaa ilmoitusta"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "See what an applicant tracking system can read from your resume. Runs in your browser."
-msgstr "Katso, mitä hakijaseurantajärjestelmä pystyy lukemaan ansioluettelostasi. Toimii selaimessasi."
+msgid "See what an applicant tracking system can read before your resume reaches a recruiter."
+msgstr ""
 
 #. placeholder {0}: app.company
 #: src/features/applications/components/table-view.tsx
@@ -4285,26 +3728,13 @@ msgstr "Valitse..."
 msgid "selected"
 msgstr "valittu"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Self-Host with Docker"
-msgstr "Itse-isännöinti Dockerilla"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "Semanttinen CSS-tyylitiedosto"
 
-#. Primary action button label on forgot-password form
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Send Password Reset Email"
-msgstr "Lähetä salasanan palautussähköposti"
-
 #: src/features/ats-checker/messages.ts
 msgid "Send the resume itself rather than a portfolio wrapper."
 msgstr "Lähetä itse ansioluettelo portfoliokääreen sijaan."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sending password reset email..."
-msgstr "Lähetetään salasanan palautussähköpostia..."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Sends the text already extracted from your PDF to the AI provider you choose below. The PDF file itself is never uploaded."
@@ -4322,7 +3752,6 @@ msgstr "Erotin"
 msgid "Serbian"
 msgstr "serbia"
 
-#: src/features/settings/authentication/components/password.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Set Password"
 msgstr "Aseta salasana"
@@ -4340,25 +3769,25 @@ msgstr "Määritä palveluntarjoaja"
 msgid "Settings"
 msgstr "Asetukset"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Setup Authenticator App"
-msgstr "Ota todennussovellus käyttöön"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Shadow Width"
 msgstr "Varjon leveys"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "Share your resume with a public URL, and let others view it."
-msgstr "Jaa ansioluettelosi julkisella URL-osoitteella ja anna muiden tarkastella sitä."
+msgid "Shape raw career history into concise bullets, project summaries, and interview-ready stories."
+msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Shareable Links"
-msgstr "Jaettavat linkit"
+#: src/routes/_home/-sections/faq.tsx
+msgid "Share a job description and cloudcoffee selects the most relevant evidence from your career base, then helps shape it into a focused resume you can refine."
+msgstr ""
 
 #: src/libs/resume/section.tsx
 msgid "Sharing"
 msgstr "Jakaminen"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ship a polished resume"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -4383,20 +3812,7 @@ msgstr "Näytä {0} lisää"
 msgid "Show link in title"
 msgstr "Näytä linkki otsikossa"
 
-#. Accessible label for button that reveals password in registration form
-#. Accessible label for button that reveals password in reset-password form
 #. Accessible label for button that reveals password on protected resume screen
-#. Accessible label for button that reveals the password in login form
-#. Accessible label for toggle button that reveals the masked current password
-#. Accessible label for toggle button that reveals the masked new password
-#. Accessible label for toggle button that reveals the masked password in two-factor disable dialog
-#. Accessible label for toggle button that reveals the masked password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Show password"
 msgstr "Näytä salasana"
@@ -4424,9 +3840,8 @@ msgstr "Sivupalkki"
 msgid "Sidebar Width"
 msgstr "Sivupalkin leveys"
 
-#. Primary action button label on login form
 #: src/features/ats-checker/ai-review/locked-card.tsx
-#: src/features/auth/pages/login.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "Sign in"
 msgstr "Kirjaudu sisään"
 
@@ -4434,26 +3849,10 @@ msgstr "Kirjaudu sisään"
 msgid "Sign in and connect your own AI provider to get rewrite suggestions for weak bullets. The checks above are free and need no account."
 msgstr "Kirjaudu sisään ja yhdistä oma tekoälypalveluntarjoajasi saadaksesi uudelleenkirjoitusehdotuksia heikoille luettelokohdille. Yllä olevat tarkistukset ovat ilmaisia eivätkä vaadi tiliä."
 
-#. Call-to-action link from forgot-password page to login page
-#. Call-to-action link from registration page to login page
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Sign in now"
-msgstr "Kirjaudu sisään nyt"
-
 #. Title on the login page
 #: src/features/auth/pages/login.tsx
 msgid "Sign in to your account"
 msgstr "Kirjaudu tilillesi"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Sign in with GitHub, Google or a custom OAuth provider."
-msgstr "Kirjaudu sisään GitHubilla, Googlella tai mukautetulla OAuth-palveluntarjoajalla."
-
-#. Primary action button label on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Sign up"
-msgstr "Rekisteröidy"
 
 #. Title on the page shown after a failed or cancelled OAuth sign-in
 #: src/features/auth/pages/error.tsx
@@ -4461,17 +3860,12 @@ msgid "Sign-in didn't complete"
 msgstr "Kirjautuminen ei valmistunut"
 
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Signing in..."
 msgstr "Kirjaudutaan sisään..."
 
 #: src/features/user/dropdown-menu.tsx
 msgid "Signing out..."
 msgstr "Kirjaudutaan ulos..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Signing up..."
-msgstr "Rekisteröidytään..."
 
 #: src/dialogs/resume/template/data.ts
 msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
@@ -4579,7 +3973,6 @@ msgstr "Lajittele…"
 msgid "Source"
 msgstr "Lähde"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "Lähdekoodi"
@@ -4596,6 +3989,10 @@ msgstr "Väli (pysty)"
 msgid "Spanish"
 msgstr "espanja"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "speed of opportunity."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "Kirjoita kuukausi sanoin, kuten \"Mar 2022\"."
@@ -4603,10 +4000,6 @@ msgstr "Kirjoita kuukausi sanoin, kuten \"Mar 2022\"."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "Sponsorit"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Sponsorships"
-msgstr "Sponsorisopimukset"
 
 #. Preset button for setting picture aspect ratio to square
 #: src/components/level/combobox.tsx
@@ -4687,10 +4080,6 @@ msgstr "Tyylitiedostoeditori"
 msgid "Stylesheet has fatal errors"
 msgstr "Tyylitiedostossa on vakavia virheitä"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Subreddit"
-msgstr "Subreddit"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Suggestions"
 msgstr "Ehdotukset"
@@ -4759,6 +4148,10 @@ msgstr "Tagit antavat ohjelmistolle selkeän lukujärjestyksen. Ota ne käyttö�
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "Mukauta ansioluetteloni"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Tailor to any role"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -4850,14 +4243,6 @@ msgstr "Kyseinen palveluntarjoajan tili käyttää eri sähköpostiosoitetta kui
 msgid "That sign-in provider is no longer available on this server."
 msgstr "Kyseinen kirjautumispalvelu ei ole enää käytettävissä tällä palvelimella."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key has been deleted successfully."
-msgstr "API-avain on poistettu onnistuneesti."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key will no longer be able to access your data after deletion. This action cannot be undone."
-msgstr "API-avain ei voi enää käyttää tietojasi poistamisen jälkeen. Tätä toimintoa ei voi perua."
-
 #: src/features/auth/pages/error.tsx
 msgid "The application that sent you here made an invalid authorization request."
 msgstr "Sovellus, joka lähetti sinut tänne, teki virheellisen valtuutuspyynnön."
@@ -4947,14 +4332,10 @@ msgstr "Antamasi URL-osoite ei ole kelvollinen."
 
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 msgid "Theme"
 msgstr "Teema"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Then, enter the 6 digit code that the app provides to continue."
-msgstr "Syötä sitten sovelluksen antama kuusinumeroinen koodi jatkaaksesi."
 
 #: src/features/ats-checker/messages.ts
 msgid "There is a gap between two dated roles."
@@ -5177,18 +4558,6 @@ msgstr "Tämä osio sijaitsee sivupalkissa."
 msgid "This sign-in attempt expired or was already used. Please start again."
 msgstr "Tämä kirjautumisyritys on vanhentunut tai jo käytetty. Aloita alusta."
 
-#: src/features/auth/pages/register.tsx
-msgid "This step is optional, but recommended."
-msgstr "Tämä vaihe on vapaaehtoinen, mutta suositeltava."
-
-#: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
-msgstr "Tämä luo uuden API-avaimen cloudcoffee -rajapinnan käyttöä varten, jotta koneet voivat käsitellä ansioluettelotietojasi."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "This will help you identify it later, if you plan to have multiple passkeys."
-msgstr "Tämä auttaa sinua tunnistamaan sen myöhemmin, jos aiot käyttää useita tunnuslukuja."
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "Tämä poistaa kaikki kohteet tästä osiosta."
@@ -5200,10 +4569,6 @@ msgstr "Aikajana"
 #: src/features/ats-checker/messages.ts
 msgid "Tip"
 msgstr "Vihje"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Tip: Give your API key a name, corresponding to the purpose of the key, to help you identify it later."
-msgstr "Vinkki: Anna API-avaimellesi nimi, joka vastaa sen käyttötarkoitusta, jotta tunnistat sen myöhemmin."
 
 #: src/dialogs/resume/index.tsx
 msgid "Tip: You can name the resume referring to the position you are applying for."
@@ -5255,7 +4620,6 @@ msgstr "Seuraa ensimmäistä hakemustasi"
 msgid "Track your resume's views and downloads"
 msgstr "Seuraa ansioluettelosi katseluita ja latauksia"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "Käännökset"
@@ -5268,6 +4632,10 @@ msgstr "Yritä uudelleen"
 msgid "Turkish"
 msgstr "turkki"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Turn memory into language"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Turn off discretionary ligatures when exporting."
 msgstr "Poista valinnaiset ligatuurit käytöstä viedessäsi."
@@ -5275,24 +4643,6 @@ msgstr "Poista valinnaiset ligatuurit käytöstä viedessäsi."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "Ota julkinen jakaminen käyttöön seurataksesi, kuinka monta kertaa ansioluettelosi on katsottu tai ladattu. Vain sinä näet ansioluettelosi tilastot."
-
-#: src/features/auth/pages/verify-2fa.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Two-Factor Authentication"
-msgstr "Kaksivaiheinen todennus"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Two-factor authentication has been disabled successfully."
-msgstr "Kaksivaiheinen todennus on poistettu käytöstä onnistuneesti."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-factor authentication has been setup successfully."
-msgstr "Kaksivaiheinen todennus on otettu käyttöön onnistuneesti."
-
-#. Accessible title for QR code image shown during two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-Factor Authentication QR Code"
-msgstr "Kaksitekijätodennus QR-koodi"
 
 #: src/dialogs/resume/import.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -5335,14 +4685,6 @@ msgstr "Kumoa"
 msgid "Undo stylesheet edit"
 msgstr "Kumoa tyylitiedoston muokkaus"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Unlimited Resumes"
-msgstr "Rajoittamattomasti ansioluetteloita"
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Unlinking your {providerName} account..."
-msgstr "Katkaistaan yhteys palveluun {providerName}..."
-
 #. Primary action button label to unlock a password-protected resume
 #. Resume card context menu action to remove edit lock
 #. Resume card dropdown action to remove edit lock
@@ -5352,14 +4694,6 @@ msgstr "Katkaistaan yhteys palveluun {providerName}..."
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Unlock"
 msgstr "Avaa lukitus"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Unnamed passkey"
-msgstr "Nimetön kulkuavain"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Unverified"
-msgstr "Vahvistamaton"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -5426,12 +4760,6 @@ msgstr "Päivitä olemassa oleva yhteenvetokohta"
 msgid "Update an existing volunteer experience"
 msgstr "Päivitä olemassa oleva vapaaehtoistyökokemus"
 
-#. Primary action button to submit changed password
-#: src/dialogs/auth/change-password.tsx
-#: src/features/settings/authentication/components/password.tsx
-msgid "Update Password"
-msgstr "Päivitä salasana"
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "Päivitä ansioluettelo"
@@ -5447,14 +4775,6 @@ msgstr "Päivitä tämän hakemuksen tiedot."
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Update this timeline note."
 msgstr "Päivitä tämä aikajanamuistiinpano."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Update your password"
-msgstr "Päivitä salasanasi"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Updating your password..."
-msgstr "Päivitetään salasanaasi..."
 
 #: src/dialogs/resume/index.tsx
 msgid "Updating your resume..."
@@ -5547,16 +4867,10 @@ msgstr "Käytä esimerkkiä"
 msgid "Use your editor's normal bullet list, so stray glyphs do not land mid-sentence."
 msgstr "Käytä editorisi tavallista luettelomerkkilistaa, jotta irralliset merkit eivät päädy kesken lauseen."
 
-#. Label for username input on registration form
 #: src/dialogs/resume/sections/profile.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Username"
 msgstr "Käyttäjätunnus"
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Users"
-msgstr "Käyttäjät"
 
 #: src/libs/locale.ts
 msgid "Uzbek"
@@ -5586,39 +4900,9 @@ msgstr "Vaihtele aloituksia, jotta osio ei vaikuta vakiotekstiltä."
 msgid "Vercel AI Gateway"
 msgstr "Vercel AI Gateway"
 
-#: src/features/settings/pages/profile.tsx
-msgid "Verified"
-msgstr "Vahvistettu"
-
-#. Primary action button to submit 2FA code
-#. Primary action button to submit backup code
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify"
-msgstr "Vahvista"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify with a Backup Code"
-msgstr "Vahvista varmuuskoodilla"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying backup code..."
-msgstr "Vahvistetaan varmuuskoodia..."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying code..."
-msgstr "Vahvistetaan koodia..."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Verifying code…"
-msgstr "Vahvistuskoodi…"
-
 #: src/features/auth/pages/resume-password.tsx
 msgid "Verifying password..."
 msgstr "Vahvistetaan salasanaa..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Verifying your email is required when resetting your password."
-msgstr "Sähköpostin vahvistus vaaditaan, kun palautat salasanaasi."
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Version history"
@@ -5696,13 +4980,17 @@ msgstr "Mitä jäsentäjä lukee"
 msgid "What a person sees"
 msgstr "Mitä ihminen näkee"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I add to my career base?"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I ask my career knowledge base?"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "Miksi haluat nimetä tämän osion uudelleen?"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "What makes cloudcoffee different from other resume builders?"
-msgstr "Mikä erottaa cloudcoffeen muista ansioluettelon laatijoista?"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -5797,33 +5085,17 @@ msgstr "Kirjoita koko osoite, mukaan lukien https://."
 msgid "Writing"
 msgstr "Kirjoitus"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "X (Twitter)"
-msgstr "X (Twitter)"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "xAI Grok"
 msgstr "xAI Grok"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "Kyllä, cloudcoffee on saatavilla useilla kielillä. Voit valita haluamasi kielen asetussivulla tai oikean yläkulman kielivalitsimesta. Jos et näe omaa kieltäsi tai haluat parantaa olemassa olevia käännöksiä, voit <0>osallistua käännöksiin Crowdinessa<1> (avautuu uuteen välilehteen)</1></0>."
+msgid "Yes. Refine the final resume, export it as a polished PDF, or share it through a public link when you are ready."
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "Kyllä! cloudcoffee on täysin ilmainen käyttää – ei piilokuluja, premium-tasoja tai tilausmaksuja. Se on avoimen lähdekoodin ja pysyy aina ilmaisena."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "You also have the option to deploy on your own servers using the Docker image."
-msgstr "Voit myös ottaa sen käyttöön omilla palvelimillasi Docker-kuvan avulla."
-
-#: src/features/auth/pages/login.tsx
-msgid "You can also use your username to login."
-msgstr "Voit myös käyttää käyttäjätunnustasi kirjautumiseen."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "You can share your resume via a unique public URL, protect it with a password, or download it as a PDF to share directly. The choice is yours!"
-msgstr "Voit jakaa ansioluettelosi yksilöllisen julkisen URL-osoitteen kautta, suojata sen salasanalla tai ladata sen PDF:nä jakaaksesi sen suoraan. Valinta on sinun!"
+msgid "Yes. Your career base stays constant while each resume can emphasize a different role, industry, seniority level, or opportunity."
+msgstr ""
 
 #: src/features/auth/pages/error.tsx
 msgid "You cancelled the sign-in before it finished."
@@ -5834,13 +5106,8 @@ msgid "You have unsaved changes that will be lost."
 msgstr "Sinulla on tallentamattomia muutoksia, jotka menetetään."
 
 #: src/dialogs/resume/import.tsx
-msgid "You'll be taken to the Integrations page. The file you selected won't be imported."
-msgstr "Sinut ohjataan Integraatiot-sivulle. Valitsemaasi tiedostoa ei tuoda."
-
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "You've got mail!"
-msgstr "Sinulle on tullut postia!"
+msgid "You'll be taken to Account settings. The file you selected won't be imported."
+msgstr ""
 
 #: src/features/settings/pages/account.tsx
 msgid "Your account has been deleted successfully."
@@ -5850,9 +5117,9 @@ msgstr "Tilisi on poistettu onnistuneesti."
 msgid "Your AI provider could not be reached. Check its settings and try again."
 msgstr "Tekoälypalveluntarjoajaasi ei tavoitettu. Tarkista sen asetukset ja yritä uudelleen."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Your API key has been copied to the clipboard."
-msgstr "API-avaimesi on kopioitu leikepöydälle."
+#: src/features/settings/profile/index.tsx
+msgid "Your application profile has been saved."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 #: src/libs/resume/ats.ts
@@ -5863,12 +5130,16 @@ msgstr "Tekstisi on hyvin pieni."
 msgid "Your bullets are drawn with unusual characters."
 msgstr "Luettelokohtasi merkitään epätavallisilla merkeillä."
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Your career has a memory."
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Your career already has the proof."
 msgstr ""
 
 #: src/routes/_home/-sections/hero.tsx
 msgid "Your career knowledge base"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Your career knowledge base—ready whenever opportunity appears."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
@@ -5882,14 +5153,6 @@ msgstr "Yhteystietosi eivät ole ensimmäisellä sivulla."
 #: src/features/settings/pages/account.tsx
 msgid "Your data has been exported successfully."
 msgstr "Tietosi on viety onnistuneesti."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Your data is secure, and never shared or sold to anyone."
-msgstr "Tietosi ovat turvassa, eikä niitä koskaan jaeta tai myydä kenellekään."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
-msgstr "Tietosi tallennetaan turvallisesti eikä niitä koskaan jaeta kolmansille osapuolille. Voit myös itseisännöidä cloudcoffeen omilla palvelimillasi täydellisen tietokontrollin takaamiseksi."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -5931,14 +5194,6 @@ msgstr "Marginaalisi ovat hyvin kapeat."
 #: src/libs/resume/ats.ts
 msgid "Your page margins are very narrow."
 msgstr "Sivusi marginaalit ovat hyvin kapeat."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Your password has been reset successfully. You can now sign in with your new password."
-msgstr "Salasanasi on palautettu onnistuneesti. Voit nyt kirjautua sisään uudella salasanallasi."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Your password has been updated successfully."
-msgstr "Salasanasi on päivitetty onnistuneesti."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your phone number is written in an unusual shape."

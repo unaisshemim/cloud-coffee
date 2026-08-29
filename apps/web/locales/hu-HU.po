@@ -27,10 +27,6 @@ msgstr ""
 msgid "\"{0} · {1}\" and its full timeline will be permanently deleted. This can't be undone."
 msgstr "\"{0} · {1}\" és a teljes idővonala véglegesen törlődik. Ez nem vonható vissza."
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "(opens in new tab)"
-msgstr "(új lapon nyílik meg)"
-
 #. placeholder {0}: section.items.length
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "{0, plural, one {# item} other {# items}}"
@@ -124,46 +120,13 @@ msgstr "{passedRules}/{totalRules} ellenőrzés sikeres"
 msgid "{sectionTitle} · Item {itemNumber}"
 msgstr "{sectionTitle} · Tétel: {itemNumber}"
 
-#: src/routes/_home/-sections/faq.tsx
-msgctxt "Home page FAQ section heading with each word visually separated into individual spans"
-msgid "<0>Frequently</0><1>Asked</1><2>Questions</2>"
-msgstr "<0>Gyakran</0><1>Ismételt</1><2>Kérdések</2>"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "<0>Thank you for using cloudcoffee! This app is a labor of love, created mostly in my spare time, with wonderful support from open-source contributors around the world.</0><1>If cloudcoffee has been helpful to you, and you'd like to help keep it free and open for everyone, please consider making a donation. Every little bit is appreciated!</1>"
 msgstr "<0>Köszönjük, hogy a cloudcoffee‑t használod! Ez az alkalmazás szerelemprojekt, amelyet többnyire szabadidőmben készítettem, a világ minden tájáról érkező nyílt forráskódú közreműködők fantasztikus támogatásával.</0><1>Ha a cloudcoffee hasznos volt számodra, és szeretnél segíteni abban, hogy mindenki számára ingyenes és nyílt maradjon, fontold meg az adományozást. Minden apró hozzájárulást nagyra értékelünk!</1>"
 
-#: src/dialogs/api-key/create.tsx
-msgid "1 month"
-msgstr "1 hónap"
-
-#: src/dialogs/api-key/create.tsx
-msgid "1 year"
-msgstr "1 év"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "12 projects added to your career base"
-msgstr ""
-
-#: src/routes/_home/-sections/features.tsx
-msgid "12+ Templates"
-msgstr "12+ sablon"
-
-#: src/dialogs/api-key/create.tsx
-msgid "3 months"
-msgstr "3 hónap"
-
-#: src/dialogs/api-key/create.tsx
-msgid "6 months"
-msgstr "6 hónap"
-
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A clean single-column export keeps every fact. Columns and images are where they get lost."
 msgstr "Egy tiszta, egyoszlopos exportálás minden tényt megőriz. Az oszlopok és képek okozzák az adatvesztést."
-
-#: src/features/settings/pages/profile.tsx
-msgid "A confirmation link has been sent to your current email address. Please check your inbox to confirm the change."
-msgstr "Megerősítő linket küldtünk a jelenlegi e‑mail‑címedre. Kérjük, ellenőrizd a postafiókodat a módosítás megerősítéséhez."
 
 #: src/features/ats-checker/messages.ts
 msgid "A date is in the future."
@@ -180,10 +143,6 @@ msgstr "Egy időintervallum olyan formában van megadva, amelyet a legtöbb szof
 #: src/features/ats-checker/messages.ts
 msgid "A font is referenced but not embedded."
 msgstr "Egy betűtípusra hivatkozik a fájl, de nincs beágyazva."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume."
-msgstr "Ingyenes és nyílt forráskódú önéletrajz készítő, amely leegyszerűsíti az önéletrajz készítésének, frissítésének és megosztásának folyamatát."
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "A friendly nudge for the recruiter"
@@ -210,10 +169,6 @@ msgstr "Az önéletrajzod linkjét a vágólapra másoltuk."
 msgid "A lot of people have written to me over the years to share their experiences with cloudcoffee and how it has helped them, and I never get tired of reading them. If you have a story to share, let me know by sending me an email at <0>{email}</0>."
 msgstr "Évek óta rengetegen írtak nekem, hogy megosszák a cloudcoffee‑val kapcsolatos tapasztalataikat és azt, hogyan segített nekik – és soha nem unom meg ezeket olvasni. Ha neked is van egy történeted, oszd meg velem egy e‑mailben a következő címen: <0>{email}</0>."
 
-#: src/features/settings/pages/profile.tsx
-msgid "A new verification link has been sent to your email address. Please check your inbox to verify your account."
-msgstr "Új megerősítő linket küldtünk az e‑mail‑címedre. Kérjük, ellenőrizd a postafiókodat a fiókod hitelesítéséhez."
-
 #: src/features/ats-checker/messages.ts
 msgid "A numeric date reads differently in different countries."
 msgstr "Egy számjegyekkel írt dátum országonként másképp értelmezhető."
@@ -225,10 +180,6 @@ msgstr "Egy oldal el van forgatva."
 #: src/components/ui/copyright.tsx
 msgid "A passion project by <0>Amruth Pillai</0>."
 msgstr "Egy szenvedélyprojekt <0>Amruth Pillai</0> tollából."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "A pixel-art career meadow with a laptop and a glowing knowledge tree"
-msgstr ""
 
 #: src/features/ats-checker/parse-preview.tsx
 msgid "A resume laid out for a human reader, with a photo, headings and columns"
@@ -245,14 +196,6 @@ msgstr "Egy webcím https:// nélkül van megadva."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "A4"
 msgstr "A4"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Absolutely! You can export your resume to PDF with a single click. The exported PDF maintains all your formatting and styling perfectly."
-msgstr "Természetesen! Egy kattintással PDF‑be exportálhatod az önéletrajzodat. Az exportált PDF tökéletesen megőrzi az összes formázást és stílust."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Access your resumes and data programmatically using the API."
-msgstr "Férj hozzá az önéletrajzaidhoz és adataidhoz programozottan az API segítségével."
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
@@ -486,6 +429,10 @@ msgstr ""
 msgid "AI provider management is unavailable. Please try again."
 msgstr "A mesterséges intelligencia szolgáltató kezelése nem érhető el. Kérjük, próbálja újra."
 
+#: src/features/settings/pages/account.tsx
+msgid "AI providers"
+msgstr ""
+
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "AI Providers"
 msgstr "MI-szolgáltatók"
@@ -514,13 +461,13 @@ msgstr "Szinte egyik felsoroláspontod sem tartalmaz számadatot."
 msgid "Already covered"
 msgstr "Már szerepel"
 
-#: src/features/auth/pages/register.tsx
-msgid "Already have an account? <0/>"
-msgstr "Már van fiókja? <0/>"
-
 #: src/libs/locale.ts
 msgid "Amharic"
 msgstr "amhara"
+
+#: src/routes/_home/-sections/hero.tsx
+msgid "An editorial career collage with a data crystal and a flying laptop"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "An embedded font could not be read."
@@ -534,10 +481,6 @@ msgstr "Egy váratlan hiba miatt nem sikerült betölteni ezt az oldalt. Megpró
 #: src/dialogs/resume/import.tsx
 msgid "An unknown error occurred while importing your resume."
 msgstr "Ismeretlen hiba történt az önéletrajz importálása közben."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "And many more..."
-msgstr "– És még sok más..."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Anthropic Claude"
@@ -559,31 +502,21 @@ msgstr "Az önéletrajz nyilvános URL‑jével rendelkező bárki jelszó nélk
 msgid "Anyone with the link can view and download the resume."
 msgstr "A link birtokában bárki megtekintheti és letöltheti az önéletrajzot."
 
-#: src/routes/_home/-sections/features.tsx
-msgid "API Access"
-msgstr "API hozzáférés"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API Key"
 msgstr "API kulcs"
-
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/api-keys.tsx
-msgid "API Keys"
-msgstr "API kulcsok"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "API keys are encrypted on the server and never shown again after saving."
 msgstr "Az API-kulcsok titkosítva vannak a szerveren, és mentés után soha többé nem jelennek meg."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "API Reference"
-msgstr "API referencia"
-
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "App"
 msgstr "Alkalmazás"
+
+#: src/features/settings/pages/account.tsx
+msgid "Appearance & language"
+msgstr ""
 
 #: src/features/applications/components/application-actions-menu.tsx
 msgid "Application actions"
@@ -601,10 +534,6 @@ msgstr "Jelentkezési Copilot"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Application deleted."
 msgstr "A jelentkezés törölve."
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Application Statistics"
-msgstr "Alkalmazásstatisztikák"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Application updated."
@@ -651,10 +580,6 @@ msgstr "Archiválva"
 msgid "Are you sure you want to close this dialog?"
 msgstr "Biztosan be szeretné zárni ezt a párbeszédpanelt?"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Are you sure you want to delete this API key?"
-msgstr "Biztosan törölni szeretnéd ezt az API kulcsot?"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Are you sure you want to delete this custom section?"
 msgstr "Biztos, hogy törölni szeretné ezt az egyéni részt?"
@@ -693,6 +618,14 @@ msgstr "Tanulmányok területe"
 msgid "Artificial Intelligence"
 msgstr "Mesterséges intelligencia"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Ask for your strongest leadership example, projects using a certain skill, measurable outcomes, interview stories, or evidence that matches a role."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ask your career"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Aspect Ratio"
 msgstr "Méretarány"
@@ -705,7 +638,10 @@ msgstr "Az Atlas Cloud projektszponzorként támogatja a cloudcoffee-ot. Ha vál
 msgid "ATS Check"
 msgstr "ATS ellenőrzés"
 
-#: src/routes/_home/-sections/features.tsx
+#: src/routes/_home/-sections/footer.tsx
+msgid "ATS checker"
+msgstr ""
+
 #: src/routes/_home/ats-checker.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "ATS Checker"
@@ -720,19 +656,9 @@ msgstr "Motivációs levél csatolása (PDF)"
 msgid "Attach a resume file (PDF)"
 msgstr "Önéletrajzfájl csatolása (PDF)"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/authentication/index.tsx
-msgid "Authentication"
-msgstr "Hitelesítés"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Auto-fill failed."
 msgstr "Az automatikus kitöltés nem sikerült."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Available in multiple languages. If you would like to contribute, check out Crowdin."
-msgstr "Több nyelven elérhető. Ha szeretnél közreműködni, nézd meg a Crowdin‑t."
 
 #: src/features/ats-checker/messages.ts
 msgid "Avoid heavy letter-spacing effects, then re-export."
@@ -753,15 +679,10 @@ msgstr "Díjak"
 msgid "Azerbaijani"
 msgstr "azerbajdzsáni"
 
-#. Action returning a signed-in user to the page where they manage linked providers
+#. Action returning a signed-in user to account settings
 #: src/features/auth/pages/error.tsx
-msgid "Back to authentication settings"
-msgstr "Vissza a hitelesítési beállításokhoz"
-
-#. Secondary navigation button on 2FA verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Back to Login"
-msgstr "Vissza a bejelentkezéshez"
+msgid "Back to account settings"
+msgstr ""
 
 #. Action returning the visitor to the sign-in page after a failed sign-in
 #: src/features/auth/pages/error.tsx
@@ -772,10 +693,6 @@ msgstr "Vissza a bejelentkezéshez"
 msgid "Background Color"
 msgstr "Háttérszín"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Backup codes copied to clipboard."
-msgstr "Biztonsági kódok a vágólapra másolva."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Base URL"
 msgstr "Alap URL"
@@ -783,10 +700,6 @@ msgstr "Alap URL"
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "Alapadatok"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Beautiful templates to choose from, with more on the way."
-msgstr "Választható, gyönyörű sablonok, és még több érkezik."
 
 #: src/libs/locale.ts
 msgid "Bengali"
@@ -825,8 +738,17 @@ msgstr "Szegély vastagsága"
 msgid "Break the resume into the usual sections so it can be segmented."
 msgstr "Bontsd az önéletrajzot a megszokott szakaszokra, hogy szegmentálható legyen."
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Bring career evidence together from the products and services where your work already lives."
+msgstr ""
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Build one living knowledge base from your projects, outcomes, and tools—then turn it into the right story when opportunity arrives."
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Build your base"
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Build your career base"
 msgstr ""
 
 #: src/features/resume/public/public-resume.tsx
@@ -859,23 +781,19 @@ msgstr "Felsorolásjelezett lista"
 msgid "By the communit of th, for the community."
 msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "By the community, for the community."
-msgstr "A közösség által, a közösségért."
+#: src/routes/_home/-sections/faq.tsx
+msgid "Can I export and share the result?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Can I export my resume to PDF?"
-msgstr "Exportálhatom az önéletrajzomat PDF‑be?"
+msgid "Can I keep more than one resume?"
+msgstr ""
 
-#. API key deletion confirmation dialog cancel action in settings
 #. Account deletion confirmation dialog cancel action in account settings
 #. Confirmation dialog button label to abort deleting a custom section in resume builder
 #. Confirmation dialog button label to abort deleting a section item in resume builder
 #. Confirmation dialog button label to abort resetting a resume section
 #. Profile settings form action to discard unsaved edits
-#. Secondary action button to close two-factor setup dialog
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/dialogs/resume/sections/custom.tsx
 #: src/dialogs/resume/sections/section-item-dialog.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
@@ -883,7 +801,6 @@ msgstr "Exportálhatom az önéletrajzomat PDF‑be?"
 #: src/features/applications/components/import-applications-sheet.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
 #: src/features/settings/pages/account.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
@@ -894,8 +811,20 @@ msgstr "Exportálhatom az önéletrajzomat PDF‑be?"
 msgid "Cancel"
 msgstr "Mégsem"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Capture every win"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Career base"
+msgstr ""
+
 #: src/routes/_home/-sections/hero.tsx
-msgid "Capture every project, launch, hackathon, and hard-won result. Turn it into the right resume when opportunity arrives."
+msgid "Career intelligence at the"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Career questions, answered."
 msgstr ""
 
 #: src/libs/locale.ts
@@ -920,41 +849,21 @@ msgstr "Agy"
 msgid "Certifications"
 msgstr "Tanúsítványok"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Change language"
-msgstr "Nyelv módosítása"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change language to…"
-msgstr "Nyelv módosítása erre:…"
-
-#: src/features/command-palette/pages/preferences/index.tsx
-msgid "Change theme to…"
-msgstr "Téma módosítása erre:…"
-
 #: src/dialogs/resume/index.tsx
 msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "Meggondoltad magad? Nevezd át az önéletrajzodat valami beszédesebbre."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Changelog"
-msgstr "Változásnapló"
 
 #: src/features/ats-checker/tool.tsx
 msgid "Check again"
 msgstr "Ellenőrzés újra"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Check ATS readability"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Check the exported file contains everything you expect, and that all of it is selectable text."
 msgstr "Ellenőrizd, hogy az exportált fájl mindent tartalmaz, amit vársz, és hogy minden szövegrész kijelölhető."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Check your email for a link to reset your password."
-msgstr "Ellenőrizd az e‑mailedet a jelszó visszaállításához szükséges linkért."
-
-#: src/features/auth/pages/register.tsx
-msgid "Check your email for a link to verify your account."
-msgstr "Ellenőrizd az e‑mailedet a fiókod megerősítéséhez szükséges linkért."
 
 #: src/features/ats-checker/uploader.tsx
 msgid "Checked in your browser. The file is never uploaded."
@@ -971,10 +880,6 @@ msgstr "Vázlat ellenőrzése"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Checking…"
 msgstr "Ellenőrzés…"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Checkout redesign · 18% more conversions"
-msgstr ""
 
 #: src/libs/locale.ts
 msgid "Chinese (Simplified)"
@@ -996,6 +901,10 @@ msgstr "Válasszon egy előre beállított vagy egyéni árnyalatot."
 
 #: src/dialogs/resume/template/gallery.tsx
 msgid "Choose between Classic and Treecko. Selecting a template applies its recommended layout and typography."
+msgstr ""
+
+#: src/features/settings/pages/account.tsx
+msgid "Choose how cloudcoffee looks and which language it uses."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1034,10 +943,6 @@ msgstr "cloudcoffee – Ugrás a kezdőlapra"
 msgid "cloudcoffee (JSON)"
 msgstr "Reaktív önéletrajz (JSON)"
 
-#: src/routes/_home/-sections/prefooter.tsx
-msgid "cloudcoffee continues to grow thanks to its vibrant community. This project owes its progress to numerous individuals who've dedicated their time and skills to make it better. We celebrate the coders who've enhanced its features on GitHub, the linguists whose translations on Crowdin have made it accessible to a broader audience, and the people who've donated to support its continued development."
-msgstr "A cloudcoffee a vibráló közösségének köszönhetően folyamatosan növekszik. A projekt fejlődését számos olyan embernek köszönheti, akik idejüket és tudásukat szánták arra, hogy jobbá tegyék. Köszönet illeti a fejlesztőket, akik a GitHubon bővítették a funkciókat, a nyelvészeket, akik a Crowdin‑on végzett fordításaikkal szélesebb közönség számára tették elérhetővé, valamint azokat, akik adományaikkal támogatták a további fejlesztést."
-
 #: src/routes/_home/-sections/donate.tsx
 msgid "cloudcoffee is a free and open-source project, built with love and maintained by me and a community of contributors. Your donations help keep the lights on and the code flowing."
 msgstr "A cloudcoffee egy ingyenes és nyílt forráskódú projekt, szeretetből építve és általam, valamint egy közreműködőkből álló közösség által karbantartva. Adományaid segítenek „égve tartani a lámpákat” és folyamatosan áramoltatni a kódot."
@@ -1046,16 +951,13 @@ msgstr "A cloudcoffee egy ingyenes és nyílt forráskódú projekt, szeretetbő
 msgid "cloudcoffee is free and open source. If it has helped you, please consider donating."
 msgstr "A cloudcoffee ingyenes és nyílt forráskódú. Ha segített, kérjük, fontold meg az adományozást."
 
-#: src/routes/_home/-sections/faq.tsx
-msgid "cloudcoffee is open-source, privacy-focused, and completely free. Unlike other resume builders, it doesn't show ads, track your data, or limit your features behind a paywall."
-msgstr "A cloudcoffee nyílt forráskódú, adatvédelem‑központú és teljesen ingyenes. Más önéletrajz‑készítőkkel ellentétben nem jelenít meg hirdetéseket, nem követi az adataidat, és nem zár funkciókat fizetős fal mögé."
-
 #: src/routes/_home/-sections/sponsors.tsx
 msgid "cloudcoffee stays free, open-source, and independent because companies choose to support the work behind it. Their sponsorship helps fund hosting, maintenance, and continued development for the community."
 msgstr "A cloudcoffee azért marad ingyenes, nyílt forráskódú és független, mert a vállalatok úgy döntenek, hogy támogatják a mögötte folyó munkát. Szponzorációjuk segít finanszírozni a tárhelyet, a karbantartást és a közösség folyamatos fejlesztését."
 
 #. App version label in footer; includes semantic version variable
 #: src/components/ui/copyright.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "cloudcoffee v<0>{__APP_VERSION__}</0>"
 msgstr "Reaktív önéletrajz v<0>{__APP_VERSION__}</0>"
 
@@ -1083,10 +985,6 @@ msgstr "Parancspaletta"
 msgid "Command Palette - {currentPage}"
 msgstr "Parancspaletta - {currentPage}"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Community"
-msgstr "Közösség"
-
 #: src/dialogs/resume/sections/experience.tsx
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Company"
@@ -1100,31 +998,36 @@ msgstr "Cég / szerepkör"
 msgid "Company A–Z"
 msgstr "Cég A–Z"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Completely free, forever, no hidden costs."
-msgstr "Teljesen ingyenes, örökké, rejtett költségek nélkül."
-
 #: src/features/ats-checker/messages.ts
 msgid "Compress or remove large images to keep uploads quick."
 msgstr "Tömörítsd vagy távolítsd el a nagy képeket, hogy a feltöltés gyors maradjon."
 
+#: src/features/settings/pages/account.tsx
+msgid "Configure provider credentials used by resume imports and AI review."
+msgstr ""
+
 #. Account deletion confirmation dialog confirm action in account settings
-#. Create API key dialog acknowledgment action after copying
-#: src/dialogs/api-key/create.tsx
 #: src/features/settings/pages/account.tsx
 #: src/hooks/use-prompt.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Confirm"
 msgstr "Megerősítés"
 
-#. Authentication settings action to link a social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Connect"
-msgstr "Csatlakozás"
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect claims to outcomes, artifacts, and context so every resume bullet stays specific and credible."
+msgstr ""
+
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Connect the work you've already done, keep every result searchable, and shape the right story for the next role."
+msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Connect your own AI provider to get a review of the writing. The checks above need no provider and no account."
 msgstr "Kapcsold össze a saját AI szolgáltatóddal a szöveg értékeléséhez. A fenti ellenőrzésekhez nincs szükség szolgáltatóra vagy fiókra."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Connect your tools"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connected"
@@ -1141,6 +1044,10 @@ msgstr "Kapcsolódási hiba."
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Connection verified — provider is ready to use."
 msgstr "Kapcsolat ellenőrizve – a szolgáltató használatra kész."
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "Connections bring useful work context into one searchable place, so you spend less time reconstructing your history from scattered products and documents."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Contact details"
@@ -1159,14 +1066,6 @@ msgstr "Tartalom"
 msgid "Content is laid out in a grid."
 msgstr "A tartalom rácsszerkezetben van elrendezve."
 
-#. Button label to continue to dashboard after successful registration
-#. Final action button after saving backup codes
-#. Primary action button to proceed to next step in two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Continue"
-msgstr "Tovább"
-
 #: src/routes/dashboard/resumes/-components/cards/import-card.tsx
 #: src/routes/dashboard/resumes/-components/list-view.tsx
 msgid "Continue where you left off"
@@ -1175,6 +1074,15 @@ msgstr "Folytasd onnan, ahol abbahagytad"
 #: src/dialogs/resume/import.tsx
 msgid "Continue where you left off by importing an existing resume you created using cloudcoffee or any another resume builder. Supported formats include PDF, Microsoft Word, as well as JSON files from cloudcoffee."
 msgstr "Folytasd onnan, ahol abbahagytad: importáld a már meglévő, cloudcoffee‑ban vagy bármely más önéletrajz‑készítőben létrehozott önéletrajzodat. A támogatott formátumok: PDF, Microsoft Word, illetve cloudcoffee JSON fájlok."
+
+#. Google OAuth sign-in button label
+#: src/features/auth/components/social-auth.tsx
+msgid "Continue with Google"
+msgstr ""
+
+#: src/features/auth/pages/login.tsx
+msgid "Continue with Google to access your account."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Contributions fund bug fixes, security updates, and continuous improvements to keep the app running smoothly."
@@ -1188,24 +1096,9 @@ msgstr "Stíluslap-tervezet konvertálása"
 msgid "Copied to clipboard."
 msgstr "A vágólapra másolva."
 
-#. Action button to copy two-factor backup codes to clipboard
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Copy"
 msgstr "Másolás"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy and store these backup codes in case you lose your device."
-msgstr "Másold ki és tárold ezeket a biztonsági kódokat arra az esetre, ha elveszítenéd az eszközödet."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy Backup Codes"
-msgstr "Biztonsági kódok másolása"
-
-#. Accessible label for the button that copies the two-factor secret key
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Copy secret"
-msgstr "Titkos kód másolása"
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Copy stylesheet"
@@ -1218,10 +1111,6 @@ msgstr "Másolja ki a teljes állásleírást a hirdetésből, és illessze be a
 #: src/features/ats-checker/messages.ts
 msgid "Copy the text out of the exported file and read it through; fix anything that arrives in the wrong place."
 msgstr "Másold ki a szöveget az exportált fájlból, és olvasd át; javíts mindent, ami rossz helyre kerül."
-
-#: src/dialogs/api-key/create.tsx
-msgid "Copy this secret key and use it in your applications to access your data."
-msgstr "Másold ki ezt a titkos kulcsot, és használd az alkalmazásaidban az adataid eléréséhez."
 
 #: src/routes/builder/$resumeId/-components/dock.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
@@ -1313,8 +1202,6 @@ msgstr "Motivációs levél"
 msgid "Cover letter draft"
 msgstr "Motivációslevél-vázlat"
 
-#. Create API key dialog submit action
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1338,15 +1225,6 @@ msgstr "Létrehozás"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Create a copy tuned to this job"
 msgstr "Másolat készítése ehhez az álláshoz igazítva"
-
-#: src/features/auth/pages/register.tsx
-msgid "Create a new account"
-msgstr "Új fiók létrehozása"
-
-#: src/dialogs/api-key/create.tsx
-#: src/features/settings/pages/api-keys.tsx
-msgid "Create a new API key"
-msgstr "Új API kulcs létrehozása"
 
 #: src/dialogs/resume/sections/award.tsx
 msgid "Create a new award"
@@ -1419,15 +1297,6 @@ msgstr "Új önkéntes tapasztalat létrehozása"
 msgid "Create a Sample Resume"
 msgstr "Minta önéletrajz létrehozása"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Create as many resumes as you want, without limits."
-msgstr "Hozz létre annyi önéletrajzot, amennyit csak szeretnél, korlátozások nélkül."
-
-#. Call-to-action link from login page to account registration page
-#: src/features/auth/pages/login.tsx
-msgid "Create one now"
-msgstr "Hozzon létre egyet most"
-
 #. Accessible label for create-resume split button group
 #: src/dialogs/resume/index.tsx
 msgid "Create resume with options"
@@ -1442,10 +1311,6 @@ msgstr "Létrehozva"
 msgid "Created \"{0}\" and linked it to this application."
 msgstr "\"{0}\" létrehozva és ehhez a jelentkezéshez kapcsolva."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Creating your API key..."
-msgstr "API kulcs létrehozása..."
-
 #: src/dialogs/resume/index.tsx
 msgid "Creating your resume..."
 msgstr "Önéletrajz létrehozása..."
@@ -1458,10 +1323,6 @@ msgstr "Kép kivágása"
 msgid "CSV data"
 msgstr "CSV-adatok"
 
-#: src/dialogs/auth/change-password.tsx
-msgid "Current Password"
-msgstr "Jelenlegi jelszó"
-
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Current stage"
 msgstr "Aktuális szakasz"
@@ -1469,11 +1330,6 @@ msgstr "Aktuális szakasz"
 #: src/components/input/color-picker.tsx
 msgid "Custom"
 msgstr "Custom"
-
-#. Authentication provider display name in account settings
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Custom OAuth"
-msgstr "Egyéni OAuth"
 
 #: src/libs/resume/section.tsx
 msgid "Custom Sections"
@@ -1501,13 +1357,14 @@ msgstr "Sötét"
 msgid "Dark theme"
 msgstr "Sötét téma"
 
+#: src/routes/_home/-sections/footer.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 msgid "Dashboard"
 msgstr "Műszerfal"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Data Security"
-msgstr "Adatbiztonság"
+#: src/features/settings/pages/account.tsx
+msgid "Data & account"
+msgstr ""
 
 #: src/dialogs/resume/sections/award.tsx
 #: src/dialogs/resume/sections/certification.tsx
@@ -1540,17 +1397,13 @@ msgstr "DeepSeek"
 msgid "Degree"
 msgstr "Fokozat"
 
-#. API key deletion confirmation dialog confirm action in settings
 #. Destructive confirmation button label when deleting a custom section in resume builder
 #. Destructive confirmation button label when deleting a section item in resume builder
-#. Passkey row action to remove the selected passkey
 #. Resume card context menu destructive action to remove a resume
 #. Resume card dropdown destructive action to remove a resume
 #: src/features/applications/components/application-actions-menu.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/applications/components/table-view.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
-#: src/features/settings/pages/api-keys.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -1602,10 +1455,6 @@ msgstr "{0} jelentkezés törölve."
 msgid "Deleting your account..."
 msgstr "Fiók törlése..."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Deleting your API key..."
-msgstr "API kulcs törlése..."
-
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/dashboard/resumes/-components/menus/use-resume-menu-actions.ts
 msgid "Deleting your resume..."
@@ -1640,34 +1489,10 @@ msgstr "Dizájn"
 msgid "Details from the provider:"
 msgstr "A szolgáltató részletei:"
 
-#. Destructive action button to turn off two-factor authentication
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Disable 2FA"
-msgstr "2FA kikapcsolása"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disable Two-Factor Authentication"
-msgstr "Kétlépcsős hitelesítés kikapcsolása"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Disabling two-factor authentication..."
-msgstr "Kétlépcsős hitelesítés kikapcsolása..."
-
-#. Authentication settings action to unlink a connected social login provider
-#: src/features/settings/authentication/components/social-provider.tsx
-msgid "Disconnect"
-msgstr "Leválasztás"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Discord"
-msgstr "Discord"
-
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Dismiss"
 msgstr "Elvetés"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Documentation"
 msgstr "Dokumentáció"
@@ -1675,10 +1500,6 @@ msgstr "Dokumentáció"
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Documents sent"
 msgstr "Elküldött dokumentumok"
-
-#: src/features/auth/pages/login.tsx
-msgid "Don't have an account? <0/>"
-msgstr "Nincs fiókja? <0/>"
 
 #: src/components/ui/donation-toast.tsx
 msgid "Donate"
@@ -1688,9 +1509,7 @@ msgstr "Adományoz"
 msgid "Donate to cloudcoffee"
 msgstr "Adományozzon a cloudcoffee-nak"
 
-#. Action button to download two-factor backup codes as a text file
 #. Primary action in the builder header to open resume download options
-#: src/dialogs/auth/enable-two-factor.tsx
 #: src/features/resume/export/download-dialog.tsx
 #: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
@@ -1841,35 +1660,21 @@ msgstr "Tanulmányok"
 msgid "Email"
 msgstr "E‑mail"
 
-#. Label for email input on forgot-password form
-#. Label for email input on registration form
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Email Address"
 msgstr "E‑mail cím"
 
 #: src/features/settings/pages/profile.tsx
-msgid "Email delivery isn't configured on this instance, so verification is disabled."
-msgstr "Az e-mail kézbesítés nincs konfigurálva ezen a példányon, ezért az ellenőrzés le van tiltva."
+msgid "Email address is managed by Google."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Embed all fonts when exporting, so characters map the way you intended."
 msgstr "Ágyazz be minden betűtípust exportáláskor, hogy a karakterek a szándékod szerint jelenjenek meg."
 
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Enable 2FA"
-msgstr "2FA bekapcsolása"
-
 #: src/routes/builder/$resumeId/-sidebar/left/index.tsx
 msgid "Enable editing"
 msgstr "Szerkesztés engedélyezése"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enable Two-Factor Authentication"
-msgstr "Kétlépcsős hitelesítés engedélyezése"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Enabled"
@@ -1879,10 +1684,6 @@ msgstr "Engedélyezve"
 msgid "Enabling password protection..."
 msgstr "Jelszóvédelem engedélyezése..."
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enabling two-factor authentication…"
-msgstr "Kétfaktoros hitelesítés engedélyezése…"
-
 #: src/libs/locale.ts
 msgid "English"
 msgstr "Angol"
@@ -1891,37 +1692,9 @@ msgstr "Angol"
 msgid "English (United Kingdom)"
 msgstr "Angol (Egyesült Királyság)"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Enhance the security of your account with additional layers of protection."
-msgstr "Növeld a fiókod biztonságát további védelmi rétegek hozzáadásával."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Enter a name for your passkey."
-msgstr "Adjon meg egy nevet a jelszóhoz."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter one of your saved backup codes to access your account"
-msgstr "Add meg az egyik elmentett biztonsági kódodat a fiókod eléréséhez"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Enter the URL to link to"
 msgstr "Add meg a csatolni kívánt URL‑t"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Enter the verification code from your authenticator app"
-msgstr "Add meg a hitelesítő alkalmazásod által generált ellenőrző kódot"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Enter your current password and a new password to update your account."
-msgstr "Add meg a jelenlegi jelszavadat és az újat, hogy frissíthesd a fiókodat."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Enter your password to confirm setting up two-factor authentication. When enabled, you'll need to enter a code from your authenticator app every time you log in."
-msgstr "Add meg a jelszavadat a kétlépcsős hitelesítés beállításának megerősítéséhez. Ha engedélyezed, minden bejelentkezéskor meg kell adnod a hitelesítő alkalmazásod által generált kódot."
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Enter your password to disable two-factor authentication. Your account will be less secure without 2FA enabled."
-msgstr "Add meg a jelszavadat a kétlépcsős hitelesítés kikapcsolásához. A fiókod kevésbé lesz biztonságos 2FA nélkül."
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/ats-check.tsx
 msgid "Error"
@@ -1934,10 +1707,6 @@ msgstr "Minden ellenőrzés sikeres volt. "
 #: src/routes/_home/-sections/donate.tsx
 msgid "Every contribution, big or small, makes a huge difference to the project.<0/>Thank you for your support!"
 msgstr "Minden hozzájárulás – legyen kicsi vagy nagy – hatalmas különbséget jelent a projekt számára.<0/>Köszönjük a támogatásodat!"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Everything you need to create, customize, and share professional resumes. Built with privacy in mind, powered by open source, and completely free forever."
-msgstr "Minden, amire szükséged van professzionális önéletrajzok létrehozásához, testreszabásához és megosztásához. Adatvédelemre tervezve, nyílt forráskóddal működve és teljesen ingyen, örökre."
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Exit focus mode"
@@ -1953,22 +1722,9 @@ msgstr "Kilépés a teljes képernyőből"
 msgid "Experience"
 msgstr "Tapasztalat"
 
-#: src/dialogs/api-key/create.tsx
-msgid "Expires in"
-msgstr "Lejárat"
-
-#. placeholder {0}: key.expiresAt.toLocaleDateString()
-#: src/features/settings/pages/api-keys.tsx
-msgid "Expires on {0}"
-msgstr "Lejár ekkor: {0}"
-
 #: src/routes/_home/-sections/templates.tsx
 msgid "Explore our diverse selection of templates, each designed to fit different styles, professions, and personalities. cloudcoffee currently offers 12 templates, with more on the way."
 msgstr "Fedezd fel a sablonok sokszínű választékát, amelyek mind más stílushoz, szakmához és személyiséghez illeszkednek. A cloudcoffee jelenleg 12 sablont kínál, és folyamatosan érkeznek az újak."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "Explore the API documentation to learn how to integrate cloudcoffee with your applications. Find detailed endpoints, request examples, and authentication methods."
-msgstr "Ismerd meg az API dokumentációt, hogy megtudd, hogyan integrálhatod a cloudcoffee‑t az alkalmazásaiddal. Részletes végpontokat, kérés‑példákat és hitelesítési módokat találsz benne."
 
 #: src/libs/resume/section.tsx
 msgid "Export"
@@ -1994,91 +1750,31 @@ msgstr "PNG exportálása"
 msgid "Export the resume as a text PDF rather than as an image or a scan."
 msgstr "Exportáld az önéletrajzot szöveges PDF-ként, ne képként vagy szkennelt fájlként."
 
+#: src/features/settings/pages/account.tsx
+msgid "Export your data or permanently remove your account."
+msgstr ""
+
 #: src/features/resume/export/download-dialog.tsx
 msgid "Export your resume or cover letter in the format you need."
 msgstr "Exportáld az önéletrajzodat vagy motivációs leveledet a szükséges formátumban."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Export your resume to PDF instantly, without any waiting or delays."
-msgstr "Exportálja önéletrajzát PDF formátumba azonnal, várakozás vagy késedelem nélkül."
 
 #: src/features/applications/components/insights-view.tsx
 msgid "Exported pipeline-flow.png"
 msgstr "A pipeline-flow.png exportálva."
 
-#. Fallback toast when creating an API key fails
-#: src/dialogs/api-key/create.tsx
-msgid "Failed to create API key. Please try again."
-msgstr "Sikertelen API-kulcs létrehozása. Kérjük, próbálja újra."
-
-#. Fallback toast when account registration fails without a server error message
-#: src/features/auth/pages/register.tsx
-msgid "Failed to create your account. Please try again."
-msgstr "Nem sikerült létrehozni a fiókját. Kérjük, próbálja újra."
-
-#. Fallback toast when deleting a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to delete passkey. Please try again."
-msgstr "Sikertelenül törölték a jelszókulcsot. Kérjük, próbálja újra."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to delete provider."
 msgstr "Nem sikerült törölni a szolgáltatót."
-
-#. Fallback toast when deleting an API key fails
-#: src/features/settings/pages/api-keys.tsx
-msgid "Failed to delete the API key. Please try again."
-msgstr "Az API-kulcs törlése nem sikerült. Kérjük, próbálja újra."
 
 #. Fallback toast when account deletion fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to delete your account. Please try again."
 msgstr "Nem sikerült törölni a fiókját. Kérjük, próbálja meg újra."
 
-#. Fallback toast when disabling two-factor authentication fails
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Failed to disable two-factor authentication. Please try again."
-msgstr "Nem sikerült letiltani a kétfaktoros hitelesítést. Kérjük, próbálja újra."
-
-#. Fallback toast when enabling two-factor authentication fails
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to enable two-factor authentication. Please try again."
-msgstr "Nem sikerült engedélyezni a kétfaktoros hitelesítést. Kérjük, próbálja újra."
-
 #. Fallback toast when data export fails
 #: src/features/settings/pages/account.tsx
 msgid "Failed to export your data. Please try again."
 msgstr "Nem sikerült exportálni az adatokat. Próbáld újra."
-
-#. Fallback toast when linking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to link provider. Please try again."
-msgstr "Nem sikerült összekapcsolni a szolgáltatót. Kérjük, próbálja újra."
-
-#. Fallback toast when passkey registration fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to register passkey. Please try again."
-msgstr "Nem sikerült regisztrálni a jelszót. Kérjük, próbálja újra."
-
-#. Fallback toast when renaming a passkey fails
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Failed to rename passkey. Please try again."
-msgstr "Nem sikerült átnevezni a jelszókulcsot. Kérjük, próbálja újra."
-
-#. Fallback toast when requesting email change confirmation fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to request email change. Please try again."
-msgstr "Nem sikerült e-mail módosítást kérni. Kérjük, próbálja meg újra."
-
-#. Fallback toast when resending account verification email fails
-#: src/features/settings/pages/profile.tsx
-msgid "Failed to resend verification email. Please try again."
-msgstr "Nem sikerült újraküldeni az ellenőrző e-mailt. Kérjük, próbálja meg újra."
-
-#. Fallback toast when resetting password fails and no backend message is available
-#: src/features/auth/pages/reset-password.tsx
-msgid "Failed to reset your password. Please try again."
-msgstr "Nem sikerült visszaállítani a jelszavát. Kérjük, próbálja újra."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Failed to review this resume."
@@ -2088,19 +1784,12 @@ msgstr "Nem sikerült értékelni ezt az önéletrajzot."
 msgid "Failed to save AI provider."
 msgstr "Nem sikerült menteni az AI-szolgáltatót."
 
-#. Fallback toast when requesting password reset email fails without backend message
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Failed to send password reset email. Please try again."
-msgstr "Nem sikerült elküldeni a jelszó-visszaállítási e-mailt. Kérjük, próbálja meg újra."
+#: src/features/settings/profile/index.tsx
+msgid "Failed to save your application profile. Please try again."
+msgstr ""
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Failed to setup two-factor authentication."
-msgstr "Nem sikerült beállítani a kétlépcsős hitelesítést."
-
-#. Fallback toast when sign-in fails and no server error message is available
-#. Fallback toast when sign-in fails without an error message
+#. Fallback toast when Google sign-in fails without an error message
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Failed to sign in. Please try again."
 msgstr "A bejelentkezés sikertelen. Kérjük, próbálja újra."
 
@@ -2109,19 +1798,9 @@ msgstr "A bejelentkezés sikertelen. Kérjük, próbálja újra."
 msgid "Failed to sign out. Please try again."
 msgstr "Nem sikerült kijelentkezni. Kérjük, próbálja meg újra."
 
-#. Fallback toast when unlinking a social authentication provider fails
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Failed to unlink provider. Please try again."
-msgstr "Sikertelen a szolgáltató függetlenítése. Kérjük, próbálja újra."
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Failed to update provider."
 msgstr "Nem sikerült frissíteni a szolgáltatót."
-
-#. Fallback toast when changing account password fails
-#: src/dialogs/auth/change-password.tsx
-msgid "Failed to update your password. Please try again."
-msgstr "Nem sikerült frissíteni a jelszavát. Kérjük, próbálja meg újra."
 
 #. Fallback toast when updating profile details fails
 #: src/features/settings/pages/profile.tsx
@@ -2138,25 +1817,9 @@ msgstr "Nem sikerült feltölteni a képet. Kérjük, próbálja újra."
 msgid "Failed to verify the password. Please try again."
 msgstr "Nem sikerült ellenőrizni a jelszót. Kérjük, próbálja meg újra."
 
-#. Fallback toast when verifying a backup two-factor authentication code fails
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your backup code. Please try again."
-msgstr "Nem sikerült ellenőrizni a biztonsági mentés kódját. Kérjük, próbálja meg újra."
-
-#. Fallback toast when verifying a two-factor authentication code fails
-#. Fallback toast when verifying two-factor setup code fails
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Failed to verify your code. Please try again."
-msgstr "Nem sikerült ellenőrizni a kódot. Kérjük, próbálja meg újra."
-
 #: src/features/resume/stylesheet/status.tsx
 msgid "Fatal error"
 msgstr "Végzetes hiba"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Features"
-msgstr "Funkciók"
 
 #: src/dialogs/resume/import.tsx
 msgid "File"
@@ -2178,6 +1841,10 @@ msgstr "Szűrés alapja"
 msgid "Filter by tags"
 msgstr "Szűrés címkék alapján"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Find the strongest example, result, or story without digging through old documents and scattered notes."
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Finnish"
 msgstr "finn"
@@ -2193,10 +1860,6 @@ msgstr "Nézethez igazítva"
 #: src/features/ats-checker/messages.ts
 msgid "Flatten the form so the text is part of the page."
 msgstr "Lapítsd le az űrlapot, hogy a szöveg az oldal része legyen."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Flexibility"
-msgstr "Rugalmasság"
 
 #: src/dialogs/resume/sections/language.tsx
 msgid "Fluency"
@@ -2234,26 +1897,9 @@ msgstr "Betűvastagság"
 msgid "Font Weights"
 msgstr "Betűsúlyok"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "For a secure and distraction-free experience."
-msgstr "A biztonságos és zavaró tényezőktől mentes élményért."
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/notes.tsx
 msgid "For example, information regarding which companies you sent this resume to or the links to the job descriptions can be noted down here."
 msgstr "Ide feljegyezheted például, hogy mely cégeknek küldted el ezt az önéletrajzot, vagy a munkaköri leírások linkjeit."
-
-#: src/dialogs/api-key/create.tsx
-msgid "For security reasons, this key will only be displayed once."
-msgstr "Biztonsági okokból ezt a kulcsot csak egyszer jelenítjük meg."
-
-#. Link label to password reset page from login form
-#: src/features/auth/pages/login.tsx
-msgid "Forgot Password?"
-msgstr "Elfelejtette jelszavát?"
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Forgot your password?"
-msgstr "Elfelejtette a jelszavát?"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgctxt "Page Format (A4, Letter, Free-form)"
@@ -2263,10 +1909,6 @@ msgstr "Formátum"
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Format stylesheet"
 msgstr "Stíluslap formázása"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Free"
-msgstr "Ingyenes"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Free-form"
@@ -2310,16 +1952,8 @@ msgstr "Véletlenszerű név generálása"
 msgid "German"
 msgstr "Német"
 
-#. Authentication provider display name in account settings
-#. Brand name label for GitHub social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "GitHub"
-msgstr "GitHub"
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "GitHub connected"
+#: src/routes/_home/-sections/features.tsx
+msgid "Give cloudcoffee a job description and build a focused resume around the evidence that matters most."
 msgstr ""
 
 #: src/features/ats-checker/messages.ts
@@ -2330,18 +1964,12 @@ msgstr "Adj minden pozícióhoz időtartamot, például \"2020. jan. - Jelenleg 
 msgid "Give every role and qualification a date range."
 msgstr "Adj minden pozícióhoz és végzettséghez egy időintervallumot."
 
-#. Secondary navigation button on backup-code verification screen
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Go Back"
-msgstr "Vissza"
-
 #: src/components/layout/not-found-screen.tsx
 msgid "Go home"
 msgstr "Menj haza"
 
 #: src/components/layout/error-screen.tsx
 #: src/components/layout/not-found-screen.tsx
-#: src/routes/_home/-sections/header.tsx
 msgid "Go to dashboard"
 msgstr "Tovább az irányítópultra"
 
@@ -2354,16 +1982,13 @@ msgstr "Menjen az önéletrajzok műszerfalára"
 msgid "Go to…"
 msgstr "Menj ide:…"
 
-#. Authentication provider display name in account settings
-#. Brand name label for Google social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Google"
-msgstr "Google"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Google Gemini"
 msgstr "Google Gemini"
+
+#: src/features/auth/components/social-auth.tsx
+msgid "Google sign-in is unavailable. Configure Google OAuth credentials and try again."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "gpt-4.1"
@@ -2431,14 +2056,6 @@ msgstr "héber"
 msgid "Help me bring more experienced contributors on board, reducing the burden on a single maintainer and accelerating development."
 msgstr "Segíts, hogy több tapasztalt közreműködőt vonhassak be, csökkentve az egyetlen karbantartóra nehezedő terhet és felgyorsítva a fejlesztést."
 
-#: src/features/settings/pages/preferences.tsx
-msgid "Help translate the app to your language"
-msgstr "Segíts lefordítani az alkalmazást a saját nyelvedre"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Here's your new API key"
-msgstr "Íme az új API kulcsod"
-
 #: src/components/level/combobox.tsx
 #: src/dialogs/resume/sections/language.tsx
 #: src/dialogs/resume/sections/skill.tsx
@@ -2459,20 +2076,7 @@ msgstr "Ikonok elrejtése"
 msgid "Hide Link Underline"
 msgstr "Hivatkozás aláhúzásának elrejtése"
 
-#. Accessible label for button that hides password in registration form
-#. Accessible label for button that hides password in reset-password form
 #. Accessible label for button that hides password on protected resume screen
-#. Accessible label for button that hides the password in login form
-#. Accessible label for toggle button that hides the visible current password
-#. Accessible label for toggle button that hides the visible new password
-#. Accessible label for toggle button that hides the visible password in two-factor disable dialog
-#. Accessible label for toggle button that hides the visible password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Hide password"
 msgstr "Jelszó elrejtése"
@@ -2506,16 +2110,16 @@ msgid "Home"
 msgstr "Kezdőlap"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How do I share my resume?"
-msgstr "Hogyan oszthatom meg az önéletrajzomat?"
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "How do I use the API?"
-msgstr "Hogyan használom az API‑t?"
+msgid "How do connected tools help?"
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "How is my data protected?"
-msgstr "Hogyan védik az adataimat?"
+msgid "How does resume tailoring work?"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "How it works"
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "https://gateway.example.com/v1"
@@ -2627,13 +2231,7 @@ msgstr "Elemzések"
 msgid "Inspecting page {0} of {1}…"
 msgstr "{0}/{1}. oldal vizsgálata…"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Instant Generation"
-msgstr "Azonnali generálás"
-
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/integrations/route.tsx
 msgid "Integrations"
 msgstr "Integrációk"
 
@@ -2646,14 +2244,6 @@ msgstr "Érdeklődési körök"
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Invalid AI provider configuration."
 msgstr "Érvénytelen AI-szolgáltató konfigurációja."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee available in multiple languages?"
-msgstr "Elérhető‑e a cloudcoffee több nyelven?"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Is cloudcoffee really free?"
-msgstr "Tényleg ingyenes a cloudcoffee?"
 
 #: src/dialogs/resume/sections/certification.tsx
 msgid "Issuer"
@@ -2701,29 +2291,14 @@ msgid "Jobs"
 msgstr "Állások"
 
 #. Example full name placeholder on profile settings form
-#. Example full name placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "John Doe"
 msgstr "John Doe"
 
 #. Example username placeholder on profile settings form
-#. Example username placeholder on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "john.doe"
 msgstr "John.Doe"
-
-#. Example email placeholder for login identifier field
-#. Example email placeholder on forgot-password form
-#. Example email placeholder on profile settings form
-#. Example email placeholder on registration form
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/settings/pages/profile.tsx
-msgid "john.doe@example.com"
-msgstr "john.doe@example.com"
 
 #. Import source option for standard JSON Resume format
 #: src/dialogs/resume/import.tsx
@@ -2745,6 +2320,10 @@ msgstr "Tarts meg egyetlen címet, hogy ne kelljen találgatni, melyiket haszná
 #: src/features/ats-checker/messages.ts
 msgid "Keep it under 2.5 MB, usually by removing or shrinking images."
 msgstr "Tartsd 2,5 MB alatt, jellemzően a képek eltávolításával vagy kicsinyítésével."
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Keep proof attached"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Keep resume content as real text rather than as pictures of text."
@@ -2799,7 +2378,7 @@ msgstr "Fekvő"
 #. Menu item that opens language selection submenu
 #: src/dialogs/resume/sections/language.tsx
 #: src/features/command-palette/pages/preferences/language.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/page.tsx
 msgid "Language"
@@ -2927,14 +2506,6 @@ msgstr "Kapcsoljon hozzá egy önéletrajzot, és illessze be az állásleírás
 msgid "Linked cloudcoffee"
 msgstr "Összekapcsolt cloudcoffee"
 
-#. Authentication provider display name in account settings
-#. Brand name label for LinkedIn social sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
-msgid "LinkedIn"
-msgstr "LinkedIn"
-
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
 msgstr "LinkedIn, ajánlás…"
@@ -2942,10 +2513,6 @@ msgstr "LinkedIn, ajánlás…"
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Linking a cloudcoffee enables AI match scoring and tailoring."
 msgstr "A cloudcoffee összekapcsolása engedélyezi az AI-alapú illeszkedési pontszámítást és testreszabást."
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Linking your {providerName} account..."
-msgstr "{providerName} fiókod összekapcsolása..."
 
 #: src/routes/dashboard/resumes/index.tsx
 msgid "List"
@@ -2966,6 +2533,10 @@ msgstr "MI-szolgáltatók betöltése folyamatban. Kérjük, próbálja újra eg
 #: src/features/command-palette/pages/resumes.tsx
 msgid "Loading applications…"
 msgstr "Alkalmazások betöltése…"
+
+#: src/features/settings/profile/index.tsx
+msgid "Loading profile..."
+msgstr ""
 
 #: src/features/settings/integrations/components/ai-provider-picker.tsx
 #: src/features/settings/integrations/components/ai-section.tsx
@@ -3011,11 +2582,6 @@ msgstr "Hosszú szövegrészek nagybetűvel vannak szedve."
 msgid "Long-term Sustainability"
 msgstr "Hosszú távú fenntarthatóság"
 
-#. Link to backup-code verification flow when authenticator app is unavailable
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Lost access to your authenticator?"
-msgstr "Elveszítetted a hozzáférést a hitelesítő alkalmazásodhoz?"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Low impact"
 msgstr "Kis hatású"
@@ -3045,6 +2611,10 @@ msgstr "maláj"
 msgid "Malayalam"
 msgstr "malajálam"
 
+#: src/features/settings/pages/account.tsx
+msgid "Manage the identity and email used by your cloudcoffee account."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Many bullets start with the same phrase."
 msgstr "Sok felsoroláspont ugyanazzal a kifejezéssel kezdődik."
@@ -3068,10 +2638,6 @@ msgstr "Elutasítottnak jelölés"
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Match scoring failed."
 msgstr "Az illeszkedési pontozás nem sikerült."
-
-#: src/routes/_home/-sections/hero.tsx
-msgid "Matched to Senior Product Engineer"
-msgstr ""
 
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Medium impact"
@@ -3142,17 +2708,11 @@ msgstr "Helyezd az e-mail címedet és telefonszámodat az első oldal tetejére
 msgid "Moved to"
 msgstr "Áthelyezve ide:"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Multilingual"
-msgstr "Többnyelvű"
-
 #. Placeholder text for custom link URL field in resume builder
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom-fields.tsx
 msgid "Must start with https://"
 msgstr "A https:// címmel kell kezdeni."
 
-#. Label for full name input on registration form
-#: src/dialogs/api-key/create.tsx
 #: src/dialogs/resume/index.tsx
 #: src/dialogs/resume/sections/interest.tsx
 #: src/dialogs/resume/sections/project.tsx
@@ -3160,7 +2720,6 @@ msgstr "A https:// címmel kell kezdeni."
 #: src/dialogs/resume/sections/skill.tsx
 #: src/features/applications/components/application-detail-sheet.tsx
 #: src/features/ats-checker/parse-preview.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/sections/basics.tsx
 #: src/routes/dashboard/resumes/index.tsx
@@ -3175,10 +2734,6 @@ msgstr "nepáli"
 msgid "Network"
 msgstr "Hálózat"
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "Never expires"
-msgstr "Soha nem jár le"
-
 #: src/features/auth/pages/error.tsx
 msgid "New account sign-ups are currently disabled on this server."
 msgstr "Az új fiókok regisztrációja jelenleg le van tiltva ezen a kiszolgálón."
@@ -3187,10 +2742,6 @@ msgstr "Az új fiókok regisztrációja jelenleg le van tiltva ezen a kiszolgál
 #: src/features/command-palette/pages/resumes.tsx
 msgid "New Application"
 msgstr "Új jelentkezés"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "New features are constantly being added and improved, so be sure to check back often."
-msgstr "Folyamatosan új funkciók kerülnek be és javulnak, ezért érdemes gyakran visszanézned."
 
 #: src/components/input/rich-input.tsx
 msgid "New Line"
@@ -3201,12 +2752,6 @@ msgstr "Új sor"
 msgid "New Page"
 msgstr "Új oldal"
 
-#. Label for new password input on reset-password form
-#: src/dialogs/auth/change-password.tsx
-#: src/features/auth/pages/reset-password.tsx
-msgid "New Password"
-msgstr "Új jelszó"
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "New Section"
 msgstr "Új szekció"
@@ -3214,10 +2759,6 @@ msgstr "Új szekció"
 #: src/features/applications/components/table-view.tsx
 msgid "New tag…"
 msgstr "Új címke…"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "No Advertising, No Tracking"
-msgstr "Nincs reklám, nincs követés"
 
 #: src/routes/dashboard/applications/index.tsx
 msgid "No applications match your filters."
@@ -3259,10 +2800,6 @@ msgstr "Egyetlen sor sem hasonlít munkakör és munkáltató párosítására."
 #: src/routes/_home/ats-checker.tsx
 msgid "No one-page rule, and no treating a font or a career gap as a fault."
 msgstr "Semmilyen egyoldalas szabály, és sem a betűtípus, sem a karrierszünet nem számít hibának."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "No passkeys registered yet."
-msgstr "Még nincsenek regisztrált kulcsok."
 
 #: src/features/ats-checker/messages.ts
 msgid "No phone number was found."
@@ -3382,9 +2919,9 @@ msgstr "odija"
 msgid "Ollama Cloud"
 msgstr "Ollama Cloud"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "One-Click Sign-In"
-msgstr "Egykattintásos bejelentkezés"
+#: src/routes/_home/-sections/hero.tsx
+msgid "One knowledge base for every project, launch, and win. Connect your tools, ask anything, and tailor the right resume for any role."
+msgstr ""
 
 #: src/routes/_home/-sections/donate.tsx
 msgid "Ongoing Maintenance"
@@ -3419,22 +2956,13 @@ msgstr "Csak az első oldalak lettek ellenőrizve."
 msgid "Open"
 msgstr "Megnyitás"
 
-#. Button label to open the user's default email app
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Open Email Client"
-msgstr "E‑mail kliens megnyitása"
+#: src/features/ats-checker/ai-review/ai-review-card.tsx
+msgid "Open Account Settings"
+msgstr ""
 
 #: src/features/resume/stylesheet/toolbar.tsx
 msgid "Open focus mode"
 msgstr "Nyitott fókusz mód"
-
-#: src/features/ats-checker/ai-review/ai-review-card.tsx
-msgid "Open Integrations Settings"
-msgstr "Integrációk beállításainak megnyitása"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Open Source"
-msgstr "Nyílt forráskódú"
 
 #: src/features/ats-checker/messages.ts
 msgid "Open the exported file and confirm you can select and copy every part of it."
@@ -3458,7 +2986,6 @@ msgstr "OpenRouter"
 
 #: src/features/resume/stylesheet/editor.tsx
 #: src/routes/_home/-sections/donate.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "új lapon nyílik meg"
 
@@ -3473,11 +3000,6 @@ msgstr "Opcionálisan, hogy egy álláshirdetés mely kifejezései szerepelnek m
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
 msgid "Options for {title}"
 msgstr "Beállítások a {title}-hoz"
-
-#: src/features/auth/components/social-auth.tsx
-msgctxt "Choose to authenticate with a social provider (Google, GitHub, etc.) instead of email and password"
-msgid "or continue with"
-msgstr "vagy folytassa ezzel"
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Or upload a resume PDF"
@@ -3515,50 +3037,14 @@ msgstr "Bekezdés"
 msgid "Paragraph and heading style"
 msgstr "Bekezdés- és címsorstílus"
 
-#. Authentication provider display name in account settings
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Passkey"
-msgstr "Passkey"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey deleted successfully."
-msgstr "A kulcs sikeresen törlődött."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkey registered successfully."
-msgstr "A kulcs sikeresen regisztrált."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Passkeys & 2FA"
-msgstr "Hozzáférési kulcsok és 2FA"
-
-#. Authentication provider display name in account settings
-#. Label for password input on login form
 #. Label for password input on protected resume access form
-#. Label for password input on registration form
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/resume-password.tsx
-#: src/features/settings/authentication/components/hooks.tsx
-#: src/features/settings/authentication/components/password.tsx
 msgid "Password"
 msgstr "Jelszó"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password cannot be empty."
 msgstr "A jelszó nem lehet üres."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Password Protection"
-msgstr "Jelszóvédelem"
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Password protection has been disabled."
@@ -3609,9 +3095,9 @@ msgstr "Zavar"
 msgid "Persian"
 msgstr "perzsa"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Personalize your resume with any colors, fonts or designs, and make it your own."
-msgstr "Személyre szabhatod az önéletrajzodat bármilyen színekkel, betűtípusokkal vagy dizájnokkal, hogy igazán a sajátoddá tedd."
+#: src/features/settings/pages/account.tsx
+msgid "Personal details"
+msgstr ""
 
 #: src/dialogs/resume/sections/reference.tsx
 #: src/features/ats-checker/parse-preview.tsx
@@ -3646,10 +3132,6 @@ msgstr "Helyezze el egy oldalra az Elrendezés panelről, vagy rejtse el, ha par
 #: src/features/resume/export/download-dialog.tsx
 msgid "Plain text, ideal for AI tools and quick edits."
 msgstr "Egyszerű szöveg, ideális AI-eszközökhöz és gyors szerkesztésekhez."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Please enter a new password for your account"
-msgstr "Kérjük, adj meg egy új jelszót a fiókodhoz"
 
 #: src/features/auth/pages/resume-password.tsx
 msgid "Please enter the password shared with you by the owner of the resume to continue."
@@ -3702,9 +3184,6 @@ msgid "Prefer a single column, or keep the side column to short, self-contained 
 msgstr "Részesítsd előnyben az egyoszlopos elrendezést, vagy tartsd meg az oldalsó oszlopot rövid, önálló listáknak."
 
 #: src/features/command-palette/pages/navigation.tsx
-#: src/features/command-palette/pages/preferences/index.tsx
-#: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/preferences.tsx
 msgid "Preferences"
 msgstr "Beállítások"
 
@@ -3745,13 +3224,16 @@ msgstr "Elsődleges szín"
 msgid "Print or export the form to a flat PDF before sending it."
 msgstr "Nyomtasd ki vagy exportáld az űrlapot lapos PDF-ként, mielőtt elküldöd."
 
+#: src/routes/_home/-sections/footer.tsx
+msgid "Product"
+msgstr ""
+
 #: src/dialogs/resume/sections/skill.tsx
 msgid "Proficiency"
 msgstr "Jártasság"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
-#: src/routes/dashboard/settings/profile.tsx
 msgid "Profile"
 msgstr "Profil"
 
@@ -3765,23 +3247,19 @@ msgstr "Profilok"
 msgid "Progress Bar"
 msgstr "Folyamatjelző sáv"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Project captured"
-msgstr ""
-
 #: src/dialogs/resume/sections/custom.tsx
 #: src/libs/resume/section-title.ts
 #: src/libs/resume/section.tsx
 msgid "Projects"
 msgstr "Projektek"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "Projects, launches, hackathons, awards, feedback, metrics, lessons, links, and any other evidence that helps explain what you have accomplished."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Protect your resume from unauthorized access with a password"
 msgstr "Védd az önéletrajzodat a jogosulatlan hozzáféréstől jelszóval"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Protect your resume with a password, and let only people with the password view it."
-msgstr "Védd az önéletrajzodat jelszóval, és engedd, hogy csak a jelszó birtokában lehessen megtekinteni."
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Provider"
@@ -3812,6 +3290,10 @@ msgstr "Kiadó"
 #: src/features/ats-checker/messages.ts
 msgid "Put a plain email address near the top of the first page. It is what most systems file you under."
 msgstr "Helyezz el egy egyszerű e-mail címet az első oldal teteje közelében. A legtöbb rendszer ez alapján azonosít."
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Questions"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Re-export from a single-column layout, then copy the text out and check it reads top to bottom."
@@ -3906,13 +3388,13 @@ msgstr "Referenciák"
 msgid "Referred by…, things to emphasize, etc."
 msgstr "Ajánló…, kiemelendő dolgok stb."
 
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Register New Device"
-msgstr "Új eszköz regisztrálása"
+#: src/routes/_home/-sections/features.tsx
+msgid "Refine, format, and export a professional resume without rebuilding your history from scratch."
+msgstr ""
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Remember your password? <0/>"
-msgstr "Emlékszik a jelszavára? <0/>"
+#: src/routes/_home/-sections/features.tsx
+msgid "Remember every career win."
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Remote, Hybrid, a city…"
@@ -3988,18 +3470,6 @@ msgstr "Cseréld le a táblázatokat egyszerű bekezdésekre és listákra. A ce
 msgid "Report a Bug"
 msgstr "Hiba jelentése"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Report an issue"
-msgstr "Hiba jelentése"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resend verification email"
-msgstr "Megerősítő e‑mail újraküldése"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Resending verification email..."
-msgstr "Megerősítő e‑mail újraküldése..."
-
 #: src/features/ats-checker/messages.ts
 msgid "Reserve capitals for short headings. They slow reading and can defeat case-sensitive search."
 msgstr "Tartsd fenn a nagybetűket rövid címsoroknak. Lassítják az olvasást, és megzavarhatják a kis- és nagybetűre érzékeny keresést."
@@ -4008,23 +3478,6 @@ msgstr "Tartsd fenn a nagybetűket rövid címsoroknak. Lassítják az olvasást
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Reset"
 msgstr "Visszaállítás"
-
-#. Primary action button label on reset-password form
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset Password"
-msgstr "Jelszó visszaállítása"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Reset your password"
-msgstr "Jelszó visszaállítása"
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Resetting your password..."
-msgstr "Jelszó visszaállítása..."
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Resources"
-msgstr "Erőforrások"
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Restore this version?"
@@ -4051,13 +3504,8 @@ msgstr "Önéletrajz összekapcsolva"
 msgid "Resume options"
 msgstr "Önéletrajz beállítások"
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Resume tailored"
-msgstr ""
-
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
-#: src/routes/_home/-sections/statistics.tsx
 #: src/routes/dashboard/-components/sidebar.tsx
 #: src/routes/dashboard/resumes/index.tsx
 msgid "Resumes"
@@ -4124,9 +3572,7 @@ msgstr "Fizetés"
 msgid "Salary range"
 msgstr "Fizetési sáv"
 
-#. Passkey rename prompt confirm action in authentication settings
 #: src/features/applications/components/application-detail-sheet.tsx
-#: src/features/settings/authentication/components/passkeys.tsx
 msgid "Save"
 msgstr "Mentés"
 
@@ -4163,12 +3609,17 @@ msgstr "Módosítások mentése"
 #: src/dialogs/resume/sections/summary-item.tsx
 #: src/dialogs/resume/sections/volunteer.tsx
 #: src/features/settings/pages/profile.tsx
+#: src/features/settings/profile/index.tsx
 msgid "Save Changes"
 msgstr "Változtatások mentése"
 
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "Save model"
 msgstr "Modell mentése"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Save projects, launches, hackathons, metrics, feedback, and hard-earned lessons while they are still fresh."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Save the file with every page upright."
@@ -4181,10 +3632,6 @@ msgstr "Mentett"
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
 msgstr "Mentés…"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Scan the QR code below with your preferred authenticator app. You can also copy the secret below and paste it into your app."
-msgstr "Olvasd be az alábbi QR‑kódot a választott hitelesítő alkalmazással. A lenti titkos kulcsot is kimásolhatod, és beillesztheted az alkalmazásodba."
 
 #: src/dialogs/resume/sections/education.tsx
 msgid "School"
@@ -4234,10 +3681,6 @@ msgstr "Keresés..."
 msgid "Search…"
 msgstr "Keresés…"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Secret copied to clipboard."
-msgstr "A titkos kód a vágólapra másolva."
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "Section options"
@@ -4261,8 +3704,8 @@ msgid "See how this resume matches the posting"
 msgstr "Nézd meg, hogyan illeszkedik ez az önéletrajz a hirdetéshez"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "See what an applicant tracking system can read from your resume. Runs in your browser."
-msgstr "Nézd meg, mit tud kiolvasni egy toborzórendszer (ATS) az önéletrajzodból. A böngésződben fut."
+msgid "See what an applicant tracking system can read before your resume reaches a recruiter."
+msgstr ""
 
 #. placeholder {0}: app.company
 #: src/features/applications/components/table-view.tsx
@@ -4285,26 +3728,13 @@ msgstr "Kiválasztás..."
 msgid "selected"
 msgstr "kijelölve"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Self-Host with Docker"
-msgstr "Önálló hosztolás Dockerrel"
-
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Semantic CSS stylesheet"
 msgstr "Szemantikus CSS stíluslap"
 
-#. Primary action button label on forgot-password form
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Send Password Reset Email"
-msgstr "Jelszó‑visszaállító e‑mail küldése"
-
 #: src/features/ats-checker/messages.ts
 msgid "Send the resume itself rather than a portfolio wrapper."
 msgstr "Küldd el magát az önéletrajzot, ne egy portfólió-csomagolást."
-
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sending password reset email..."
-msgstr "Jelszó‑visszaállító e‑mail küldése..."
 
 #: src/features/ats-checker/ai-review/ai-review-card.tsx
 msgid "Sends the text already extracted from your PDF to the AI provider you choose below. The PDF file itself is never uploaded."
@@ -4322,7 +3752,6 @@ msgstr "Elválasztó"
 msgid "Serbian"
 msgstr "szerb"
 
-#: src/features/settings/authentication/components/password.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/sharing.tsx
 msgid "Set Password"
 msgstr "Jelszó beállítása"
@@ -4340,25 +3769,25 @@ msgstr "Szolgáltató beállítása"
 msgid "Settings"
 msgstr "Beállítások"
 
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Setup Authenticator App"
-msgstr "Hitelesítő alkalmazás beállítása"
-
 #: src/routes/builder/$resumeId/-sidebar/left/sections/picture.tsx
 msgid "Shadow Width"
 msgstr "Árnyék vastagsága"
 
 #: src/routes/_home/-sections/features.tsx
-msgid "Share your resume with a public URL, and let others view it."
-msgstr "Oszd meg az önéletrajzod nyilvános URL‑lel, és engedd, hogy mások megtekinthessék."
+msgid "Shape raw career history into concise bullets, project summaries, and interview-ready stories."
+msgstr ""
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Shareable Links"
-msgstr "Megosztható linkek"
+#: src/routes/_home/-sections/faq.tsx
+msgid "Share a job description and cloudcoffee selects the most relevant evidence from your career base, then helps shape it into a focused resume you can refine."
+msgstr ""
 
 #: src/libs/resume/section.tsx
 msgid "Sharing"
 msgstr "Megosztás"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Ship a polished resume"
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -4383,20 +3812,7 @@ msgstr "További {0} megjelenítése"
 msgid "Show link in title"
 msgstr "Link megjelenítése a címben"
 
-#. Accessible label for button that reveals password in registration form
-#. Accessible label for button that reveals password in reset-password form
 #. Accessible label for button that reveals password on protected resume screen
-#. Accessible label for button that reveals the password in login form
-#. Accessible label for toggle button that reveals the masked current password
-#. Accessible label for toggle button that reveals the masked new password
-#. Accessible label for toggle button that reveals the masked password in two-factor disable dialog
-#. Accessible label for toggle button that reveals the masked password in two-factor setup
-#: src/dialogs/auth/change-password.tsx
-#: src/dialogs/auth/disable-two-factor.tsx
-#: src/dialogs/auth/enable-two-factor.tsx
-#: src/features/auth/pages/login.tsx
-#: src/features/auth/pages/register.tsx
-#: src/features/auth/pages/reset-password.tsx
 #: src/features/auth/pages/resume-password.tsx
 msgid "Show password"
 msgstr "Jelszó megjelenítése"
@@ -4424,9 +3840,8 @@ msgstr "Oldalsáv"
 msgid "Sidebar Width"
 msgstr "Oldalsáv szélessége"
 
-#. Primary action button label on login form
 #: src/features/ats-checker/ai-review/locked-card.tsx
-#: src/features/auth/pages/login.tsx
+#: src/routes/_home/-sections/footer.tsx
 msgid "Sign in"
 msgstr "Bejelentkezés"
 
@@ -4434,26 +3849,10 @@ msgstr "Bejelentkezés"
 msgid "Sign in and connect your own AI provider to get rewrite suggestions for weak bullets. The checks above are free and need no account."
 msgstr "Jelentkezz be, és kapcsold össze a saját AI szolgáltatóddal, hogy átírási javaslatokat kapj a gyenge felsoroláspontokhoz. A fenti ellenőrzések ingyenesek, és nem igényelnek fiókot."
 
-#. Call-to-action link from forgot-password page to login page
-#. Call-to-action link from registration page to login page
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "Sign in now"
-msgstr "Jelentkezzen be most"
-
 #. Title on the login page
 #: src/features/auth/pages/login.tsx
 msgid "Sign in to your account"
 msgstr "Jelentkezz be a fiókodba"
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Sign in with GitHub, Google or a custom OAuth provider."
-msgstr "Jelentkezz be GitHub, Google vagy egy egyéni OAuth szolgáltató segítségével."
-
-#. Primary action button label on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Sign up"
-msgstr "Regisztráció"
 
 #. Title on the page shown after a failed or cancelled OAuth sign-in
 #: src/features/auth/pages/error.tsx
@@ -4461,17 +3860,12 @@ msgid "Sign-in didn't complete"
 msgstr "A bejelentkezés nem fejeződött be"
 
 #: src/features/auth/components/social-auth.tsx
-#: src/features/auth/pages/login.tsx
 msgid "Signing in..."
 msgstr "Bejelentkezés..."
 
 #: src/features/user/dropdown-menu.tsx
 msgid "Signing out..."
 msgstr "Kijelentkezés..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Signing up..."
-msgstr "Regisztráció..."
 
 #: src/dialogs/resume/template/data.ts
 msgid "Single-column with teal headings, a compact contact grid, and generous margins; optimized for ATS-friendly technical and operations resumes."
@@ -4579,7 +3973,6 @@ msgstr "Rendezés…"
 msgid "Source"
 msgstr "Forrás"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Source Code"
 msgstr "Forráskód"
@@ -4596,6 +3989,10 @@ msgstr "Térköz (függőleges)"
 msgid "Spanish"
 msgstr "spanyol"
 
+#: src/routes/_home/-sections/hero.tsx
+msgid "speed of opportunity."
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "Írd ki a hónapot betűkkel, például \"2022. márc.\"."
@@ -4603,10 +4000,6 @@ msgstr "Írd ki a hónapot betűkkel, például \"2022. márc.\"."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Sponsors"
 msgstr "Támogatók"
-
-#: src/routes/_home/-sections/footer.tsx
-msgid "Sponsorships"
-msgstr "Szponzorációk"
 
 #. Preset button for setting picture aspect ratio to square
 #: src/components/level/combobox.tsx
@@ -4687,10 +4080,6 @@ msgstr "Stíluslap-szerkesztő"
 msgid "Stylesheet has fatal errors"
 msgstr "A stíluslap végzetes hibákat tartalmaz"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "Subreddit"
-msgstr "Subreddit"
-
 #: src/features/ats-checker/ai-review/ai-review-results.tsx
 msgid "Suggestions"
 msgstr "Javaslatok"
@@ -4759,6 +4148,10 @@ msgstr "A címkék egyértelmű olvasási sorrendet adnak a szoftvereknek. Kapcs
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailor my resume"
 msgstr "Önéletrajz testreszabása"
+
+#: src/routes/_home/-sections/features.tsx
+msgid "Tailor to any role"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Tailoring failed."
@@ -4850,14 +4243,6 @@ msgstr "Ez a szolgáltatói fiók más e-mail-címet használ, mint az Ön fiók
 msgid "That sign-in provider is no longer available on this server."
 msgstr "Ez a bejelentkezési szolgáltató már nem érhető el ezen a kiszolgálón."
 
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key has been deleted successfully."
-msgstr "Az API kulcsot sikeresen töröltük."
-
-#: src/features/settings/pages/api-keys.tsx
-msgid "The API key will no longer be able to access your data after deletion. This action cannot be undone."
-msgstr "Az API kulcs törlése után többé nem fér hozzá az adataidhoz. Ez a művelet nem vonható vissza."
-
 #: src/features/auth/pages/error.tsx
 msgid "The application that sent you here made an invalid authorization request."
 msgstr "Az alkalmazás, amely ide küldte Önt, érvénytelen engedélyezési kérést küldött."
@@ -4947,14 +4332,10 @@ msgstr "A megadott URL érvénytelen."
 
 #. Menu item that opens appearance theme selection submenu
 #: src/features/command-palette/pages/preferences/theme.tsx
-#: src/features/settings/pages/preferences.tsx
+#: src/features/settings/pages/account.tsx
 #: src/features/user/dropdown-menu.tsx
 msgid "Theme"
 msgstr "Téma"
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Then, enter the 6 digit code that the app provides to continue."
-msgstr "Ezután írd be a folytatáshoz az alkalmazás által megadott 6 számjegyű kódot."
 
 #: src/features/ats-checker/messages.ts
 msgid "There is a gap between two dated roles."
@@ -5177,18 +4558,6 @@ msgstr "Ez a rész az oldalsávban található."
 msgid "This sign-in attempt expired or was already used. Please start again."
 msgstr "Ez a bejelentkezési kísérlet lejárt, vagy már felhasználták. Kérjük, kezdje elölről."
 
-#: src/features/auth/pages/register.tsx
-msgid "This step is optional, but recommended."
-msgstr "Ez a lépés opcionális, de ajánlott."
-
-#: src/dialogs/api-key/create.tsx
-msgid "This will generate a new API key to access the cloudcoffee API to allow machines to interact with your resume data."
-msgstr "Ez egy új API kulcsot hoz létre a cloudcoffee API eléréséhez, lehetővé téve, hogy gépek az önéletrajz adataiddal dolgozzanak."
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "This will help you identify it later, if you plan to have multiple passkeys."
-msgstr "Ez segít a későbbi azonosításban, ha több jelszókulcsot tervez."
-
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "This will remove all items from this section."
 msgstr "Ezzel az összes elemet eltávolítja ebből a szakaszból."
@@ -5200,10 +4569,6 @@ msgstr "Idővonal"
 #: src/features/ats-checker/messages.ts
 msgid "Tip"
 msgstr "Tipp"
-
-#: src/dialogs/api-key/create.tsx
-msgid "Tip: Give your API key a name, corresponding to the purpose of the key, to help you identify it later."
-msgstr "Tipp: Adj az API kulcsodnak olyan nevet, amely a kulcs céljára utal, így később könnyebben azonosíthatod."
 
 #: src/dialogs/resume/index.tsx
 msgid "Tip: You can name the resume referring to the position you are applying for."
@@ -5255,7 +4620,6 @@ msgstr "Első jelentkezés nyomon követése"
 msgid "Track your resume's views and downloads"
 msgstr "Kövesd nyomon az önéletrajzod megtekintéseinek és letöltéseinek számát"
 
-#: src/routes/_home/-sections/footer.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "Fordítások"
@@ -5268,6 +4632,10 @@ msgstr "Próbáld újra"
 msgid "Turkish"
 msgstr "török"
 
+#: src/routes/_home/-sections/features.tsx
+msgid "Turn memory into language"
+msgstr ""
+
 #: src/features/ats-checker/messages.ts
 msgid "Turn off discretionary ligatures when exporting."
 msgstr "Kapcsold ki a diszkrecionális ligatúrákat exportáláskor."
@@ -5275,24 +4643,6 @@ msgstr "Kapcsold ki a diszkrecionális ligatúrákat exportáláskor."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/statistics.tsx
 msgid "Turn on public sharing to track how many times your resume has been viewed or downloaded. Only you can see your resume's statistics."
 msgstr "Kapcsold be a nyilvános megosztást, hogy lásd, hányszor tekintették meg vagy töltötték le az önéletrajzodat. Az önéletrajzod statisztikáit csak te láthatod."
-
-#: src/features/auth/pages/verify-2fa.tsx
-#: src/features/settings/authentication/components/two-factor.tsx
-msgid "Two-Factor Authentication"
-msgstr "Kétlépcsős hitelesítés"
-
-#: src/dialogs/auth/disable-two-factor.tsx
-msgid "Two-factor authentication has been disabled successfully."
-msgstr "A kétlépcsős hitelesítés sikeresen ki lett kapcsolva."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-factor authentication has been setup successfully."
-msgstr "A kétlépcsős hitelesítés beállítása sikeresen megtörtént."
-
-#. Accessible title for QR code image shown during two-factor setup
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Two-Factor Authentication QR Code"
-msgstr "Kétfaktoros hitelesítés QR-kód"
 
 #: src/dialogs/resume/import.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -5335,14 +4685,6 @@ msgstr "Visszavonás"
 msgid "Undo stylesheet edit"
 msgstr "Stíluslap szerkesztésének visszavonása"
 
-#: src/routes/_home/-sections/features.tsx
-msgid "Unlimited Resumes"
-msgstr "Korlátlan önéletrajz"
-
-#: src/features/settings/authentication/components/hooks.tsx
-msgid "Unlinking your {providerName} account..."
-msgstr "{providerName} fiókod leválasztása..."
-
 #. Primary action button label to unlock a password-protected resume
 #. Resume card context menu action to remove edit lock
 #. Resume card dropdown action to remove edit lock
@@ -5352,14 +4694,6 @@ msgstr "{providerName} fiókod leválasztása..."
 #: src/routes/dashboard/resumes/-components/menus/dropdown-menu.tsx
 msgid "Unlock"
 msgstr "Feloldás"
-
-#: src/features/settings/authentication/components/passkeys.tsx
-msgid "Unnamed passkey"
-msgstr "Névtelen jelszó"
-
-#: src/features/settings/pages/profile.tsx
-msgid "Unverified"
-msgstr "Nem hitelesített"
 
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-item.tsx
@@ -5426,12 +4760,6 @@ msgstr "Meglévő összefoglaló elem frissítése"
 msgid "Update an existing volunteer experience"
 msgstr "Meglévő önkéntes tapasztalat frissítése"
 
-#. Primary action button to submit changed password
-#: src/dialogs/auth/change-password.tsx
-#: src/features/settings/authentication/components/password.tsx
-msgid "Update Password"
-msgstr "Jelszó frissítése"
-
 #: src/dialogs/resume/index.tsx
 msgid "Update Resume"
 msgstr "Önéletrajz frissítése"
@@ -5447,14 +4775,6 @@ msgstr "Frissítsd ennek a jelentkezésnek a részleteit."
 #: src/features/applications/components/application-detail-sheet.tsx
 msgid "Update this timeline note."
 msgstr "Frissítsd ezt az idővonaljegyzetet."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Update your password"
-msgstr "Jelszó frissítése"
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Updating your password..."
-msgstr "Jelszó frissítése..."
 
 #: src/dialogs/resume/index.tsx
 msgid "Updating your resume..."
@@ -5547,16 +4867,10 @@ msgstr "Minta használata"
 msgid "Use your editor's normal bullet list, so stray glyphs do not land mid-sentence."
 msgstr "Használd a szerkesztőd normál felsorolásfunkcióját, hogy elkóborolt karakterjelek ne kerüljenek mondat közepére."
 
-#. Label for username input on registration form
 #: src/dialogs/resume/sections/profile.tsx
-#: src/features/auth/pages/register.tsx
 #: src/features/settings/pages/profile.tsx
 msgid "Username"
 msgstr "Felhasználónév"
-
-#: src/routes/_home/-sections/statistics.tsx
-msgid "Users"
-msgstr "Felhasználók"
 
 #: src/libs/locale.ts
 msgid "Uzbek"
@@ -5586,39 +4900,9 @@ msgstr "Változtasd a mondatkezdéseket, hogy a szakasz ne hasson sablonosnak."
 msgid "Vercel AI Gateway"
 msgstr "Vercel AI Gateway"
 
-#: src/features/settings/pages/profile.tsx
-msgid "Verified"
-msgstr "Hitelesített"
-
-#. Primary action button to submit 2FA code
-#. Primary action button to submit backup code
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify"
-msgstr "Ellenőrzés"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verify with a Backup Code"
-msgstr "Hitelesítés biztonsági kóddal"
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying backup code..."
-msgstr "Biztonsági kód ellenőrzése..."
-
-#: src/features/auth/pages/verify-2fa.tsx
-msgid "Verifying code..."
-msgstr "Kód ellenőrzése..."
-
-#: src/dialogs/auth/enable-two-factor.tsx
-msgid "Verifying code…"
-msgstr "Ellenőrző kód…"
-
 #: src/features/auth/pages/resume-password.tsx
 msgid "Verifying password..."
 msgstr "Jelszó ellenőrzése..."
-
-#: src/features/auth/pages/register.tsx
-msgid "Verifying your email is required when resetting your password."
-msgstr "A jelszó megerősítése kötelező a jelszó visszaállításakor."
 
 #: src/routes/builder/$resumeId/-components/version-history.tsx
 msgid "Version history"
@@ -5696,13 +4980,17 @@ msgstr "Amit egy feldolgozó (parser) beolvas"
 msgid "What a person sees"
 msgstr "Amit egy ember lát"
 
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I add to my career base?"
+msgstr ""
+
+#: src/routes/_home/-sections/faq.tsx
+msgid "What can I ask my career knowledge base?"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/left/shared/section-menu.tsx
 msgid "What do you want to rename this section to?"
 msgstr "Mire szeretnéd átnevezni ezt a szekciót?"
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "What makes cloudcoffee different from other resume builders?"
-msgstr "Miben különbözik a cloudcoffee a többi önéletrajz‑készítőtől?"
 
 #: src/routes/_home/ats-checker.tsx
 msgid "What this checks"
@@ -5797,33 +5085,17 @@ msgstr "Írja be a teljes címet, beleértve a https://-t is."
 msgid "Writing"
 msgstr "Szövegezés"
 
-#: src/routes/_home/-sections/footer.tsx
-msgid "X (Twitter)"
-msgstr "X (Twitter)"
-
 #: src/features/settings/integrations/components/ai-section.tsx
 msgid "xAI Grok"
 msgstr "xAI Grok"
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes, cloudcoffee is available in multiple languages. You can choose your preferred language in the settings page, or using the language switcher in the top right corner. If you don't see your language, or you would like to improve the existing translations, you can <0>contribute to the translations on Crowdin<1> (opens in new tab)</1></0>."
-msgstr "Igen, a cloudcoffee több nyelven is elérhető. A beállítások oldalon választhatod ki a kívánt nyelvet, vagy a jobb felső sarokban található nyelvváltó segítségével. Ha nem látod a saját nyelvedet, vagy szeretnél javítani a meglévő fordításokon, <0>közreműködhetsz a fordításokban a Crowdin‑on<1> (új lapon nyílik meg)</1></0>."
+msgid "Yes. Refine the final resume, export it as a polished PDF, or share it through a public link when you are ready."
+msgstr ""
 
 #: src/routes/_home/-sections/faq.tsx
-msgid "Yes! cloudcoffee is completely free to use, with no hidden costs, premium tiers, or subscription fees. It's open-source and will always remain free."
-msgstr "Igen! A cloudcoffee teljesen ingyenesen használható, rejtett költségek, prémium szintek vagy előfizetési díjak nélkül. Nyílt forráskódú, és mindig ingyenes marad."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "You also have the option to deploy on your own servers using the Docker image."
-msgstr "Lehetőséged van saját szervereiden is üzembe helyezni a Docker image segítségével."
-
-#: src/features/auth/pages/login.tsx
-msgid "You can also use your username to login."
-msgstr "Be is jelentkezhetsz a felhasználóneveddel."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "You can share your resume via a unique public URL, protect it with a password, or download it as a PDF to share directly. The choice is yours!"
-msgstr "Az önéletrajzodat megoszthatod egy egyedi nyilvános URL‑lel, jelszóval védheted, vagy PDF‑ként letöltheted és közvetlenül megoszthatod. A döntés a tiéd!"
+msgid "Yes. Your career base stays constant while each resume can emphasize a different role, industry, seniority level, or opportunity."
+msgstr ""
 
 #: src/features/auth/pages/error.tsx
 msgid "You cancelled the sign-in before it finished."
@@ -5834,13 +5106,8 @@ msgid "You have unsaved changes that will be lost."
 msgstr "Nem mentett módosításai vannak, amelyek elvesznek."
 
 #: src/dialogs/resume/import.tsx
-msgid "You'll be taken to the Integrations page. The file you selected won't be imported."
-msgstr "Ekkor az Integrációk oldalra kerül. "
-
-#: src/features/auth/pages/forgot-password.tsx
-#: src/features/auth/pages/register.tsx
-msgid "You've got mail!"
-msgstr "Új üzeneted érkezett!"
+msgid "You'll be taken to Account settings. The file you selected won't be imported."
+msgstr ""
 
 #: src/features/settings/pages/account.tsx
 msgid "Your account has been deleted successfully."
@@ -5850,9 +5117,9 @@ msgstr "A fiókodat sikeresen töröltük."
 msgid "Your AI provider could not be reached. Check its settings and try again."
 msgstr "Az AI szolgáltatód nem érhető el. Ellenőrizd a beállításait, és próbáld újra."
 
-#: src/dialogs/api-key/create.tsx
-msgid "Your API key has been copied to the clipboard."
-msgstr "Az API kulcsodat a vágólapra másoltuk."
+#: src/features/settings/profile/index.tsx
+msgid "Your application profile has been saved."
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 #: src/libs/resume/ats.ts
@@ -5863,12 +5130,16 @@ msgstr "A törzsszövege nagyon kicsi."
 msgid "Your bullets are drawn with unusual characters."
 msgstr "A felsoroláspontjaid szokatlan karakterekkel vannak jelölve."
 
-#: src/routes/_home/-sections/hero.tsx
-msgid "Your career has a memory."
+#: src/routes/_home/-sections/prefooter.tsx
+msgid "Your career already has the proof."
 msgstr ""
 
 #: src/routes/_home/-sections/hero.tsx
 msgid "Your career knowledge base"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Your career knowledge base—ready whenever opportunity appears."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-components/preview-page.tsx
@@ -5882,14 +5153,6 @@ msgstr "Az elérhetőségeid nem az első oldalon vannak."
 #: src/features/settings/pages/account.tsx
 msgid "Your data has been exported successfully."
 msgstr "Az adataid exportálása sikeresen megtörtént."
-
-#: src/routes/_home/-sections/features.tsx
-msgid "Your data is secure, and never shared or sold to anyone."
-msgstr "Az adataid biztonságban vannak, és soha nem adjuk el vagy osztjuk meg senkivel."
-
-#: src/routes/_home/-sections/faq.tsx
-msgid "Your data is stored securely and is never shared with third parties. You can also self-host cloudcoffee on your own servers for complete control over your data."
-msgstr "Az adataid biztonságosan tároljuk, és soha nem osztjuk meg harmadik felekkel. A cloudcoffee‑t saját szervereiden is hosztolhatod, hogy teljes kontrollod legyen az adataid felett."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your dates are written several different ways."
@@ -5931,14 +5194,6 @@ msgstr "A margóid nagyon keskenyek."
 #: src/libs/resume/ats.ts
 msgid "Your page margins are very narrow."
 msgstr "Az oldal margói nagyon szűkek."
-
-#: src/features/auth/pages/reset-password.tsx
-msgid "Your password has been reset successfully. You can now sign in with your new password."
-msgstr "A jelszavadat sikeresen visszaállítottuk. Mostantól az új jelszóval jelentkezhetsz be."
-
-#: src/dialogs/auth/change-password.tsx
-msgid "Your password has been updated successfully."
-msgstr "A jelszavadat sikeresen frissítettük."
 
 #: src/features/ats-checker/messages.ts
 msgid "Your phone number is written in an unusual shape."

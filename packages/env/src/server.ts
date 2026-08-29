@@ -32,28 +32,6 @@ export const env = createEnv({
 		GOOGLE_CLIENT_ID: z.string().min(1).optional(),
 		GOOGLE_CLIENT_SECRET: z.string().min(1).optional(),
 
-		// Social Auth (GitHub)
-		GITHUB_CLIENT_ID: z.string().min(1).optional(),
-		GITHUB_CLIENT_SECRET: z.string().min(1).optional(),
-
-		// Social Auth (LinkedIn)
-		LINKEDIN_CLIENT_ID: z.string().min(1).optional(),
-		LINKEDIN_CLIENT_SECRET: z.string().min(1).optional(),
-
-		// Custom OAuth Provider
-		OAUTH_PROVIDER_NAME: z.string().min(1).optional(),
-		OAUTH_CLIENT_ID: z.string().min(1).optional(),
-		OAUTH_CLIENT_SECRET: z.string().min(1).optional(),
-		OAUTH_DISCOVERY_URL: z.url({ protocol: /https?/ }).optional(),
-		OAUTH_AUTHORIZATION_URL: z.url({ protocol: /https?/ }).optional(),
-		OAUTH_TOKEN_URL: z.url({ protocol: /https?/ }).optional(),
-		OAUTH_USER_INFO_URL: z.url({ protocol: /https?/ }).optional(),
-		OAUTH_SCOPES: z
-			.string()
-			.min(1)
-			.transform((value) => value.split(" "))
-			.default(["openid", "profile", "email"]),
-
 		// Email (SMTP)
 		SMTP_HOST: z.string().min(1).optional(),
 		SMTP_PORT: z.coerce.number().int().min(1).max(65535).default(587),
@@ -76,7 +54,6 @@ export const env = createEnv({
 
 		// Feature Flags
 		FLAG_DISABLE_SIGNUPS: z.stringbool().default(false),
-		FLAG_DISABLE_EMAIL_AUTH: z.stringbool().default(false),
 		FLAG_DISABLE_IMAGE_PROCESSING: z.stringbool().default(false),
 		FLAG_DISABLE_API_RATE_LIMIT: z.stringbool().default(false),
 		FLAG_SHOW_SPONSORS: z.stringbool().default(false),

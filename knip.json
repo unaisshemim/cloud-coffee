@@ -33,7 +33,6 @@
 				"@aws-sdk/client-s3",
 				"@better-auth/drizzle-adapter",
 				"@better-auth/infra",
-				"@better-auth/passkey",
 				"@bramus/specificity",
 				"@orpc/experimental-ratelimit",
 				"@sindresorhus/slugify",

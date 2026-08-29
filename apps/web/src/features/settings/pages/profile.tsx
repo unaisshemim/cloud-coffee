@@ -1,9 +1,8 @@
 import type { AuthSession } from "@reactive-resume/auth/types";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
-import { CheckIcon, WarningIcon } from "@phosphor-icons/react";
 import { useStore } from "@tanstack/react-form";
-import { useRouteContext, useRouter } from "@tanstack/react-router";
+import { useRouter } from "@tanstack/react-router";
 import { AnimatePresence, m } from "motion/react";
 import z from "zod";
 import { Button } from "@reactive-resume/ui/components/button";
@@ -24,7 +23,6 @@ const formSchema = z.object({
 		.regex(/^[a-z0-9._-]+$/, {
 			message: "Username can only contain lowercase letters, numbers, dots, hyphens and underscores.",
 		}),
-	email: z.email().trim(),
 });
 
 type Props = {
@@ -33,14 +31,11 @@ type Props = {
 
 export function AccountIdentityForm({ session }: Props) {
 	const router = useRouter();
-	const context = useRouteContext({ strict: false });
-	const smtpEnabled = context.flags?.smtpEnabled ?? false;
 
 	const form = useAppForm({
 		defaultValues: {
 			name: session.user.name,
 			username: session.user.username,
-			email: session.user.email,
 		},
 		validators: { onSubmit: formSchema },
 		onSubmit: async ({ value }) => {
@@ -65,36 +60,8 @@ export function AccountIdentityForm({ session }: Props) {
 			}
 
 			toast.add({ type: "success", description: t`Your profile has been updated successfully.` });
-			form.reset({ name: value.name, username: value.username, email: session.user.email });
+			form.reset({ name: value.name, username: value.username });
 			void router.invalidate();
-
-			if (value.email !== session.user.email) {
-				const { error } = await authClient.changeEmail({
-					newEmail: value.email,
-					callbackURL: "/dashboard/settings/account",
-				});
-
-				if (error) {
-					toast.add({
-						type: "error",
-						description: getReadableErrorMessage(
-							error,
-							t({
-								comment: "Fallback toast when requesting email change confirmation fails",
-								message: "Failed to request email change. Please try again.",
-							}),
-						),
-					});
-					return;
-				}
-
-				toast.add({
-					type: "success",
-					description: t`A confirmation link has been sent to your current email address. Please check your inbox to confirm the change.`,
-				});
-				form.reset({ name: value.name, username: value.username, email: session.user.email });
-				void router.invalidate();
-			}
 		},
 	});
 
@@ -103,37 +70,6 @@ export function AccountIdentityForm({ session }: Props) {
 	};
 
 	const isDirty = useStore(form.store, (s) => s.isDirty);
-
-	const handleResendVerificationEmail = async () => {
-		const toastId = toast.add({ type: "loading", description: t`Resending verification email...` });
-
-		const { error } = await authClient.sendVerificationEmail({
-			email: session.user.email,
-			callbackURL: "/dashboard/settings/account",
-		});
-
-		if (error) {
-			toast.add({
-				type: "error",
-				description: getReadableErrorMessage(
-					error,
-					t({
-						comment: "Fallback toast when resending account verification email fails",
-						message: "Failed to resend verification email. Please try again.",
-					}),
-				),
-				id: toastId,
-			});
-			return;
-		}
-
-		toast.add({
-			type: "success",
-			description: t`A new verification link has been sent to your email address. Please check your inbox to verify your account.`,
-			id: toastId,
-		});
-		void router.invalidate();
-	};
 
 	return (
 		<m.form
@@ -204,56 +140,17 @@ export function AccountIdentityForm({ session }: Props) {
 				)}
 			</form.Field>
 
-			<form.Field name="email">
-				{(field) => (
-					<FormItem hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
-						<FormLabel>
-							<Trans>Email Address</Trans>
-						</FormLabel>
-						<FormControl
-							render={
-								<Input
-									type="email"
-									autoComplete="email"
-									placeholder={t({
-										comment: "Example email placeholder on profile settings form",
-										message: "john.doe@example.com",
-									})}
-									className="lowercase"
-									name={field.name}
-									value={field.state.value}
-									onBlur={field.handleBlur}
-									onChange={(event) => field.handleChange(event.target.value)}
-								/>
-							}
-						/>
-						<FormMessage errors={field.state.meta.errors} />
-						{session.user.emailVerified === true ? (
-							<p className="flex items-center gap-x-1.5 text-green-700 text-xs">
-								<CheckIcon />
-								<Trans>Verified</Trans>
-							</p>
-						) : smtpEnabled ? (
-							<p className="flex items-center gap-x-1.5 text-amber-600 text-xs">
-								<WarningIcon className="size-3.5" />
-								<Trans>Unverified</Trans>
-								<span>|</span>
-								<Button
-									variant="link"
-									className="h-auto gap-x-1.5 p-0! text-inherit text-xs"
-									onClick={handleResendVerificationEmail}
-								>
-									<Trans>Resend verification email</Trans>
-								</Button>
-							</p>
-						) : (
-							<p className="text-muted-foreground text-xs">
-								<Trans>Email delivery isn't configured on this instance, so verification is disabled.</Trans>
-							</p>
-						)}
-					</FormItem>
-				)}
-			</form.Field>
+			<FormItem>
+				<FormLabel htmlFor="email">
+					<Trans>Email Address</Trans>
+				</FormLabel>
+				<FormControl
+					render={<Input id="email" type="email" className="lowercase" value={session.user.email} disabled readOnly />}
+				/>
+				<p className="text-muted-foreground text-xs">
+					<Trans>Email address is managed by Google.</Trans>
+				</p>
+			</FormItem>
 
 			<AnimatePresence initial={false} mode="popLayout">
 				{isDirty && (

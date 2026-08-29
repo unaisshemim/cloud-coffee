@@ -1,27 +1,19 @@
-import type { GenericOAuthConfig, GenericOAuthUserInfo } from "better-auth/plugins";
 import type { JWTPayload } from "jose";
 import { drizzleAdapter } from "@better-auth/drizzle-adapter";
 import { dash } from "@better-auth/infra";
 import { oauthProvider } from "@better-auth/oauth-provider";
-import { passkey } from "@better-auth/passkey";
-import { compare, hash } from "bcrypt";
 import { APIError, betterAuth } from "better-auth";
 import { createAuthMiddleware } from "better-auth/api";
 import { verifyBearerToken } from "better-auth/oauth2";
 import { admin, jwt } from "better-auth/plugins";
-import { genericOAuth } from "better-auth/plugins/generic-oauth";
-import { twoFactor } from "better-auth/plugins/two-factor";
 import { username } from "better-auth/plugins/username";
-import { createElement } from "react";
 import { db } from "@reactive-resume/db/client";
 import * as schema from "@reactive-resume/db/schema";
-import { ResetPasswordEmail, VerifyEmail, VerifyEmailChange } from "@reactive-resume/email/templates/auth";
-import { sendEmail } from "@reactive-resume/email/transport";
 import { env } from "@reactive-resume/env/server";
 import { rateLimitConfig, TRUSTED_IP_HEADERS } from "@reactive-resume/utils/rate-limit";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
 import { isAllowedOAuthRedirectUri } from "@reactive-resume/utils/url-security.node";
-import { createGithubProfileMapper, createProfileMapper } from "./oauth-profile";
+import { createProfileMapper } from "./oauth-profile";
 import { getTrustedOrigins } from "./trusted-origins";
 
 const authBaseUrl = env.APP_URL;
@@ -57,14 +49,6 @@ export function verifyOAuthToken(token: string): Promise<JWTPayload> {
 	});
 }
 
-function isCustomOAuthProviderEnabled() {
-	const hasDiscovery = Boolean(env.OAUTH_DISCOVERY_URL);
-	const hasManual =
-		Boolean(env.OAUTH_AUTHORIZATION_URL) && Boolean(env.OAUTH_TOKEN_URL) && Boolean(env.OAUTH_USER_INFO_URL);
-
-	return Boolean(env.OAUTH_CLIENT_ID) && Boolean(env.OAUTH_CLIENT_SECRET) && (hasDiscovery || hasManual);
-}
-
 const TRUSTED_ORIGINS = getTrustedOrigins(env.APP_URL);
 const oauthProviderRateLimit = isRateLimitEnabled
 	? rateLimitConfig.betterAuth.oauthProvider
@@ -76,11 +60,6 @@ const oauthProviderRateLimit = isRateLimitEnabled
 			revoke: false,
 			userinfo: false,
 		} as const);
-
-// Better Auth 1.7 types generic-OAuth profile extras as `unknown`.
-function asString(value: unknown): string | undefined {
-	return typeof value === "string" ? value : undefined;
-}
 
 // `@better-auth/oauth-provider@1.7.1` declares OpenAPI parameter metadata (`schema.items`) in a
 // shape that is not `exactOptionalPropertyTypes`-clean, which stops the plugin from structurally
@@ -106,32 +85,6 @@ type WithoutEndpointMetadata<TPlugin> = TPlugin extends { endpoints: infer TEndp
 	: TPlugin;
 
 const getAuthConfig = () => {
-	const authConfigs: GenericOAuthConfig[] = [];
-
-	if (isCustomOAuthProviderEnabled()) {
-		authConfigs.push({
-			providerId: "custom",
-			disableSignUp: env.FLAG_DISABLE_SIGNUPS,
-			clientId: env.OAUTH_CLIENT_ID as string,
-			clientSecret: env.OAUTH_CLIENT_SECRET as string,
-			discoveryUrl: env.OAUTH_DISCOVERY_URL,
-			authorizationUrl: env.OAUTH_AUTHORIZATION_URL,
-			tokenUrl: env.OAUTH_TOKEN_URL,
-			userInfoUrl: env.OAUTH_USER_INFO_URL,
-			scopes: env.OAUTH_SCOPES,
-			// Better Auth 1.7 folds generic OAuth providers into `socialProviders`, so the callback
-			// is served by `/callback/:id` — the old `/oauth2/callback/:id` route no longer exists.
-			redirectURI: `${authBaseUrl}/api/auth/callback/custom`,
-			mapProfileToUser: createProfileMapper<GenericOAuthUserInfo>({
-				providerName: "OAuth Provider",
-				getPreferredUsername: (profile, context) => asString(profile.preferred_username) ?? context.emailLocalPart,
-				getName: (profile, context) =>
-					asString(profile.name) ?? asString(profile.preferred_username) ?? context.emailLocalPart,
-				getImage: (profile) => asString(profile.image) ?? asString(profile.picture) ?? asString(profile.avatar_url),
-			}),
-		} satisfies GenericOAuthConfig);
-	}
-
 	return betterAuth({
 		appName: "cloudcoffee",
 		baseURL: authBaseUrl,
@@ -182,49 +135,7 @@ const getAuthConfig = () => {
 			ipAddress: { ipAddressHeaders: TRUSTED_IP_HEADERS },
 		},
 
-		emailAndPassword: {
-			enabled: !env.FLAG_DISABLE_EMAIL_AUTH,
-			autoSignIn: true,
-			minPasswordLength: 8,
-			maxPasswordLength: 64,
-			requireEmailVerification: false,
-			disableSignUp: env.FLAG_DISABLE_SIGNUPS || env.FLAG_DISABLE_EMAIL_AUTH,
-			sendResetPassword: async ({ user, url }) => {
-				await sendEmail({
-					to: user.email,
-					subject: "Reset your password",
-					react: createElement(ResetPasswordEmail, { url }),
-				});
-			},
-			password: {
-				hash: (password) => hash(password, 10),
-				verify: ({ password, hash }) => compare(password, hash),
-			},
-		},
-
-		emailVerification: {
-			sendOnSignUp: true,
-			autoSignInAfterVerification: true,
-			sendVerificationEmail: async ({ user, url }) => {
-				await sendEmail({
-					to: user.email,
-					subject: "Verify your email",
-					react: createElement(VerifyEmail, { url }),
-				});
-			},
-		},
-
 		user: {
-			changeEmail: {
-				enabled: true,
-				sendChangeEmailConfirmation: async ({ user, newEmail, url }) => {
-					await sendEmail({
-						to: newEmail,
-						subject: "Verify your new email",
-						react: createElement(VerifyEmailChange, { url, previousEmail: user.email, newEmail }),
-					});
-				},
-			},
 			additionalFields: {
 				username: {
 					type: "string",
@@ -233,16 +144,10 @@ const getAuthConfig = () => {
 			},
 		},
 
-		// Better Auth gates `/unlink-account` (and `/list-sessions`) behind a "fresh"
-		// session, which defaults to one day old. Sessions here live for a week and
-		// there is no re-authentication flow to refresh that timestamp, so disconnecting
-		// a provider failed with `SESSION_NOT_FRESH` for anyone who signed in yesterday.
-		session: { freshAge: 0 },
-
 		account: {
 			accountLinking: {
 				enabled: true,
-				trustedProviders: ["google", "github", "linkedin"],
+				trustedProviders: ["google"],
 			},
 		},
 
@@ -258,34 +163,11 @@ const getAuthConfig = () => {
 					getImage: (profile) => profile.picture,
 				}),
 			},
-
-			github: {
-				enabled: !!env.GITHUB_CLIENT_ID && !!env.GITHUB_CLIENT_SECRET,
-				disableSignUp: env.FLAG_DISABLE_SIGNUPS,
-				clientId: env.GITHUB_CLIENT_ID ?? "",
-				clientSecret: env.GITHUB_CLIENT_SECRET ?? "",
-				mapProfileToUser: createGithubProfileMapper(),
-			},
-
-			linkedin: {
-				enabled: !!env.LINKEDIN_CLIENT_ID && !!env.LINKEDIN_CLIENT_SECRET,
-				disableSignUp: env.FLAG_DISABLE_SIGNUPS,
-				clientId: env.LINKEDIN_CLIENT_ID ?? "",
-				clientSecret: env.LINKEDIN_CLIENT_SECRET ?? "",
-				mapProfileToUser: createProfileMapper({
-					providerName: "LinkedIn",
-					getName: (profile, context) => profile.name ?? context.emailLocalPart,
-					getImage: (profile) => profile.picture,
-				}),
-			},
 		},
 
 		plugins: [
 			jwt(),
 			admin(),
-			passkey(),
-			genericOAuth({ config: authConfigs }),
-			twoFactor({ issuer: "cloudcoffee" }),
 			oauthProvider({
 				loginPage: "/api/auth/oauth",
 				consentPage: "/api/auth/oauth",

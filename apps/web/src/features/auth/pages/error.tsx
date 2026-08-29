@@ -53,8 +53,7 @@ type AuthErrorPageProps = {
 
 export function AuthErrorPage({ code, description }: AuthErrorPageProps) {
 	const context = useRouteContext({ strict: false });
-	// Sign-in flows start signed out, so anyone who is already authenticated got here from the
-	// "link a provider" flow in settings and should land back there rather than on a login form.
+	// Signed-in visitors should return to account settings rather than the login form.
 	const returnsToSettings = Boolean(context.session);
 
 	return (
@@ -83,11 +82,9 @@ export function AuthErrorPage({ code, description }: AuthErrorPageProps) {
 			</Alert>
 
 			{returnsToSettings ? (
-				<Link to="/dashboard/settings/authentication" className={buttonVariants({ variant: "secondary" })}>
+				<Link to="/dashboard/settings/account" className={buttonVariants({ variant: "secondary" })}>
 					<ArrowLeftIcon />
-					<Trans comment="Action returning a signed-in user to the page where they manage linked providers">
-						Back to authentication settings
-					</Trans>
+					<Trans comment="Action returning a signed-in user to account settings">Back to account settings</Trans>
 				</Link>
 			) : (
 				<Link to="/auth/login" className={buttonVariants({ variant: "secondary" })}>

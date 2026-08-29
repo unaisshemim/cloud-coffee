@@ -65,11 +65,11 @@ describe("AuthErrorPage", () => {
 		expect(screen.getByRole("link", { name: /back to sign in/i }).getAttribute("href")).toBe("/auth/login");
 	});
 
-	it("sends a signed-in user back to authentication settings", () => {
+	it("sends a signed-in user back to account settings", () => {
 		routeContext.value = { session: { user: { id: "user-1" } } };
 		renderPage("access_denied");
 
-		const link = screen.getByRole("link", { name: /back to authentication settings/i });
-		expect(link.getAttribute("href")).toBe("/dashboard/settings/authentication");
+		const link = screen.getByRole("link", { name: /back to account settings/i });
+		expect(link.getAttribute("href")).toBe("/dashboard/settings/account");
 	});
 });

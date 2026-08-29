@@ -35,7 +35,6 @@
 		"@better-auth/drizzle-adapter": "^1.7.2",
 		"@better-auth/infra": "^0.4.3",
 		"@better-auth/oauth-provider": "^1.7.2",
-		"@better-auth/passkey": "^1.7.2",
 		"@bramus/specificity": "^2.4.2",
 		"@hono/node-server": "^2.1.1",
 		"@modelcontextprotocol/sdk": "^1.30.0",

@@ -4,7 +4,6 @@ import { publicProcedure } from "../../context";
 
 export type FeatureFlags = {
 	disableSignups: boolean;
-	disableEmailAuth: boolean;
 	showSponsors: boolean;
 	smtpEnabled: boolean;
 };
@@ -21,13 +20,12 @@ export const flagsRouter = {
 			operationId: "getFeatureFlags",
 			summary: "Get feature flags",
 			description:
-				"Returns the current feature flags for this cloudcoffee instance. Feature flags control instance-wide settings such as whether new user signups or email-based authentication are disabled. No authentication required.",
+				"Returns the current feature flags for this cloudcoffee instance. Feature flags control instance-wide settings such as whether new user signups are disabled. No authentication required.",
 			successDescription: "The current feature flags for this instance.",
 		})
 		.output(
 			z.object({
 				disableSignups: z.boolean().describe("Whether new user signups are disabled on this instance."),
-				disableEmailAuth: z.boolean().describe("Whether email-based authentication is disabled on this instance."),
 				showSponsors: z.boolean().describe("Whether sponsor placements are shown on this instance."),
 				smtpEnabled: z.boolean().describe("Whether outbound email (SMTP) is configured on this instance."),
 			}),
@@ -35,7 +33,6 @@ export const flagsRouter = {
 		.handler(
 			(): FeatureFlags => ({
 				disableSignups: env.FLAG_DISABLE_SIGNUPS,
-				disableEmailAuth: env.FLAG_DISABLE_EMAIL_AUTH,
 				showSponsors: env.FLAG_SHOW_SPONSORS,
 				smtpEnabled: isSmtpEnabled(),
 			}),

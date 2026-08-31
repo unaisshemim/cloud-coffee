@@ -1,5 +1,5 @@
 import { PlusIcon, XIcon } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Input } from "@reactive-resume/ui/components/input";
 import { Label } from "@reactive-resume/ui/components/label";
@@ -16,10 +16,15 @@ type FieldProps = {
 };
 
 export function ProfileField({ label, value, onChange, placeholder, type = "text", className }: FieldProps) {
+	const id = useId();
+
 	return (
 		<div className={cn("grid gap-1.5", className)}>
-			<Label className="font-medium text-[13px]">{label}</Label>
+			<Label htmlFor={id} className="font-medium text-[13px]">
+				{label}
+			</Label>
 			<Input
+				id={id}
 				type={type}
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
@@ -33,10 +38,15 @@ export function ProfileField({ label, value, onChange, placeholder, type = "text
 type TextareaFieldProps = Omit<FieldProps, "type">;
 
 export function ProfileTextarea({ label, value, onChange, placeholder, className }: TextareaFieldProps) {
+	const id = useId();
+
 	return (
 		<div className={cn("grid gap-1.5", className)}>
-			<Label className="font-medium text-[13px]">{label}</Label>
+			<Label htmlFor={id} className="font-medium text-[13px]">
+				{label}
+			</Label>
 			<Textarea
+				id={id}
 				value={value}
 				onChange={(event) => onChange(event.target.value)}
 				placeholder={placeholder}
@@ -54,6 +64,7 @@ type TagEditorProps = {
 };
 
 export function TagEditor({ label, values, onChange, placeholder }: TagEditorProps) {
+	const id = useId();
 	const [draft, setDraft] = useState("");
 
 	const add = () => {
@@ -65,7 +76,9 @@ export function TagEditor({ label, values, onChange, placeholder }: TagEditorPro
 
 	return (
 		<div className="grid gap-1.5">
-			<Label className="font-medium text-[13px]">{label}</Label>
+			<Label htmlFor={id} className="font-medium text-[13px]">
+				{label}
+			</Label>
 			<div className="flex min-h-12 flex-wrap items-center gap-2 rounded-md border border-input bg-white p-2">
 				{values.map((value) => (
 					<span key={value} className="inline-flex h-8 items-center gap-1.5 rounded-full bg-muted px-3 text-sm">
@@ -81,6 +94,7 @@ export function TagEditor({ label, values, onChange, placeholder }: TagEditorPro
 					</span>
 				))}
 				<input
+					id={id}
 					value={draft}
 					onChange={(event) => setDraft(event.target.value)}
 					onBlur={add}

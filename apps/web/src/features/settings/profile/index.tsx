@@ -56,15 +56,14 @@ export function ProfileWorkspace({ profile, resumes, onChange, onSave, isSaving 
 }
 
 function hydratePersonal(profile: ApplicationProfile, session: AuthSession): ApplicationProfile {
-	if (profile.personal.firstName || profile.personal.lastName || profile.personal.email) return profile;
 	const parts = session.user.name.trim().split(/\s+/);
 	return {
 		...profile,
 		personal: {
 			...profile.personal,
-			firstName: parts[0] ?? "",
-			lastName: parts.slice(1).join(" "),
-			email: session.user.email,
+			firstName: profile.personal.firstName || parts[0] || "",
+			lastName: profile.personal.lastName || parts.slice(1).join(" "),
+			email: profile.personal.email || session.user.email,
 		},
 	};
 }

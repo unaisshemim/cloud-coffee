@@ -81,7 +81,7 @@ export function NavigationCommandGroup() {
 				<CommandItem
 					keywords={[t`Profile`]}
 					value="navigation.settings.profile"
-					onSelect={() => onNavigate("/dashboard/settings/profile")}
+					onSelect={() => onNavigate("/dashboard/profile")}
 				>
 					<UserCircleIcon />
 					<Trans>Profile</Trans>

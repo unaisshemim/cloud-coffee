@@ -26,6 +26,7 @@ import { Route as AuthVerify2faRouteImport } from "./routes/auth/verify-2fa";
 import { Route as AuthVerify2faBackupRouteImport } from "./routes/auth/verify-2fa-backup";
 import { Route as BuilderResumeIdRouteRouteImport } from "./routes/builder/$resumeId/route";
 import { Route as DashboardIndexRouteImport } from "./routes/dashboard/index";
+import { Route as DashboardProfileRouteImport } from "./routes/dashboard/profile";
 import { Route as TemplatesSplatRouteImport } from "./routes/templates/$";
 import { Route as BuilderResumeIdIndexRouteImport } from "./routes/builder/$resumeId/index";
 import { Route as DashboardApplicationsIndexRouteImport } from "./routes/dashboard/applications/index";
@@ -121,6 +122,11 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
   path: "/",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
+const DashboardProfileRoute = DashboardProfileRouteImport.update({
+  id: "/profile",
+  path: "/profile",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
 const TemplatesSplatRoute = TemplatesSplatRouteImport.update({
   id: "/templates/$",
   path: "/templates/$",
@@ -194,6 +200,7 @@ export interface FileRoutesByFullPath {
   "/auth/resume-password": typeof AuthResumePasswordRoute;
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
+  "/dashboard/profile": typeof DashboardProfileRoute;
   "/templates/$": typeof TemplatesSplatRoute;
   "/auth/": typeof AuthIndexRoute;
   "/dashboard/": typeof DashboardIndexRoute;
@@ -218,6 +225,7 @@ export interface FileRoutesByTo {
   "/auth/resume-password": typeof AuthResumePasswordRoute;
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
+  "/dashboard/profile": typeof DashboardProfileRoute;
   "/templates/$": typeof TemplatesSplatRoute;
   "/": typeof HomeIndexRoute;
   "/auth": typeof AuthIndexRoute;
@@ -248,6 +256,7 @@ export interface FileRoutesById {
   "/auth/resume-password": typeof AuthResumePasswordRoute;
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
+  "/dashboard/profile": typeof DashboardProfileRoute;
   "/templates/$": typeof TemplatesSplatRoute;
   "/_home/": typeof HomeIndexRoute;
   "/auth/": typeof AuthIndexRoute;
@@ -279,6 +288,7 @@ export interface FileRouteTypes {
     | "/auth/resume-password"
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
+    | "/dashboard/profile"
     | "/templates/$"
     | "/auth/"
     | "/dashboard/"
@@ -303,6 +313,7 @@ export interface FileRouteTypes {
     | "/auth/resume-password"
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
+    | "/dashboard/profile"
     | "/templates/$"
     | "/"
     | "/auth"
@@ -332,6 +343,7 @@ export interface FileRouteTypes {
     | "/auth/resume-password"
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
+    | "/dashboard/profile"
     | "/templates/$"
     | "/_home/"
     | "/auth/"
@@ -477,6 +489,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof DashboardIndexRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
+    "/dashboard/profile": {
+      id: "/dashboard/profile";
+      path: "/profile";
+      fullPath: "/dashboard/profile";
+      preLoaderRoute: typeof DashboardProfileRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
     "/templates/$": {
       id: "/templates/$";
       path: "/templates/$";
@@ -593,6 +612,7 @@ const AuthRouteRouteWithChildren = AuthRouteRoute._addFileChildren(
 );
 
 interface DashboardRouteRouteChildren {
+  DashboardProfileRoute: typeof DashboardProfileRoute;
   DashboardIndexRoute: typeof DashboardIndexRoute;
   DashboardSettingsIntegrationsRouteRoute: typeof DashboardSettingsIntegrationsRouteRoute;
   DashboardSettingsAccountRoute: typeof DashboardSettingsAccountRoute;
@@ -605,6 +625,7 @@ interface DashboardRouteRouteChildren {
 }
 
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
+  DashboardProfileRoute: DashboardProfileRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardSettingsIntegrationsRouteRoute:
     DashboardSettingsIntegrationsRouteRoute,

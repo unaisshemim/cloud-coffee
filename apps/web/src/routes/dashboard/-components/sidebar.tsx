@@ -50,6 +50,11 @@ const appSidebarItems = [
 		href: "/dashboard/applications",
 	},
 	{
+		icon: <UserCircleIcon />,
+		label: msg`Profile`,
+		href: "/dashboard/profile",
+	},
+	{
 		icon: <SealCheckIcon />,
 		label: msg`ATS Checker`,
 		href: "/ats-checker",
@@ -57,11 +62,6 @@ const appSidebarItems = [
 ] as const satisfies SidebarItem[];
 
 const settingsSidebarItems = [
-	{
-		icon: <UserCircleIcon />,
-		label: msg`Profile`,
-		href: "/dashboard/settings/profile",
-	},
 	{
 		icon: <UserGearIcon />,
 		label: msg`Account`,

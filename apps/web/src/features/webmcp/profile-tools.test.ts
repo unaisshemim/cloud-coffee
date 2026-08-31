@@ -41,6 +41,35 @@ describe("createProfileTools", () => {
 		]);
 	});
 
+	it("publishes one canonical email and phone field in the profile merge schema", () => {
+		const tool = createProfileTools({ client, navigate }).find((item) => item.name === "preview_profile_merge");
+		const properties = tool?.inputSchema.properties;
+		if (!properties || typeof properties !== "object") throw new Error("Preview tool candidate schema is missing.");
+		const candidate = (properties as Record<string, unknown>).candidate as {
+			properties: Record<string, unknown>;
+		};
+		const personal = candidate.properties.personal as {
+			additionalProperties: boolean;
+			properties: Record<string, unknown>;
+		};
+
+		expect(personal.additionalProperties).toBe(false);
+		expect(Object.keys(personal.properties)).toEqual([
+			"firstName",
+			"lastName",
+			"email",
+			"phone",
+			"country",
+			"city",
+			"state",
+			"postalCode",
+			"address",
+			"links",
+		]);
+		expect(personal.properties.email).toMatchObject({ type: "string" });
+		expect(personal.properties.phone).toMatchObject({ type: "string" });
+	});
+
 	it("previews extracted facts without writing them", async () => {
 		const tool = createProfileTools({ client, navigate }).find((item) => item.name === "preview_profile_merge");
 		const result = await tool?.execute({ candidate: { skills: ["TypeScript"] } });

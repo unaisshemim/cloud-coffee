@@ -56,13 +56,39 @@ const targetedResumeSchema = z.object({
 const emptyObjectSchema = { type: "object", additionalProperties: false };
 const stringArraySchema = { type: "array", items: { type: "string" } };
 const objectArraySchema = { type: "array", items: { type: "object", additionalProperties: true } };
+const personalJsonSchema = {
+	type: "object",
+	description: "Canonical personal contact details. Store each detail once in its matching field.",
+	properties: {
+		firstName: { type: "string" },
+		lastName: { type: "string" },
+		email: { type: "string", description: "Single application email address." },
+		phone: { type: "string", description: "Single application phone number, including country code when known." },
+		country: { type: "string" },
+		city: { type: "string" },
+		state: { type: "string" },
+		postalCode: { type: "string" },
+		address: { type: "string" },
+		links: {
+			type: "object",
+			properties: {
+				linkedin: { type: "string" },
+				github: { type: "string" },
+				portfolio: { type: "string" },
+				website: { type: "string" },
+			},
+			additionalProperties: false,
+		},
+	},
+	additionalProperties: false,
+};
 const candidateJsonSchema = {
 	type: "object",
 	description: "Career facts extracted from a resume or conversation. Include only facts supported by the user.",
 	properties: {
 		careerSummary: { type: "string" },
 		jobPreferences: { type: "object", additionalProperties: true },
-		personal: { type: "object", additionalProperties: true },
+		personal: personalJsonSchema,
 		skills: stringArraySchema,
 		languages: stringArraySchema,
 		experience: objectArraySchema,

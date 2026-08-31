@@ -1,12 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ApplicationProfileSettingsPage } from "@/features/settings/profile";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/dashboard/settings/profile")({
-	component: RouteComponent,
+	beforeLoad: () => {
+		throw redirect({ to: "/dashboard/profile", replace: true });
+	},
 });
-
-function RouteComponent() {
-	const { session } = Route.useRouteContext();
-
-	return <ApplicationProfileSettingsPage session={session} />;
-}

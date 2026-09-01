@@ -9,6 +9,7 @@ This is a hackathon deployment. It optimizes for a reproducible, low-operations 
 ## Decisions
 
 - AWS region is `us-east-1`.
+- Local Terraform commands use AWS CLI profile `aws-sky`.
 - Application URL is `https://clouddcoffee.dev`.
 - Terraform uses one main remote state with `ecs` and `s3` child modules.
 - A small, one-time bootstrap Terraform configuration creates the remote-state S3 bucket.
@@ -110,6 +111,8 @@ Optional OAuth, SMTP, encryption, AI, and feature-flag values are accepted throu
 ## GitHub Actions Deployment
 
 Terraform creates or reuses a GitHub Actions OIDC provider and creates a deployment role restricted by repository and branch variables. Trust policy accepts only the configured GitHub repository and branch.
+
+Local bootstrap and main-stack Terraform providers use AWS CLI profile `aws-sky`. The profile currently authenticates with account-root credentials; this is accepted only for initial hackathon bootstrap, with migration to an IAM administrative role recommended immediately afterward.
 
 Workflow behavior:
 

@@ -1,6 +1,7 @@
 // @vitest-environment happy-dom
 
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
@@ -8,6 +9,11 @@ import { I18nProvider } from "@lingui/react";
 const providerQuery = vi.hoisted(() => ({
 	data: { google: "Google" } as Record<string, string>,
 	isLoading: false,
+}));
+
+const authMocks = vi.hoisted(() => ({
+	signInWithEmail: vi.fn(),
+	signInWithGoogle: vi.fn(),
 }));
 
 vi.mock("@tanstack/react-query", async (importOriginal) => ({
@@ -22,7 +28,7 @@ vi.mock("@tanstack/react-router", () => ({
 }));
 
 vi.mock("@/libs/auth/client", () => ({
-	authClient: { signIn: { social: vi.fn() } },
+	authClient: { signIn: { email: authMocks.signInWithEmail, social: authMocks.signInWithGoogle } },
 }));
 
 vi.mock("@/libs/orpc/client", () => ({
@@ -38,6 +44,8 @@ beforeAll(() => {
 beforeEach(() => {
 	providerQuery.data = { google: "Google" };
 	providerQuery.isLoading = false;
+	authMocks.signInWithEmail.mockReset();
+	authMocks.signInWithEmail.mockResolvedValue({ data: {}, error: null });
 });
 
 const renderPage = () =>
@@ -48,15 +56,34 @@ const renderPage = () =>
 	);
 
 describe("LoginPage", () => {
-	it("offers Google as the only sign-in method", () => {
+	it("offers email, password, registration, and Google sign-in", () => {
 		renderPage();
 
+		expect(screen.getByRole("textbox", { name: /email address/i })).toBeInTheDocument();
+		expect(screen.getByLabelText(/^password$/i)).toHaveAttribute("type", "password");
+		expect(screen.getByRole("button", { name: /^sign in$/i })).toBeInTheDocument();
+		expect(screen.getByRole("link", { name: /create one now/i })).toHaveAttribute("href", "/auth/register");
 		expect(screen.getByRole("button", { name: /continue with google/i })).toBeInTheDocument();
-		expect(screen.queryByText("Password")).not.toBeInTheDocument();
 		expect(screen.queryByText("Passkey")).not.toBeInTheDocument();
 		expect(screen.queryByText("GitHub")).not.toBeInTheDocument();
 		expect(screen.queryByText("LinkedIn")).not.toBeInTheDocument();
-		expect(screen.queryByText(/create one now/i)).not.toBeInTheDocument();
+	});
+
+	it("submits credentials with the safe callback URL", async () => {
+		const user = userEvent.setup();
+		renderPage();
+
+		await user.type(screen.getByRole("textbox", { name: /email address/i }), "person@example.com");
+		await user.type(screen.getByLabelText(/^password$/i), "password123");
+		await user.click(screen.getByRole("button", { name: /^sign in$/i }));
+
+		await waitFor(() => {
+			expect(authMocks.signInWithEmail).toHaveBeenCalledWith({
+				email: "person@example.com",
+				password: "password123",
+				callbackURL: "/dashboard/resumes",
+			});
+		});
 	});
 
 	it("explains when Google OAuth is not configured", () => {

@@ -1,13 +1,19 @@
 import { describe, expect, it } from "vitest";
 import { auth } from "./config";
 
-describe("Google-only authentication", () => {
+describe("authentication methods", () => {
 	it("configures Google as the only social provider", () => {
 		expect(Object.keys(auth.options.socialProviders ?? {})).toEqual(["google"]);
 	});
 
-	it("does not enable credential authentication", () => {
-		expect("emailAndPassword" in auth.options).toBe(false);
+	it("enables email and password authentication without requiring email verification", () => {
+		expect(auth.options.emailAndPassword).toMatchObject({
+			enabled: true,
+			autoSignIn: true,
+			minPasswordLength: 8,
+			maxPasswordLength: 64,
+			requireEmailVerification: false,
+		});
 	});
 
 	it("does not install passkey, two-factor, or generic OAuth plugins", () => {

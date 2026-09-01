@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { ArrowRightIcon, EyeIcon, EyeSlashIcon } from "@phosphor-icons/react";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate, useRouter } from "@tanstack/react-router";
 import { useToggle } from "usehooks-ts";
 import z from "zod";
 import { Button } from "@reactive-resume/ui/components/button";
@@ -13,42 +13,53 @@ import { useAppForm } from "@/libs/tanstack-form";
 import { SocialAuth } from "../components/social-auth";
 
 const formSchema = z.object({
+	name: z.string().trim().min(3).max(64),
+	username: z
+		.string()
+		.trim()
+		.toLowerCase()
+		.min(3)
+		.max(64)
+		.regex(/^[a-z0-9._-]+$/, "Use only lowercase letters, numbers, dots, hyphens, and underscores."),
 	email: z.email().trim().toLowerCase(),
 	password: z.string().min(8).max(64),
 });
 
-type LoginPageProps = {
-	callbackURL: string;
-};
-
-export function LoginPage({ callbackURL }: LoginPageProps) {
+export function RegisterPage() {
+	const router = useRouter();
+	const navigate = useNavigate();
 	const [showPassword, toggleShowPassword] = useToggle(false);
 
 	const form = useAppForm({
-		defaultValues: { email: "", password: "" },
+		defaultValues: { name: "", username: "", email: "", password: "" },
 		validators: { onSubmit: formSchema },
 		onSubmit: async ({ value }) => {
-			const toastId = toast.add({ type: "loading", description: t`Signing in...` });
+			const toastId = toast.add({ type: "loading", description: t`Creating your account...` });
 
 			try {
-				const { error } = await authClient.signIn.email({
+				const { error } = await authClient.signUp.email({
+					name: value.name,
+					username: value.username,
+					displayUsername: value.username,
 					email: value.email,
 					password: value.password,
-					callbackURL,
+					callbackURL: "/dashboard",
 				});
 
 				if (error) {
 					toast.add({
 						type: "error",
-						description: error.message || t`Failed to sign in. Please try again.`,
+						description: error.message || t`Failed to create your account. Please try again.`,
 						id: toastId,
 					});
 					return;
 				}
 
 				toast.close(toastId);
+				await router.invalidate();
+				void navigate({ to: "/dashboard", replace: true });
 			} catch {
-				toast.add({ type: "error", description: t`Failed to sign in. Please try again.`, id: toastId });
+				toast.add({ type: "error", description: t`Failed to create your account. Please try again.`, id: toastId });
 			}
 		},
 	});
@@ -57,18 +68,18 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 		<>
 			<div className="space-y-1 text-center">
 				<h1 className="font-semibold text-2xl tracking-tight">
-					<Trans comment="Title on the login page">Sign in to your account</Trans>
+					<Trans>Create a new account</Trans>
 				</h1>
 				<div className="text-muted-foreground">
 					<Trans>
-						Don't have an account?{" "}
+						Already have an account?{" "}
 						<Button
 							variant="link"
 							nativeButton={false}
 							className="h-auto gap-1.5 px-1! py-0"
 							render={
-								<Link to="/auth/register">
-									<Trans>Create one now</Trans> <ArrowRightIcon />
+								<Link to="/auth/login">
+									<Trans>Sign in now</Trans> <ArrowRightIcon />
 								</Link>
 							}
 						/>
@@ -77,13 +88,60 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 			</div>
 
 			<form
-				className="space-y-5"
+				className="space-y-4"
 				onSubmit={(event) => {
 					event.preventDefault();
 					event.stopPropagation();
 					void form.handleSubmit();
 				}}
 			>
+				<form.Field name="name">
+					{(field) => (
+						<FormItem hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
+							<FormLabel>
+								<Trans>Name</Trans>
+							</FormLabel>
+							<FormControl
+								render={
+									<Input
+										autoComplete="section-register name"
+										placeholder="Coffee User"
+										name={field.name}
+										value={field.state.value}
+										onBlur={field.handleBlur}
+										onChange={(event) => field.handleChange(event.target.value)}
+									/>
+								}
+							/>
+							<FormMessage errors={field.state.meta.errors} />
+						</FormItem>
+					)}
+				</form.Field>
+
+				<form.Field name="username">
+					{(field) => (
+						<FormItem hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
+							<FormLabel>
+								<Trans>Username</Trans>
+							</FormLabel>
+							<FormControl
+								render={
+									<Input
+										autoComplete="section-register username"
+										placeholder="coffee.user"
+										className="lowercase"
+										name={field.name}
+										value={field.state.value}
+										onBlur={field.handleBlur}
+										onChange={(event) => field.handleChange(event.target.value)}
+									/>
+								}
+							/>
+							<FormMessage errors={field.state.meta.errors} />
+						</FormItem>
+					)}
+				</form.Field>
+
 				<form.Field name="email">
 					{(field) => (
 						<FormItem hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
@@ -94,7 +152,7 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 								render={
 									<Input
 										type="email"
-										autoComplete="section-login email"
+										autoComplete="section-register email"
 										placeholder="you@example.com"
 										className="lowercase"
 										name={field.name}
@@ -120,7 +178,7 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 									render={
 										<Input
 											type={showPassword ? "text" : "password"}
-											autoComplete="section-login current-password"
+											autoComplete="section-register new-password"
 											name={field.name}
 											value={field.state.value}
 											onBlur={field.handleBlur}
@@ -144,7 +202,7 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 				</form.Field>
 
 				<Button type="submit" className="w-full">
-					<Trans>Sign in</Trans>
+					<Trans>Sign up</Trans>
 				</Button>
 			</form>
 
@@ -155,7 +213,7 @@ export function LoginPage({ callbackURL }: LoginPageProps) {
 				</span>
 			</div>
 
-			<SocialAuth callbackURL={callbackURL} />
+			<SocialAuth callbackURL="/dashboard" />
 		</>
 	);
 }

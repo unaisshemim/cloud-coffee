@@ -135,6 +135,15 @@ const getAuthConfig = () => {
 			ipAddress: { ipAddressHeaders: TRUSTED_IP_HEADERS },
 		},
 
+		emailAndPassword: {
+			enabled: true,
+			autoSignIn: true,
+			minPasswordLength: 8,
+			maxPasswordLength: 64,
+			requireEmailVerification: false,
+			disableSignUp: env.FLAG_DISABLE_SIGNUPS,
+		},
+
 		user: {
 			additionalFields: {
 				username: {

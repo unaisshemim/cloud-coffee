@@ -205,10 +205,11 @@ export function createProfileTools(options: CreateProfileToolsOptions = {}): Web
 	return definitions(options.navigate).map((definition) => ({
 		...definition,
 		execute: async (input, options) => {
+			const signal = options?.signal ?? new AbortController().signal;
 			try {
-				if (options?.signal.aborted) throw new DOMException("WebMCP tool execution was aborted.", "AbortError");
+				if (signal.aborted) throw new DOMException("WebMCP tool execution was aborted.", "AbortError");
 				const result = await definition.execute(input, client);
-				if (options?.signal.aborted) throw new DOMException("WebMCP tool execution was aborted.", "AbortError");
+				if (signal.aborted) throw new DOMException("WebMCP tool execution was aborted.", "AbortError");
 				return result;
 			} catch (error) {
 				return webMcpError(errorMessage(error));

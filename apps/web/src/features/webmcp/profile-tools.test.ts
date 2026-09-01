@@ -79,6 +79,16 @@ describe("createProfileTools", () => {
 		expect(result?.content[0]?.text).toContain("Add skill: TypeScript");
 	});
 
+	it("supports browser execution options that omit a signal", async () => {
+		const tool = createProfileTools({ client, navigate }).find((item) => item.name === "preview_profile_merge");
+		if (!tool) throw new Error("Preview profile merge tool is missing.");
+
+		const result = await tool.execute({ candidate: { skills: ["TypeScript"] } }, {});
+
+		expect(result.isError).toBeUndefined();
+		expect(result.content[0]?.text).toContain("Add skill: TypeScript");
+	});
+
 	it("blocks profile changes without explicit user confirmation", async () => {
 		const tool = createProfileTools({ client, navigate }).find((item) => item.name === "apply_profile_merge");
 		const result = await tool?.execute({

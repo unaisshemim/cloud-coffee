@@ -20,7 +20,7 @@ export type WebMcpTool = {
 };
 
 export type WebMcpToolExecuteOptions = {
-	signal: AbortSignal;
+	signal?: AbortSignal;
 };
 
 export type WebMcpRegisterToolOptions = {

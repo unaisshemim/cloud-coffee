@@ -1,6 +1,7 @@
 github_repository = "unaisshemim/cloud-coffee"
 database_url      = "postgresql://postgres.project:password@aws-0-us-east-1.pooler.supabase.com:5432/postgres"
 auth_secret       = "replace-with-a-random-secret-containing-at-least-32-characters"
+manage_cloudflare_dns = false
 
 additional_environment_variables = {
   FLAG_DISABLE_SIGNUPS = "false"

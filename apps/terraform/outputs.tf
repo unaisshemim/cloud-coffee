@@ -3,6 +3,28 @@ output "application_url" {
   value       = "https://${var.domain_name}"
 }
 
+output "acm_validation_dns_records" {
+  description = "CNAME records to add manually when manage_cloudflare_dns is false. Keep them DNS-only."
+  value = [
+    for record in local.certificate_validation_options : {
+      name    = record.name
+      type    = record.type
+      content = record.value
+      proxied = false
+    }
+  ]
+}
+
+output "application_dns_record" {
+  description = "Application CNAME to add manually after the ALB has been created."
+  value = {
+    name    = var.domain_name
+    type    = "CNAME"
+    content = module.ecs.alb_dns_name
+    proxied = var.cloudflare_proxy_enabled
+  }
+}
+
 output "alb_dns_name" {
   description = "Direct ALB hostname for diagnostics."
   value       = module.ecs.alb_dns_name

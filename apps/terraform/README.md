@@ -7,7 +7,7 @@ Terraform deploys cloudcoffee to a dedicated `us-east-1` VPC with two public sub
 - Terraform 1.10 or newer
 - Docker
 - AWS CLI profile `aws-sky`
-- Cloudflare API token with `Zone:Read` and `DNS:Edit` for `clouddcoffee.dev`
+- Cloudflare API token with `Zone:Read` and `DNS:Edit` for `clouddcoffee.dev` only when Terraform manages DNS
 - Supabase session-pooler connection string using port 5432
 - GitHub repository `unaisshemim/cloud-coffee`
 
@@ -18,7 +18,8 @@ Terraform deploys cloudcoffee to a dedicated `us-east-1` VPC with two public sub
 ```bash
 export AWS_PROFILE=aws-sky
 export AWS_REGION=us-east-1
-export CLOUDFLARE_API_TOKEN=replace-in-shell-only
+# Only needed when manage_cloudflare_dns = true:
+# export CLOUDFLARE_API_TOKEN=replace-in-shell-only
 
 cp apps/terraform/bootstrap/terraform.tfvars.example apps/terraform/bootstrap/terraform.tfvars
 cp apps/terraform/terraform.tfvars.example apps/terraform/terraform.tfvars
@@ -31,6 +32,8 @@ Edit `apps/terraform/terraform.tfvars`:
 - add OAuth, SMTP, `ENCRYPTION_SECRET`, AI, or feature flags under `additional_environment_variables`.
 
 Both populated files are ignored by Git. ECS task-definition environment variables and Terraform state still contain these values, an accepted hackathon tradeoff.
+
+`manage_cloudflare_dns` defaults to `false`. Create the ACM validation CNAME shown by `terraform output acm_validation_dns_records`, then create the application CNAME shown by `terraform output application_dns_record`. Keep ACM validation records DNS-only in Cloudflare.
 
 ## 2. Bootstrap remote state
 

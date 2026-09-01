@@ -102,6 +102,12 @@ variable "cloudflare_proxy_enabled" {
   default     = true
 }
 
+variable "manage_cloudflare_dns" {
+  description = "Manage ACM validation and application DNS records through Terraform. Disable for manual Cloudflare DNS."
+  type        = bool
+  default     = false
+}
+
 variable "task_cpu" {
   description = "Fargate task CPU units."
   type        = number

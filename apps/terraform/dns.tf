@@ -1,4 +1,6 @@
 data "cloudflare_zone" "app" {
+  count = var.manage_cloudflare_dns ? 1 : 0
+
   filter = {
     name = var.domain_name
   }
@@ -24,28 +26,32 @@ locals {
 }
 
 resource "cloudflare_dns_record" "acm_validation" {
-  for_each = local.certificate_validation_options
+  for_each = var.manage_cloudflare_dns ? local.certificate_validation_options : {}
 
   content = each.value.value
   name    = each.value.name
   proxied = false
   ttl     = 60
   type    = each.value.type
-  zone_id = data.cloudflare_zone.app.id
+  zone_id = data.cloudflare_zone.app[0].id
 }
 
 resource "aws_acm_certificate_validation" "app" {
   certificate_arn = aws_acm_certificate.app.arn
-  validation_record_fqdns = [
+  validation_record_fqdns = var.manage_cloudflare_dns ? [
     for record in cloudflare_dns_record.acm_validation : record.name
+    ] : [
+    for record in local.certificate_validation_options : record.name
   ]
 }
 
 resource "cloudflare_dns_record" "app" {
+  count = var.manage_cloudflare_dns ? 1 : 0
+
   content = module.ecs.alb_dns_name
   name    = "@"
   proxied = var.cloudflare_proxy_enabled
   ttl     = var.cloudflare_proxy_enabled ? 1 : 300
   type    = "CNAME"
-  zone_id = data.cloudflare_zone.app.id
+  zone_id = data.cloudflare_zone.app[0].id
 }

@@ -1,4 +1,8 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
+
+const s3SendMock = vi.hoisted(() => vi.fn().mockResolvedValue({}));
+const s3ClientMock = vi.hoisted(() => vi.fn(() => ({ send: s3SendMock })));
+const putObjectCommandMock = vi.hoisted(() => vi.fn((input: unknown) => input));
 
 const envMock = vi.hoisted(() => ({
 	APP_URL: "https://example.com",
@@ -9,6 +13,7 @@ const envMock = vi.hoisted(() => ({
 	S3_ENDPOINT: undefined as string | undefined,
 	S3_BUCKET: undefined as string | undefined,
 	S3_FORCE_PATH_STYLE: false,
+	S3_DISABLE_ACL: false,
 	FLAG_DISABLE_IMAGE_PROCESSING: false,
 }));
 
@@ -26,8 +31,8 @@ vi.mock("sharp", () => {
 	return { default: () => chain };
 });
 vi.mock("@aws-sdk/client-s3", () => ({
-	S3Client: vi.fn(),
-	PutObjectCommand: vi.fn(),
+	S3Client: s3ClientMock,
+	PutObjectCommand: putObjectCommandMock,
 	GetObjectCommand: vi.fn(),
 	DeleteObjectCommand: vi.fn(),
 	ListObjectsV2Command: vi.fn(),
@@ -40,6 +45,16 @@ const makeFile = (bytes: Uint8Array, type = "image/png") =>
 		arrayBuffer: async () => bytes.buffer,
 		type,
 	}) as unknown as File;
+
+afterEach(() => {
+	envMock.S3_ACCESS_KEY_ID = undefined;
+	envMock.S3_SECRET_ACCESS_KEY = undefined;
+	envMock.S3_BUCKET = undefined;
+	envMock.S3_DISABLE_ACL = false;
+	s3ClientMock.mockClear();
+	putObjectCommandMock.mockClear();
+	s3SendMock.mockClear();
+});
 
 describe("inferContentType", () => {
 	it("maps common image extensions to their MIME types", () => {
@@ -122,5 +137,42 @@ describe("LocalStorageService", () => {
 				private: true,
 			}),
 		).rejects.toThrow("Private storage writes are not supported by the local filesystem backend.");
+	});
+});
+
+describe("S3StorageService", () => {
+	it("uses the AWS credential provider chain when a bucket exists without static keys", async () => {
+		envMock.S3_BUCKET = "clouddcoffee-uploads";
+		vi.resetModules();
+		const { getStorageService: getFreshStorageService } = await import("./service");
+
+		getFreshStorageService();
+
+		expect(s3ClientMock).toHaveBeenCalledWith({
+			region: "us-east-1",
+			forcePathStyle: false,
+		});
+	});
+
+	it("omits object ACLs when ACLs are disabled", async () => {
+		envMock.S3_BUCKET = "clouddcoffee-uploads";
+		envMock.S3_ACCESS_KEY_ID = "access-key";
+		envMock.S3_SECRET_ACCESS_KEY = "secret-key";
+		envMock.S3_DISABLE_ACL = true;
+		vi.resetModules();
+		const { getStorageService: getFreshStorageService } = await import("./service");
+
+		await getFreshStorageService().write({
+			key: "uploads/user/picture.jpg",
+			data: new Uint8Array([1]),
+			contentType: "image/jpeg",
+		});
+
+		expect(putObjectCommandMock).toHaveBeenCalledWith({
+			Bucket: "clouddcoffee-uploads",
+			Key: "uploads/user/picture.jpg",
+			Body: new Uint8Array([1]),
+			ContentType: "image/jpeg",
+		});
 	});
 });

@@ -105,6 +105,8 @@ S3_BUCKET=""
 # Set to "true" for path-style URLs (https://endpoint/bucket), common with MinIO, SeaweedFS, etc.
 # Set to "false" for virtual-hosted-style URLs (https://bucket.endpoint), common with AWS S3, Cloudflare R2, etc.
 S3_FORCE_PATH_STYLE="false"
+# Set to "true" for private AWS S3 buckets using BucketOwnerEnforced ownership.
+S3_DISABLE_ACL="false"
 
 # --- AI features (optional) ---
 # ENCRYPTION_SECRET is required for saved AI providers.
@@ -340,6 +342,7 @@ openssl rand -hex 32
   - **`S3_FORCE_PATH_STYLE`** controls bucket addressing (defaults to `"false"`):
     - `"true"` for path-style URLs (`https://endpoint/bucket`) common with MinIO/SeaweedFS.
     - `"false"` for virtual-hosted-style URLs (`https://bucket.endpoint`) common with AWS S3 / Cloudflare R2.
+  - **`S3_DISABLE_ACL`** defaults to `"false"`. Set it to `"true"` for private AWS S3 buckets using `BucketOwnerEnforced`; access is then controlled by IAM and bucket policy instead of object ACLs.
 </Accordion>
 
 <Accordion title="AI features (optional)">

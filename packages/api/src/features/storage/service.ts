@@ -228,8 +228,9 @@ class S3StorageService implements StorageService {
 	private readonly client: S3Client;
 
 	constructor() {
-		if (!env.S3_ACCESS_KEY_ID || !env.S3_SECRET_ACCESS_KEY || !env.S3_BUCKET) {
-			throw new Error("S3 credentials are not set");
+		if (!env.S3_BUCKET) throw new Error("S3 bucket is not set");
+		if (!!env.S3_ACCESS_KEY_ID !== !!env.S3_SECRET_ACCESS_KEY) {
+			throw new Error("S3 access key ID and secret access key must be set together");
 		}
 
 		this.bucket = env.S3_BUCKET;
@@ -237,10 +238,14 @@ class S3StorageService implements StorageService {
 			region: env.S3_REGION,
 			forcePathStyle: env.S3_FORCE_PATH_STYLE,
 			...(env.S3_ENDPOINT ? { endpoint: env.S3_ENDPOINT } : {}),
-			credentials: {
-				accessKeyId: env.S3_ACCESS_KEY_ID,
-				secretAccessKey: env.S3_SECRET_ACCESS_KEY,
-			},
+			...(env.S3_ACCESS_KEY_ID && env.S3_SECRET_ACCESS_KEY
+				? {
+						credentials: {
+							accessKeyId: env.S3_ACCESS_KEY_ID,
+							secretAccessKey: env.S3_SECRET_ACCESS_KEY,
+						},
+					}
+				: {}),
 		});
 	}
 
@@ -256,7 +261,7 @@ class S3StorageService implements StorageService {
 			Bucket: this.bucket,
 			Key: key,
 			Body: data,
-			ACL: isPrivate ? "private" : "public-read",
+			...(env.S3_DISABLE_ACL ? {} : { ACL: isPrivate ? "private" : "public-read" }),
 			ContentType: contentType,
 		});
 
@@ -324,10 +329,7 @@ class S3StorageService implements StorageService {
 let cachedService: StorageService | null = null;
 
 export function getStorageService(): StorageService {
-	cachedService ??=
-		env.S3_ACCESS_KEY_ID && env.S3_SECRET_ACCESS_KEY && env.S3_BUCKET
-			? new S3StorageService()
-			: new LocalStorageService();
+	cachedService ??= env.S3_BUCKET ? new S3StorageService() : new LocalStorageService();
 	return cachedService;
 }
 

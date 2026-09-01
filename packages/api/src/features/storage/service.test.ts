@@ -1,8 +1,16 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 const s3SendMock = vi.hoisted(() => vi.fn().mockResolvedValue({}));
-const s3ClientMock = vi.hoisted(() => vi.fn(() => ({ send: s3SendMock })));
-const putObjectCommandMock = vi.hoisted(() => vi.fn((input: unknown) => input));
+const s3ClientMock = vi.hoisted(() =>
+	vi.fn(function S3ClientMock() {
+		return { send: s3SendMock };
+	}),
+);
+const putObjectCommandMock = vi.hoisted(() =>
+	vi.fn(function PutObjectCommandMock(input: unknown) {
+		return input;
+	}),
+);
 
 const envMock = vi.hoisted(() => ({
 	APP_URL: "https://example.com",

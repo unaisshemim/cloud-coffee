@@ -31,7 +31,7 @@ i18n.loadAndActivate({ locale: "en", messages: {} });
 const { Hero } = await import("./hero");
 
 describe("Hero", () => {
-	it("uses the supplied editorial collage as a full-bleed hero backdrop", () => {
+	it("shows the complete collage on mobile and uses a full-bleed crop on wider screens", () => {
 		const { container, getAllByTestId, getByRole } = render(
 			<I18nProvider i18n={i18n}>
 				<Hero />
@@ -43,7 +43,8 @@ describe("Hero", () => {
 		});
 
 		expect(artwork).toHaveAttribute("src", "/images/landing/career-hero-collage.webp");
-		expect(artwork).toHaveClass("size-full", "object-cover");
+		expect(artwork).toHaveClass("size-full", "object-contain", "object-top", "sm:object-cover", "sm:object-center");
+		expect(artwork).not.toHaveClass("object-[88%_center]");
 		expect(artwork.parentElement).toHaveClass("inset-0");
 		expect(getByRole("heading", { level: 1 })).toHaveTextContent("Career intelligence at the speed of opportunity.");
 		const asciiDetails = getAllByTestId("career-ascii");

@@ -41,10 +41,7 @@ export function Hero() {
 					fetchPriority="high"
 					decoding="async"
 					src="/images/landing/career-hero-collage.webp"
-					className="size-full object-cover object-[88%_center] sm:object-center"
-					initial={{ scale: 1.015 }}
-					animate={{ scale: [1.015, 1.035, 1.015] }}
-					transition={{ duration: 22, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+					className="size-full object-contain object-top sm:object-cover sm:object-center"
 				/>
 			</div>
 

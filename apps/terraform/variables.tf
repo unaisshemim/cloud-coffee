@@ -83,6 +83,13 @@ variable "github_branch" {
   default     = "main"
 }
 
+variable "github_oidc_subject" {
+  description = "Exact GitHub OIDC subject when customized subject claims are enabled. Uses the standard repository/branch subject when null."
+  type        = string
+  default     = null
+  nullable    = true
+}
+
 variable "create_github_oidc_provider" {
   description = "Create the account-wide GitHub Actions OIDC provider."
   type        = bool

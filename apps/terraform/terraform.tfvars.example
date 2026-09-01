@@ -1,4 +1,5 @@
 github_repository = "unaisshemim/cloud-coffee"
+github_oidc_subject = "repo:unaisshemim@72747883/cloud-coffee@1348766522:ref:refs/heads/main"
 database_url      = "postgresql://postgres.project:password@aws-0-us-east-1.pooler.supabase.com:5432/postgres"
 auth_secret       = "replace-with-a-random-secret-containing-at-least-32-characters"
 manage_cloudflare_dns = false

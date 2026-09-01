@@ -38,6 +38,7 @@ module "ecs" {
   environment                 = var.environment
   environment_variables       = local.application_environment
   github_branch               = var.github_branch
+  github_oidc_subject         = var.github_oidc_subject
   github_oidc_provider_arn    = var.github_oidc_provider_arn
   github_repository           = var.github_repository
   project_name                = var.project_name

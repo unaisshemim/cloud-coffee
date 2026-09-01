@@ -11,6 +11,10 @@ locals {
     aws_iam_openid_connect_provider.github[*].arn,
     var.github_oidc_provider_arn == null ? [] : [var.github_oidc_provider_arn],
   ))
+  github_oidc_subject = coalesce(
+    var.github_oidc_subject,
+    "repo:${var.github_repository}:ref:refs/heads/${var.github_branch}",
+  )
 }
 
 data "aws_iam_policy_document" "github_assume" {
@@ -31,7 +35,7 @@ data "aws_iam_policy_document" "github_assume" {
 
     condition {
       test     = "StringEquals"
-      values   = ["repo:${var.github_repository}:ref:refs/heads/${var.github_branch}"]
+      values   = [local.github_oidc_subject]
       variable = "token.actions.githubusercontent.com:sub"
     }
   }

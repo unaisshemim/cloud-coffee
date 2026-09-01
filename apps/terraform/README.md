@@ -29,6 +29,7 @@ Edit `apps/terraform/terraform.tfvars`:
 
 - replace `database_url` with Supabase session-pooler URL;
 - generate `auth_secret` using `openssl rand -hex 32`;
+- keep `github_oidc_subject` synchronized with the exact subject shown by CloudTrail when customized subject claims are enabled;
 - add OAuth, SMTP, `ENCRYPTION_SECRET`, AI, or feature flags under `additional_environment_variables`.
 
 Both populated files are ignored by Git. ECS task-definition environment variables and Terraform state still contain these values, an accepted hackathon tradeoff.

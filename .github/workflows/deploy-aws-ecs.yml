@@ -1,0 +1,65 @@
+name: Deploy to AWS ECS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: aws-ecs-production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Build and push application image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64
+          provenance: mode=max
+          push: true
+          sbom: true
+          tags: |
+            ${{ steps.login-ecr.outputs.registry }}/${{ vars.AWS_ECR_REPOSITORY }}:${{ github.sha }}
+            ${{ steps.login-ecr.outputs.registry }}/${{ vars.AWS_ECR_REPOSITORY }}:latest
+
+      - name: Start ECS deployment
+        run: >-
+          aws ecs update-service
+          --cluster "${{ vars.AWS_ECS_CLUSTER }}"
+          --service "${{ vars.AWS_ECS_SERVICE }}"
+          --force-new-deployment
+
+      - name: Wait for ECS stability
+        run: >-
+          aws ecs wait services-stable
+          --cluster "${{ vars.AWS_ECS_CLUSTER }}"
+          --services "${{ vars.AWS_ECS_SERVICE }}"

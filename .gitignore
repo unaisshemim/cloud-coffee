@@ -55,10 +55,22 @@ temp
 .migration
 graphify-out
 
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
 # Local Storage Data
 /data
 /apps/web/data
 
 # Git Hooks
 .vite-hooks
-

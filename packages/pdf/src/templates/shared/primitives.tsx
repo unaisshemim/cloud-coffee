@@ -1,5 +1,6 @@
 import type { Style } from "@react-pdf/types";
 import type { ComponentProps, ReactNode } from "react";
+import type { LucideIconName } from "./lucide-icon";
 import type { StyleInput } from "./styles";
 import { Icon as PhosphorIcon } from "phosphor-icons-react-pdf/dynamic";
 import { Children, isValidElement } from "react";
@@ -18,6 +19,7 @@ import {
 import { semanticNodeKeys } from "../../semantic/node-keys";
 import { useSectionStyleRule, useTemplateIconSlot, useTemplatePageNodeKey, useTemplateStyle } from "./context";
 import { resolveIconSize } from "./icon-size";
+import { LucideIcon } from "./lucide-icon";
 import { safeTextStyle } from "./safe-text-style";
 import { composeLinkStyles, composeStyles } from "./styles";
 
@@ -288,12 +290,13 @@ export const Bold = ({
 	);
 };
 
-export const Icon = ({
-	style,
-	size: sizeProp,
-	nodeKey,
-	...props
-}: ComponentProps<typeof PhosphorIcon> & { nodeKey?: string | undefined }) => {
+type IconProps = Omit<ComponentProps<typeof PhosphorIcon>, "name"> & {
+	name: ComponentProps<typeof PhosphorIcon>["name"] | LucideIconName;
+	library?: "lucide" | "phosphor" | undefined;
+	nodeKey?: string | undefined;
+};
+
+export const Icon = ({ style, size: sizeProp, nodeKey, library = "phosphor", name, ...props }: IconProps) => {
 	const { style: iconStyle, size: templateSize, ...iconProps } = useTemplateIconSlot("icon");
 	const iconRuleStyle = useSectionStyleRule("icon");
 	const composedStyle = composeStyles(asStyleInput(iconStyle), iconRuleStyle, asStyleInput(style));
@@ -303,20 +306,39 @@ export const Icon = ({
 	const resolvedNodeKey = nodeKey ?? (parentKey ? semanticNodeKeys.icon(parentKey, "item") : undefined);
 	const resolved = useResolvedNode(resolvedNodeKey);
 	const visible = useSemanticNodeVisible(resolvedNodeKey);
+	const normalizedSizeProp = typeof sizeProp === "number" || typeof sizeProp === "string" ? sizeProp : undefined;
 	const resolvedSize =
 		resolveIconSize({
-			size: sizeProp,
+			size: normalizedSizeProp,
 			styles: [iconRuleStyle, asStyleInput(style), resolved.style],
 		}) ?? templateIconSize;
 
 	if (iconProps.display === "none" || !visible) return null;
+	const resolvedStyles = composeStyles(composedStyle, resolved.style);
+
+	if (library === "lucide") {
+		const color =
+			(typeof resolved.style?.color === "string" ? resolved.style.color : undefined) ??
+			(typeof props.color === "string" ? props.color : undefined) ??
+			(typeof iconProps.color === "string" ? iconProps.color : undefined);
+
+		return (
+			<LucideIcon
+				name={name as LucideIconName}
+				{...(resolvedSize === undefined ? {} : { size: resolvedSize })}
+				{...(color ? { color } : {})}
+				style={resolvedStyles}
+			/>
+		);
+	}
 
 	return (
 		<PhosphorIcon
 			{...iconProps}
 			{...props}
+			name={name as ComponentProps<typeof PhosphorIcon>["name"]}
 			{...(resolvedSize === undefined ? {} : { size: resolvedSize })}
-			style={composeStyles(composedStyle, resolved.style)}
+			style={resolvedStyles}
 		/>
 	);
 };

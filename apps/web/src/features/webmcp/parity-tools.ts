@@ -351,7 +351,8 @@ function defineTools(): Record<string, ToolDefinition> {
 		},
 		tailor_resume_for_application: {
 			title: "Tailor Resume For Application",
-			description: "Create and link a tailored resume for an application.",
+			description:
+				"Create and link a truthful, ATS-aligned resume with a job-specific professional summary for an application.",
 			untrusted: true,
 			execute: async (input, { client }) =>
 				webMcpJson(

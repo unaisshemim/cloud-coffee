@@ -107,6 +107,13 @@ describe("createWebMcpParityTools", () => {
 		expect(api.applications.create).toHaveBeenCalledWith({ company: "Acme", role: "Engineer", status: "applied" });
 	});
 
+	it("describes application resume tailoring as truthful and ATS-aligned", () => {
+		const tool = createWebMcpParityTools({ client: api }).find((item) => item.name === "tailor_resume_for_application");
+
+		expect(tool?.description).toMatch(/ATS/i);
+		expect(tool?.description).toMatch(/truthful/i);
+	});
+
 	it("converts base64 PDF input into a File for application attachments", async () => {
 		const tool = createWebMcpParityTools({ client: api }).find((item) => item.name === "attach_application_document");
 		await tool?.execute(

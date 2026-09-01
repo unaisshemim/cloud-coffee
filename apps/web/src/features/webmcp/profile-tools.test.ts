@@ -108,6 +108,8 @@ describe("createProfileTools", () => {
 
 	it("creates a new targeted draft and opens its builder", async () => {
 		const tool = createProfileTools({ client, navigate }).find((item) => item.name === "create_targeted_resume");
+		expect(tool?.description).toMatch(/ATS/i);
+		expect(tool?.description).toMatch(/impact/i);
 		const result = await tool?.execute({ jobDescription: "Build a reliable TypeScript platform.", company: "Acme" });
 
 		expect(client.applicationProfile.createTargetedResume).toHaveBeenCalledWith({

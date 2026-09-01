@@ -62,7 +62,8 @@ describe("Semantic CSS all-template presentation", () => {
 		const expectedFields = Object.entries(STANDARD_FIELD_REGISTRY).flatMap(([section, definitions]) =>
 			Object.keys(definitions).map((field) => `${section}:${field}`),
 		);
-		expect(expectedFields.filter((field) => !fields.has(field))).toEqual([]);
+		const bodySectionFields = expectedFields.filter((field) => !field.startsWith("profiles:"));
+		expect(bodySectionFields.filter((field) => !fields.has(field))).toEqual([]);
 
 		for (const template of templateSchema.options) {
 			const expectedParts = getTemplateSemanticManifest(template)

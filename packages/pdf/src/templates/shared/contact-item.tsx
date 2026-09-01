@@ -1,11 +1,11 @@
 import type { Style } from "@react-pdf/types";
-import type { CustomField } from "@reactive-resume/schema/resume/data";
+import type { CustomField, ProfileItem } from "@reactive-resume/schema/resume/data";
 import type { IconName } from "phosphor-icons-react-pdf/dynamic";
 import { View } from "#react-pdf-renderer";
 import { resolvedPdfFlowProps } from "../../semantic/adapter";
 import { useResolvedNode, useSemanticNodeKey, useSemanticNodeVisible } from "../../semantic/context";
 import { semanticNodeKeys } from "../../semantic/node-keys";
-import { getCustomFieldLinkUrl, getWebsiteDisplayText } from "./contact";
+import { getContactIconDescriptor, getCustomFieldLinkUrl, getWebsiteDisplayText } from "./contact";
 import { Icon, Link, Text } from "./primitives";
 import { composeStyles } from "./styles";
 
@@ -45,6 +45,38 @@ type CustomFieldContactItemProps = {
 	primitiveNodeKey?: string | undefined;
 };
 
+type ProfileContactItemProps = {
+	profile: ProfileItem;
+	displayText: string;
+	style?: ContactStyle;
+	textStyle?: ContactStyle;
+	iconColor?: string;
+};
+
+export const ProfileContactItem = ({ profile, displayText, style, textStyle, iconColor }: ProfileContactItemProps) => {
+	const keys = useContactNodeKeys("profile", profile.id);
+	const visible = useSemanticNodeVisible(keys.primitiveNodeKey);
+	if (!profile.website.url || !visible) return null;
+
+	return (
+		<Link
+			nodeKey={keys.primitiveNodeKey}
+			semanticRole="profile"
+			src={profile.website.url}
+			{...(style ? { style } : {})}
+		>
+			<Icon
+				nodeKey={keys.iconNodeKey}
+				{...getContactIconDescriptor("profile")}
+				{...(iconColor ? { color: iconColor } : {})}
+			/>
+			<Text nodeKey={keys.fieldNodeKey} {...(textStyle ? { style: textStyle } : {})}>
+				{displayText}
+			</Text>
+		</Link>
+	);
+};
+
 export const WebsiteContactItem = ({
 	website,
 	style,
@@ -58,7 +90,11 @@ export const WebsiteContactItem = ({
 
 	return (
 		<Link nodeKey={keys.primitiveNodeKey} src={website.url} {...(style ? { style } : {})}>
-			<Icon nodeKey={keys.iconNodeKey} name="globe" {...(iconColor ? { color: iconColor } : {})} />
+			<Icon
+				nodeKey={keys.iconNodeKey}
+				{...getContactIconDescriptor("website")}
+				{...(iconColor ? { color: iconColor } : {})}
+			/>
 			<Text nodeKey={keys.fieldNodeKey} {...(textStyle ? { style: textStyle } : {})}>
 				{getWebsiteDisplayText(website)}
 			</Text>
@@ -117,7 +153,7 @@ export const EmailContactItem = ({
 	style,
 	textStyle,
 	iconColor,
-	iconName = "envelope",
+	iconName,
 	primitiveNodeKey,
 }: EmailContactItemProps) => {
 	const keys = useContactNodeKeys("email", undefined, primitiveNodeKey);
@@ -125,7 +161,11 @@ export const EmailContactItem = ({
 	if (!email || !visible) return null;
 	return (
 		<Link nodeKey={keys.primitiveNodeKey} src={`mailto:${email}`} {...(style ? { style } : {})}>
-			<Icon nodeKey={keys.iconNodeKey} name={iconName} {...(iconColor ? { color: iconColor } : {})} />
+			<Icon
+				nodeKey={keys.iconNodeKey}
+				{...(iconName ? { name: iconName } : getContactIconDescriptor("email"))}
+				{...(iconColor ? { color: iconColor } : {})}
+			/>
 			<Text nodeKey={keys.fieldNodeKey} {...(textStyle ? { style: textStyle } : {})}>
 				{email}
 			</Text>
@@ -147,7 +187,11 @@ export const PhoneContactItem = ({ phone, style, textStyle, iconColor, primitive
 	if (!phone || !visible) return null;
 	return (
 		<Link nodeKey={keys.primitiveNodeKey} src={`tel:${phone}`} {...(style ? { style } : {})}>
-			<Icon nodeKey={keys.iconNodeKey} name="phone" {...(iconColor ? { color: iconColor } : {})} />
+			<Icon
+				nodeKey={keys.iconNodeKey}
+				{...getContactIconDescriptor("phone")}
+				{...(iconColor ? { color: iconColor } : {})}
+			/>
 			<Text nodeKey={keys.fieldNodeKey} {...(textStyle ? { style: textStyle } : {})}>
 				{phone}
 			</Text>
@@ -176,7 +220,11 @@ export const LocationContactItem = ({
 	if (!location || !visible) return null;
 	return (
 		<View {...resolvedPdfFlowProps(resolved)} style={composeStyles(style, resolved.style)}>
-			<Icon nodeKey={keys.iconNodeKey} name="map-pin" {...(iconColor ? { color: iconColor } : {})} />
+			<Icon
+				nodeKey={keys.iconNodeKey}
+				{...getContactIconDescriptor("location")}
+				{...(iconColor ? { color: iconColor } : {})}
+			/>
 			<Text nodeKey={keys.fieldNodeKey} {...(textStyle ? { style: textStyle } : {})}>
 				{location}
 			</Text>

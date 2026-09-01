@@ -174,7 +174,8 @@ function definitions(navigate?: CreateProfileToolsOptions["navigate"]): ToolDefi
 		{
 			name: "create_targeted_resume",
 			title: "Create Targeted Resume",
-			description: "Create a new resume draft tailored to a job description using only approved career-profile facts.",
+			description:
+				"Create a truthful, ATS-aligned resume draft with impact-focused content tailored to a job description, using only approved career-profile facts.",
 			inputSchema: {
 				type: "object",
 				properties: {

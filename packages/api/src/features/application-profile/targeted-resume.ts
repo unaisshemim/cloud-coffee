@@ -9,6 +9,7 @@ import { defaultResumeData } from "@reactive-resume/schema/resume/default";
 import { templateSchema } from "@reactive-resume/schema/templates";
 import { slugify } from "@reactive-resume/utils/string";
 import { generateJson } from "../ai/generate-json";
+import { fullResumeTargetingGuidelines } from "../ai/resume-targeting";
 import { getModel } from "../ai/service";
 import { aiProvidersService } from "../ai-providers/service";
 import { resumeService } from "../resume/service";
@@ -289,6 +290,7 @@ export async function createTargetedResume(input: {
 		{
 			prompt: [
 				"Create a job-targeted resume content plan using only the supplied career profile.",
+				fullResumeTargetingGuidelines,
 				"Reference only IDs and exact skill/language names present in the profile.",
 				"Do not invent employers, dates, credentials, education, metrics, or achievements.",
 				`TARGET ROLE: ${input.data.role ?? ""}`,

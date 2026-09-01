@@ -33,7 +33,7 @@ const asciiDrifts: AsciiDrift[] = [
 export function Hero() {
 	return (
 		<section id="hero" className="relative min-h-[46rem] w-full overflow-hidden bg-[#f8f4e9] sm:min-h-[50rem]">
-			<div className="absolute inset-0 overflow-hidden">
+			<div className="absolute inset-0 mt-19 overflow-hidden">
 				<m.img
 					alt={t`An editorial career collage with a data crystal and a flying laptop`}
 					width={1672}
@@ -41,7 +41,7 @@ export function Hero() {
 					fetchPriority="high"
 					decoding="async"
 					src="/images/landing/career-hero-collage.webp"
-					className="size-full object-contain object-top sm:object-cover sm:object-center"
+					className="size-full object-fit object-top sm:object-center sm:object-fit"
 				/>
 			</div>
 

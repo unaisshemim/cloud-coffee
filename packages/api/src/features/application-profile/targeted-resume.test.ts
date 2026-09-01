@@ -1,14 +1,27 @@
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultApplicationProfile } from "@reactive-resume/schema/application-profile";
 import { parseResumeData } from "@reactive-resume/schema/resume/data";
 import { defaultResumeData } from "@reactive-resume/schema/resume/default";
 
-vi.mock("../ai/service", () => ({ getModel: vi.fn() }));
-vi.mock("../ai-providers/service", () => ({ aiProvidersService: {} }));
-vi.mock("../resume/service", () => ({ resumeService: {} }));
-vi.mock("./service", () => ({ applicationProfileService: {} }));
+const mocks = vi.hoisted(() => ({
+	generateJson: vi.fn(),
+	getModel: vi.fn(() => ({})),
+	getDefaultRunnable: vi.fn(),
+	getProfileDocument: vi.fn(),
+	createResume: vi.fn(),
+}));
 
-const { assembleTargetedResume, targetedResumePlanSchema } = await import("./targeted-resume");
+vi.mock("../ai/generate-json", () => ({ generateJson: mocks.generateJson }));
+vi.mock("../ai/service", () => ({ getModel: mocks.getModel }));
+vi.mock("../ai-providers/service", () => ({
+	aiProvidersService: { getDefaultRunnable: mocks.getDefaultRunnable },
+}));
+vi.mock("../resume/service", () => ({ resumeService: { create: mocks.createResume } }));
+vi.mock("./service", () => ({
+	applicationProfileService: { getDocument: mocks.getProfileDocument },
+}));
+
+const { assembleTargetedResume, createTargetedResume, targetedResumePlanSchema } = await import("./targeted-resume");
 
 const profile = {
 	...defaultApplicationProfile,
@@ -45,6 +58,10 @@ const plan = targetedResumePlanSchema.parse({
 });
 
 describe("targeted resume assembly", () => {
+	beforeEach(() => {
+		vi.clearAllMocks();
+	});
+
 	it("builds valid resume data and copies only base design metadata", () => {
 		const base = structuredClone(defaultResumeData);
 		base.metadata.design.colors.primary = "rgba(1, 2, 3, 1)";
@@ -74,5 +91,34 @@ describe("targeted resume assembly", () => {
 				plan: { ...plan, experience: [{ id: "experience-1", highlights: ["Reduced latency by 90%."] }] },
 			}),
 		).toThrow(/metric/i);
+	});
+
+	it("instructs the model to produce truthful, ATS-aligned, impact-focused content", async () => {
+		mocks.getProfileDocument.mockResolvedValue({ profile, revision: 1 });
+		mocks.getDefaultRunnable.mockResolvedValue({ provider: "openai", model: "gpt-test", apiKey: "test" });
+		mocks.generateJson.mockResolvedValue(plan);
+		mocks.createResume.mockResolvedValue("resume-targeted");
+
+		await createTargetedResume({
+			userId: "user-1",
+			locale: "en-US",
+			data: {
+				role: "Forward Deployed Engineer",
+				company: "OpenAI",
+				jobDescription: "Own customer deployments of production LLM systems.",
+			},
+		});
+
+		const generationOptions = mocks.generateJson.mock.calls[0]?.[1];
+		if (!generationOptions || typeof generationOptions !== "object" || !("prompt" in generationOptions)) {
+			throw new Error("Targeted resume prompt was not generated.");
+		}
+		const prompt = generationOptions.prompt as string;
+		expect(prompt).toMatch(/measurable accomplishments/i);
+		expect(prompt).toMatch(/ATS/i);
+		expect(prompt).toMatch(/keywords.*naturally/i);
+		expect(prompt).toMatch(/transferable skills/i);
+		expect(prompt).toMatch(/hiring manager/i);
+		expect(prompt).toMatch(/do not invent.*metrics/i);
 	});
 });

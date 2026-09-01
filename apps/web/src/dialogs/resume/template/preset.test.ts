@@ -3,7 +3,7 @@ import { defaultResumeData } from "@reactive-resume/schema/resume/default";
 import { applyTemplatePreset } from "./preset";
 
 describe("applyTemplatePreset", () => {
-	it("applies the monochrome Classic preset", () => {
+	it("keeps the Classic preset readable at normal preview size", () => {
 		const data = structuredClone(defaultResumeData);
 		data.metadata.page.hideSectionIcons = false;
 
@@ -14,9 +14,9 @@ describe("applyTemplatePreset", () => {
 		expect(data.metadata.design.colors.primary).toBe("rgba(24, 24, 27, 1)");
 		expect(data.metadata.typography.body).toMatchObject({
 			fontFamily: "Roboto",
-			fontWeights: ["400", "600"],
-			fontSize: 9,
-			lineHeight: 1.35,
+			fontWeights: ["500", "600"],
+			fontSize: 11,
+			lineHeight: 1.5,
 		});
 	});
 

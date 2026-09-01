@@ -8,11 +8,13 @@ import { useRender } from "../../context";
 import { useRenderedSectionIds, useResolvedNode } from "../../semantic/context";
 import { semanticNodeKeys } from "../../semantic/node-keys";
 import { createBaseTemplateStyles } from "../shared/base-template-styles";
+import { getHeaderProfiles, getProfileDisplayText } from "../shared/contact";
 import {
 	CustomFieldContactItem,
 	EmailContactItem,
 	LocationContactItem,
 	PhoneContactItem,
+	ProfileContactItem,
 	WebsiteContactItem,
 } from "../shared/contact-item";
 import { TemplateProvider } from "../shared/context";
@@ -43,8 +45,11 @@ type ClassicHeaderProps = {
 };
 
 export function getClassicSectionIds(main: string[], sidebar: string[]): string[] {
-	return [...new Set([...main, ...sidebar])].filter((section) => section !== "summary");
+	return [...new Set([...main, ...sidebar])].filter((section) => section !== "summary" && section !== "profiles");
 }
+
+export const getClassicHeaderProfiles = getHeaderProfiles;
+export const getClassicProfileDisplayText = getProfileDisplayText;
 
 export const ClassicPage = ({ page, pageSize, pageMinHeightStyle, showHeader, pageNumber }: TemplatePageProps) => {
 	const data = useRender();
@@ -78,23 +83,34 @@ export const ClassicPage = ({ page, pageSize, pageMinHeightStyle, showHeader, pa
 };
 
 const Header = ({ styles }: ClassicHeaderProps) => {
-	const { basics } = useRender();
+	const { basics, sections } = useRender();
+	const profiles = sections.profiles.hidden
+		? []
+		: getClassicHeaderProfiles(sections.profiles.items, basics.website.url);
 
 	return (
 		<SemanticHeaderView style={styles.header}>
 			<Heading style={styles.headerName}>{basics.name}</Heading>
-			{basics.headline && <Text style={styles.headerHeadline}>{basics.headline}</Text>}
 
 			<SemanticContactListView style={styles.contactList}>
 				<EmailContactItem email={basics.email} style={styles.contactItem} />
 				<PhoneContactItem phone={basics.phone} style={styles.contactItem} />
 				<LocationContactItem location={basics.location} style={styles.contactItem} />
-				<WebsiteContactItem website={basics.website} style={styles.contactItem} />
 				{basics.customFields.map((field) => (
 					<CustomFieldContactItem key={field.id} field={field} style={styles.contactItem} />
 				))}
+				{profiles.map((profile) => (
+					<ProfileContactItem
+						key={profile.id}
+						profile={profile}
+						displayText={getClassicProfileDisplayText(profile)}
+						style={styles.contactItem}
+					/>
+				))}
+				<WebsiteContactItem website={basics.website} style={styles.contactItem} />
 			</SemanticContactListView>
 
+			{basics.headline && <Text style={styles.headerHeadline}>{basics.headline}</Text>}
 			<Section section="summary" placement="main" showHeading={false} />
 		</SemanticHeaderView>
 	);

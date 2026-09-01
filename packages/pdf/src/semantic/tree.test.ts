@@ -415,6 +415,7 @@ describe("buildSemanticTree", () => {
 		};
 
 		for (const [type, fields] of Object.entries(expectedFields)) {
+			if (type === "profiles") continue;
 			const section = required(
 				findNode(tree, (node) => node.kind === "section" && node.id === type),
 				`${type} section`,
@@ -558,6 +559,7 @@ describe("buildSemanticTree", () => {
 		expect(findNodes(first, (node) => node.kind === "contact-item").map((node) => node.attributes.name)).toEqual([
 			"custom",
 			"custom",
+			"profile",
 		]);
 		const emptyCustomContact = findNode(first, (node) => node.id === "custom/empty");
 		expect(emptyCustomContact).toBeDefined();
@@ -583,7 +585,7 @@ describe("buildSemanticTree", () => {
 		expect(semanticNodeKeys.richTextNode(parent, "paragraph", 2)).toBe("page-1/region-main/paragraph-2");
 	});
 
-	it.each([false, true])("emits exactly one profile link when inlineLink is %s", (inlineLink) => {
+	it.each([false, true])("emits exactly one header profile link when inlineLink is %s", (inlineLink) => {
 		const data = structuredClone(defaultResumeData);
 		data.sections.profiles.items = [
 			{
@@ -598,20 +600,76 @@ describe("buildSemanticTree", () => {
 		];
 		const tree = buildSemanticTree({
 			data,
-			template: "treecko",
+			template: "classic",
 			page: { fullWidth: true, main: ["profiles"], sidebar: [] },
 			pageNumber: 1,
-			showHeader: false,
+			showHeader: true,
 		});
 		const profile = required(
-			findNode(tree, (node) => node.kind === "item" && node.id === "profile/1"),
-			"profile item",
+			findNode(tree, (node) => node.kind === "contact-item" && node.id === "profile/1"),
+			"profile header contact",
 		);
 
 		expect(findNodes(profile, (node) => node.kind === "link").map((node) => node.key)).toEqual([
-			"page-1/region-main/section-main%3Aprofiles/section-items/item-profile%2F1/link-profile",
+			"page-1/region-header/header/contact-list/contact-profile~profile%2F1/link-contact",
 		]);
 	});
+
+	it.each(["classic", "treecko"] as const)("models %s profile links as header contacts", (template) => {
+		const data = structuredClone(defaultResumeData);
+		data.sections.profiles.items = [
+			{
+				id: "profile/1",
+				hidden: false,
+				icon: "github-logo",
+				iconColor: "",
+				network: "GitHub",
+				username: "ada",
+				website: { url: "https://github.com/ada", label: "", inlineLink: false },
+			},
+		];
+		const tree = buildSemanticTree({
+			data,
+			template,
+			page: { fullWidth: true, main: ["profiles"], sidebar: [] },
+			pageNumber: 1,
+			showHeader: true,
+		});
+		const contact = required(
+			findNode(tree, (node) => node.kind === "contact-item" && node.id === "profile/1"),
+			"profile header contact",
+		);
+
+		expect(contact.key).toBe("page-1/region-header/header/contact-list/contact-profile~profile%2F1");
+		expect(contact.children.map(({ kind }) => kind)).toEqual(["link", "icon", "field"]);
+		expect(findNode(tree, (node) => node.kind === "section" && node.id === "profiles")).toBeUndefined();
+	});
+
+	it.each(["classic", "treecko"] as const)(
+		"places %s contact links above the role title and summary description",
+		(template) => {
+			const data = structuredClone(defaultResumeData);
+			data.basics.headline = "Forward Deployed Engineer";
+			data.summary.content = "<p>Customer-facing product engineer.</p>";
+			const tree = buildSemanticTree({
+				data,
+				template,
+				page: { fullWidth: true, main: ["summary"], sidebar: [] },
+				pageNumber: 1,
+				showHeader: true,
+			});
+			const header = required(
+				findNode(tree, (node) => node.kind === "header"),
+				"header",
+			);
+
+			expect(
+				header.children
+					.filter((node) => ["name", "contact-list", "headline", "section"].includes(node.kind))
+					.map((node) => (node.kind === "section" ? node.id : node.kind)),
+			).toEqual(["name", "contact-list", "headline", "summary"]);
+		},
+	);
 
 	it.each([
 		["en-US", ["list-marker", "list-item-content"]],

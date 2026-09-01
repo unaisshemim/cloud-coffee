@@ -15,7 +15,7 @@ import { NodeType } from "node-html-parser";
 import { isRTL } from "@reactive-resume/utils/locale";
 import { getResumeSectionIcon } from "../section-icon";
 import { shouldUseSectionTimeline } from "../templates/shared/columns";
-import { getCustomFieldLinkUrl } from "../templates/shared/contact";
+import { getCustomFieldLinkUrl, getHeaderProfiles } from "../templates/shared/contact";
 import { filterItems, filterSections } from "../templates/shared/filtering";
 import { hasTemplatePicture } from "../templates/shared/picture";
 import { parseNormalizedRichTextHtml, richTextMarkClassName } from "../templates/shared/rich-text-html";
@@ -565,6 +565,7 @@ const buildHeader = (
 	pageKey: string,
 	placement: TemplateSemanticPlacement,
 	summary?: SemanticNode,
+	includeProfiles = false,
 ): SemanticNode => {
 	const regionKey = semanticNodeKeys.region(pageKey, "header");
 	const headerKey = semanticNodeKeys.header(regionKey);
@@ -602,6 +603,20 @@ const buildHeader = (
 		);
 	}
 
+	if (includeProfiles && !data.sections.profiles.hidden) {
+		for (const profile of getHeaderProfiles(data.sections.profiles.items, data.basics.website.url)) {
+			contacts.push(
+				buildContactItem({
+					contactListKey,
+					name: "profile",
+					id: profile.id,
+					structuredLink: true,
+					icon: showIcons,
+				}),
+			);
+		}
+	}
+
 	const header = semanticNode({
 		key: headerKey,
 		kind: "header",
@@ -621,12 +636,12 @@ const buildHeader = (
 				kind: "name",
 				roles: ["primary-text"],
 			}),
+			semanticNode({ key: contactListKey, kind: "contact-list", children: contacts }),
 			semanticNode({
 				key: semanticNodeKeys.headerPart(headerKey, "headline"),
 				kind: "headline",
 				roles: ["secondary-text"],
 			}),
-			semanticNode({ key: contactListKey, kind: "contact-list", children: contacts }),
 			...(summary ? [summary] : []),
 		],
 	});
@@ -925,9 +940,14 @@ export function buildSemanticTree({
 	const headerSummary =
 		manifest.specialSummary?.source === "always" && showHeader && filterSections(["summary"], data).includes("summary");
 	const removeSummary = featuredSummary || manifest.specialSummary?.source === "always";
+	const moveProfilesToHeader = template === "treecko" || template === "classic";
 	const sectionsByOrigin = {
-		main: removeSummary ? mainSections.filter((section) => section !== "summary") : mainSections,
-		sidebar: removeSummary ? sidebarSections.filter((section) => section !== "summary") : sidebarSections,
+		main: mainSections.filter(
+			(section) => (!removeSummary || section !== "summary") && (!moveProfilesToHeader || section !== "profiles"),
+		),
+		sidebar: sidebarSections.filter(
+			(section) => (!removeSummary || section !== "summary") && (!moveProfilesToHeader || section !== "profiles"),
+		),
 	} satisfies Readonly<Record<TemplateSemanticPlacement, readonly string[]>>;
 	const regions = manifest.regions.flatMap((region) => {
 		if (region.name === "header") {
@@ -944,7 +964,7 @@ export function buildSemanticTree({
 						featured: true,
 					})
 				: undefined;
-			return [buildHeader(data, pageKey, manifest.header.placement, summary)];
+			return [buildHeader(data, pageKey, manifest.header.placement, summary, moveProfilesToHeader)];
 		}
 
 		if (region.name === "featured") {

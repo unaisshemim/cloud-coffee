@@ -12,9 +12,9 @@ export function applyTemplatePreset(data: ResumeData, template: Template): void 
 
 		Object.assign(data.metadata.typography.body, {
 			fontFamily: "Roboto",
-			fontWeights: ["400", "600"],
-			fontSize: 9,
-			lineHeight: 1.35,
+			fontWeights: ["500", "600"],
+			fontSize: 11,
+			lineHeight: 1.5,
 		});
 
 		Object.assign(data.metadata.typography.heading, {

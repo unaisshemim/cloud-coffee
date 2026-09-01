@@ -32,8 +32,12 @@ describe("getBuilderPreviewPageScale", () => {
 		expect(getBuilderPreviewPageScale(576, 595)).toBeCloseTo(528 / 595, 5);
 	});
 
-	it("does not upscale the resume beyond its natural size", () => {
-		expect(getBuilderPreviewPageScale(900, 595)).toBe(1);
+	it("upscales the resume to fill a wide preview pane", () => {
+		expect(getBuilderPreviewPageScale(900, 595)).toBeCloseTo(852 / 595, 5);
+	});
+
+	it("caps upscaling on extra-wide preview panes", () => {
+		expect(getBuilderPreviewPageScale(2_000, 595)).toBe(1.75);
 	});
 
 	it("keeps a readable minimum scale in narrow containers", () => {

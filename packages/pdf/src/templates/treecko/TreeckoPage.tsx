@@ -1,4 +1,5 @@
 import type { Style } from "@react-pdf/types";
+import type { ProfileItem } from "@reactive-resume/schema/resume/data";
 import type { TemplatePageProps } from "../../document";
 import type { TemplateColorRoles, TemplateStyleContext, TemplateStyleSlots } from "../shared/types";
 import { useMemo } from "react";
@@ -13,6 +14,7 @@ import {
 	EmailContactItem,
 	LocationContactItem,
 	PhoneContactItem,
+	ProfileContactItem,
 	WebsiteContactItem,
 } from "../shared/contact-item";
 import { TemplateProvider } from "../shared/context";
@@ -30,6 +32,7 @@ type TreeckoStyles = Omit<TemplateStyleSlots, "page"> & {
 	headerHeadline: Style;
 	contactList: Style;
 	contactItem: Style;
+	profileContactItem: Style;
 	sections: Style;
 };
 
@@ -43,7 +46,25 @@ type TreeckoHeaderProps = {
 };
 
 export function getTreeckoSectionIds(main: string[], sidebar: string[]): string[] {
-	return [...new Set([...main, ...sidebar])].filter((section) => section !== "summary");
+	return [...new Set([...main, ...sidebar])].filter((section) => section !== "summary" && section !== "profiles");
+}
+
+const normalizeProfileUrl = (url: string): string => url.trim().replace(/\/+$/, "").toLocaleLowerCase();
+
+export function getTreeckoHeaderProfiles(items: ProfileItem[], primaryWebsiteUrl: string): ProfileItem[] {
+	const primaryWebsite = normalizeProfileUrl(primaryWebsiteUrl);
+
+	return items.filter((item) => {
+		const profileUrl = normalizeProfileUrl(item.website.url);
+		return !item.hidden && Boolean(profileUrl) && profileUrl !== primaryWebsite;
+	});
+}
+
+export function getTreeckoProfileDisplayText(item: ProfileItem): string {
+	return item.website.url
+		.trim()
+		.replace(/^https?:\/\//i, "")
+		.replace(/\/+$/, "");
 }
 
 export const TreeckoPage = ({ page, pageSize, pageMinHeightStyle, showHeader, pageNumber }: TemplatePageProps) => {
@@ -78,23 +99,36 @@ export const TreeckoPage = ({ page, pageSize, pageMinHeightStyle, showHeader, pa
 };
 
 const Header = ({ styles }: TreeckoHeaderProps) => {
-	const { basics } = useRender();
+	const { basics, sections } = useRender();
+	const profiles = sections.profiles.hidden
+		? []
+		: getTreeckoHeaderProfiles(sections.profiles.items, basics.website.url);
+	const website = basics.website.label.trim() ? basics.website : { ...basics.website, label: "Website" };
 
 	return (
 		<SemanticHeaderView style={styles.header}>
 			<Heading style={styles.headerName}>{basics.name}</Heading>
-			{basics.headline && <Text style={styles.headerHeadline}>{basics.headline}</Text>}
-			<Section section="summary" placement="main" showHeading={false} />
 
 			<SemanticContactListView style={styles.contactList}>
 				<EmailContactItem email={basics.email} style={styles.contactItem} />
 				<PhoneContactItem phone={basics.phone} style={styles.contactItem} />
 				<LocationContactItem location={basics.location} style={styles.contactItem} />
-				<WebsiteContactItem website={basics.website} style={styles.contactItem} />
 				{basics.customFields.map((field) => (
 					<CustomFieldContactItem key={field.id} field={field} style={styles.contactItem} />
 				))}
+				{profiles.map((profile) => (
+					<ProfileContactItem
+						key={profile.id}
+						profile={profile}
+						displayText={getTreeckoProfileDisplayText(profile)}
+						style={styles.profileContactItem}
+					/>
+				))}
+				<WebsiteContactItem website={website} style={styles.profileContactItem} />
 			</SemanticContactListView>
+
+			{basics.headline && <Text style={styles.headerHeadline}>{basics.headline}</Text>}
+			<Section section="summary" placement="main" showHeading={false} />
 		</SemanticHeaderView>
 	);
 };
@@ -170,6 +204,11 @@ const useTreeckoTemplate = (): TreeckoTemplate => {
 			},
 			contactItem: {
 				width: "31%",
+				flexDirection: r.row,
+				alignItems: "center",
+				columnGap: metrics.gapX(1 / 6),
+			},
+			profileContactItem: {
 				flexDirection: r.row,
 				alignItems: "center",
 				columnGap: metrics.gapX(1 / 6),

@@ -2,6 +2,8 @@ import type { Http2Bindings, HttpBindings } from "@hono/node-server";
 import type { Context } from "hono";
 import { isIP } from "node:net";
 import { getConnInfo } from "@hono/node-server/conninfo";
+import { setDefaultResumeEventRuntime } from "@reactive-resume/api/features/resume/event-runtime";
+import { nodeResumeEventRuntime } from "@reactive-resume/api/features/resume/events.node";
 import { createAuth, createOAuthTokenVerifier } from "@reactive-resume/auth/config";
 import { setDefaultAuthRuntime } from "@reactive-resume/auth/runtime";
 import { db } from "@reactive-resume/db/client";
@@ -21,6 +23,7 @@ const getTrustedClient = (context: Context<ServerEnvironment>): string => {
 };
 
 export function createApp() {
+	setDefaultResumeEventRuntime(nodeResumeEventRuntime);
 	setDefaultAuthRuntime({ auth: createAuth(db, env), verifyOAuthToken: createOAuthTokenVerifier(env) });
 	const app = createApiApp({ getTrustedClient });
 

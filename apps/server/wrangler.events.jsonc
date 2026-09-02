@@ -1,0 +1,11 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "cloudcoffee-events-test",
+	"main": "test/cloudflare/worker.ts",
+	"compatibility_date": "2026-09-02",
+	"compatibility_flags": ["nodejs_compat"],
+	"durable_objects": {
+		"bindings": [{ "name": "RESUME_UPDATES", "class_name": "ResumeUpdateRoom" }]
+	},
+	"migrations": [{ "tag": "v1", "new_sqlite_classes": ["ResumeUpdateRoom"] }]
+}

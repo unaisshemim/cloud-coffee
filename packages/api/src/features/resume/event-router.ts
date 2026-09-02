@@ -16,10 +16,14 @@ export const updatesRouter = {
 			successDescription: "A stream of resume update invalidation events.",
 		})
 		.input(z.object({ id: z.string().describe("The unique identifier of the resume.") }))
-		.handler(async function* ({ context, input, signal }) {
+		.handler(async ({ context, input, signal }) => {
 			const resume = await resumeService.getById({ id: input.id, userId: context.user.id });
-
-			yield {
+			const subscription = await subscribeResumeUpdated({
+				resumeId: input.id,
+				userId: context.user.id,
+				...(signal ? { signal } : {}),
+			});
+			const initialEvent = {
 				type: "resume.updated" as const,
 				resumeId: input.id,
 				userId: context.user.id,
@@ -27,10 +31,9 @@ export const updatesRouter = {
 				mutation: "sync" as const,
 			};
 
-			yield* subscribeResumeUpdated({
-				resumeId: input.id,
-				userId: context.user.id,
-				...(signal ? { signal } : {}),
-			});
+			return (async function* () {
+				yield initialEvent;
+				yield* subscription;
+			})();
 		}),
 };

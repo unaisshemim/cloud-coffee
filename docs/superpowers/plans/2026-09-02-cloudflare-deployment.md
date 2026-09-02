@@ -15,7 +15,7 @@
 - Task 1 complete: `6b87af5`.
 - Task 2 complete: `917c263`.
 - Task 3 implemented: request-scoped database/auth runtimes and Hyperdrive client lifecycle. Verification recorded at commit.
-- Task 3A approved on 2026-09-02: Durable Object replaces Worker `LISTEN/NOTIFY`; PostgreSQL remains authoritative.
+- Task 3A core implemented: hibernatable WebSocket DO and oRPC adapter verified in local workerd. Production binding/export will be wired in Task 6. PostgreSQL remains authoritative.
 - Tasks 4–11 pending.
 
 ## Global Constraints
@@ -374,7 +374,7 @@ Move current `pg_notify`, `LISTEN`, queue filtering, abort cleanup, and client r
 
 - [ ] **Step 3: Implement per-resume Durable Object**
 
-Use `RESUME_UPDATES.getByName(event.resumeId)`. Publish through typed RPC after PostgreSQL mutation succeeds. Subscribe through a streaming Durable Object response; parse newline-delimited JSON into existing async iterator. Store no resume content. Close streams on cancellation.
+Use `RESUME_UPDATES.getByName(event.resumeId)`. Publish through typed RPC after PostgreSQL mutation succeeds. Subscribe through a hibernatable WebSocket, then bridge metadata messages into existing async iterator. Wait for handshake before yielding initial sync event. Store no resume content; filter by authenticated user and resume ID, bound pending invalidations, and close sockets on cancellation. Unexpected disconnects propagate to browser reconnect logic.
 
 - [ ] **Step 4: Configure binding and migration**
 

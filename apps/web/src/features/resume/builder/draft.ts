@@ -581,8 +581,9 @@ export function useUpdateResumeData() {
 }
 
 export function useResumeUpdateSubscription({ resumeId, onUpdate, onError }: ResumeUpdateSubscriptionOptions) {
-	const [_retryNonce, setRetryNonce] = useState(0);
+	const [retryNonce, setRetryNonce] = useState(0);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: Retry nonce restarts subscription after transport failures.
 	useEffect(() => {
 		if (!resumeId) return;
 
@@ -609,7 +610,7 @@ export function useResumeUpdateSubscription({ resumeId, onUpdate, onError }: Res
 			if (retryTimer) window.clearTimeout(retryTimer);
 			void cancel().catch(() => {});
 		};
-	}, [onError, onUpdate, resumeId]);
+	}, [onError, onUpdate, resumeId, retryNonce]);
 }
 
 export function useBuilderResumeUpdateSubscription() {

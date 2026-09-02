@@ -1,112 +1,13 @@
-import { getPool } from "@reactive-resume/db/client";
+import type { ResumeUpdatedEvent, SubscribeResumeUpdatedInput } from "./event-contracts";
+import { getResumeEventRuntime } from "./event-runtime";
 
-const RESUME_UPDATED_CHANNEL = "resume_updated";
-const resumeMutationNames = new Set(["sync", "create", "update", "patch", "lock", "password", "delete"] as const);
+export type { ResumeUpdatedEvent } from "./event-contracts";
 
-type PgNotification = {
-	channel?: string | undefined;
-	payload?: string | undefined;
-};
-
-export type ResumeUpdatedEvent = {
-	type: "resume.updated";
-	resumeId: string;
-	userId: string;
-	updatedAt: string;
-	mutation: "sync" | "create" | "update" | "patch" | "lock" | "password" | "delete";
-};
-
-type SubscribeResumeUpdatedInput = {
-	resumeId: string;
-	userId: string;
-	signal?: AbortSignal;
-};
-
-function isResumeUpdatedEvent(value: unknown): value is ResumeUpdatedEvent {
-	if (!value || typeof value !== "object") return false;
-
-	const event = value as Partial<ResumeUpdatedEvent>;
-	return (
-		event.type === "resume.updated" &&
-		typeof event.resumeId === "string" &&
-		typeof event.userId === "string" &&
-		typeof event.updatedAt === "string" &&
-		typeof event.mutation === "string" &&
-		resumeMutationNames.has(event.mutation as ResumeUpdatedEvent["mutation"])
-	);
+export function publishResumeUpdated(event: ResumeUpdatedEvent): Promise<void> {
+	return getResumeEventRuntime().publish(event);
 }
 
-export async function publishResumeUpdated(event: ResumeUpdatedEvent) {
-	await getPool().query("SELECT pg_notify($1, $2)", [RESUME_UPDATED_CHANNEL, JSON.stringify(event)]);
-}
-
-export async function* subscribeResumeUpdated({ resumeId, userId, signal }: SubscribeResumeUpdatedInput) {
-	const client = await getPool().connect();
-	const queue: ResumeUpdatedEvent[] = [];
-	let done = signal?.aborted ?? false;
-	let wake: (() => void) | undefined;
-
-	const resolveWake = () => {
-		wake?.();
-		wake = undefined;
-	};
-
-	const onAbort = () => {
-		done = true;
-		resolveWake();
-	};
-
-	const onNotification = (notification: PgNotification) => {
-		if (notification.channel !== RESUME_UPDATED_CHANNEL || !notification.payload) return;
-
-		try {
-			const event = JSON.parse(notification.payload) as unknown;
-			if (!isResumeUpdatedEvent(event)) return;
-			if (event.resumeId !== resumeId || event.userId !== userId) return;
-
-			queue.push(event);
-			resolveWake();
-		} catch {
-			// Ignore malformed notifications; the refetch path is invalidation-only.
-		}
-	};
-
-	signal?.addEventListener("abort", onAbort, { once: true });
-	client.on("notification", onNotification);
-
-	try {
-		await client.query(`LISTEN ${RESUME_UPDATED_CHANNEL}`);
-
-		const waitForNextEvent = async (): Promise<ResumeUpdatedEvent | null> => {
-			if (done) return null;
-
-			const event = queue.shift();
-			if (event) return event;
-
-			await new Promise<void>((resolve) => {
-				wake = resolve;
-			});
-
-			return waitForNextEvent();
-		};
-
-		async function* streamEvents(): AsyncGenerator<ResumeUpdatedEvent> {
-			const event = await waitForNextEvent();
-			if (!event) return;
-
-			yield event;
-			yield* streamEvents();
-		}
-
-		yield* streamEvents();
-	} finally {
-		signal?.removeEventListener("abort", onAbort);
-		client.off("notification", onNotification);
-
-		try {
-			await client.query(`UNLISTEN ${RESUME_UPDATED_CHANNEL}`);
-		} finally {
-			client.release();
-		}
-	}
+export function subscribeResumeUpdated(input: SubscribeResumeUpdatedInput): Promise<AsyncIterable<ResumeUpdatedEvent>> {
+	// Capture the request runtime now; async iteration may happen after its creation scope exits.
+	return Promise.resolve(getResumeEventRuntime().subscribe(input));
 }

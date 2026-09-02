@@ -448,6 +448,22 @@ describe("resume update stream subscription", () => {
 		useResumeStore.getState().reset();
 	});
 
+	it("resubscribes after stream disconnect", async () => {
+		const cancel = vi.fn().mockResolvedValue(undefined);
+		const onUpdate = vi.fn();
+		consumeEventIteratorMock.mockReturnValue(cancel);
+		renderHook(() => useResumeUpdateSubscription({ resumeId: "resume-retry", onUpdate }));
+		const handlers = consumeEventIteratorMock.mock.calls[0]?.[1] as { onError: (error: Error) => void };
+
+		await act(async () => {
+			handlers.onError(new Error("Disconnected"));
+			await vi.advanceTimersByTimeAsync(2500);
+		});
+
+		expect(orpcMocks.streamSubscribe).toHaveBeenCalledTimes(2);
+		expect(cancel).toHaveBeenCalledOnce();
+	});
+
 	it("subscribes by explicit resume id and calls the provided update handler", async () => {
 		const cancel = vi.fn().mockResolvedValue(undefined);
 		const onUpdate = vi.fn().mockResolvedValue(undefined);

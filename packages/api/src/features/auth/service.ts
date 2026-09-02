@@ -1,7 +1,7 @@
 import type { AuthProvider } from "@reactive-resume/auth/types";
 import { ORPCError } from "@orpc/client";
 import { eq } from "drizzle-orm";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
 import { applicationProfileService } from "../application-profile/service";
@@ -21,7 +21,7 @@ export const authService = {
 	// GDPR-style export of everything the user owns. Selects explicit columns so
 	// secrets (password hashes, tokens, api keys) never leak into the export.
 	exportData: async (input: { userId: string }) => {
-		const [userRecord] = await db
+		const [userRecord] = await getDatabase()
 			.select({
 				id: schema.user.id,
 				name: schema.user.name,
@@ -38,7 +38,7 @@ export const authService = {
 
 		if (!userRecord) throw new ORPCError("NOT_FOUND");
 
-		const resumes = await db
+		const resumes = await getDatabase()
 			.select({
 				id: schema.resume.id,
 				name: schema.resume.name,
@@ -71,7 +71,7 @@ export const authService = {
 		}
 
 		try {
-			await db.delete(schema.user).where(eq(schema.user.id, input.userId));
+			await getDatabase().delete(schema.user).where(eq(schema.user.id, input.userId));
 		} catch (err) {
 			console.error("Failed to delete user record:", err);
 

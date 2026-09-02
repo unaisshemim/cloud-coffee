@@ -12,8 +12,8 @@ vi.mock("@better-auth/oauth-provider", () => ({
 	oauthProviderOpenIdConfigMetadata: vi.fn(() => vi.fn(() => Response.json({}))),
 }));
 
-vi.mock("@reactive-resume/auth/config", () => ({
-	auth: mocks.auth,
+vi.mock("@reactive-resume/auth/runtime", () => ({
+	getAuth: () => mocks.auth,
 }));
 
 vi.mock("@reactive-resume/env/server", () => ({

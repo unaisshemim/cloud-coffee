@@ -6,8 +6,8 @@ const envMock = vi.hoisted(() => ({
 }));
 
 vi.mock("@reactive-resume/env/server", () => ({ env: envMock }));
-// auth.ts also imports db client and storage; stub them with no-op surfaces.
-vi.mock("@reactive-resume/db/client", () => ({ db: { delete: vi.fn() } }));
+// auth.ts also imports database runtime and storage; stub them with no-op surfaces.
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => ({ delete: vi.fn() }) }));
 vi.mock("@reactive-resume/db/schema", () => ({ user: {} }));
 vi.mock("../storage/service", () => ({ getStorageService: () => ({ delete: vi.fn() }) }));
 

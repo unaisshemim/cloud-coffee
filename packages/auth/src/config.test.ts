@@ -1,5 +1,16 @@
+import type { AppDatabase } from "@reactive-resume/db/runtime";
 import { describe, expect, it } from "vitest";
-import { auth } from "./config";
+import { parseServerEnv } from "@reactive-resume/env/schema";
+import { createAuth } from "./config";
+
+const auth = createAuth(
+	{} as AppDatabase,
+	parseServerEnv({
+		APP_URL: "http://localhost:3000",
+		DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/postgres",
+		AUTH_SECRET: "test-secret",
+	}),
+);
 
 describe("authentication methods", () => {
 	it("configures Google as the only social provider", () => {

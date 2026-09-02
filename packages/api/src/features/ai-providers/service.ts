@@ -2,7 +2,7 @@ import type { AIProvider } from "@reactive-resume/ai/types";
 import { ORPCError } from "@orpc/client";
 import { and, asc, desc, eq, sql } from "drizzle-orm";
 import { aiProviderSchema } from "@reactive-resume/ai/types";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import {
 	assertCredentialEncryptionConfigured,
@@ -87,7 +87,7 @@ function normalizeBaseUrl(input: { provider: AIProvider; baseURL?: string | null
 }
 
 async function getOwnedProvider(input: { id: string; userId: string }) {
-	const [provider] = await db
+	const [provider] = await getDatabase()
 		.select()
 		.from(schema.aiProvider)
 		.where(and(eq(schema.aiProvider.id, input.id), eq(schema.aiProvider.userId, input.userId)))
@@ -102,7 +102,7 @@ export const aiProvidersService = {
 	list: async (input: { userId: string }) => {
 		assertCredentialEncryptionConfigured();
 
-		const providers = await db
+		const providers = await getDatabase()
 			.select()
 			.from(schema.aiProvider)
 			.where(eq(schema.aiProvider.userId, input.userId))
@@ -132,7 +132,7 @@ export const aiProvidersService = {
 	getDefaultRunnable: async (input: { userId: string }) => {
 		assertCredentialEncryptionConfigured();
 
-		const [provider] = await db
+		const [provider] = await getDatabase()
 			.select()
 			.from(schema.aiProvider)
 			.where(
@@ -158,7 +158,7 @@ export const aiProvidersService = {
 		assertCredentialEncryptionConfigured();
 
 		const encrypted = encryptCredential(input.apiKey.trim());
-		const [provider] = await db
+		const [provider] = await getDatabase()
 			.insert(schema.aiProvider)
 			.values({
 				userId: input.userId,
@@ -194,7 +194,7 @@ export const aiProvidersService = {
 			throw new ORPCError("BAD_REQUEST", { message: "AI provider must be tested successfully before enabling." });
 		}
 
-		const [updated] = await db
+		const [updated] = await getDatabase()
 			.update(schema.aiProvider)
 			.set({
 				...(input.label !== undefined ? { label: input.label.trim() } : {}),
@@ -215,7 +215,7 @@ export const aiProvidersService = {
 	delete: async (input: { id: string; userId: string }) => {
 		assertCredentialEncryptionConfigured();
 
-		await db
+		await getDatabase()
 			.delete(schema.aiProvider)
 			.where(and(eq(schema.aiProvider.id, input.id), eq(schema.aiProvider.userId, input.userId)));
 	},
@@ -237,7 +237,7 @@ export const aiProvidersService = {
 
 			// A provider that answers "no" is a completed test, not a failed request: it comes back as
 			// data so the client can show why, instead of a generic transport error.
-			const [updated] = await db
+			const [updated] = await getDatabase()
 				.update(schema.aiProvider)
 				.set({
 					enabled: result.ok,
@@ -252,7 +252,7 @@ export const aiProvidersService = {
 			return toResponse(updated);
 		} catch (error) {
 			// Only unexpected failures reach here now: provider-side outcomes come back as data above.
-			await db
+			await getDatabase()
 				.update(schema.aiProvider)
 				.set({
 					enabled: false,
@@ -267,7 +267,7 @@ export const aiProvidersService = {
 	},
 
 	markUsed: async (input: { id: string; userId: string }) => {
-		await db
+		await getDatabase()
 			.update(schema.aiProvider)
 			.set({ lastUsedAt: new Date() })
 			.where(and(eq(schema.aiProvider.id, input.id), eq(schema.aiProvider.userId, input.userId)));

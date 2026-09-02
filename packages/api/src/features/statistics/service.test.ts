@@ -7,7 +7,7 @@ const dbMock = vi.hoisted(() => {
 	return { select };
 });
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({ user: { __table: "user" }, resume: { __table: "resume" } }));
 vi.mock("drizzle-orm", () => ({ count: () => "count(*)" }));
 

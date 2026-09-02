@@ -2,7 +2,7 @@ import type { ApplicationProfile, ApplicationProfileCandidate } from "@reactive-
 import type { ProfileMergeOperation, ProfileMergePreview } from "./merge";
 import { ORPCError } from "@orpc/client";
 import { eq, sql } from "drizzle-orm";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import {
 	applicationProfileSchema,
@@ -24,7 +24,7 @@ function conflict(): never {
 
 export const applicationProfileService = {
 	getDocument: async (input: { userId: string }): Promise<ApplicationProfileDocument> => {
-		const [row] = await db
+		const [row] = await getDatabase()
 			.select({ data: schema.applicationProfile.data, revision: schema.applicationProfile.revision })
 			.from(schema.applicationProfile)
 			.where(eq(schema.applicationProfile.userId, input.userId))
@@ -49,7 +49,7 @@ export const applicationProfileService = {
 		if (current.revision !== input.revision) conflict();
 
 		const data = applicationProfileSchema.parse(input.profile);
-		const [row] = await db
+		const [row] = await getDatabase()
 			.insert(schema.applicationProfile)
 			.values({ userId: input.userId, data, revision: 1 })
 			.onConflictDoUpdate({

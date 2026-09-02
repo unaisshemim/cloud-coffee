@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
 import { eq } from "drizzle-orm";
-import { auth } from "@reactive-resume/auth/config";
-import { db } from "@reactive-resume/db/client";
+import { getAuth } from "@reactive-resume/auth/runtime";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import { oauthClient, verification } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
 import { generateId } from "@reactive-resume/utils/string";
@@ -122,7 +122,7 @@ export async function handleAuth(request: Request) {
 	const sanitizedRequest = sanitizeOAuthAuthorizeRequest(request);
 	const finalRequest = await defaultPublicClientRegistration(sanitizedRequest);
 
-	return auth.handler(finalRequest);
+	return getAuth().handler(finalRequest);
 }
 
 function generateCode() {
@@ -134,7 +134,7 @@ function hashCode(code: string) {
 }
 
 export async function handleOAuth(request: Request) {
-	const session = await auth.api.getSession({ headers: request.headers });
+	const session = await getAuth().api.getSession({ headers: request.headers });
 	const url = new URL(request.url);
 
 	if (session?.user) {
@@ -149,7 +149,7 @@ export async function handleOAuth(request: Request) {
 			return Response.json({ error: "missing client_id or redirect_uri" }, { status: 400 });
 		}
 
-		const [client] = await db.select().from(oauthClient).where(eq(oauthClient.clientId, clientId)).limit(1);
+		const [client] = await getDatabase().select().from(oauthClient).where(eq(oauthClient.clientId, clientId)).limit(1);
 
 		if (!client) {
 			return Response.json({ error: "invalid client" }, { status: 400 });
@@ -164,28 +164,30 @@ export async function handleOAuth(request: Request) {
 		const now = new Date();
 		const expiresAt = new Date(now.getTime() + 600_000);
 
-		await db.insert(verification).values({
-			id: generateId(),
-			identifier: hashedCode,
-			value: JSON.stringify({
-				type: "authorization_code",
-				query: {
-					response_type: "code",
-					client_id: clientId,
-					redirect_uri: redirectUri,
-					scope,
-					state,
-					code_challenge: codeChallenge,
-					code_challenge_method: codeChallengeMethod,
-				},
-				userId: session.user.id,
-				sessionId: session.session.id,
-				authTime: new Date(session.session.createdAt).getTime(),
-			}),
-			expiresAt,
-			createdAt: now,
-			updatedAt: now,
-		});
+		await getDatabase()
+			.insert(verification)
+			.values({
+				id: generateId(),
+				identifier: hashedCode,
+				value: JSON.stringify({
+					type: "authorization_code",
+					query: {
+						response_type: "code",
+						client_id: clientId,
+						redirect_uri: redirectUri,
+						scope,
+						state,
+						code_challenge: codeChallenge,
+						code_challenge_method: codeChallengeMethod,
+					},
+					userId: session.user.id,
+					sessionId: session.session.id,
+					authTime: new Date(session.session.createdAt).getTime(),
+				}),
+				expiresAt,
+				createdAt: now,
+				updatedAt: now,
+			});
 
 		const callbackUrl = new URL(redirectUri);
 		callbackUrl.searchParams.set("code", code);

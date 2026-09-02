@@ -10,16 +10,16 @@ const mocks = vi.hoisted(() => ({
 	},
 }));
 
-vi.mock("@reactive-resume/auth/config", () => ({
-	auth: {
+vi.mock("@reactive-resume/auth/runtime", () => ({
+	getAuth: () => ({
 		api: {
 			getSession: mocks.getSession,
 		},
 		handler: mocks.handler,
-	},
+	}),
 }));
 
-vi.mock("@reactive-resume/db/client", () => ({ db: {} }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => ({}) }));
 vi.mock("@reactive-resume/db/schema", () => ({ oauthClient: {}, verification: {} }));
 vi.mock("@reactive-resume/env/server", () => ({
 	env: mocks.env,

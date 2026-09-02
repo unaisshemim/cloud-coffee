@@ -13,7 +13,7 @@ const resumeGetByIdMock = vi.hoisted(() => vi.fn());
 const storageDeleteMock = vi.hoisted(() => vi.fn());
 const uploadFileMock = vi.hoisted(() => vi.fn());
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({
 	application: {
 		id: "id",

@@ -40,7 +40,7 @@ const { dbMock, state } = vi.hoisted(() => {
 	};
 });
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({
 	applicationProfile: {
 		userId: "application_profile.user_id",

@@ -11,11 +11,11 @@ const dbMock = vi.hoisted(() => ({
 	select: vi.fn(),
 }));
 
-vi.mock("@reactive-resume/auth/config", () => ({
-	auth: authMock,
+vi.mock("@reactive-resume/auth/runtime", () => ({
+	getAuth: () => authMock,
 	verifyOAuthToken: verifyOAuthTokenMock,
 }));
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({ user: { __table: "user" } }));
 vi.mock("drizzle-orm", () => ({ eq: () => "EQ" }));
 

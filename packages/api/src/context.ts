@@ -2,8 +2,8 @@ import type { Locale } from "@reactive-resume/utils/locale";
 import type { User } from "better-auth";
 import { ORPCError, os } from "@orpc/server";
 import { eq } from "drizzle-orm";
-import { auth, verifyOAuthToken } from "@reactive-resume/auth/config";
-import { db } from "@reactive-resume/db/client";
+import { getAuth, verifyOAuthToken } from "@reactive-resume/auth/runtime";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import { user } from "@reactive-resume/db/schema";
 
 interface ORPCContext {
@@ -21,7 +21,7 @@ async function getUserFromBearerToken(headers: Headers): Promise<User | null> {
 		const payload = await verifyOAuthToken(authHeader.slice(7));
 		if (!payload?.sub) return null;
 
-		const [userResult] = await db.select().from(user).where(eq(user.id, payload.sub)).limit(1);
+		const [userResult] = await getDatabase().select().from(user).where(eq(user.id, payload.sub)).limit(1);
 		return userResult ?? null;
 	} catch (error) {
 		console.warn("Bearer token verification failed:", error);
@@ -31,7 +31,7 @@ async function getUserFromBearerToken(headers: Headers): Promise<User | null> {
 
 async function getUserFromHeaders(headers: Headers): Promise<User | null> {
 	try {
-		const result = await auth.api.getSession({ headers });
+		const result = await getAuth().api.getSession({ headers });
 		if (!result?.user) return null;
 
 		return result.user;

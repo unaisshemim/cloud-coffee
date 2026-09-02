@@ -1,3 +1,5 @@
+import type { AppDatabase } from "@reactive-resume/db/runtime";
+import type { ServerEnv } from "@reactive-resume/env/schema";
 import type { JWTPayload } from "jose";
 import { drizzleAdapter } from "@better-auth/drizzle-adapter";
 import { dash } from "@better-auth/infra";
@@ -7,59 +9,43 @@ import { createAuthMiddleware } from "better-auth/api";
 import { verifyBearerToken } from "better-auth/oauth2";
 import { admin, jwt } from "better-auth/plugins";
 import { username } from "better-auth/plugins/username";
-import { db } from "@reactive-resume/db/client";
 import * as schema from "@reactive-resume/db/schema";
-import { env } from "@reactive-resume/env/server";
 import { rateLimitConfig, TRUSTED_IP_HEADERS } from "@reactive-resume/utils/rate-limit";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
 import { isAllowedOAuthRedirectUri } from "@reactive-resume/utils/url-security.node";
 import { createProfileMapper } from "./oauth-profile";
 import { getTrustedOrigins } from "./trusted-origins";
 
-const authBaseUrl = env.APP_URL;
-const isRateLimitEnabled = process.env.NODE_ENV === "production" && !env.FLAG_DISABLE_API_RATE_LIMIT;
-
 // JWKS must be reachable from inside the Node runtime. `authBaseUrl` is the
 // publicly-visible URL — under Docker port-mapping or behind a reverse proxy
 // it does not loop back to the app process. Override with `BETTER_AUTH_INTERNAL_URL`
 // for split deployments or custom servers that bind to a port not exposed via `PORT`.
-function resolveInternalBaseUrl(): string {
+function resolveInternalBaseUrl(config: ServerEnv): string {
 	const configured = process.env.BETTER_AUTH_INTERNAL_URL?.trim();
 	if (configured) {
 		return configured.replace(/\/+$/, "");
 	}
 
-	const port = process.env.NODE_ENV === "production" ? (process.env.PORT ?? "3000") : String(env.SERVER_PORT);
+	const port = process.env.NODE_ENV === "production" ? (process.env.PORT ?? "3000") : String(config.SERVER_PORT);
 
 	return `http://127.0.0.1:${port}`;
 }
 
-const internalBaseUrl = resolveInternalBaseUrl();
+export function createOAuthTokenVerifier(config: ServerEnv, options: { jwksBaseUrl?: string } = {}) {
+	const authBaseUrl = config.APP_URL;
+	const oauthAudienceBase = authBaseUrl.replace(/\/$/, "");
+	const audiences = [oauthAudienceBase, `${oauthAudienceBase}/`];
+	const internalBaseUrl = (options.jwksBaseUrl ?? resolveInternalBaseUrl(config)).replace(/\/+$/, "");
 
-const oauthAudienceBase = authBaseUrl.replace(/\/$/, "");
-const OAUTH_AUDIENCES = [oauthAudienceBase, `${oauthAudienceBase}/`];
-
-export function verifyOAuthToken(token: string): Promise<JWTPayload> {
-	return verifyBearerToken(token, {
-		jwksUrl: `${internalBaseUrl}/api/auth/jwks`,
-		verifyOptions: {
-			issuer: `${authBaseUrl}/api/auth`,
-			audience: OAUTH_AUDIENCES,
-		},
-	});
+	return (token: string): Promise<JWTPayload> =>
+		verifyBearerToken(token, {
+			jwksUrl: `${internalBaseUrl}/api/auth/jwks`,
+			verifyOptions: {
+				issuer: `${authBaseUrl}/api/auth`,
+				audience: audiences,
+			},
+		});
 }
-
-const TRUSTED_ORIGINS = getTrustedOrigins(env.APP_URL);
-const oauthProviderRateLimit = isRateLimitEnabled
-	? rateLimitConfig.betterAuth.oauthProvider
-	: ({
-			register: false,
-			authorize: false,
-			token: false,
-			introspect: false,
-			revoke: false,
-			userinfo: false,
-		} as const);
 
 // `@better-auth/oauth-provider@1.7.1` declares OpenAPI parameter metadata (`schema.items`) in a
 // shape that is not `exactOptionalPropertyTypes`-clean, which stops the plugin from structurally
@@ -84,16 +70,32 @@ type WithoutEndpointMetadata<TPlugin> = TPlugin extends { endpoints: infer TEndp
 		}
 	: TPlugin;
 
-const getAuthConfig = () => {
+export function createAuth(database: AppDatabase, config: ServerEnv) {
+	const authBaseUrl = config.APP_URL;
+	const isRateLimitEnabled = process.env.NODE_ENV === "production" && !config.FLAG_DISABLE_API_RATE_LIMIT;
+	const trustedOrigins = getTrustedOrigins(config.APP_URL);
+	const oauthAudienceBase = authBaseUrl.replace(/\/$/, "");
+	const oauthAudiences = [oauthAudienceBase, `${oauthAudienceBase}/`];
+	const oauthProviderRateLimit = isRateLimitEnabled
+		? rateLimitConfig.betterAuth.oauthProvider
+		: ({
+				register: false,
+				authorize: false,
+				token: false,
+				introspect: false,
+				revoke: false,
+				userinfo: false,
+			} as const);
+
 	return betterAuth({
 		appName: "cloudcoffee",
 		baseURL: authBaseUrl,
-		secret: env.AUTH_SECRET,
+		secret: config.AUTH_SECRET,
 
-		database: drizzleAdapter(db, { schema, provider: "pg" }),
+		database: drizzleAdapter(database, { schema, provider: "pg" }),
 
 		telemetry: { enabled: false },
-		trustedOrigins: TRUSTED_ORIGINS,
+		trustedOrigins,
 		rateLimit: {
 			...rateLimitConfig.betterAuth.global,
 			enabled: isRateLimitEnabled,
@@ -112,8 +114,8 @@ const getAuthConfig = () => {
 						throw new APIError("BAD_REQUEST", { message: "redirect_uris entries must be strings" });
 					}
 					if (
-						!isAllowedOAuthRedirectUri(uri, TRUSTED_ORIGINS, {
-							allowUnsafe: env.FLAG_ALLOW_UNSAFE_OAUTH_REDIRECT_URI,
+						!isAllowedOAuthRedirectUri(uri, trustedOrigins, {
+							allowUnsafe: config.FLAG_ALLOW_UNSAFE_OAUTH_REDIRECT_URI,
 						})
 					) {
 						throw new APIError("BAD_REQUEST", {
@@ -141,7 +143,7 @@ const getAuthConfig = () => {
 			minPasswordLength: 8,
 			maxPasswordLength: 64,
 			requireEmailVerification: false,
-			disableSignUp: env.FLAG_DISABLE_SIGNUPS,
+			disableSignUp: config.FLAG_DISABLE_SIGNUPS,
 		},
 
 		user: {
@@ -162,10 +164,10 @@ const getAuthConfig = () => {
 
 		socialProviders: {
 			google: {
-				enabled: !!env.GOOGLE_CLIENT_ID && !!env.GOOGLE_CLIENT_SECRET,
-				disableSignUp: env.FLAG_DISABLE_SIGNUPS,
-				clientId: env.GOOGLE_CLIENT_ID ?? "",
-				clientSecret: env.GOOGLE_CLIENT_SECRET ?? "",
+				enabled: !!config.GOOGLE_CLIENT_ID && !!config.GOOGLE_CLIENT_SECRET,
+				disableSignUp: config.FLAG_DISABLE_SIGNUPS,
+				clientId: config.GOOGLE_CLIENT_ID ?? "",
+				clientSecret: config.GOOGLE_CLIENT_SECRET ?? "",
 				mapProfileToUser: createProfileMapper({
 					providerName: "Google",
 					getName: (profile, context) => profile.name ?? context.emailLocalPart,
@@ -180,7 +182,7 @@ const getAuthConfig = () => {
 			oauthProvider({
 				loginPage: "/api/auth/oauth",
 				consentPage: "/api/auth/oauth",
-				validAudiences: OAUTH_AUDIENCES,
+				validAudiences: oauthAudiences,
 				allowDynamicClientRegistration: true,
 				// Required for MCP client onboarding (RFC 7591). Phishing vector is closed by the
 				// redirect_uri policy in the hooks.before middleware above and server auth preflight.
@@ -196,11 +198,12 @@ const getAuthConfig = () => {
 				usernameValidator: (username) => /^[a-z0-9._-]+$/.test(username),
 				validationOrder: { username: "post-normalization", displayUsername: "post-normalization" },
 			}),
-			...(env.BETTER_AUTH_API_KEY
-				? [dash({ apiKey: env.BETTER_AUTH_API_KEY, activityTracking: { enabled: true } })]
+			...(config.BETTER_AUTH_API_KEY
+				? [dash({ apiKey: config.BETTER_AUTH_API_KEY, activityTracking: { enabled: true } })]
 				: []),
 		],
 	});
-};
+}
 
-export const auth = getAuthConfig();
+export type Auth = ReturnType<typeof createAuth>;
+export type OAuthTokenVerifier = ReturnType<typeof createOAuthTokenVerifier>;

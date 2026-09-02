@@ -34,7 +34,7 @@ const { dbMock, dbState } = vi.hoisted(() => {
 	return { dbMock: db, dbState: state };
 });
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock, setDefaultDatabase: vi.fn() }));
 vi.mock("@reactive-resume/db/schema", () => ({
 	aiProvider: { id: "ai_provider.id", userId: "ai_provider.user_id" },
 	user: { id: "user.id" },
@@ -52,12 +52,12 @@ vi.mock("@reactive-resume/env/server", () => ({
 	env: { ENCRYPTION_SECRET: "e2e-encryption-secret", FLAG_ALLOW_UNSAFE_AI_BASE_URL: true },
 }));
 
-vi.mock("@reactive-resume/auth/config", () => ({
-	auth: {
+vi.mock("@reactive-resume/auth/runtime", () => ({
+	getAuth: () => ({
 		api: {
 			getSession: async () => ({ user: { id: "user-1", email: "kaushik@example.test" } }),
 		},
-	},
+	}),
 	verifyOAuthToken: async () => null,
 }));
 

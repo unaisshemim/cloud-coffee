@@ -2,7 +2,7 @@ import type { SQL } from "drizzle-orm";
 import type { AnyPgColumn } from "drizzle-orm/pg-core";
 import { BetterAuthError } from "better-auth";
 import { eq, or, sql } from "drizzle-orm";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
 
@@ -23,7 +23,7 @@ function lower<T extends AnyPgColumn>(column: T): SQL<T> {
 async function findExistingUserByEmail(email: string): Promise<ExistingOAuthUser | undefined> {
 	const normalizedEmail = email.trim().toLowerCase();
 
-	const [existingUser] = await db
+	const [existingUser] = await getDatabase()
 		.select({
 			id: schema.user.id,
 			email: schema.user.email,
@@ -43,7 +43,7 @@ async function findExistingUserByEmail(email: string): Promise<ExistingOAuthUser
 async function normalizeExistingUserEmail(userId: string, currentEmail: string, normalizedEmail: string) {
 	if (currentEmail === normalizedEmail) return;
 
-	await db.update(schema.user).set({ email: normalizedEmail }).where(eq(schema.user.id, userId));
+	await getDatabase().update(schema.user).set({ email: normalizedEmail }).where(eq(schema.user.id, userId));
 }
 
 function getEmailLocalPart(email: string): string {
@@ -58,7 +58,7 @@ function appendUsernameSuffix(base: string, suffix: string): string {
 async function isUsernameTaken(candidate: string): Promise<boolean> {
 	const normalizedCandidate = candidate.trim().toLowerCase();
 
-	const [existingUser] = await db
+	const [existingUser] = await getDatabase()
 		.select({ id: schema.user.id })
 		.from(schema.user)
 		.where(

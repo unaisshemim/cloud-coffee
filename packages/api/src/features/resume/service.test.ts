@@ -20,7 +20,7 @@ const grantResumeAccessMock = vi.hoisted(() => vi.fn());
 const hasResumeAccessMock = vi.hoisted(() => vi.fn());
 const storageDeleteMock = vi.hoisted(() => vi.fn());
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({
 	resume: {
 		id: "id",

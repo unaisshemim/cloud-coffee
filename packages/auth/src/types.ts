@@ -1,8 +1,8 @@
-import type { auth } from "./config";
+import type { Auth } from "./config";
 
 export type AuthSession = {
-	session: typeof auth.$Infer.Session.session;
-	user: typeof auth.$Infer.Session.user;
+	session: Auth["$Infer"]["Session"]["session"];
+	user: Auth["$Infer"]["Session"]["user"];
 };
 
 // ponytail: plain union replaces z.enum solely used for type inference

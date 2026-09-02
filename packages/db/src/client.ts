@@ -1,6 +1,7 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import { env } from "@reactive-resume/env/server";
+import { setDefaultDatabase } from "./runtime";
 
 declare global {
 	var __pool: Pool | undefined;
@@ -31,3 +32,4 @@ export function getPool() {
 // ponytail: two private fns collapsed; getPool() is already a singleton, global cache preserved
 globalThis.__drizzle ??= drizzle({ client: getPool() });
 export const db = globalThis.__drizzle;
+setDefaultDatabase(db);

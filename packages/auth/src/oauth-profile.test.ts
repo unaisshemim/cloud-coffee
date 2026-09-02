@@ -12,8 +12,8 @@ const dbMock = vi.hoisted(() => {
 	return { selectQueue, select, from, where, update, updateSet, updateWhere };
 });
 
-vi.mock("@reactive-resume/db/client", () => ({
-	db: { select: dbMock.select, update: dbMock.update },
+vi.mock("@reactive-resume/db/runtime", () => ({
+	getDatabase: () => ({ select: dbMock.select, update: dbMock.update }),
 }));
 
 const { createProfileMapper } = await import("./oauth-profile");

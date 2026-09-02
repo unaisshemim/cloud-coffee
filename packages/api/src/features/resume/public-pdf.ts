@@ -29,12 +29,12 @@ export type PublicResumePdfDependencies = {
 };
 
 const findResume = async ({ username, slug }: Pick<CreatePublicResumePdfInput, "username" | "slug">) => {
-	const [{ db }, schema, { and, eq }] = await Promise.all([
-		import("@reactive-resume/db/client"),
+	const [{ getDatabase }, schema, { and, eq }] = await Promise.all([
+		import("@reactive-resume/db/runtime"),
 		import("@reactive-resume/db/schema"),
 		import("drizzle-orm"),
 	]);
-	const [resume] = await db
+	const [resume] = await getDatabase()
 		.select({
 			id: schema.resume.id,
 			userId: schema.resume.userId,

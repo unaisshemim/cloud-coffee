@@ -7,7 +7,7 @@ import type {
 import type { ApplicationDocumentKind } from "../../dto/application";
 import { ORPCError } from "@orpc/client";
 import { and, arrayContains, desc, eq, inArray, sql } from "drizzle-orm";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import { generateId } from "@reactive-resume/utils/string";
 import { resumeService } from "../resume/service";
@@ -106,7 +106,7 @@ type EditableFields = {
 
 // All reads/writes filter on userId — the single ownership guard every route funnels through.
 async function requireOwned(id: string, userId: string) {
-	const [row] = await db
+	const [row] = await getDatabase()
 		.select()
 		.from(schema.application)
 		.where(and(eq(schema.application.id, id), eq(schema.application.userId, userId)));
@@ -156,7 +156,7 @@ async function deleteApplicationAttachments(
 
 	if (candidateKeys.length === 0) return;
 
-	const remainingApplications = await db
+	const remainingApplications = await getDatabase()
 		.select({
 			resumeFileUrl: schema.application.resumeFileUrl,
 			coverLetterUrl: schema.application.coverLetterUrl,
@@ -196,7 +196,7 @@ const stripUserId = <T extends { userId: string; activity?: ApplicationTimelineE
 
 export const applicationService = {
 	list: async (input: { userId: string; status?: ApplicationStatus; tags?: string[]; includeArchived?: boolean }) => {
-		const rows = await db
+		const rows = await getDatabase()
 			.select()
 			.from(schema.application)
 			.where(
@@ -231,14 +231,16 @@ export const applicationService = {
 
 		await assertOwnedResume(userId, fields.resumeId);
 
-		await db.insert(schema.application).values({
-			id,
-			userId,
-			status: initialStatus,
-			activity,
-			appliedAt: appliedAtFromTimeline(activity, new Date()),
-			...fields,
-		});
+		await getDatabase()
+			.insert(schema.application)
+			.values({
+				id,
+				userId,
+				status: initialStatus,
+				activity,
+				appliedAt: appliedAtFromTimeline(activity, new Date()),
+				...fields,
+			});
 
 		return id;
 	},
@@ -272,7 +274,7 @@ export const applicationService = {
 			};
 		});
 
-		const rows = await db.insert(schema.application).values(values).returning({ id: schema.application.id });
+		const rows = await getDatabase().insert(schema.application).values(values).returning({ id: schema.application.id });
 		return { imported: rows.length };
 	},
 
@@ -304,7 +306,7 @@ export const applicationService = {
 						else ${schema.application.appliedAt} end`
 				: undefined;
 
-		const [updated] = await db
+		const [updated] = await getDatabase()
 			.update(schema.application)
 			.set({
 				...fields,
@@ -392,7 +394,7 @@ export const applicationService = {
 		matchScore?: number | null;
 		aiMetadata?: AiMetadata | null;
 	}) => {
-		const [updated] = await db
+		const [updated] = await getDatabase()
 			.update(schema.application)
 			.set({
 				...(input.matchScore !== undefined ? { matchScore: input.matchScore } : {}),
@@ -409,7 +411,7 @@ export const applicationService = {
 		// Append in a single statement (activity || [event]) so concurrent notes can't drop each
 		// other via read-then-write; ownership is enforced by the WHERE clause.
 		const event = noteEntry(input.text, input.date);
-		const [updated] = await db
+		const [updated] = await getDatabase()
 			.update(schema.application)
 			.set({ activity: sql`${schema.application.activity} || ${JSON.stringify([event])}::jsonb` })
 			.where(and(eq(schema.application.id, input.id), eq(schema.application.userId, input.userId)))
@@ -426,7 +428,7 @@ export const applicationService = {
 		date?: string | undefined;
 		text?: string | undefined;
 	}) => {
-		return db.transaction(async (tx) => {
+		return getDatabase().transaction(async (tx) => {
 			await tx.execute(sql`
 				select 1 from ${schema.application}
 				where ${schema.application.id} = ${input.id} and ${schema.application.userId} = ${input.userId}
@@ -471,7 +473,7 @@ export const applicationService = {
 	},
 
 	deleteTimelineEntry: (input: { id: string; userId: string; entryId: string }) => {
-		return db.transaction(async (tx) => {
+		return getDatabase().transaction(async (tx) => {
 			await tx.execute(sql`
 				select 1 from ${schema.application}
 				where ${schema.application.id} = ${input.id} and ${schema.application.userId} = ${input.userId}
@@ -511,7 +513,7 @@ export const applicationService = {
 
 	delete: async (input: { id: string; userId: string }) => {
 		const existing = await requireOwned(input.id, input.userId);
-		const result = await db
+		const result = await getDatabase()
 			.delete(schema.application)
 			.where(and(eq(schema.application.id, input.id), eq(schema.application.userId, input.userId)))
 			.returning({ id: schema.application.id });
@@ -555,7 +557,7 @@ export const applicationService = {
 					else ${schema.application.appliedAt} end`
 				: undefined;
 
-		const rows = await db
+		const rows = await getDatabase()
 			.update(schema.application)
 			.set({
 				...(input.status !== undefined ? { status: input.status } : {}),
@@ -571,11 +573,11 @@ export const applicationService = {
 	},
 
 	bulkDelete: async (input: { userId: string; ids: string[] }) => {
-		const existing = await db
+		const existing = await getDatabase()
 			.select()
 			.from(schema.application)
 			.where(and(inArray(schema.application.id, input.ids), eq(schema.application.userId, input.userId)));
-		const rows = await db
+		const rows = await getDatabase()
 			.delete(schema.application)
 			.where(and(inArray(schema.application.id, input.ids), eq(schema.application.userId, input.userId)))
 			.returning({ id: schema.application.id });
@@ -590,13 +592,13 @@ export const applicationService = {
 	stats: async (input: { userId: string }) => {
 		const scope = and(eq(schema.application.userId, input.userId), eq(schema.application.archived, false));
 
-		const byStage = await db
+		const byStage = await getDatabase()
 			.select({ status: schema.application.status, count: sql<number>`count(*)::int` })
 			.from(schema.application)
 			.where(scope)
 			.groupBy(schema.application.status);
 
-		const bySource = await db
+		const bySource = await getDatabase()
 			.select({ source: schema.application.source, count: sql<number>`count(*)::int` })
 			.from(schema.application)
 			.where(scope)
@@ -614,7 +616,7 @@ export const applicationService = {
 	},
 
 	listTags: async (input: { userId: string }) => {
-		const rows = await db
+		const rows = await getDatabase()
 			.select({ tag: sql<string>`distinct unnest(${schema.application.tags})` })
 			.from(schema.application)
 			.where(eq(schema.application.userId, input.userId));

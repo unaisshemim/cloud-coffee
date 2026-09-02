@@ -1,3 +1,4 @@
+import type { AppDatabase } from "@reactive-resume/db/runtime";
 import type { JsonPatchOperation } from "@reactive-resume/resume/patch";
 import type { ResumeData } from "@reactive-resume/schema/resume/data";
 import type { Locale } from "@reactive-resume/utils/locale";
@@ -7,7 +8,7 @@ import { compare, hash } from "bcrypt";
 import { and, arrayContains, asc, desc, eq, gte, isNotNull, notInArray, sql } from "drizzle-orm";
 import { get } from "es-toolkit/compat";
 import { match } from "ts-pattern";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 import { applyResumePatches, ResumePatchError } from "@reactive-resume/resume/patch";
 import { defaultResumeData } from "@reactive-resume/schema/resume/default";
@@ -19,7 +20,7 @@ import { publishResumeUpdated } from "./events";
 import { parseStoredResumeData, parseWritableResumeData } from "./resume-data-validation";
 import { clientKeyFromHeaders, shouldCountView } from "./view-dedup";
 
-type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
+type DbOrTx = AppDatabase | Parameters<Parameters<AppDatabase["transaction"]>[0]>[0];
 
 function resumeVersionConflict(updatedAt: Date) {
 	return new ORPCError("RESUME_VERSION_CONFLICT", {
@@ -96,7 +97,7 @@ async function writeResumeVersion(
 // Best-effort, throttled snapshot on the autosave/manual-save path. Never blocks or fails the save.
 async function maybeSnapshotOnSave(input: { resumeId: string; userId: string; data: ResumeData; label: string }) {
 	try {
-		const [latest] = await db
+		const [latest] = await getDatabase()
 			.select({ createdAt: schema.resumeVersion.createdAt })
 			.from(schema.resumeVersion)
 			.where(eq(schema.resumeVersion.resumeId, input.resumeId))
@@ -105,7 +106,7 @@ async function maybeSnapshotOnSave(input: { resumeId: string; userId: string; da
 
 		if (latest && Date.now() - latest.createdAt.getTime() < SNAPSHOT_THROTTLE_MS) return;
 
-		await writeResumeVersion(db, input);
+		await writeResumeVersion(getDatabase(), input);
 	} catch (error) {
 		console.warn("Failed to snapshot resume version:", error);
 	}
@@ -200,7 +201,7 @@ async function applyResumePatchTx(
 
 const tags = {
 	list: async (input: { userId: string }) => {
-		const result = await db
+		const result = await getDatabase()
 			.select({ tags: schema.resume.tags })
 			.from(schema.resume)
 			.where(eq(schema.resume.userId, input.userId));
@@ -211,7 +212,7 @@ const tags = {
 
 const statistics = {
 	getById: async (input: { id: string; userId: string }) => {
-		const [statistics] = await db
+		const [statistics] = await getDatabase()
 			.select({
 				isPublic: schema.resume.isPublic,
 				views: schema.resumeStatistics.views,
@@ -241,7 +242,7 @@ const statistics = {
 		const lastDownloadedAt = input.downloads ? sql`now()` : undefined;
 		const today = new Date().toISOString().slice(0, 10);
 
-		await db.transaction(async (tx) => {
+		await getDatabase().transaction(async (tx) => {
 			await tx
 				.insert(schema.resumeStatistics)
 				.values({
@@ -278,7 +279,7 @@ const statistics = {
 	getDailySeries: async (input: { id: string; userId: string; days?: number }) => {
 		const days = input.days ?? 30;
 
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.select({ id: schema.resume.id })
 			.from(schema.resume)
 			.where(and(eq(schema.resume.id, input.id), eq(schema.resume.userId, input.userId)));
@@ -291,7 +292,7 @@ const statistics = {
 		const start = utcDay(days - 1);
 		const dates = Array.from({ length: days }, (_, i) => utcDay(days - 1 - i));
 
-		const rows = await db
+		const rows = await getDatabase()
 			.select({
 				date: schema.resumeStatisticsDaily.date,
 				views: schema.resumeStatisticsDaily.views,
@@ -348,14 +349,14 @@ export const resumeService = {
 
 	versions: {
 		list: async (input: { resumeId: string; userId: string }) => {
-			const [owner] = await db
+			const [owner] = await getDatabase()
 				.select({ id: schema.resume.id })
 				.from(schema.resume)
 				.where(and(eq(schema.resume.id, input.resumeId), eq(schema.resume.userId, input.userId)));
 
 			if (!owner) throw new ORPCError("NOT_FOUND");
 
-			return db
+			return getDatabase()
 				.select({
 					id: schema.resumeVersion.id,
 					label: schema.resumeVersion.label,
@@ -370,7 +371,7 @@ export const resumeService = {
 		// Best-effort checkpoint used by non-transactional milestones (e.g. import).
 		snapshot: async (input: { resumeId: string; userId: string; data: ResumeData; label: string }) => {
 			try {
-				await writeResumeVersion(db, input);
+				await writeResumeVersion(getDatabase(), input);
 			} catch (error) {
 				console.warn("Failed to snapshot resume version:", error);
 			}
@@ -383,7 +384,7 @@ export const resumeService = {
 			const current = await resumeService.getById({ id: input.resumeId, userId: input.userId });
 			if (current.isLocked) throw new ORPCError("RESUME_LOCKED");
 
-			const [version] = await db
+			const [version] = await getDatabase()
 				.select({ data: schema.resumeVersion.data })
 				.from(schema.resumeVersion)
 				.innerJoin(schema.resume, eq(schema.resumeVersion.resumeId, schema.resume.id))
@@ -425,7 +426,7 @@ export const resumeService = {
 	},
 
 	list: (input: { userId: string; tags: string[]; sort: "lastUpdatedAt" | "createdAt" | "name" }) =>
-		db
+		getDatabase()
 			.select({
 				id: schema.resume.id,
 				name: schema.resume.name,
@@ -454,7 +455,7 @@ export const resumeService = {
 			),
 
 	getById: async (input: { id: string; userId: string }) => {
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.select({
 				id: schema.resume.id,
 				name: schema.resume.name,
@@ -475,7 +476,7 @@ export const resumeService = {
 	},
 
 	getBySlug: async (input: { username: string; slug: string; requestHeaders: Headers; currentUserId?: string }) => {
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.select({
 				id: schema.resume.id,
 				userId: schema.resume.userId,
@@ -528,7 +529,7 @@ export const resumeService = {
 		data.metadata.page.locale = input.locale;
 
 		try {
-			await db.insert(schema.resume).values({
+			await getDatabase().insert(schema.resume).values({
 				id,
 				name: input.name,
 				slug: input.slug,
@@ -568,7 +569,7 @@ export const resumeService = {
 		isPublic?: boolean;
 		skipAutoSnapshot?: boolean;
 	}) => {
-		const resume = await db
+		const resume = await getDatabase()
 			.transaction(async (tx) => {
 				const [existing] = await tx
 					.select({
@@ -649,7 +650,7 @@ export const resumeService = {
 	},
 
 	patch: async (input: { id: string; userId: string; operations: JsonPatchOperation[]; expectedUpdatedAt?: Date }) => {
-		const resume = await db.transaction((tx) => applyResumePatchTx(tx, input));
+		const resume = await getDatabase().transaction((tx) => applyResumePatchTx(tx, input));
 
 		await notifyResumeUpdated({
 			type: "resume.updated",
@@ -675,7 +676,7 @@ export const resumeService = {
 	},
 
 	setLocked: async (input: { id: string; userId: string; isLocked: boolean }) => {
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.update(schema.resume)
 			.set({ isLocked: input.isLocked })
 			.where(and(eq(schema.resume.id, input.id), eq(schema.resume.userId, input.userId)))
@@ -695,7 +696,7 @@ export const resumeService = {
 	setPassword: async (input: { id: string; userId: string; password: string }) => {
 		const hashedPassword = await hash(input.password, 10);
 
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.update(schema.resume)
 			.set({ password: hashedPassword })
 			.where(and(eq(schema.resume.id, input.id), eq(schema.resume.userId, input.userId)))
@@ -713,7 +714,7 @@ export const resumeService = {
 	},
 
 	verifyPassword: async (input: { slug: string; username: string; password: string; responseHeaders?: Headers }) => {
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.select({ id: schema.resume.id, password: schema.resume.password })
 			.from(schema.resume)
 			.innerJoin(schema.user, eq(schema.resume.userId, schema.user.id))
@@ -738,7 +739,7 @@ export const resumeService = {
 	},
 
 	removePassword: async (input: { id: string; userId: string }) => {
-		const [resume] = await db
+		const [resume] = await getDatabase()
 			.update(schema.resume)
 			.set({ password: null })
 			.where(and(eq(schema.resume.id, input.id), eq(schema.resume.userId, input.userId)))
@@ -756,7 +757,7 @@ export const resumeService = {
 	},
 
 	delete: async (input: { id: string; userId: string }) => {
-		await db.transaction(async (tx) => {
+		await getDatabase().transaction(async (tx) => {
 			const [resume] = await tx
 				.select({ isLocked: schema.resume.isLocked })
 				.from(schema.resume)

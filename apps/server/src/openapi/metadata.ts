@@ -1,9 +1,14 @@
 import { oauthProviderAuthServerMetadata, oauthProviderOpenIdConfigMetadata } from "@better-auth/oauth-provider";
-import { auth } from "@reactive-resume/auth/config";
+import { getAuth } from "@reactive-resume/auth/runtime";
 import { env } from "@reactive-resume/env/server";
 
-export const handleOAuthAuthorizationServer = oauthProviderAuthServerMetadata(auth);
-export const handleOpenIdConfiguration = oauthProviderOpenIdConfigMetadata(auth);
+export function handleOAuthAuthorizationServer(request: Request) {
+	return oauthProviderAuthServerMetadata(getAuth())(request);
+}
+
+export function handleOpenIdConfiguration(request: Request) {
+	return oauthProviderOpenIdConfigMetadata(getAuth())(request);
+}
 
 export function handleWellKnownFallback() {
 	return new Response("Not Found", { status: 404 });

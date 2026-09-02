@@ -1,7 +1,7 @@
 import { sql } from "drizzle-orm";
 import { withTimeout } from "es-toolkit";
 import { getStorageService } from "@reactive-resume/api/features/storage";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 
 const HEALTHCHECK_TIMEOUT_MS = 1_500;
 
@@ -33,7 +33,7 @@ async function runCheck(check: () => Promise<object>): Promise<CheckResult> {
 
 // ponytail: inner try/catches removed; runCheck's outer catch handles all errors
 async function checkDatabase() {
-	await db.execute(sql`SELECT 1`);
+	await getDatabase().execute(sql`SELECT 1`);
 	return { status: "healthy" };
 }
 

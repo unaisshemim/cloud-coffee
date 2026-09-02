@@ -1,4 +1,4 @@
-import type { auth } from "@reactive-resume/auth/config";
+import type { Auth } from "@reactive-resume/auth/config";
 import { dashClient } from "@better-auth/infra/client";
 import { oauthProviderClient } from "@better-auth/oauth-provider/client";
 import { oauthProviderResourceClient } from "@better-auth/oauth-provider/resource-client";
@@ -12,6 +12,6 @@ export const authClient = createAuthClient({
 		usernameClient(),
 		oauthProviderClient(),
 		oauthProviderResourceClient(),
-		inferAdditionalFields<typeof auth>(),
+		inferAdditionalFields<Auth>(),
 	],
 });

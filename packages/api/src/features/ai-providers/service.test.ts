@@ -26,7 +26,7 @@ const { dbMock, queryMock, queryState } = vi.hoisted(() => {
 	};
 });
 
-vi.mock("@reactive-resume/db/client", () => ({ db: dbMock }));
+vi.mock("@reactive-resume/db/runtime", () => ({ getDatabase: () => dbMock }));
 vi.mock("@reactive-resume/db/schema", () => ({
 	aiProvider: {
 		id: "ai_provider.id",

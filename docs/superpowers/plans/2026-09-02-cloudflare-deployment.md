@@ -2,13 +2,21 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Deploy cloudcoffee's Vite frontend on Cloudflare Pages, Hono API on Cloudflare Workers, uploads in R2, and existing PostgreSQL through Hyperdrive without breaking Node self-hosting.
+**Goal:** Deploy cloudcoffee's Vite frontend on Cloudflare Pages, Hono API on Cloudflare Workers, uploads in R2, existing PostgreSQL through Hyperdrive, and live resume invalidations through Durable Objects without breaking Node self-hosting.
 
-**Architecture:** Pages stays public origin and forwards server-owned paths through service binding to private Hono Worker, preserving same-origin auth. Worker uses request-scoped Drizzle connection through Hyperdrive and request-scoped R2 storage adapter. Node entry retains filesystem/S3, SMTP, static serving, and rollback capability behind separate runtime adapters.
+**Architecture:** Pages stays public origin and forwards server-owned paths through service binding to private Hono Worker, preserving same-origin auth. Worker uses request-scoped Drizzle connection through Hyperdrive, request-scoped R2 storage adapter, and one Durable Object per resume for live invalidation fan-out. Node entry retains PostgreSQL `LISTEN`/`NOTIFY`, filesystem/S3, SMTP, static serving, and rollback capability behind separate runtime adapters.
 
-**Tech Stack:** TypeScript, pnpm/Turborepo, Hono, Cloudflare Workers, Cloudflare Pages Functions, Wrangler, R2, Hyperdrive, PostgreSQL, Drizzle ORM, Better Auth, Vitest, Playwright, GitHub Actions.
+**Tech Stack:** TypeScript, pnpm/Turborepo, Hono, Cloudflare Workers, Cloudflare Pages Functions, Durable Objects, Wrangler, R2, Hyperdrive, PostgreSQL, Drizzle ORM, Better Auth, Vitest, Playwright, GitHub Actions.
 
 **Spec:** `docs/superpowers/specs/2026-09-02-cloudflare-deployment-design.md`
+
+## Execution Status
+
+- Task 1 complete: `6b87af5`.
+- Task 2 complete: `917c263`.
+- Task 3 implemented: request-scoped database/auth runtimes and Hyperdrive client lifecycle. Verification recorded at commit.
+- Task 3A approved on 2026-09-02: Durable Object replaces Worker `LISTEN/NOTIFY`; PostgreSQL remains authoritative.
+- Tasks 4–11 pending.
 
 ## Global Constraints
 
@@ -17,6 +25,7 @@
 - Keep Node self-host build and runtime working until Cloudflare cutover and rollback window finish.
 - Pages remains browser-visible origin; browser API URLs and cookies stay same-origin.
 - Worker accesses PostgreSQL only through `HYPERDRIVE` binding and R2 only through `STORAGE` binding.
+- Worker publishes and subscribes to resume invalidation events through `RESUME_UPDATES`; Durable Objects never store canonical resume data.
 - Worker never runs database migrations during module initialization or request handling.
 - Worker bundle must not include filesystem storage, Nodemailer, `sharp`, or `@hono/node-server`.
 - Set Worker `compatibility_date` to `2026-09-02`; use Node.js compatibility and generated binding types.
@@ -34,6 +43,7 @@
 - `apps/server/src/platform/types.ts`: API application dependency and Worker binding types.
 - `apps/server/src/platform/node.ts`: Node trusted-client and default runtime setup.
 - `apps/server/src/platform/cloudflare.ts`: Worker trusted-client, Hyperdrive, R2, and request-runtime setup.
+- `apps/server/src/platform/resume-update-room.ts`: per-resume Durable Object for invalidation fan-out.
 - `apps/server/src/worker.ts`: Cloudflare Worker fetch entry.
 - `apps/server/wrangler.jsonc`: Worker deployment/binding configuration.
 
@@ -302,7 +312,7 @@ export function createAuth(database: AppDatabase, config: ServerEnv) {
 export type Auth = ReturnType<typeof createAuth>;
 ```
 
-Node runtime constructs one `auth` from default database. Worker constructs auth inside database request context. Update API oRPC context to receive `auth: Auth`; update `handleRpc`, `handleOpenApi`, auth HTTP handlers, and OAuth metadata handlers to receive it explicitly.
+Node composition constructs `auth` from default database. Worker constructs auth inside database request context. A request-scoped `AuthRuntime` carries auth and OAuth verification to oRPC, HTTP auth, and metadata handlers without module-global database binding. Worker verifier uses explicit public JWKS base URL; Node keeps internal-loopback override.
 
 - [ ] **Step 5: Add Hyperdrive client factory**
 
@@ -332,6 +342,53 @@ Expected: PASS. `rg -n '@reactive-resume/db/client' apps/server packages/api pac
 ```bash
 git add packages/db packages/auth packages/api apps/server/src turbo.json
 git commit -m "refactor(db): support request-scoped Hyperdrive clients"
+```
+
+### Task 3A: Replace Worker `LISTEN/NOTIFY` with Durable Object Event Runtime
+
+**Files:**
+
+- Create: `packages/api/src/features/resume/event-runtime.ts`
+- Create: `packages/api/src/features/resume/event-runtime.test.ts`
+- Modify: `packages/api/src/features/resume/events.ts`
+- Modify: `packages/api/src/features/resume/events.test.ts`
+- Create: `apps/server/src/platform/resume-update-room.ts`
+- Create: `apps/server/src/platform/resume-update-room.test.ts`
+- Modify later: `apps/server/src/worker.ts`
+- Modify later: `apps/server/wrangler.jsonc`
+
+**Interfaces:**
+
+- Produces: `ResumeEventRuntime` with `publish(event)` and `subscribe(input)`.
+- Produces: request-scoped `runWithResumeEventRuntime(runtime, callback)` plus Node default PostgreSQL adapter.
+- Produces: `ResumeUpdateRoom` Durable Object, deterministically addressed by resume ID.
+- Preserves: existing oRPC async-iterator contract and browser subscription behavior.
+
+- [ ] **Step 1: Write failing event-runtime isolation tests**
+
+Cover default adapter, nested request scopes, concurrent isolation, publish forwarding, subscribe forwarding, and missing-runtime error.
+
+- [ ] **Step 2: Extract PostgreSQL adapter**
+
+Move current `pg_notify`, `LISTEN`, queue filtering, abort cleanup, and client release into Node adapter. Keep event validation and public functions runtime-neutral.
+
+- [ ] **Step 3: Implement per-resume Durable Object**
+
+Use `RESUME_UPDATES.getByName(event.resumeId)`. Publish through typed RPC after PostgreSQL mutation succeeds. Subscribe through a streaming Durable Object response; parse newline-delimited JSON into existing async iterator. Store no resume content. Close streams on cancellation.
+
+- [ ] **Step 4: Configure binding and migration**
+
+Add `RESUME_UPDATES: DurableObjectNamespace<ResumeUpdateRoom>` binding and a `new_sqlite_classes` migration for `ResumeUpdateRoom`. Export Durable Object class from Worker entry.
+
+- [ ] **Step 5: Verify event paths**
+
+Run focused API/server tests and Worker typecheck. Confirm Node tests still exercise PostgreSQL `LISTEN`/`NOTIFY`, while Worker tests exercise Durable Object publish and subscription fan-out.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add packages/api/src/features/resume apps/server/src/platform/resume-update-room.ts apps/server/src/platform/resume-update-room.test.ts apps/server/src/worker.ts apps/server/wrangler.jsonc docs/superpowers
+git commit -m "feat(events): add durable resume update coordination"
 ```
 
 ### Task 4: Split Storage Runtime and Implement Native R2 Adapter

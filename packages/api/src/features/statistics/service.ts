@@ -1,5 +1,5 @@
 import { count } from "drizzle-orm";
-import { db } from "@reactive-resume/db/client";
+import { getDatabase } from "@reactive-resume/db/runtime";
 import * as schema from "@reactive-resume/db/schema";
 
 const CACHE_DURATION_MS = 6 * 60 * 60 * 1000; // 6 hours
@@ -51,7 +51,7 @@ const getCachedCount = async (
 };
 
 const getCountFromDatabase = async (table: typeof schema.user | typeof schema.resume): Promise<number | null> => {
-	const [result] = await db.select({ count: count() }).from(table);
+	const [result] = await getDatabase().select({ count: count() }).from(table);
 	if (!result) return null;
 	return result.count;
 };

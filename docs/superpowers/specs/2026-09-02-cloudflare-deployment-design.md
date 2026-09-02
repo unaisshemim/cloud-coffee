@@ -2,7 +2,7 @@
 
 **Status:** Approved architecture
 
-**Goal:** Deploy cloudcoffee with its Vite web application on Cloudflare Pages, its Hono HTTP application on Cloudflare Workers, its uploads in R2, and its existing PostgreSQL database reached through Hyperdrive.
+**Goal:** Deploy cloudcoffee with its Vite web application on Cloudflare Pages, its Hono HTTP application on Cloudflare Workers, its uploads in R2, its existing PostgreSQL database reached through Hyperdrive, and resume-update coordination in Durable Objects.
 
 ## Scope
 
@@ -41,6 +41,7 @@ app.example.com (Cloudflare Pages)
   |        v
   |   Pages Function gateway -- service binding -----> Hono API Worker
   |                                                     |-- Hyperdrive --> PostgreSQL
+  |                                                     |-- Durable Object --> resume update subscribers
   |                                                     |-- R2 binding --> uploads
   |                                                     |-- HTTP email provider
   |                                                     `-- optional Browser Rendering/PDF service
@@ -98,6 +99,8 @@ Worker configuration uses current compatibility date, Workers Node.js compatibil
 ## PostgreSQL and Hyperdrive
 
 PostgreSQL remains authoritative. Hyperdrive supplies Worker runtime connection string. Drizzle schema and root migrations remain unchanged.
+
+Hyperdrive does not support PostgreSQL `LISTEN`/`NOTIFY`. Worker deployments therefore route resume invalidation events through one `ResumeUpdateRoom` Durable Object per resume ID. Durable Objects hold no canonical resume content: mutations persist to PostgreSQL first, then publish lightweight invalidation metadata. Existing Node deployments retain the PostgreSQL event adapter. Browser-facing oRPC subscription shape remains unchanged.
 
 Database client becomes runtime-injected:
 

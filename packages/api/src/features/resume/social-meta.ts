@@ -12,12 +12,12 @@ export type PublicResumeSocialMetaDependencies = {
 // summary to an unauthenticated crawler, and this read deliberately skips the view counting and
 // access gating in resumeService.getBySlug — a card render is not a visit.
 const findResume = async ({ username, slug }: PublicResumeSocialMetaInput) => {
-	const [{ db }, schema, { and, eq, isNull }] = await Promise.all([
-		import("@reactive-resume/db/client"),
+	const [{ getDatabase }, schema, { and, eq, isNull }] = await Promise.all([
+		import("@reactive-resume/db/runtime"),
 		import("@reactive-resume/db/schema"),
 		import("drizzle-orm"),
 	]);
-	const [resume] = await db
+	const [resume] = await getDatabase()
 		.select({ name: schema.resume.name, data: schema.resume.data })
 		.from(schema.resume)
 		.innerJoin(schema.user, eq(schema.resume.userId, schema.user.id))

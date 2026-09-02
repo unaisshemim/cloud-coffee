@@ -4,6 +4,7 @@
 	"type": "module",
 	"private": true,
 	"exports": {
+		"./schema": "./src/schema.ts",
 		"./server": "./src/server.ts"
 	},
 	"scripts": {
